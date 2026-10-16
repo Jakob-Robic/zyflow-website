@@ -54,7 +54,7 @@ Družba **Google** (Google Ireland Ltd.; matična družba Google LLC, ZDA) anali
 
 ## 8. Mobilna aplikacija Zyflow
 
-Mobilna aplikacija Zyflow **ne uporablja brskalniških piškotkov**. Nekatere podatke za delovanje shrani v lokalno hrambo naprave: vašo prijavno sejo (v varni hrambi naprave), nastavitve, zadnjo znano lokacijo in nedavna iskanja. Naša orodja za analitiko in spremljanje napak (PostHog, Sentry) na napravi shranijo psevdonimni identifikator. Podrobnosti so v Politiki zasebnosti, točka 3.14.
+Mobilna aplikacija Zyflow **ne uporablja brskalniških piškotkov**. Nekatere podatke za delovanje shrani v lokalno hrambo naprave: vašo prijavno sejo (v varni hrambi naprave), nastavitve, zadnjo znano lokacijo in nedavna iskanja. Naše orodje za spremljanje napak (Sentry) na napravi shrani psevdonimni identifikator. Naše analitično orodje (PostHog) deluje in shrani identifikator le, če v aplikaciji privolite; to lahko kadar koli spremenite v Nastavitvah. Podrobnosti so v Politiki zasebnosti, točka 3.14.
 
 ## 9. Spremembe
 

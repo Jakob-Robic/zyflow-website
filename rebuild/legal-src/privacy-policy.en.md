@@ -21,7 +21,7 @@ We have not appointed a data protection officer. For any privacy question or req
 - We collect only what we need to run Zyflow: your account, the routes and content you create, and technical data to keep the app working.
 - Your routes are private unless **you decide to share a specific route** with the community.
 - We do not sell your data and we do not show ads in the app.
-- Product analytics use a pseudonymous user ID, not your email address.
+- Product analytics use a pseudonymous user ID, not your email address, and only run if you agree.
 - Location is used only while the app is in use. There is no background location tracking.
 - You can delete your account in the app at any time.
 
@@ -109,7 +109,7 @@ We use Brevo to store your contact details (email address, full name and user ID
 
 We use PostHog (EU cloud) to understand how the app is used and to improve it. We send a pseudonymous **user ID (not your email address or name)**, selected in-app events (for example "route planned" or "GPX exported"), app version and basic device information. Automatic capture of all interactions and session recording are not used in the app. PostHog is set to **discard your IP address**.
 
-**Legal basis:** legitimate interest in improving the app (Art. 6(1)(f) GDPR). You can object at any time by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu).
+**Legal basis:** your consent (Art. 6(1)(a) GDPR and ZEKom-2). The app asks you before analytics start; analytics are off until you agree. You can withdraw consent at any time in Settings → Share usage statistics; this does not affect processing before withdrawal.
 
 ### 3.10 Crash and performance monitoring
 
@@ -147,6 +147,8 @@ Our search function stores the IP address of the requesting device together with
 
 The app stores your login session, your last known location and your recent searches locally on your device so that the app works quickly and you stay signed in. This storage is strictly necessary for the service you request. It is removed when you uninstall the app.
 
+If you agree to product analytics, PostHog also stores a pseudonymous identifier on your device; without your consent it stores nothing. Sentry stores a pseudonymous identifier for crash reporting (see 3.10).
+
 ### 3.15 Planned features (not live yet)
 
 **Push notifications** and **Strava import** are not available yet. Before we launch either feature, we will update this Privacy Policy and describe what data is processed. Push notifications will only be sent if you allow them in your device settings; connecting Strava will always be optional.
@@ -168,7 +170,8 @@ If you contact us, we process your email address, the content of your message an
 | Purpose | Legal basis (GDPR) |
 |---|---|
 | Account, routes, location features, bike passport, community sharing, maps/search/routing/weather, service emails | Contract, Art. 6(1)(b) |
-| Place reports and submissions, product analytics, crash monitoring, security and rate limiting, Stay22 links, support | Legitimate interest, Art. 6(1)(f) |
+| Place reports and submissions, crash monitoring, security and rate limiting, Stay22 links, support | Legitimate interest, Art. 6(1)(f) |
+| Product analytics (PostHog) | Consent, Art. 6(1)(a) |
 | Marketing emails, website cookies and pixels (when introduced), future push notifications | Consent, Art. 6(1)(a) (and ZEKom-2 for cookies and marketing emails) |
 | Answering rights requests, accounting and legal obligations | Legal obligation, Art. 6(1)(c) |
 
@@ -236,7 +239,7 @@ Under the GDPR you have the right to:
 - **erasure** ("right to be forgotten", Art. 17);
 - **restriction** of processing (Art. 18);
 - **data portability** – receive data you provided in a structured, machine-readable format, or have it sent to another controller (Art. 20); routes can also be exported as GPX in the app;
-- **object** to processing based on legitimate interest, for example analytics or crash monitoring (Art. 21), and to object at any time to direct marketing;
+- **object** to processing based on legitimate interest, for example crash monitoring (Art. 21), and to object at any time to direct marketing;
 - **withdraw consent** at any time, without affecting the lawfulness of processing before the withdrawal (Art. 7(3));
 - **lodge a complaint** with a supervisory authority (section 10).
 
