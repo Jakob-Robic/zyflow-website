@@ -35,6 +35,8 @@ We have not appointed a data protection officer. For any privacy question or req
 
 **Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
 
+**Profile photo (optional):** if you add a profile photo, we store it in private file storage; it is visible only to you. You can change or remove it at any time in your profile, and it is deleted when you delete your account.
+
 ### 3.2 Location data
 
 **Data:** precise location of your device, **only while the app is in use** and only if you grant the location permission. We do not collect location in the background.
@@ -95,7 +97,7 @@ You can choose to share an individual saved route with the Zyflow community. Not
 
 ### 3.7 Camera and photo library
 
-If you allow it, the app uses the camera and photo library only when you choose to add a photo (bike photos, route photos, place reports) or save an image. We do not access your photos in the background. You can withdraw the permission in your device settings.
+If you allow it, the app uses the camera and photo library only when you choose to add a photo (bike photos, route photos, place reports, profile photo) or save an image. We do not access your photos in the background. You can withdraw the permission in your device settings.
 
 ### 3.8 Emails
 
@@ -211,6 +213,7 @@ Your app data is stored in the EU (Ireland). Some recipients are based in, or ma
 | Data | Retention |
 |---|---|
 | Account data (email, name, phone, user ID) | While your account exists; deleted immediately when you delete your account in the app |
+| Profile photo | Until you remove it or delete your account. |
 | Saved and imported routes, saved places | Until you delete them or your account |
 | Shared community routes, their photos and map images | The shared route is removed when you remove it or delete your account; photos and map images in file storage are removed on request within 30 days (see section 9) |
 | Bike passport and bike photos | Until you delete them or your account; bike photos in file storage are removed on request within 30 days (see section 9) |

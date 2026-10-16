@@ -35,6 +35,8 @@ Pooblaščene osebe za varstvo podatkov nismo imenovali. Za vsa vprašanja in za
 
 **Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
 
+**Profilna fotografija (neobvezno):** če dodate profilno fotografijo, jo shranimo v zasebni hrambi datotek; vidna je samo vam. Kadar koli jo lahko spremenite ali odstranite v svojem profilu, izbrišemo pa jo ob izbrisu računa.
+
 ### 3.2 Lokacijski podatki
 
 **Podatki:** natančna lokacija naprave, **samo med uporabo aplikacije** in samo, če dovolite dostop do lokacije. Lokacije v ozadju ne zbiramo.
@@ -95,7 +97,7 @@ Posamezno shranjeno pot lahko delite s skupnostjo Zyflow. Nič se ne deli samode
 
 ### 3.7 Kamera in galerija fotografij
 
-Če to dovolite, aplikacija uporablja kamero in galerijo fotografij samo, ko se odločite dodati fotografijo (fotografije kolesa, poti, prijave krajev) ali shraniti sliko. Do vaših fotografij ne dostopamo v ozadju. Dovoljenje lahko prekličete v nastavitvah naprave.
+Če to dovolite, aplikacija uporablja kamero in galerijo fotografij samo, ko se odločite dodati fotografijo (fotografije kolesa, poti, prijave krajev, profilna fotografija) ali shraniti sliko. Do vaših fotografij ne dostopamo v ozadju. Dovoljenje lahko prekličete v nastavitvah naprave.
 
 ### 3.8 E-poštna sporočila
 
@@ -211,6 +213,7 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Podatki | Rok hrambe |
 |---|---|
 | Podatki o računu (e-naslov, ime, telefon, identifikator uporabnika) | Dokler račun obstaja; izbrisani takoj, ko račun izbrišete v aplikaciji |
+| Profilna fotografija | Dokler je ne odstranite ali ne izbrišete računa. |
 | Shranjene in uvožene poti, shranjeni kraji | Dokler jih ne izbrišete ali ne izbrišete računa |
 | Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot se odstrani, ko jo odstranite ali izbrišete račun; fotografije in slike zemljevidov v hrambi datotek izbrišemo na zahtevo v 30 dneh (glej točko 9) |
 | Kolesarski potni list in fotografije kolesa | Dokler jih ne izbrišete ali ne izbrišete računa; fotografije kolesa v hrambi datotek izbrišemo na zahtevo v 30 dneh (glej točko 9) |
