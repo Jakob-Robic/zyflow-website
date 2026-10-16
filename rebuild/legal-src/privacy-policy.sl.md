@@ -21,7 +21,7 @@ Pooblaščene osebe za varstvo podatkov nismo imenovali. Za vsa vprašanja in za
 - Zbiramo le podatke, ki jih potrebujemo za delovanje storitve Zyflow: vaš uporabniški račun, poti in vsebine, ki jih ustvarite, ter tehnične podatke za delovanje aplikacije.
 - Vaše poti so zasebne, razen če se **sami odločite, da posamezno pot delite** s skupnostjo.
 - Vaših podatkov ne prodajamo in v aplikaciji ne prikazujemo oglasov.
-- Analitika uporabe deluje s psevdonimnim identifikatorjem uporabnika, ne z vašim e-naslovom in delujejo le, če privolite.
+- Analitika uporabe deluje s psevdonimnim identifikatorjem uporabnika, ne z vašim e-naslovom, in se vklopi le, če privolite.
 - Lokacijo uporabljamo le med uporabo aplikacije. Lokacije v ozadju ne spremljamo.
 - Uporabniški račun lahko kadar koli izbrišete v aplikaciji.
 
