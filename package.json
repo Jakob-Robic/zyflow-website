@@ -15,7 +15,7 @@
     "serve:headers": "node rebuild/scripts/serve-headers.js"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.117.3",
+    "@supabase/supabase-js": "^2.118.0",
     "marked": "^18.1.0",
     "vanilla-cookieconsent": "^3.1.0"
   },
