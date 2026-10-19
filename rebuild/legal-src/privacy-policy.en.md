@@ -29,7 +29,7 @@ We have not appointed a data protection officer. For any privacy question or req
 
 ### 3.1 Account data
 
-**Data:** email address, full name, optional phone number, user ID, sign-in method, account creation date. If you sign in with Apple or Google, we receive your email address and, if you allow it, your name from that provider (with Apple you can hide your real email address).
+**Data:** email address, full name, optional phone number, user ID, sign-in method, account creation date. If you sign in with Apple or Google, we receive your email address and, if you allow it, your name from that provider (with Apple you can hide your real email address). With Google sign-in we also receive a link to your Google profile picture, which we store with your profile and show only to you.
 
 **Purpose:** to create and manage your account, sign you in and provide the service.
 
@@ -215,8 +215,8 @@ Your app data is stored in the EU (Ireland). Some recipients are based in, or ma
 | Account data (email, name, phone, user ID) | While your account exists; deleted immediately when you delete your account in the app |
 | Profile photo | Until you remove it or delete your account. |
 | Saved and imported routes, saved places | Until you delete them or your account |
-| Shared community routes, their photos and map images | The shared route is removed when you remove it or delete your account; photos and map images in file storage are removed on request within 30 days (see section 9) |
-| Bike passport and bike photos | Until you delete them or your account; bike photos in file storage are removed on request within 30 days (see section 9) |
+| Shared community routes, their photos and map images | The shared route is removed when you remove it or delete your account; its photos and map images are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
+| Bike passport and bike photos | Until you delete them or your account; bike photos are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
 | Brevo contact (email, name, user ID) | While your account exists; removed on request within 30 days after you delete your account (see section 9) |
 | Email sending logs at Brevo | Only as long as needed to deliver emails and resolve delivery problems, in line with the provider's retention settings |
@@ -251,7 +251,7 @@ To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from
 - **On the web:** [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account).
 - **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions) are deleted immediately. Copies held in connected services are not removed automatically: photos and map images in our file storage, your contact at our email provider Brevo, and records linked to your user ID at PostHog and Sentry. We remove these copies on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu) after deleting your account and we will remove them within 30 days. Analytics records expire after 12 months and error reports after 90 days. Residual copies in backups are overwritten in the normal backup cycle. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
+When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions) are deleted immediately. At the same time we automatically delete your photos and map images in our file storage, your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically after 90 days, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). Residual copies in backups are overwritten in the normal backup cycle. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
 ## 10. Complaints
 
