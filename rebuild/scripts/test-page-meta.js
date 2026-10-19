@@ -11,6 +11,7 @@ const {
   collectMetaIssues,
   absoluteOgImage,
   tourOgPath,
+  tourHasOwnOg,
   TOUR_OG_WIDTH,
   TOUR_OG_HEIGHT,
 } = require("./page-meta");
@@ -178,6 +179,88 @@ test("checks route meta descriptions and Slovenian titles", () => {
   );
 });
 
+test("keeps an English sentence that names several Slovenian places", () => {
+  assert.deepEqual(
+    descriptionIssues(
+      "en",
+      "Tržič, Dobča, Šenkova domačija, Planšarsko jezero and Ankova planina in one day."
+    ),
+    []
+  );
+});
+
+test("keeps Slovenian copy that uses bike park, pump track, or Gravel ride", () => {
+  assert.deepEqual(
+    descriptionIssues("sl", "Makadamska tura z bike park, pump track in Gravel ride."),
+    []
+  );
+});
+
+test("rejects only a trailing ellipsis, and accepts a distance or duration ending", () => {
+  assert.deepEqual(
+    descriptionIssues("en", "From Kranj ... through the forest to Bled, 79 km."),
+    []
+  );
+  assert.deepEqual(descriptionIssues("en", "Blejčanka, Kranj to Lake Bled, 79 km"), []);
+  assert.deepEqual(descriptionIssues("en", "A forest link from Tržič, 2:30 h"), []);
+  assert.ok(
+    descriptionIssues("en", "A shorter climb into the valley...").includes(
+      "truncated with an ellipsis"
+    )
+  );
+});
+
+test("flags stem-less Slovenian by its diacritics on an English page", () => {
+  const issues = descriptionIssues("en", "vožnja do koče in nazaj.");
+  assert.ok(issues.some((issue) => issue === "looks Slovenian on an English page"));
+  assert.ok(issues.every((issue) => !issue.includes("a English")));
+});
+
+test("flags a Slovenian title on an English page", () => {
+  const messages = {
+    en: {
+      meta: {
+        pages: {
+          home: {
+            title: "vožnja do koče in nazaj",
+            description: "Find routes and rides.",
+          },
+        },
+      },
+    },
+    sl: {
+      meta: {
+        pages: {
+          home: { title: "Domov", description: "Najdi poti in ture." },
+        },
+      },
+    },
+  };
+  const issues = collectMetaIssues(messages, [{ id: "home" }], () => ["en", "sl"]);
+  assert.ok(
+    issues.some(
+      (issue) =>
+        issue.includes("en home title") && issue.includes("an English page")
+    )
+  );
+  assert.ok(issues.every((issue) => !issue.includes("a English")));
+});
+
+test("K-tour descriptions publish no climb or distance figures", () => {
+  const locales = loadLocales();
+  const figure = /\d+\s*km|\d+\s*m\b/i;
+  for (const locale of ["en", "sl"]) {
+    for (const [id, meta] of Object.entries(locales[locale].meta.pages)) {
+      if (!/^tour-k\d+-/.test(id)) continue;
+      assert.doesNotMatch(meta.description, figure, `${locale} ${id}`);
+    }
+    for (const [slug, route] of Object.entries(locales[locale].routes)) {
+      if (!/^k\d+-/.test(slug) || !route.metaDescription) continue;
+      assert.doesNotMatch(route.metaDescription, figure, `${locale} routes.${slug}`);
+    }
+  }
+});
+
 test("tour og:image uses the generated JPG; other pages keep the default", () => {
   assert.equal(
     absoluteOgImage(SITE_ORIGIN, tourOgPath("jezerski-vrh")),
@@ -189,17 +272,20 @@ test("tour og:image uses the generated JPG; other pages keep the default", () =>
   );
 });
 
-test("every tour Open Graph image is a unique 1200×630 JPEG", () => {
+test("every tour with its own photo has a unique 1200×630 JPEG", () => {
   const hashes = new Set();
   assert.equal(ROUTES.length, 20);
-  for (const route of ROUTES) {
+  const own = ROUTES.filter((route) => tourHasOwnOg(route.slug));
+  assert.equal(own.length, 19);
+  assert.equal(fs.existsSync(path.join(OG_DIR, "k53-kriva-jelka.jpg")), false);
+  for (const route of own) {
     const file = path.join(OG_DIR, `${route.slug}.jpg`);
     const buf = fs.readFileSync(file);
     assert.deepEqual(jpegSize(buf), { width: TOUR_OG_WIDTH, height: TOUR_OG_HEIGHT });
     const hash = require("crypto").createHash("sha256").update(buf).digest("hex");
     hashes.add(hash);
   }
-  assert.equal(hashes.size, ROUTES.length);
+  assert.equal(hashes.size, own.length);
 });
 
 test("built tour pages ship their own description, alt text, and 1200×630 image", () => {
@@ -215,6 +301,8 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   const title = (html) => html.match(/<title>([^<]*)<\/title>/)[1];
   const prop = (html, name) =>
     html.match(new RegExp(`<meta property="${name}" content="([^"]*)"`))[1];
+  const named = (html, name) =>
+    html.match(new RegExp(`<meta name="${name}" content="([^"]*)"`))[1];
 
   const jezerski = read("tours/jezerski-vrh.html");
   assert.equal(
@@ -232,6 +320,7 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
     prop(jezerski, "og:image:alt"),
     "Cover photo: Jezerski vrh – Ankova planina"
   );
+  assert.equal(named(jezerski, "twitter:image:alt"), prop(jezerski, "og:image:alt"));
   assert.match(title(jezerski), /Jezerski vrh/);
 
   const virnik = read("tours/spodnji-virnik.html");
@@ -246,6 +335,15 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   assert.equal(prop(home, "og:image:height"), "680");
   assert.equal(prop(home, "og:image:type"), "image/jpeg");
   assert.match(prop(home, "og:image:alt"), /bike-friendly/);
+  assert.equal(named(home, "twitter:image:alt"), prop(home, "og:image:alt"));
+
+  const k53 = read("tours/k53-kriva-jelka.html");
+  assert.equal(image(k53), `${SITE_ORIGIN}/assets/images/home/hero.jpg`);
+  assert.equal(prop(k53, "og:image:width"), "1024");
+  assert.equal(prop(k53, "og:image:height"), "680");
+  assert.equal(prop(k53, "og:image:type"), "image/jpeg");
+  assert.equal(prop(k53, "og:image:alt"), prop(home, "og:image:alt"));
+  assert.equal(named(k53, "twitter:image:alt"), prop(k53, "og:image:alt"));
 
   const legal = read("sl/legal.html");
   assert.equal(
@@ -267,6 +365,12 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
     prop(slJezerski, "og:image:alt"),
     "Naslovna fotografija: Jezerski vrh in Ankova planina"
   );
+  assert.equal(named(slJezerski, "twitter:image:alt"), prop(slJezerski, "og:image:alt"));
+
+  const slK53 = read("sl/tours/k53-kriva-jelka.html");
+  assert.equal(image(slK53), `${SITE_ORIGIN}/assets/images/home/hero.jpg`);
+  assert.match(prop(slK53, "og:image:alt"), /kolesarjem prijazni/);
+  assert.equal(named(slK53, "twitter:image:alt"), prop(slK53, "og:image:alt"));
 
   const slMali = read("sl/tours/mali-vrh.html");
   assert.match(

@@ -39,6 +39,7 @@ const {
   TOUR_OG_WIDTH,
   TOUR_OG_HEIGHT,
   TOUR_OG_TYPE,
+  tourHasOwnOg,
   tourOgPath,
   ogImageAlt,
 } = require("./page-meta");
@@ -680,15 +681,16 @@ function buildHead(page, locale, messages) {
   const alwaysNoIndex = !page.indexable;
   const robots = alwaysNoIndex || !SITE_INDEX ? "noindex, nofollow" : "index, follow";
   const canonical = absoluteUrl(page.path, locale);
+  const useTourOg = Boolean(page.routeSlug && tourHasOwnOg(page.routeSlug));
   const ogImage = absoluteOgImage(
     SITE_ORIGIN,
-    page.routeSlug ? tourOgPath(page.routeSlug) : "",
+    useTourOg ? tourOgPath(page.routeSlug) : "",
     OG_IMAGE_PATH
   );
-  const ogImageWidth = page.routeSlug ? TOUR_OG_WIDTH : DEFAULT_OG_WIDTH;
-  const ogImageHeight = page.routeSlug ? TOUR_OG_HEIGHT : DEFAULT_OG_HEIGHT;
-  const ogImageType = page.routeSlug ? TOUR_OG_TYPE : DEFAULT_OG_TYPE;
-  const ogAlt = ogImageAlt(locale, page.routeSlug ? title : "");
+  const ogImageWidth = useTourOg ? TOUR_OG_WIDTH : DEFAULT_OG_WIDTH;
+  const ogImageHeight = useTourOg ? TOUR_OG_HEIGHT : DEFAULT_OG_HEIGHT;
+  const ogImageType = useTourOg ? TOUR_OG_TYPE : DEFAULT_OG_TYPE;
+  const ogAlt = ogImageAlt(locale, useTourOg ? title : "");
   const ogLocale = OG_LOCALES[locale] || "en_US";
 
   const localesForPage = pageLocales(page);

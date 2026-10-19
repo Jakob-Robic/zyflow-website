@@ -18,6 +18,16 @@ ASPECT = TARGET[0] / TARGET[1]
 
 # mali-vrh/gallery/01.jpg and ravenska-kocna/gallery/02.jpg are the same
 # 1920×471 Jezersko banner, with a large wordmark. They are not used.
+#
+# k53-kriva-jelka's only photo is a group portrait. The page uses the site
+# hero instead of an Open Graph crop.
+# k43-dobrca's cover is a brochure. This box is the meadow and hillside
+# with the wordmark, brush stroke, and rider left outside the frame.
+SKIP = {"k53-kriva-jelka"}
+# Exact frame: hillside, village and meadow, clear of the rider and the logo.
+SOURCE_BOX = {
+    "k43-dobrca": (600, 280, 1040, 511),
+}
 
 
 def center_crop(image):
@@ -53,14 +63,22 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     slugs = sorted(path.name for path in ROOT.iterdir() if path.is_dir())
     for slug in slugs:
+        dest = OUT / f"{slug}.jpg"
+        if slug in SKIP:
+            if dest.exists():
+                dest.unlink()
+            print(f"{slug:28} skipped (no usable photo; page uses the hero)")
+            continue
         rel = f"{slug}/cover.jpg"
         if not (ROOT / rel).exists():
             rel = f"{slug}/cover.webp"
         source = ROOT / rel
         with Image.open(source) as image:
             source_size = image.size
-            rendered, scale, cropped = to_og(image)
-        dest = OUT / f"{slug}.jpg"
+            frame = image.crop(SOURCE_BOX[slug]) if slug in SOURCE_BOX else image
+            rendered, scale, cropped = to_og(frame)
+        if slug in SOURCE_BOX:
+            rel = f"{rel} {SOURCE_BOX[slug]}"
         rendered.save(dest, "JPEG", quality=86, optimize=True, progressive=True)
         print(
             f"{slug:28} {source_size[0]:4}x{source_size[1]:<4} "

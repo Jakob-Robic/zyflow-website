@@ -94,43 +94,43 @@
  },
  "tour-k11-planine-pod-kosuto": {
  "title": "Zyflow: Planine pod Košuto",
- "description": "Alpine ride from Tržič onto the pastures under Košuta: 1740 m of climbing. Open in Zyflow."
+ "description": "One of Gorenjska’s most scenic MTB tours: shady forests and alpine pastures under the Košuta ridge (Pungrat, Šija, Kofce)."
  },
  "tour-k16-trzic-jezersko": {
  "title": "Zyflow: Tržič – Jezersko",
- "description": "A forest link from Tržič across to Jezersko: 1299 m of climbing. Open in Zyflow."
+ "description": "A demanding forest link from Tržič toward Jezersko, quiet, steep in places, rewarded with solitude and mountain views."
  },
  "tour-k21-dom-pod-storzicem": {
  "title": "Zyflow: Dom pod Storžičem",
- "description": "A shorter climb from Tržič to Dom pod Storžičem: 280 m of climbing. Open in Zyflow."
+ "description": "A shorter climb into Lomska dolina toward Dom pod Storžičem, a classic Tržič mountain hut approach."
  },
  "tour-k35-prelaz-ljubelj": {
  "title": "Zyflow: Prelaz Ljubelj",
- "description": "Climb the old Ljubelj pass from Tržič, closed to cars: 26 km and 900 m of climbing. Open in Zyflow."
+ "description": "Climb the old Ljubelj / Loibl pass road, Europe’s oldest road pass, closed to cars, with 13 hairpins and big Karawanks views."
  },
  "tour-k42-roznovenska": {
  "title": "Zyflow: Rožnovenska pot",
- "description": "Cultural ride from Tržič through Brezje pri Tržiču: 369 m of climbing. Open in Zyflow."
+ "description": "Follow the Rožnovenska pilgrimage corridor through Brezje pri Tržiču, culture stops, villages and rolling Gorenjska roads from Tržič."
  },
  "tour-k43-dobrca": {
  "title": "Zyflow: Dobrča",
- "description": "Ride from Tržič up to the hut on Dobrča: 2067 m of climbing. Open in Zyflow."
+ "description": "From Tržič along the Gorenjska “balcony” and up to the hut on Dobrča, a popular alpine day ride with big views."
  },
  "tour-k51-udin-borst": {
  "title": "Zyflow: Udin boršt",
- "description": "Gravel loop through the Udin boršt forest from Tržič: 286 m of climbing. Open in Zyflow."
+ "description": "Explore the karst forest of Udin boršt, sinkholes, quiet tracks and bandit lore, looping from Tržič through the foothills."
  },
  "tour-k52-pot-treh-zvonov": {
  "title": "Zyflow: Pot treh zvonov",
- "description": "Easy family loop on the Path of Three Bells near Tržič: 144 m of climbing. Open in Zyflow."
+ "description": "An easy foothill ride through Udin boršt on the Path of Three Bells, ideal for families and an e-bike warm-up around Tržič."
  },
  "tour-k53-kriva-jelka": {
  "title": "Zyflow: Kriva jelka",
- "description": "Gravel ride to Kriva jelka in Udin boršt: 386 m of climbing. Open in Zyflow."
+ "description": "Ride into Udin boršt to the Kriva jelka nature reserve, a calm mid-length forest loop from Tržič."
  },
  "tour-k55-gozd-udin-borst": {
  "title": "Zyflow: Gozd – Udin boršt",
- "description": "Foothill gravel between Gozd and Udin boršt: 763 m of climbing. Open in Zyflow."
+ "description": "A varied foothill loop linking Gozd under Kriška gora with Udin boršt, mountain views without committing to high alpine terrain."
  },
  "tour-kamnicanka": {
  "title": "Zyflow: Kamničanka",
@@ -1481,7 +1481,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K11 Planine pod Košuto | Zyflow",
- "metaDescription": "Alpine ride from Tržič onto the pastures under Košuta: 1740 m of climbing. Open in Zyflow.",
+ "metaDescription": "One of Gorenjska’s most scenic MTB tours: shady forests and alpine pastures under the Košuta ridge (Pungrat, Šija, Kofce).",
  "climb": "1740 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1524,7 +1524,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K16 Tržič – Jezersko | Zyflow",
- "metaDescription": "A forest link from Tržič across to Jezersko: 1299 m of climbing. Open in Zyflow.",
+ "metaDescription": "A demanding forest link from Tržič toward Jezersko, quiet, steep in places, rewarded with solitude and mountain views.",
  "climb": "1299 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1567,7 +1567,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K21 Dom pod Storžičem | Zyflow",
- "metaDescription": "A shorter climb from Tržič to Dom pod Storžičem: 280 m of climbing. Open in Zyflow.",
+ "metaDescription": "A shorter climb into Lomska dolina toward Dom pod Storžičem, a classic Tržič mountain hut approach.",
  "climb": "280 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1610,7 +1610,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K35 Prelaz Ljubelj (26 km, 900 m) | Zyflow",
- "metaDescription": "Climb the old Ljubelj pass from Tržič, closed to cars: 26 km and 900 m of climbing. Open in Zyflow.",
+ "metaDescription": "Climb the old Ljubelj / Loibl pass road, Europe’s oldest road pass, closed to cars, with 13 hairpins and big Karawanks views.",
  "climb": "900 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1653,7 +1653,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K42 Rožnovenska pot | Zyflow",
- "metaDescription": "Cultural ride from Tržič through Brezje pri Tržiču: 369 m of climbing. Open in Zyflow.",
+ "metaDescription": "Follow the Rožnovenska pilgrimage corridor through Brezje pri Tržiču, culture stops, villages and rolling Gorenjska roads from Tržič.",
  "climb": "369 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1696,7 +1696,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K43 Dobrča | Zyflow",
- "metaDescription": "Ride from Tržič up to the hut on Dobrča: 2067 m of climbing. Open in Zyflow.",
+ "metaDescription": "From Tržič along the Gorenjska “balcony” and up to the hut on Dobrča, a popular alpine day ride with big views.",
  "climb": "2067 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1739,7 +1739,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K51 Udin boršt | Zyflow",
- "metaDescription": "Gravel loop through the Udin boršt forest from Tržič: 286 m of climbing. Open in Zyflow.",
+ "metaDescription": "Explore the karst forest of Udin boršt, sinkholes, quiet tracks and bandit lore, looping from Tržič through the foothills.",
  "climb": "286 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1782,7 +1782,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K52 Pot treh zvonov | Zyflow",
- "metaDescription": "Easy family loop on the Path of Three Bells near Tržič: 144 m of climbing. Open in Zyflow.",
+ "metaDescription": "An easy foothill ride through Udin boršt on the Path of Three Bells, ideal for families and an e-bike warm-up around Tržič.",
  "climb": "144 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1825,7 +1825,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K53 Kriva jelka | Zyflow",
- "metaDescription": "Gravel ride to Kriva jelka in Udin boršt: 386 m of climbing. Open in Zyflow.",
+ "metaDescription": "Ride into Udin boršt to the Kriva jelka nature reserve, a calm mid-length forest loop from Tržič.",
  "climb": "386 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1868,7 +1868,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K55 Gozd – Udin boršt | Zyflow",
- "metaDescription": "Foothill gravel between Gozd and Udin boršt: 763 m of climbing. Open in Zyflow.",
+ "metaDescription": "A varied foothill loop linking Gozd under Kriška gora with Udin boršt, mountain views without committing to high alpine terrain.",
  "climb": "763 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",

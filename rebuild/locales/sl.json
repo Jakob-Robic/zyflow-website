@@ -70,11 +70,11 @@
  },
  "blog-what-makes-a-place-bike-friendly": {
  "title": "Zyflow: Kaj naredi kraj prijazen kolesarjem?",
- "description": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj iščemo in kako to filtriraš v aplikaciji."
+ "description": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj iščemo in kako takšne kraje najdeš s filtri v aplikaciji."
  },
  "blog-zyflow-is-live-on-ios-and-android": {
  "title": "Zyflow: Zyflow je na voljo za iOS in Android",
- "description": "Brezplačno v obeh trgovinah in na voljo v 8 državah. Poglej, kaj lahko preizkusiš na naslednji turi."
+ "description": "Zyflow je brezplačno na voljo v App Store in Google Play ter deluje v 8 državah. Poglej, kaj lahko preizkusiš na naslednji turi."
  },
  "blog-reading-elevation-before-a-cross-border-ride": {
  "title": "Zyflow: Branje višinskega profila pred čezmejno turo",
@@ -82,7 +82,7 @@
  },
  "tour-blejcanka": {
  "title": "Zyflow: Blejčanka",
- "description": "Blejčanka, iz Kranja do Bleda mimo Krope in Radovljice: 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Blejčanka: iz Kranja do Bleda mimo Krope in Radovljice, 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow."
  },
  "tour-jezerjanka": {
  "title": "Zyflow: Jezerjanka",
@@ -94,43 +94,43 @@
  },
  "tour-k11-planine-pod-kosuto": {
  "title": "Zyflow: Planine pod Košuto",
- "description": "Alpska tura iz Tržiča na planine pod Košuto: 1740 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Alpska tura iz Tržiča na planine pod Košuto. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k16-trzic-jezersko": {
  "title": "Zyflow: Tržič - Jezersko",
- "description": "Gozdna povezava iz Tržiča do Jezerskega: 1299 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Gozdna povezava iz Tržiča do Jezerskega. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k21-dom-pod-storzicem": {
  "title": "Zyflow: Dom pod Storžičem",
- "description": "Krajši vzpon iz Tržiča do Doma pod Storžičem: 280 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Krajši vzpon iz Tržiča do Doma pod Storžičem. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k35-prelaz-ljubelj": {
  "title": "Zyflow: Prelaz Ljubelj",
- "description": "Vzpon na stari Ljubelj iz Tržiča, zaprt za avte: 26 km in 900 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Iz Tržiča po stari cesti na prelaz Ljubelj, zaprti za promet. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k42-roznovenska": {
  "title": "Zyflow: Rožnovenska pot po kolesarsko",
- "description": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču: 369 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k43-dobrca": {
  "title": "Zyflow: Dobrča",
- "description": "Alpska tura iz Tržiča do koče na Dobrči: 2067 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Alpska tura iz Tržiča do koče na Dobrči. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k51-udin-borst": {
  "title": "Zyflow: Udin boršt - s kolesom ob vznožju in pogumno čezenj",
- "description": "Makadamska tura po Udin borštu iz Tržiča: 286 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Makadamska tura po Udin borštu iz Tržiča. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k52-pot-treh-zvonov": {
  "title": "Zyflow: Lahkotno kolesarjenje po Poti treh zvonov",
- "description": "Lahka družinska krožna tura pri Tržiču, Pot treh zvonov: 144 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Pot treh zvonov: lahka družinska krožna tura pri Tržiču. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k53-kriva-jelka": {
  "title": "Zyflow: Na Udin boršt do Krive jelke",
- "description": "Makadamska pot do Krive jelke v Udin borštu: 386 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Makadamska pot do Krive jelke v Udin borštu. Odpri pot v aplikaciji Zyflow."
  },
  "tour-k55-gozd-udin-borst": {
  "title": "Zyflow: Gozd - Udin boršt",
- "description": "Makadamska tura med Gozdom in Udin borštom: 763 m vzpona. Odpri pot v aplikaciji Zyflow."
+ "description": "Makadamska tura med Gozdom in Udin borštom. Odpri pot v aplikaciji Zyflow."
  },
  "tour-kamnicanka": {
  "title": "Zyflow: Kamničanka",
@@ -443,7 +443,7 @@
  {
  "tag": "Vodniki",
  "title": "Kaj naredi kraj prijazen kolesarjem?",
- "excerpt": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj preverjamo in kako to filtriraš v aplikaciji.",
+ "excerpt": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj preverjamo in kako takšne kraje najdeš s filtri v aplikaciji.",
  "link": "Preberi zgodbo"
  }
  ]
@@ -1352,7 +1352,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "Blejčanka (79 km do Bleda) | Zyflow",
- "metaDescription": "Blejčanka, iz Kranja do Bleda mimo Krope in Radovljice: 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Blejčanka: iz Kranja do Bleda mimo Krope in Radovljice, 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow.",
  "climb": "944 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1481,7 +1481,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K11 Planine pod Košuto | Zyflow",
- "metaDescription": "Alpska tura iz Tržiča na planine pod Košuto: 1740 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Alpska tura iz Tržiča na planine pod Košuto. Odpri pot v aplikaciji Zyflow.",
  "climb": "1740 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1524,7 +1524,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K16 Tržič – Jezersko | Zyflow",
- "metaDescription": "Gozdna povezava iz Tržiča do Jezerskega: 1299 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Gozdna povezava iz Tržiča do Jezerskega. Odpri pot v aplikaciji Zyflow.",
  "climb": "1299 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1567,7 +1567,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K21 Dom pod Storžičem | Zyflow",
- "metaDescription": "Krajši vzpon iz Tržiča do Doma pod Storžičem: 280 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Krajši vzpon iz Tržiča do Doma pod Storžičem. Odpri pot v aplikaciji Zyflow.",
  "climb": "280 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1610,7 +1610,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K35 Prelaz Ljubelj (26 km, 900 m) | Zyflow",
- "metaDescription": "Vzpon na stari Ljubelj iz Tržiča, zaprt za avte: 26 km in 900 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Iz Tržiča po stari cesti na prelaz Ljubelj, zaprti za promet. Odpri pot v aplikaciji Zyflow.",
  "climb": "900 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1653,7 +1653,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K42 Rožnovenska pot | Zyflow",
- "metaDescription": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču: 369 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču. Odpri pot v aplikaciji Zyflow.",
  "climb": "369 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1696,7 +1696,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K43 Dobrča | Zyflow",
- "metaDescription": "Alpska tura iz Tržiča do koče na Dobrči: 2067 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Alpska tura iz Tržiča do koče na Dobrči. Odpri pot v aplikaciji Zyflow.",
  "climb": "2067 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1739,7 +1739,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K51 Udin boršt | Zyflow",
- "metaDescription": "Makadamska tura po Udin borštu iz Tržiča: 286 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Makadamska tura po Udin borštu iz Tržiča. Odpri pot v aplikaciji Zyflow.",
  "climb": "286 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1782,7 +1782,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K52 Pot treh zvonov | Zyflow",
- "metaDescription": "Lahka družinska krožna tura pri Tržiču, Pot treh zvonov: 144 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Pot treh zvonov: lahka družinska krožna tura pri Tržiču. Odpri pot v aplikaciji Zyflow.",
  "climb": "144 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1825,7 +1825,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K53 Kriva jelka | Zyflow",
- "metaDescription": "Makadamska pot do Krive jelke v Udin borštu: 386 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Makadamska pot do Krive jelke v Udin borštu. Odpri pot v aplikaciji Zyflow.",
  "climb": "386 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",
@@ -1868,7 +1868,7 @@
  "ctaSecondary": "Prenesi aplikacijo",
  "gpxLabel": "Prenesi GPX",
  "metaTitle": "K55 Gozd – Udin boršt | Zyflow",
- "metaDescription": "Makadamska tura med Gozdom in Udin borštom: 763 m vzpona. Odpri pot v aplikaciji Zyflow.",
+ "metaDescription": "Makadamska tura med Gozdom in Udin borštom. Odpri pot v aplikaciji Zyflow.",
  "climb": "763 m",
  "climbLabel": "Višinci",
  "durationLabel": "Trajanje",

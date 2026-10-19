@@ -338,12 +338,24 @@ const DE_WORDS = [
 
 const LOCALE_NAME = { en: "English", sl: "Slovenian" };
 
-function countWords(patterns, text) {
+function countWords(patterns, text, { skipCapitalized = false } = {}) {
   let n = 0;
   for (const pattern of patterns) {
-    const re = new RegExp(`(?:^|[^\\p{L}])(?:${pattern})(?=$|[^\\p{L}])`, "giu");
-    const matches = text.match(re);
-    if (matches) n += matches.length;
+    const re = new RegExp(`(?:^|[^\\p{L}])(${pattern})(?=$|[^\\p{L}])`, "giu");
+    for (const match of text.matchAll(re)) {
+      const word = match[1];
+      const index = match.index + match[0].length - word.length;
+      // Mid-sentence capitals are place names (Jezerski, Tržič). A word at the
+      // start of the string can still be ordinary Slovenian.
+      if (
+        skipCapitalized &&
+        index > 0 &&
+        word[0] !== word[0].toLocaleLowerCase("sl")
+      ) {
+        continue;
+      }
+      n += 1;
+    }
   }
   return n;
 }
@@ -352,20 +364,51 @@ function stripCta(text) {
   return text.replace(CTA_RE, "").trim();
 }
 
+/** Loanwords that appear inside Slovenian sentences and are not an English page. */
+function stripLoanwords(text) {
+  return text.replace(/\b(?:bike park|pump track|gravel ride)\b/gi, " ");
+}
+
+/** One hit per word that carries a Slovenian diacritic and is not a capitalised name. */
+function slovenianDiacriticHits(text) {
+  const words = text.match(/\p{L}+/gu) || [];
+  let n = 0;
+  for (const word of words) {
+    if (!/[čšžćđ]/i.test(word)) continue;
+    if (word[0] !== word[0].toLocaleLowerCase("sl")) continue;
+    n += 1;
+  }
+  return n;
+}
+
+function article(name) {
+  return /^[aeiou]/i.test(name) ? "an" : "a";
+}
+
 function languageIssues(locale, text) {
-  const scores = {
-    English: countWords(EN_WORDS, text),
-    Slovenian: countWords(SL_WORDS, text),
-    German: countWords(DE_WORDS, text),
-  };
-  const total = scores.English + scores.Slovenian + scores.German;
+  const scored = stripLoanwords(text);
+  const english = countWords(EN_WORDS, scored);
+  let slovenian = countWords(SL_WORDS, scored, { skipCapitalized: true });
+  const german = countWords(DE_WORDS, scored);
+  // Diacritics catch Slovenian that shares no listed stem. Names like Tržič
+  // stay capitalised, so a list of places does not become a language vote.
+  const diacritics = slovenianDiacriticHits(scored);
+  if (slovenian < 2 && diacritics >= 2 && english === 0) {
+    slovenian += diacritics;
+  }
+  const scores = { English: english, Slovenian: slovenian, German: german };
+  const total = english + slovenian + german;
   if (!total) return [];
   const own = LOCALE_NAME[locale];
+  const ownCount = scores[own] || 0;
   const issues = [];
   for (const [name, count] of Object.entries(scores)) {
     if (name === own) continue;
-    if (count >= 2 && count / total >= 0.55) {
-      issues.push(`looks ${name} on a ${own} page`);
+    // Place names can match a few Slovenian stems. English grammar in the
+    // same sentence keeps the page language.
+    const dominates = ownCount === 0 || count >= ownCount * 2;
+    if (count >= 2 && count / total >= 0.55 && dominates) {
+      issues.push(`looks ${name} on ${article(own)} ${own} page`);
     }
   }
   return issues;
@@ -384,9 +427,12 @@ function descriptionIssues(locale, description) {
     issues.push(`longer than ${MAX_DESCRIPTION} characters (${length})`);
   }
 
-  if (text.includes("...") || text.includes("…")) {
+  const trailingEllipsis = /(?:\.{3}|…)\s*$/.test(text);
+  const endsSentence = /[.!?](?:["'”’»«)\]]+)?$/.test(text);
+  const endsStat = /,\s*(?:\d+(?:[.,]\d+)?\s*km|\d+:\d+\s*h)$/i.test(text);
+  if (trailingEllipsis) {
     issues.push("truncated with an ellipsis");
-  } else if (!/[.!?](?:["'”’»«)\]]+)?$/.test(text)) {
+  } else if (!endsSentence && !endsStat) {
     const midWord = /[\p{L}]$/u.test(text) && length >= 140;
     issues.push(midWord ? "truncated mid-word" : "does not end at a sentence boundary");
   }
@@ -416,10 +462,8 @@ function collectMetaIssues(messagesByLocale, pages, pageLocales) {
       for (const problem of descriptionIssues(locale, meta.description)) {
         issues.push(`${locale} ${page.id}: ${problem}`);
       }
-      if (locale === "sl") {
-        for (const problem of titleIssues(locale, meta.title)) {
-          issues.push(`${locale} ${page.id} title: ${problem}`);
-        }
+      for (const problem of titleIssues(locale, meta.title)) {
+        issues.push(`${locale} ${page.id} title: ${problem}`);
       }
     }
   }
@@ -443,6 +487,13 @@ function absoluteOgImage(origin, cover, fallbackPath = DEFAULT_OG_PATH) {
   const rel = raw ? raw.replace(/^\.\//, "") : fallbackPath.replace(/^\//, "");
   const path = rel.startsWith("/") ? rel : `/${rel}`;
   return `${origin}${path}`;
+}
+
+/** Kriva jelka's only photo is a group portrait, so the page uses the site hero. */
+const TOURS_USING_DEFAULT_OG = new Set(["k53-kriva-jelka"]);
+
+function tourHasOwnOg(slug) {
+  return !TOURS_USING_DEFAULT_OG.has(slug);
 }
 
 function tourOgPath(slug) {
@@ -475,6 +526,7 @@ module.exports = {
   titleIssues,
   collectMetaIssues,
   absoluteOgImage,
+  tourHasOwnOg,
   tourOgPath,
   ogImageAlt,
 };
