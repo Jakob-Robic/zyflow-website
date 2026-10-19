@@ -27,7 +27,7 @@ const { articleBySlug, blogCardI18n } = require("./articles");
 const { renderLegalMarkdown } = require("./legal-markdown");
 const { routeBySlug, ROUTES } = require("./routes");
 const { versionAssets } = require("./version-assets");
-const { APP_STORE_URL } = require("./store-links");
+const { appStoreUrlForLocale, assertAppStoreLinks } = require("./store-links");
 
 const ROOT = path.join(__dirname, "..");
 // REBUILD_DIST lets tests build into a temp dir; Vercel uses the default.
@@ -937,55 +937,8 @@ function injectLegalDocument(html, page, locale) {
   return html;
 }
 
-function injectAppStoreUrl(html) {
-  return html.replaceAll("{{appStoreUrl}}", APP_STORE_URL);
-}
-
-function assertAppStoreLinks() {
-  const countryLess = /(?:https?:)?\/\/apps\.apple\.com\/app\//i;
-  const anyApple = /https:\/\/apps\.apple\.com\/[^\s"'<>]*/gi;
-  const textExt = /\.(html|js|css|json|xml|txt|svg|md)$/i;
-  const problems = [];
-
-  function walk(dir) {
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-      const full = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
-        walk(full);
-        continue;
-      }
-      if (!textExt.test(entry.name)) continue;
-      const rel = path.relative(DIST, full);
-      const text = read(full);
-      if (text.includes("{{appStoreUrl}}")) {
-        problems.push(`${rel}: unresolved {{appStoreUrl}}`);
-      }
-      if (countryLess.test(text)) {
-        problems.push(`${rel}: country-less apps.apple.com link`);
-      }
-      countryLess.lastIndex = 0;
-      if (!entry.name.endsWith(".html")) continue;
-      for (const url of text.match(anyApple) || []) {
-        let parsed;
-        try {
-          parsed = new URL(url);
-        } catch (_e) {
-          problems.push(`${rel}: unparseable App Store URL ${url}`);
-          continue;
-        }
-        if (!parsed.pathname.startsWith("/si/")) {
-          problems.push(`${rel}: App Store URL is not the SI storefront (${parsed.pathname})`);
-        }
-      }
-    }
-  }
-
-  walk(DIST);
-  if (problems.length) {
-    throw new Error(
-      `App Store links must use ${APP_STORE_URL}\n${problems.slice(0, 20).join("\n")}`
-    );
-  }
+function injectAppStoreUrl(html, locale) {
+  return html.replaceAll("{{appStoreUrl}}", appStoreUrlForLocale(locale));
 }
 
 function injectRedirectTarget(html, page, locale) {
@@ -1017,7 +970,7 @@ function buildPage(page, locale, messages) {
   html = injectLangSwitcher(html, page, locale);
   html = injectDocumentHead(html, page, locale, messages);
   html = injectAnalyticsBoot(html);
-  html = injectAppStoreUrl(html);
+  html = injectAppStoreUrl(html, locale);
 
   // Ensure body knows locale for CSS/JS if needed
   if (!/\sdata-locale=/.test(html)) {
@@ -1076,7 +1029,7 @@ function build() {
   // Cache-Control in vercel.json can never pin a stale file.
   const versions = versionAssets(DIST);
   console.log(`versioned ${versions.size} JS/CSS assets`);
-  assertAppStoreLinks();
+  assertAppStoreLinks(DIST);
 
   console.log(
     `\nRebuild complete → ${path.relative(process.cwd(), DIST)} (locales=${LOCALES.join(

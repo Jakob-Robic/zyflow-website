@@ -130,6 +130,17 @@ test("App Store gets ct from utm_campaign and keeps other params", () => {
   assert.equal(url.searchParams.has("ph_id"), false);
 });
 
+test("App Store decoration keeps the Slovenian listing language", () => {
+  const href = attr.decorateStoreUrl(APP_STORE + "?l=sl", {
+    utms: { utm_source: "ads", utm_medium: "cpc", utm_campaign: "Spring Ride 2026" },
+    analyticsConsent: false,
+  });
+  const url = new URL(href);
+  assert.equal(url.pathname, "/si/app/zyflow/id6763228086");
+  assert.equal(url.searchParams.get("l"), "sl");
+  assert.equal(url.searchParams.get("ct"), "Spring_Ride_2026");
+});
+
 test("App Store omits ct when there is no campaign", () => {
   const href = attr.decorateStoreUrl(APP_STORE, {
     utms: { utm_source: "direct", utm_medium: "", utm_campaign: "" },
