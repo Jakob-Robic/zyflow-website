@@ -69,7 +69,7 @@ You can choose to share an individual saved route with the Zyflow community. Not
 
 > **Important:** the start and end points of a route can reveal where you live, work or regularly park your bike. Before sharing, consider starting and ending the route a little away from your home, and do not include personal details or photos that identify people, house numbers or licence plates.
 
-**Removing a shared route:** you can remove a shared route at any time. This removes it from the community, so other users can no longer see it, and deletes its photos and map images from our file storage. Copies that other users have already saved to their own accounts may remain in their accounts.
+**Removing a shared route:** you can remove a shared route at any time. This removes it from the community, so other users can no longer see it, and deletes its photos from our file storage. If you also want its map images removed from our file storage, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) and we will remove them within 30 days; they are also deleted automatically when you delete your account. Copies that other users have already saved to their own accounts may remain in their accounts.
 
 **Purpose:** to let riders discover and reuse routes shared by others.
 
@@ -215,7 +215,7 @@ Your app data is stored in the EU (Ireland). Some recipients are based in, or ma
 | Account data (email, name, phone, user ID) | While your account exists; deleted immediately when you delete your account in the app |
 | Profile photo | Until you remove it or delete your account |
 | Saved and imported routes, saved places | Until you delete them or your account |
-| Shared community routes, their photos and map images | The shared route, its photos and map images are deleted when you remove the route or delete your account (see section 9) |
+| Shared community routes, their photos and map images | The shared route and its photos are deleted when you remove the route or delete your account; its map images are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
 | Bike passport and bike photos | Until you delete your account; a bike photo is deleted from file storage when you remove it or delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
 | Brevo contact (email, name, user ID) | While your account exists; deleted automatically when you delete your account (see section 9) |

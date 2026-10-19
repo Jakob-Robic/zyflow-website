@@ -69,7 +69,7 @@ Posamezno shranjeno pot lahko delite s skupnostjo Zyflow. Nič se ne deli samode
 
 > **Pomembno:** začetna in končna točka poti lahko razkrijeta, kje stanujete, delate ali redno puščate kolo. Preden pot delite, razmislite, ali bi jo začeli in končali nekoliko stran od doma, in vanjo ne vključujte osebnih podatkov ali fotografij, na katerih so prepoznavne osebe, hišne številke ali registrske tablice.
 
-**Odstranitev deljene poti:** deljeno pot lahko kadar koli odstranite. S tem jo umaknete iz skupnosti, zato je drugi uporabniki ne morejo več videti, iz naše hrambe datotek pa izbrišemo tudi njene fotografije in slike zemljevida. Kopije, ki so jih drugi uporabniki že shranili v svoje račune, lahko ostanejo v njihovih računih.
+**Odstranitev deljene poti:** deljeno pot lahko kadar koli odstranite. S tem jo umaknete iz skupnosti, zato je drugi uporabniki ne morejo več videti, iz naše hrambe datotek pa izbrišemo tudi njene fotografije. Če želite, da iz naše hrambe datotek izbrišemo tudi njene slike zemljevida, nam pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) in jih bomo izbrisali v 30 dneh; ob izbrisu računa se izbrišejo tudi samodejno. Kopije, ki so jih drugi uporabniki že shranili v svoje račune, lahko ostanejo v njihovih računih.
 
 **Namen:** kolesarjem omogočiti odkrivanje in uporabo poti, ki so jih delili drugi.
 
@@ -215,7 +215,7 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Podatki o računu (e-naslov, ime, telefon, identifikator uporabnika) | Dokler račun obstaja; izbrisani takoj, ko račun izbrišete v aplikaciji |
 | Profilna fotografija | Dokler je ne odstranite ali ne izbrišete računa |
 | Shranjene in uvožene poti, shranjeni kraji | Dokler jih ne izbrišete ali ne izbrišete računa |
-| Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot ter njene fotografije in slike zemljevidov se izbrišejo, ko pot odstranite ali izbrišete račun (glej točko 9) |
+| Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot in njene fotografije se izbrišejo, ko pot odstranite ali izbrišete račun; njene slike zemljevidov izbrišemo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glej točko 9) |
 | Kolesarski potni list in fotografije kolesa | Do izbrisa računa; fotografijo kolesa izbrišemo iz hrambe datotek, ko jo odstranite ali izbrišete račun (glej točko 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
 | Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; ob izbrisu računa se samodejno izbriše (glej točko 9) |
