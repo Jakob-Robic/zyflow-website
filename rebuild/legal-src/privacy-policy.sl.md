@@ -218,7 +218,7 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot se odstrani, ko jo odstranite ali izbrišete račun; njene fotografije in slike zemljevidov odstranimo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glejte razdelek 9) |
 | Kolesarski potni list in fotografije kolesa | Dokler jih ne izbrišete ali ne izbrišete računa; fotografije koles odstranimo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glejte razdelek 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
-| Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; izbrisan na zahtevo v 30 dneh po izbrisu računa (glej točko 9) |
+| Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; ob izbrisu računa se samodejno izbriše (glej točko 9) |
 | Dnevniki pošiljanja e-pošte v storitvi Brevo | Le toliko časa, kolikor je potrebno za dostavo e-pošte in odpravo težav pri dostavi, v skladu z nastavitvami ponudnika |
 | Analitika uporabe (PostHog) | 12 mesecev; ob izbrisu računa se samodejno izbriše |
 | Poročila o napakah in delovanju (Sentry) | 90 dni |
