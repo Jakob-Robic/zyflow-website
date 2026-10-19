@@ -216,7 +216,7 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Profilna fotografija | Dokler je ne odstranite ali ne izbrišete računa |
 | Shranjene in uvožene poti, shranjeni kraji | Dokler jih ne izbrišete ali ne izbrišete računa |
 | Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot ter njene fotografije in slike zemljevidov se izbrišejo, ko pot odstranite ali izbrišete račun (glej točko 9) |
-| Kolesarski potni list in fotografije kolesa | Dokler jih ne izbrišete ali ne izbrišete računa; fotografije kolesa odstranimo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glej točko 9) |
+| Kolesarski potni list in fotografije kolesa | Do izbrisa računa; fotografijo kolesa izbrišemo iz hrambe datotek, ko jo odstranite ali izbrišete račun (glej točko 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
 | Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; ob izbrisu računa se samodejno izbriše (glej točko 9) |
 | Dnevniki pošiljanja e-pošte v storitvi Brevo | Le toliko časa, kolikor je potrebno za dostavo e-pošte in odpravo težav pri dostavi, v skladu z nastavitvami ponudnika |

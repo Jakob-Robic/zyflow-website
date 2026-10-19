@@ -216,7 +216,7 @@ Your app data is stored in the EU (Ireland). Some recipients are based in, or ma
 | Profile photo | Until you remove it or delete your account |
 | Saved and imported routes, saved places | Until you delete them or your account |
 | Shared community routes, their photos and map images | The shared route, its photos and map images are deleted when you remove the route or delete your account (see section 9) |
-| Bike passport and bike photos | Until you delete them or your account; bike photos are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
+| Bike passport and bike photos | Until you delete your account; a bike photo is deleted from file storage when you remove it or delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
 | Brevo contact (email, name, user ID) | While your account exists; deleted automatically when you delete your account (see section 9) |
 | Email sending logs at Brevo | Only as long as needed to deliver emails and resolve delivery problems, in line with the provider's retention settings |

@@ -1,6 +1,6 @@
 # Splošni pogoji uporabe Zyflow
 
-**Različica:** 2.0.0 · **Datum začetka veljavnosti:** 10. 10. 2026 · Nadomešča različico 1.1.0 z dne 24. 4. 2026
+**Različica:** 2.0.1 · **Datum začetka veljavnosti:** 19. 10. 2026 · Nadomešča različico 2.0.0 z dne 10. 10. 2026
 
 ## 1. Kdo smo in kaj urejajo ti pogoji
 
@@ -69,7 +69,7 @@ Poti lahko izvozite kot datoteke GPX in jih uporabljate za lastno navigacijo na 
 
 6.3 **Licenca, ki nam jo podelite.** Vse pravice na poteh, opisih, fotografijah in drugih vsebinah, ki jih delite (v nadaljevanju: »**vaša vsebina**«), ostanejo vaše. Z deljenjem nam podelite neizključno, brezplačno in prostorsko neomejeno licenco, za čas, ko je vaša vsebina deljena, da jo gostimo, shranjujemo, reproduciramo, tehnično prilagajamo (na primer spremenimo velikost fotografij, ustvarimo slike zemljevidov in statistiko poti), prikazujemo in jo dajemo na voljo uporabnikom v okviru storitve in prek povezav iz nje, kolikor je to potrebno za delovanje, prikaz in promocijo funkcij skupnosti. Drugim uporabnikom dovolite tudi, da si vašo deljeno pot ogledajo, shranijo njeno kopijo in jo uporabljajo za lastno **osebno, nekomercialno** kolesarjenje.
 
-6.4 **Odstranitev.** Deljeno pot ali fotografijo lahko kadar koli odstranite. S tem naša licenca preneha, razen da (a) **kopije, ki so jih drugi uporabniki že shranili, ostanejo v njihovih računih**, (b) lahko preostale kopije ostanejo v varnostnih kopijah do 7 dni in (c) lahko vsebino hranimo, kadar to zahteva zakon ali je potrebno za uveljavljanje oziroma obrambo pravnih zahtevkov.
+6.4 **Odstranitev.** Deljeno pot ali fotografijo lahko kadar koli odstranite. S tem naša licenca preneha, razen da (a) **kopije, ki so jih drugi uporabniki že shranili, ostanejo v njihovih računih**, in (b) lahko vsebino hranimo, kadar to zahteva zakon ali je potrebno za uveljavljanje oziroma obrambo pravnih zahtevkov.
 
 6.5 **Vaša odgovornost.** Za svojo vsebino odgovarjate sami. Potrjujete, da imate nanjo potrebne pravice (na primer na fotografijah in uvoženih sledeh GPX), da so osebe, prepoznavne na fotografijah, s tem soglašale in da vsebina ne krši zakona ali teh pogojev (točka 9).
 
