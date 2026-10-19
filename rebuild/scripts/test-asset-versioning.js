@@ -72,8 +72,11 @@ test("built HTML references /js and /css with a content version", () => {
     const events = fs.readFileSync(path.join(dist, "js", "analytics-events.js"), "utf8");
     assert.match(events, /armTurnstileOnInteraction/);
     assert.doesNotMatch(events, /initTurnstileWidgets/);
-    assert.match(home, /#cc-main\s*\{[^}]*position:\s*fixed/);
-    assert.match(home, /cookieconsent\.css\?v=[0-9a-f]{10}" media="print"/);
+    assert.match(mainCss, /picture\s*>\s*source\s*\{[^}]*display:\s*none/);
+    assert.match(home, /href="\/css\/cookieconsent\.css\?v=[0-9a-f]{10}"/);
+    assert.doesNotMatch(home, /cookieconsent\.css\?v=[0-9a-f]{10}" media="print"/);
+    assert.doesNotMatch(home, /onload="this\.media/);
+    assert.doesNotMatch(home, /<style[^>]*>[\s\S]*#cc-main/);
     const contour = home.match(/\/assets\/images\/opt\/[0-9a-f]{12}\/map-contours\.svg/);
     const contourFile = path.join(dist, contour[0].slice(1));
     assert.ok(fs.statSync(contourFile).size < 120 * 1024, "simplified contour should be well under the 1.5MB source");

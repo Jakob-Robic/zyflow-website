@@ -43,6 +43,15 @@ test("turnstile script is armed on focus and input, not on page load", () => {
   assert.doesNotMatch(boot, /loadTurnstileScript\(\)/);
 });
 
+test("a failed Turnstile script load drops the cached promise so the next try can reload", () => {
+  const src = fs.readFileSync(path.join(__dirname, "../js/analytics-events.js"), "utf8");
+  const fn = src.slice(src.indexOf("function loadTurnstileScript"), src.indexOf("function renderTurnstileSlot"));
+  const parts = fn.split('reject(new Error("turnstile"))');
+  assert.equal(parts.length, 3, "timeout and onerror should each reject");
+  assert.match(parts[0], /window\.__zyflowTurnstileLoading = null/);
+  assert.match(parts[1], /window\.__zyflowTurnstileLoading = null/);
+});
+
 test("bundleCss inlines imports and rebases font urls", () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "zyflow-css-"));
   try {

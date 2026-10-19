@@ -2469,7 +2469,7 @@ html[data-theme="light"] .testimonial__bg img {
     gap: var(--space-gap-5);
   }
   .journal__story > img,
-.journal__story > picture > img {
+  .journal__story > picture > img {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 10;

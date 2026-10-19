@@ -229,6 +229,7 @@
           }
           n += 1;
           if (n > 50) {
+            window.__zyflowTurnstileLoading = null;
             reject(new Error("turnstile"));
             return;
           }
@@ -237,6 +238,7 @@
         wait();
       };
       s.onerror = function () {
+        window.__zyflowTurnstileLoading = null;
         reject(new Error("turnstile"));
       };
       document.head.appendChild(s);
@@ -273,8 +275,9 @@
    * https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit
    * and renders only that form's widget. Submit also calls
    * initTurnstileForForm, so a token is still requested if those events
-   * never fired. The token is sent as turnstileToken; the honeypot field
-   * is unchanged. Same origins as before (script, iframe, siteverify).
+   * never fired. A failed api.js load clears the cached promise so the next
+   * interaction retries. The token is sent as turnstileToken; the honeypot
+   * field is unchanged. Same origins as before (script, iframe, siteverify).
    */
   function armTurnstileOnInteraction(form) {
     if (!form || form.dataset.turnstileArmed === "1") return;
