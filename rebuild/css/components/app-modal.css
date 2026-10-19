@@ -273,7 +273,8 @@
   background: var(--color-neutral-0);
 }
 
-.app-modal__qr > img:first-child {
+.app-modal__qr > img:first-child,
+.app-modal__qr > picture:first-child img {
   width: 100%;
   height: 100%;
   display: block;

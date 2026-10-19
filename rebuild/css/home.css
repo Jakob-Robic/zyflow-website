@@ -1289,7 +1289,8 @@ html[data-theme="light"] .trust__item img {
   flex-shrink: 0;
 }
 
-.intro__photos img:first-child {
+.intro__photos > img:first-child,
+.intro__photos > picture:first-child img {
   width: 120px;
   height: 160px;
   object-fit: cover;
@@ -1297,7 +1298,8 @@ html[data-theme="light"] .trust__item img {
   border-radius: var(--radius-md);
 }
 
-.intro__photos img:last-child {
+.intro__photos > img:last-child,
+.intro__photos > picture:last-child img {
   width: 168px;
   height: 223px;
   object-fit: cover;
@@ -1970,7 +1972,8 @@ html[data-theme="light"] .testimonial__bg img {
   gap: var(--space-gap-6);
 }
 
-.journal__story > img {
+.journal__story > img,
+.journal__story > picture > img {
   width: 193px;
   height: 193px;
   object-fit: cover;
@@ -2465,7 +2468,8 @@ html[data-theme="light"] .testimonial__bg img {
     flex-direction: column;
     gap: var(--space-gap-5);
   }
-  .journal__story > img {
+  .journal__story > img,
+.journal__story > picture > img {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 10;

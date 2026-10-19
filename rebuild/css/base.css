@@ -18,6 +18,14 @@ html {
   overflow-x: clip;
 }
 
+/*
+ * <picture> only chooses a format. display:contents keeps the <img> as the
+ * box the existing selectors size (reset.css otherwise sets picture to block).
+ */
+picture {
+  display: contents;
+}
+
 /* —— Containers —— */
 
 .container {

@@ -31,7 +31,7 @@
 {{preloads}}
 <link rel="stylesheet" href="/css/main.css?v=8" />
 <!-- analytics -->
-<script src="/js/analytics-config.js"></script>
+<script src="/js/analytics-config.js" defer></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -79,5 +79,28 @@
   })(window, document, "script", "dataLayer", "GTM-W8XX2TWZ");
 </script>
 <!-- End Google Tag Manager -->
-<link rel="stylesheet" href="/css/cookieconsent.css" />
+<!-- Pin the consent root before cookieconsent.css applies. That sheet is
+     non-blocking (media=print), and the library focuses a node inside the
+     modal ~100ms after inserting it. Without this, the unstyled modal sits
+     at the end of the document and the focus scrolls the page to the footer. -->
+<style>
+  #cc-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: visible;
+    z-index: 2147483647;
+  }
+  #cc-main .cm {
+    position: fixed;
+    z-index: 1;
+    bottom: 1rem;
+    left: 1rem;
+    max-width: 24rem;
+  }
+</style>
+<link rel="stylesheet" href="/css/cookieconsent.css" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="/css/cookieconsent.css" /></noscript>
 <!-- /analytics -->

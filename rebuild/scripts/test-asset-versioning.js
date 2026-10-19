@@ -51,6 +51,33 @@ test("built HTML references /js and /css with a content version", () => {
       tourHtml.includes(`/js/tour-map.js?v=${sha(tourMap)}`),
       "blejcanka should reference tour-map.js by its post-injection hash"
     );
+
+    const home = fs.readFileSync(path.join(dist, "index.html"), "utf8");
+    const mainCss = fs.readFileSync(path.join(dist, "css", "main.css"), "utf8");
+    assert.doesNotMatch(mainCss, /(^|[;{}])\s*@import\b/m);
+    assert.match(mainCss, /url\("\.\.\/assets\/design-system\/fonts\/DMSans\.woff2"\)/);
+    assert.match(home, /type="image\/avif"/);
+    assert.match(home, /imagesrcset="[^"]+\.avif \d+w/);
+    assert.match(home, /fetchpriority="high"/);
+    assert.doesNotMatch(home, /map-contours-featured\.svg/);
+    assert.match(home, /\/assets\/images\/opt\/[0-9a-f]{12}\/map-contours\.svg/);
+    const heroImg = home.match(/<img\b[^>]*Cyclist riding a scenic road[^>]*>/);
+    assert.ok(heroImg, "hero image should remain");
+    assert.doesNotMatch(heroImg[0], /loading="lazy"/);
+    assert.match(heroImg[0], /fetchpriority="high"/);
+    const shot = home.indexOf("phone-ui__shot");
+    const appMap = home.slice(home.lastIndexOf("<picture>", shot), home.indexOf("</picture>", shot));
+    assert.match(appMap, /loading="lazy"/);
+    assert.match(appMap, /type="image\/avif"/);
+    const events = fs.readFileSync(path.join(dist, "js", "analytics-events.js"), "utf8");
+    assert.match(events, /armTurnstileOnInteraction/);
+    assert.doesNotMatch(events, /initTurnstileWidgets/);
+    assert.match(home, /#cc-main\s*\{[^}]*position:\s*fixed/);
+    assert.match(home, /cookieconsent\.css\?v=[0-9a-f]{10}" media="print"/);
+    const contour = home.match(/\/assets\/images\/opt\/[0-9a-f]{12}\/map-contours\.svg/);
+    const contourFile = path.join(dist, contour[0].slice(1));
+    assert.ok(fs.statSync(contourFile).size < 120 * 1024, "simplified contour should be well under the 1.5MB source");
+    assert.ok(!fs.existsSync(path.join(dist, "assets/images/home/map-contours-featured.svg")));
   } finally {
     fs.rmSync(dist, { recursive: true, force: true });
   }
