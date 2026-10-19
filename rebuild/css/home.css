@@ -423,6 +423,11 @@ main > section:last-child {
   justify-self: center;
 }
 
+/* Three live categories (no commute yet): one row, no empty cell. */
+.footer__cats:has(> .footer__cat:nth-child(3):last-child) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .footer__cat {
   display: flex;
   flex-direction: column;

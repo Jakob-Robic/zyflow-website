@@ -8,6 +8,16 @@ const SITE_ORIGIN = process.env.SITE_ORIGIN || "https://www.zyflow.eu";
 const LOCALES = ["en", "sl"];
 const DEFAULT_LOCALE = "en";
 
+/**
+ * Journal (/blog and article pages) is built for preview but kept out of the
+ * public site until launch. Set this to true to:
+ *   - mark /blog and articles indexable
+ *   - drop the robots.txt Disallow for /blog
+ *   - restore nav, footer, home journal, and "Read Journal" links
+ *     (HTML marked <!-- journal:public --> / <!-- journal:hidden -->)
+ */
+const JOURNAL_PUBLIC = false;
+
 /** @typedef {{ id: string, file: string, out: string, path: string, indexable: boolean, locales?: string[], preloadHero?: boolean }} PageDef */
 
 /** @type {PageDef[]} */
@@ -48,10 +58,9 @@ const PAGES = [
     file: "blog.html",
     out: "blog.html",
     path: "/blog",
-    // HIDDEN FOR DEPLOY: Journal — set true when Journal is public again
-    indexable: false,
+    indexable: JOURNAL_PUBLIC,
   },
-  ...ARTICLE_PAGES,
+  ...ARTICLE_PAGES.map((page) => ({ ...page, indexable: JOURNAL_PUBLIC })),
   {
     id: "contact",
     file: "contact.html",
@@ -219,6 +228,7 @@ module.exports = {
   SITE_ORIGIN,
   LOCALES,
   DEFAULT_LOCALE,
+  JOURNAL_PUBLIC,
   PAGES,
   pageLocales,
   localizedPath,

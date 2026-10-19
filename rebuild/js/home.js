@@ -268,7 +268,13 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   const regionLabel = document.querySelector("[data-tours-region-label]");
   const regionLabels = document.querySelector("[data-tours-region-labels]");
 
-  const VALID_TYPES = new Set(["tour", "alpine", "commute", "gravel"]);
+  /* Only categories that are actually rendered (a route exists). A stale
+     ?type=commute link then falls through to the full list instead of an empty grid. */
+  const VALID_TYPES = new Set(
+    buttons
+      .map((btn) => btn.getAttribute("data-filter") || "")
+      .filter((value) => value && value !== "all")
+  );
   const VALID_REGIONS = new Set(["slovenia", "croatia", "austria", "italy"]);
   /* Only Slovenia routes are live for now; other region deep-links are ignored. */
   const LIVE_REGIONS = new Set(["slovenia"]);
@@ -278,6 +284,7 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   let regionFilter = "";
 
   const typeParam = (params.get("type") || "").toLowerCase();
+  const staleType = Boolean(typeParam) && !VALID_TYPES.has(typeParam);
   if (VALID_TYPES.has(typeParam)) typeFilter = typeParam;
 
   const regionParam = (params.get("region") || "").toLowerCase();
@@ -365,8 +372,9 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   typeChip?.addEventListener("click", clearType);
   regionChip?.addEventListener("click", clearRegion);
 
-  // Activate type from URL (same as clicking the matching button)
-  setActiveType(typeFilter, { updateHistory: false });
+  // Activate type from URL (same as clicking the matching button).
+  // A type with no routes is dropped from the URL so the address matches the full list.
+  setActiveType(typeFilter, { updateHistory: staleType });
 })();
 
 /**

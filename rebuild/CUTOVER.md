@@ -34,4 +34,4 @@ Production hosting is pointed at the rebuild tree via root [`vercel.json`](../ve
 - `scripts/prepare-public.js` excludes `rebuild/` so source/stubs never leak into the legacy Framer `public/` build.
 - Local preview (noindex): `npm run build:rebuild && npm run serve:rebuild` → http://localhost:8090
 - Local indexable preview: `npm run build:rebuild:prod && npm run serve:rebuild`
-- Journal nav/footer links are hidden for this deploy; `/blog*` is `noindex` + `Disallow` in robots.txt until restored.
+- Journal links stay off the public site while `JOURNAL_PUBLIC` is `false` in `rebuild/scripts/pages.js`. Set it to `true` to index `/blog`, allow it in `robots.txt`, and restore the nav, footer, home journal, and “Read Journal” links.

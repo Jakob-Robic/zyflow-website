@@ -17,6 +17,7 @@ const {
   SITE_ORIGIN,
   LOCALES,
   DEFAULT_LOCALE,
+  JOURNAL_PUBLIC,
   PAGES,
   pageLocales,
   absoluteUrl,
@@ -164,6 +165,41 @@ function assertLocaleParity(messagesByLocale) {
       throw new Error(`Locale key parity failed — ${parts.join("; ")}`);
     }
   }
+}
+
+/**
+ * Drop <!-- name:public --> or <!-- name:hidden --> blocks.
+ * The kept side is unwrapped so flipping the flag restores the markup.
+ */
+function applyToggleBlocks(html, name, enabled) {
+  const keep = enabled ? "public" : "hidden";
+  const drop = enabled ? "hidden" : "public";
+  const dropRe = new RegExp(
+    `<!--\\s*${name}:${drop}\\s*-->[\\s\\S]*?<!--\\s*/${name}:${drop}\\s*-->`,
+    "g"
+  );
+  const keepRe = new RegExp(`<!--\\s*/?${name}:${keep}\\s*-->`, "g");
+  return html.replace(dropRe, "").replace(keepRe, "");
+}
+
+/**
+ * Elements with data-requires-category="…" render only when a route uses
+ * that category. Empty filters (commute today) disappear until a route exists.
+ */
+function stripUnpublishedCategories(html) {
+  return html.replace(
+    /<([a-zA-Z][\w:-]*)([^>]*\sdata-requires-category="([^"]+)"[^>]*)>([\s\S]*?)<\/\1>/g,
+    (match, _tag, _attrs, category) => {
+      if (ROUTES.some((route) => route.category === category)) return match;
+      return "";
+    }
+  );
+}
+
+function applyPublicationFlags(html) {
+  html = applyToggleBlocks(html, "journal", JOURNAL_PUBLIC);
+  html = stripUnpublishedCategories(html);
+  return html;
 }
 
 function resolveIncludes(html, stack = []) {
@@ -839,12 +875,14 @@ ${urls.join("\n")}
 </urlset>
 `;
 
+  const disallow = ["Disallow: /styleguide", "Disallow: /sl/styleguide"];
+  if (!JOURNAL_PUBLIC) {
+    disallow.push("Disallow: /blog", "Disallow: /sl/blog");
+  }
+
   const robots = `User-agent: *
 Allow: /
-Disallow: /styleguide
-Disallow: /sl/styleguide
-Disallow: /blog
-Disallow: /sl/blog
+${disallow.join("\n")}
 
 Sitemap: ${SITE_ORIGIN}/sitemap.xml
 `;
@@ -992,6 +1030,7 @@ function buildPage(page, locale, messages) {
     html = injectTourContent(html, page.routeSlug);
   }
   html = resolveIncludes(html);
+  html = applyPublicationFlags(html);
   html = injectLegalDocument(html, page, locale);
   html = injectRedirectTarget(html, page, locale);
   html = applyI18n(html, messages);
@@ -1019,6 +1058,67 @@ function buildPage(page, locale, messages) {
   fs.writeFileSync(outFile, html, "utf8");
   const label = path.relative(DIST, outFile);
   console.log(`built ${label}`);
+}
+
+function assertIndexablePages() {
+  const hrefRe = /\shref="([^"]*)"/g;
+  const problems = [];
+
+  function hrefProblems(rel, html) {
+    const visible = html.replace(/<!--[\s\S]*?-->/g, "");
+    const found = [];
+    hrefRe.lastIndex = 0;
+    let match;
+    while ((match = hrefRe.exec(visible))) {
+      const href = match[1];
+      const pathOnly = href.split(/[?#]/)[0];
+      if (/(^|\/)blog$/.test(pathOnly) || /(^|\/)blog\//.test(pathOnly)) {
+        found.push(`${rel} links to hidden journal ${href}`);
+      }
+      if (/(^|\/)tour$/.test(pathOnly)) {
+        found.push(`${rel} links to legacy /tour ${href}`);
+      }
+      if (/(?:^|[?&])type=commute(?:&|$)/.test(href)) {
+        found.push(`${rel} links to empty commute filter ${href}`);
+      }
+    }
+    return found;
+  }
+
+  for (const page of PAGES) {
+    if (!page.indexable) continue;
+    for (const locale of pageLocales(page)) {
+      const outDir =
+        locale === DEFAULT_LOCALE || page.localePrefix === false
+          ? DIST
+          : path.join(DIST, locale);
+      const file = path.join(outDir, page.out);
+      problems.push(...hrefProblems(path.relative(DIST, file), read(file)));
+    }
+  }
+
+  const robots = read(path.join(DIST, "robots.txt"));
+  const sitemap = read(path.join(DIST, "sitemap.xml"));
+  if (!JOURNAL_PUBLIC) {
+    if (!robots.includes("Disallow: /blog")) {
+      problems.push("robots.txt does not disallow /blog while journal is hidden");
+    }
+    if (sitemap.includes("/blog")) {
+      problems.push("sitemap.xml lists /blog while journal is hidden");
+    }
+  }
+
+  if (problems.length) {
+    throw new Error(
+      `Public pages still point at hidden or empty targets:\n${problems.join("\n")}`
+    );
+  }
+
+  // Journal stays buildable so flipping JOURNAL_PUBLIC does not require new templates.
+  const blog = path.join(DIST, "blog.html");
+  if (!fs.existsSync(blog)) {
+    throw new Error("Journal page was not built (expected dist/blog.html)");
+  }
 }
 
 async function build() {
@@ -1059,6 +1159,7 @@ async function build() {
   }
 
   writeSeoFiles();
+  assertIndexablePages();
 
   // One stylesheet instead of the @import chain (render-blocking).
   bundleCss(DIST);

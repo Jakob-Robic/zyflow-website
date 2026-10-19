@@ -69,8 +69,6 @@ const ARTICLE_PAGES = ARTICLES.map((article) => ({
   file: "blog-article.html",
   out: `blog/${article.slug}.html`,
   path: `/blog/${article.slug}`,
-  // HIDDEN FOR DEPLOY: Journal — set true when Journal is public again
-  indexable: false,
   articleSlug: article.slug,
 }));
 
