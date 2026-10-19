@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.0 · **Effective date:** 10 October 2026 · Replaces version 1.1 of 30 June 2026
+**Version:** 2.1 · **Effective date:** 19 October 2026 · Replaces version 2.0 of 10 October 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -107,7 +107,7 @@ We use Brevo to store your contact details (email address, full name and user ID
 
 ### 3.9 Product analytics
 
-We use PostHog (EU cloud) to understand how the app is used and to improve it. We send a pseudonymous **user ID (not your email address or name)**, selected in-app events (for example "route planned" or "GPX exported"), app version and basic device information. Automatic capture of all interactions and session recording are not used in the app. PostHog is set to **discard your IP address**.
+We use PostHog (EU cloud) to understand how the app is used and to improve it. We send a pseudonymous **user ID (not your email address or name)**, selected in-app events (for example "route planned" or "GPX exported"), app version and basic device information. If you agree, PostHog also records technical details of app errors (the error message and where in the app it happened) so we can fix them. Automatic capture of all interactions and session recording are not used in the app. PostHog is set to **discard your IP address**.
 
 **Legal basis:** your consent (Art. 6(1)(a) GDPR and ZEKom-2). The app asks you before analytics start; analytics are off until you agree. You can withdraw consent at any time in Settings → Share usage statistics; this does not affect processing before withdrawal.
 

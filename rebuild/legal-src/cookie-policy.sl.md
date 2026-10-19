@@ -1,6 +1,6 @@
 # Politika piškotkov Zyflow
 
-**Različica:** 1.0 · **Datum začetka veljavnosti:** 10. 10. 2026 · **URL:** [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy)
+**Različica:** 1.1 · **Datum začetka veljavnosti:** 19. 10. 2026 · **URL:** [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy)
 
 Ta politika piškotkov pojasnjuje, kako družba HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenija (v nadaljevanju: »mi«), uporablja piškotke in podobne tehnologije na spletnih mestih [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Več o obdelavi osebnih podatkov je v naši [Politiki zasebnosti](https://www.zyflow.eu/legal-pages/privacy-policy). Kontakt: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 

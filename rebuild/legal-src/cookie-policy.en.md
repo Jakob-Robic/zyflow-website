@@ -1,6 +1,6 @@
 # Zyflow Cookie Policy
 
-**Version:** 1.0 · **Effective date:** 10 October 2026 · **URL:** [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy)
+**Version:** 1.1 · **Effective date:** 19 October 2026 · **URL:** [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy)
 
 This Cookie Policy explains how HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenia ("we"), uses cookies and similar technologies on the websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). More about how we process personal data is in our [Privacy Policy](https://www.zyflow.eu/legal-pages/privacy-policy). Contact: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 

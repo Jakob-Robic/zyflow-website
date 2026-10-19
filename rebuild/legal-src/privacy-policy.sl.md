@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.0 · **Datum začetka veljavnosti:** 10. 10. 2026 · Nadomešča različico 1.1 z dne 30. 6. 2026
+**Različica:** 2.1 · **Datum začetka veljavnosti:** 19. 10. 2026 · Nadomešča različico 2.0 z dne 10. 10. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -107,7 +107,7 @@ Za hrambo kontaktnih podatkov (e-naslov, ime in priimek ter identifikator uporab
 
 ### 3.9 Analitika uporabe
 
-Za razumevanje uporabe aplikacije in njeno izboljševanje uporabljamo PostHog (oblak v EU). Pošiljamo psevdonimni **identifikator uporabnika (ne vašega e-naslova ali imena)**, izbrane dogodke v aplikaciji (na primer »pot načrtovana« ali »izvoz GPX«), različico aplikacije in osnovne podatke o napravi. Samodejnega zajema vseh interakcij in snemanja sej v aplikaciji ne uporabljamo. PostHog je nastavljen tako, da **vašega naslova IP ne shrani**.
+Za razumevanje uporabe aplikacije in njeno izboljševanje uporabljamo PostHog (oblak v EU). Pošiljamo psevdonimni **identifikator uporabnika (ne vašega e-naslova ali imena)**, izbrane dogodke v aplikaciji (na primer »pot načrtovana« ali »izvoz GPX«), različico aplikacije in osnovne podatke o napravi. Če privolite, PostHog beleži tudi tehnične podrobnosti o napakah v aplikaciji (sporočilo o napaki in mesto v aplikaciji, kjer je nastala), da jih lahko odpravimo. Samodejnega zajema vseh interakcij in snemanja sej v aplikaciji ne uporabljamo. PostHog je nastavljen tako, da **vašega naslova IP ne shrani**.
 
 **Pravna podlaga:** vaša privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Aplikacija vas vpraša, preden se analitika vklopi; dokler ne privolite, je izklopljena. Privolitev lahko kadar koli prekličete v Nastavitvah → Deli statistiko uporabe; preklic ne vpliva na obdelavo pred preklicem.
 
