@@ -187,7 +187,7 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 | PostHog (oblak v EU) (obdelovalec) | Analitika uporabe | Identifikator uporabnika, dogodki v aplikaciji, podatki o napravi/aplikaciji; naslov IP se ne shrani | EU |
 | Sentry (Functional Software, Inc.), hramba v EU (obdelovalec) | Spremljanje napak in delovanja | Identifikator uporabnika, naslov IP, podatki o napravi in napaki | Hramba v EU; družba iz ZDA: glej točko 6 |
 | Vercel, Inc. (obdelovalec) | Gostovanje naših spletnih mest | Naslov IP, tehnični podatki o zahtevi | Globalno omrežje, vključno z ZDA: glej točko 6 |
-| Apple / Google (samostojna upravljavca) | Prijava z Apple / Google (če jo izberete) | Podatki za prijavo, e-naslov, ime | Subjekti v EU in ZDA: glej točko 6 |
+| Apple / Google (samostojna upravljavca) | Prijava z Apple / Google (če jo izberete) | Podatki za prijavo, e-naslov, ime, povezava do profilne slike (Google) | Subjekti v EU in ZDA: glej točko 6 |
 | MapTiler AG | Zemljevidne ploščice | Naslov IP, območje zemljevida | Družba s sedežem v Švici; glej točko 6 |
 | komoot GmbH (Photon) | Iskanje krajev (prek našega strežnika) | Iskalni niz, območje iskanja | Družba s sedežem v Nemčiji (EU) |
 | OpenStreetMap Foundation (Nominatim) | Obratno geokodiranje | Naslov IP, koordinate | Ustanova s sedežem v Združenem kraljestvu; glej točko 6 |
@@ -220,12 +220,12 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
 | Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; izbrisan na zahtevo v 30 dneh po izbrisu računa (glej točko 9) |
 | Dnevniki pošiljanja e-pošte v storitvi Brevo | Le toliko časa, kolikor je potrebno za dostavo e-pošte in odpravo težav pri dostavi, v skladu z nastavitvami ponudnika |
-| Analitika uporabe (PostHog) | 12 mesecev; analitični profil izbrišemo na zahtevo v 30 dneh po izbrisu računa |
+| Analitika uporabe (PostHog) | 12 mesecev; ob izbrisu računa se samodejno izbriše |
 | Poročila o napakah in delovanju (Sentry) | 90 dni |
 | Podatki za omejevanje iskalnih zahtev (naslov IP in števci) | Le toliko časa, kolikor je potrebno za preprečevanje zlorab; redno se brišejo |
 | Predpomnilnik iskanja (iskalni niz brez povezave z vami) | 24 ur |
 | Dnevniki strežnikov in gostovanja (Supabase, Vercel) | Do 30 dni |
-| Varnostne kopije podatkovne baze | Do 7 dni, sprotno; izbrisani podatki izginejo iz varnostnih kopij, ko se te prepišejo |
+| Varnostne kopije podatkovne baze | Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo |
 | Korespondenca s podporo in v zvezi z zahtevami za uveljavljanje pravic | Toliko časa, kolikor je potrebno za obravnavo vaše zahteve, nato omejen čas za dokumentiranje in uveljavljanje oziroma obrambo pravnih zahtevkov |
 | Podatki na vaši napravi (seja, zadnja lokacija, nedavna iskanja) | Dokler ne odstranite aplikacije ali ne izbrišete njenih podatkov |
 | Računovodske listine (če obstajajo) | Kot določa zakon (na primer 10 let za račune po ZDDV-1) |
@@ -251,7 +251,7 @@ Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) 
 - **Na spletu:** [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna).
 - **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev), izbrišejo takoj. Ob tem samodejno izbrišemo tudi vaše fotografije in slike zemljevidov v naši hrambi datotek, vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri PostHogu. Poročila o napakah pri Sentryju, povezana z vašim ID-jem uporabnika, se samodejno izbrišejo po 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Preostale kopije v varnostnih kopijah se prepišejo v rednem ciklu varnostnega kopiranja. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
+Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa ter fotografije in slike zemljevidov deljenih poti), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo po 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
 ## 10. Pritožbe
 
