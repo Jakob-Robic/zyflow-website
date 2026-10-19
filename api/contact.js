@@ -1,5 +1,5 @@
-const { createClient } = require('@supabase/supabase-js');
 const { sendBrevoEmail } = require('./brevo');
+const { getSupabase } = require('./_lib/supabase');
 const {
   escapeHtml,
   stripCrlf,
@@ -7,6 +7,7 @@ const {
   readContactFields,
   guardRequest,
   rejectIfBot,
+  enforceEmailRateLimit,
 } = require('./_lib/security');
 
 if (!process.env.SUPABASE_URL) console.error('Missing SUPABASE_URL');
@@ -14,20 +15,12 @@ if (!process.env.SUPABASE_SERVICE_KEY) console.error('Missing SUPABASE_SERVICE_K
 if (!process.env.BREVO_API_KEY) console.error('Missing BREVO_API_KEY');
 if (!process.env.NOTIFICATION_EMAIL) console.error('Missing NOTIFICATION_EMAIL');
 
-let supabase;
-
-function getSupabase() {
-  if (!supabase) {
-    supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
-  }
-  return supabase;
-}
-
 module.exports = async function handler(req, res) {
-  if (!guardRequest(req, res, 'contact')) return;
+  if (!(await guardRequest(req, res, 'contact'))) return;
 
   try {
     const body = jsonBody(req);
+    if (!(await enforceEmailRateLimit(res, 'contact', body && body.email))) return;
     if (await rejectIfBot(req, res, body)) return;
 
     const fields = readContactFields(body);

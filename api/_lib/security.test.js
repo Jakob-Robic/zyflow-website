@@ -7,6 +7,7 @@ const {
   stripCrlf,
   isValidEmail,
   isAllowedOrigin,
+  isProductionEnv,
   honeypotFilled,
   readContactFields,
   readWaitlistFields,
@@ -76,6 +77,34 @@ test('isAllowedOrigin allows production and localhost, not look-alike previews',
     process.env.ALLOWED_ORIGINS = 'https://extra.example';
     assert.equal(isAllowedOrigin('https://extra.example'), true);
     assert.equal(isAllowedOrigin('https://zyflow-landing-git-feat-jakobs-projects-48c1181f.vercel.app'), false);
+  } finally {
+    for (const [key, value] of Object.entries(prev)) {
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
+    }
+  }
+});
+
+test('isProductionEnv prefers VERCEL_ENV over NODE_ENV', () => {
+  const prev = {
+    VERCEL_ENV: process.env.VERCEL_ENV,
+    NODE_ENV: process.env.NODE_ENV,
+  };
+  try {
+    process.env.VERCEL_ENV = 'preview';
+    process.env.NODE_ENV = 'production';
+    assert.equal(isProductionEnv(), false);
+
+    process.env.VERCEL_ENV = 'production';
+    process.env.NODE_ENV = 'development';
+    assert.equal(isProductionEnv(), true);
+
+    delete process.env.VERCEL_ENV;
+    process.env.NODE_ENV = 'production';
+    assert.equal(isProductionEnv(), true);
+
+    process.env.NODE_ENV = 'test';
+    assert.equal(isProductionEnv(), false);
   } finally {
     for (const [key, value] of Object.entries(prev)) {
       if (value === undefined) delete process.env[key];

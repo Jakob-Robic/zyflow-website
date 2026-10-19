@@ -259,7 +259,7 @@
         });
       })
       .catch(function () {
-        /* Widget is optional until TURNSTILE_SECRET_KEY is also set. */
+        console.warn("[Zyflow] Turnstile widget failed to load");
       });
   }
 
@@ -278,6 +278,27 @@
     return "";
   }
 
+  function waitForTurnstileToken(form) {
+    if (!turnstileSiteKey()) return Promise.resolve("");
+    initTurnstileWidgets();
+    return new Promise(function (resolve, reject) {
+      var start = Date.now();
+      var tick = function () {
+        var token = getTurnstileToken(form);
+        if (token) {
+          resolve(token);
+          return;
+        }
+        if (Date.now() - start > 8000) {
+          reject({ status: 400, error: "Verification failed" });
+          return;
+        }
+        setTimeout(tick, 150);
+      };
+      tick();
+    });
+  }
+
   function resetTurnstile(form) {
     var slot = form.querySelector(".js-turnstile");
     if (!slot || !slot.dataset.widgetId || !window.turnstile || !window.turnstile.reset) return;
@@ -290,6 +311,7 @@
 
   function formErrorKey(status, error) {
     if (status === 429 || error === "Too many requests") return "rateLimit";
+    if (status === 400 && error === "Verification failed") return "verify";
     if (error === "Verification failed") return "verify";
     if (
       status === 400 ||
@@ -326,20 +348,21 @@
       var btn = form.querySelector('button[type="submit"]');
       if (btn) btn.disabled = true;
 
-      var payload = {
-        name: name,
-        subject: subject,
-        email: email.trim(),
-        message: message.trim() + (phone ? "\n\nPhone: " + phone.trim() : ""),
-        website: honeypotValue(form),
-        turnstileToken: getTurnstileToken(form),
-      };
-
-      fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      })
+      waitForTurnstileToken(form)
+        .then(function (token) {
+          return fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: name,
+              subject: subject,
+              email: email.trim(),
+              message: message.trim() + (phone ? "\n\nPhone: " + phone.trim() : ""),
+              website: honeypotValue(form),
+              turnstileToken: token,
+            }),
+          });
+        })
         .then(function (r) {
           return r.json().then(function (data) {
             return { ok: r.ok && data && data.success, status: r.status, data: data };
@@ -400,15 +423,18 @@
       var btn = form.querySelector('button[type="submit"]');
       if (btn) btn.disabled = true;
 
-      fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: email,
-          website: honeypotValue(form),
-          turnstileToken: getTurnstileToken(form),
-        }),
-      })
+      waitForTurnstileToken(form)
+        .then(function (token) {
+          return fetch("/api/waitlist", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: email,
+              website: honeypotValue(form),
+              turnstileToken: token,
+            }),
+          });
+        })
         .then(function (r) {
           return r.json().then(function (data) {
             return { ok: r.ok && data && data.success, status: r.status, data: data };

@@ -6,7 +6,7 @@
  * Inventory (rebuild/gtm/*, analytics-boot, analytics-*.js, cookieconsent, fonts):
  * - script-src: self + inline (theme boot, GTM, consent restore); GTM; GA4;
  *   Google Ads (gtag/conversion); Meta Pixel; ChatGPT Ads pixel; PostHog array.js;
- *   optional Turnstile.
+ *   Cloudflare Turnstile (required in production).
  * - style-src: self + inline (cookie banner, a few style= attrs). Banner CSS is self-hosted.
  * - img-src: self + data; GTM/GA/Ads/Meta pixels.
  * - font-src: self (DM Sans, Tanker, Courier Prime in /assets/design-system/fonts).
@@ -16,6 +16,7 @@
  * - worker-src: PostHog may use blob workers.
  * - maps: MapLibre (self-hosted /assets/vendor) + OpenFreeMap tiles on tour
  *   detail heroes; Overpass enriches stop pins in the background (cached).
+ *   Do not add unpkg.com — MapLibre is not loaded from a CDN.
  *
  * upgrade-insecure-requests is omitted: it is not meaningful on a report-only policy.
  */
@@ -26,11 +27,11 @@ const CSP_REPORT_ONLY =
   "object-src 'none'; " +
   "frame-ancestors 'none'; " +
   "form-action 'self'; " +
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://connect.facebook.net https://bzrcdn.openai.com https://eu-assets.i.posthog.com https://challenges.cloudflare.com https://unpkg.com; " +
-  "style-src 'self' 'unsafe-inline' https://unpkg.com; " +
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://connect.facebook.net https://bzrcdn.openai.com https://eu-assets.i.posthog.com https://challenges.cloudflare.com; " +
+  "style-src 'self' 'unsafe-inline'; " +
   "img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://*.google.com https://*.g.doubleclick.net https://www.facebook.com https://*.facebook.com https://*.openfreemap.org https://tiles.openfreemap.org https://api.maptiler.com; " +
-  "font-src 'self' data: https://unpkg.com; " +
-  "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://*.googleadservices.com https://*.doubleclick.net https://eu.i.posthog.com https://eu.posthog.com https://eu-assets.i.posthog.com https://www.facebook.com https://connect.facebook.net https://graph.facebook.com https://bzrcdn.openai.com https://bzr.openai.com https://challenges.cloudflare.com https://unpkg.com https://tiles.openfreemap.org https://*.openfreemap.org https://api.maptiler.com https://overpass-api.de https://overpass.kumi.systems; " +
+  "font-src 'self' data:; " +
+  "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://*.googleadservices.com https://*.doubleclick.net https://eu.i.posthog.com https://eu.posthog.com https://eu-assets.i.posthog.com https://www.facebook.com https://connect.facebook.net https://graph.facebook.com https://bzrcdn.openai.com https://bzr.openai.com https://challenges.cloudflare.com https://tiles.openfreemap.org https://*.openfreemap.org https://api.maptiler.com https://overpass-api.de https://overpass.kumi.systems; " +
   "frame-src https://www.googletagmanager.com https://www.facebook.com https://td.doubleclick.net https://challenges.cloudflare.com; " +
   "worker-src 'self' blob:; " +
   "report-uri /api/csp-report; " +

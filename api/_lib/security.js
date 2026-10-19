@@ -3,11 +3,17 @@
 /**
  * Shared hardening for public form endpoints.
  *
- * Rate limiting is an in-memory sliding window. On Vercel this is
- * per-instance and resets on cold start, so it is best-effort only
- * (no paid store / KV). Optional Cloudflare Turnstile is enforced
- * only when TURNSTILE_SECRET_KEY is set.
+ * Rate limiting for /api/contact and /api/waitlist is a shared Postgres
+ * fixed window (see api/_lib/rate-limit.js; uses the existing
+ * take_rate_limit_token RPC in the shared Supabase project).
+ * CSP report collection still uses a best-effort in-memory limiter.
+ *
+ * Cloudflare Turnstile is required in production (VERCEL_ENV=production,
+ * or NODE_ENV=production when VERCEL_ENV is unset). Preview/dev may skip
+ * when TURNSTILE_SECRET_KEY is not set.
  */
+
+const { enforceIpRateLimit, enforceEmailRateLimit } = require('./rate-limit');
 
 const PRODUCTION_ORIGINS = ['https://www.zyflow.eu', 'https://zyflow.eu'];
 
@@ -78,6 +84,13 @@ function isPreviewEnv() {
   return env === 'preview' || env === 'development';
 }
 
+function isProductionEnv() {
+  if (process.env.VERCEL_ENV) {
+    return process.env.VERCEL_ENV === 'production';
+  }
+  return process.env.NODE_ENV === 'production';
+}
+
 function previewTeamSlug() {
   const explicit = String(process.env.VERCEL_PREVIEW_TEAM || '').trim().toLowerCase();
   return explicit || PROJECT_PREVIEW_TEAM;
@@ -143,6 +156,7 @@ function pruneHits(now, windowMs) {
   }
 }
 
+/** In-memory limiter for /api/csp-report only (always 204; not a form). */
 function rateLimit(bucket, req) {
   const { max, windowMs } = rateLimitConfig();
   const key = `${bucket}:${clientIp(req)}`;
@@ -178,23 +192,36 @@ function turnstileToken(body) {
 
 async function verifyTurnstile(body, req) {
   const secret = (process.env.TURNSTILE_SECRET_KEY || '').trim();
-  if (!secret) return { ok: true, skipped: true };
+  if (!secret) {
+    if (isProductionEnv()) {
+      console.error('Turnstile: TURNSTILE_SECRET_KEY is not set');
+      return { ok: false, unavailable: true };
+    }
+    return { ok: true, skipped: true };
+  }
   const token = turnstileToken(body);
   if (!token) return { ok: false };
   try {
+    const params = {
+      secret,
+      response: token,
+    };
+    const ip = clientIp(req);
+    if (ip && ip !== 'unknown') params.remoteip = ip;
     const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        secret,
-        response: token,
-        remoteip: clientIp(req),
-      }).toString(),
+      body: new URLSearchParams(params).toString(),
     });
+    if (!res.ok) {
+      console.error('Turnstile: siteverify request failed');
+      return { ok: false, unavailable: true };
+    }
     const data = await res.json();
     return { ok: data && data.success === true };
   } catch {
-    return { ok: false };
+    console.error('Turnstile: siteverify request failed');
+    return { ok: false, unavailable: true };
   }
 }
 
@@ -276,10 +303,10 @@ function readWaitlistFields(body) {
 }
 
 /**
- * CORS + method + origin + best-effort rate limit.
+ * CORS + method + origin + shared IP rate limit.
  * Returns true when the handler should continue.
  */
-function guardRequest(req, res, bucket) {
+async function guardRequest(req, res, bucket) {
   applyCors(req, res);
 
   if (req.method === 'OPTIONS') {
@@ -306,12 +333,7 @@ function guardRequest(req, res, bucket) {
 
   // Count every POST that passed method/origin checks, including later
   // validation / honeypot / Turnstile failures. Invalid bodies are not free.
-  const limited = rateLimit(bucket, req);
-  if (!limited.ok) {
-    res.setHeader('Retry-After', String(limited.retryAfterSec));
-    res.status(429).json({ error: 'Too many requests' });
-    return false;
-  }
+  if (!(await enforceIpRateLimit(res, bucket, clientIp(req)))) return false;
 
   return true;
 }
@@ -322,6 +344,10 @@ async function rejectIfBot(req, res, body) {
     return true;
   }
   const turnstile = await verifyTurnstile(body, req);
+  if (turnstile.unavailable) {
+    res.status(503).json({ error: 'Service unavailable' });
+    return true;
+  }
   if (!turnstile.ok) {
     res.status(400).json({ error: 'Verification failed' });
     return true;
@@ -335,6 +361,7 @@ module.exports = {
   stripCrlf,
   isValidEmail,
   isAllowedOrigin,
+  isProductionEnv,
   applyCors,
   clientIp,
   rateLimit,
@@ -346,4 +373,5 @@ module.exports = {
   readWaitlistFields,
   guardRequest,
   rejectIfBot,
+  enforceEmailRateLimit,
 };

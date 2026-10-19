@@ -17,8 +17,9 @@ window.ZYFLOW_ANALYTICS = {
   posthogProjectKey: "phc_Bidx6J3fgqBuQ92kHq68hJQcVkwXybr3MGvAEnvMGAme",
   posthogApiHost: "https://eu.i.posthog.com",
   /**
-   * Optional Cloudflare Turnstile site key. Injected at build time when
-   * TURNSTILE_SITE_KEY is set. Leave empty so forms work without Turnstile.
+   * Cloudflare Turnstile site key (public). Injected at build time when
+   * TURNSTILE_SITE_KEY is set. When non-empty, forms render the widget
+   * and send the token. Production requires the matching server secret.
    */
   turnstileSiteKey: "",
 };

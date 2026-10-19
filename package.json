@@ -11,7 +11,7 @@
     "build:rebuild:prod": "SITE_INDEX=true node rebuild/scripts/build.js",
     "serve:rebuild": "python3 rebuild/serve.py",
     "test:rebuild": "node --test rebuild/scripts/test-attribution.js rebuild/scripts/test-asset-versioning.js",
-    "test:api": "node --test api/_lib/*.test.js",
+    "test:api": "node --test --test-concurrency=1 api/_lib/*.test.js",
     "serve:headers": "node rebuild/scripts/serve-headers.js"
   },
   "dependencies": {

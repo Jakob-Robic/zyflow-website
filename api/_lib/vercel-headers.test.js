@@ -46,6 +46,8 @@ test('report-only CSP is inventoried, has reporting, and omits upgrade-insecure-
   assert.match(CSP_REPORT_ONLY, /eu-assets\.i\.posthog\.com/);
   assert.match(CSP_REPORT_ONLY, /challenges\.cloudflare\.com/);
   assert.match(CSP_REPORT_ONLY, /bzr\.openai\.com/);
+  assert.equal(CSP_REPORT_ONLY.includes('unpkg.com'), false);
+  assert.equal(CSP_REPORT_ONLY.includes('unpkg'), false);
 
   const rebuild = loadRebuildVercel();
   const rebuildGlobal = rebuild.headers.find((h) => h.source === '/(.*)');
