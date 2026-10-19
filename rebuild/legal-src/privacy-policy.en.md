@@ -69,7 +69,7 @@ You can choose to share an individual saved route with the Zyflow community. Not
 
 > **Important:** the start and end points of a route can reveal where you live, work or regularly park your bike. Before sharing, consider starting and ending the route a little away from your home, and do not include personal details or photos that identify people, house numbers or licence plates.
 
-**Removing a shared route:** you can remove a shared route at any time. This removes it from the community, so other users can no longer see it. If you also want its photos and map images removed from our file storage, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) and we will remove them within 30 days. Copies that other users have already saved to their own accounts may remain in their accounts.
+**Removing a shared route:** you can remove a shared route at any time. This removes it from the community, so other users can no longer see it, and deletes its photos and map images from our file storage. Copies that other users have already saved to their own accounts may remain in their accounts.
 
 **Purpose:** to let riders discover and reuse routes shared by others.
 
@@ -213,15 +213,15 @@ Your app data is stored in the EU (Ireland). Some recipients are based in, or ma
 | Data | Retention |
 |---|---|
 | Account data (email, name, phone, user ID) | While your account exists; deleted immediately when you delete your account in the app |
-| Profile photo | Until you remove it or delete your account. |
+| Profile photo | Until you remove it or delete your account |
 | Saved and imported routes, saved places | Until you delete them or your account |
-| Shared community routes, their photos and map images | The shared route is removed when you remove it or delete your account; its photos and map images are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
+| Shared community routes, their photos and map images | The shared route, its photos and map images are deleted when you remove the route or delete your account (see section 9) |
 | Bike passport and bike photos | Until you delete them or your account; bike photos are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
 | Brevo contact (email, name, user ID) | While your account exists; deleted automatically when you delete your account (see section 9) |
 | Email sending logs at Brevo | Only as long as needed to deliver emails and resolve delivery problems, in line with the provider's retention settings |
 | Product analytics (PostHog) | 12 months; deleted automatically when you delete your account |
-| Crash and performance reports (Sentry) | 90 days |
+| Crash and performance reports (Sentry) | Up to 90 days |
 | Search rate-limit data (IP address and counters) | Only as long as needed to prevent abuse; regularly deleted |
 | Search cache (search text, no link to you) | 24 hours |
 | Server and hosting logs (Supabase, Vercel) | Up to 30 days |
@@ -251,7 +251,7 @@ To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from
 - **On the web:** [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account).
 - **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, and photos and map images of shared routes), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically after 90 days, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
+When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, and photos and map images of shared routes), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
 ## 10. Complaints
 

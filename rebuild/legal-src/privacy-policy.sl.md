@@ -69,7 +69,7 @@ Posamezno shranjeno pot lahko delite s skupnostjo Zyflow. Nič se ne deli samode
 
 > **Pomembno:** začetna in končna točka poti lahko razkrijeta, kje stanujete, delate ali redno puščate kolo. Preden pot delite, razmislite, ali bi jo začeli in končali nekoliko stran od doma, in vanjo ne vključujte osebnih podatkov ali fotografij, na katerih so prepoznavne osebe, hišne številke ali registrske tablice.
 
-**Odstranitev deljene poti:** deljeno pot lahko kadar koli odstranite. S tem jo umaknete iz skupnosti, zato je drugi uporabniki ne morejo več videti. Če želite, da iz naše hrambe datotek izbrišemo tudi njene fotografije in slike zemljevida, nam pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) in jih bomo izbrisali v 30 dneh. Kopije, ki so jih drugi uporabniki že shranili v svoje račune, lahko ostanejo v njihovih računih.
+**Odstranitev deljene poti:** deljeno pot lahko kadar koli odstranite. S tem jo umaknete iz skupnosti, zato je drugi uporabniki ne morejo več videti, iz naše hrambe datotek pa izbrišemo tudi njene fotografije in slike zemljevida. Kopije, ki so jih drugi uporabniki že shranili v svoje račune, lahko ostanejo v njihovih računih.
 
 **Namen:** kolesarjem omogočiti odkrivanje in uporabo poti, ki so jih delili drugi.
 
@@ -213,15 +213,15 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Podatki | Rok hrambe |
 |---|---|
 | Podatki o računu (e-naslov, ime, telefon, identifikator uporabnika) | Dokler račun obstaja; izbrisani takoj, ko račun izbrišete v aplikaciji |
-| Profilna fotografija | Dokler je ne odstranite ali ne izbrišete računa. |
+| Profilna fotografija | Dokler je ne odstranite ali ne izbrišete računa |
 | Shranjene in uvožene poti, shranjeni kraji | Dokler jih ne izbrišete ali ne izbrišete računa |
-| Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot se odstrani, ko jo odstranite ali izbrišete račun; njene fotografije in slike zemljevidov odstranimo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glejte razdelek 9) |
-| Kolesarski potni list in fotografije kolesa | Dokler jih ne izbrišete ali ne izbrišete računa; fotografije koles odstranimo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glejte razdelek 9) |
+| Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot ter njene fotografije in slike zemljevidov se izbrišejo, ko pot odstranite ali izbrišete račun (glej točko 9) |
+| Kolesarski potni list in fotografije kolesa | Dokler jih ne izbrišete ali ne izbrišete računa; fotografije kolesa odstranimo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glej točko 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
 | Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; ob izbrisu računa se samodejno izbriše (glej točko 9) |
 | Dnevniki pošiljanja e-pošte v storitvi Brevo | Le toliko časa, kolikor je potrebno za dostavo e-pošte in odpravo težav pri dostavi, v skladu z nastavitvami ponudnika |
 | Analitika uporabe (PostHog) | 12 mesecev; ob izbrisu računa se samodejno izbriše |
-| Poročila o napakah in delovanju (Sentry) | 90 dni |
+| Poročila o napakah in delovanju (Sentry) | Do 90 dni |
 | Podatki za omejevanje iskalnih zahtev (naslov IP in števci) | Le toliko časa, kolikor je potrebno za preprečevanje zlorab; redno se brišejo |
 | Predpomnilnik iskanja (iskalni niz brez povezave z vami) | 24 ur |
 | Dnevniki strežnikov in gostovanja (Supabase, Vercel) | Do 30 dni |
@@ -251,7 +251,7 @@ Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) 
 - **Na spletu:** [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna).
 - **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa ter fotografije in slike zemljevidov deljenih poti), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo po 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
+Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa ter fotografije in slike zemljevidov deljenih poti), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
 ## 10. Pritožbe
 
