@@ -2,8 +2,9 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const attr = require("../js/attribution.js");
 
+const { APP_STORE_URL: APP_STORE } = require("./store-links");
+
 const PLAY = "https://play.google.com/store/apps/details?id=com.jakob_robic.zyflowmobileapp";
-const APP_STORE = "https://apps.apple.com/app/zyflow/id6763228086";
 
 test("reads utm_* from the current URL", () => {
   assert.deepEqual(
@@ -110,6 +111,12 @@ test("Play referrer adds ph_id only when analytics consent is granted", () => {
   );
 });
 
+test("App Store listing is the Slovenia storefront", () => {
+  const url = new URL(APP_STORE);
+  assert.equal(url.hostname, "apps.apple.com");
+  assert.equal(url.pathname, "/si/app/zyflow/id6763228086");
+});
+
 test("App Store gets ct from utm_campaign and keeps other params", () => {
   const href = attr.decorateStoreUrl(APP_STORE + "?oppref=chatgpt-1", {
     utms: { utm_source: "ads", utm_medium: "cpc", utm_campaign: "Spring Ride 2026" },
@@ -117,6 +124,7 @@ test("App Store gets ct from utm_campaign and keeps other params", () => {
     distinctId: "abc",
   });
   const url = new URL(href);
+  assert.equal(url.pathname, "/si/app/zyflow/id6763228086");
   assert.equal(url.searchParams.get("ct"), "Spring_Ride_2026");
   assert.equal(url.searchParams.get("oppref"), "chatgpt-1");
   assert.equal(url.searchParams.has("ph_id"), false);
