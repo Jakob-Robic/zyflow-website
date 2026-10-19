@@ -1,0 +1,44 @@
+name: CI
+
+# Runs on pull requests and pushes to main with no repository secrets.
+# test:api stubs Supabase, Brevo, and Turnstile (preview skips verification
+# when TURNSTILE_SECRET_KEY is unset). The site build leaves MAPTILER_KEY and
+# TURNSTILE_SITE_KEY unset, so tour maps use the OpenFreeMap fallback and the
+# Turnstile widget is omitted.
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Install, build, and test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: |
+          npm run build
+          npm run build:rebuild
+
+      - name: Test API
+        run: npm run test:api
+
+      - name: Test rebuild
+        run: npm run test:rebuild

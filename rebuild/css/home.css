@@ -350,6 +350,16 @@ html[data-theme="light"] .why__item img {
   padding-bottom: 0;
   position: relative;
   overflow: visible;
+  /*
+   * Secondary footer ink. The vendored muted token (--zy-text-muted, #71717A)
+   * is 3.44:1 on this site's footer fill (#e0d9cc) and the note also applied
+   * opacity 0.7, which dropped it to 2.26:1. Mix body ink into the footer
+   * surface so light and dark both clear WCAG AA (4.5:1) without editing
+   * the design system: 70% is 5.54:1 on #e0d9cc / 6.57:1 on #373B2A, 66%
+   * (the quieter note) is 4.90:1 / 6.03:1.
+   */
+  --footer-text-secondary: color-mix(in srgb, var(--color-text-body) 70%, var(--color-surface-2));
+  --footer-text-quiet: color-mix(in srgb, var(--color-text-body) 66%, var(--color-surface-2));
 }
 
 /* Torn edge pulls up over the last section so any page surface blends in */
@@ -452,7 +462,7 @@ main > section:last-child {
 }
 
 .footer__subscribe p {
-  color: var(--color-text-body-muted);
+  color: var(--footer-text-secondary);
 }
 
 .footer__email {
@@ -500,9 +510,10 @@ main > section:last-child {
   padding-inline: var(--space-gap-2);
 }
 
-.footer__note {
+.footer__subscribe p.footer__note {
   font-size: var(--type-small);
-  opacity: 0.7;
+  color: var(--footer-text-quiet);
+  opacity: 1;
 }
 
 .footer__social {
@@ -538,7 +549,7 @@ main > section:last-child {
 
 .footer__company-text {
   font-size: var(--type-small);
-  color: var(--color-text-body-muted);
+  color: var(--footer-text-secondary);
   margin: 0;
 }
 
@@ -1820,21 +1831,36 @@ html[data-theme="light"] .testimonial__bg img {
   margin-top: var(--space-gap-6);
 }
 
+/* 24×24 hit area (WCAG 2.5.8). The painted dot stays 8px. */
 .why__dot,
 .snap-dot {
-  width: 8px;
-  height: 8px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
   padding: 0;
   border: 0;
   border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.why__dot::before,
+.snap-dot::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
   background: var(--color-text-body-muted);
   opacity: 0.35;
-  cursor: pointer;
   transition: opacity 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
 
-.why__dot.is-active,
-.snap-dot.is-active {
+.why__dot.is-active::before,
+.snap-dot.is-active::before {
   opacity: 1;
   background: var(--color-brand-primary);
   transform: scale(1.15);
