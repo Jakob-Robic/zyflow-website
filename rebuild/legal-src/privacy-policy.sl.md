@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.0 · **Datum začetka veljavnosti:** 10. 10. 2026 · Nadomešča različico 1.1 z dne 30. 6. 2026
+**Različica:** 2.1 · **Datum začetka veljavnosti:** 19. 10. 2026 · Nadomešča različico 2.0 z dne 10. 10. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -21,7 +21,7 @@ Pooblaščene osebe za varstvo podatkov nismo imenovali. Za vsa vprašanja in za
 - Zbiramo le podatke, ki jih potrebujemo za delovanje storitve Zyflow: vaš uporabniški račun, poti in vsebine, ki jih ustvarite, ter tehnične podatke za delovanje aplikacije.
 - Vaše poti so zasebne, razen če se **sami odločite, da posamezno pot delite** s skupnostjo.
 - Vaših podatkov ne prodajamo in v aplikaciji ne prikazujemo oglasov.
-- Analitika uporabe deluje s psevdonimnim identifikatorjem uporabnika, ne z vašim e-naslovom.
+- Analitika uporabe deluje s psevdonimnim identifikatorjem uporabnika, ne z vašim e-naslovom, in se vklopi le, če privolite.
 - Lokacijo uporabljamo le med uporabo aplikacije. Lokacije v ozadju ne spremljamo.
 - Uporabniški račun lahko kadar koli izbrišete v aplikaciji.
 
@@ -109,9 +109,9 @@ Za hrambo kontaktnih podatkov (e-naslov, ime in priimek ter identifikator uporab
 
 ### 3.9 Analitika uporabe
 
-Za razumevanje uporabe aplikacije in njeno izboljševanje uporabljamo PostHog (oblak v EU). Pošiljamo psevdonimni **identifikator uporabnika (ne vašega e-naslova ali imena)**, izbrane dogodke v aplikaciji (na primer »pot načrtovana« ali »izvoz GPX«), različico aplikacije in osnovne podatke o napravi. Samodejnega zajema vseh interakcij in snemanja sej v aplikaciji ne uporabljamo. PostHog je nastavljen tako, da **vašega naslova IP ne shrani**.
+Za razumevanje uporabe aplikacije in njeno izboljševanje uporabljamo PostHog (oblak v EU). Pošiljamo psevdonimni **identifikator uporabnika (ne vašega e-naslova ali imena)**, izbrane dogodke v aplikaciji (na primer »pot načrtovana« ali »izvoz GPX«), različico aplikacije in osnovne podatke o napravi. Če privolite, PostHog beleži tudi tehnične podrobnosti o napakah v aplikaciji (sporočilo o napaki in mesto v aplikaciji, kjer je nastala), da jih lahko odpravimo. Samodejnega zajema vseh interakcij in snemanja sej v aplikaciji ne uporabljamo. PostHog je nastavljen tako, da **vašega naslova IP ne shrani**.
 
-**Pravna podlaga:** zakoniti interes za izboljševanje aplikacije (točka (f) prvega odstavka 6. člena Splošne uredbe). Obdelavi lahko kadar koli ugovarjate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu).
+**Pravna podlaga:** vaša privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Aplikacija vas vpraša, preden se analitika vklopi; dokler ne privolite, je izklopljena. Privolitev lahko kadar koli prekličete v Nastavitvah → Deli statistiko uporabe; preklic ne vpliva na obdelavo pred preklicem.
 
 ### 3.10 Spremljanje napak in delovanja
 
@@ -149,6 +149,8 @@ Naša iskalna funkcija za kratek čas shrani naslov IP naprave, ki pošlje zahte
 
 Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lokacijo in nedavna iskanja, da deluje hitro in da ostanete prijavljeni. Ta hramba je nujno potrebna za storitev, ki jo zahtevate. Podatki se izbrišejo, ko odstranite aplikacijo.
 
+Če privolite v analitiko uporabe, PostHog na napravi shrani tudi psevdonimni identifikator; brez vaše privolitve ne shrani ničesar. Sentry za poročanje o napakah shrani psevdonimni identifikator (glejte 3.10).
+
 ### 3.15 Načrtovane funkcije (še niso na voljo)
 
 **Potisna obvestila** in **uvoz iz storitve Strava** še nista na voljo. Pred uvedbo katere koli od teh funkcij bomo posodobili to politiko zasebnosti in opisali, kateri podatki se obdelujejo. Potisna obvestila bomo pošiljali le, če jih boste dovolili v nastavitvah naprave; povezava s storitvijo Strava bo vedno neobvezna.
@@ -170,7 +172,8 @@ Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lok
 | Namen | Pravna podlaga (Splošna uredba) |
 |---|---|
 | Uporabniški račun, poti, lokacijske funkcije, kolesarski potni list, deljenje s skupnostjo, zemljevidi/iskanje/izračun poti/vreme, obvestila v zvezi s storitvijo | Pogodba, točka (b) 6(1) |
-| Prijave in predlogi krajev, analitika uporabe, spremljanje napak, varnost in omejevanje zahtev, povezave Stay22, podpora | Zakoniti interes, točka (f) 6(1) |
+| Prijave in predlogi krajev, spremljanje napak, varnost in omejevanje zahtev, povezave Stay22, podpora | Zakoniti interes, točka (f) 6(1) |
+| Analitika uporabe (PostHog) | Privolitev, točka (a) 6(1) |
 | Trženjska e-pošta, piškotki in sledilne kode na spletnem mestu (ko bodo uvedeni), prihodnja potisna obvestila | Privolitev, točka (a) 6(1) (za piškotke in trženjsko e-pošto tudi ZEKom-2) |
 | Odgovarjanje na zahteve za uveljavljanje pravic, računovodske in druge zakonske obveznosti | Zakonska obveznost, točka (c) 6(1) |
 
@@ -239,7 +242,7 @@ Po Splošni uredbi imate pravico do:
 - **izbrisa** (»pravica do pozabe«, 17. člen);
 - **omejitve** obdelave (18. člen);
 - **prenosljivosti** podatkov – da podatke, ki ste nam jih posredovali, prejmete v strukturirani, strojno berljivi obliki ali da jih posredujemo drugemu upravljavcu (20. člen); poti lahko v aplikaciji izvozite tudi v obliki GPX;
-- **ugovora** obdelavi na podlagi zakonitega interesa, na primer analitiki ali spremljanju napak (21. člen), in kadar koli ugovora obdelavi za namene neposrednega trženja;
+- **ugovora** obdelavi na podlagi zakonitega interesa, na primer spremljanju napak (21. člen), in kadar koli ugovora obdelavi za namene neposrednega trženja;
 - **preklica privolitve** kadar koli, ne da bi to vplivalo na zakonitost obdelave pred preklicem (tretji odstavek 7. člena);
 - **vložitve pritožbe** pri nadzornem organu (točka 10).
 

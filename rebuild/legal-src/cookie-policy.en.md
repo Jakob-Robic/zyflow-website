@@ -1,6 +1,6 @@
 # Zyflow Cookie Policy
 
-**Version:** 1.0 · **Effective date:** 10 October 2026 · **URL:** [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy)
+**Version:** 1.1 · **Effective date:** 19 October 2026 · **URL:** [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy)
 
 This Cookie Policy explains how HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenia ("we"), uses cookies and similar technologies on the websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). More about how we process personal data is in our [Privacy Policy](https://www.zyflow.eu/legal-pages/privacy-policy). Contact: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
@@ -54,7 +54,7 @@ Google Tag Manager itself only loads the tags above, and only after you consent.
 
 ## 8. Zyflow mobile app
 
-The Zyflow mobile app does **not use browser cookies**. It stores some data in your device's local storage so that it works: your login session (in the device's secure storage), your settings, your last known location and recent searches. Our analytics and crash-reporting tools (PostHog, Sentry) store a pseudonymous identifier on the device. Details are in the Privacy Policy, section 3.14.
+The Zyflow mobile app does **not use browser cookies**. It stores some data in your device's local storage so that it works: your login session (in the device's secure storage), your settings, your last known location and recent searches. Our crash-reporting tool (Sentry) stores a pseudonymous identifier on the device. Our analytics tool (PostHog) only runs and stores an identifier if you agree in the app; you can change this anytime in Settings. Details are in the Privacy Policy, section 3.14.
 
 ## 9. Changes
 
