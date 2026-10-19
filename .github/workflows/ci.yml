@@ -2,15 +2,21 @@ name: CI
 
 # Runs on pull requests and pushes to main with no repository secrets.
 # test:api stubs Supabase, Brevo, and Turnstile (preview skips verification
-# when TURNSTILE_SECRET_KEY is unset). The site build leaves MAPTILER_KEY and
-# TURNSTILE_SITE_KEY unset, so tour maps use the OpenFreeMap fallback and the
-# Turnstile widget is omitted.
+# when TURNSTILE_SECRET_KEY is unset). build:rebuild:prod is the Vercel
+# build command; MAPTILER_KEY and TURNSTILE_SITE_KEY stay unset, so tour
+# maps use the OpenFreeMap fallback and the Turnstile widget is omitted.
+# Node is pinned to 24, the major Vercel uses for this project (created
+# after 24.x became the default). engines.node 24.x keeps deploys on it.
 
 on:
   pull_request:
   push:
     branches:
       - main
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -21,12 +27,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Install
@@ -35,7 +41,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-          npm run build:rebuild
+          npm run build:rebuild:prod
 
       - name: Test API
         run: npm run test:api

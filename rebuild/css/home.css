@@ -1829,9 +1829,15 @@ html[data-theme="light"] .testimonial__bg img {
   align-items: center;
   gap: var(--space-gap-3);
   margin-top: var(--space-gap-6);
+  /* Same 8px line as the old dots. The 24px circles overflow this box. */
+  height: 8px;
 }
 
-/* 24×24 hit area (WCAG 2.5.8). The painted dot stays 8px. */
+/*
+ * 24px circular tap target (border-radius 50%). Negative inline margin keeps
+ * each control's layout slot at 8px, so centres stay 16px apart — the old
+ * 8px dot plus the 8px gap — and the row does not grow the section.
+ */
 .why__dot,
 .snap-dot {
   position: relative;
@@ -1841,6 +1847,7 @@ html[data-theme="light"] .testimonial__bg img {
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
+  margin-inline: -8px;
   padding: 0;
   border: 0;
   border-radius: 50%;
@@ -1868,7 +1875,9 @@ html[data-theme="light"] .testimonial__bg img {
 
 .why__dot:focus-visible,
 .snap-dot:focus-visible {
-  outline: 2px solid var(--color-neutral-0);
+  /* White (#fff) on the cream why band is ~1.06:1. Brand primary is 7.00:1
+     there and 5.85:1 on the dark olive band. */
+  outline: 2px solid var(--color-brand-primary);
   outline-offset: 3px;
 }
 
