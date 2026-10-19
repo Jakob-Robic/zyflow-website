@@ -28,6 +28,7 @@ const { renderLegalMarkdown } = require("./legal-markdown");
 const { routeBySlug, ROUTES } = require("./routes");
 const { versionAssets } = require("./version-assets");
 const { appStoreUrlForLocale, assertAppStoreLinks } = require("./store-links");
+const { absoluteOgImage, collectMetaIssues, DEFAULT_OG_PATH } = require("./page-meta");
 
 const ROOT = path.join(__dirname, "..");
 // REBUILD_DIST lets tests build into a temp dir; Vercel uses the default.
@@ -54,7 +55,7 @@ function readMapTilerKey() {
   return key;
 }
 
-const OG_IMAGE_PATH = "/assets/images/home/hero.jpg";
+const OG_IMAGE_PATH = DEFAULT_OG_PATH;
 const OG_LOCALES = { en: "en_US", sl: "sl_SI" };
 
 function read(filePath) {
@@ -666,7 +667,8 @@ function buildHead(page, locale, messages) {
   const alwaysNoIndex = !page.indexable;
   const robots = alwaysNoIndex || !SITE_INDEX ? "noindex, nofollow" : "index, follow";
   const canonical = absoluteUrl(page.path, locale);
-  const ogImage = `${SITE_ORIGIN}${OG_IMAGE_PATH}`;
+  const cover = page.routeSlug ? routeBySlug(page.routeSlug).cover : "";
+  const ogImage = absoluteOgImage(SITE_ORIGIN, cover, OG_IMAGE_PATH);
   const ogLocale = OG_LOCALES[locale] || "en_US";
 
   const localesForPage = pageLocales(page);
@@ -1003,6 +1005,12 @@ function build() {
   }
 
   assertLocaleParity(messagesByLocale);
+
+  const metaIssues = collectMetaIssues(messagesByLocale, PAGES, pageLocales);
+  if (metaIssues.length) {
+    for (const line of metaIssues) console.warn(`meta: ${line}`);
+    throw new Error(`Meta descriptions failed checks (${metaIssues.length})`);
+  }
 
   ensureDir(DIST);
   rimrafContents(DIST);

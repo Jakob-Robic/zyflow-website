@@ -34,11 +34,11 @@
  },
  "legal": {
  "title": "Zyflow: Pravno",
- "description": "Privacy Policy, Cookie Policy, and Terms of Service for Zyflow and HERKO d.o.o."
+ "description": "Politika zasebnosti, politika piškotkov in pogoji uporabe za Zyflow in HERKO d.o.o."
  },
  "legal-privacy": {
  "title": "Zyflow, Privacy Policy",
- "description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use Zyflow."
+ "description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke, ko uporabljate Zyflow."
  },
  "legal-cookies": {
  "title": "Zyflow, Cookie Policy",
@@ -54,7 +54,7 @@
  },
  "business": {
  "title": "Zyflow: za podjetja",
- "description": "Pokaži svojo kavarno, restavracijo, nastanitev ali kolesarsko trgovino kolesarjem in e-kolesarjem. Parkirišče za kolesa, shramba ali polnilnica na zemljevidu Zyflow."
+ "description": "Pokaži kavarno, restavracijo, nastanitev ali kolesarsko trgovino kolesarjem in e-kolesarjem. Parkirišče za kolesa, shramba ali polnilnica na zemljevidu Zyflow."
  },
  "press": {
  "title": "Zyflow: mediji in vlagatelji",
@@ -62,75 +62,75 @@
  },
  "blog-e-bike-charging-at-hospitality-stops": {
  "title": "Zyflow: Why E-Bike Charging at Hospitality Stops Matters",
- "description": "A charger at a café or guesthouse can decide how far a ride goes. Here's why, and how to find one."
+ "description": "Polnilnica v kavarni ali penzionu lahko odloči, kako daleč seže tura. Zakaj je tako in kako jo najdeš."
  },
  "blog-planning-your-first-battery-aware-day-ride": {
  "title": "Zyflow: Planning Your First Battery-Aware Day Ride",
- "description": "Range, climbs and chargers: a simple way to plan a day ride you'll actually finish."
+ "description": "Doseg, vzponi in polnilnice: preprost način, da načrtuješ dnevno turo, ki jo zares pripelješ do konca."
  },
  "blog-what-makes-a-place-bike-friendly": {
  "title": "Zyflow: What Makes a Place Bike-Friendly?",
- "description": "Bike parking, secure storage, a pump, a charger. What we look for, and how to filter for it in the app."
+ "description": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj iščemo in kako to filtriraš v aplikaciji."
  },
  "blog-zyflow-is-live-on-ios-and-android": {
  "title": "Zyflow: Zyflow Is Live on iOS and Android",
- "description": "Free on both stores and live in 8 countries. Here's what to try on your next ride."
+ "description": "Brezplačno v obeh trgovinah in na voljo v 8 državah. Poglej, kaj lahko preizkusiš na naslednji turi."
  },
  "blog-reading-elevation-before-a-cross-border-ride": {
  "title": "Zyflow: Reading Elevation Before a Cross-Border Ride",
- "description": "How to read the climbs on a ride like Ljubljana to Trieste, and where to plan your stops."
+ "description": "Kako brati vzpone na turi, kot je Ljubljana–Trst, in kje načrtovati postanke."
  },
  "tour-blejcanka": {
  "title": "Zyflow: Blejčanka",
- "description": "Verjetno ena najlepših kolesarskih povezav »Kranjske rože«! Iz centra Kranja se usmerimo proti Jamniku. Po nekaj kilometrih vzpona se nam vrh Jamnika odpre"
+ "description": "Blejčanka: Kranj–Bled, 79 km, 944 m. Odpri pot v Zyflow."
  },
  "tour-jezerjanka": {
  "title": "Zyflow: Jezerjanka",
- "description": "Čez Maistrov trg peljemo naprej mimo parka Brdo in kmalu se spustimo v začetek kanjona reke Kokre in ob njej do Preddvora. Mimo jezera Črnava in že smo na "
+ "description": "Jezerjanka: Kranj–Jezersko ob Kokri, 76 km, 603 m. Odpri pot v Zyflow."
  },
  "tour-jezerski-vrh": {
  "title": "Zyflow: Jezerski vrh in Ankova planina",
- "description": "Zgornje Jezersko–Jezerska slatina–Jezerski vrh–Ankova planina–cerkev sv. Andreja–Šenkova domačija–Planšarsko jezero–Zgornje Jezersko"
+ "description": "Jezerski vrh: 18,2 km, 457 m do Ankove planine. Odpri pot v Zyflow."
  },
  "tour-k11-planine-pod-kosuto": {
  "title": "Zyflow: Planine pod Košuto",
- "description": "Tržič–Jelendol–Medvodje–Košutnik–planina Pungrat–planina Šija–planina Kofce–Ravne–Jelendol–Tržič"
+ "description": "Alpska tura iz Tržiča na planine pod Košuto. Odpri pot v Zyflow."
  },
  "tour-k16-trzic-jezersko": {
  "title": "Zyflow: Tržič - Jezersko",
- "description": "Tržič–Dovžanova soteska–Jelendol–Medvodje–Bukov hrib–Pečovnik–Jezersko"
+ "description": "Alpska povezava Tržič–Jezersko. Odpri pot v Zyflow."
  },
  "tour-k21-dom-pod-storzicem": {
  "title": "Zyflow: Dom pod Storžičem",
- "description": "Tržič–Slap–Lom pod Storžičem–Grahovše–Slaparska vas–Planinski dom pod Storžičem–nazaj"
+ "description": "Kolesarjenje iz Tržiča do Doma pod Storžičem. Odpri pot v Zyflow."
  },
  "tour-k35-prelaz-ljubelj": {
  "title": "Zyflow: Prelaz Ljubelj",
- "description": "Tržič–Podljubelj–Ljubelj–prelaz Ljubelj–nazaj"
+ "description": "Vzpon na stari Ljubelj iz Tržiča: 26 km, 900 m. Odpri pot v Zyflow."
  },
  "tour-k42-roznovenska": {
  "title": "Zyflow: Rožnovenska pot po kolesarsko",
- "description": "Tržič–Bistrica pri Tržiču–Loka–Hušica–Brezje pri Tržiču–Vadiče–Leše–Peračica–čez Strašnik–smer Hudo–smer Brdo–Podbreška gmajna–Zvirče–Kovor–Brezovo–Tržič"
+ "description": "Kulturna tura iz Tržiča proti Brezjam. Odpri pot v Zyflow."
  },
  "tour-k43-dobrca": {
  "title": "Zyflow: Dobrča",
- "description": "Tržič–Brezje pri Tržiču–proti Zadnji vasi–koča na Dobrči–Lešanska planina–Bistriška planina–Brezje pri Tržiču–Tržič"
+ "description": "Alpski dan iz Tržiča proti Dobrči. Odpri pot v Zyflow."
  },
  "tour-k51-udin-borst": {
  "title": "Zyflow: Udin boršt - s kolesom ob vznožju in pogumno čezenj",
- "description": "Tržič - Križe - Duplje - Strahinj - čez Udin boršt - Tenetiše - Letenice - Sebenje - Tržič"
+ "description": "Gravel okoli Udin boršta iz Tržiča. Odpri pot v Zyflow."
  },
  "tour-k52-pot-treh-zvonov": {
  "title": "Zyflow: Lahkotno kolesarjenje po Poti treh zvonov",
- "description": "Križe–Sebenje–čez Udin boršt–Novake–proti Letenicam–Žiganja vas–Sebenje–Križe"
+ "description": "Lahka družinska kolesarska zanka pri Tržiču, Pot treh zvonov. Odpri pot v Zyflow."
  },
  "tour-k53-kriva-jelka": {
  "title": "Zyflow: Na Udin boršt do Krive jelke",
- "description": "Tržič–Križe–Duplje–Strahinj–Kriva jelka–Žiganja vas–Tržič"
+ "description": "Gravel do Krive jelke v Udin borštu. Odpri pot v Zyflow."
  },
  "tour-k55-gozd-udin-borst": {
  "title": "Zyflow: Gozd - Udin boršt",
- "description": "Tržič–Križe–Poljana–Gozd–Zalog–Goriče–Tenetiše–Udin boršt–Kriva jelka–Žiganja vas–Križe–Tržič"
+ "description": "Predalpski gravel med Gozdom in Udin borštom. Odpri pot v Zyflow."
  },
  "tour-kamnicanka": {
  "title": "Zyflow: Kamničanka",
@@ -142,23 +142,23 @@
  },
  "tour-locanka": {
  "title": "Zyflow: Ločanka",
- "description": "Potem ko smo prečkali most čez kanjon Kokre, zavijemo desno in čez Delavski most v naselje Stražišče in od tod na Sedlo, ki leži pod hribom Jošt nad Kranje"
+ "description": "Ločanka: Kranj–Škofja Loka, 64 km. Odpri pot v Zyflow."
  },
  "tour-mali-vrh": {
  "title": "Zyflow: Jezersko in razgledišče Mali vrh",
- "description": "Zgornje Jezersko–Makekova Kočna–razgledišče pod Malim vrhom–razgledna točka na koncu poti–razgledišče pod Malim vrhom–Makekova kočna–Zgornje Jezersko"
+ "description": "Jezersko Mali vrh: 17,3 km, 596 m. Odpri pot v Zyflow."
  },
  "tour-ravenska-kocna": {
  "title": "Zyflow: Ravenska Kočna in Štularjeva planina",
- "description": "Zgornje Jezersko–Planšarsko jezero–Ravenska Kočna–Štularjeva planina–Ravenska Kočna–Planšarsko jezero–Zgornje Jezersko"
+ "description": "Ravenska Kočna: 16,6 km, 408 m mimo Planšarskega jezera. Odpri pot v Zyflow."
  },
  "tour-spodnji-virnik": {
  "title": "Zyflow: Spodnji Virnik in kamnolom Kehnjaka",
- "description": "Zgornje Jezersko–Spodnji Kraj–kamnolom lehnjaka–Sp. Virnik–Zgornje Jezersko"
+ "description": "Kratka jezerska zanka do lehnjaka Kehnjak in Spodnjega Virnika: 9,4 km. Odpri pot v Zyflow."
  },
  "tour-trzicanka": {
  "title": "Zyflow: Tržičanka",
- "description": "Z Glavnega trga se čez Maistrov trg peljemo mimo Prešernovega gaja in se spustimo v kanjon reke Kokre, ki se vije skozi stari Kranj. Mimo parka Brdo nadalj"
+ "description": "Tržičanka: Kranj–Tržič, 68 km. Odpri pot v Zyflow."
  },
  "legal-pages-privacy-policy": {
  "title": "Zyflow, Politika zasebnosti",
