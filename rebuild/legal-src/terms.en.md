@@ -1,6 +1,6 @@
 # Zyflow Terms of Service
 
-**Version:** 2.0.0 · **Effective date:** 10 October 2026 · Replaces version 1.1.0 of 24 April 2026
+**Version:** 2.0.1 · **Effective date:** 19 October 2026 · Replaces version 2.0.0 of 10 October 2026
 
 ## 1. Who we are and what these Terms cover
 
@@ -69,7 +69,7 @@ You may export routes as GPX files and use them for your own navigation on any d
 
 6.3 **Licence you grant us.** You keep all rights to the routes, descriptions, photos and other content you share ("**your content**"). By sharing, you grant us a non-exclusive, royalty-free, worldwide licence, for as long as your content is shared, to host, store, reproduce, adapt technically (for example resize photos, generate map images and route statistics), display and make your content available to users within the Service and in links shared from it, as far as needed to operate, show and promote the community features of the Service. You also allow other users to view your shared route, save a copy and use it for their own **personal, non-commercial** riding.
 
-6.4 **Removal.** You can remove a shared route or photo at any time. Our licence then ends, except that (a) **copies that other users have already saved remain in their accounts**, (b) residual copies may remain in backups for up to 7 days, and (c) we may keep content as required by law or to defend legal claims.
+6.4 **Removal.** You can remove a shared route or photo at any time. Our licence then ends, except that (a) **copies that other users have already saved remain in their accounts**, and (b) we may keep content as required by law or to defend legal claims.
 
 6.5 **Your responsibility.** You are responsible for your content. You confirm that you have the necessary rights to it (for example to photos and to imported GPX tracks), that people recognisable in photos have agreed, and that it does not break the law or these Terms (section 9).
 

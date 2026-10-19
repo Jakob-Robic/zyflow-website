@@ -29,11 +29,13 @@ We have not appointed a data protection officer. For any privacy question or req
 
 ### 3.1 Account data
 
-**Data:** email address, full name, optional phone number, user ID, sign-in method, account creation date. If you sign in with Apple or Google, we receive your email address and, if you allow it, your name from that provider (with Apple you can hide your real email address).
+**Data:** email address, full name, optional phone number, user ID, sign-in method, account creation date. If you sign in with Apple or Google, we receive your email address and, if you allow it, your name from that provider (with Apple you can hide your real email address). With Google sign-in we also receive a link to your Google profile picture, which we store with your profile and show only to you.
 
 **Purpose:** to create and manage your account, sign you in and provide the service.
 
 **Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
+
+**Profile photo (optional):** if you add a profile photo, we store it in private file storage; it is visible only to you. You can change or remove it at any time in your profile, and it is deleted when you delete your account.
 
 ### 3.2 Location data
 
@@ -67,7 +69,7 @@ You can choose to share an individual saved route with the Zyflow community. Not
 
 > **Important:** the start and end points of a route can reveal where you live, work or regularly park your bike. Before sharing, consider starting and ending the route a little away from your home, and do not include personal details or photos that identify people, house numbers or licence plates.
 
-**Removing a shared route:** you can remove a shared route at any time. This removes it from the community, so other users can no longer see it. If you also want its photos and map images removed from our file storage, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) and we will remove them within 30 days. Copies that other users have already saved to their own accounts may remain in their accounts.
+**Removing a shared route:** you can remove a shared route at any time. This removes it from the community, so other users can no longer see it, and deletes its photos from our file storage. If you also want its map images removed from our file storage, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) and we will remove them within 30 days; they are also deleted automatically when you delete your account. Copies that other users have already saved to their own accounts may remain in their accounts.
 
 **Purpose:** to let riders discover and reuse routes shared by others.
 
@@ -95,7 +97,7 @@ You can choose to share an individual saved route with the Zyflow community. Not
 
 ### 3.7 Camera and photo library
 
-If you allow it, the app uses the camera and photo library only when you choose to add a photo (bike photos, route photos, place reports) or save an image. We do not access your photos in the background. You can withdraw the permission in your device settings.
+If you allow it, the app uses the camera and photo library only when you choose to add a photo (bike photos, route photos, place reports, profile photo) or save an image. We do not access your photos in the background. You can withdraw the permission in your device settings.
 
 ### 3.8 Emails
 
@@ -185,7 +187,7 @@ We use the following service providers. Processors act only on our instructions 
 | PostHog (EU cloud) (processor) | Product analytics | User ID, app events, device/app info; IP discarded | EU |
 | Sentry (Functional Software, Inc.), EU data region (processor) | Crash and performance monitoring | User ID, IP address, device and error data | EU storage; US company: see section 6 |
 | Vercel, Inc. (processor) | Hosting of our websites | IP address, technical request data | Global network incl. USA: see section 6 |
-| Apple / Google (separate controllers) | Sign in with Apple / Google (if you choose it) | Sign-in data, email, name | Entities in the EU and the USA: see section 6 |
+| Apple / Google (separate controllers) | Sign in with Apple / Google (if you choose it) | Sign-in data, email, name, profile picture link (Google) | Entities in the EU and the USA: see section 6 |
 | MapTiler AG | Map tiles | IP address, map area | Company based in Switzerland; see section 6 |
 | komoot GmbH (Photon) | Place search (via our server) | Search text, search area | Company based in Germany (EU) |
 | OpenStreetMap Foundation (Nominatim) | Reverse geocoding | IP address, coordinates | Foundation based in the United Kingdom; see section 6 |
@@ -211,18 +213,19 @@ Your app data is stored in the EU (Ireland). Some recipients are based in, or ma
 | Data | Retention |
 |---|---|
 | Account data (email, name, phone, user ID) | While your account exists; deleted immediately when you delete your account in the app |
+| Profile photo | Until you remove it or delete your account |
 | Saved and imported routes, saved places | Until you delete them or your account |
-| Shared community routes, their photos and map images | The shared route is removed when you remove it or delete your account; photos and map images in file storage are removed on request within 30 days (see section 9) |
-| Bike passport and bike photos | Until you delete them or your account; bike photos in file storage are removed on request within 30 days (see section 9) |
+| Shared community routes, their photos and map images | The shared route and its photos are deleted when you remove the route or delete your account; its map images are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
+| Bike passport and bike photos | Until you delete your account; a bike photo is deleted from file storage when you remove it or delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
-| Brevo contact (email, name, user ID) | While your account exists; removed on request within 30 days after you delete your account (see section 9) |
+| Brevo contact (email, name, user ID) | While your account exists; deleted automatically when you delete your account (see section 9) |
 | Email sending logs at Brevo | Only as long as needed to deliver emails and resolve delivery problems, in line with the provider's retention settings |
-| Product analytics (PostHog) | 12 months; your analytics profile is removed on request within 30 days after you delete your account |
-| Crash and performance reports (Sentry) | 90 days |
+| Product analytics (PostHog) | 12 months; deleted automatically when you delete your account |
+| Crash and performance reports (Sentry) | Up to 90 days |
 | Search rate-limit data (IP address and counters) | Only as long as needed to prevent abuse; regularly deleted |
 | Search cache (search text, no link to you) | 24 hours |
 | Server and hosting logs (Supabase, Vercel) | Up to 30 days |
-| Database backups | Up to 7 days, rolling; deleted data disappears from backups when they are overwritten |
+| Database backups | We currently keep no separate database backups |
 | Support and privacy-request correspondence | As long as needed to handle your request and, afterwards, for a limited period to document it and to defend legal claims |
 | Data on your device (session, last location, recent searches) | Until you uninstall the app or clear its data |
 | Accounting records (if any) | As required by law (for example 10 years for invoices under ZDDV-1) |
@@ -248,7 +251,7 @@ To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from
 - **On the web:** [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account).
 - **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions) are deleted immediately. Copies held in connected services are not removed automatically: photos and map images in our file storage, your contact at our email provider Brevo, and records linked to your user ID at PostHog and Sentry. We remove these copies on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu) after deleting your account and we will remove them within 30 days. Analytics records expire after 12 months and error reports after 90 days. Residual copies in backups are overwritten in the normal backup cycle. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
+When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, and photos and map images of shared routes), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
 ## 10. Complaints
 

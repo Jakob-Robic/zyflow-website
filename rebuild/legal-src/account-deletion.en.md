@@ -21,13 +21,13 @@ Write to [legal@zyflow.eu](mailto:legal@zyflow.eu) with the subject "Delete my a
 
 Deleting your account removes your profile (name, email address, phone number, user ID, sign-in details) and the data stored with your account in our database: saved and imported routes, saved places, routes you shared with the community, your bike passport, and your place reports and submissions.
 
-Some copies held by our service providers are not removed automatically: photos and map images in our file storage, your contact at our email provider (Brevo), and analytics and error-monitoring records linked to your user ID (PostHog, Sentry). Analytics records expire after 12 months and error reports after 90 days. **If you want these copies removed now, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) after deleting your account and we will remove them within 30 days.**
+Deleting your account also automatically removes your photos and map images from our file storage, your contact at our email provider (Brevo) and your analytics records (PostHog). Error reports linked to your user ID (Sentry) are deleted automatically within 90 days at the latest. **If you want them removed sooner, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) after deleting your account and we will remove them within 30 days.**
 
 ## What we keep, and for how long
 
 - Places you suggested that we approved stay in the Zyflow places database, without any link to you.
 - Copies of a shared route that other users saved to their own accounts before you deleted yours may remain in their accounts.
-- Database backups are kept for up to 7 days and are then overwritten; deleted data disappears from them in this cycle.
+- We currently keep no separate database backups, so deleted data does not remain in backups.
 - Technical server and hosting logs (which can contain IP addresses) are kept for up to 30 days.
 - Search rate-limit records (IP address and counters) are kept only as long as needed to prevent abuse and are regularly deleted.
 - Email sending logs at Brevo are kept only as long as needed to deliver emails and resolve delivery problems, in line with the provider's retention settings.
@@ -36,4 +36,4 @@ Some copies held by our service providers are not removed automatically: photos 
 
 ## How long it takes
 
-Your account and profile data are deleted immediately when you delete your account in the app. Copies at our service providers, and requests sent by email, are completed **within 30 days** of your request. More about how we handle your data: [Privacy Policy](https://www.zyflow.eu/legal-pages/privacy-policy). Questions: [legal@zyflow.eu](mailto:legal@zyflow.eu).
+Your account, profile data, files, Brevo contact and analytics records are deleted immediately when you delete your account in the app. Requests sent by email, and early removal of error reports, are completed **within 30 days** of your request. More about how we handle your data: [Privacy Policy](https://www.zyflow.eu/legal-pages/privacy-policy). Questions: [legal@zyflow.eu](mailto:legal@zyflow.eu).
