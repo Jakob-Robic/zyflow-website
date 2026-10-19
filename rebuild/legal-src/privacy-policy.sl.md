@@ -29,7 +29,7 @@ Pooblaščene osebe za varstvo podatkov nismo imenovali. Za vsa vprašanja in za
 
 ### 3.1 Podatki o uporabniškem računu
 
-**Podatki:** e-naslov, ime in priimek, neobvezno telefonska številka, identifikator uporabnika, način prijave, datum ustvarjanja računa. Če se prijavite z Apple ali Google, od tega ponudnika prejmemo vaš e-naslov in, če to dovolite, vaše ime (pri Apple lahko svoj pravi e-naslov skrijete).
+**Podatki:** e-naslov, ime in priimek, neobvezno telefonska številka, identifikator uporabnika, način prijave, datum ustvarjanja računa. Če se prijavite z Apple ali Google, od tega ponudnika prejmemo vaš e-naslov in, če to dovolite, vaše ime (pri Apple lahko svoj pravi e-naslov skrijete). Pri prijavi z Googlom prejmemo tudi povezavo do vaše profilne slike Google, ki jo shranimo v vašem profilu in je vidna samo vam.
 
 **Namen:** ustvarjanje in upravljanje računa, prijava in zagotavljanje storitve.
 
@@ -215,8 +215,8 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Podatki o računu (e-naslov, ime, telefon, identifikator uporabnika) | Dokler račun obstaja; izbrisani takoj, ko račun izbrišete v aplikaciji |
 | Profilna fotografija | Dokler je ne odstranite ali ne izbrišete računa. |
 | Shranjene in uvožene poti, shranjeni kraji | Dokler jih ne izbrišete ali ne izbrišete računa |
-| Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot se odstrani, ko jo odstranite ali izbrišete račun; fotografije in slike zemljevidov v hrambi datotek izbrišemo na zahtevo v 30 dneh (glej točko 9) |
-| Kolesarski potni list in fotografije kolesa | Dokler jih ne izbrišete ali ne izbrišete računa; fotografije kolesa v hrambi datotek izbrišemo na zahtevo v 30 dneh (glej točko 9) |
+| Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot se odstrani, ko jo odstranite ali izbrišete račun; njene fotografije in slike zemljevidov odstranimo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glejte razdelek 9) |
+| Kolesarski potni list in fotografije kolesa | Dokler jih ne izbrišete ali ne izbrišete računa; fotografije koles odstranimo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glejte razdelek 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
 | Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; izbrisan na zahtevo v 30 dneh po izbrisu računa (glej točko 9) |
 | Dnevniki pošiljanja e-pošte v storitvi Brevo | Le toliko časa, kolikor je potrebno za dostavo e-pošte in odpravo težav pri dostavi, v skladu z nastavitvami ponudnika |
@@ -251,7 +251,7 @@ Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) 
 - **Na spletu:** [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna).
 - **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev), izbrišejo takoj. Kopije v povezanih storitvah se ne izbrišejo samodejno: fotografije in slike zemljevidov v naši hrambi datotek, vaš kontakt pri ponudniku e-pošte Brevo ter zapisi, povezani z vašim identifikatorjem uporabnika, pri storitvah PostHog in Sentry. Te kopije izbrišemo na zahtevo: po izbrisu računa nam pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) in jih bomo izbrisali v 30 dneh. Analitični zapisi potečejo po 12 mesecih, poročila o napakah po 90 dneh. Preostale kopije v varnostnih kopijah se prepišejo v rednem ciklu varnostnega kopiranja. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
+Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev), izbrišejo takoj. Ob tem samodejno izbrišemo tudi vaše fotografije in slike zemljevidov v naši hrambi datotek, vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri PostHogu. Poročila o napakah pri Sentryju, povezana z vašim ID-jem uporabnika, se samodejno izbrišejo po 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Preostale kopije v varnostnih kopijah se prepišejo v rednem ciklu varnostnega kopiranja. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
 ## 10. Pritožbe
 
