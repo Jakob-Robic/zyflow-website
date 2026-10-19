@@ -15,8 +15,19 @@ const DEFAULT_LOCALE = "en";
  *   - drop the robots.txt Disallow for /blog
  *   - restore nav, footer, home journal, and "Read Journal" links
  *     (HTML marked <!-- journal:public --> / <!-- journal:hidden -->)
+ * A process env JOURNAL_PUBLIC=true|false overrides this line for one build
+ * (used by tests). The line itself stays the switch for a real launch.
  */
 const JOURNAL_PUBLIC = false;
+
+function journalIsPublic() {
+  const override = process.env.JOURNAL_PUBLIC;
+  if (override === "true" || override === "1") return true;
+  if (override === "false" || override === "0") return false;
+  return JOURNAL_PUBLIC;
+}
+
+const JOURNAL_IS_PUBLIC = journalIsPublic();
 
 /** @typedef {{ id: string, file: string, out: string, path: string, indexable: boolean, locales?: string[], preloadHero?: boolean }} PageDef */
 
@@ -58,9 +69,9 @@ const PAGES = [
     file: "blog.html",
     out: "blog.html",
     path: "/blog",
-    indexable: JOURNAL_PUBLIC,
+    indexable: JOURNAL_IS_PUBLIC,
   },
-  ...ARTICLE_PAGES.map((page) => ({ ...page, indexable: JOURNAL_PUBLIC })),
+  ...ARTICLE_PAGES.map((page) => ({ ...page, indexable: JOURNAL_IS_PUBLIC })),
   {
     id: "contact",
     file: "contact.html",
@@ -229,6 +240,8 @@ module.exports = {
   LOCALES,
   DEFAULT_LOCALE,
   JOURNAL_PUBLIC,
+  JOURNAL_IS_PUBLIC,
+  journalIsPublic,
   PAGES,
   pageLocales,
   localizedPath,
