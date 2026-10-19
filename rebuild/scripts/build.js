@@ -28,7 +28,20 @@ const { renderLegalMarkdown } = require("./legal-markdown");
 const { routeBySlug, ROUTES } = require("./routes");
 const { versionAssets } = require("./version-assets");
 const { appStoreUrlForLocale, assertAppStoreLinks } = require("./store-links");
-const { absoluteOgImage, collectMetaIssues, DEFAULT_OG_PATH } = require("./page-meta");
+// Separate require from store-links (PR #28). Keep both lines if that branch lands first.
+const {
+  absoluteOgImage,
+  collectMetaIssues,
+  DEFAULT_OG_PATH,
+  DEFAULT_OG_WIDTH,
+  DEFAULT_OG_HEIGHT,
+  DEFAULT_OG_TYPE,
+  TOUR_OG_WIDTH,
+  TOUR_OG_HEIGHT,
+  TOUR_OG_TYPE,
+  tourOgPath,
+  ogImageAlt,
+} = require("./page-meta");
 
 const ROOT = path.join(__dirname, "..");
 // REBUILD_DIST lets tests build into a temp dir; Vercel uses the default.
@@ -667,8 +680,15 @@ function buildHead(page, locale, messages) {
   const alwaysNoIndex = !page.indexable;
   const robots = alwaysNoIndex || !SITE_INDEX ? "noindex, nofollow" : "index, follow";
   const canonical = absoluteUrl(page.path, locale);
-  const cover = page.routeSlug ? routeBySlug(page.routeSlug).cover : "";
-  const ogImage = absoluteOgImage(SITE_ORIGIN, cover, OG_IMAGE_PATH);
+  const ogImage = absoluteOgImage(
+    SITE_ORIGIN,
+    page.routeSlug ? tourOgPath(page.routeSlug) : "",
+    OG_IMAGE_PATH
+  );
+  const ogImageWidth = page.routeSlug ? TOUR_OG_WIDTH : DEFAULT_OG_WIDTH;
+  const ogImageHeight = page.routeSlug ? TOUR_OG_HEIGHT : DEFAULT_OG_HEIGHT;
+  const ogImageType = page.routeSlug ? TOUR_OG_TYPE : DEFAULT_OG_TYPE;
+  const ogAlt = ogImageAlt(locale, page.routeSlug ? title : "");
   const ogLocale = OG_LOCALES[locale] || "en_US";
 
   const localesForPage = pageLocales(page);
@@ -735,6 +755,10 @@ function buildHead(page, locale, messages) {
     canonical: escapeAttr(canonical),
     hreflang,
     ogImage: escapeAttr(ogImage),
+    ogImageWidth: String(ogImageWidth),
+    ogImageHeight: String(ogImageHeight),
+    ogImageType: escapeAttr(ogImageType),
+    ogImageAlt: escapeAttr(ogAlt),
     ogLocale,
     ogLocaleAlts,
     themeColor,

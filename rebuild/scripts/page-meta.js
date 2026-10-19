@@ -1,13 +1,25 @@
 /**
  * Meta description checks and Open Graph image URLs for the static rebuild.
  *
- * Tour and page blurbs live in locales meta.pages.*.description. This module
- * flags the failures seen on the live site: a hard cut mid-word, a place-list
- * pasted in place of a sentence, and a description in the other locale's language.
+ * Tour and page blurbs live in locales meta.pages.*.description, with a
+ * parallel copy on routes.*.metaDescription. This module flags a hard cut,
+ * an ellipsis standing in for a finished sentence, and copy in the wrong
+ * language. The language score ignores the shared "open in Zyflow" CTA and
+ * uses a ratio, so one borrowed word cannot hide a sentence in another language.
  */
 
 const DEFAULT_OG_PATH = "/assets/images/home/hero.jpg";
+const DEFAULT_OG_WIDTH = 1024;
+const DEFAULT_OG_HEIGHT = 680;
+const DEFAULT_OG_TYPE = "image/jpeg";
+const TOUR_OG_WIDTH = 1200;
+const TOUR_OG_HEIGHT = 630;
+const TOUR_OG_TYPE = "image/jpeg";
 const MAX_DESCRIPTION = 160;
+
+/** Trailing store CTA. Scored text must not inherit its language. */
+const CTA_RE =
+  /\s*(?:Open(?: the route)? in Zyflow|Odpri pot v(?: aplikaciji)? Zyflow)[.!?]?\s*$/iu;
 
 /** English function and content words used in our page blurbs. */
 const EN_WORDS = [
@@ -37,6 +49,7 @@ const EN_WORDS = [
   "privacy",
   "cookie",
   "terms",
+  "service",
   "policy",
   "both",
   "stores",
@@ -53,6 +66,7 @@ const EN_WORDS = [
   "cycling",
   "climb",
   "climbs",
+  "climbing",
   "pass",
   "bridge",
   "forest",
@@ -101,6 +115,7 @@ const EN_WORDS = [
   "mountain",
   "approach",
   "places",
+  "place",
   "rewarded",
   "link",
   "oldest",
@@ -116,6 +131,7 @@ const EN_WORDS = [
   "free",
   "range",
   "plan",
+  "planning",
   "bike",
   "parking",
   "storage",
@@ -129,6 +145,15 @@ const EN_WORDS = [
   "elevation",
   "before",
   "like",
+  "why",
+  "charging",
+  "matters",
+  "hospitality",
+  "makes",
+  "friendly",
+  "battery",
+  "aware",
+  "border",
 ];
 
 /** Slovenian words that do not appear as English function words in our copy. */
@@ -174,6 +199,7 @@ const SL_WORDS = [
   "predalpsk\\p{L}*",
   "družinsk\\p{L}*",
   "kolesarjenj\\p{L}*",
+  "shrambo",
   "shramba",
   "parkirišč\\p{L}*",
   "zemljevid\\p{L}*",
@@ -204,10 +230,12 @@ const SL_WORDS = [
   "varna",
   "filtriraš",
   "pripelješ",
+  "izpeljal",
   "daleč",
   "seže",
   "zakaj",
   "brati",
+  "branje",
   "postank\\p{L}*",
   "turi",
   "ture",
@@ -231,15 +259,16 @@ const SL_WORDS = [
   "tudi",
   "vaše",
   "vaš\\p{L}*",
+  "svoj\\p{L}*",
   "zbira",
   "hrani",
   "varuje",
   "osebne",
   "podatke",
   "kraji",
+  "kraj",
   "prijazn\\p{L}*",
   "aplikacij\\p{L}*",
-  "naročnin\\p{L}*",
   "sporočilo",
   "partnerstv\\p{L}*",
   "naložb\\p{L}*",
@@ -261,12 +290,53 @@ const SL_WORDS = [
   "način",
   "preprost",
   "dnevno",
+  "dnevne",
   "obeh",
   "voljo",
   "naslednji",
   "kje",
   "kot",
+  "makadamsk\\p{L}*",
+  "krožn\\p{L}*",
+  "kmetij\\p{L}*",
+  "polnjenj\\p{L}*",
+  "gostinsk\\p{L}*",
+  "pomembno",
+  "profil\\p{L}*",
+  "višinsk\\p{L}*",
+  "čezmejn\\p{L}*",
+  "označi",
+  "lokal",
 ];
+
+/** German function words. "to"/"in"/"a" are omitted; "to" is Slovenian. */
+const DE_WORDS = [
+  "eine",
+  "einer",
+  "einem",
+  "einen",
+  "kurze",
+  "kurzer",
+  "kurzen",
+  "von",
+  "nach",
+  "durch",
+  "den",
+  "dem",
+  "der",
+  "die",
+  "das",
+  "radtour",
+  "wald",
+  "und",
+  "mit",
+  "für",
+  "aus",
+  "über",
+  "fahrt",
+];
+
+const LOCALE_NAME = { en: "English", sl: "Slovenian" };
 
 function countWords(patterns, text) {
   let n = 0;
@@ -278,8 +348,31 @@ function countWords(patterns, text) {
   return n;
 }
 
+function stripCta(text) {
+  return text.replace(CTA_RE, "").trim();
+}
+
+function languageIssues(locale, text) {
+  const scores = {
+    English: countWords(EN_WORDS, text),
+    Slovenian: countWords(SL_WORDS, text),
+    German: countWords(DE_WORDS, text),
+  };
+  const total = scores.English + scores.Slovenian + scores.German;
+  if (!total) return [];
+  const own = LOCALE_NAME[locale];
+  const issues = [];
+  for (const [name, count] of Object.entries(scores)) {
+    if (name === own) continue;
+    if (count >= 2 && count / total >= 0.55) {
+      issues.push(`looks ${name} on a ${own} page`);
+    }
+  }
+  return issues;
+}
+
 function descriptionIssues(locale, description) {
-  const text = String(description || "").trim();
+  const text = String(description || "").normalize("NFC").trim();
   const issues = [];
   if (!text) {
     issues.push("missing description");
@@ -291,26 +384,26 @@ function descriptionIssues(locale, description) {
     issues.push(`longer than ${MAX_DESCRIPTION} characters (${length})`);
   }
 
-  const endsSentence = /[.!?]["')\]]*$/.test(text);
-  if (!endsSentence) {
+  if (text.includes("...") || text.includes("…")) {
+    issues.push("truncated with an ellipsis");
+  } else if (!/[.!?](?:["'”’»«)\]]+)?$/.test(text)) {
     const midWord = /[\p{L}]$/u.test(text) && length >= 140;
     issues.push(midWord ? "truncated mid-word" : "does not end at a sentence boundary");
   }
 
-  const english = countWords(EN_WORDS, text);
-  const slovenian = countWords(SL_WORDS, text);
-  if (locale === "en" && slovenian >= 2 && english === 0) {
-    issues.push("looks Slovenian on an English page");
-  }
-  if (locale === "sl" && english >= 2 && slovenian === 0) {
-    issues.push("looks English on a Slovenian page");
-  }
-
+  issues.push(...languageIssues(locale, stripCta(text)));
   return issues;
 }
 
+/** Titles are language-checked only: no length cap and no sentence ending. */
+function titleIssues(locale, title) {
+  const text = String(title || "").normalize("NFC").trim();
+  if (!text) return ["missing title"];
+  return languageIssues(locale, text);
+}
+
 /**
- * @param {Record<string, { meta?: { pages?: Record<string, { description?: string }> } }>} messagesByLocale
+ * @param {Record<string, { meta?: { pages?: Record<string, { title?: string, description?: string }> }, routes?: Record<string, { metaDescription?: string }> }>} messagesByLocale
  * @param {{ id: string }[]} pages
  * @param {(page: { id: string }) => string[]} pageLocales
  * @returns {string[]}
@@ -319,9 +412,26 @@ function collectMetaIssues(messagesByLocale, pages, pageLocales) {
   const issues = [];
   for (const page of pages) {
     for (const locale of pageLocales(page)) {
-      const description = messagesByLocale[locale]?.meta?.pages?.[page.id]?.description;
-      for (const problem of descriptionIssues(locale, description)) {
+      const meta = messagesByLocale[locale]?.meta?.pages?.[page.id] || {};
+      for (const problem of descriptionIssues(locale, meta.description)) {
         issues.push(`${locale} ${page.id}: ${problem}`);
+      }
+      if (locale === "sl") {
+        for (const problem of titleIssues(locale, meta.title)) {
+          issues.push(`${locale} ${page.id} title: ${problem}`);
+        }
+      }
+    }
+  }
+
+  for (const locale of ["en", "sl"]) {
+    const routes = messagesByLocale[locale]?.routes;
+    if (!routes) continue;
+    for (const [slug, route] of Object.entries(routes)) {
+      if (!route || typeof route !== "object" || Array.isArray(route)) continue;
+      if (!Object.prototype.hasOwnProperty.call(route, "metaDescription")) continue;
+      for (const problem of descriptionIssues(locale, route.metaDescription)) {
+        issues.push(`${locale} routes.${slug}.metaDescription: ${problem}`);
       }
     }
   }
@@ -335,10 +445,36 @@ function absoluteOgImage(origin, cover, fallbackPath = DEFAULT_OG_PATH) {
   return `${origin}${path}`;
 }
 
+function tourOgPath(slug) {
+  return `/assets/images/og/tours/${slug}.jpg`;
+}
+
+function ogImageAlt(locale, title) {
+  const name = String(title || "")
+    .replace(/^Zyflow:\s*/i, "")
+    .replace(/^Zyflow,\s*/i, "")
+    .trim();
+  if (!name) {
+    return locale === "sl"
+      ? "Zyflow, kolesarjem prijazni kraji in poti"
+      : "Zyflow, bike-friendly places and cycling routes";
+  }
+  return locale === "sl" ? `Naslovna fotografija: ${name}` : `Cover photo: ${name}`;
+}
+
 module.exports = {
   DEFAULT_OG_PATH,
+  DEFAULT_OG_WIDTH,
+  DEFAULT_OG_HEIGHT,
+  DEFAULT_OG_TYPE,
+  TOUR_OG_WIDTH,
+  TOUR_OG_HEIGHT,
+  TOUR_OG_TYPE,
   MAX_DESCRIPTION,
   descriptionIssues,
+  titleIssues,
   collectMetaIssues,
   absoluteOgImage,
+  tourOgPath,
+  ogImageAlt,
 };
