@@ -27,6 +27,7 @@ const { articleBySlug, blogCardI18n } = require("./articles");
 const { renderLegalMarkdown } = require("./legal-markdown");
 const { routeBySlug, ROUTES } = require("./routes");
 const { versionAssets } = require("./version-assets");
+const { appStoreUrlForLocale, assertAppStoreLinks } = require("./store-links");
 
 const ROOT = path.join(__dirname, "..");
 // REBUILD_DIST lets tests build into a temp dir; Vercel uses the default.
@@ -936,6 +937,10 @@ function injectLegalDocument(html, page, locale) {
   return html;
 }
 
+function injectAppStoreUrl(html, locale) {
+  return html.replaceAll("{{appStoreUrl}}", appStoreUrlForLocale(locale));
+}
+
 function injectRedirectTarget(html, page, locale) {
   if (!page.redirectTo) return html;
   const dest = page.redirectTo.startsWith("/")
@@ -965,6 +970,7 @@ function buildPage(page, locale, messages) {
   html = injectLangSwitcher(html, page, locale);
   html = injectDocumentHead(html, page, locale, messages);
   html = injectAnalyticsBoot(html);
+  html = injectAppStoreUrl(html, locale);
 
   // Ensure body knows locale for CSS/JS if needed
   if (!/\sdata-locale=/.test(html)) {
@@ -1023,6 +1029,7 @@ function build() {
   // Cache-Control in vercel.json can never pin a stale file.
   const versions = versionAssets(DIST);
   console.log(`versioned ${versions.size} JS/CSS assets`);
+  assertAppStoreLinks(DIST);
 
   console.log(
     `\nRebuild complete → ${path.relative(process.cwd(), DIST)} (locales=${LOCALES.join(
