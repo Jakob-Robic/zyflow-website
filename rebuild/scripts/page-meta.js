@@ -4,8 +4,9 @@
  * Tour and page blurbs live in locales meta.pages.*.description, with a
  * parallel copy on routes.*.metaDescription. This module flags a hard cut,
  * an ellipsis standing in for a finished sentence, and copy in the wrong
- * language. The language score ignores the shared "open in Zyflow" CTA and
- * uses a ratio, so one borrowed word cannot hide a sentence in another language.
+ * language. The language score ignores the shared "open in Zyflow" CTA.
+ * Another language is flagged at three or more hits, or at two hits that are
+ * at least 30% of the score, without having to outnumber the page language.
  */
 
 const DEFAULT_OG_PATH = "/assets/images/home/hero.jpg";
@@ -338,6 +339,18 @@ const DE_WORDS = [
 
 const LOCALE_NAME = { en: "English", sl: "Slovenian" };
 
+/**
+ * Geographic nouns that show up inside English sentences (planina, jezero,
+ * Jezerjanka). They are not a language vote when the sentence is otherwise English.
+ */
+const PLACE_NAME_STEMS = [
+  "jezer\\p{L}*",
+  "planin\\p{L}*",
+  "domačij\\p{L}*",
+  "kamnolom\\p{L}*",
+  "lehnjak\\p{L}*",
+];
+
 function countWords(patterns, text, { skipCapitalized = false } = {}) {
   let n = 0;
   for (const pattern of patterns) {
@@ -390,6 +403,12 @@ function languageIssues(locale, text) {
   const english = countWords(EN_WORDS, scored);
   let slovenian = countWords(SL_WORDS, scored, { skipCapitalized: true });
   const german = countWords(DE_WORDS, scored);
+  // A list of places ("planina", "jezero", "Kamnolom lehnjaka") is not Slovenian
+  // copy when the rest of the sentence is English.
+  if (locale === "en" && english > 0) {
+    slovenian -= countWords(PLACE_NAME_STEMS, scored, { skipCapitalized: true });
+    if (slovenian < 0) slovenian = 0;
+  }
   // Diacritics catch Slovenian that shares no listed stem. Names like Tržič
   // stay capitalised, so a list of places does not become a language vote.
   const diacritics = slovenianDiacriticHits(scored);
@@ -400,14 +419,13 @@ function languageIssues(locale, text) {
   const total = english + slovenian + german;
   if (!total) return [];
   const own = LOCALE_NAME[locale];
-  const ownCount = scores[own] || 0;
   const issues = [];
   for (const [name, count] of Object.entries(scores)) {
     if (name === own) continue;
-    // Place names can match a few Slovenian stems. English grammar in the
-    // same sentence keeps the page language.
-    const dominates = ownCount === 0 || count >= ownCount * 2;
-    if (count >= 2 && count / total >= 0.55 && dominates) {
+    const share = count / total;
+    // Three words of the other language is enough on its own. Two words are
+    // enough once they are 30% of the hits. One borrowed word is not.
+    if (count >= 3 || (count >= 2 && share >= 0.3)) {
       issues.push(`looks ${name} on ${article(own)} ${own} page`);
     }
   }
@@ -427,9 +445,11 @@ function descriptionIssues(locale, description) {
     issues.push(`longer than ${MAX_DESCRIPTION} characters (${length})`);
   }
 
-  const trailingEllipsis = /(?:\.{3}|…)\s*$/.test(text);
-  const endsSentence = /[.!?](?:["'”’»«)\]]+)?$/.test(text);
-  const endsStat = /,\s*(?:\d+(?:[.,]\d+)?\s*km|\d+:\d+\s*h)$/i.test(text);
+  // A closing quote must not hide a cut-off ending ("…a great ride...").
+  const ending = text.replace(/["“”„'’‘»«)\]]+$/u, "").trim();
+  const trailingEllipsis = /(?:\.{3}|…)\s*$/.test(ending);
+  const endsSentence = /[.!?]$/.test(ending);
+  const endsStat = /,\s*(?:\d+(?:[.,]\d+)?\s*km|\d+:\d+\s*h)$/i.test(ending);
   if (trailingEllipsis) {
     issues.push("truncated with an ellipsis");
   } else if (!endsSentence && !endsStat) {

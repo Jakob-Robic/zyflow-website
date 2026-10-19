@@ -187,6 +187,33 @@ test("keeps an English sentence that names several Slovenian places", () => {
     ),
     []
   );
+  assert.deepEqual(
+    descriptionIssues("en", "Kamnolom lehnjaka and Spodnji Virnik."),
+    []
+  );
+});
+
+test("flags English mixed into a Slovenian description", () => {
+  const cases = [
+    "Odpri pot v aplikaciji Zyflow. Ride from Kranj to Bled through the forest.",
+    "Ride from Kranj to Bled through the forest, mimo jezera in čez Jamnik.",
+    "Ride … and past the lake, mimo jezera ki je lep.",
+  ];
+  for (const text of cases) {
+    const issues = descriptionIssues("sl", text);
+    assert.ok(
+      issues.some((issue) => issue.includes("English")),
+      `${text} → ${issues.join("; ")}`
+    );
+  }
+});
+
+test("flags an ellipsis hidden by a closing quote", () => {
+  assert.ok(
+    descriptionIssues("en", '…a great ride..."').includes(
+      "truncated with an ellipsis"
+    )
+  );
 });
 
 test("keeps Slovenian copy that uses bike park, pump track, or Gravel ride", () => {

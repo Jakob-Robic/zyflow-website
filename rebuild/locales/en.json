@@ -82,7 +82,7 @@
  },
  "tour-blejcanka": {
  "title": "Zyflow: Blejčanka",
- "description": "Blejčanka, Kranj to Lake Bled past Kropa and Radovljica: 79 km and 944 m of climbing. Open in Zyflow."
+ "description": "Blejčanka: Kranj to Lake Bled past Kropa and Radovljica: 79 km and 944 m of climbing. Open in Zyflow."
  },
  "tour-jezerjanka": {
  "title": "Zyflow: Jezerjanka",
@@ -110,7 +110,7 @@
  },
  "tour-k42-roznovenska": {
  "title": "Zyflow: Rožnovenska pot",
- "description": "Follow the Rožnovenska pilgrimage corridor through Brezje pri Tržiču, culture stops, villages and rolling Gorenjska roads from Tržič."
+ "description": "Follow the Rožnovenska pilgrimage route from Tržič through Brezje pri Tržiču: churches, villages and rolling Gorenjska roads."
  },
  "tour-k43-dobrca": {
  "title": "Zyflow: Dobrča",
@@ -138,11 +138,11 @@
  },
  "tour-ljubljancanka": {
  "title": "Zyflow: Ljubljančanka",
- "description": "Ljubljančanka, Kranj to Ljubljana past Smlednik Castle: 70 km and 460 m of climbing. Open in Zyflow."
+ "description": "Ljubljančanka: Kranj to Ljubljana past Smlednik Castle: 70 km and 460 m of climbing. Open in Zyflow."
  },
  "tour-locanka": {
  "title": "Zyflow: Ločanka",
- "description": "Ločanka, Kranj to Škofja Loka's old town and castle: 64 km and 930 m of climbing. Open in Zyflow."
+ "description": "Ločanka: Kranj to Škofja Loka's old town and castle: 64 km and 930 m of climbing. Open in Zyflow."
  },
  "tour-mali-vrh": {
  "title": "Zyflow: Jezersko – Mali vrh lookout",
@@ -158,7 +158,7 @@
  },
  "tour-trzicanka": {
  "title": "Zyflow: Tržičanka",
- "description": "Tržičanka, Kranj to Tržič through the Kokra canyon and on to Kamen Castle: 68 km. Open in Zyflow."
+ "description": "Tržičanka: Kranj to Tržič through the Kokra canyon and on to Kamen Castle: 68 km. Open in Zyflow."
  },
  "legal-pages-privacy-policy": {
  "title": "Zyflow, Privacy Policy",
@@ -1352,7 +1352,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "Blejčanka (79 km to Bled) | Zyflow",
- "metaDescription": "Blejčanka, Kranj to Lake Bled past Kropa and Radovljica: 79 km and 944 m of climbing. Open in Zyflow.",
+ "metaDescription": "Blejčanka: Kranj to Lake Bled past Kropa and Radovljica: 79 km and 944 m of climbing. Open in Zyflow.",
  "climb": "944 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1653,7 +1653,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "K42 Rožnovenska pot | Zyflow",
- "metaDescription": "Follow the Rožnovenska pilgrimage corridor through Brezje pri Tržiču, culture stops, villages and rolling Gorenjska roads from Tržič.",
+ "metaDescription": "Follow the Rožnovenska pilgrimage route from Tržič through Brezje pri Tržiču: churches, villages and rolling Gorenjska roads.",
  "climb": "369 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1954,7 +1954,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "Ljubljančanka (70 km to Ljubljana) | Zyflow",
- "metaDescription": "Ljubljančanka, Kranj to Ljubljana past Smlednik Castle: 70 km and 460 m of climbing. Open in Zyflow.",
+ "metaDescription": "Ljubljančanka: Kranj to Ljubljana past Smlednik Castle: 70 km and 460 m of climbing. Open in Zyflow.",
  "climb": "460 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -1997,7 +1997,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "Ločanka (64 km to Škofja Loka) | Zyflow",
- "metaDescription": "Ločanka, Kranj to Škofja Loka's old town and castle: 64 km and 930 m of climbing. Open in Zyflow.",
+ "metaDescription": "Ločanka: Kranj to Škofja Loka's old town and castle: 64 km and 930 m of climbing. Open in Zyflow.",
  "climb": "930 m",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
@@ -2169,7 +2169,7 @@
  "ctaSecondary": "Get the app",
  "gpxLabel": "Download GPX",
  "metaTitle": "Tržičanka (68 km to Tržič) | Zyflow",
- "metaDescription": "Tržičanka, Kranj to Tržič through the Kokra canyon and on to Kamen Castle: 68 km. Open in Zyflow.",
+ "metaDescription": "Tržičanka: Kranj to Tržič through the Kokra canyon and on to Kamen Castle: 68 km. Open in Zyflow.",
  "climb": ", ",
  "climbLabel": "Elevation",
  "durationLabel": "Duration",
