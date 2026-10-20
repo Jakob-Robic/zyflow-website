@@ -17,6 +17,7 @@ const {
   SITE_ORIGIN,
   LOCALES,
   DEFAULT_LOCALE,
+  JOURNAL_IS_PUBLIC,
   PAGES,
   pageLocales,
   absoluteUrl,
@@ -166,6 +167,288 @@ function assertLocaleParity(messagesByLocale) {
   }
 }
 
+/**
+ * Drop <!-- name:public --> or <!-- name:hidden --> blocks.
+ * The kept side is unwrapped so flipping the flag restores the markup.
+ * Markers must be balanced pairs and must not nest: an unclosed opener
+ * would otherwise swallow every later block, including a whole <main>.
+ * Any other journal:* comment is an unknown or malformed marker.
+ * `source` is the template path included in the thrown error.
+ */
+function markerError(source, detail) {
+  return new Error(source ? `${source}: ${detail}` : detail);
+}
+
+function applyToggleBlocks(html, name, enabled, source = "") {
+  const commentRe = /<!--[\s\S]*?-->/g;
+  const knownRe = new RegExp(`^<!--\\s*(/)?${name}:(public|hidden)\\s*-->$`);
+  const unknownKindRe = new RegExp(`^<!--\\s*/?${name}:([^\\s]*)\\s*-->$`);
+  const mentions = new RegExp(`${name}\\s*:`);
+  const markers = [];
+  let match;
+  while ((match = commentRe.exec(html))) {
+    const raw = match[0];
+    if (!mentions.test(raw)) continue;
+    const known = knownRe.exec(raw);
+    if (!known) {
+      const kind = unknownKindRe.exec(raw);
+      const label =
+        kind && kind[1] && kind[1] !== "public" && kind[1] !== "hidden"
+          ? `Unknown ${name} marker ${raw}`
+          : `Malformed ${name} marker ${raw}`;
+      throw markerError(source, label);
+    }
+    markers.push({
+      closing: Boolean(known[1]),
+      kind: known[2],
+      raw,
+      start: match.index,
+      end: match.index + raw.length,
+    });
+  }
+
+  const stack = [];
+  const pairs = [];
+  for (const marker of markers) {
+    if (!marker.closing) {
+      if (stack.length) {
+        const open = stack[stack.length - 1];
+        throw markerError(
+          source,
+          `Nested ${marker.raw} inside ${open.raw}. Journal markers must not nest.`
+        );
+      }
+      stack.push(marker);
+      continue;
+    }
+    const open = stack.pop();
+    if (!open || open.kind !== marker.kind) {
+      throw markerError(source, `Unbalanced ${marker.raw} with no matching opener.`);
+    }
+    pairs.push({ open, close: marker });
+  }
+  if (stack.length) {
+    const open = stack[stack.length - 1];
+    throw markerError(source, `Unclosed ${open.raw} marker.`);
+  }
+
+  const keep = enabled ? "public" : "hidden";
+  let out = html;
+  for (const pair of pairs.sort((a, b) => b.open.start - a.open.start)) {
+    const middle = pair.open.kind === keep ? out.slice(pair.open.end, pair.close.start) : "";
+    out = out.slice(0, pair.open.start) + middle + out.slice(pair.close.end);
+  }
+  return out;
+}
+
+/**
+ * End index (exclusive) of the element that opened at `from`, counting nested
+ * tags of the same name. Comments are skipped. Returns -1 if unclosed.
+ */
+function matchingCloseEnd(html, from, tagName) {
+  const lower = tagName.toLowerCase();
+  let depth = 1;
+  let i = from;
+  while (i < html.length && depth > 0) {
+    const lt = html.indexOf("<", i);
+    if (lt === -1) return -1;
+    if (html.startsWith("<!--", lt)) {
+      const end = html.indexOf("-->", lt + 4);
+      i = end === -1 ? html.length : end + 3;
+      continue;
+    }
+    if (html.startsWith("</", lt)) {
+      const end = html.indexOf(">", lt);
+      if (end === -1) return -1;
+      const name = html.slice(lt + 2, end).trim().split(/\s+/)[0].toLowerCase();
+      i = end + 1;
+      if (name === lower) {
+        depth -= 1;
+        if (depth === 0) return i;
+      }
+      continue;
+    }
+    if (html.startsWith("<!", lt) || html.startsWith("<?", lt)) {
+      const end = html.indexOf(">", lt);
+      i = end === -1 ? html.length : end + 1;
+      continue;
+    }
+    const end = findOpenTagEnd(html, lt);
+    if (end === -1) return -1;
+    const open = html.slice(lt, end + 1);
+    const name = /^<([A-Za-z][\w:-]*)/.exec(open);
+    const selfClosing = /\/\s*>$/.test(open);
+    if (name && name[1].toLowerCase() === lower && !selfClosing) depth += 1;
+    i = end + 1;
+  }
+  return depth === 0 ? i : -1;
+}
+
+function categoryOverrides() {
+  const raw = process.env.ROUTE_CATEGORY_OVERRIDES || "";
+  const overrides = new Map();
+  if (!raw.trim()) return overrides;
+  for (const part of raw.split(",")) {
+    const [slug, category] = part.split("=").map((piece) => piece.trim());
+    if (!slug || !category) {
+      throw new Error(`Bad ROUTE_CATEGORY_OVERRIDES entry: ${part}`);
+    }
+    overrides.set(slug, category);
+  }
+  return overrides;
+}
+
+/** slug → category, with ROUTE_CATEGORY_OVERRIDES applied (test hook). */
+function categoriesBySlug() {
+  const overrides = categoryOverrides();
+  const known = new Set(ROUTES.map((route) => route.slug));
+  for (const slug of overrides.keys()) {
+    if (!known.has(slug)) {
+      throw new Error(`ROUTE_CATEGORY_OVERRIDES unknown slug: ${slug}`);
+    }
+  }
+  return new Map(
+    ROUTES.map((route) => [route.slug, overrides.get(route.slug) || route.category])
+  );
+}
+
+function isTourCardOpenTag(openTag) {
+  return /\bclass="[^"]*\btour-card\b/.test(openTag);
+}
+
+/**
+ * Copy each tour card's data-category from ROUTES (matched by the card's
+ * /tours/{slug} href). The card markup stays hand-authored; only the
+ * category the filter reads is kept in step with the route record.
+ */
+function stampCardCategories(html, bySlug = categoriesBySlug()) {
+  let out = "";
+  let i = 0;
+  while (i < html.length) {
+    const lt = html.indexOf("<article", i);
+    if (lt === -1) {
+      out += html.slice(i);
+      break;
+    }
+    out += html.slice(i, lt);
+    const openEnd = findOpenTagEnd(html, lt);
+    if (openEnd === -1) {
+      out += html.slice(lt);
+      break;
+    }
+    const open = html.slice(lt, openEnd + 1);
+    if (!isTourCardOpenTag(open)) {
+      out += open;
+      i = openEnd + 1;
+      continue;
+    }
+    const closeAt = matchingCloseEnd(html, openEnd + 1, "article");
+    if (closeAt === -1) throw new Error("Unclosed tour-card <article>");
+    let article = html.slice(lt, closeAt);
+    const slug = article.match(
+      /href="(?:\.\/|\/)?(?:sl\/)?tours\/([a-z0-9-]+)(?:\.html)?"/
+    );
+    if (slug && bySlug.has(slug[1])) {
+      const category = bySlug.get(slug[1]);
+      const tagEnd = article.indexOf(">");
+      let tag = article.slice(0, tagEnd);
+      if (/\bdata-category="/.test(tag)) {
+        tag = tag.replace(/\bdata-category="[^"]*"/, `data-category="${category}"`);
+      } else {
+        tag += ` data-category="${category}"`;
+      }
+      article = tag + article.slice(tagEnd);
+    }
+    out += article;
+    i = closeAt;
+  }
+  return out;
+}
+
+function collectCardCategories(html) {
+  const categories = new Set();
+  const re = /<article\b[^>]*>/gi;
+  let match;
+  while ((match = re.exec(html))) {
+    const open = match[0];
+    if (!isTourCardOpenTag(open)) continue;
+    const category = /\bdata-category="([^"]+)"/.exec(open);
+    if (category) categories.add(category[1]);
+  }
+  return categories;
+}
+
+/** Categories that have a tour card in the grid after stamping from ROUTES. */
+function publishedCardCategories() {
+  const grid = read(path.join(ROOT, "sections/tours/grid.html"));
+  return collectCardCategories(stampCardCategories(grid));
+}
+
+/**
+ * Drop elements marked data-requires-category="…" unless the tours grid
+ * renders a card in that category. Nested tags of the same name are counted
+ * so an inner </a> cannot truncate the element.
+ */
+function stripUnpublishedCategories(html, published = publishedCardCategories()) {
+  let out = "";
+  let i = 0;
+  while (i < html.length) {
+    const lt = html.indexOf("<", i);
+    if (lt === -1) {
+      out += html.slice(i);
+      break;
+    }
+    out += html.slice(i, lt);
+    if (html.startsWith("<!--", lt)) {
+      const end = html.indexOf("-->", lt + 4);
+      const to = end === -1 ? html.length : end + 3;
+      out += html.slice(lt, to);
+      i = to;
+      continue;
+    }
+    if (html.startsWith("</", lt) || html.startsWith("<!", lt) || html.startsWith("<?", lt)) {
+      const end = html.indexOf(">", lt);
+      const to = end === -1 ? html.length : end + 1;
+      out += html.slice(lt, to);
+      i = to;
+      continue;
+    }
+    const openEnd = findOpenTagEnd(html, lt);
+    if (openEnd === -1) {
+      out += html.slice(lt);
+      break;
+    }
+    const open = html.slice(lt, openEnd + 1);
+    const name = /^<([A-Za-z][\w:-]*)/.exec(open);
+    const category = /\sdata-requires-category="([^"]*)"/.exec(open);
+    const selfClosing = /\/\s*>$/.test(open);
+    if (!name || !category || published.has(category[1])) {
+      out += open;
+      i = openEnd + 1;
+      continue;
+    }
+    if (selfClosing) {
+      i = openEnd + 1;
+      continue;
+    }
+    const closeAt = matchingCloseEnd(html, openEnd + 1, name[1]);
+    if (closeAt === -1) {
+      throw new Error(
+        `Unclosed <${name[1]} data-requires-category="${category[1]}">`
+      );
+    }
+    i = closeAt;
+  }
+  return out;
+}
+
+function applyPublicationFlags(html, source = "") {
+  html = applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, source);
+  html = stampCardCategories(html);
+  html = stripUnpublishedCategories(html);
+  return html;
+}
+
 function resolveIncludes(html, stack = []) {
   const pattern = /<!--\s*include:([^\s]+)\s*-->/g;
   return html.replace(pattern, (_, rel) => {
@@ -178,6 +461,9 @@ function resolveIncludes(html, stack = []) {
       throw new Error(`Missing include: ${clean}`);
     }
     const partial = read(filePath);
+    // Reject a bad marker in this partial before it is inlined, so the
+    // error names this file rather than the page that included it.
+    applyToggleBlocks(partial, "journal", JOURNAL_IS_PUBLIC, clean);
     return resolveIncludes(partial, [...stack, clean]);
   });
 }
@@ -839,12 +1125,14 @@ ${urls.join("\n")}
 </urlset>
 `;
 
+  const disallow = ["Disallow: /styleguide", "Disallow: /sl/styleguide"];
+  if (!JOURNAL_IS_PUBLIC) {
+    disallow.push("Disallow: /blog", "Disallow: /sl/blog");
+  }
+
   const robots = `User-agent: *
 Allow: /
-Disallow: /styleguide
-Disallow: /sl/styleguide
-Disallow: /blog
-Disallow: /sl/blog
+${disallow.join("\n")}
 
 Sitemap: ${SITE_ORIGIN}/sitemap.xml
 `;
@@ -984,7 +1272,9 @@ function buildPage(page, locale, messages) {
   if (!fs.existsSync(sourcePath)) {
     throw new Error(`Missing page file: ${page.file}`);
   }
+  const pageRel = path.relative(ROOT, sourcePath);
   let html = read(sourcePath);
+  applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, pageRel);
   if (page.articleSlug) {
     html = injectArticleContent(html, page.articleSlug);
   }
@@ -992,6 +1282,7 @@ function buildPage(page, locale, messages) {
     html = injectTourContent(html, page.routeSlug);
   }
   html = resolveIncludes(html);
+  html = applyPublicationFlags(html, pageRel);
   html = injectLegalDocument(html, page, locale);
   html = injectRedirectTarget(html, page, locale);
   html = applyI18n(html, messages);
@@ -1019,6 +1310,92 @@ function buildPage(page, locale, messages) {
   fs.writeFileSync(outFile, html, "utf8");
   const label = path.relative(DIST, outFile);
   console.log(`built ${label}`);
+}
+
+function assertIndexablePages() {
+  const hrefRe = /\shref="([^"]*)"/g;
+  const problems = [];
+  const commuteLive = publishedCardCategories().has("commute");
+
+  function hrefProblems(rel, html) {
+    const visible = html.replace(/<!--[\s\S]*?-->/g, "");
+    const found = [];
+    hrefRe.lastIndex = 0;
+    let match;
+    while ((match = hrefRe.exec(visible))) {
+      const href = match[1];
+      const pathOnly = href.split(/[?#]/)[0];
+      if (
+        !JOURNAL_IS_PUBLIC &&
+        (/(^|\/)blog$/.test(pathOnly) || /(^|\/)blog\//.test(pathOnly))
+      ) {
+        found.push(`${rel} links to hidden journal ${href}`);
+      }
+      if (/(^|\/)tour$/.test(pathOnly)) {
+        found.push(`${rel} links to legacy /tour ${href}`);
+      }
+      if (!commuteLive && /(?:^|[?&])type=commute(?:&|$)/.test(href)) {
+        found.push(`${rel} links to empty commute filter ${href}`);
+      }
+    }
+    return found;
+  }
+
+  for (const page of PAGES) {
+    if (!page.indexable) continue;
+    for (const locale of pageLocales(page)) {
+      const outDir =
+        locale === DEFAULT_LOCALE || page.localePrefix === false
+          ? DIST
+          : path.join(DIST, locale);
+      const file = path.join(outDir, page.out);
+      problems.push(...hrefProblems(path.relative(DIST, file), read(file)));
+    }
+  }
+
+  const robots = read(path.join(DIST, "robots.txt"));
+  const sitemap = read(path.join(DIST, "sitemap.xml"));
+  if (!JOURNAL_IS_PUBLIC) {
+    if (!robots.includes("Disallow: /blog")) {
+      problems.push("robots.txt does not disallow /blog while journal is hidden");
+    }
+    if (sitemap.includes("/blog")) {
+      problems.push("sitemap.xml lists /blog while journal is hidden");
+    }
+  } else {
+    const home = read(path.join(DIST, "index.html"));
+    if (!home.includes('href="/blog"')) {
+      problems.push("index.html is missing /blog links while journal is public");
+    }
+    if (!home.includes('data-i18n="home.features.items.2.link"')) {
+      problems.push("home feature card did not restore the Read Journal link");
+    }
+    if (!sitemap.includes("/blog")) {
+      problems.push("sitemap.xml is missing /blog while journal is public");
+    }
+    if (/Disallow:\s*\/blog\b/.test(robots)) {
+      problems.push("robots.txt still disallows /blog while journal is public");
+    }
+  }
+  if (commuteLive) {
+    const tours = read(path.join(DIST, "tours.html"));
+    if (!/class="tour-card"[^>]*data-category="commute"/.test(tours) &&
+        !/data-category="commute"[^>]*class="tour-card"/.test(tours)) {
+      problems.push("commute is published but tours.html has no commute card");
+    }
+  }
+
+  if (problems.length) {
+    throw new Error(
+      `Public pages still point at hidden or empty targets:\n${problems.join("\n")}`
+    );
+  }
+
+  // Journal stays buildable so flipping JOURNAL_PUBLIC does not require new templates.
+  const blog = path.join(DIST, "blog.html");
+  if (!fs.existsSync(blog)) {
+    throw new Error("Journal page was not built (expected dist/blog.html)");
+  }
 }
 
 async function build() {
@@ -1059,6 +1436,7 @@ async function build() {
   }
 
   writeSeoFiles();
+  assertIndexablePages();
 
   // One stylesheet instead of the @import chain (render-blocking).
   bundleCss(DIST);
@@ -1080,7 +1458,18 @@ async function build() {
   );
 }
 
-build().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  build().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  applyToggleBlocks,
+  stripUnpublishedCategories,
+  stampCardCategories,
+  collectCardCategories,
+  publishedCardCategories,
+  categoriesBySlug,
+};
