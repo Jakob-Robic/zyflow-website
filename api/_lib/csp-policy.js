@@ -6,7 +6,9 @@
  * Inventory (rebuild/gtm/*, analytics-boot, analytics-*.js, cookieconsent, fonts):
  * - script-src: self + inline (theme boot, GTM, consent restore); GTM; GA4;
  *   Google Ads (gtag/conversion); Meta Pixel; ChatGPT Ads pixel; PostHog array.js;
- *   Cloudflare Turnstile (required in production).
+ *   Cloudflare Turnstile (required in production). The widget script is
+ *   injected on the first focus or input in a form, not at page load;
+ *   challenges.cloudflare.com stays in script-src, connect-src, and frame-src.
  * - style-src: self + inline (cookie banner, a few style= attrs). Banner CSS is self-hosted.
  * - img-src: self + data; GTM/GA/Ads/Meta pixels.
  * - font-src: self (DM Sans, Tanker, Courier Prime in /assets/design-system/fonts).

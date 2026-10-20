@@ -43,6 +43,8 @@ const {
   tourOgPath,
   ogImageAlt,
 } = require("./page-meta");
+const { bundleCss } = require("./bundle-css");
+const { optimizeImages } = require("./optimize-images");
 
 const ROOT = path.join(__dirname, "..");
 // REBUILD_DIST lets tests build into a temp dir; Vercel uses the default.
@@ -1019,7 +1021,7 @@ function buildPage(page, locale, messages) {
   console.log(`built ${label}`);
 }
 
-function build() {
+async function build() {
   const messagesByLocale = {};
   for (const locale of LOCALES) {
     const localePath = path.join(LOCALES_DIR, `${locale}.json`);
@@ -1058,6 +1060,12 @@ function build() {
 
   writeSeoFiles();
 
+  // One stylesheet instead of the @import chain (render-blocking).
+  bundleCss(DIST);
+  // AVIF/WebP srcsets + simplified contour SVGs. Runs before versioning so
+  // the JS/CSS ?v= pass still sees the final HTML.
+  await optimizeImages(DIST);
+
   // Must run last: hashes the final bytes (after key injection) and rewrites
   // every /js, /css and /assets JS/CSS reference to ?v=<hash> so the immutable
   // Cache-Control in vercel.json can never pin a stale file.
@@ -1072,4 +1080,7 @@ function build() {
   );
 }
 
-build();
+build().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

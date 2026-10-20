@@ -229,6 +229,7 @@
           }
           n += 1;
           if (n > 50) {
+            window.__zyflowTurnstileLoading = null;
             reject(new Error("turnstile"));
             return;
           }
@@ -237,6 +238,7 @@
         wait();
       };
       s.onerror = function () {
+        window.__zyflowTurnstileLoading = null;
         reject(new Error("turnstile"));
       };
       document.head.appendChild(s);
@@ -244,23 +246,51 @@
     return window.__zyflowTurnstileLoading;
   }
 
-  function initTurnstileWidgets() {
+  function renderTurnstileSlot(slot) {
     var key = turnstileSiteKey();
-    if (!key) return;
-    var slots = document.querySelectorAll(".js-turnstile");
-    if (!slots.length) return;
+    if (!key || !slot || slot.dataset.widgetId || !window.turnstile) return;
+    slot.hidden = false;
+    var id = window.turnstile.render(slot, { sitekey: key });
+    if (id) slot.dataset.widgetId = String(id);
+  }
+
+  // Render one form's widget. Does not load the script until called.
+  function initTurnstileForForm(form) {
+    var key = turnstileSiteKey();
+    if (!key || !form) return;
+    var slot = form.querySelector(".js-turnstile");
+    if (!slot || slot.dataset.widgetId) return;
     loadTurnstileScript()
       .then(function () {
-        slots.forEach(function (slot) {
-          if (slot.dataset.widgetId) return;
-          slot.hidden = false;
-          var id = window.turnstile.render(slot, { sitekey: key });
-          if (id) slot.dataset.widgetId = String(id);
-        });
+        renderTurnstileSlot(slot);
       })
       .catch(function () {
         console.warn("[Zyflow] Turnstile widget failed to load");
       });
+  }
+
+  /**
+   * Cloudflare Turnstile is not loaded on page load. The first focusin or
+   * input inside a form that owns a .js-turnstile slot inserts
+   * https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit
+   * and renders only that form's widget. Submit also calls
+   * initTurnstileForForm, so a token is still requested if those events
+   * never fired. A failed api.js load clears the cached promise so the next
+   * interaction retries. The token is sent as turnstileToken; the honeypot
+   * field is unchanged. Same origins as before (script, iframe, siteverify).
+   */
+  function armTurnstileOnInteraction(form) {
+    if (!form || form.dataset.turnstileArmed === "1") return;
+    if (!form.querySelector(".js-turnstile")) return;
+    form.dataset.turnstileArmed = "1";
+    if (!turnstileSiteKey()) return;
+    var start = function () {
+      form.removeEventListener("focusin", start);
+      form.removeEventListener("input", start);
+      initTurnstileForForm(form);
+    };
+    form.addEventListener("focusin", start);
+    form.addEventListener("input", start);
   }
 
   function getTurnstileToken(form) {
@@ -280,7 +310,7 @@
 
   function waitForTurnstileToken(form) {
     if (!turnstileSiteKey()) return Promise.resolve("");
-    initTurnstileWidgets();
+    initTurnstileForForm(form);
     return new Promise(function (resolve, reject) {
       var start = Date.now();
       var tick = function () {
@@ -475,18 +505,18 @@
     });
   }
 
+  function bootForms() {
+    document.querySelectorAll("form").forEach(armTurnstileOnInteraction);
+    initContactForm();
+    initNewsletterForm();
+  }
+
   captureOppref();
   initAppDownloadTracking();
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initTurnstileWidgets();
-      initContactForm();
-      initNewsletterForm();
-    });
+    document.addEventListener("DOMContentLoaded", bootForms);
   } else {
-    initTurnstileWidgets();
-    initContactForm();
-    initNewsletterForm();
+    bootForms();
   }
 
   window.ZyflowAnalytics = {

@@ -31,7 +31,7 @@
 {{preloads}}
 <link rel="stylesheet" href="/css/main.css?v=8" />
 <!-- analytics -->
-<script src="/js/analytics-config.js"></script>
+<script src="/js/analytics-config.js" defer></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -79,5 +79,8 @@
   })(window, document, "script", "dataLayer", "GTM-W8XX2TWZ");
 </script>
 <!-- End Google Tag Manager -->
+<!-- Blocking on purpose. cookieconsent focuses a node in the banner ~100ms
+     after inserting it; if this sheet is still pending, that focus scrolls
+     the page to the footer. -->
 <link rel="stylesheet" href="/css/cookieconsent.css" />
 <!-- /analytics -->

@@ -18,6 +18,20 @@ html {
   overflow-x: clip;
 }
 
+/*
+ * <picture> only chooses a format. display:contents keeps the <img> as the
+ * box the existing selectors size (reset.css otherwise sets picture to block).
+ * <source> must not become a flex/block item, or it adds gaps and extra height.
+ * Browsers still use a display:none <source> when choosing the image.
+ */
+picture {
+  display: contents;
+}
+
+picture > source {
+  display: none;
+}
+
 /* —— Containers —— */
 
 .container {
