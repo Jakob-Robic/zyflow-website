@@ -1,6 +1,9 @@
 {
   "name": "zyflow-landing",
   "version": "1.0.0",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "build:i18n": "node scripts/build-locale.js && node scripts/prepare-public.js",
     "annotate:i18n": "node scripts/annotate-html.js",
