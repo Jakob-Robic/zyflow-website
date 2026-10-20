@@ -172,17 +172,38 @@ function assertLocaleParity(messagesByLocale) {
  * The kept side is unwrapped so flipping the flag restores the markup.
  * Markers must be balanced pairs and must not nest: an unclosed opener
  * would otherwise swallow every later block, including a whole <main>.
+ * Any other journal:* comment is an unknown or malformed marker.
+ * `source` is the template path included in the thrown error.
  */
-function applyToggleBlocks(html, name, enabled) {
-  const re = new RegExp(`<!--\\s*(/)?${name}:(public|hidden)\\s*-->`, "g");
+function markerError(source, detail) {
+  return new Error(source ? `${source}: ${detail}` : detail);
+}
+
+function applyToggleBlocks(html, name, enabled, source = "") {
+  const commentRe = /<!--[\s\S]*?-->/g;
+  const knownRe = new RegExp(`^<!--\\s*(/)?${name}:(public|hidden)\\s*-->$`);
+  const unknownKindRe = new RegExp(`^<!--\\s*/?${name}:([^\\s]*)\\s*-->$`);
+  const mentions = new RegExp(`${name}\\s*:`);
   const markers = [];
   let match;
-  while ((match = re.exec(html))) {
+  while ((match = commentRe.exec(html))) {
+    const raw = match[0];
+    if (!mentions.test(raw)) continue;
+    const known = knownRe.exec(raw);
+    if (!known) {
+      const kind = unknownKindRe.exec(raw);
+      const label =
+        kind && kind[1] && kind[1] !== "public" && kind[1] !== "hidden"
+          ? `Unknown ${name} marker ${raw}`
+          : `Malformed ${name} marker ${raw}`;
+      throw markerError(source, label);
+    }
     markers.push({
-      closing: Boolean(match[1]),
-      kind: match[2],
+      closing: Boolean(known[1]),
+      kind: known[2],
+      raw,
       start: match.index,
-      end: match.index + match[0].length,
+      end: match.index + raw.length,
     });
   }
 
@@ -192,9 +213,9 @@ function applyToggleBlocks(html, name, enabled) {
     if (!marker.closing) {
       if (stack.length) {
         const open = stack[stack.length - 1];
-        throw new Error(
-          `Nested <!-- ${name}:${marker.kind} --> inside <!-- ${name}:${open.kind} -->. ` +
-            "Journal markers must not nest."
+        throw markerError(
+          source,
+          `Nested ${marker.raw} inside ${open.raw}. Journal markers must not nest.`
         );
       }
       stack.push(marker);
@@ -202,15 +223,13 @@ function applyToggleBlocks(html, name, enabled) {
     }
     const open = stack.pop();
     if (!open || open.kind !== marker.kind) {
-      throw new Error(
-        `Unbalanced <!-- /${name}:${marker.kind} --> with no matching opener.`
-      );
+      throw markerError(source, `Unbalanced ${marker.raw} with no matching opener.`);
     }
     pairs.push({ open, close: marker });
   }
   if (stack.length) {
     const open = stack[stack.length - 1];
-    throw new Error(`Unclosed <!-- ${name}:${open.kind} --> marker.`);
+    throw markerError(source, `Unclosed ${open.raw} marker.`);
   }
 
   const keep = enabled ? "public" : "hidden";
@@ -423,8 +442,8 @@ function stripUnpublishedCategories(html, published = publishedCardCategories())
   return out;
 }
 
-function applyPublicationFlags(html) {
-  html = applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC);
+function applyPublicationFlags(html, source = "") {
+  html = applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, source);
   html = stampCardCategories(html);
   html = stripUnpublishedCategories(html);
   return html;
@@ -442,6 +461,9 @@ function resolveIncludes(html, stack = []) {
       throw new Error(`Missing include: ${clean}`);
     }
     const partial = read(filePath);
+    // Reject a bad marker in this partial before it is inlined, so the
+    // error names this file rather than the page that included it.
+    applyToggleBlocks(partial, "journal", JOURNAL_IS_PUBLIC, clean);
     return resolveIncludes(partial, [...stack, clean]);
   });
 }
@@ -1250,7 +1272,9 @@ function buildPage(page, locale, messages) {
   if (!fs.existsSync(sourcePath)) {
     throw new Error(`Missing page file: ${page.file}`);
   }
+  const pageRel = path.relative(ROOT, sourcePath);
   let html = read(sourcePath);
+  applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, pageRel);
   if (page.articleSlug) {
     html = injectArticleContent(html, page.articleSlug);
   }
@@ -1258,7 +1282,7 @@ function buildPage(page, locale, messages) {
     html = injectTourContent(html, page.routeSlug);
   }
   html = resolveIncludes(html);
-  html = applyPublicationFlags(html);
+  html = applyPublicationFlags(html, pageRel);
   html = injectLegalDocument(html, page, locale);
   html = injectRedirectTarget(html, page, locale);
   html = applyI18n(html, messages);

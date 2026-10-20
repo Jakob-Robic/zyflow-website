@@ -32,6 +32,15 @@ function anchorsWith(html, needle) {
     .filter((tag) => tag.includes(needle));
 }
 
+function markerFailure(html, file) {
+  try {
+    applyToggleBlocks(html, "journal", false, file);
+  } catch (error) {
+    return error;
+  }
+  assert.fail(`expected ${file} to reject a journal marker`);
+}
+
 test("journal markers must be balanced and must not nest", () => {
   const swapped = applyToggleBlocks(
     `<!-- journal:public -->
@@ -41,7 +50,8 @@ test("journal markers must be balanced and must not nest", () => {
 <a href="./tours.html">See routes</a>
 <!-- /journal:hidden -->`,
     "journal",
-    true
+    true,
+    "sections/home/features.html"
   );
   assert.match(swapped, /blog\.html/);
   assert.doesNotMatch(swapped, /tours\.html/);
@@ -50,36 +60,50 @@ test("journal markers must be balanced and must not nest", () => {
   const hidden = applyToggleBlocks(
     `<!-- journal:public --><a href="./blog.html">Journal</a><!-- /journal:public -->`,
     "journal",
-    false
+    false,
+    "components/nav.html"
   );
   assert.equal(hidden.trim(), "");
 
-  assert.throws(
-    () =>
-      applyToggleBlocks(
-        "<!-- journal:public --><main><!-- journal:public --><a></a><!-- /journal:public --></main>",
-        "journal",
-        false
-      ),
-    /Nested/
+  const nested = markerFailure(
+    "<!-- journal:public --><main><!-- journal:public --><a></a><!-- /journal:public --></main>",
+    "pages/home.html"
   );
-  assert.throws(
-    () =>
-      applyToggleBlocks(
-        "<!-- journal:public --><main><!-- journal:hidden -->x<!-- /journal:hidden -->",
-        "journal",
-        false
-      ),
-    /Nested/
+  assert.match(nested.message, /pages\/home\.html/);
+  assert.match(nested.message, /Nested <!-- journal:public -->/);
+
+  const crossed = markerFailure(
+    "<!-- journal:public --><main><!-- journal:hidden -->x<!-- /journal:hidden -->",
+    "pages/home.html"
   );
-  assert.throws(
-    () => applyToggleBlocks("<!-- journal:public --><main>still open", "journal", false),
-    /Unclosed/
+  assert.match(crossed.message, /pages\/home\.html/);
+  assert.match(crossed.message, /Nested <!-- journal:hidden -->/);
+
+  const unclosed = markerFailure(
+    "<!-- journal:public --><main>still open",
+    "pages/home.html"
   );
-  assert.throws(
-    () => applyToggleBlocks("<!-- /journal:public -->", "journal", true),
-    /Unbalanced/
+  assert.match(unclosed.message, /^pages\/home\.html: Unclosed <!-- journal:public -->/);
+
+  const stray = markerFailure("<!-- /journal:public -->", "components/footer.html");
+  assert.match(stray.message, /^components\/footer\.html: Unbalanced <!-- \/journal:public -->/);
+});
+
+test("unknown and malformed journal markers fail and name the file", () => {
+  const unknown = markerFailure("<!-- journal:draft -->", "components/nav.html");
+  assert.match(unknown.message, /^components\/nav\.html: Unknown journal marker <!-- journal:draft -->$/);
+
+  const malformed = markerFailure(
+    "<!-- journal:public extra -->",
+    "sections/home/features.html"
   );
+  assert.match(
+    malformed.message,
+    /^sections\/home\/features\.html: Malformed journal marker <!-- journal:public extra -->$/
+  );
+
+  const emptyKind = markerFailure("<!-- journal: -->", "pages/home.html");
+  assert.match(emptyKind.message, /^pages\/home\.html: Malformed journal marker <!-- journal: -->$/);
 });
 
 test("data-requires-category counts nested tags of the same name", () => {
@@ -133,6 +157,22 @@ test("JOURNAL_PUBLIC=true restores journal links, sitemap, and robots", () => {
     assert.match(home, /href="\/blog"/);
     assert.match(home, /data-nav-link="journal"/);
 
+    const appStore = "https://apps.apple.com/si/app/zyflow/id6763228086";
+    assert.match(home, /property="og:image" content="https:\/\/www\.zyflow\.eu\/assets\/images\/home\/hero\.jpg"/);
+    assert.match(home, /property="og:image:width" content="1024"/);
+    assert.match(home, /property="og:image:height" content="680"/);
+    assert.match(home, /property="og:image:type" content="image\/jpeg"/);
+    assert.match(home, /property="og:image:alt" content="Zyflow, bike-friendly places and cycling routes"/);
+    assert.match(home, new RegExp(appStore.replace(/[.]/g, "\\.")));
+    assert.doesNotMatch(home, /\{\{appStoreUrl\}\}/);
+    assert.doesNotMatch(home, /\{\{ogImage/);
+
+    const tour = readDist(dist, "tours/jezerski-vrh.html");
+    assert.match(tour, /property="og:image" content="https:\/\/www\.zyflow\.eu\/assets\/images\/og\/tours\/jezerski-vrh\.jpg"/);
+    assert.match(tour, /property="og:image:width" content="1200"/);
+    assert.match(tour, /property="og:image:height" content="630"/);
+    assert.match(tour, new RegExp(appStore.replace(/[.]/g, "\\.")));
+
     const featured = anchorsWith(home, "home.featuredTour.cta");
     assert.equal(featured.length, 1);
     assert.match(featured[0], /href="\/tours"/);
@@ -154,7 +194,7 @@ test("JOURNAL_PUBLIC=true restores journal links, sitemap, and robots", () => {
   }
 });
 
-test("a commute route publishes a card, the filter, and the footer tile", () => {
+test("a commute route in ROUTES builds a card, the filter, and the footer tile", () => {
   const dist = buildDist({ ROUTE_CATEGORY_OVERRIDES: "blejcanka=commute" });
   try {
     const tours = readDist(dist, "tours.html");
