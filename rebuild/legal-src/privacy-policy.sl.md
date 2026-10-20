@@ -281,6 +281,8 @@ Zyflow je namenjen osebam, starim **16 let ali več**, in je na voljo samo v EU.
 > Mobilna aplikacija ne uporablja brskalniških piškotkov; o podatkih, shranjenih na napravi, glej točko 3.14.
 >
 > Brez piškotkov in brez izvajanja kakršne koli kode na vaši napravi naš strežnik anonimno šteje oglede strani: za vsako zahtevo strani našemu ponudniku analitike PostHog (oblak v EU, ki deluje kot naš obdelovalec) pošlje le naslov strani, jezik in domeno spletnega mesta, s katerega ste prišli, brez naslova IP, podatkov o napravi ali identifikatorja, za merjenje dosega spletnega mesta (zakoniti interes, točka (f) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).
+>
+> Na partnerskem portalu (app.zyflow.eu) PostHog (oblak v EU) uporabljamo le, če po prijavi privolite, pri čemer ločeno izberete statistiko uporabe in snemanje sej. Posnetki sej prikazujejo vaše klike in oglede strani, pri čemer so vsa besedila in vnosi v obrazce skriti, hranimo pa jih 30 dni. Izbiro lahko kadar koli spremenite v nastavitvah portala.
 
 ## 13. Varnost
 

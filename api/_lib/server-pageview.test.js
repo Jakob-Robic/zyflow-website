@@ -358,6 +358,10 @@ const LEGAL_EN =
   "Without using cookies or running any code on your device, our hosting server counts page views anonymously: for each page request it sends only the page address, language and the referring website's domain to our analytics provider PostHog (EU cloud, acting as our processor), with no IP address, device information or identifier, to measure website reach (legitimate interest, Art. 6(1)(f) GDPR).";
 const LEGAL_SL =
   'Brez piškotkov in brez izvajanja kakršne koli kode na vaši napravi naš strežnik anonimno šteje oglede strani: za vsako zahtevo strani našemu ponudniku analitike PostHog (oblak v EU, ki deluje kot naš obdelovalec) pošlje le naslov strani, jezik in domeno spletnega mesta, s katerega ste prišli, brez naslova IP, podatkov o napravi ali identifikatorja, za merjenje dosega spletnega mesta (zakoniti interes, točka (f) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).';
+const PORTAL_EN =
+  'On our partner portal (app.zyflow.eu) we use PostHog (EU cloud) only if you agree after signing in, with separate choices for usage statistics and for session recordings. Session recordings show your clicks and page views with all text and form inputs hidden, and are kept for 30 days. You can change your choices at any time in the portal settings.';
+const PORTAL_SL =
+  'Na partnerskem portalu (app.zyflow.eu) PostHog (oblak v EU) uporabljamo le, če po prijavi privolite, pri čemer ločeno izberete statistiko uporabe in snemanje sej. Posnetki sej prikazujejo vaše klike in oglede strani, pri čemer so vsa besedila in vnosi v obrazce skriti, hranimo pa jih 30 dni. Izbiro lahko kadar koli spremenite v nastavitvah portala.';
 
 function readLegal(name) {
   return fs.readFileSync(path.join(__dirname, '..', '..', 'rebuild', 'legal-src', name), 'utf8');
@@ -377,10 +381,14 @@ test('Legal sentence is the final paragraph of Privacy Policy section 12 (EN + S
   const sl = markdownSection(readLegal('privacy-policy.sl.md'), '12. Spletno mesto in piškotki');
   assert.equal(en.includes(LEGAL_EN), true);
   assert.equal(sl.includes(LEGAL_SL), true);
-  assert.ok(en.trimEnd().endsWith(LEGAL_EN) || en.trimEnd().endsWith(`> ${LEGAL_EN}`));
-  assert.ok(sl.trimEnd().endsWith(LEGAL_SL) || sl.trimEnd().endsWith(`> ${LEGAL_SL}`));
+  assert.equal(en.includes(PORTAL_EN), true);
+  assert.equal(sl.includes(PORTAL_SL), true);
+  assert.ok(en.trimEnd().endsWith(PORTAL_EN) || en.trimEnd().endsWith(`> ${PORTAL_EN}`));
+  assert.ok(sl.trimEnd().endsWith(PORTAL_SL) || sl.trimEnd().endsWith(`> ${PORTAL_SL}`));
   assert.ok(en.indexOf('The mobile app does not use browser cookies') < en.indexOf(LEGAL_EN));
   assert.ok(sl.indexOf('Mobilna aplikacija ne uporablja brskalniških piškotkov') < sl.indexOf(LEGAL_SL));
+  assert.ok(en.indexOf(LEGAL_EN) < en.indexOf(PORTAL_EN));
+  assert.ok(sl.indexOf(LEGAL_SL) < sl.indexOf(PORTAL_SL));
 });
 
 test('Legal sentence follows the no-analytics-cookies statement in Cookie Policy section 2 (EN + SL)', () => {
