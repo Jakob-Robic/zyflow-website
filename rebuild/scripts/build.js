@@ -958,9 +958,18 @@ function injectLangSwitcher(html, page, locale) {
   );
 }
 
+function plainPlace(place) {
+  return String(place || "")
+    .replace(/[→·]/g, ",")
+    .replace(/\s*,\s*/g, ", ")
+    .replace(/\s{2,}/g, " ")
+    .replace(/,\s*$/g, "")
+    .trim();
+}
+
 function tourCoverAlt(locale, title, place) {
   const name = String(title || "").trim();
-  const where = String(place || "").trim();
+  const where = plainPlace(place);
   if (!name) return "";
   if (locale === "sl") {
     return where ? `${name}, kolesarska pot, ${where}` : `${name}, kolesarska pot`;
@@ -1064,17 +1073,6 @@ function structuredData(page, locale, messages) {
     if (card.region) {
       trip.itinerary.containedInPlace = { "@type": "Place", name: card.region };
     }
-  }
-  const publishedDistance = getByPath(messages, `routes.${page.routeSlug}.price`);
-  if (route.distanceKm) trip.distance = `${route.distanceKm} km`;
-  else if (/^\d/.test(String(publishedDistance || ""))) trip.distance = publishedDistance;
-  const climb = getByPath(messages, `routes.${page.routeSlug}.climb`);
-  if (climb && /\d/.test(String(climb))) {
-    trip.additionalProperty = {
-      "@type": "PropertyValue",
-      name: getByPath(messages, `routes.${page.routeSlug}.climbLabel`) || "Elevation",
-      value: climb,
-    };
   }
   graph.push(trip);
   return { "@context": "https://schema.org", "@graph": graph };
@@ -1221,7 +1219,38 @@ function pageAlternateHrefs(page) {
 const REPO_ROOT = path.join(ROOT, "..");
 const gitDateCache = new Map();
 
-/** Last commit date of the page's source files. Empty when git has no history (shallow clones). */
+/**
+ * True when this checkout cannot see history behind HEAD.
+ * `git log` still succeeds on a shallow clone and returns the boundary
+ * commit's date, which is not the content date. A failed git command is
+ * treated the same way so we do not invent a date.
+ */
+function repositoryIsShallow(cwd = REPO_ROOT) {
+  try {
+    const out = execFileSync("git", ["rev-parse", "--is-shallow-repository"], {
+      cwd,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+      timeout: 8000,
+    }).trim();
+    return out !== "false";
+  } catch {
+    return true;
+  }
+}
+
+/**
+ * Sitemap lastmod. Empty on a shallow clone (omit the element): the
+ * boundary commit date is wrong, and a single build date is not a content
+ * date either. A full clone uses the latest source commit, or the build
+ * date when git has no matching history.
+ */
+function resolveSitemapLastmod({ shallow, gitDate, buildDate }) {
+  if (shallow) return "";
+  return gitDate || buildDate || "";
+}
+
+/** Last commit date of the page's source files. Empty when git has no matching history. */
 function gitContentDate(relPaths) {
   const key = relPaths.join("\0");
   if (gitDateCache.has(key)) return gitDateCache.get(key);
@@ -1246,13 +1275,26 @@ function gitContentDate(relPaths) {
 }
 
 function pageContentPaths(page) {
+  const locales = ["rebuild/locales/en.json", "rebuild/locales/sl.json"];
   if (page.routeSlug) {
-    return [`content/featured-routes/featured/${page.routeSlug}`];
+    return [
+      `content/featured-routes/featured/${page.routeSlug}`,
+      "rebuild/scripts/routes.js",
+      ...locales,
+    ];
   }
-  const rels = [`rebuild/pages/${page.file}`];
+  const rels = [`rebuild/pages/${page.file}`, ...locales];
   if (page.articleSlug) {
     rels.push(`rebuild/sections/article/bodies/${page.articleSlug}.html`);
     return rels;
+  }
+  if (page.legalDoc) {
+    rels.push(
+      `rebuild/legal-src/${page.legalDoc}.en.md`,
+      `rebuild/legal-src/${page.legalDoc}.sl.md`
+    );
+  } else if (page.id === "legal") {
+    rels.push("rebuild/legal-src");
   }
   const section = {
     home: "home",
@@ -1272,10 +1314,16 @@ function pageContentPaths(page) {
 function writeSeoFiles() {
   const indexable = PAGES.filter((p) => p.indexable);
   const today = new Date().toISOString().slice(0, 10);
+  const shallow = repositoryIsShallow();
 
   const urls = [];
   for (const page of indexable) {
-    const lastmod = gitContentDate(pageContentPaths(page)) || today;
+    const lastmod = resolveSitemapLastmod({
+      shallow,
+      gitDate: shallow ? "" : gitContentDate(pageContentPaths(page)),
+      buildDate: today,
+    });
+    const lastmodTag = lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : "";
     for (const locale of pageLocales(page)) {
       const loc = absoluteUrl(page.path, locale);
       const hrefs = pageAlternateHrefs(page);
@@ -1292,8 +1340,7 @@ function writeSeoFiles() {
         .join("\n");
       urls.push(`  <url>
     <loc>${loc}</loc>
-    <lastmod>${lastmod}</lastmod>
-${alternates}
+${lastmodTag}${alternates}
   </url>`);
     }
   }
@@ -1653,4 +1700,7 @@ module.exports = {
   collectCardCategories,
   publishedCardCategories,
   categoriesBySlug,
+  repositoryIsShallow,
+  resolveSitemapLastmod,
+  pageContentPaths,
 };

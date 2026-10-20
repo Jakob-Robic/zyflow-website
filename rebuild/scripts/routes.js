@@ -3,8 +3,9 @@
  * Deep link contract: https://navigate.zyflow.eu/login?next=/route/{slug}
  *
  * distanceKm is the figure already published on the page, or, when that
- * figure was missing, the GPX length (sum of haversine segments, rounded
- * to 0.1 km). Climb is never filled from GPX here.
+ * figure was missing, the GPX length of the main loop (sum of haversine
+ * segments, rounded to 0.1 km). K43 is that main loop only (26.9 km),
+ * not the optional K43a descent. Climb is never filled from GPX here.
  * related is the next routes in the same municipality so each tour is
  * linked from another tour page.
  */
@@ -200,7 +201,7 @@ const ROUTES = [
       "k52-pot-treh-zvonov",
       "k53-kriva-jelka"
     ],
-    "distanceKm": "35.1",
+    "distanceKm": "26.9",
     "elevationM": "2067"
   },
   {

@@ -15,6 +15,11 @@ const {
   TOUR_OG_WIDTH,
   TOUR_OG_HEIGHT,
 } = require("./page-meta");
+const {
+  repositoryIsShallow,
+  resolveSitemapLastmod,
+  pageContentPaths,
+} = require("./build");
 
 const LOCALES = path.join(__dirname, "..", "locales");
 const OG_DIR = path.join(__dirname, "..", "assets", "images", "og", "tours");
@@ -315,6 +320,73 @@ test("every tour with its own photo has a unique 1200×630 JPEG", () => {
   assert.equal(hashes.size, own.length);
 });
 
+test("sitemap sources include locales, routes.js, and legal-src", () => {
+  const tour = pageContentPaths(PAGES.find((page) => page.routeSlug === "k43-dobrca"));
+  assert.ok(tour.includes("content/featured-routes/featured/k43-dobrca"));
+  assert.ok(tour.includes("rebuild/scripts/routes.js"));
+  assert.ok(tour.includes("rebuild/locales/en.json"));
+  assert.ok(tour.includes("rebuild/locales/sl.json"));
+
+  const legal = pageContentPaths(PAGES.find((page) => page.legalDoc === "privacy-policy"));
+  assert.ok(legal.includes("rebuild/legal-src/privacy-policy.en.md"));
+  assert.ok(legal.includes("rebuild/legal-src/privacy-policy.sl.md"));
+  assert.ok(legal.includes("rebuild/locales/en.json"));
+
+  const hub = pageContentPaths(PAGES.find((page) => page.id === "legal"));
+  assert.ok(hub.includes("rebuild/legal-src"));
+});
+
+test("a shallow clone does not use the boundary commit as lastmod", () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), "zyflow-shallow-"));
+  const repo = path.join(root, "src");
+  const shallow = path.join(root, "shallow");
+  fs.mkdirSync(repo);
+  const git = (cwd, args, env = {}) =>
+    execFileSync("git", args, {
+      cwd,
+      encoding: "utf8",
+      env: { ...process.env, ...env },
+    });
+  git(repo, ["init", "-b", "main"]);
+  git(repo, ["config", "user.email", "qa@example.com"]);
+  git(repo, ["config", "user.name", "QA"]);
+  fs.writeFileSync(path.join(repo, "a.txt"), "one\n");
+  git(repo, ["add", "a.txt"]);
+  git(repo, ["commit", "-m", "old"], {
+    GIT_AUTHOR_DATE: "2020-01-15T12:00:00",
+    GIT_COMMITTER_DATE: "2020-01-15T12:00:00",
+  });
+  fs.writeFileSync(path.join(repo, "a.txt"), "two\n");
+  git(repo, ["commit", "-am", "new"], {
+    GIT_AUTHOR_DATE: "2024-06-01T12:00:00",
+    GIT_COMMITTER_DATE: "2024-06-01T12:00:00",
+  });
+  git(root, ["clone", "--depth", "1", "--no-local", repo, shallow]);
+  try {
+    assert.equal(repositoryIsShallow(repo), false);
+    assert.equal(repositoryIsShallow(shallow), true);
+    const boundary = git(shallow, ["log", "-1", "--format=%cs"]).trim();
+    assert.equal(boundary, "2024-06-01");
+    const resolved = resolveSitemapLastmod({
+      shallow: true,
+      gitDate: boundary,
+      buildDate: "2026-10-20",
+    });
+    assert.notEqual(resolved, boundary);
+    assert.equal(resolved, "");
+    assert.equal(
+      resolveSitemapLastmod({ shallow: false, gitDate: boundary, buildDate: "2026-10-20" }),
+      boundary
+    );
+    assert.equal(
+      resolveSitemapLastmod({ shallow: false, gitDate: "", buildDate: "2026-10-20" }),
+      "2026-10-20"
+    );
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test("built tour pages ship their own description, alt text, and 1200×630 image", () => {
   const dist = fs.mkdtempSync(path.join(os.tmpdir(), "zyflow-meta-"));
   execFileSync(process.execPath, [path.join(__dirname, "build.js")], {
@@ -434,25 +506,74 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   const trip = tripLd["@graph"][2];
   assert.equal(trip.name, "Jezerski vrh");
   assert.match(trip.description, /Ankova planina/);
-  assert.equal(trip.distance, "18.2 km");
+  assert.equal(trip.distance, undefined);
+  assert.equal(trip.additionalProperty, undefined);
   assert.equal(trip.itinerary.name, "Jezersko");
+  assert.equal(trip.touristType, "Alpine");
+  const imageRel = trip.image.slice(SITE_ORIGIN.length);
+  assert.match(imageRel, /^\/assets\/images\/opt\/[a-f0-9]{12}\/fallback\.(?:jpe?g|webp|png)$/);
+  assert.doesNotMatch(imageRel, /\/tours\/[^/]+\/cover\./);
+  const imageFile = path.join(dist, imageRel.slice(1));
+  assert.equal(fs.existsSync(imageFile), true);
+  assert.ok(fs.statSync(imageFile).size < 500 * 1024);
+  assert.match(jezerski, new RegExp(`src="${imageRel.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`));
+  assert.equal(
+    fs.existsSync(path.join(dist, "assets/images/tours/jezerski-vrh/cover.jpg")),
+    false
+  );
   const slTrip = jsonLd(slJezerski)["@graph"][2];
   assert.equal(slTrip.touristType, "Alpska");
+  assert.equal(slTrip.distance, undefined);
+  assert.equal(slTrip.additionalProperty, undefined);
+  assert.equal(slTrip.image, trip.image);
   assert.match(jezerski, /alt="Jezerski vrh, cycling route, Jezersko"/);
   assert.match(slJezerski, /alt="Jezerski vrh, kolesarska pot, Jezersko"/);
+  const k35 = read("tours/k35-prelaz-ljubelj.html");
+  const k51 = read("tours/k51-udin-borst.html");
+  assert.match(k35, /alt="Prelaz Ljubelj, cycling route, Tržič, Ljubelj"/);
+  assert.match(k51, /alt="Udin boršt, cycling route, Tržič, Udin boršt"/);
+  for (const alt of [...k35.matchAll(/\balt="([^"]*)"/g), ...k51.matchAll(/\balt="([^"]*)"/g)]) {
+    assert.doesNotMatch(alt[1], /[→·]/);
+  }
+  const k43 = read("tours/k43-dobrca.html");
+  const slK43 = read("sl/tours/k43-dobrca.html");
+  assert.match(k43, /26\.9/);
+  assert.doesNotMatch(k43, /35\.1/);
+  assert.match(slK43, /26,9/);
+  assert.doesNotMatch(slK43, /35,1/);
+  const slK43Trip = jsonLd(slK43)["@graph"][2];
+  assert.equal(slK43Trip.distance, undefined);
   assert.match(jezerski, /href="\/tours\/ravenska-kocna"/);
   assert.match(jezerski, /href="\/tours\/spodnji-virnik"/);
 
   const sitemap = read("sitemap.xml");
-  const jezerskiMod = sitemap.match(
-    /<loc>https:\/\/www\.zyflow\.eu\/tours\/jezerski-vrh<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/
-  );
-  assert.ok(jezerskiMod, "tour lastmod missing");
-  const expectedMod = execFileSync(
-    "git",
-    ["log", "-1", "--format=%cs", "--", "content/featured-routes/featured/jezerski-vrh"],
-    { encoding: "utf8" }
-  ).trim();
-  assert.equal(jezerskiMod[1], expectedMod);
   assert.doesNotMatch(sitemap, /<lastmod><\/lastmod>/);
+  if (repositoryIsShallow()) {
+    const boundary = execFileSync("git", ["log", "-1", "--format=%cs"], { encoding: "utf8" }).trim();
+    assert.doesNotMatch(sitemap, /<lastmod>/);
+    assert.doesNotMatch(sitemap, new RegExp(`<lastmod>${boundary}</lastmod>`));
+  } else {
+    const jezerskiPage = PAGES.find((page) => page.routeSlug === "jezerski-vrh");
+    const expectedMod = execFileSync(
+      "git",
+      ["log", "-1", "--format=%cs", "--", ...pageContentPaths(jezerskiPage)],
+      { encoding: "utf8" }
+    ).trim();
+    const jezerskiMod = sitemap.match(
+      /<loc>https:\/\/www\.zyflow\.eu\/tours\/jezerski-vrh<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/
+    );
+    assert.ok(jezerskiMod, "tour lastmod missing");
+    assert.equal(jezerskiMod[1], expectedMod);
+    const legalPage = PAGES.find((page) => page.legalDoc === "privacy-policy");
+    const legalExpected = execFileSync(
+      "git",
+      ["log", "-1", "--format=%cs", "--", ...pageContentPaths(legalPage)],
+      { encoding: "utf8" }
+    ).trim();
+    const legalMod = sitemap.match(
+      /<loc>https:\/\/www\.zyflow\.eu\/legal-pages\/privacy-policy<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/
+    );
+    assert.ok(legalMod, "legal lastmod missing");
+    assert.equal(legalMod[1], legalExpected);
+  }
 });

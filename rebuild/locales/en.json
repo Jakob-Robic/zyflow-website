@@ -619,11 +619,11 @@
  "place": "Tržič → Dobrča",
  "region": "Gorenjska, Slovenia",
  "title": "Dobrča",
- "meta0": "35.1 km",
+ "meta0": "26.9 km",
  "meta1": "Alpine",
  "meta2": "Alpine",
  "body": "A full alpine day toward Dobrča, long climbs, ridge air and the feeling of riding the Karawanks rather than around them.",
- "price": "35.1 km",
+ "price": "26.9 km",
  "unit": ""
  },
  {
@@ -1687,7 +1687,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": "35.1 <span>km</span>",
+ "distanceHtml": "26.9 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Hard",
  "intro": "K43 sits with the harder Tržič alpine set: sustained climbing, thinner traffic higher up, and panoramas that justify an early start.",
@@ -1703,7 +1703,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "35.1 km",
+ "price": "26.9 km",
  "unit": " · 2067 m",
  "sections": [
  {

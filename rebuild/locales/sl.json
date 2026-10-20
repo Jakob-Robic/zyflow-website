@@ -619,11 +619,11 @@
  "place": "Tržič → Dobrča",
  "region": "Gorenjska, Slovenija",
  "title": "Dobrča",
- "meta0": "35,1 km",
+ "meta0": "26,9 km",
  "meta1": "Alpska",
  "meta2": "Alpska",
  "body": "Alpska tura proti Dobrči, dolgi vzponi, grebenski zrak in občutek, da kolesariš Karavanke, ne mimo njih.",
- "price": "35,1 km",
+ "price": "26,9 km",
  "unit": ""
  },
  {
@@ -1687,7 +1687,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "35,1 <span>km</span>",
+ "distanceHtml": "26,9 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Zahtevno",
  "intro": "K43 sodi med težje tržiške alpske ture: dolgotrajen vzpon, višje manj prometa in panorame, zaradi katerih vstanete zgodaj.",
@@ -1703,7 +1703,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "35,1 km",
+ "price": "26,9 km",
  "unit": " · 2067 m",
  "sections": [
  {
