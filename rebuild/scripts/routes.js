@@ -1,6 +1,12 @@
 /**
  * Featured Gorenjska routes — generated from content/featured-routes.
  * Deep link contract: https://navigate.zyflow.eu/login?next=/route/{slug}
+ *
+ * distanceKm is the figure already published on the page, or, when that
+ * figure was missing, the GPX length (sum of haversine segments, rounded
+ * to 0.1 km). Climb is never filled from GPX here.
+ * related is the next routes in the same municipality so each tour is
+ * linked from another tour page.
  */
 /** @typedef {{ id: string, slug: string, municipality: string, category: string, difficulty: string, region: string, cover: string, gallery: string[], gpx: string, deepLink: string, featuredHome: boolean, related: string[], distanceKm: string, elevationM: string }} RouteDef */
 
@@ -24,8 +30,8 @@ const ROUTES = [
     "featuredHome": false,
     "related": [
       "jezerjanka",
-      "k42-roznovenska",
-      "k52-pot-treh-zvonov"
+      "kamnicanka",
+      "ljubljancanka"
     ],
     "distanceKm": "79",
     "elevationM": "944"
@@ -47,9 +53,9 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/jezerjanka",
     "featuredHome": false,
     "related": [
-      "blejcanka",
-      "k42-roznovenska",
-      "k52-pot-treh-zvonov"
+      "kamnicanka",
+      "ljubljancanka",
+      "locanka"
     ],
     "distanceKm": "76",
     "elevationM": "603"
@@ -70,9 +76,9 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/jezerski-vrh",
     "featuredHome": false,
     "related": [
-      "k11-planine-pod-kosuto",
-      "k16-trzic-jezersko",
-      "k21-dom-pod-storzicem"
+      "mali-vrh",
+      "ravenska-kocna",
+      "spodnji-virnik"
     ],
     "distanceKm": "18.2",
     "elevationM": "457"
@@ -90,11 +96,11 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k11-planine-pod-kosuto",
     "featuredHome": false,
     "related": [
-      "jezerski-vrh",
       "k16-trzic-jezersko",
-      "k21-dom-pod-storzicem"
+      "k21-dom-pod-storzicem",
+      "k35-prelaz-ljubelj"
     ],
-    "distanceKm": "",
+    "distanceKm": "39.7",
     "elevationM": "1740"
   },
   {
@@ -110,11 +116,11 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k16-trzic-jezersko",
     "featuredHome": false,
     "related": [
-      "jezerski-vrh",
-      "k11-planine-pod-kosuto",
-      "k21-dom-pod-storzicem"
+      "k21-dom-pod-storzicem",
+      "k35-prelaz-ljubelj",
+      "k42-roznovenska"
     ],
-    "distanceKm": "",
+    "distanceKm": "28.1",
     "elevationM": "1299"
   },
   {
@@ -130,11 +136,11 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k21-dom-pod-storzicem",
     "featuredHome": false,
     "related": [
-      "jezerski-vrh",
-      "k11-planine-pod-kosuto",
-      "k16-trzic-jezersko"
+      "k35-prelaz-ljubelj",
+      "k42-roznovenska",
+      "k43-dobrca"
     ],
-    "distanceKm": "",
+    "distanceKm": "18.1",
     "elevationM": "280"
   },
   {
@@ -150,9 +156,9 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k35-prelaz-ljubelj",
     "featuredHome": true,
     "related": [
-      "jezerski-vrh",
-      "k11-planine-pod-kosuto",
-      "k16-trzic-jezersko"
+      "k42-roznovenska",
+      "k43-dobrca",
+      "k51-udin-borst"
     ],
     "distanceKm": "",
     "elevationM": "803"
@@ -170,11 +176,11 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k42-roznovenska",
     "featuredHome": false,
     "related": [
-      "blejcanka",
-      "jezerjanka",
-      "k11-planine-pod-kosuto"
+      "k43-dobrca",
+      "k51-udin-borst",
+      "k52-pot-treh-zvonov"
     ],
-    "distanceKm": "",
+    "distanceKm": "20.1",
     "elevationM": "369"
   },
   {
@@ -190,11 +196,11 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k43-dobrca",
     "featuredHome": false,
     "related": [
-      "jezerski-vrh",
-      "k11-planine-pod-kosuto",
-      "k16-trzic-jezersko"
+      "k51-udin-borst",
+      "k52-pot-treh-zvonov",
+      "k53-kriva-jelka"
     ],
-    "distanceKm": "",
+    "distanceKm": "35.1",
     "elevationM": "2067"
   },
   {
@@ -210,11 +216,11 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k51-udin-borst",
     "featuredHome": false,
     "related": [
-      "k11-planine-pod-kosuto",
-      "k16-trzic-jezersko",
-      "k21-dom-pod-storzicem"
+      "k52-pot-treh-zvonov",
+      "k53-kriva-jelka",
+      "k55-gozd-udin-borst"
     ],
-    "distanceKm": "",
+    "distanceKm": "25.3",
     "elevationM": "286"
   },
   {
@@ -230,11 +236,11 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k52-pot-treh-zvonov",
     "featuredHome": false,
     "related": [
-      "blejcanka",
-      "jezerjanka",
+      "k53-kriva-jelka",
+      "k55-gozd-udin-borst",
       "k11-planine-pod-kosuto"
     ],
-    "distanceKm": "",
+    "distanceKm": "10",
     "elevationM": "144"
   },
   {
@@ -250,11 +256,11 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/k53-kriva-jelka",
     "featuredHome": false,
     "related": [
+      "k55-gozd-udin-borst",
       "k11-planine-pod-kosuto",
-      "k16-trzic-jezersko",
-      "k21-dom-pod-storzicem"
+      "k16-trzic-jezersko"
     ],
-    "distanceKm": "",
+    "distanceKm": "24",
     "elevationM": "386"
   },
   {
@@ -274,7 +280,7 @@ const ROUTES = [
       "k16-trzic-jezersko",
       "k21-dom-pod-storzicem"
     ],
-    "distanceKm": "",
+    "distanceKm": "26.9",
     "elevationM": "763"
   },
   {
@@ -294,9 +300,9 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/kamnicanka",
     "featuredHome": true,
     "related": [
-      "blejcanka",
-      "jezerjanka",
-      "k42-roznovenska"
+      "ljubljancanka",
+      "locanka",
+      "trzicanka"
     ],
     "distanceKm": "70",
     "elevationM": "254"
@@ -317,9 +323,9 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/ljubljancanka",
     "featuredHome": false,
     "related": [
-      "blejcanka",
-      "jezerjanka",
-      "k42-roznovenska"
+      "locanka",
+      "trzicanka",
+      "blejcanka"
     ],
     "distanceKm": "70",
     "elevationM": "460"
@@ -341,9 +347,9 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/locanka",
     "featuredHome": false,
     "related": [
+      "trzicanka",
       "blejcanka",
-      "jezerjanka",
-      "k42-roznovenska"
+      "jezerjanka"
     ],
     "distanceKm": "64",
     "elevationM": "930"
@@ -364,8 +370,8 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/mali-vrh",
     "featuredHome": true,
     "related": [
-      "blejcanka",
-      "jezerjanka",
+      "ravenska-kocna",
+      "spodnji-virnik",
       "jezerski-vrh"
     ],
     "distanceKm": "17.3",
@@ -387,9 +393,9 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/ravenska-kocna",
     "featuredHome": false,
     "related": [
+      "spodnji-virnik",
       "jezerski-vrh",
-      "k11-planine-pod-kosuto",
-      "k16-trzic-jezersko"
+      "mali-vrh"
     ],
     "distanceKm": "16.6",
     "elevationM": "408"
@@ -410,9 +416,9 @@ const ROUTES = [
     "deepLink": "https://navigate.zyflow.eu/login?next=/route/spodnji-virnik",
     "featuredHome": false,
     "related": [
-      "blejcanka",
-      "jezerjanka",
-      "jezerski-vrh"
+      "jezerski-vrh",
+      "mali-vrh",
+      "ravenska-kocna"
     ],
     "distanceKm": "9.4",
     "elevationM": "304"
@@ -436,7 +442,7 @@ const ROUTES = [
     "related": [
       "blejcanka",
       "jezerjanka",
-      "k42-roznovenska"
+      "kamnicanka"
     ],
     "distanceKm": "68",
     "elevationM": ""

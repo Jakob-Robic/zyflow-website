@@ -351,7 +351,7 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   assert.match(title(jezerski), /Jezerski vrh/);
 
   const virnik = read("tours/spodnji-virnik.html");
-  assert.equal(title(virnik), "Zyflow: Spodnji Virnik – tufa quarry");
+  assert.equal(title(virnik), "Spodnji Virnik – tufa quarry | Zyflow");
   assert.match(desc(virnik), /tufa quarry/);
   assert.doesNotMatch(desc(virnik), /Kehnjak/);
   assert.equal(prop(virnik, "og:image:width"), "1200");
@@ -390,7 +390,7 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   assert.equal(image(slJezerski), image(jezerski));
   assert.equal(
     prop(slJezerski, "og:image:alt"),
-    "Naslovna fotografija: Jezerski vrh in Ankova planina"
+    "Naslovna fotografija: Jezerski vrh – Ankova planina"
   );
   assert.equal(named(slJezerski, "twitter:image:alt"), prop(slJezerski, "og:image:alt"));
 
@@ -405,11 +405,54 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
     /^Z Zgornjega Jezerskega do razgledišča pod Malim vrhom: 17,3 km in 596 m vzpona\./
   );
   const slVirnik = read("sl/tours/spodnji-virnik.html");
-  assert.equal(title(slVirnik), "Zyflow: Spodnji Virnik in kamnolom lehnjaka");
+  assert.equal(title(slVirnik), "Spodnji Virnik – kamnolom lehnjaka | Zyflow");
   assert.match(desc(slVirnik), /ekološke kmetije Spodnji Virnik: 9,4 km in 304 m vzpona/);
   assert.doesNotMatch(desc(slVirnik), /Kehnjak/);
 
   const slBlog = read("sl/blog/planning-your-first-battery-aware-day-ride.html");
   assert.equal(title(slBlog), "Zyflow: Načrtovanje prve dnevne ture glede na baterijo");
   assert.match(desc(slBlog), /boš zares izpeljal/);
+
+  function jsonLd(html) {
+    const blocks = [...html.matchAll(/<script type="application\/ld\+json">([^<]*)<\/script>/g)];
+    assert.equal(blocks.length, 1);
+    return JSON.parse(blocks[0][1]);
+  }
+
+  const homeLd = jsonLd(home);
+  assert.equal(homeLd["@graph"].length, 1);
+  assert.equal(homeLd["@graph"][0]["@type"], "Organization");
+  assert.equal(homeLd["@graph"][0].legalName, "HERKO d.o.o.");
+
+  const tripLd = jsonLd(jezerski);
+  const types = tripLd["@graph"].map((node) => node["@type"]);
+  assert.deepEqual(types, ["Organization", "BreadcrumbList", "TouristTrip"]);
+  const crumbs = tripLd["@graph"][1].itemListElement;
+  assert.equal(crumbs.length, 3);
+  assert.equal(crumbs[2].name, "Jezerski vrh");
+  assert.equal(crumbs[2].item, `${SITE_ORIGIN}/tours/jezerski-vrh`);
+  const trip = tripLd["@graph"][2];
+  assert.equal(trip.name, "Jezerski vrh");
+  assert.match(trip.description, /Ankova planina/);
+  assert.equal(trip.distance, "18.2 km");
+  assert.equal(trip.itinerary.name, "Jezersko");
+  const slTrip = jsonLd(slJezerski)["@graph"][2];
+  assert.equal(slTrip.touristType, "Alpska");
+  assert.match(jezerski, /alt="Jezerski vrh, cycling route, Jezersko"/);
+  assert.match(slJezerski, /alt="Jezerski vrh, kolesarska pot, Jezersko"/);
+  assert.match(jezerski, /href="\/tours\/ravenska-kocna"/);
+  assert.match(jezerski, /href="\/tours\/spodnji-virnik"/);
+
+  const sitemap = read("sitemap.xml");
+  const jezerskiMod = sitemap.match(
+    /<loc>https:\/\/www\.zyflow\.eu\/tours\/jezerski-vrh<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/
+  );
+  assert.ok(jezerskiMod, "tour lastmod missing");
+  const expectedMod = execFileSync(
+    "git",
+    ["log", "-1", "--format=%cs", "--", "content/featured-routes/featured/jezerski-vrh"],
+    { encoding: "utf8" }
+  ).trim();
+  assert.equal(jezerskiMod[1], expectedMod);
+  assert.doesNotMatch(sitemap, /<lastmod><\/lastmod>/);
 });

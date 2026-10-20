@@ -13,6 +13,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 const {
   SITE_ORIGIN,
   LOCALES,
@@ -957,9 +958,135 @@ function injectLangSwitcher(html, page, locale) {
   );
 }
 
+function tourCoverAlt(locale, title, place) {
+  const name = String(title || "").trim();
+  const where = String(place || "").trim();
+  if (!name) return "";
+  if (locale === "sl") {
+    return where ? `${name}, kolesarska pot, ${where}` : `${name}, kolesarska pot`;
+  }
+  return where ? `${name}, cycling route, ${where}` : `${name}, cycling route`;
+}
+
+/** Descriptive alt on tour cover photos (hero fallback and cards), from the card name and place. */
+function stampTourCoverAlts(html, locale, messages) {
+  const cards = messages?.tours?.cards || [];
+  const altBySlug = new Map();
+  ROUTES.forEach((route, index) => {
+    const card = cards[index];
+    if (!card) return;
+    const alt = tourCoverAlt(locale, card.title, card.place);
+    if (alt) altBySlug.set(route.slug, alt);
+  });
+  return html.replace(/<img\b[^>]*>/gi, (tag) => {
+    const src = /\bsrc="([^"]+)"/.exec(tag);
+    if (!src) return tag;
+    const slug = src[1].match(/\/tours\/([a-z0-9-]+)\/cover\./);
+    if (!slug) return tag;
+    const alt = altBySlug.get(slug[1]);
+    if (!alt) return tag;
+    const current = /\balt="([^"]*)"/.exec(tag);
+    if (current && current[1]) return tag;
+    const escaped = escapeAttr(alt);
+    if (current) return tag.replace(/\balt="[^"]*"/, `alt="${escaped}"`);
+    return tag.replace(/<img\b/i, `<img alt="${escaped}"`);
+  });
+}
+
+function jsonForScript(value) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
+
+function organizationLd() {
+  return {
+    "@type": "Organization",
+    "@id": `${SITE_ORIGIN}/#organization`,
+    name: "Zyflow",
+    legalName: "HERKO d.o.o.",
+    url: SITE_ORIGIN,
+    email: "support@zyflow.eu",
+    logo: `${SITE_ORIGIN}/assets/design-system/logos/png/zyflow-mark-512-transparent.png`,
+    sameAs: [
+      "https://www.linkedin.com/company/zy-flow/",
+      "https://www.instagram.com/zyflow_app/",
+    ],
+  };
+}
+
+function structuredData(page, locale, messages) {
+  const graph = [organizationLd()];
+  if (!page.routeSlug) {
+    return { "@context": "https://schema.org", "@graph": graph };
+  }
+  const route = routeBySlug(page.routeSlug);
+  const index = ROUTES.findIndex((item) => item.slug === page.routeSlug);
+  const card = messages?.tours?.cards?.[index] || {};
+  const description = getByPath(messages, `meta.pages.${page.id}.description`) || "";
+  const canonical = absoluteUrl(page.path, locale);
+  const name = card.title || page.routeSlug;
+  const homeName = getByPath(messages, "chrome.nav.links.home") || "Home";
+  const toursName = getByPath(messages, "chrome.nav.links.tours") || "Routes";
+  graph.push({
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: homeName,
+        item: absoluteUrl("/", locale),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: toursName,
+        item: absoluteUrl("/tours", locale),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name,
+        item: canonical,
+      },
+    ],
+  });
+  const trip = {
+    "@type": "TouristTrip",
+    name,
+    description,
+    url: canonical,
+    image: absoluteOgImage(SITE_ORIGIN, route.cover),
+    provider: { "@id": `${SITE_ORIGIN}/#organization` },
+  };
+  const touristType = getByPath(messages, `routes.${page.routeSlug}.crumbType`);
+  if (touristType) trip.touristType = touristType;
+  if (card.place) {
+    trip.itinerary = { "@type": "Place", name: card.place };
+    if (card.region) {
+      trip.itinerary.containedInPlace = { "@type": "Place", name: card.region };
+    }
+  }
+  const publishedDistance = getByPath(messages, `routes.${page.routeSlug}.price`);
+  if (route.distanceKm) trip.distance = `${route.distanceKm} km`;
+  else if (/^\d/.test(String(publishedDistance || ""))) trip.distance = publishedDistance;
+  const climb = getByPath(messages, `routes.${page.routeSlug}.climb`);
+  if (climb && /\d/.test(String(climb))) {
+    trip.additionalProperty = {
+      "@type": "PropertyValue",
+      name: getByPath(messages, `routes.${page.routeSlug}.climbLabel`) || "Elevation",
+      value: climb,
+    };
+  }
+  graph.push(trip);
+  return { "@context": "https://schema.org", "@graph": graph };
+}
+
 function buildHead(page, locale, messages) {
   const meta = getByPath(messages, `meta.pages.${page.id}`) || {};
+  const routeTitle = page.routeSlug
+    ? getByPath(messages, `routes.${page.routeSlug}.metaTitle`)
+    : "";
   const title =
+    routeTitle ||
     meta.title ||
     getByPath(messages, "meta.brand") ||
     "Zyflow";
@@ -1061,7 +1188,8 @@ function buildHead(page, locale, messages) {
 }
 
 function injectDocumentHead(html, page, locale, messages) {
-  const headInner = buildHead(page, locale, messages);
+  const headInner = `${buildHead(page, locale, messages)}
+<script type="application/ld+json">${jsonForScript(structuredData(page, locale, messages))}</script>`;
   html = html.replace(/<html([^>]*)lang="[^"]*"([^>]*)>/i, `<html$1lang="${locale}"$2>`);
   html = html.replace(/<html(?![^>]*lang=)/i, `<html lang="${locale}"`);
 
@@ -1090,12 +1218,64 @@ function pageAlternateHrefs(page) {
   );
 }
 
+const REPO_ROOT = path.join(ROOT, "..");
+const gitDateCache = new Map();
+
+/** Last commit date of the page's source files. Empty when git has no history (shallow clones). */
+function gitContentDate(relPaths) {
+  const key = relPaths.join("\0");
+  if (gitDateCache.has(key)) return gitDateCache.get(key);
+  let date = "";
+  try {
+    const out = execFileSync(
+      "git",
+      ["log", "-1", "--format=%cs", "--", ...relPaths],
+      {
+        cwd: REPO_ROOT,
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+        timeout: 8000,
+      }
+    ).trim();
+    if (/^\d{4}-\d{2}-\d{2}$/.test(out)) date = out;
+  } catch {
+    date = "";
+  }
+  gitDateCache.set(key, date);
+  return date;
+}
+
+function pageContentPaths(page) {
+  if (page.routeSlug) {
+    return [`content/featured-routes/featured/${page.routeSlug}`];
+  }
+  const rels = [`rebuild/pages/${page.file}`];
+  if (page.articleSlug) {
+    rels.push(`rebuild/sections/article/bodies/${page.articleSlug}.html`);
+    return rels;
+  }
+  const section = {
+    home: "home",
+    about: "about",
+    tours: "tours",
+    tour: "tour",
+    business: "business",
+    contact: "contact",
+    press: "press",
+    blog: "journal",
+  }[page.id];
+  if (section) rels.push(`rebuild/sections/${section}`);
+  else if (String(page.id).startsWith("legal")) rels.push("rebuild/sections/legal");
+  return rels;
+}
+
 function writeSeoFiles() {
   const indexable = PAGES.filter((p) => p.indexable);
   const today = new Date().toISOString().slice(0, 10);
 
   const urls = [];
   for (const page of indexable) {
+    const lastmod = gitContentDate(pageContentPaths(page)) || today;
     for (const locale of pageLocales(page)) {
       const loc = absoluteUrl(page.path, locale);
       const hrefs = pageAlternateHrefs(page);
@@ -1112,7 +1292,7 @@ function writeSeoFiles() {
         .join("\n");
       urls.push(`  <url>
     <loc>${loc}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmod}</lastmod>
 ${alternates}
   </url>`);
     }
@@ -1286,6 +1466,7 @@ function buildPage(page, locale, messages) {
   html = injectLegalDocument(html, page, locale);
   html = injectRedirectTarget(html, page, locale);
   html = applyI18n(html, messages);
+  html = stampTourCoverAlts(html, locale, messages);
   html = rewriteAssetPaths(html);
   html = rewriteInternalLinks(html, locale);
   html = injectLangSwitcher(html, page, locale);
