@@ -25,7 +25,20 @@ const {
   hrefForPage,
   localizedPath,
 } = require("./pages");
-const { articleBySlug, blogCardI18n } = require("./articles");
+const {
+  renderAuthorPage,
+  renderBlogHub,
+  renderBlogPost,
+  renderFeed,
+  renderHomeJournal,
+  renderStyleguide,
+  rssHref,
+  imageSources,
+  ogSources,
+  sitemapDate,
+  structuredNodes,
+  getCatalog,
+} = require("./blog");
 const { renderLegalMarkdown } = require("./legal-markdown");
 const { routeBySlug, ROUTES } = require("./routes");
 const { versionAssets } = require("./version-assets");
@@ -676,70 +689,11 @@ function rewriteInternalLinks(html, locale) {
   return html;
 }
 
-function renderArticleMore(slug) {
-  const article = articleBySlug(slug);
-  const cards = article.related.map((relSlug) => {
-    const rel = articleBySlug(relSlug);
-    const { prefix, image } = blogCardI18n(rel);
-    const href = `./blog/${rel.slug}.html`;
-    return `      <article class="blog-story">
-        <a class="blog-story__media" href="${href}"><img src="${image}" alt="" /></a>
-        <div class="blog-story__body">
-          <p class="blog-story__tag"><span class="motif" aria-hidden="true"></span><span data-i18n="${prefix}.tag"></span></p>
-          <h3 class="blog-story__title" data-i18n="${prefix}.title"></h3>
-          <p class="blog-story__excerpt" data-i18n="${prefix}.excerpt"></p>
-          <a class="link link--arrow link--small" href="${href}" data-i18n="${prefix}.link">Read Story</a>
-        </div>
-      </article>`;
-  });
-
-  const divider = `\n      <div class="article-more__divider" aria-hidden="true"></div>\n      `;
-
-  return `<section class="article-more section" data-section="article.more">
-  <div class="article-more__glow" aria-hidden="true">
-    <img src="./assets/images/home/map-contours-featured.svg" alt="" />
-  </div>
-  <div class="container article-more__inner">
-    <div class="article-more__cta">
-      <h2 class="article-more__title" data-i18n-html="articles.more.titleHtml">more from<br />the journal</h2>
-      <a class="btn btn--primary" href="./blog.html" data-i18n="articles.more.cta">Visit journal</a>
-    </div>
-    <div class="article-more__list">
-${cards.join(divider)}
-    </div>
-  </div>
-</section>`;
-}
-
-function injectArticleContent(html, articleSlug) {
-  const bodyPath = path.join(ROOT, "sections/article/bodies", `${articleSlug}.html`);
-  if (!fs.existsSync(bodyPath)) {
-    throw new Error(`Missing article body: sections/article/bodies/${articleSlug}.html`);
-  }
-  const body = resolveIncludes(read(bodyPath));
-  const more = renderArticleMore(articleSlug);
-  if (!html.includes("<!-- ARTICLE_BODY -->") || !html.includes("<!-- ARTICLE_MORE -->")) {
-    throw new Error("blog-article.html must contain ARTICLE_BODY and ARTICLE_MORE placeholders");
-  }
-  return html
-    .replace("<!-- ARTICLE_BODY -->", body)
-    .replace("<!-- ARTICLE_MORE -->", more);
-}
-
-function galleryFigure(src) {
-  if (!src) return "";
-  return `<figure class="tour-article__figure">
-        <img src="${src}" alt="" />
-      </figure>`;
-}
-
-function renderTourMore(slug) {
-  const route = routeBySlug(slug);
-  const cards = route.related.map((relSlug) => {
-    const rel = routeBySlug(relSlug);
-    const idx = ROUTES.findIndex((r) => r.slug === relSlug);
-    const href = `./tours/${rel.slug}.html`;
-    return `      <article class="tour-card">
+function renderTourCard(slug) {
+  const rel = routeBySlug(slug);
+  const idx = ROUTES.findIndex((r) => r.slug === slug);
+  const href = `./tours/${rel.slug}.html`;
+  return `      <article class="tour-card">
         <div class="tour-card__media">
           <img src="${rel.cover}" alt="" />
           <div class="tour-card__loc">
@@ -759,7 +713,38 @@ function renderTourMore(slug) {
           </div>
         </div>
       </article>`;
-  });
+}
+
+function injectBlog(html, page, locale, messages) {
+  const options = { journalPublic: JOURNAL_IS_PUBLIC, renderTourCard };
+  if (html.includes("<!-- BLOG_HUB -->")) {
+    html = html.replace("<!-- BLOG_HUB -->", renderBlogHub(locale, messages, options));
+  }
+  if (html.includes("<!-- BLOG_POST -->")) {
+    html = html.replace("<!-- BLOG_POST -->", renderBlogPost(page, locale, messages, options));
+  }
+  if (html.includes("<!-- BLOG_AUTHOR -->")) {
+    html = html.replace("<!-- BLOG_AUTHOR -->", renderAuthorPage(page, locale, messages));
+  }
+  if (html.includes("<!-- HOME_JOURNAL -->")) {
+    html = html.replace("<!-- HOME_JOURNAL -->", renderHomeJournal(locale, messages));
+  }
+  if (html.includes("<!-- BLOG_STYLEGUIDE -->")) {
+    html = html.replace("<!-- BLOG_STYLEGUIDE -->", renderStyleguide(messages, options));
+  }
+  return html;
+}
+
+function galleryFigure(src) {
+  if (!src) return "";
+  return `<figure class="tour-article__figure">
+        <img src="${src}" alt="" />
+      </figure>`;
+}
+
+function renderTourMore(slug) {
+  const route = routeBySlug(slug);
+  const cards = route.related.map((relSlug) => renderTourCard(relSlug));
 
   return `<section class="tour-more section" data-section="tour.more">
   <div class="container">
@@ -931,6 +916,13 @@ function pageLangHrefs(page) {
       sl: page.langSwitch.sl,
     };
   }
+  if (page.hreflang === false) {
+    const locales = pageLocales(page);
+    return {
+      en: locales.includes("en") ? hrefForPage(page.path, "en") : hrefForPage("/blog", "en"),
+      sl: locales.includes("sl") ? hrefForPage(page.path, "sl") : hrefForPage("/blog", "sl"),
+    };
+  }
   return {
     en: hrefForPage(page.path, "en"),
     sl: pageLocales(page).includes("sl")
@@ -1024,6 +1016,13 @@ function organizationLd() {
 
 function structuredData(page, locale, messages) {
   const graph = [organizationLd()];
+  const blogNodes = structuredNodes(page, locale, messages, absoluteUrl, SITE_ORIGIN, {
+    journalPublic: JOURNAL_IS_PUBLIC,
+  });
+  if (blogNodes) {
+    graph.push(...blogNodes);
+    return { "@context": "https://schema.org", "@graph": graph };
+  }
   if (!page.routeSlug) {
     return { "@context": "https://schema.org", "@graph": graph };
   }
@@ -1083,52 +1082,75 @@ function buildHead(page, locale, messages) {
   const routeTitle = page.routeSlug
     ? getByPath(messages, `routes.${page.routeSlug}.metaTitle`)
     : "";
-  const title =
+  let title =
+    (page.seo && page.seo.title) ||
     routeTitle ||
     meta.title ||
     getByPath(messages, "meta.brand") ||
     "Zyflow";
-  const description =
+  let description =
+    (page.seo && page.seo.description) ||
     meta.description ||
     "Smart navigation for cyclists and e-bike riders.";
+  if (page.blogKind === "author") {
+    const author = getCatalog().authors.get(page.authorId);
+    if (author) {
+      title = author.name;
+      const template = getByPath(messages, "blog.authorDescription") || "";
+      description = template
+        ? template.replace("{name}", author.name)
+        : description;
+    }
+  }
   const alwaysNoIndex = !page.indexable;
   const robots = alwaysNoIndex || !SITE_INDEX ? "noindex, nofollow" : "index, follow";
   const canonical = absoluteUrl(page.path, locale);
+  const usePostOg = Boolean(page.seo && page.seo.ogImage);
   const useTourOg = Boolean(page.routeSlug && tourHasOwnOg(page.routeSlug));
   const ogImage = absoluteOgImage(
     SITE_ORIGIN,
-    useTourOg ? tourOgPath(page.routeSlug) : "",
+    usePostOg ? page.seo.ogImage : useTourOg ? tourOgPath(page.routeSlug) : "",
     OG_IMAGE_PATH
   );
-  const ogImageWidth = useTourOg ? TOUR_OG_WIDTH : DEFAULT_OG_WIDTH;
-  const ogImageHeight = useTourOg ? TOUR_OG_HEIGHT : DEFAULT_OG_HEIGHT;
-  const ogImageType = useTourOg ? TOUR_OG_TYPE : DEFAULT_OG_TYPE;
-  const ogAlt = ogImageAlt(locale, useTourOg ? title : "");
+  const ogImageWidth = usePostOg || useTourOg ? TOUR_OG_WIDTH : DEFAULT_OG_WIDTH;
+  const ogImageHeight = usePostOg || useTourOg ? TOUR_OG_HEIGHT : DEFAULT_OG_HEIGHT;
+  const ogImageType = usePostOg || useTourOg ? TOUR_OG_TYPE : DEFAULT_OG_TYPE;
+  const ogAlt = ogImageAlt(locale, usePostOg || useTourOg ? title : "");
+  const ogType = (page.seo && page.seo.ogType) || "website";
+  const articleMeta =
+    page.seo && page.seo.published
+      ? `<meta property="article:published_time" content="${escapeAttr(page.seo.published)}" />\n<meta property="article:modified_time" content="${escapeAttr(page.seo.modified || page.seo.published)}" />`
+      : "";
+  const extraHead = page.id === "blog" ? rssHref(locale, JOURNAL_IS_PUBLIC) : "";
   const ogLocale = OG_LOCALES[locale] || "en_US";
 
   const localesForPage = pageLocales(page);
-  const hrefs = page.langSwitch
-    ? {
-        en: `${SITE_ORIGIN}${page.langSwitch.en}`,
-        sl: `${SITE_ORIGIN}${page.langSwitch.sl}`,
-      }
-    : Object.fromEntries(
-        localesForPage.map((lang) => [lang, absoluteUrl(page.path, lang)])
-      );
-  const hreflangLangs = page.langSwitch ? LOCALES : localesForPage;
-  const defaultHref = hrefs[DEFAULT_LOCALE] || hrefs[hreflangLangs[0]];
-  const hreflang = hreflangLangs
-    .map((lang) => `<link rel="alternate" hreflang="${lang}" href="${hrefs[lang]}" />`)
-    .concat([`<link rel="alternate" hreflang="x-default" href="${defaultHref}" />`])
-    .join("\n");
+  let hreflang = "";
+  let ogLocaleAlts = "";
+  if (page.hreflang !== false) {
+    const hrefs = page.langSwitch
+      ? {
+          en: `${SITE_ORIGIN}${page.langSwitch.en}`,
+          sl: `${SITE_ORIGIN}${page.langSwitch.sl}`,
+        }
+      : Object.fromEntries(
+          localesForPage.map((lang) => [lang, absoluteUrl(page.path, lang)])
+        );
+    const hreflangLangs = page.langSwitch ? LOCALES : localesForPage;
+    const defaultHref = hrefs[DEFAULT_LOCALE] || hrefs[hreflangLangs[0]];
+    hreflang = hreflangLangs
+      .map((lang) => `<link rel="alternate" hreflang="${lang}" href="${hrefs[lang]}" />`)
+      .concat([`<link rel="alternate" hreflang="x-default" href="${defaultHref}" />`])
+      .join("\n");
 
-  const ogLocaleAlts = localesForPage
-    .filter((lang) => lang !== locale)
-    .map(
-      (lang) =>
-        `<meta property="og:locale:alternate" content="${OG_LOCALES[lang] || lang}" />`
-    )
-    .join("\n");
+    ogLocaleAlts = localesForPage
+      .filter((lang) => lang !== locale)
+      .map(
+        (lang) =>
+          `<meta property="og:locale:alternate" content="${OG_LOCALES[lang] || lang}" />`
+      )
+      .join("\n");
+  }
 
   const preloads = [
     `<link rel="preload" href="/assets/design-system/fonts/DMSans.woff2" as="font" type="font/woff2" crossorigin />`,
@@ -1174,8 +1196,11 @@ function buildHead(page, locale, messages) {
     ogImageHeight: String(ogImageHeight),
     ogImageType: escapeAttr(ogImageType),
     ogImageAlt: escapeAttr(ogAlt),
+    ogType: escapeAttr(ogType),
     ogLocale,
     ogLocaleAlts,
+    articleMeta,
+    extraHead,
     themeColor,
     preloads: preloads.join("\n"),
   };
@@ -1284,9 +1309,8 @@ function pageContentPaths(page) {
     ];
   }
   const rels = [`rebuild/pages/${page.file}`, ...locales];
-  if (page.articleSlug) {
-    rels.push(`rebuild/sections/article/bodies/${page.articleSlug}.html`);
-    return rels;
+  if (page.blogKind === "post" && page.translationKey) {
+    return [`content/blog/${page.translationKey}`, ...locales];
   }
   if (page.legalDoc) {
     rels.push(
@@ -1318,31 +1342,50 @@ function writeSeoFiles() {
 
   const urls = [];
   for (const page of indexable) {
-    const lastmod = resolveSitemapLastmod({
-      shallow,
-      gitDate: shallow ? "" : gitContentDate(pageContentPaths(page)),
-      buildDate: today,
-    });
-    const lastmodTag = lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : "";
     for (const locale of pageLocales(page)) {
+      const blogLastmod = sitemapDate(page, locale);
+      const lastmod =
+        blogLastmod !== null
+          ? blogLastmod
+          : resolveSitemapLastmod({
+              shallow,
+              gitDate: shallow ? "" : gitContentDate(pageContentPaths(page)),
+              buildDate: today,
+            });
+      const lastmodTag = lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : "";
       const loc = absoluteUrl(page.path, locale);
-      const hrefs = pageAlternateHrefs(page);
-      const langs = Object.keys(hrefs);
-      const defaultHref = hrefs[DEFAULT_LOCALE] || hrefs[langs[0]];
-      const alternates = langs
-        .map(
-          (lang) =>
-            `    <xhtml:link rel="alternate" hreflang="${lang}" href="${hrefs[lang]}" />`
-        )
-        .concat([
-          `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultHref}" />`,
-        ])
-        .join("\n");
+      let alternates = "";
+      if (page.hreflang !== false) {
+        const hrefs = pageAlternateHrefs(page);
+        const langs = Object.keys(hrefs);
+        const defaultHref = hrefs[DEFAULT_LOCALE] || hrefs[langs[0]];
+        alternates = langs
+          .map(
+            (lang) =>
+              `    <xhtml:link rel="alternate" hreflang="${lang}" href="${hrefs[lang]}" />`
+          )
+          .concat([
+            `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultHref}" />`,
+          ])
+          .join("\n");
+      }
       urls.push(`  <url>
     <loc>${loc}</loc>
 ${lastmodTag}${alternates}
   </url>`);
     }
+  }
+
+  for (const locale of LOCALES) {
+    const feed = renderFeed(
+      locale,
+      SITE_ORIGIN,
+      (post) => hrefForPage(`/blog/${post.slug}`, post.lang),
+      { includeItems: JOURNAL_IS_PUBLIC }
+    );
+    const feedDir = locale === DEFAULT_LOCALE ? path.join(DIST, "blog") : path.join(DIST, locale, "blog");
+    ensureDir(feedDir);
+    fs.writeFileSync(path.join(feedDir, "rss.xml"), feed, "utf8");
   }
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -1502,14 +1545,12 @@ function buildPage(page, locale, messages) {
   const pageRel = path.relative(ROOT, sourcePath);
   let html = read(sourcePath);
   applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, pageRel);
-  if (page.articleSlug) {
-    html = injectArticleContent(html, page.articleSlug);
-  }
   if (page.routeSlug) {
     html = injectTourContent(html, page.routeSlug);
   }
   html = resolveIncludes(html);
   html = applyPublicationFlags(html, pageRel);
+  html = injectBlog(html, page, locale, messages);
   html = injectLegalDocument(html, page, locale);
   html = injectRedirectTarget(html, page, locale);
   html = applyI18n(html, messages);
@@ -1626,6 +1667,30 @@ function assertIndexablePages() {
   }
 }
 
+function copyBlogImages() {
+  for (const source of imageSources()) {
+    if (!fs.existsSync(source.dir)) continue;
+    copyDir(source.dir, path.join(DIST, "assets/images/blog", source.key));
+  }
+}
+
+async function writeBlogOgImages() {
+  const jobs = ogSources();
+  if (!jobs.length) return;
+  const sharp = require("sharp");
+  for (const source of jobs) {
+    if (!source.file || !fs.existsSync(source.file)) {
+      throw new Error(`Missing image for blog OG crop ${source.key}`);
+    }
+    const dest = path.join(DIST, "assets/images/og/blog", `${source.key}.jpg`);
+    ensureDir(path.dirname(dest));
+    await sharp(source.file)
+      .resize(TOUR_OG_WIDTH, TOUR_OG_HEIGHT, { fit: "cover", position: "centre" })
+      .jpeg({ quality: 82 })
+      .toFile(dest);
+  }
+}
+
 async function build() {
   const messagesByLocale = {};
   for (const locale of LOCALES) {
@@ -1649,6 +1714,7 @@ async function build() {
   rimrafContents(DIST);
 
   copyDir(path.join(ROOT, "assets"), path.join(DIST, "assets"));
+  copyBlogImages();
   copyDir(path.join(ROOT, "css"), path.join(DIST, "css"));
   copyDir(path.join(ROOT, "js"), path.join(DIST, "js"));
   copyCookieConsentAssets();
@@ -1668,6 +1734,7 @@ async function build() {
 
   // One stylesheet instead of the @import chain (render-blocking).
   bundleCss(DIST);
+  await writeBlogOgImages();
   // AVIF/WebP srcsets + simplified contour SVGs. Runs before versioning so
   // the JS/CSS ?v= pass still sees the final HTML.
   await optimizeImages(DIST);

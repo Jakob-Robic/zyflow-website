@@ -1,0 +1,81 @@
+regions:
+  - id: gorenjska
+    label:
+      en: Gorenjska
+      sl: Gorenjska
+    areas:
+      - id: bled
+        label:
+          en: Bled
+          sl: Bled
+      - id: trzic
+        label:
+          en: Tržič
+          sl: Tržič
+      - id: jezersko
+        label:
+          en: Jezersko
+          sl: Jezersko
+types:
+  - id: route-guide
+    label:
+      en: Route guide
+      sl: Vodnik po poti
+  - id: spot-list
+    label:
+      en: Spot list
+      sl: Seznam krajev
+  - id: itinerary
+    label:
+      en: Itinerary
+      sl: Načrt poti
+  - id: practical
+    label:
+      en: Practical
+      sl: Praktično
+  - id: story
+    label:
+      en: Story
+      sl: Zgodba
+activities:
+  - id: road
+    label:
+      en: Road
+      sl: Cesta
+  - id: gravel
+    label:
+      en: Gravel
+      sl: Gravel
+  - id: mtb
+    label:
+      en: MTB
+      sl: MTB
+  - id: e-bike
+    label:
+      en: E-bike
+      sl: E-kolo
+  - id: ev
+    label:
+      en: EV
+      sl: EV
+tags:
+  - id: climbs
+    label:
+      en: Climbs
+      sl: Vzponi
+  - id: charging
+    label:
+      en: Charging
+      sl: Polnjenje
+  - id: borders
+    label:
+      en: Borders
+      sl: Meje
+  - id: stays
+    label:
+      en: Stays
+      sl: Nastanitve
+  - id: cafes
+    label:
+      en: Cafés
+      sl: Kavarne

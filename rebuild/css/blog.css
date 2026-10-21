@@ -217,6 +217,57 @@
   }
 }
 
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-6);
+  margin-block: var(--space-gap-6);
+}
+
+.blog-filters__label,
+.blog-story__meta,
+.blog-empty {
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+
+.blog-filters__label {
+  margin: 0 0 var(--space-gap-2);
+}
+
+.blog-filters__links,
+.blog-explore {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-2);
+}
+
+.blog-filters__btn {
+  font: inherit;
+  font-size: var(--type-small);
+  background: transparent;
+  color: inherit;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-gap-2) var(--space-gap-4);
+  cursor: pointer;
+}
+
+.blog-filters__btn.is-active {
+  background: var(--color-text-heading);
+  color: var(--color-surface-1);
+}
+
+.blog-story[hidden],
+.blog-feature[hidden] {
+  display: none;
+}
+
+.blog-explore,
+.blog-hub__foot {
+  margin-block-start: var(--space-gap-8);
+}
+
 @media (max-width: 720px) {
   .blog-hero__title {
     font-size: var(--type-h1);

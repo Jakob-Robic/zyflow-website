@@ -748,3 +748,56 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
     select.value = topic;
   }
 })();
+
+/** Journal hub filters (?region=&type=&act=). No-JS visitors still see every card. */
+(function initBlogFilter() {
+  const bar = document.querySelector("[data-blog-filters]");
+  const grid = document.querySelector("[data-blog-grid]");
+  if (!bar || !grid) return;
+
+  const cards = Array.from(document.querySelectorAll("[data-blog-card]"));
+  const empty = document.querySelector("[data-blog-empty]");
+  const state = { region: "all", type: "all", act: "all" };
+  const params = new URLSearchParams(window.location.search);
+  for (const key of Object.keys(state)) {
+    const value = params.get(key);
+    if (value) state[key] = value;
+  }
+
+  function apply() {
+    let shown = 0;
+    for (const card of cards) {
+      const activities = (card.getAttribute("data-activities") || "").split(/\s+/).filter(Boolean);
+      const ok =
+        (state.region === "all" || card.getAttribute("data-region") === state.region) &&
+        (state.type === "all" || card.getAttribute("data-type") === state.type) &&
+        (state.act === "all" || activities.includes(state.act));
+      card.hidden = !ok;
+      if (ok) shown += 1;
+    }
+    if (empty) empty.hidden = shown !== 0;
+    bar.querySelectorAll("[data-blog-filter]").forEach((btn) => {
+      const group = btn.getAttribute("data-blog-filter");
+      const on = (btn.getAttribute("data-value") || "all") === state[group];
+      btn.classList.toggle("is-active", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  bar.addEventListener("click", (event) => {
+    const btn = event.target.closest("[data-blog-filter]");
+    if (!btn || !bar.contains(btn)) return;
+    const group = btn.getAttribute("data-blog-filter");
+    if (!group || !Object.prototype.hasOwnProperty.call(state, group)) return;
+    state[group] = btn.getAttribute("data-value") || "all";
+    const next = new URLSearchParams();
+    for (const key of Object.keys(state)) {
+      if (state[key] && state[key] !== "all") next.set(key, state[key]);
+    }
+    const query = next.toString();
+    history.replaceState(null, "", query ? `${window.location.pathname}?${query}` : window.location.pathname);
+    apply();
+  });
+
+  apply();
+})();

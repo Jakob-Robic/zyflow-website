@@ -139,13 +139,22 @@ function walk(dir, out = []) {
   return out;
 }
 
+function decodeAttr(value) {
+  return String(value)
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
+}
+
 function parseAttrs(tag) {
   const attrs = {};
   const inner = tag.replace(/^<img\b\s*/i, "").replace(/\/?\s*>$/, "");
   const re = /([:@\w-]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/g;
   let match;
   while ((match = re.exec(inner))) {
-    attrs[match[1]] = match[2] ?? match[3] ?? match[4] ?? "";
+    attrs[match[1]] = decodeAttr(match[2] ?? match[3] ?? match[4] ?? "");
   }
   return attrs;
 }

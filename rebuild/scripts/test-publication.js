@@ -153,7 +153,6 @@ test("JOURNAL_PUBLIC=true restores journal links, sitemap, and robots", () => {
     assert.equal(readJournal.length, 1);
     assert.match(readJournal[0], /href="\/blog"/);
     assert.equal(anchorsWith(home, "home.categories.cta").length, 0);
-    assert.match(home, /data-section="home\.journal"/);
     assert.match(home, /href="\/blog"/);
     assert.match(home, /data-nav-link="journal"/);
 
@@ -182,13 +181,25 @@ test("JOURNAL_PUBLIC=true restores journal links, sitemap, and robots", () => {
     assert.match(explore[0], /href="\/tours"/);
 
     assert.match(sl, /href="\/sl\/blog"/);
-    assert.match(sl, /data-section="home\.journal"/);
+    assert.doesNotMatch(home, /data-section="home\.journal"/);
+    assert.doesNotMatch(sl, /data-section="home\.journal"/);
     assert.match(sitemap, /<loc>https:\/\/www\.zyflow\.eu\/blog<\/loc>/);
     assert.match(sitemap, /<loc>https:\/\/www\.zyflow\.eu\/sl\/blog<\/loc>/);
+    assert.doesNotMatch(sitemap, /e-bike-charging-at-hospitality-stops/);
+    assert.doesNotMatch(sitemap, /zyflow-is-live-on-ios-and-android/);
     assert.match(robots, /Disallow:\s*\/styleguide/);
     assert.doesNotMatch(robots, /Disallow:\s*\/blog\b/);
     assert.doesNotMatch(robots, /Disallow:\s*\/sl\/blog\b/);
     assert.match(blogHead, /name="robots" content="index, follow"/);
+    assert.doesNotMatch(blogHead, /application\/rss\+xml/);
+    const blog = readDist(dist, "blog.html");
+    const slBlog = readDist(dist, "sl/blog.html");
+    const slHead = slBlog.split("</head>")[0];
+    assert.doesNotMatch(slHead, /application\/rss\+xml/);
+    assert.doesNotMatch(slBlog, /rss\.xml/);
+    assert.match(blog, /Stories are on the way/);
+    assert.match(slBlog, /Članki v slovenščini še prihajajo/);
+    assert.match(slBlog, /href="\/blog"/);
   } finally {
     fs.rmSync(dist, { recursive: true, force: true });
   }
@@ -224,8 +235,19 @@ test("without a commute card the filter and footer tile stay off", () => {
     assert.doesNotMatch(tours, /data-filter="commute"/);
     assert.doesNotMatch(home, /type=commute/);
     assert.doesNotMatch(home, /href="\/blog"/);
-    assert.match(readDist(dist, "robots.txt"), /Disallow:\s*\/blog\b/);
+    assert.doesNotMatch(home, /data-section="home\.journal"/);
+    const robots = readDist(dist, "robots.txt");
+    assert.match(robots, /Disallow:\s*\/blog\b/);
+    assert.match(robots, /Disallow:\s*\/sl\/blog\b/);
     assert.doesNotMatch(readDist(dist, "sitemap.xml"), /\/blog/);
+    const blogHead = readDist(dist, "blog.html").split("</head>")[0];
+    const slHead = readDist(dist, "sl/blog.html").split("</head>")[0];
+    assert.match(blogHead, /name="robots" content="noindex, nofollow"/);
+    assert.match(slHead, /name="robots" content="noindex, nofollow"/);
+    assert.doesNotMatch(blogHead, /application\/rss\+xml/);
+    assert.doesNotMatch(slHead, /application\/rss\+xml/);
+    assert.doesNotMatch(readDist(dist, "blog/rss.xml"), /<item>/);
+    assert.match(readDist(dist, "styleguide.html"), /id="sg-blog"/);
   } finally {
     fs.rmSync(dist, { recursive: true, force: true });
   }
