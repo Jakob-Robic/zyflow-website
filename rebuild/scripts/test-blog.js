@@ -298,6 +298,11 @@ test("published fixture renders posts, JSON-LD, RSS, filters, and sitemap dates"
     assert.doesNotMatch(soloHtml, /rel="alternate" hreflang=/);
 
     const hub = fs.readFileSync(path.join(dist, "blog.html"), "utf8");
+    assert.match(hub.split("</head>")[0], /application\/rss\+xml/);
+    assert.match(
+      fs.readFileSync(path.join(dist, "sl/blog.html"), "utf8").split("</head>")[0],
+      /application\/rss\+xml/
+    );
     const hubGraph = JSON.parse(hub.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])["@graph"].map(
       (node) => node["@type"]
     );
@@ -343,8 +348,80 @@ test("published fixture renders posts, JSON-LD, RSS, filters, and sitemap dates"
     const info = await sharp(path.join(dist, "assets/images/og/blog/sample-ride.jpg")).metadata();
     assert.equal(info.width, 1200);
     assert.equal(info.height, 630);
+
+    execFileSync(
+      process.execPath,
+      [
+        "-e",
+        `const { PAGES } = require(${JSON.stringify(path.join(__dirname, "pages.js"))});
+         const { renderFeed } = require(${JSON.stringify(path.join(__dirname, "blog.js"))});
+         if (PAGES.some((page) => page.blogKind)) process.exit(2);
+         const hidden = renderFeed("en", "https://www.zyflow.eu", (post) => "/blog/" + post.slug, { includeItems: false });
+         if (hidden.includes("<item>")) process.exit(3);
+         const listed = renderFeed("en", "https://www.zyflow.eu", (post) => "/blog/" + post.slug);
+         if (!listed.includes("sample-ride")) process.exit(4);`,
+      ],
+      {
+        env: { ...process.env, BLOG_CONTENT: content, JOURNAL_PUBLIC: "false" },
+        stdio: "pipe",
+      }
+    );
+    assert.match(fs.readFileSync(BUILD, "utf8"), /includeItems: JOURNAL_IS_PUBLIC/);
   } finally {
     fs.rmSync(content, { recursive: true, force: true });
     fs.rmSync(dist, { recursive: true, force: true });
   }
+});
+
+test("safe link schemes stay, and attack payloads name the file", () => {
+  const draft = basePost({ status: "draft", facts: undefined, sources: undefined });
+  const safe = catalogFrom(
+    one(
+      draft,
+      "See [the site](https://www.zyflow.eu/blog), [mail](mailto:hello@zyflow.eu), [root](/blog), [dot](./notes) and [jump](#top).\n"
+    )
+  );
+  assert.deepEqual(safe.errors, []);
+
+  const attacks = [
+    ["| a |\n|---|\n| <img src=x onerror=alert(1)> |\n", /raw HTML is not allowed/],
+    ["| <script>alert(1)</script> | b |\n|---|---|\n| x | y |\n", /raw HTML is not allowed/],
+    [
+      ":::faq\n### Where?\n| a |\n|---|\n| <img src=x onerror=alert(1)> |\n:::\n",
+      /raw HTML is not allowed/,
+    ],
+    ["[click](javascript:alert(1))\n", /URL scheme "javascript:" is not allowed/],
+    ["[click](JaVaScRiPt:alert(1))\n", /URL scheme "javascript:" is not allowed/],
+    ["[click](&#106;avascript&#58;alert(1))\n", /URL scheme "javascript:" is not allowed/],
+    ["[click](&#x6A;avascript&#x3A;alert(1))\n", /URL scheme "javascript:" is not allowed/],
+    ["[click](java&nbsp;script:alert(1))\n", /URL scheme "javascript:" is not allowed/],
+    ["[click](java\u200bscript:alert(1))\n", /URL scheme "javascript:" is not allowed/],
+    ["<javascript:alert(1)>\n", /URL scheme "javascript:" is not allowed/],
+    ["[click][x]\n\n[x]: javascript:alert(1)\n", /URL scheme "javascript:" is not allowed/],
+    ["| a |\n|---|\n| [x](javascript:alert(1)) |\n", /URL scheme "javascript:" is not allowed/],
+    [":::faq\n### Where?\n[a](javascript:alert(1))\n:::\n", /URL scheme "javascript:" is not allowed/],
+    [
+      ':::figure src="images/hero.jpg" alt="Cafe" credit="Zyflow" licence="own"\nA [bad](javascript:alert(1)) caption.\n:::\n',
+      /URL scheme "javascript:" is not allowed/,
+    ],
+    ["[click](data:text/html;base64,PHNjcmlwdD4=)\n", /URL scheme "data:" is not allowed/],
+    ["[click](vbscript:msgbox(1))\n", /URL scheme "vbscript:" is not allowed/],
+    ["See {{appStoreUrl}} for the store.\n", /template tokens \{\{\.\.\.\}\} are not allowed/],
+  ];
+  for (const [body, needle] of attacks) {
+    const found = errorsOf(one(draft, `Intro paragraph for the test post.\n\n${body}`));
+    assert.match(found, /sample-ride\/en\.md/, body);
+    assert.match(found, needle, found);
+  }
+});
+
+test("author photo src uses the images/ path rule", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "zyflow-blog-author-"));
+  writeTree(dir, one(basePost({ status: "draft", facts: undefined, sources: undefined })));
+  const file = path.join(dir, "_authors", "jakob-robic.yml");
+  const author = YAML.parse(fs.readFileSync(file, "utf8"));
+  author.photo.src = "../secret.jpg";
+  fs.writeFileSync(file, YAML.stringify(author));
+  const found = loadBlog(dir, { today: "2026-10-21" }).errors.join("\n");
+  assert.match(found, /_authors\/jakob-robic\.yml: photo src must be a file under images\//);
 });

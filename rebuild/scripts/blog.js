@@ -255,12 +255,96 @@ function knownRoute(slug, label, problems) {
   }
 }
 
-function walkTokens(tokens, visit) {
+function walkTokens(tokens, visit, seen = new Set()) {
   for (const token of tokens || []) {
+    if (!token || typeof token !== "object" || seen.has(token)) continue;
+    seen.add(token);
     visit(token);
-    if (token.tokens) walkTokens(token.tokens, visit);
-    if (token.items) walkTokens(token.items, visit);
+    for (const value of Object.values(token)) {
+      if (!Array.isArray(value) || !value.length) continue;
+      const objects = value.every((item) => item && typeof item === "object" && !Array.isArray(item));
+      if (objects) walkTokens(value, visit, seen);
+      else {
+        for (const item of value) {
+          if (Array.isArray(item)) walkTokens(item, visit, seen);
+        }
+      }
+    }
   }
+}
+
+const NAMED_ENTITIES = {
+  amp: "&",
+  lt: "<",
+  gt: ">",
+  quot: '"',
+  apos: "'",
+  colon: ":",
+  tab: "\t",
+  newline: "\n",
+  num: "#",
+  semi: ";",
+  nbsp: "\u00a0",
+  ensp: "\u2002",
+  emsp: "\u2003",
+  emsp13: "\u2004",
+  emsp14: "\u2005",
+  numsp: "\u2007",
+  puncsp: "\u2008",
+  thinsp: "\u2009",
+  hairsp: "\u200a",
+  zwnj: "\u200c",
+  zwj: "\u200d",
+  lrm: "\u200e",
+  rlm: "\u200f",
+};
+
+function decodeEntities(value) {
+  return String(value).replace(
+    /&(?:#x([0-9a-f]+)|#(\d+)|([a-zA-Z][a-zA-Z0-9]*));?/gi,
+    (all, hex, dec, name) => {
+      if (hex || dec) {
+        const code = Number.parseInt(hex || dec, hex ? 16 : 10);
+        if (!Number.isInteger(code) || code < 0 || code > 0x10ffff) return "";
+        try {
+          return String.fromCodePoint(code);
+        } catch {
+          return "";
+        }
+      }
+      if (!all.endsWith(";")) return all;
+      if (name === "Tab") return "\t";
+      if (name === "NewLine") return "\n";
+      const ch = NAMED_ENTITIES[name.toLowerCase()];
+      return ch == null ? all : ch;
+    }
+  );
+}
+
+function normalizeHref(raw) {
+  let value = String(raw ?? "");
+  for (let i = 0; i < 5; i++) {
+    const next = decodeEntities(value);
+    if (next === value) break;
+    value = next;
+  }
+  return value.replace(/[\u0000-\u0020\u007f\u00a0\u1680\u2000-\u200d\u2028\u2029\u202f\u205f\u2060\ufeff\u3000]+/g, "");
+}
+
+function hrefProblem(raw) {
+  const href = normalizeHref(raw);
+  if (!href) return "empty URL is not allowed";
+  if (href.startsWith("#")) return null;
+  if (href.startsWith("/") && !href.startsWith("//") && !href.startsWith("/\\")) return null;
+  if (href.startsWith("./") || href.startsWith("../")) return null;
+  const match = /^([a-z][a-z0-9+.-]*):/i.exec(href);
+  if (!match) {
+    if (/^[a-z0-9._~-][a-z0-9._~/-]*$/i.test(href)) return null;
+    return "URL is not allowed";
+  }
+  const scheme = `${match[1].toLowerCase()}:`;
+  if (scheme === "https:" || scheme === "http:" || scheme === "mailto:") return null;
+  return `URL scheme "${scheme}" is not allowed`;
 }
 
 function renderFacts(post, messages) {
@@ -441,6 +525,28 @@ function parseMarkdown(markdown, ctx) {
   const marked = new Marked();
   marked.use({
     gfm: true,
+    renderer: {
+      html({ text }) {
+        push(ctx.problems, "raw HTML is not allowed in the post body");
+        return esc(text);
+      },
+      link(token) {
+        const problem = hrefProblem(token.href);
+        if (problem) {
+          push(ctx.problems, problem);
+          return esc(token.text || "");
+        }
+        const title = token.title ? ` title="${esc(token.title)}"` : "";
+        const inner = token.tokens ? this.parser.parseInline(token.tokens) : esc(token.text || "");
+        return `<a href="${esc(token.href)}"${title}>${inner}</a>`;
+      },
+      image(token) {
+        push(ctx.problems, "bare images are not allowed; use a :::figure block");
+        const problem = hrefProblem(token.href || "");
+        if (problem) push(ctx.problems, problem);
+        return "";
+      },
+    },
     extensions: [
       {
         name: "zyContainer",
@@ -473,11 +579,21 @@ function parseMarkdown(markdown, ctx) {
     if (token.type === "image") {
       push(ctx.problems, "bare images are not allowed; use a :::figure block");
     }
+    if (token.type === "link" || token.type === "image" || token.href) {
+      const problem = token.href ? hrefProblem(token.href) : null;
+      if (problem) push(ctx.problems, problem);
+    }
   });
   return { html: marked.parser(tokens) };
 }
 
 function lintBody(post, problems) {
+  // The app CTA helper inserts {{appStoreUrl}}. Markdown must not: any {{...}}
+  // token, including {{appStoreUrl}}, is rejected so the store-link pass cannot
+  // rewrite a post body.
+  if (/\{\{/.test(post.body)) {
+    push(problems, "template tokens {{...}} are not allowed in the post body");
+  }
   const ctx = {
     problems,
     dir: post.dir,
@@ -514,6 +630,17 @@ function loadAuthors(dir, errors) {
     }
     data.id = data.id || id;
     if (data.id !== id) push(errors, `_authors/${name}: id must match the file name`);
+    const photoSrc = data.photo && data.photo.src;
+    if (photoSrc) {
+      if (!/^images\/[A-Za-z0-9._-]+$/.test(photoSrc)) {
+        push(errors, `_authors/${name}: photo src must be a file under images/`);
+      } else {
+        const abs = resolveInside(folder, photoSrc);
+        if (!abs || !fs.existsSync(abs) || !fs.statSync(abs).isFile()) {
+          push(errors, `_authors/${name}: photo file does not exist (${photoSrc})`);
+        }
+      }
+    }
     authors.set(data.id, data);
   }
   return authors;
@@ -1086,9 +1213,10 @@ function renderBlogHub(locale, messages, options = {}) {
           ? ` <a class="link" href="/blog">${esc(t(messages, "blog.comingSoonLink"))}</a>`
           : ""
       }</p>`;
-  const rss = options.journalPublic
-    ? `<a class="link" href="${locale === "sl" ? "/sl/blog/rss.xml" : "/blog/rss.xml"}">${esc(t(messages, "blog.rss"))}</a>`
-    : "";
+  const rss =
+    options.journalPublic && posts.length
+      ? `<a class="link" href="${locale === "sl" ? "/sl/blog/rss.xml" : "/blog/rss.xml"}">${esc(t(messages, "blog.rss"))}</a>`
+      : "";
   return `<section class="blog-hero section" data-section="blog.hero">
   <div class="blog-hero__glow" aria-hidden="true"><img src="./assets/images/home/map-contours-featured.svg" alt="" /></div>
   <div class="container">
@@ -1400,8 +1528,8 @@ function sitemapDate(page, locale) {
   return null;
 }
 
-function renderFeed(locale, origin, hrefFor) {
-  const posts = postsFor(locale).slice(0, 20);
+function renderFeed(locale, origin, hrefFor, options = {}) {
+  const posts = options.includeItems === false ? [] : postsFor(locale).slice(0, 20);
   const title = locale === "sl" ? "Zyflow Dnevnik" : "Zyflow Journal";
   const link = `${origin}${locale === "sl" ? "/sl/blog" : "/blog"}`;
   const items = posts
@@ -1463,7 +1591,7 @@ function ogSources() {
 }
 
 function rssHref(locale, journalPublic) {
-  if (!journalPublic) return "";
+  if (!journalPublic || !postsFor(locale).length) return "";
   const href = locale === "sl" ? "/sl/blog/rss.xml" : "/blog/rss.xml";
   const title = locale === "sl" ? "Zyflow Dnevnik" : "Zyflow Journal";
   return `<link rel="alternate" type="application/rss+xml" title="${esc(title)}" href="${href}" />`;

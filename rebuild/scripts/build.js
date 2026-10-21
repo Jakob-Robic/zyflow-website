@@ -1375,8 +1375,11 @@ ${lastmodTag}${alternates}
   }
 
   for (const locale of LOCALES) {
-    const feed = renderFeed(locale, SITE_ORIGIN, (post) =>
-      hrefForPage(`/blog/${post.slug}`, post.lang)
+    const feed = renderFeed(
+      locale,
+      SITE_ORIGIN,
+      (post) => hrefForPage(`/blog/${post.slug}`, post.lang),
+      { includeItems: JOURNAL_IS_PUBLIC }
     );
     const feedDir = locale === DEFAULT_LOCALE ? path.join(DIST, "blog") : path.join(DIST, locale, "blog");
     ensureDir(feedDir);

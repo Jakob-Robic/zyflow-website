@@ -352,6 +352,9 @@ test('proxy entrypoint is CommonJS and does not return a body', () => {
   assert.equal(vercel.proxy.entrypoint, 'server-pageview-middleware.js');
   assert.ok(Array.isArray(vercel.proxy.matcher));
   assert.match(vercel.proxy.matcher.join(' '), /api/);
+  assert.deepEqual(middlewareConfig.matcher, vercel.proxy.matcher);
+  assert.ok(middlewareConfig.matcher[0].includes("blog/rss\\.xml(?:$|\\?)"));
+  assert.ok(middlewareConfig.matcher[0].includes("sl/blog/rss\\.xml(?:$|\\?)"));
 });
 
 const LEGAL_EN =

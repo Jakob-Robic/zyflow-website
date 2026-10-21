@@ -191,9 +191,12 @@ test("JOURNAL_PUBLIC=true restores journal links, sitemap, and robots", () => {
     assert.doesNotMatch(robots, /Disallow:\s*\/blog\b/);
     assert.doesNotMatch(robots, /Disallow:\s*\/sl\/blog\b/);
     assert.match(blogHead, /name="robots" content="index, follow"/);
-    assert.match(blogHead, /application\/rss\+xml/);
+    assert.doesNotMatch(blogHead, /application\/rss\+xml/);
     const blog = readDist(dist, "blog.html");
     const slBlog = readDist(dist, "sl/blog.html");
+    const slHead = slBlog.split("</head>")[0];
+    assert.doesNotMatch(slHead, /application\/rss\+xml/);
+    assert.doesNotMatch(slBlog, /rss\.xml/);
     assert.match(blog, /Stories are on the way/);
     assert.match(slBlog, /Članki v slovenščini še prihajajo/);
     assert.match(slBlog, /href="\/blog"/);

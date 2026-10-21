@@ -94,7 +94,7 @@ test("optimizeImages emits an AVIF picture and a smaller contour svg", async () 
     fs.writeFileSync(
       path.join(dir, "index.html"),
       `<head><link rel="preload" href="/assets/images/home/hero.jpg" as="image" fetchpriority="high" /></head>
-<section><img src="/assets/images/home/hero.jpg" alt="Cyclist riding a scenic road" /></section>
+<section><img src="/assets/images/home/hero.jpg" alt="Cyclist &quot;riding&quot; a scenic road" /></section>
 <section><img src="/assets/images/home/map-contours-featured.svg" alt="" /></section>`
     );
     const before = fs.statSync(svgPath).size;
@@ -103,14 +103,15 @@ test("optimizeImages emits an AVIF picture and a smaller contour svg", async () 
     assert.match(html, /<picture><source type="image\/avif"/);
     assert.match(html, /type="image\/webp"/);
     assert.match(html, /rel="preload"[^>]*type="image\/avif"/);
-    assert.match(html, /alt="Cyclist riding a scenic road"/);
+    assert.match(html, /alt="Cyclist &quot;riding&quot; a scenic road"/);
+    assert.doesNotMatch(html, /&amp;quot;/);
     assert.doesNotMatch(html, /map-contours-featured\.svg/);
     const contour = html.match(/\/assets\/images\/opt\/[0-9a-f]{12}\/map-contours\.svg/);
     assert.ok(contour);
     const after = fs.statSync(path.join(dir, contour[0].slice(1))).size;
     assert.ok(after < before / 5, `contour ${after} should be much smaller than ${before}`);
     assert.match(html, /loading="lazy"/);
-    const hero = html.match(/<img\b[^>]*Cyclist riding a scenic road[^>]*>/)[0];
+    const hero = html.match(/<img\b[^>]*Cyclist &quot;riding&quot; a scenic road[^>]*>/)[0];
     assert.doesNotMatch(hero, /loading="lazy"/);
     assert.match(hero, /fetchpriority="high"/);
   } finally {

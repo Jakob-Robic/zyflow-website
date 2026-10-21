@@ -9,9 +9,9 @@ const LOCALES = ["en", "sl"];
 const DEFAULT_LOCALE = "en";
 
 /**
- * Journal (/blog, posts, and author pages) is built for preview but kept out of the
- * public site until launch. Set this to true to:
- *   - mark /blog, posts, and author pages indexable
+ * The journal hub is built for preview but kept out of the public site until launch.
+ * Published posts and author pages are not built while this is false. Set it to true to:
+ *   - build post and author pages and mark /blog indexable
  *   - drop the robots.txt Disallow for /blog
  *   - restore nav, footer, home journal, and "Read Journal" links
  *     (HTML marked <!-- journal:public --> / <!-- journal:hidden -->)
@@ -71,7 +71,7 @@ const PAGES = [
     path: "/blog",
     indexable: JOURNAL_IS_PUBLIC,
   },
-  ...BLOG_PAGES.map((page) => ({ ...page, indexable: JOURNAL_IS_PUBLIC })),
+  ...(JOURNAL_IS_PUBLIC ? BLOG_PAGES.map((page) => ({ ...page, indexable: true })) : []),
   {
     id: "contact",
     file: "contact.html",
