@@ -481,9 +481,10 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   assert.match(desc(slVirnik), /ekološke kmetije Spodnji Virnik: 9,4 km in 304 m vzpona/);
   assert.doesNotMatch(desc(slVirnik), /Kehnjak/);
 
-  const slBlog = read("sl/blog/planning-your-first-battery-aware-day-ride.html");
-  assert.equal(title(slBlog), "Zyflow: Načrtovanje prve dnevne ture glede na baterijo");
-  assert.match(desc(slBlog), /boš zares izpeljal/);
+  const slBlog = read("sl/blog.html");
+  assert.equal(title(slBlog), "Zyflow: Dnevnik");
+  assert.match(desc(slBlog), /kolesarjem prijaznih krajih/);
+  assert.match(slBlog, /name="robots" content="noindex, nofollow"/);
 
   function jsonLd(html) {
     const blocks = [...html.matchAll(/<script type="application\/ld\+json">([^<]*)<\/script>/g)];

@@ -60,26 +60,6 @@
  "title": "Zyflow: mediji in vlagatelji",
  "description": "Dejstva, ekipa in kontakt za medije in vlagatelje. Zyflow kolesarjem pomaga najti kolesarjem prijazne kraje in tja kolesariti brez skrbi."
  },
- "blog-e-bike-charging-at-hospitality-stops": {
- "title": "Zyflow: Zakaj je polnjenje e-koles pri gostinskih postankih pomembno",
- "description": "Polnilnica v kavarni ali penzionu lahko odloči, kako daleč seže tura. Zakaj je tako in kako jo najdeš."
- },
- "blog-planning-your-first-battery-aware-day-ride": {
- "title": "Zyflow: Načrtovanje prve dnevne ture glede na baterijo",
- "description": "Doseg, vzponi in polnilnice: preprost način, da načrtuješ dnevno turo, ki jo boš zares izpeljal."
- },
- "blog-what-makes-a-place-bike-friendly": {
- "title": "Zyflow: Kaj naredi kraj prijazen kolesarjem?",
- "description": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj iščemo in kako takšne kraje najdeš s filtri v aplikaciji."
- },
- "blog-zyflow-is-live-on-ios-and-android": {
- "title": "Zyflow: Zyflow je na voljo za iOS in Android",
- "description": "Zyflow je brezplačno na voljo v App Store in Google Play ter deluje v 8 državah. Poglej, kaj lahko preizkusiš na naslednji turi."
- },
- "blog-reading-elevation-before-a-cross-border-ride": {
- "title": "Zyflow: Branje višinskega profila pred čezmejno turo",
- "description": "Kako brati vzpone na turi, kot je Ljubljana–Trst, in kje načrtovati postanke."
- },
  "tour-blejcanka": {
  "title": "Zyflow: Blejčanka",
  "description": "Blejčanka: iz Kranja do Bleda mimo Krope in Radovljice, 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow."
@@ -432,21 +412,7 @@
  },
  "journal": {
  "titleHtml": "Zyflow<br />dnevnik",
- "cta": "Preberi dnevnik",
- "posts": [
- {
- "tag": "Nasveti",
- "title": "Zakaj je polnjenje e-koles pri gostinskih postankih pomembno",
- "excerpt": "Če polnilnica ni vidna na spletu, je mnogi kolesarji nikoli ne najdejo. Boljši zemljevidi spremenijo daljše vožnje.",
- "link": "Preberi zgodbo"
- },
- {
- "tag": "Vodniki",
- "title": "Kaj naredi kraj prijazen kolesarjem?",
- "excerpt": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj preverjamo in kako takšne kraje najdeš s filtri v aplikaciji.",
- "link": "Preberi zgodbo"
- }
- ]
+ "cta": "Preberi dnevnik"
  },
  "faq": {
  "title": "pogosta vprašanja",
@@ -822,38 +788,50 @@
  "titleHtml": "zyflow<br />dnevnik",
  "lede": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti v Zyflowu."
  },
- "featured": {
- "tag": "Tips",
- "title": "Zakaj je polnjenje e-koles pri gostinskih postankih pomembno",
- "excerpt": "If a charger isn't visible online, many riders never find it. Here's how better maps change longer rides.",
- "link": "Read Story"
+ "readStory": "Preberi zgodbo",
+ "readingTime": "{n} min branja",
+ "updated": "Posodobljeno",
+ "journalName": "Dnevnik",
+ "filters": {
+ "region": "Regija",
+ "type": "Vrsta",
+ "activity": "Aktivnost",
+ "all": "Vse"
  },
- "posts": [
- {
- "tag": "Tips",
- "title": "Načrtovanje prve dnevne ture glede na baterijo",
- "excerpt": "Range, climbs and chargers: a simple way to plan a day ride you'll actually finish.",
- "link": "Read Story"
+ "empty": "Nobena zgodba ne ustreza tem filtrom.",
+ "comingSoon": "Članki v slovenščini še prihajajo.",
+ "comingSoonLink": "Preberi dnevnik v angleščini",
+ "rss": "RSS",
+ "explore": "Razišči",
+ "facts": {
+ "distance": "Razdalja",
+ "climb": "Vzpon",
+ "difficulty": "Težavnost",
+ "season": "Sezona",
+ "eat": "Hrana",
+ "sleep": "Spanje",
+ "charge": "Polnjenje"
  },
- {
- "tag": "Guides",
- "title": "Kaj naredi kraj prijazen kolesarjem?",
- "excerpt": "Bike parking, secure storage, a pump, a charger. What we look for, and how to filter for it in the app.",
- "link": "Read Story"
+ "howWeMade": "Kako smo to pripravili",
+ "relatedTours": "Sorodne poti",
+ "relatedPosts": "Sorodne zgodbe",
+ "moreIn": "Več v {name}",
+ "inThisGuide": "V tem vodniku",
+ "appCta": {
+ "title": "Načrtuj turo v Zyflowu",
+ "ios": "Prenesi v App Store",
+ "android": "Prenesi v Google Play"
  },
- {
- "tag": "News",
- "title": "Zyflow je na voljo za iOS in Android",
- "excerpt": "Free on both stores and live in 8 countries. Here's what to try on your next ride.",
- "link": "Read Story"
- },
- {
- "tag": "Guides",
- "title": "Branje višinskega profila pred čezmejno turo",
- "excerpt": "How to read the climbs on a ride like Ljubljana to Trieste, and where to plan your stops.",
- "link": "Read Story"
+ "authorStories": "Zgodbe",
+ "authorDescription": "Vodniki in zgodbe, ki jih piše {name}.",
+ "licence": {
+ "own": "Zyflow",
+ "partner": "Uporabljeno z dovoljenjem",
+ "guest": "Gostujoči kolesar",
+ "ccBy": "CC BY 4.0",
+ "ccBySa": "CC BY-SA 4.0",
+ "cc0": "CC0"
  }
- ]
  },
  "about": {
  "hero": {
@@ -1207,132 +1185,6 @@
  "body": "Predstavitev in številke delimo neposredno. Povej nam nekaj o sebi in oglasili se bomo.",
  "cta": "Zaprosi za predstavitev",
  "ctaSecondary": "Vprašanja medijev"
- }
- },
- "articles": {
- "more": {
- "titleHtml": "more from<br />the journal",
- "cta": "Visit journal"
- },
- "e-bike-charging-at-hospitality-stops": {
- "meta": {
- "tag": "Tips",
- "date": "29.09.26"
- },
- "title": "zakaj je polnjenje e-koles pri gostinskih postankih pomembno",
- "lede": "A charger at a café or guesthouse can decide how far a ride goes. Here's why, and how to find one.",
- "body": {
- "p1": "There's a particular kind of calm you only get when you know where the next charger is. You stop checking the battery every five minutes. You take the detour to the viewpoint. You order the second coffee. When a stop isn't visible online, that calm disappears, and longer rides shrink to whatever feels safe to guess.",
- "h1": "visibility is everything",
- "p2": "Plenty of cafés, restaurants and guesthouses already let riders plug in an e-bike. Very few of them say so anywhere a rider would look. The socket is there, the owner is happy to help, but for anyone planning a ride it might as well not exist.",
- "p3": "That's the gap Zyflow is built to close. In the app, charging sits in the Utility layer on the Explore map, next to water, bike shops, repair and bike parking. Turn it on and you see where you can top up before you leave home, not after the battery warning starts blinking.",
- "h2": "a charger changes the shape of the day",
- "p4": "A known charging stop does more than add range. It turns a ride into a plan. Lunch becomes the moment the battery fills back up. A guesthouse with a socket becomes the reason a two-day loop works. The places worth stopping at and the places that keep you rolling are often the same places.",
- "li1": "<strong>Find it before you go.</strong> Open Explore, switch on Utility and look at the stretch where your battery will be lowest",
- "li2": "<strong>Pair it with a stop you'd enjoy anyway.</strong> A charger at a café beats a charger in a car park",
- "li3": "<strong>Have a plan B.</strong> Note a second option nearby, in case the first one is closed or busy",
- "h3": "plan for the climb, not the café",
- "p5": "Battery drain is not even. A flat valley road costs little, while a long climb, a headwind or a cold morning can cost a lot. When you plan a route in Zyflow, the battery plan takes the climbs and the weather into account and shows the chargers along the way, so you know where the tight sections are before you reach them.",
- "quote": "\"If a charger isn't visible online, many riders never find it. And longer rides shrink to whatever feels safe to guess.\"",
- "h4": "if you run a place with a spare socket",
- "p6": "Riders are looking for you. Listing a café, restaurant, guesthouse or charger on Zyflow is free while we launch, and you can manage your own details, photos and opening hours through the partner portal. A socket and a friendly \"yes, of course\" is often all it takes to become the stop a ride is planned around."
- }
- },
- "planning-your-first-battery-aware-day-ride": {
- "meta": {
- "tag": "Tips",
- "date": "22.09.26"
- },
- "title": "načrtovanje prve dnevne ture glede na baterijo",
- "lede": "Range, climbs and chargers: a simple way to plan a day ride you'll actually finish.",
- "body": {
- "p1": "The best first long ride on an e-bike isn't the most ambitious one. It's the one where you come home with battery to spare, a few good stops behind you and the feeling that next time you could go further. Here's a simple way to plan it.",
- "h1": "start with an honest range",
- "p2": "The number on the box is a best case. Real range depends on the assist level you actually use, your weight and luggage, the tyres and the weather. Set your range in Zyflow the way you really ride, not the way the brochure rides. If you're not sure, be a little conservative. Finishing with 20% left feels a lot better than finishing with 2%.",
- "h2": "pick a rolling route first",
- "p3": "A rolling countryside day is where almost every rider should begin. The rhythm is predictable, the climbs are short and you get a feel for how your battery behaves without the mountains making the decisions for you. Browse the routes by region and ride type, and choose one that matches the day you want, not the day you think you should manage.",
- "h3": "read the battery plan before you leave",
- "p4": "When you plan a ride, Zyflow builds a battery plan from the route's elevation, your range settings and the wind and weather forecast. It shows where the effort will be and where the chargers sit along the way.",
- "li1": "<strong>Look for the tight section.</strong> The part of the ride with the hardest climb and the furthest charger is the one to plan around",
- "li2": "<strong>Check the wind.</strong> A headwind on the way home can cost more than the climb on the way out",
- "li3": "<strong>Mark a charging stop.</strong> Even if you don't need it, knowing it's there changes how you ride",
- "quote": "\"Finishing with 20% left feels a lot better than finishing with 2%.\"",
- "h4": "plan the stops, not just the line",
- "p5": "A good day ride is more than distance. Turn on Coffee and Restaurants in Explore and pick a place to stop around the halfway point. If it has a charger or bike parking, even better. Stops are where the ride becomes a day out, and they're easy to plan once you can see them.",
- "h5": "then go a little further",
- "p6": "After a ride or two you'll know how your bike behaves on climbs, in the cold and with a full bag. That's when longer days and bigger mountains start to make sense. Build up slowly, keep a charger in the plan, and let each ride teach you something for the next one."
- }
- },
- "what-makes-a-place-bike-friendly": {
- "meta": {
- "tag": "Guides",
- "date": "15.09.26"
- },
- "title": "kaj naredi kraj prijazen kolesarjem?",
- "lede": "Bike parking, secure storage, a pump, a charger. What we look for, and how to filter for it in the app.",
- "body": {
- "p1": "\"Bike-friendly\" gets used a lot. A sticker on a door, a line on a booking site, a rack that fits two bikes on a good day. For riders, it should mean something more useful: you can arrive by bike, leave it somewhere you trust, and enjoy the place without worrying about what's happening outside.",
- "h1": "what we look for",
- "p2": "In Zyflow, a place counts as bike-friendly when it offers real facilities for riders, not just goodwill. The ones that matter most:",
- "li1": "<strong>Bike parking.</strong> Somewhere proper to lock up, close to the entrance",
- "li2": "<strong>Secure storage.</strong> A locked room, garage or shed, especially important for stays and expensive e-bikes",
- "li3": "<strong>A pump and basic tools.</strong> Small things that save a ride",
- "li4": "<strong>Charging.</strong> A socket for an e-bike, ideally somewhere you can sit and wait",
- "h2": "where the information comes from",
- "p3": "We combine open map data, regional tourism data from partners like Open Data Hub, and details that businesses add themselves. When a hotel, café or restaurant manages its own listing, the information tends to be more accurate and more current. That's why we're making it free for places to list and update themselves while we launch.",
- "quote": "\"You can arrive by bike, leave it somewhere you trust, and enjoy the place without worrying about what's happening outside.\"",
- "h3": "how to find these places in the app",
- "p4": "Open Explore and switch on the layers you care about: Stay, Coffee or Restaurants. Then turn on Bike-friendly only. The map now shows just the places with real facilities for riders, so you can plan a lunch stop or a night's stay knowing the bike is taken care of too.",
- "p5": "For peace of mind, you can also turn on the Safety layer to see bike theft by area. It's a simple way to decide where secure storage really matters.",
- "h4": "run a place riders love?",
- "p6": "If you have a rack, a storage room or a spare socket, riders want to know. Request access to the partner portal, add your facilities and photos, and your place shows up for riders who filter for exactly that."
- }
- },
- "zyflow-is-live-on-ios-and-android": {
- "meta": {
- "tag": "News",
- "date": "08.09.26"
- },
- "title": "zyflow je na voljo za ios in android",
- "lede": "Free on both stores and live in 8 countries. Here's what to try on your next ride.",
- "body": {
- "p1": "Zyflow is now free on the App Store and Google Play, and live in 8 countries. We're just getting started, and we built it around one simple idea: explore bike-friendly places, and ride there feeling safe. Here's what to try first.",
- "h1": "explore the places around you",
- "p2": "Open Explore and you'll see the map in layers. Stay, Coffee and Restaurants show you where to stop, sleep and eat. Utility brings in the practical things: charging, water, bike shops, repair and bike parking. Turn on only what you need, and the map stays clean.",
- "h2": "filter for bike-friendly",
- "p3": "Switch on Bike-friendly only and the map narrows to places with real facilities for riders, like bike parking, secure storage, a pump or a charger. It's the quickest way to find a café you can actually ride to and a stay that has room for your bike.",
- "h3": "know what's on the road",
- "p4": "Before you head out, check Road conditions nearby on Home. Zyflow shows closures, construction and events around you and along a planned route, so you're not surprised halfway through. The Safety layer on the map shows bike theft by area, which helps when you're deciding where to leave the bike.",
- "quote": "\"Explore bike-friendly places. Ride there feeling safe.\"",
- "h4": "plan a ride when you want one",
- "p5": "Found a place you want to reach? Plan a route there. On an e-bike, the battery plan takes the climbs, your range and the weather into account and shows chargers along the way. Planning works offline-ready too, so a patchy signal in the hills doesn't leave you guessing.",
- "h5": "help us grow",
- "p6": "This is the first version, and the map gets better with every place added. If you run a café, restaurant, stay or charger, listing it is free while we launch. If you spot something missing or wrong, tell us. We read everything."
- }
- },
- "reading-elevation-before-a-cross-border-ride": {
- "meta": {
- "tag": "Guides",
- "date": "01.09.26"
- },
- "title": "branje višinskega profila pred čezmejno turo",
- "lede": "How to read the climbs on a ride like Ljubljana to Trieste, and where to plan your stops.",
- "body": {
- "p1": "A ride from Ljubljana to Trieste sounds like it should be downhill all the way. You start inland and finish at the sea. But the Karst plateau sits in between, and the shape of the climb before the coast decides how the whole day feels. Reading the elevation before you leave is what turns a hard day into a good one.",
- "h1": "look at the shape, not just the total",
- "p2": "Total climbing tells you how hard a ride is. The elevation profile tells you when it's hard. A long steady rise in the first half feels very different from a steep ramp late in the day, even if the numbers are the same. In Zyflow, the elevation profile is colour-coded by gradient and the main climbs are marked, so you can see at a glance where the work is.",
- "h2": "find the long climb",
- "li1": "<strong>The steady rise.</strong> On a route like this, most of the effort comes as you climb gradually onto the Karst. It's rarely steep, but it's long, and it's where the battery works hardest",
- "li2": "<strong>The high ground.</strong> Once you're up, the plateau rolls. This is the place to stop, eat and recharge before the coast",
- "li3": "<strong>The drop to the sea.</strong> The descent towards Trieste is the reward. Take it easy, the roads get busier near the city",
- "quote": "\"Total climbing tells you how hard a ride is. The elevation profile tells you when it's hard.\"",
- "h3": "plan your stops around the climbs",
- "p3": "The best place for a break is usually just before or just after the biggest effort. Turn on Coffee, Restaurants and Utility in Explore and look at what sits along the route near the top of the climb. A lunch stop with a charger there means you start the descent with a full battery and a full stomach.",
- "h4": "crossing a border",
- "p4": "Zyflow is live in 8 countries, so places and routes don't stop at the border. Before you go, check Road conditions along your planned route for closures or construction on either side, and remember that opening hours and holidays can differ from one country to the next.",
- "h5": "ride it once, read it better next time",
- "p5": "After your first cross-border ride, the elevation profile will start to look different. You'll know what a long rise feels like on your bike, and you'll plan the next one faster. Start with a route like Ljubljana to Trieste, plan the stops around the climb, and enjoy the sea at the end."
- }
  }
  },
  "routes": {

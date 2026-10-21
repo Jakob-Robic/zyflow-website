@@ -4,7 +4,7 @@
   "proxy": {
     "entrypoint": "server-pageview-middleware.js",
     "matcher": [
-      "/((?!api(?:/|$)|assets/|css/|js/|fonts/|favicon.ico|robots.txt|sitemap.xml|manifest.json).*)"
+      "/((?!api(?:/|$)|assets/|css/|js/|fonts/|favicon.ico|robots.txt|sitemap.xml|manifest.json|blog/rss\\.xml|sl/blog/rss\\.xml).*)"
     ]
   },
   "cleanUrls": true,
@@ -179,12 +179,12 @@
     },
     {
       "source": "/blog-article",
-      "destination": "/blog/e-bike-charging-at-hospitality-stops",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/sl/blog-article",
-      "destination": "/sl/blog/e-bike-charging-at-hospitality-stops",
+      "destination": "/sl/blog",
       "permanent": true
     },
     {

@@ -477,6 +477,8 @@ function titleIssues(locale, title) {
 function collectMetaIssues(messagesByLocale, pages, pageLocales) {
   const issues = [];
   for (const page of pages) {
+    // Post and author titles live in frontmatter, checked by blog.js.
+    if (page.blogKind) continue;
     for (const locale of pageLocales(page)) {
       const meta = messagesByLocale[locale]?.meta?.pages?.[page.id] || {};
       for (const problem of descriptionIssues(locale, meta.description)) {
@@ -545,6 +547,7 @@ module.exports = {
   MAX_DESCRIPTION,
   descriptionIssues,
   titleIssues,
+  languageIssues,
   collectMetaIssues,
   absoluteOgImage,
   tourHasOwnOg,
