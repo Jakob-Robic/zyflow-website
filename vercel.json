@@ -4,7 +4,7 @@
   "proxy": {
     "entrypoint": "server-pageview-middleware.js",
     "matcher": [
-      "/((?!api(?:/|$)|assets/|css/|js/|fonts/|favicon.ico|robots.txt|sitemap.xml|manifest.json|blog/rss\\.xml(?:$|\\?)|sl/blog/rss\\.xml(?:$|\\?)).*)"
+      "/((?!api(?:/|$)|assets/|css/|js/|fonts/|favicon\\.ico$|robots\\.txt$|sitemap\\.xml$|manifest\\.json$|blog/rss\\.xml(?:$|\\?)|sl/blog/rss\\.xml(?:$|\\?)).*)"
     ]
   },
   "cleanUrls": true,

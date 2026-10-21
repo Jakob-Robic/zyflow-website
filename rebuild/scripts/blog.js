@@ -339,11 +339,11 @@ function hrefProblem(raw) {
   if (href.startsWith("./") || href.startsWith("../")) return null;
   const match = /^([a-z][a-z0-9+.-]*):/i.exec(href);
   if (!match) {
-    if (/^[a-z0-9._~-][a-z0-9._~/-]*$/i.test(href)) return null;
+    if (/^[%a-z0-9._~-][%a-z0-9._~/-]*$/i.test(href)) return null;
     return "URL is not allowed";
   }
   const scheme = `${match[1].toLowerCase()}:`;
-  if (scheme === "https:" || scheme === "http:" || scheme === "mailto:") return null;
+  if (scheme === "https:" || scheme === "http:" || scheme === "mailto:" || scheme === "tel:") return null;
   return `URL scheme "${scheme}" is not allowed`;
 }
 
@@ -587,11 +587,37 @@ function parseMarkdown(markdown, ctx) {
   return { html: marked.parser(tokens) };
 }
 
+function hasTemplateToken(value) {
+  let text = String(value ?? "");
+  for (let i = 0; i < 5; i++) {
+    const next = decodeEntities(text);
+    if (next === text) break;
+    text = next;
+  }
+  return text.includes("{{");
+}
+
+function walkText(value, visit) {
+  if (typeof value === "string") visit(value);
+  else if (Array.isArray(value)) for (const item of value) walkText(item, visit);
+  else if (value && typeof value === "object") {
+    for (const item of Object.values(value)) walkText(item, visit);
+  }
+}
+
+function lintFrontMatter(data, problems) {
+  walkText(data, (value) => {
+    if (hasTemplateToken(value)) {
+      push(problems, "template tokens {{...}} are not allowed in front matter");
+    }
+  });
+}
+
 function lintBody(post, problems) {
-  // The app CTA helper inserts {{appStoreUrl}}. Markdown must not: any {{...}}
-  // token, including {{appStoreUrl}}, is rejected so the store-link pass cannot
-  // rewrite a post body.
-  if (/\{\{/.test(post.body)) {
+  // The app CTA helper inserts {{appStoreUrl}} into its own HTML. Post Markdown
+  // and front matter must not: any {{...}} token, including {{appStoreUrl}} and
+  // entity-encoded braces, is rejected so the store-link pass cannot rewrite it.
+  if (hasTemplateToken(post.body)) {
     push(problems, "template tokens {{...}} are not allowed in the post body");
   }
   const ctx = {
@@ -604,7 +630,10 @@ function lintBody(post, problems) {
     renderTourCard: null,
   };
   for (const problem of unclosedBlocks(post.body)) push(problems, problem);
-  parseMarkdown(post.body, ctx);
+  const parsed = parseMarkdown(post.body, ctx);
+  if (hasTemplateToken(parsed.html)) {
+    push(problems, "template tokens {{...}} are not allowed in the post body");
+  }
 }
 
 function loadAuthors(dir, errors) {
@@ -780,6 +809,9 @@ function normalizePost(entry, errors) {
   if (post.aiAssisted === true && !post.howWeMade) fail("howWeMade is required when aiAssisted is true");
   if (!Array.isArray(post.relatedTours)) fail("relatedTours must be a list");
   if (!Array.isArray(post.relatedPosts)) fail("relatedPosts must be a list");
+  const templateProblems = [];
+  lintFrontMatter(data, templateProblems);
+  for (const problem of templateProblems) fail(problem);
   post.readingMinutes = readingMinutes(post.body);
   post.heroFile = post.hero && post.hero.src ? resolveInside(post.dir, post.hero.src) : "";
   return post;
@@ -1170,8 +1202,7 @@ function filterLocale(messages) {
   return messages && messages.meta && messages.meta.locale === "sl" ? "sl" : "en";
 }
 
-function renderExplore(locale, messages) {
-  const posts = publishedIn(catalog.posts, locale);
+function renderExplore(locale, messages, posts) {
   const parts = catalog.taxonomy.regions.map((region) => {
     const hub = posts.find((post) => post.hubLevel === "region" && post.region === region.id);
     const regionHtml = hub
@@ -1191,7 +1222,7 @@ function renderExplore(locale, messages) {
 }
 
 function renderBlogHub(locale, messages, options = {}) {
-  const posts = postsFor(locale);
+  const posts = options.journalPublic ? postsFor(locale) : [];
   const featurePool = posts.filter((post) => post.hubLevel === "pillar" || post.hubLevel === "region");
   const feature = featurePool[0] || null;
   const cards = posts.filter((post) => !feature || post.translationKey !== feature.translationKey);
@@ -1232,7 +1263,7 @@ function renderBlogHub(locale, messages, options = {}) {
       ${cards.map((post) => storyCard(post, messages)).join("\n")}
     </div>
     ${empty}
-    ${renderExplore(locale, messages)}
+    ${renderExplore(locale, messages, posts)}
     <div class="blog-hub__foot">${rss}${renderAppCta(messages)}</div>
   </div>
 </section>`;
@@ -1437,7 +1468,7 @@ function breadcrumbNodes(post, locale, messages, absolute) {
   };
 }
 
-function structuredNodes(page, locale, messages, absolute, origin) {
+function structuredNodes(page, locale, messages, absolute, origin, options = {}) {
   if (page.blogKind === "post") {
     const post = postFor(page, locale);
     if (!post) return [];
@@ -1476,7 +1507,7 @@ function structuredNodes(page, locale, messages, absolute, origin) {
     return nodes;
   }
   if (page.id === "blog") {
-    const posts = postsFor(locale);
+    const posts = options.journalPublic ? postsFor(locale) : [];
     return [
       {
         "@type": "Blog",

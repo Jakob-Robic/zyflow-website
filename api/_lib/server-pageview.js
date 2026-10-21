@@ -43,7 +43,7 @@ const BOT_UA_RE =
 const middlewareConfig = {
   runtime: 'nodejs',
   matcher: [
-    '/((?!api(?:/|$)|assets/|css/|js/|fonts/|favicon.ico|robots.txt|sitemap.xml|manifest.json|blog/rss\\.xml(?:$|\\?)|sl/blog/rss\\.xml(?:$|\\?)).*)',
+    '/((?!api(?:/|$)|assets/|css/|js/|fonts/|favicon\\.ico$|robots\\.txt$|sitemap\\.xml$|manifest\\.json$|blog/rss\\.xml(?:$|\\?)|sl/blog/rss\\.xml(?:$|\\?)).*)',
   ],
 };
 

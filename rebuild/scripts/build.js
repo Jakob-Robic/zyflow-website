@@ -1016,7 +1016,9 @@ function organizationLd() {
 
 function structuredData(page, locale, messages) {
   const graph = [organizationLd()];
-  const blogNodes = structuredNodes(page, locale, messages, absoluteUrl, SITE_ORIGIN);
+  const blogNodes = structuredNodes(page, locale, messages, absoluteUrl, SITE_ORIGIN, {
+    journalPublic: JOURNAL_IS_PUBLIC,
+  });
   if (blogNodes) {
     graph.push(...blogNodes);
     return { "@context": "https://schema.org", "@graph": graph };

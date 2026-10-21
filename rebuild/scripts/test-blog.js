@@ -378,7 +378,7 @@ test("safe link schemes stay, and attack payloads name the file", () => {
   const safe = catalogFrom(
     one(
       draft,
-      "See [the site](https://www.zyflow.eu/blog), [mail](mailto:hello@zyflow.eu), [root](/blog), [dot](./notes) and [jump](#top).\n"
+      "See [the site](https://www.zyflow.eu/blog), [mail](mailto:hello@zyflow.eu), [phone](tel:+38640123456), [root](/blog), [dot](./notes), [pct](caf%C3%A9.html) and [jump](#top).\n"
     )
   );
   assert.deepEqual(safe.errors, []);
@@ -407,11 +407,86 @@ test("safe link schemes stay, and attack payloads name the file", () => {
     ["[click](data:text/html;base64,PHNjcmlwdD4=)\n", /URL scheme "data:" is not allowed/],
     ["[click](vbscript:msgbox(1))\n", /URL scheme "vbscript:" is not allowed/],
     ["See {{appStoreUrl}} for the store.\n", /template tokens \{\{\.\.\.\}\} are not allowed/],
+    ["Text &#123;&#123;appStoreUrl&#125;&#125; here.\n", /template tokens \{\{\.\.\.\}\} are not allowed in the post body/],
+    [":::faq\n### Where?\nText &#123;&#123;robots&#125;&#125; here.\n:::\n", /template tokens \{\{\.\.\.\}\} are not allowed/],
   ];
   for (const [body, needle] of attacks) {
     const found = errorsOf(one(draft, `Intro paragraph for the test post.\n\n${body}`));
     assert.match(found, /sample-ride\/en\.md/, body);
     assert.match(found, needle, found);
+  }
+
+  const titled = basePost({
+    status: "draft",
+    facts: undefined,
+    sources: undefined,
+    title: "Café chargers {{appStoreUrl}} guide for riders",
+  });
+  const titleErrors = errorsOf(one(titled));
+  assert.match(titleErrors, /sample-ride\/en\.md/);
+  assert.match(titleErrors, /template tokens \{\{\.\.\.\}\} are not allowed in front matter/);
+  const credited = basePost({
+    status: "draft",
+    facts: undefined,
+    sources: undefined,
+    hero: { src: "images/hero.jpg", alt: "Café socket", credit: "Zyflow {{x}}", licence: "own" },
+    description: "Find the café socket &#123;&#123;robots&#125;&#125; before the climb.",
+  });
+  assert.match(errorsOf(one(credited)), /sample-ride\/en\.md: template tokens \{\{\.\.\.\}\} are not allowed in front matter/);
+});
+
+test("a hidden journal hub does not list published posts", () => {
+  const content = fs.mkdtempSync(path.join(os.tmpdir(), "zyflow-blog-hidden-"));
+  const dist = fs.mkdtempSync(path.join(os.tmpdir(), "zyflow-blog-hidden-dist-"));
+  const en = basePost({
+    translationKey: "published-probe",
+    slug: "published-probe",
+    title: "Test post about bike-friendly cafés",
+    description: "A short test post about cafés and chargers for riders in Gorenjska.",
+  });
+  const sl = basePost({
+    translationKey: "published-probe",
+    slug: "objavljeni-preizkus",
+    title: "Preizkus objave o kolesarjem prijaznih kavarnah",
+    description: "Kratek preizkus objave, ki ne sme na skriti dnevnik.",
+  });
+  writeTree(content, {
+    ...Object.fromEntries([
+      md("published-probe", "en", en, "Find the café socket before the climb.\n"),
+      md(
+        "published-probe",
+        "sl",
+        sl,
+        "Najdi polnilnice ob kavarnah, preden se odpraviš na kolesarsko pot.\n\nKolesarji načrtujejo postanke in vzpon.\n"
+      ),
+    ]),
+  });
+  try {
+    const env = {
+      ...process.env,
+      BLOG_CONTENT: content,
+      SITE_INDEX: "true",
+      REBUILD_DIST: dist,
+      MAPTILER_KEY: "",
+    };
+    delete env.JOURNAL_PUBLIC;
+    try {
+      execFileSync(process.execPath, [BUILD], { env, stdio: "pipe" });
+    } catch (error) {
+      const stderr = error.stderr ? error.stderr.toString() : "";
+      throw new Error(stderr || error.message);
+    }
+    for (const rel of ["blog.html", "sl/blog.html"]) {
+      const html = fs.readFileSync(path.join(dist, rel), "utf8");
+      assert.doesNotMatch(html, /published-probe/, rel);
+      assert.doesNotMatch(html, /objavljeni-preizkus/, rel);
+      assert.match(html, /name="robots" content="noindex, nofollow"/);
+    }
+    assert.equal(fs.existsSync(path.join(dist, "blog/published-probe.html")), false);
+    assert.equal(fs.existsSync(path.join(dist, "sl/blog/objavljeni-preizkus.html")), false);
+  } finally {
+    fs.rmSync(content, { recursive: true, force: true });
+    fs.rmSync(dist, { recursive: true, force: true });
   }
 });
 
