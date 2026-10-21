@@ -564,7 +564,7 @@
  "place": "Tržič → Košuta",
  "region": "Gorenjska, Slovenia",
  "title": "Planine pod Košuto",
- "meta0": "Alpine",
+ "meta0": "39.7 km",
  "meta1": "1740 m",
  "meta2": "Alpine",
  "body": "Tržič’s alpine flagship: forest roads and pasture shelves under the long white wall of Košuta, big climbing, bigger views.",
@@ -575,22 +575,22 @@
  "place": "Tržič → Jezersko",
  "region": "Gorenjska, Slovenia",
  "title": "Tržič – Jezersko",
- "meta0": "",
+ "meta0": "28.1 km",
  "meta1": "Alpine",
  "meta2": "Alpine",
  "body": "A linking ride between two alpine valleys, from Tržič’s Karawanks flank across to the glacier bowl of Jezersko.",
- "price": "",
+ "price": "28.1 km",
  "unit": ""
  },
  {
  "place": "Tržič → Storžič",
  "region": "Gorenjska, Slovenia",
  "title": "Dom pod Storžičem",
- "meta0": "",
+ "meta0": "18.1 km",
  "meta1": "Alpine",
  "meta2": "Alpine",
  "body": "A hut-day climb toward Storžič, forest gradients, mountain air and a clear turnaround at Dom pod Storžičem.",
- "price": "",
+ "price": "18.1 km",
  "unit": ""
  },
  {
@@ -608,66 +608,66 @@
  "place": "Tržič → Brezje pri Tržiču",
  "region": "Gorenjska, Slovenia",
  "title": "Rožnovenska pot",
- "meta0": "",
+ "meta0": "20.1 km",
  "meta1": "Touring",
  "meta2": "Touring",
  "body": "A culture-forward loop from Tržič through Brezje pri Tržiču, churches, valley towns and riding that stays scenic without going fully alpine.",
- "price": "",
+ "price": "20.1 km",
  "unit": ""
  },
  {
  "place": "Tržič → Dobrča",
  "region": "Gorenjska, Slovenia",
  "title": "Dobrča",
- "meta0": "",
+ "meta0": "26.9 km",
  "meta1": "Alpine",
  "meta2": "Alpine",
  "body": "A full alpine day toward Dobrča, long climbs, ridge air and the feeling of riding the Karawanks rather than around them.",
- "price": "",
+ "price": "26.9 km",
  "unit": ""
  },
  {
  "place": "Tržič · Udin boršt",
  "region": "Gorenjska, Slovenia",
  "title": "Udin boršt",
- "meta0": "",
+ "meta0": "25.3 km",
  "meta1": "Gravel",
  "meta2": "Gravel",
  "body": "Foothill gravel around Udin boršt, forest tracks, gentle rollers and enough variety to feel adventurous without a high pass.",
- "price": "",
+ "price": "25.3 km",
  "unit": ""
  },
  {
  "place": "Tržič · Three Bells",
  "region": "Gorenjska, Slovenia",
  "title": "Pot treh zvonov",
- "meta0": "",
+ "meta0": "10 km",
  "meta1": "Touring",
  "meta2": "Touring",
  "body": "The easy family loop of the Tržič set, gentle terrain, village bells and a rhythm that works for mixed abilities.",
- "price": "",
+ "price": "10 km",
  "unit": ""
  },
  {
  "place": "Tržič · Kriva jelka",
  "region": "Gorenjska, Slovenia",
  "title": "Kriva jelka",
- "meta0": "",
+ "meta0": "24 km",
  "meta1": "Gravel",
  "meta2": "Gravel",
  "body": "Into the Udin boršt nature reserve toward the crooked fir, shaded tracks and a landmark finish in the forest.",
- "price": "",
+ "price": "24 km",
  "unit": ""
  },
  {
  "place": "Tržič · Gozd",
  "region": "Gorenjska, Slovenia",
  "title": "Gozd – Udin boršt",
- "meta0": "",
+ "meta0": "26.9 km",
  "meta1": "Gravel",
  "meta2": "Gravel",
  "body": "A varied foothill loop linking Gozd with Udin boršt, more climbing than the family routes, still short of alpine grades.",
- "price": "",
+ "price": "26.9 km",
  "unit": ""
  },
  {
@@ -1472,7 +1472,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "39.7 <span>km</span>",
  "elevationHtml": "1740 <span>m</span>",
  "difficulty": "Hard",
  "intro": "K11 is the high signature of the Tržič network. You leave town for steep forest approaches that open onto a chain of planine under Košuta, with views that stretch toward Austria. This is a full mountain day, not a café loop.",
@@ -1488,7 +1488,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "39.7 km",
  "unit": " · 1740 m",
  "sections": [
  {
@@ -1515,7 +1515,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "28.1 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Hard",
  "intro": "K16 is the bridge in the Tržič shortlist: fewer postcard stops, more committed mountain kilometres, and a true change of valley when you finally drop toward Jezersko.",
@@ -1531,7 +1531,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "28.1 km",
  "unit": " · 1299 m",
  "sections": [
  {
@@ -1558,7 +1558,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "18.1 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Hard",
  "intro": "K21 is built around one goal: reach the hut under Storžič, eat, then descend with fresh attention for Tržič’s streets. It is shorter than Košuta or Ljubelj in spirit, still honestly alpine.",
@@ -1574,7 +1574,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "18.1 km",
  "unit": " · 280 m",
  "sections": [
  {
@@ -1644,7 +1644,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "20.1 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Easy–intermediate",
  "intro": "K42 is for mixed groups and heritage days: quieter roads, churches and villages, and enough distance to feel complete without Košuta’s commitment.",
@@ -1660,7 +1660,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "20.1 km",
  "unit": " · 369 m",
  "sections": [
  {
@@ -1687,7 +1687,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "26.9 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Hard",
  "intro": "K43 sits with the harder Tržič alpine set: sustained climbing, thinner traffic higher up, and panoramas that justify an early start.",
@@ -1703,7 +1703,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "26.9 km",
  "unit": " · 2067 m",
  "sections": [
  {
@@ -1730,7 +1730,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "25.3 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Intermediate",
  "intro": "K51 is the confident gravel day of the Tržič shortlist: more dirt than asphalt, still close enough to town that a café finish is easy.",
@@ -1746,7 +1746,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "25.3 km",
  "unit": " · 286 m",
  "sections": [
  {
@@ -1773,7 +1773,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "10 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Easy",
  "intro": "K52 is the gateway ride: approachable distance and gradient, still unmistakably Gorenjska countryside around Tržič. Bring kids, recovery legs or anyone new to the local roads.",
@@ -1789,7 +1789,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "10 km",
  "unit": " · 144 m",
  "sections": [
  {
@@ -1816,7 +1816,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "24 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Easy–intermediate",
  "intro": "K53 targets one of the area’s best-known forest landmarks. Expect soft ground after rain and a calmer alternative to the high alpine days above Tržič.",
@@ -1832,7 +1832,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "24 km",
  "unit": " · 386 m",
  "sections": [
  {
@@ -1859,7 +1859,7 @@
  "place": "tržič",
  "coords": "46.36° N, 14.31° E",
  "durationHtml": "1 <span>day</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "26.9 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Intermediate",
  "intro": "K55 sits between easy bells and hard passes: useful when you want sweat without committing to Ljubelj or Košuta.",
@@ -1875,7 +1875,7 @@
  "difficultyLabel": "Difficulty",
  "nextLabel": "Best season",
  "nextValue": "Apr – Oct",
- "price": "",
+ "price": "26.9 km",
  "unit": " · 763 m",
  "sections": [
  {

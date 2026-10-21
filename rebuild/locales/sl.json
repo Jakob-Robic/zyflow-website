@@ -564,7 +564,7 @@
  "place": "Tržič → Košuta",
  "region": "Gorenjska, Slovenija",
  "title": "Planine pod Košuto",
- "meta0": "Alpska",
+ "meta0": "39,7 km",
  "meta1": "1740 m",
  "meta2": "Alpska",
  "body": "Alpska zastavonoša Tržiča: gozdne ceste in police planin pod belo steno Košute, veliko vzpona, še več razgleda.",
@@ -575,22 +575,22 @@
  "place": "Tržič → Jezersko",
  "region": "Gorenjska, Slovenija",
  "title": "Tržič – Jezersko",
- "meta0": "",
+ "meta0": "28,1 km",
  "meta1": "Alpska",
  "meta2": "Alpska",
  "body": "Povezovalna tura med dvema alpskima dolinama, s tržiške strani Karavank v ledeniško skledo Jezerskega.",
- "price": "",
+ "price": "28,1 km",
  "unit": ""
  },
  {
  "place": "Tržič → Storžič",
  "region": "Gorenjska, Slovenija",
  "title": "Dom pod Storžičem",
- "meta0": "",
+ "meta0": "18,1 km",
  "meta1": "Alpska",
  "meta2": "Alpska",
  "body": "Koča pod Storžičem: gozdni vzponi, gorski zrak in jasen obrat pri Domu pod Storžičem.",
- "price": "",
+ "price": "18,1 km",
  "unit": ""
  },
  {
@@ -608,66 +608,66 @@
  "place": "Tržič → Brezje pri Tržiču",
  "region": "Gorenjska, Slovenija",
  "title": "Rožnovenska pot",
- "meta0": "",
+ "meta0": "20,1 km",
  "meta1": "Turistična",
  "meta2": "Turistična",
  "body": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču, cerkve, doline in razgledna vožnja brez polne alpske zahtevnosti.",
- "price": "",
+ "price": "20,1 km",
  "unit": ""
  },
  {
  "place": "Tržič → Dobrča",
  "region": "Gorenjska, Slovenija",
  "title": "Dobrča",
- "meta0": "",
+ "meta0": "26,9 km",
  "meta1": "Alpska",
  "meta2": "Alpska",
  "body": "Alpska tura proti Dobrči, dolgi vzponi, grebenski zrak in občutek, da kolesariš Karavanke, ne mimo njih.",
- "price": "",
+ "price": "26,9 km",
  "unit": ""
  },
  {
  "place": "Tržič · Udin boršt",
  "region": "Gorenjska, Slovenija",
  "title": "Udin boršt",
- "meta0": "",
+ "meta0": "25,3 km",
  "meta1": "Gravel",
  "meta2": "Gravel",
  "body": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in dovolj raznolikosti brez visokega prelaza.",
- "price": "",
+ "price": "25,3 km",
  "unit": ""
  },
  {
  "place": "Tržič · Trije zvonovi",
  "region": "Gorenjska, Slovenija",
  "title": "Pot treh zvonov",
- "meta0": "",
+ "meta0": "10 km",
  "meta1": "Turistična",
  "meta2": "Turistična",
  "body": "Lahka družinska zanka tržiškega nabora, blag teren, vaški zvonovi in ritem za različne zmožnosti.",
- "price": "",
+ "price": "10 km",
  "unit": ""
  },
  {
  "place": "Tržič · Kriva jelka",
  "region": "Gorenjska, Slovenija",
  "title": "Kriva jelka",
- "meta0": "",
+ "meta0": "24 km",
  "meta1": "Gravel",
  "meta2": "Gravel",
  "body": "V naravni rezervat Udin boršt do Krive jelke, senčne sledi in znamenit zaključek v gozdu.",
- "price": "",
+ "price": "24 km",
  "unit": ""
  },
  {
  "place": "Tržič · Gozd",
  "region": "Gorenjska, Slovenija",
  "title": "Gozd – Udin boršt",
- "meta0": "",
+ "meta0": "26,9 km",
  "meta1": "Gravel",
  "meta2": "Gravel",
  "body": "Raznolika predalpska zanka med Gozdom in Udin borštom, več vzpona kot družinske, še vedno pod alpskimi nakloni.",
- "price": "",
+ "price": "26,9 km",
  "unit": ""
  },
  {
@@ -1472,7 +1472,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "39,7 <span>km</span>",
  "elevationHtml": "1740 <span>m</span>",
  "difficulty": "Zahtevno",
  "intro": "K11 je visoki podpis tržiške mreže. Iz mesta v strme gozdne pristope, ki se odprejo v verigo planin pod Košuto, z razgledi proti Avstriji. To je poln gorski dan, ne kavarniška zanka.",
@@ -1488,7 +1488,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "39,7 km",
  "unit": " · 1740 m",
  "sections": [
  {
@@ -1515,7 +1515,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "28,1 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Zahtevno",
  "intro": "K16 je most v tržiškem naboru: manj razglednic, več zavezujočih gorskih kilometrov in prava menjava doline, ko se končno spustite proti Jezerskemu.",
@@ -1531,7 +1531,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "28,1 km",
  "unit": " · 1299 m",
  "sections": [
  {
@@ -1558,7 +1558,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "18,1 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Zahtevno",
  "intro": "K21 ima en cilj: koča pod Storžičem, hrana, nato spust s svežo pozornostjo v tržiške ulice. V duhu krajša od Košute ali Ljubelja, še vedno pošteno alpska.",
@@ -1574,7 +1574,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "18,1 km",
  "unit": " · 280 m",
  "sections": [
  {
@@ -1644,7 +1644,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "20,1 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Lahko–srednje",
  "intro": "K42 je za mešane skupine in dediščinske dni: mirnejše ceste, cerkve in vasi ter dovolj razdalje, da se počuti celovito, brez zaveze Košute.",
@@ -1660,7 +1660,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "20,1 km",
  "unit": " · 369 m",
  "sections": [
  {
@@ -1687,7 +1687,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "26,9 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Zahtevno",
  "intro": "K43 sodi med težje tržiške alpske ture: dolgotrajen vzpon, višje manj prometa in panorame, zaradi katerih vstanete zgodaj.",
@@ -1703,7 +1703,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "26,9 km",
  "unit": " · 2067 m",
  "sections": [
  {
@@ -1730,7 +1730,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "25,3 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Srednje",
  "intro": "K51 je samozavestni gravel dan tržiškega nabora: več makedama kot asfalta, še vedno dovolj blizu mesta, da je kavarniški zaključek lahek.",
@@ -1746,7 +1746,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "25,3 km",
  "unit": " · 286 m",
  "sections": [
  {
@@ -1773,7 +1773,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "10 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Lahko",
  "intro": "K52 je vhodna tura: prijazna razdalja in naklon, a še vedno prava gorenjska pokrajina okoli Tržiča. Vzemite otroke, regeneracijske noge ali nekoga novega na lokalnih cestah.",
@@ -1789,7 +1789,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "10 km",
  "unit": " · 144 m",
  "sections": [
  {
@@ -1816,7 +1816,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "24 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Lahko–srednje",
  "intro": "K53 cilja na eno najbolj znanih gozdnih znamenitosti. Po dežju mehka tla in mirnejša alternativa visokim alpskim dnem nad Tržičem.",
@@ -1832,7 +1832,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "24 km",
  "unit": " · 386 m",
  "sections": [
  {
@@ -1859,7 +1859,7 @@
  "place": "tržič",
  "coords": "46,36° S, 14,31° V",
  "durationHtml": "1 <span>dan</span>",
- "distanceHtml": ", ",
+ "distanceHtml": "26,9 <span>km</span>",
  "elevationHtml": ", ",
  "difficulty": "Srednje",
  "intro": "K55 je med lahkimi zvonovi in težkimi prelazi, ko hočete znoj, a ne Ljubelja ali Košute.",
@@ -1875,7 +1875,7 @@
  "difficultyLabel": "Zahtevnost",
  "nextLabel": "Sezona",
  "nextValue": "apr. – okt.",
- "price": "",
+ "price": "26,9 km",
  "unit": " · 763 m",
  "sections": [
  {

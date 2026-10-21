@@ -522,6 +522,7 @@ function tourOgPath(slug) {
 
 function ogImageAlt(locale, title) {
   const name = String(title || "")
+    .replace(/\s*\|\s*Zyflow\s*$/i, "")
     .replace(/^Zyflow:\s*/i, "")
     .replace(/^Zyflow,\s*/i, "")
     .trim();

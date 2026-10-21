@@ -438,6 +438,22 @@ function rewritePreload(html, rasters) {
   });
 }
 
+/** Point JSON-LD images at the hashed variant the page <img> serves, so originals can be pruned. */
+function rewriteJsonLdImages(html, rasters) {
+  if (!html.includes("application/ld+json")) return html;
+  return html.replace(
+    /<script type="application\/ld\+json">([^<]*)<\/script>/g,
+    (full, json) => {
+      let next = json;
+      for (const [src, variant] of rasters) {
+        if (!variant || !variant.fallbackSrc || !next.includes(src)) continue;
+        next = next.split(src).join(variant.fallbackSrc);
+      }
+      return next === json ? full : `<script type="application/ld+json">${next}</script>`;
+    }
+  );
+}
+
 function rewriteHtml(html, rasters, contours) {
   const tagRe = /<img\b[^>]*>/gi;
   let out = "";
@@ -502,7 +518,7 @@ async function optimizeImages(dist) {
   }
 
   for (const [file, html] of htmlByFile) {
-    const next = rewriteHtml(html, rasters, contours);
+    const next = rewriteJsonLdImages(rewriteHtml(html, rasters, contours), rasters);
     if (next !== html) fs.writeFileSync(file, next, "utf8");
   }
 
