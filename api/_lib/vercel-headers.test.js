@@ -79,7 +79,8 @@ test('legal redirects and existing security headers remain', () => {
 test('the brand book at /brand is unlisted: rewritten to the synced kit and served noindex', () => {
   const cfg = loadVercel();
   const rewrite = cfg.rewrites.find((r) => r.source === '/brand');
-  assert.equal(rewrite.destination, '/assets/design-system/brand/index.html');
+  // cleanUrls serves the folder itself; /index.html would 308 and the rewrite would 404.
+  assert.equal(rewrite.destination, '/assets/design-system/brand');
   assert.ok(cfg.rewrites.some((r) => r.source === '/brand/downloads/:path*'));
   assert.equal(headersFor('/brand(/.*)?')['X-Robots-Tag'], 'noindex, nofollow');
   assert.equal(headersFor('/assets/design-system/brand/(.*)')['X-Robots-Tag'], 'noindex, nofollow');

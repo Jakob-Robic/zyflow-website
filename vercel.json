@@ -249,7 +249,7 @@
     },
     {
       "source": "/brand",
-      "destination": "/assets/design-system/brand/index.html"
+      "destination": "/assets/design-system/brand"
     },
     {
       "source": "/brand/downloads/:path*",
