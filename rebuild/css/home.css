@@ -22,10 +22,25 @@
   padding-inline: var(--space-gap-6);
 }
 
+.announcement__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-brand-accent-1);
+  flex-shrink: 0;
+}
+
 .announcement__label {
   font-family: var(--font-badge);
-  font-size: var(--type-body);
+  font-size: var(--type-small);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--color-text-body);
+}
+
+.announcement__link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .announcement__text {
@@ -745,13 +760,16 @@ html[data-theme="light"] .footer__brand-logo--light {
   gap: var(--space-gap-3);
 }
 
+/* The h1 is the mono eyebrow: a plain fact, not a repeat of the display line. */
 .hero__h1 {
   margin: 0;
-  font-family: var(--font-body);
-  font-size: var(--type-lead);
-  font-weight: 600;
-  line-height: var(--leading-lead);
-  color: #fff;
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.84);
   text-wrap: balance;
 }
 

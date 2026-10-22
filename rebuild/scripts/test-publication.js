@@ -157,9 +157,9 @@ test("JOURNAL_PUBLIC=true restores journal links, sitemap, and robots", () => {
     assert.match(home, /data-nav-link="journal"/);
 
     const appStore = "https://apps.apple.com/si/app/zyflow/id6763228086";
-    assert.match(home, /property="og:image" content="https:\/\/www\.zyflow\.eu\/assets\/images\/home\/hero\.jpg"/);
-    assert.match(home, /property="og:image:width" content="1024"/);
-    assert.match(home, /property="og:image:height" content="680"/);
+    assert.match(home, /property="og:image" content="https:\/\/www\.zyflow\.eu\/assets\/images\/og\/zyflow-en\.jpg"/);
+    assert.match(home, /property="og:image:width" content="1200"/);
+    assert.match(home, /property="og:image:height" content="630"/);
     assert.match(home, /property="og:image:type" content="image\/jpeg"/);
     assert.match(home, /property="og:image:alt" content="Zyflow, bike-friendly places and cycling routes"/);
     assert.match(home, new RegExp(appStore.replace(/[.]/g, "\\.")));

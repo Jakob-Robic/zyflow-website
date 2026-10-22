@@ -168,10 +168,10 @@
  },
  "chrome": {
  "announcement": {
- "label": "App Update:",
- "text": "Zyflow is live on iOS and Android. Find bike-friendly places across 8 countries.",
+ "label": "App update",
+ "text": "Zyflow is live on iOS and Android, in 8 countries.",
  "textShort": "Live on iOS & Android",
- "cta": "Download"
+ "cta": "Download →"
  },
  "nav": {
  "cta": "Download",
@@ -253,7 +253,7 @@
  },
  "home": {
  "hero": {
- "titleHtml": "explore<br />further.",
+ "titleHtml": "Bike-friendly stays, cafés and chargers",
  "subtitle": "Explore bike-friendly places. Ride there feeling safe. Stays, coffee stops, restaurants and chargers, all on one map.",
  "cta": "Get the app",
  "nextDepartureLabel": "Featured route",
@@ -2054,7 +2054,7 @@
  "polaroid1": "Two cyclists riding a rocky mountain trail",
  "aboutPolaroidCyclist": "Cyclist riding past green alpine meadows",
  "polaroid3": "Group of cyclists taking a break in a pine forest",
- "bikepackSunset": "Bikepacking bike with bags at sunset",
+ "ljubljanaBridge": "Ljubljanica river and the Triple Bridge in Ljubljana",
  "coffeeSign": "Café sign reading \"cyclists need coffee\" on a village street",
  "feature2": "Two bike tourers on an alpine road below snowy peaks",
  "tourHike": "Hikers on a misty grassy ridge",

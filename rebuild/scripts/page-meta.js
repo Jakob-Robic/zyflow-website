@@ -9,9 +9,10 @@
  * at least 30% of the score, without having to outnumber the page language.
  */
 
-const DEFAULT_OG_PATH = "/assets/images/home/hero.jpg";
-const DEFAULT_OG_WIDTH = 1024;
-const DEFAULT_OG_HEIGHT = 680;
+/** Branded share image per locale, rendered by scripts/render-og.js. */
+const DEFAULT_OG_PATH = "/assets/images/og/zyflow-en.jpg";
+const DEFAULT_OG_WIDTH = 1200;
+const DEFAULT_OG_HEIGHT = 630;
 const DEFAULT_OG_TYPE = "image/jpeg";
 const TOUR_OG_WIDTH = 1200;
 const TOUR_OG_HEIGHT = 630;
@@ -518,6 +519,10 @@ function tourHasOwnOg(slug) {
   return !TOURS_USING_DEFAULT_OG.has(slug);
 }
 
+function defaultOgPath(locale) {
+  return locale === "sl" ? "/assets/images/og/zyflow-sl.jpg" : DEFAULT_OG_PATH;
+}
+
 function tourOgPath(slug) {
   return `/assets/images/og/tours/${slug}.jpg`;
 }
@@ -552,5 +557,6 @@ module.exports = {
   absoluteOgImage,
   tourHasOwnOg,
   tourOgPath,
+  defaultOgPath,
   ogImageAlt,
 };

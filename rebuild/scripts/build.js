@@ -47,7 +47,7 @@ const { appStoreUrlForLocale, assertAppStoreLinks } = require("./store-links");
 const {
   absoluteOgImage,
   collectMetaIssues,
-  DEFAULT_OG_PATH,
+  defaultOgPath,
   DEFAULT_OG_WIDTH,
   DEFAULT_OG_HEIGHT,
   DEFAULT_OG_TYPE,
@@ -86,7 +86,6 @@ function readMapTilerKey() {
   return key;
 }
 
-const OG_IMAGE_PATH = DEFAULT_OG_PATH;
 const OG_LOCALES = { en: "en_US", sl: "sl_SI" };
 
 function read(filePath) {
@@ -1110,7 +1109,7 @@ function buildHead(page, locale, messages) {
   const ogImage = absoluteOgImage(
     SITE_ORIGIN,
     usePostOg ? page.seo.ogImage : useTourOg ? tourOgPath(page.routeSlug) : "",
-    OG_IMAGE_PATH
+    defaultOgPath(locale)
   );
   const ogImageWidth = usePostOg || useTourOg ? TOUR_OG_WIDTH : DEFAULT_OG_WIDTH;
   const ogImageHeight = usePostOg || useTourOg ? TOUR_OG_HEIGHT : DEFAULT_OG_HEIGHT;
