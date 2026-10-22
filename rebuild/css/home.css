@@ -1158,7 +1158,7 @@ html[data-theme="light"] .trust__item img {
 .tour-card__pin {
   width: 60px;
   height: 60px;
-  background: var(--color-brand-accent-1);
+  background: var(--zy-text-primary);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -1286,7 +1286,7 @@ html[data-theme="light"] .trust__item img {
   height: var(--button-height-sm);
   padding-inline: var(--button-padding-sm);
   background: var(--color-surface-3);
-  border-radius: var(--radius-sm);
+  border-radius: var(--button-radius-md);
   font-size: var(--type-small);
   font-weight: 600;
   transition: background-color 200ms ease;
@@ -1294,7 +1294,7 @@ html[data-theme="light"] .trust__item img {
 
 .tour-card__cta:hover,
 .tour-card__cta:focus-visible {
-  background: #4f5247;
+  background: var(--color-surface-4);
 }
 
 .tour-card__cta img {
@@ -2114,8 +2114,9 @@ html[data-theme="light"] .testimonial__bg img {
   justify-content: space-between;
   gap: var(--space-gap-4);
   text-align: left;
-  font-family: var(--font-heading);
-  font-size: var(--type-h5);
+  font-family: var(--font-body);
+  font-size: var(--type-lead);
+  font-weight: 600;
   color: var(--color-text-heading);
   min-width: 0;
 }

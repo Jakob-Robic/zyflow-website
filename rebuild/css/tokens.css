@@ -113,13 +113,13 @@ html[data-theme="light"] {
   --color-brand-primary: var(--zy-action-primary);
   --color-brand-accent-1: var(--zy-accent);
 
-  /* Page = warmer cream; offset/Why = brighter cream (zyflow band swap) */
-  --color-surface-1: var(--zy-surface-recessed);
+  /* Page = light sand (brand book §3); offset bands = recessed sand */
+  --color-surface-1: var(--zy-surface-page);
   --color-surface-2: #e0d9cc;
   --color-surface-3: #d4cdc0;
   --color-surface-4: #c8bfb0;
-  --color-surface-offset: var(--zy-surface-page);
-  --color-surface-1-transparent: #eae6dc00;
+  --color-surface-offset: var(--zy-surface-recessed);
+  --color-surface-1-transparent: #f9f8f400;
   --color-surface-2-transparent: #e0d9cc00;
   /* Keep map-contour cards olive on cream pages */
   --color-surface-map: #373b2a;

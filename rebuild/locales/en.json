@@ -321,7 +321,7 @@
  ]
  },
  "intro": {
- "greeting": "Hey there!",
+ "greeting": "Hey there.",
  "body": "We’re Jakob and Tanja, the small team behind Zyflow in Slovenia. We’re building Zyflow so every ride comes with good places to stop, a charger when you need one, and a welcome for your bike. Questions or ideas? We read every message.",
  "link": "About Zyflow"
  },
@@ -340,8 +340,8 @@
  "kayak": "austria",
  "fourwd": "italy",
  "cta": "See routes",
- "comingSoon": "coming soon",
- "comingSoonHint": "Routes in progress"
+ "comingSoon": "routes coming soon",
+ "comingSoonHint": "Places live, routes in progress"
  },
  "testimonial": {
  "quote": "Is your place bike-friendly?",
@@ -941,7 +941,7 @@
  "title": "legal",
  "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
  "termsLede": "Usage rules, subscriptions, liability, and legal information for Zyflow.",
- "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
+ "privacyLede": "How HERKO d.o.o. collects, uses, stores, and protects your personal data.",
  "cookiesLede": "How Zyflow uses cookies and similar technologies on zyflow.eu and in the app.",
  "impressumLede": "Company details for HERKO d.o.o., the operator of Zyflow."
  },
@@ -957,7 +957,7 @@
  "date": "30. 6. 2026",
  "dateLabel": "Updated 30. 6. 2026 · v1.1",
  "title": "privacy policy",
- "lede": "This Privacy Policy explains what personal data HERKO d.o.o. Collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
+ "lede": "This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
  },
  "cookies": {
  "tag": "Updated",
@@ -980,7 +980,7 @@
  "hero": {
  "crumb1": "For businesses",
  "crumb2": "Cafés, stays, bike shops",
- "titleHtml": "put your place<br />on the map",
+ "titleHtml": "Zyflow for cafés, stays and bike shops",
  "lede": "Riders choose where to stop in Zyflow before they leave. Show them your bike parking, storage or charger, and become a stop on the routes that pass your door. You manage your listing yourself.",
  "price": "Free",
  "unit": " · during launch",
@@ -1107,7 +1107,7 @@
  "nextLabel": "Made in",
  "nextValue": "Slovenia",
  "cta": "Request our deck",
- "eyebrow": "zyflow at a glance"
+ "eyebrow": "For press and investors"
  },
  "tiles": [
  {

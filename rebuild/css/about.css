@@ -141,10 +141,12 @@
   text-align: left;
 }
 
+/* A full sentence, so DM Sans: Tanker is for one short display line (brand book §4). */
 .about-hero__story-title {
-  font-family: var(--font-heading);
-  font-size: var(--type-h3);
-  line-height: var(--leading-h3);
+  font-family: var(--font-body);
+  font-size: var(--type-h5);
+  font-weight: 600;
+  line-height: var(--leading-h5);
   margin: 0 0 var(--space-gap-7);
 }
 
