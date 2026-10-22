@@ -209,9 +209,10 @@
   border: 1px solid var(--color-surface-4);
 }
 
+/* The highlighted fact box is ink, not orange: orange is never a fill (brand book §3). */
 .tour-meta__box--accent {
-  background: var(--color-brand-accent-1);
-  border-color: var(--color-brand-accent-1);
+  background: var(--zy-text-primary);
+  border-color: var(--zy-text-primary);
 }
 
 .tour-meta__value {

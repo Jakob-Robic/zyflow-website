@@ -321,7 +321,7 @@
  ]
  },
  "intro": {
- "greeting": "Živjo!",
+ "greeting": "Živjo.",
  "body": "Sva Jakob in Tanja, mala ekipa za Zyflowom iz Slovenije. Zyflow gradiva zato, da ima vsaka vožnja dobre postanke, polnilnico, ko jo potrebuješ, in dobrodošlico za tvoje kolo. Vprašanja ali ideje? Prebereva vsako sporočilo.",
  "link": "O Zyflowu"
  },
@@ -340,8 +340,8 @@
  "kayak": "avstrija",
  "fourwd": "italija",
  "cta": "Poglej poti",
- "comingSoon": "kmalu",
- "comingSoonHint": "Poti v pripravi"
+ "comingSoon": "poti kmalu",
+ "comingSoonHint": "Kraji že na voljo, poti v pripravi"
  },
  "testimonial": {
  "quote": "Je tvoj kraj prijazen kolesarjem?",
@@ -941,7 +941,7 @@
  "title": "pravno",
  "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
  "termsLede": "Pravila uporabe, naročnine, odgovornost in pravne informacije za Zyflow.",
- "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
+ "privacyLede": "How HERKO d.o.o. collects, uses, stores, and protects your personal data.",
  "cookiesLede": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in v aplikaciji.",
  "impressumLede": "Podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
  },
@@ -957,7 +957,7 @@
  "date": "30. 6. 2026",
  "dateLabel": "Updated 30. 6. 2026 · v1.1",
  "title": "politika zasebnosti",
- "lede": "This Privacy Policy explains what personal data HERKO d.o.o. Collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
+ "lede": "This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
  },
  "cookies": {
  "tag": "Posodobljeno",
@@ -980,7 +980,7 @@
  "hero": {
  "crumb1": "Za podjetja",
  "crumb2": "Kavarne, nastanitve, kolesarske trgovine",
- "titleHtml": "postavi svoj kraj<br>na zemljevid",
+ "titleHtml": "Zyflow za kavarne, nastanitve in kolesarske trgovine",
  "lede": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svoje parkirišče za kolesa, shrambo ali polnilnico in postani postanek na poteh, ki vodijo mimo tvojih vrat. Svoj vnos urejaš sam.",
  "price": "Brezplačno",
  "unit": " · v času zagona",
@@ -1107,7 +1107,7 @@
  "nextLabel": "Narejeno v",
  "nextValue": "Sloveniji",
  "cta": "Zaprosi za predstavitev",
- "eyebrow": "zyflow na kratko"
+ "eyebrow": "Za medije in vlagatelje"
  },
  "tiles": [
  {

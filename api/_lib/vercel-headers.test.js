@@ -75,3 +75,14 @@ test('legal redirects and existing security headers remain', () => {
   assert.ok(cfg.redirects.some((r) => r.source === '/legal-pages/terms-conditions'));
   assert.ok(cfg.redirects.some((r) => r.source === '/sl/legal-privacy'));
 });
+
+test('the brand book at /brand is unlisted: rewritten to the synced kit and served noindex', () => {
+  const cfg = loadVercel();
+  const rewrite = cfg.rewrites.find((r) => r.source === '/brand');
+  assert.equal(rewrite.destination, '/assets/design-system/brand/index.html');
+  assert.ok(cfg.rewrites.some((r) => r.source === '/brand/downloads/:path*'));
+  assert.equal(headersFor('/brand(/.*)?')['X-Robots-Tag'], 'noindex, nofollow');
+  assert.equal(headersFor('/assets/design-system/brand/(.*)')['X-Robots-Tag'], 'noindex, nofollow');
+  assert.ok(cfg.redirects.some((r) => r.source === '/styleguide' && r.destination === '/brand'));
+  assert.ok(fs.existsSync(path.join(__dirname, '..', '..', 'rebuild', 'assets', 'design-system', 'brand', 'index.html')));
+});

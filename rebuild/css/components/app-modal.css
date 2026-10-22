@@ -160,7 +160,7 @@
   margin-top: auto;
   border-radius: 12px;
   background:
-    radial-gradient(circle at 70% 35%, #e94b17 0 6px, transparent 7px),
+    radial-gradient(circle at 70% 35%, var(--color-brand-accent-1) 0 6px, transparent 7px),
     linear-gradient(160deg, #434738, #2a2e1e);
 }
 

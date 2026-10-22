@@ -83,6 +83,24 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/brand(/.*)?",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/assets/design-system/brand/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -205,6 +223,11 @@
       "source": "/sl/tour",
       "destination": "/sl/tours",
       "permanent": true
+    },
+    {
+      "source": "/styleguide",
+      "destination": "/brand",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -223,6 +246,14 @@
     {
       "source": "/sl/tours/:slug",
       "destination": "/sl/tours/:slug.html"
+    },
+    {
+      "source": "/brand",
+      "destination": "/assets/design-system/brand/index.html"
+    },
+    {
+      "source": "/brand/downloads/:path*",
+      "destination": "/assets/design-system/brand/downloads/:path*"
     }
   ]
 }

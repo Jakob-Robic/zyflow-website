@@ -1,0 +1,14 @@
+Zyflow colours (zyflow.eu/brand, §3)
+
+Sand · page          #F9F8F4   rgb(249, 248, 244)         Every background, instead of white
+Sand · recessed      #EAE6DC   rgb(234, 230, 220)         Fields, chips, bands
+Hairline             #DDD8CC   rgb(221, 216, 204)         The only separator
+Ink                  #18181B   rgb(24, 24, 27)            Headlines, body text, icons
+Muted                #71717A   rgb(113, 113, 122)         Meta and hints, on page sand only
+Green · action       #355F2A   rgb(53, 95, 42)            The one button, link or highlight
+Green · deep field   #1F3A19   rgb(31, 58, 25)            Full-bleed brand fields
+Orange · accent      #F97316   rgb(249, 115, 22)          Logo and one small dot; never text or buttons
+Route blue           #2F6FD6   rgb(47, 111, 214)          Route lines on maps only
+Logo cream           #FDF6EC   rgb(253, 246, 236)         Logo and type on dark or photo grounds
+
+Proportion on any surface: sand ~70%, ink ~18%, green ~8%, orange ~1%.
