@@ -168,10 +168,10 @@
  },
  "chrome": {
  "announcement": {
- "label": "Novost:",
- "text": "Zyflow je na voljo za iOS in Android. Najdi kolesarjem prijazne kraje v 8 državah.",
+ "label": "Novost",
+ "text": "Zyflow je na voljo za iOS in Android, v 8 državah.",
  "textShort": "Na voljo za iOS in Android",
- "cta": "Prenesi"
+ "cta": "Prenesi →"
  },
  "nav": {
  "cta": "Prenesi",
@@ -253,7 +253,7 @@
  },
  "home": {
  "hero": {
- "titleHtml": "raziskuj<br>dlje.",
+ "titleHtml": "Kolesarjem prijazne nastanitve, kavarne in polnilnice",
  "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
  "cta": "Prenesi aplikacijo",
  "nextDepartureLabel": "Izpostavljena pot",
@@ -2054,7 +2054,7 @@
  "polaroid1": "Kolesarja na kamniti gorski poti",
  "aboutPolaroidCyclist": "Kolesar med zelenimi alpskimi travniki",
  "polaroid3": "Skupina kolesarjev na postanku v borovem gozdu",
- "bikepackSunset": "Kolo z bikepacking torbami ob sončnem zahodu",
+ "ljubljanaBridge": "Ljubljanica in Tromostovje v Ljubljani",
  "coffeeSign": "Tabla pred kavarno z napisom »cyclists need coffee«",
  "feature2": "Kolesarja s prtljago na alpski cesti pod zasneženimi vrhovi",
  "tourHike": "Pohodniki na meglenem travnatem grebenu",

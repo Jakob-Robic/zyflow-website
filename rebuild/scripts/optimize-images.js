@@ -47,7 +47,6 @@ const LAYOUT = {
   "intro-bikepack.jpg": { maxCss: 160, sizes: "160px" },
   "intro-cyclist.jpg": { maxCss: 200, sizes: "200px" },
   "about-polaroid-cyclist.jpg": { maxCss: 220, sizes: "220px" },
-  "bikepack-sunset.jpg": { maxCss: 220, sizes: "220px" },
   "feature-1.jpg": {
     maxCss: 480,
     sizes: "(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 420px",

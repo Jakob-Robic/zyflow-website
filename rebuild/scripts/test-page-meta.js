@@ -11,6 +11,7 @@ const {
   collectMetaIssues,
   absoluteOgImage,
   tourOgPath,
+  defaultOgPath,
   tourHasOwnOg,
   TOUR_OG_WIDTH,
   TOUR_OG_HEIGHT,
@@ -300,7 +301,11 @@ test("tour og:image uses the generated JPG; other pages keep the default", () =>
   );
   assert.equal(
     absoluteOgImage(SITE_ORIGIN, ""),
-    `${SITE_ORIGIN}/assets/images/home/hero.jpg`
+    `${SITE_ORIGIN}/assets/images/og/zyflow-en.jpg`
+  );
+  assert.equal(
+    absoluteOgImage(SITE_ORIGIN, "", defaultOgPath("sl")),
+    `${SITE_ORIGIN}/assets/images/og/zyflow-sl.jpg`
   );
 });
 
@@ -429,17 +434,17 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   assert.equal(prop(virnik, "og:image:width"), "1200");
 
   const home = read("index.html");
-  assert.equal(image(home), `${SITE_ORIGIN}/assets/images/home/hero.jpg`);
-  assert.equal(prop(home, "og:image:width"), "1024");
-  assert.equal(prop(home, "og:image:height"), "680");
+  assert.equal(image(home), `${SITE_ORIGIN}/assets/images/og/zyflow-en.jpg`);
+  assert.equal(prop(home, "og:image:width"), "1200");
+  assert.equal(prop(home, "og:image:height"), "630");
   assert.equal(prop(home, "og:image:type"), "image/jpeg");
   assert.match(prop(home, "og:image:alt"), /bike-friendly/);
   assert.equal(named(home, "twitter:image:alt"), prop(home, "og:image:alt"));
 
   const k53 = read("tours/k53-kriva-jelka.html");
-  assert.equal(image(k53), `${SITE_ORIGIN}/assets/images/home/hero.jpg`);
-  assert.equal(prop(k53, "og:image:width"), "1024");
-  assert.equal(prop(k53, "og:image:height"), "680");
+  assert.equal(image(k53), `${SITE_ORIGIN}/assets/images/og/zyflow-en.jpg`);
+  assert.equal(prop(k53, "og:image:width"), "1200");
+  assert.equal(prop(k53, "og:image:height"), "630");
   assert.equal(prop(k53, "og:image:type"), "image/jpeg");
   assert.equal(prop(k53, "og:image:alt"), prop(home, "og:image:alt"));
   assert.equal(named(k53, "twitter:image:alt"), prop(k53, "og:image:alt"));
@@ -449,7 +454,7 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
     desc(legal),
     "Politika zasebnosti, politika piškotkov in pogoji uporabe za Zyflow in HERKO d.o.o."
   );
-  assert.equal(image(legal), `${SITE_ORIGIN}/assets/images/home/hero.jpg`);
+  assert.equal(image(legal), `${SITE_ORIGIN}/assets/images/og/zyflow-sl.jpg`);
 
   const slPrivacy = read("sl/legal-privacy.html");
   assert.equal(title(slPrivacy), "Zyflow, Politika zasebnosti");
@@ -467,7 +472,7 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   assert.equal(named(slJezerski, "twitter:image:alt"), prop(slJezerski, "og:image:alt"));
 
   const slK53 = read("sl/tours/k53-kriva-jelka.html");
-  assert.equal(image(slK53), `${SITE_ORIGIN}/assets/images/home/hero.jpg`);
+  assert.equal(image(slK53), `${SITE_ORIGIN}/assets/images/og/zyflow-sl.jpg`);
   assert.match(prop(slK53, "og:image:alt"), /kolesarjem prijazni/);
   assert.equal(named(slK53, "twitter:image:alt"), prop(slK53, "og:image:alt"));
 
