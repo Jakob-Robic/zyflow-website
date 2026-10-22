@@ -36,11 +36,20 @@
       ]
     },
     {
-      "source": "/((?!api/).*)",
+      "source": "/((?!api/|assets/design-system/fonts/).*)",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
           "value": "https://www.zyflow.eu"
+        }
+      ]
+    },
+    {
+      "source": "/assets/design-system/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
         }
       ]
     },

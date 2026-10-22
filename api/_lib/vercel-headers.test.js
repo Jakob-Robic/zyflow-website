@@ -21,13 +21,21 @@ function headersFor(source) {
   return Object.fromEntries(block.headers.map((h) => [h.key, h.value]));
 }
 
-test('static routes override Vercel ACAO * and do not use a wildcard', () => {
-  const staticHeaders = headersFor('/((?!api/).*)');
+const STATIC_SOURCE = '/((?!api/|assets/design-system/fonts/).*)';
+const FONTS_SOURCE = '/assets/design-system/fonts/(.*)';
+
+test('static routes override Vercel ACAO *; only the design-system fonts use a wildcard', () => {
+  const staticHeaders = headersFor(STATIC_SOURCE);
   assert.equal(staticHeaders['Access-Control-Allow-Origin'], STATIC_ACAO);
   assert.equal(STATIC_ACAO, 'https://www.zyflow.eu');
 
-  const all = JSON.stringify(loadVercel());
-  assert.equal(/Access-Control-Allow-Origin"\s*:\s*"\*"/.test(all), false);
+  // Auth emails load Tanker from here, so mail clients need any origin.
+  assert.equal(headersFor(FONTS_SOURCE)['Access-Control-Allow-Origin'], '*');
+
+  const wildcards = loadVercel().headers.filter((block) =>
+    block.headers.some((h) => h.key === 'Access-Control-Allow-Origin' && h.value === '*')
+  );
+  assert.deepEqual(wildcards.map((block) => block.source), [FONTS_SOURCE]);
 });
 
 test('report-only CSP is inventoried, has reporting, and omits upgrade-insecure-requests', () => {
@@ -54,7 +62,7 @@ test('report-only CSP is inventoried, has reporting, and omits upgrade-insecure-
   const rebuildCsp = rebuildGlobal.headers.find((h) => h.key === 'Content-Security-Policy-Report-Only');
   assert.equal(rebuildCsp.value, CSP_REPORT_ONLY);
   const rebuildAcao = rebuild.headers
-    .find((h) => h.source === '/((?!api/).*)')
+    .find((h) => h.source === STATIC_SOURCE)
     .headers.find((h) => h.key === 'Access-Control-Allow-Origin');
   assert.equal(rebuildAcao.value, STATIC_ACAO);
 });
