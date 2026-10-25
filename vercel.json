@@ -266,11 +266,11 @@
     },
     {
       "source": "/o/:kind/:id",
-      "destination": "/open.html"
+      "destination": "/open"
     },
     {
       "source": "/sl/o/:kind/:id",
-      "destination": "/sl/open.html"
+      "destination": "/sl/open"
     }
   ]
 }
