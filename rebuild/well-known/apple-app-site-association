@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "UCR3V7F577.eu.zyflow",
+        "appIDs": ["UCR3V7F577.eu.zyflow"],
+        "paths": ["/o/*"],
+        "components": [
+          { "/": "/o/*", "comment": "Open in Zyflow links from business widgets, QR codes and hosted pages" }
+        ]
+      }
+    ]
+  }
+}

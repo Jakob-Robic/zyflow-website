@@ -101,6 +101,15 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -254,6 +263,14 @@
     {
       "source": "/brand/downloads/:path*",
       "destination": "/assets/design-system/brand/downloads/:path*"
+    },
+    {
+      "source": "/o/:kind/:id",
+      "destination": "/open.html"
+    },
+    {
+      "source": "/sl/o/:kind/:id",
+      "destination": "/sl/open.html"
     }
   ]
 }

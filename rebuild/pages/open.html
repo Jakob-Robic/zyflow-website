@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- rebuild-head -->
+  </head>
+  <body class="page-open" data-nav="">
+    <!-- include:components/nav.html -->
+    <main class="not-found section">
+      <div class="container not-found__inner">
+        <h1 class="not-found__title" data-i18n="chrome.openApp.title">Open this in Zyflow</h1>
+        <p class="not-found__body" data-i18n="chrome.openApp.body">
+          A place or ride was shared with you from a Zyflow bike map. See it in the Zyflow app, free on iOS and Android.
+        </p>
+        <div class="not-found__actions">
+          <a class="btn btn--primary" href="zyflow://" data-open-app data-i18n="chrome.openApp.open">Open the app</a>
+        </div>
+        <p class="not-found__body" data-i18n="chrome.openApp.get">No app yet? Get it here, then tap the link again.</p>
+        <div class="app-modal__stores">
+          <a
+            class="store-badge"
+            href="{{appStoreUrl}}"
+            data-business-store="ios"
+            aria-label="Download on the App Store"
+          >
+            <img src="./assets/images/stores/badge-app-store-en-dark.png" width="120" height="40" alt="Download on the App Store" />
+          </a>
+          <a
+            class="store-badge"
+            href="https://play.google.com/store/apps/details?id=com.jakob_robic.zyflowmobileapp"
+            data-business-store="android"
+            aria-label="Get it on Google Play"
+          >
+            <img src="./assets/images/stores/badge-google-play-en-dark.png" width="120" height="40" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+    </main>
+    <!-- include:components/footer.html -->
+    <script src="./js/open-app.js" defer></script>
+  </body>
+</html>

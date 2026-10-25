@@ -12,7 +12,7 @@
   var STORAGE_KEY = "zyflow_ft";
   var COOKIE_MAX_AGE = 90 * 24 * 60 * 60;
   var STORE_SELECTOR =
-    'a[href*="apps.apple.com"]:not([data-app-modal-open]), a[href*="play.google.com"]:not([data-app-modal-open])';
+    'a[href*="apps.apple.com"]:not([data-app-modal-open]):not([data-business-store]), a[href*="play.google.com"]:not([data-app-modal-open]):not([data-business-store])';
 
   function emptyUtms() {
     return { utm_source: "", utm_medium: "", utm_campaign: "" };
