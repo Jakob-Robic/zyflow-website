@@ -271,6 +271,26 @@
     {
       "source": "/sl/o/:kind/:id",
       "destination": "/sl/open"
+    },
+    {
+      "source": "/stay/:slug",
+      "destination": "https://embed.zyflow.eu/s/:slug"
+    },
+    {
+      "source": "/_next/:path*",
+      "destination": "https://embed.zyflow.eu/_next/:path*"
+    },
+    {
+      "source": "/maplibre/:path*",
+      "destination": "https://embed.zyflow.eu/maplibre/:path*"
+    },
+    {
+      "source": "/design-system/:path*",
+      "destination": "https://embed.zyflow.eu/design-system/:path*"
+    },
+    {
+      "source": "/api/collect",
+      "destination": "https://embed.zyflow.eu/api/collect"
     }
   ]
 }
