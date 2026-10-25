@@ -192,6 +192,16 @@ const PAGES = [
     redirectTo: "/legal-pages/terms",
   },
   {
+    // "Open in Zyflow" landing for /o/place/:id and /o/route/:id when the app is not
+    // installed (rewritten in vercel.json): open the app or get it, with the business
+    // that sent the rider carried into the store link.
+    id: "open",
+    file: "open.html",
+    out: "open.html",
+    path: "/open",
+    indexable: false,
+  },
+  {
     id: "404",
     file: "404.html",
     out: "404.html",

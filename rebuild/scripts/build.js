@@ -1716,6 +1716,8 @@ async function build() {
   copyBlogImages();
   copyDir(path.join(ROOT, "css"), path.join(DIST, "css"));
   copyDir(path.join(ROOT, "js"), path.join(DIST, "js"));
+  // Universal / app link association files, served at /.well-known/ (headers in vercel.json).
+  copyDir(path.join(ROOT, "well-known"), path.join(DIST, ".well-known"));
   copyCookieConsentAssets();
   injectTurnstileSiteKey();
   injectMapTilerKey();

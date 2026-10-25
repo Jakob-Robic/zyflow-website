@@ -4,6 +4,10 @@
  "locale": "sl",
  "source": "zyflow",
  "pages": {
+ "open": {
+ "title": "Zyflow: Odpri v aplikaciji",
+ "description": "Odprite ta kraj ali turo v aplikaciji Zyflow ali si brezplačno prenesite aplikacijo za iOS in Android."
+ },
  "404": {
  "title": "Zyflow: Stran ne obstaja",
  "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
@@ -231,6 +235,12 @@
  "body": "Ta stran je zavila napačno. Vrni se domov ali razišči poti.",
  "home": "Nazaj domov",
  "tours": "Razišči poti"
+ },
+ "openApp": {
+ "title": "Odprite v aplikaciji Zyflow",
+ "body": "Nekdo vam je s kolesarskega zemljevida Zyflow poslal kraj ali turo. Oglejte si jo v aplikaciji Zyflow, brezplačno za iOS in Android.",
+ "open": "Odpri aplikacijo",
+ "get": "Še nimate aplikacije? Prenesite jo tukaj in nato znova tapnite povezavo."
  },
  "lang": {
  "label": "Jezik",

@@ -4,6 +4,10 @@
  "locale": "en",
  "source": "zyflow",
  "pages": {
+ "open": {
+ "title": "Zyflow: Open in the app",
+ "description": "Open this place or ride in the Zyflow app, or get the app free on iOS and Android."
+ },
  "404": {
  "title": "Zyflow: Page not found",
  "description": "This page does not exist. Head home or explore routes in Zyflow."
@@ -231,6 +235,12 @@
  "body": "This page took a wrong turn. Head home or explore routes instead.",
  "home": "Back home",
  "tours": "Explore Routes"
+ },
+ "openApp": {
+ "title": "Open this in Zyflow",
+ "body": "A place or ride was shared with you from a Zyflow bike map. See it in the Zyflow app, free on iOS and Android.",
+ "open": "Open the app",
+ "get": "No app yet? Get it here, then tap the link again."
  },
  "lang": {
  "label": "Language",
