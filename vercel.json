@@ -298,6 +298,14 @@
       "destination": "https://embed.zyflow.eu/design-system/:path*"
     },
     {
+      "source": "/basemap/:path*",
+      "destination": "https://embed.zyflow.eu/basemap/:path*"
+    },
+    {
+      "source": "/media/:path*",
+      "destination": "https://embed.zyflow.eu/media/:path*"
+    },
+    {
       "source": "/api/collect",
       "destination": "https://embed.zyflow.eu/api/collect"
     }
