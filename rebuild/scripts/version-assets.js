@@ -13,7 +13,10 @@
  *   rewritten before it is hashed, so changing tour.css also changes the
  *   `?v=` of main.css (which @imports it) and therefore the HTML.
  * - Any hand-written `?v=N` on a matched reference is replaced.
- * - Fonts and images are left alone (not JS/CSS).
+ * - Fonts are versioned too (hash of their bytes, file left as is), both in
+ *   CSS url() and in HTML preloads: the design-system sync replaces font files
+ *   under the same names, so an unversioned URL would stay cached for a year.
+ * - Images are left alone (optimize-images.js gives them hashed paths).
  */
 
 const fs = require("fs");
@@ -21,11 +24,13 @@ const path = require("path");
 const crypto = require("crypto");
 
 const VERSIONED_PREFIXES = ["js", "css", "assets"];
-const VERSIONED_EXT = /\.(?:js|css)$/;
+const VERSIONED_EXT = /\.(?:js|css|woff2?)$/;
+/** Files whose own references are rewritten before hashing. */
+const REWRITTEN_EXT = /\.(?:js|css)$/;
 const HASH_LENGTH = 10;
 
 /** Absolute site paths in quotes: "/js/x.js", '/assets/a/b.css?v=3' */
-const ABSOLUTE_REF = /(["'])(\/(?:js|css|assets)\/[^"'?#\s]+\.(?:js|css))(?:\?[^"'#\s]*)?(#[^"'\s]*)?\1/g;
+const ABSOLUTE_REF = /(["'])(\/(?:js|css|assets)\/[^"'?#\s]+\.(?:js|css|woff2?))(?:\?[^"'#\s]*)?(#[^"'\s]*)?\1/g;
 /** CSS @import "x.css" (bare string form). */
 const CSS_IMPORT_STRING = /(@import\s+)(["'])([^"']+)\2/g;
 /** CSS url(...) in any quoting style. */
@@ -71,6 +76,12 @@ function versionAssets(dist) {
     if (!bySitePath.has(sitePath) || inProgress.has(sitePath)) return null;
     inProgress.add(sitePath);
     const file = bySitePath.get(sitePath);
+    if (!REWRITTEN_EXT.test(file)) {
+      const v = shortHash(fs.readFileSync(file));
+      inProgress.delete(sitePath);
+      versions.set(sitePath, v);
+      return v;
+    }
     const src = fs.readFileSync(file, "utf8");
     const next = rewriteRefs(src, {
       css: file.endsWith(".css"),

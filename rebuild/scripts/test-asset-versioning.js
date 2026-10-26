@@ -55,7 +55,11 @@ test("built HTML references /js and /css with a content version", () => {
     const home = fs.readFileSync(path.join(dist, "index.html"), "utf8");
     const mainCss = fs.readFileSync(path.join(dist, "css", "main.css"), "utf8");
     assert.doesNotMatch(mainCss, /(^|[;{}])\s*@import\b/m);
-    assert.match(mainCss, /url\("\.\.\/assets\/design-system\/fonts\/DMSans\.woff2"\)/);
+    // Fonts are versioned by their bytes, and the preload URL matches the CSS one.
+    const dmSans = sha(path.join(dist, "assets", "design-system", "fonts", "DMSans.woff2"));
+    assert.ok(mainCss.includes(`url("../assets/design-system/fonts/DMSans.woff2?v=${dmSans}")`));
+    assert.ok(home.includes(`href="/assets/design-system/fonts/DMSans.woff2?v=${dmSans}"`));
+    assert.doesNotMatch(mainCss, /\.woff2"\)/);
     assert.match(home, /type="image\/avif"/);
     assert.match(home, /imagesrcset="[^"]+\.avif \d+w/);
     assert.match(home, /fetchpriority="high"/);
