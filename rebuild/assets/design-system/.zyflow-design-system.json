@@ -1,7 +1,7 @@
 {
   "$note": "Owned by @zyflow/design-system. Do not edit files in this folder; change design-system/tokens and run npm run build && npm run sync -- --write.",
-  "version": "1.1.0",
-  "syncedAt": "2026-10-22T11:16:31.270Z",
+  "version": "1.1.1",
+  "syncedAt": "2026-10-26T15:36:57.003Z",
   "files": [
     "brand/downloads/README.txt",
     "brand/downloads/logos/png/zyflow-mark-1024.png",
@@ -24,7 +24,9 @@
     "css/zyflow.css",
     "fonts/CourierPrime-400.woff2",
     "fonts/CourierPrime-700.woff2",
+    "fonts/CourierPrime-OFL.txt",
     "fonts/DMSans-Italic.woff2",
+    "fonts/DMSans-OFL.txt",
     "fonts/DMSans.woff2",
     "fonts/Tanker-LICENSE.txt",
     "fonts/Tanker-Regular.woff",
