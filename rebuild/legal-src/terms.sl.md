@@ -1,12 +1,12 @@
 # Splošni pogoji uporabe Zyflow
 
-**Različica:** 2.0.1 · **Datum začetka veljavnosti:** 19. 10. 2026 · Nadomešča različico 2.0.0 z dne 10. 10. 2026
+**Različica:** 2.1.0 · **Datum začetka veljavnosti:** 26. 10. 2026 · Nadomešča različico 2.0.1 z dne 19. 10. 2026
 
 ## 1. Kdo smo in kaj urejajo ti pogoji
 
 Storitev Zyflow upravlja družba **HERKO d.o.o.**, Pševska cesta 10, 4000 Kranj, Slovenija, matična številka 8830045000, identifikacijska številka za DDV SI56613555 (v nadaljevanju: »**mi**«). Kontakt: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-Ti splošni pogoji uporabe (v nadaljevanju: »**pogoji**«) so pogodba med vami in nami o uporabi mobilne aplikacije Zyflow za iOS in Android, spletnih mest [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu) ter povezanih storitev (skupaj: »**storitev**«). Točka 15 vsebuje dodatne pogoje za poslovne uporabnike partnerskega portala.
+Ti splošni pogoji uporabe (v nadaljevanju: »**pogoji**«) so pogodba med vami in nami o uporabi mobilne aplikacije Zyflow za iOS in Android, spletnih mest [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu) ter povezanih storitev (skupaj: »**storitev**«). Točka 15 vsebuje dodatne pogoje za poslovne uporabnike: partnerski portal in plačljive pakete Zyflow for Businesses (kolesarski zemljevidi za vaše spletno mesto).
 
 Z ustvarjanjem uporabniškega računa ali uporabo storitve sprejemate te pogoje. Če se z njimi ne strinjate, storitve ne uporabljajte.
 
@@ -16,7 +16,7 @@ Kako obdelujemo osebne podatke, pojasnjuje naša **Politika zasebnosti**: [https
 
 Zyflow je aplikacija za kolesarje. Omogoča načrtovanje, navigacijo, shranjevanje, uvoz in izvoz kolesarskih poti (tudi datotek GPX); oceno razdalje, časa, višinske razlike in pri električnih kolesih dosega baterije; odkrivanje krajev ob poti (na primer polnilnic za e-kolesa, servisnih postaj, pitnikov, parkirišč za kolesa, trgovin, kavarn in nastanitev); prikaz vremena ter prometnih obvestil in obvestil o stanju cest; vodenje kolesarskega potnega lista ter deljenje izbranih poti, fotografij in prijav krajev s skupnostjo.
 
-Storitev je trenutno **brezplačna**. Namenjena je uporabnikom v **Evropski uniji in Evropskem gospodarskem prostoru**.
+Storitev je za kolesarje **brezplačna**. Neobvezni plačljivi paketi za podjetja (Zyflow for Businesses) so opisani v točki 15. Namenjena je uporabnikom v **Evropski uniji in Evropskem gospodarskem prostoru**.
 
 Funkcije storitve lahko razvijamo, spreminjamo ali ukinemo. Če bi sprememba na vas bistveno negativno vplivala, vas bomo o tem vnaprej obvestili, pogodbo pa lahko kadar koli prekinete z izbrisom računa (glej točko 13). Vaše zakonske pravice v zvezi z digitalnimi storitvami ostanejo nespremenjene.
 
@@ -35,6 +35,13 @@ Funkcije storitve lahko razvijamo, spreminjamo ali ukinemo. Če bi sprememba na 
 Podeljujemo vam osebno, neizključno in neprenosljivo licenco, ki jo je mogoče v skladu s temi pogoji preklicati, za namestitev in uporabo aplikacije na napravah, ki jih imate v lasti ali pod nadzorom, ter za uporabo storitve za lastne **osebne, nekomercialne namene**. Za prenos aplikacije veljajo tudi pogoji trgovin z aplikacijami (Apple App Store, Google Play).
 
 Poti lahko izvozite kot datoteke GPX in jih uporabljate za lastno navigacijo na kateri koli napravi ali v kateri koli aplikaciji. Izvoženih datotek ali podatkov iz storitve brez našega pisnega soglasja ne smete prodajati ali komercialno razširjati.
+
+**Za komercialno uporabo potrebujete poslovni paket.** Osebni računi in brezplačne poti so namenjeni izključno osebni, nekomercialni uporabi. Paket Zyflow for Businesses (točka 15) potrebujete, če želite:
+
+- promovirati podjetje z blagovno znamko, zemljevidi ali potmi Zyflow, na primer v oglasih, brošurah ali objavah na družbenih omrežjih; ali
+- vključiti zemljevide, poti ali gradnike Zyflow na spletno mesto, rezervacijsko stran ali v aplikacijo podjetja ali jih tam prikazati kako drugače (na primer kot posnetke zaslona ali v okvirju).
+
+Deljenje navadne povezave do javne poti ali kraja v aplikaciji Zyflow je dovoljeno vsem.
 
 ## 5. Načrtovanje poti, navigacija in varnost
 
@@ -94,6 +101,7 @@ Ne smete:
 - deliti poti, ki brez dovoljenja vodijo čez zasebna zemljišča, prepovedana ali zavarovana območja ali spodbujajo nevarno ali nezakonito vožnjo;
 - podajati lažnih, zavajajočih ali manipulativnih prijav ali ocen, vključno z ocenami lastnega podjetja ali konkurenta;
 - uporabljati storitve za oglaševanje ali neželeno pošto ali se izdajati za druge osebe ali organizacije;
+- uporabljati storitve v komercialne namene brez poslovnega paketa, kadar ga zahteva točka 4;
 - samodejno zajemati ali množično prenašati podatkov, dostopati do naših vmesnikov API drugače kot prek naših aplikacij ali obhajati omejitev zahtev ali varnostnih ukrepov;
 - izvajati povratnega inženiringa aplikacije, razen kadar to dovoljuje zakon;
 - motiti, preobremenjevati ali napadati storitve ali nalagati zlonamerne programske opreme.
@@ -136,21 +144,45 @@ Ne smete:
 
 13.3 **Začasna onemogočitev ali prekinitev iz utemeljenih razlogov.** Funkcije lahko začasno onemogočimo, odstranimo vsebino ali začasno onemogočimo oziroma zapremo račun, po potrebi po predhodnem opozorilu, če huje ali ponavljajoče kršite te pogoje ali zakon, navedete lažne podatke, ogrožate druge uporabnike ali storitev ali če nam to nalaga zakon. Ukrepali bomo sorazmerno, navedli razloge (točka 10.3), odločitev pa lahko izpodbijate. Račune uporabnikov, mlajših od 16 let, izbrišemo.
 
-13.4 Po prenehanju pogodbe se še naprej uporabljajo točke 6.4, 7.3, 12 in 16.
+13.4 Po prenehanju pogodbe se še naprej uporabljajo točke 6.4, 7.3, 12, 15.3 (glede odstranitve), 15.4, 15.9 in 16.
 
 ## 14. Intelektualna lastnina
 
 Aplikacija, programska oprema, oblikovanje, ime in logotip Zyflow, naša besedila, izbrane vsebine in naša baza krajev so zaščiteni in pripadajo nam ali našim dajalcem licenc. Razen licence iz točke 4 vam ti pogoji nanje ne podeljujejo nobenih pravic. Za zemljevidne podatke OpenStreetMap velja licenca Open Database License. Če nam pošljete povratne informacije ali zamisli, jih lahko prosto in brezplačno uporabimo; to ne pomeni prenosa pravic v zvezi z osebnimi podatki.
 
-## 15. Partnerski portal (poslovni uporabniki)
+## 15. Poslovni uporabniki: partnerski portal in Zyflow for Businesses
 
-15.1 Podjetja (na primer nastanitve, restavracije, kavarne, upravljavci polnilnic) lahko zaprosijo za dostop do partnerskega portala Zyflow, da prevzamejo svoj kraj in urejajo njegove podatke. Partnerski dostop odobrimo po lastni presoji po pregledu. Če za partnerje uvedemo plačilo, vas bomo o tem vnaprej obvestili in bo veljalo samo, če se z njim strinjate.
+15.1 **Partnerski portal.** Podjetja (na primer nastanitve, restavracije, kavarne, trgovine s kolesi, upravljavci polnilnic) lahko zaprosijo za dostop do partnerskega portala Zyflow, da prevzamejo svoj kraj, urejajo njegove podatke in nastavijo Zyflow for Businesses. Partnerski dostop odobrimo po lastni presoji po pregledu. Vpis in urejanje kraja v partnerskem portalu sta brezplačna. Paketi Zyflow for Businesses (točke od 15.6 do 15.10) so plačljivi in veljajo le, če jih naročite ali sprejmete preizkusno obdobje.
 
-15.2 Oseba, ki zaprosi za dostop, potrjuje, da je pooblaščena za zastopanje podjetja. Partnerji morajo skrbeti, da so njihovi podatki točni in zakoniti, urejajo lahko le kraje, ki jih smejo zastopati, ter odgovarjajo za vsebine, ki jih objavijo (vključno s cenami, delovnim časom in ponudbami), in za spoštovanje predpisov o varstvu potrošnikov in oglaševanju.
+15.2 **Pooblastilo in točnost.** Oseba, ki zaprosi za dostop, prevzame zemljevid ali naroči paket, potrjuje, da je pooblaščena za zastopanje podjetja in za sprejem teh pogojev v njegovem imenu. Partnerji morajo skrbeti, da so njihovi podatki točni in zakoniti, urejajo lahko le kraje, ki jih smejo zastopati, ter odgovarjajo za vsebine, ki jih objavijo (vključno s cenami, delovnim časom in ponudbami), in za spoštovanje predpisov o varstvu potrošnikov in oglaševanju.
 
-15.3 Partnerji nam za vsebine, ki jih objavijo prek portala, podelijo licenco iz točke 6.3, dokler je kraj vključen v storitev. Partnerske vsebine, ki so netočne ali kršijo te pogoje, lahko uredimo, zavrnemo ali odstranimo, partnerski dostop pa lahko z obrazložitvijo odvzamemo.
+15.3 **Vaše vsebine in licenca, ki nam jo podelite.** Vse pravice na fotografijah, nasvetih, opisih, poteh, logotipih in drugih vsebinah, ki jih dodate prek portala (v nadaljevanju: »**vsebine lastnika**«), ostanejo vaše. Potrjujete, da so vsebine lastnika vaše ali da imate vse pravice, potrebne za podelitev te licence (vključno z dovoljenjem fotografa in privolitvijo oseb, ki so na fotografijah prepoznavne), in da ne kršijo pravic drugih. Podelite nam neizključno, brezplačno in prostorsko neomejeno licenco, da vsebine lastnika gostimo, shranjujemo, reproduciramo, tehnično prilagajamo (na primer spremenimo velikost slik, jih obrežemo ali stisnemo, ustvarimo slike zemljevidov), prevajamo (tudi strojno), prikazujemo in dajemo na voljo (a) v vaših gradnikih, gostujočih straneh zemljevida in straneh QR za sobe ter (b) v aplikaciji in na spletnih mestih Zyflow kot del vašega kraja, tudi za promocijo vašega kraja v okviru storitve. Vsebine lastnika lahko kadar koli odstranite v portalu. Licenca za to vsebino nato v razumnem roku preneha, razen za kopije v varnostnih kopijah, ki se izbrišejo v običajnem ciklu, in za vsebine, ki jih moramo hraniti po zakonu ali za obrambo pravnih zahtevkov. Če za vsebine, ki jih delite kot kolesar, velja tudi točka 6.3, se ta še naprej uporablja.
 
 15.4 Za poslovne uporabnike pravila o varstvu potrošnikov ne veljajo. V obsegu, ki ga dopušča zakon, je naša odgovornost do poslovnih uporabnikov za navadno malomarnost izključena in v vsakem primeru omejena na 500 EUR ali znesek, ki ga je poslovni uporabnik plačal nam v 12 mesecih pred škodnim dogodkom, odvisno od tega, kateri je višji; točka 12.2 se še vedno uporablja.
+
+15.5 **Pregled vsebin lastnika.** Vsebine lastnika, ki jih objavite za svoje gradnike in gostujoče strani, se tam prikažejo ob objavi. Uporabnikom aplikacije in spletnih mest Zyflow se prikažejo šele, ko jih naša ekipa pregleda in odobri. Vsebine lastnika, ki so netočne, nezakonite ali kršijo te pogoje, lahko uredimo (na primer popravimo oblikovanje ali očitne napake), zavrnemo ali odstranimo, partnerski dostop pa lahko z obrazložitvijo odvzamemo (točka 10.3). Točka 10.4 se ne uporablja za vsebine lastnika, ki so prikazane v aplikaciji.
+
+15.6 **Paketi in cene.** Cene paketov Zyflow for Businesses veljajo **za posamezen kraj**. Trenutno ponujamo pakete Basic, Pro in Hotel. Kaj vsebuje posamezni paket in koliko stane, je ob naročilu prikazano v partnerskem portalu ali v naši pisni ponudbi. Plačujete lahko mesečno ali letno. Cene so v evrih in ne vključujejo DDV; DDV se obračuna po veljavni stopnji ali pa se uporabi obrnjena davčna obveznost, če nam posredujete veljavno identifikacijsko številko za DDV iz druge države EU. Uvodne ponudbe, popusti in brezplačna preizkusna obdobja veljajo samo, kot je navedeno ob naročilu.
+
+15.7 **Obračun in plačilo.**
+
+- **Plačilo s kartico prek Stripe.** Paketa Basic in Pro lahko plačate v partnerskem portalu prek našega ponudnika plačil Stripe. Znesek za posamezno obračunsko obdobje se zaračuna vnaprej ob njegovem začetku. Podatke o kartici obdeluje Stripe; mi jih ne prejmemo. Računi so na voljo pod »Manage billing«.
+- **Račun.** Paket Hotel in drugi paketi, če se tako dogovorimo, se zaračunajo z računom vnaprej za vsako obračunsko obdobje in so plačljivi v roku, navedenem na računu.
+- **Brezplačno preizkusno obdobje.** Če vam omogočimo brezplačno preizkusno obdobje, v tem času ničesar ne zaračunamo. Če med preizkusnim obdobjem izberete plačljiv paket, se prvo plačilo izvede ob koncu preizkusnega obdobja. Če paketa ne izberete, se preizkusno obdobje konča enako kot paket, ki ni podaljšan (točka 15.9).
+
+15.8 **Podaljšanje in odpoved.** Plačljivi paketi se samodejno podaljšajo za enako obračunsko obdobje (mesec ali leto), razen če jih odpoveste pred koncem tekočega obdobja. Odpoveste jih lahko kadar koli: pakete, plačane prek Stripe, pod »Manage billing« v partnerskem portalu, pakete na račun pa po e-pošti na [info@zyflow.eu](mailto:info@zyflow.eu). Paket nato velja do konca plačanega obdobja. Že plačani zneski se ne vračajo, razen če paket brez razloga odpovemo mi (točka 15.10) ali če vračilo zahteva zakon. Cene ali vsebino paketov lahko spremenimo za prihodnja obračunska obdobja; o tem vas po e-pošti obvestimo vsaj 30 dni, preden sprememba začne veljati za vas, in do takrat lahko paket odpoveste.
+
+15.9 **Ko paket preneha: obdobje odloga, osnovni zemljevid in podatki.** Če paket preneha (ker je bil odpovedan, ni bil podaljšan, se je izteklo preizkusno obdobje ali plačilo ni uspelo in ni bilo poravnano):
+
+- vaš zemljevid še **14 dni** po koncu plačanega obdobja deluje v celoti (obdobje odloga);
+- po izteku obdobja odloga vaši gradniki in gostujoče strani namesto vaše blagovne znamke in dodatnih funkcij prikazujejo **osnovni zemljevid vašega kraja z znamko Zyflow**, dokler kode za vključitev ne odstranite s svojega spletnega mesta;
+- nastavitve zemljevida, vsebine lastnika in statistiko hranimo **12 mesecev** po izteku obdobja odloga, da lahko paket obnovite brez izgube podatkov. Nato jih lahko izbrišemo. Vsebine lastnika, ki smo jih odobrili za vaš kraj v aplikaciji Zyflow, lahko tam ostanejo, dokler je kraj vključen v storitev, razen če jih odstranite. Evidence, ki jih moramo hraniti po zakonu (na primer račune), hranimo v zakonskem roku.
+
+15.10 **Prenehanje poslovnega razmerja.** Paket lahko brez navedbe razloga odpovemo z vsaj 30-dnevnim odpovednim rokom po e-pošti; v tem primeru vrnemo plačane zneske za obdobje po datumu prenehanja. Paket lahko začasno ustavimo ali odpovemo s takojšnjim učinkom, če hudo kršite te pogoje (na primer točko 15.11) in kršitve ne odpravite v razumnem roku po našem opozorilu, kadar je opozorilo primerno.
+
+15.11 **Znamka Zyflow ostane vidna.** Gradniki in gostujoče strani v vseh paketih vedno prikazujejo gumb **»Open in Zyflow«** in oznako **»Powered by Zyflow«**. Ne smete jih skriti, prekriti, obrezati, spremeniti ali odstraniti (na primer s CSS, prekrivnimi elementi ali velikostjo okvirja), Zyflow pa lahko vključite le s kodo za vključitev ali povezavami, ki jih zagotovimo mi. Kartografskih podlag, poti ali podatkov iz gradnika ne smete kopirati, samodejno zajemati ali uporabljati zunaj njega.
+
+15.12 **Vaše spletno mesto in njegovi obiskovalci.** Za svoje spletno mesto odgovarjate sami, vključno z obveščanjem obiskovalcev o gradniku Zyflow v vaših informacijah o zasebnosti. Gradnik ne nastavlja piškotkov in na napravah obiskovalcev ničesar ne shranjuje. Besedilo, ki ga lahko uporabite, je na [https://www.zyflow.eu/sl/legal-pages/business-privacy](https://www.zyflow.eu/sl/legal-pages/business-privacy), kako ravnamo s podatki za poslovne stranke, vključno z našo pogodbo o obdelavi osebnih podatkov, pa je pojasnjeno na [https://www.zyflow.eu/sl/legal-pages/business-dpa](https://www.zyflow.eu/sl/legal-pages/business-dpa).
 
 ## 16. Spremembe pogojev
 
