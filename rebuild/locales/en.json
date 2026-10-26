@@ -167,6 +167,14 @@
  "legal-pages-izbris-racuna": {
  "title": "Zyflow, Izbris računa",
  "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
+ },
+ "legal-pages-business-privacy": {
+ "title": "Zyflow, Privacy text for your website",
+ "description": "A privacy paragraph businesses can paste into their own policy: what the Zyflow bike map widget collects and why."
+ },
+ "legal-pages-business-dpa": {
+ "title": "Zyflow, Data processing for businesses",
+ "description": "When Zyflow processes personal data for business customers, and our standard GDPR Article 28 data processing agreement."
  }
  }
  },
@@ -957,8 +965,8 @@
  },
  "terms": {
  "tag": "Updated",
- "date": "15. 5. 2026",
- "dateLabel": "Updated 15. 5. 2026 · v1.0",
+ "date": "26. 10. 2026",
+ "dateLabel": "Updated 26. 10. 2026 · v2.1",
  "title": "terms of service",
  "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
  },

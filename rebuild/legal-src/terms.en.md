@@ -1,12 +1,13 @@
 # Zyflow Terms of Service
 
-**Version:** 2.0.1 · **Effective date:** 19 October 2026 · Replaces version 2.0.0 of 10 October 2026
+<!-- DRAFT for Jakob's approval. Version 2.1.0 adds the Zyflow for Businesses terms (section 15) and the commercial-use rule (sections 4 and 9). Section 16 requires 30 days' notice of material changes to existing users: the effective date below is 30 days after notice; new business customers accept section 15 when they order or claim a map. Update the date to 30 days after the notice email actually goes out. -->
+**Version:** 2.1.0 · **Effective date:** 26 November 2026 · Replaces version 2.0.1 of 19 October 2026
 
 ## 1. Who we are and what these Terms cover
 
 Zyflow is operated by **HERKO d.o.o.**, Pševska cesta 10, 4000 Kranj, Slovenia, registration number 8830045000, VAT ID SI56613555 ("**we**", "**us**"). Contact: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-These Terms of Service ("**Terms**") are the agreement between you and us for the use of the Zyflow mobile app for iOS and Android, the websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu), and related services (together the "**Service**"). Section 15 contains additional terms for business users of the partner portal.
+These Terms of Service ("**Terms**") are the agreement between you and us for the use of the Zyflow mobile app for iOS and Android, the websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu), and related services (together the "**Service**"). Section 15 contains additional terms for business users: the partner portal and the paid Zyflow for Businesses plans (bike maps for your website).
 
 By creating an account or using the Service you accept these Terms. If you do not agree, please do not use the Service.
 
@@ -16,7 +17,7 @@ How we process personal data is explained in our **Privacy Policy**: [https://ww
 
 Zyflow is a cycling app. It lets you plan, navigate, save, import and export cycling routes (including GPX files); estimate distance, time, elevation and, for e-bikes, battery range; discover places along the way (for example e-bike chargers, repair stations, water points, bike parking, shops, cafés and accommodation); see weather and traffic or road-condition alerts; keep a bike passport; and share selected routes, photos and place reports with the community.
 
-The Service is currently **free of charge**. It is offered for users in the **European Union and the European Economic Area**.
+The Service is **free of charge** for riders. Optional paid plans for businesses (Zyflow for Businesses) are described in section 15. It is offered for users in the **European Union and the European Economic Area**.
 
 We may develop, change or discontinue features. If a change significantly affects you negatively, we will inform you in advance and you may end the contract at any time by deleting your account (see section 13). Your statutory rights for digital services remain unaffected.
 
@@ -35,6 +36,15 @@ We may develop, change or discontinue features. If a change significantly affect
 We grant you a personal, non-exclusive, non-transferable licence, revocable in accordance with these Terms, to install and use the app on devices you own or control and to use the Service for your own **personal, non-commercial purposes**. App store terms (Apple App Store, Google Play) also apply to the download.
 
 You may export routes as GPX files and use them for your own navigation on any device or app. You may not sell or commercially distribute exported files or data from the Service without our written consent.
+
+**Commercial use needs a business plan.** Personal accounts and free routes are for personal, non-commercial use only. You need a Zyflow for Businesses plan (section 15) to:
+
+- promote a business with Zyflow branding, maps or routes, for example in its advertising, brochures or social media posts; or
+- embed Zyflow maps, routes or widgets on a business website, booking page or app, or show them there in any other way (for example as screenshots or in a frame).
+
+Sharing an ordinary link to a public route or place in the Zyflow app is allowed for everyone.
+
+<!-- Jakob: confirm the "ordinary link is allowed" carve-out. Without it, a café posting a route link on Instagram would technically need a plan. -->
 
 ## 5. Routing, navigation and safety
 
@@ -94,6 +104,7 @@ You must not:
 - share routes that lead through private property without permission, prohibited or protected areas, or that encourage dangerous or illegal riding;
 - submit false, misleading or manipulative reports or reviews, including reviews of your own business or a competitor;
 - use the Service for advertising or spam, or impersonate other people or organisations;
+- use the Service commercially without a business plan where section 4 requires one;
 - scrape, harvest or bulk-download data, access our APIs other than through our apps, or circumvent rate limits or security measures;
 - reverse engineer the app, except where the law allows this;
 - interfere with, overload or attack the Service, or upload malware.
@@ -136,21 +147,45 @@ You must not:
 
 13.3 **Suspension or termination for cause.** We may suspend features, remove content or suspend or close an account, where appropriate after a warning, if you seriously or repeatedly break these Terms or the law, provide false information, endanger other users or the Service, or if we are legally required to. We will act proportionately, give reasons (section 10.3) and you may contest the decision. Accounts of users under 16 are deleted.
 
-13.4 After termination, sections 6.4, 7.3, 12 and 16 continue to apply.
+13.4 After termination, sections 6.4, 7.3, 12, 15.3 (for removal), 15.4, 15.9 and 16 continue to apply.
 
 ## 14. Intellectual property
 
 The app, software, design, the Zyflow name and logo, our own texts, curated content and our places database are protected and belong to us or our licensors. Apart from the licence in section 4, these Terms give you no rights to them. Map data from OpenStreetMap is subject to the Open Database License. If you send us feedback or ideas, we may use them freely without payment; this does not transfer any personal data rights.
 
-## 15. Partner portal (business users)
+## 15. Business users: partner portal and Zyflow for Businesses
 
-15.1 Businesses (for example accommodation, restaurants, cafés, charger operators) can request access to the Zyflow partner portal to claim their place and manage its details. Partner access is granted at our discretion after review. If we introduce fees for partners, we will inform you in advance and they will apply only if you agree.
+15.1 **Partner portal.** Businesses (for example accommodation, restaurants, cafés, bike shops, charger operators) can request access to the Zyflow partner portal to claim their place, manage its details and set up Zyflow for Businesses. Partner access is granted at our discretion after review. Listing and managing your place in the partner portal is free. Zyflow for Businesses plans (sections 15.6 to 15.10) are paid and apply only if you order one or accept a trial.
 
-15.2 The person requesting access confirms that they are authorised to act for the business. Partners must keep their information accurate and lawful, may only edit places they are entitled to represent, and are responsible for the content they publish (including prices, opening hours and offers) and for complying with consumer and advertising law.
+15.2 **Authority and accuracy.** The person who requests access, claims a map or orders a plan confirms that they are authorised to act for the business and to accept these Terms for it. Partners must keep their information accurate and lawful, may only edit places they are entitled to represent, and are responsible for the content they publish (including prices, opening hours and offers) and for complying with consumer and advertising law.
 
-15.3 Partners grant us the licence in section 6.3 for content they publish through the portal, for as long as the place is listed. We may edit, reject or remove partner content that is inaccurate or breaks these Terms, and may revoke partner access with reasons.
+15.3 **Your content and the licence you grant us.** You keep all rights to the photos, tips, descriptions, routes, logos and other content you add through the portal ("**owner content**"). You confirm that you own owner content or have all the rights needed to grant this licence (including the photographer's permission and the consent of people who can be recognised in photos), and that it does not infringe anyone's rights. You grant us a non-exclusive, royalty-free, worldwide licence to host, store, reproduce, adapt technically (for example resize, crop or compress images, generate map images), translate (including by machine translation), display and make owner content available (a) in your widgets, hosted map pages and room QR pages, and (b) in the Zyflow app and websites as part of your place, including to promote your place within the Service. You can remove owner content at any time in the portal. The licence then ends for that content within a reasonable time, except for copies in backups that are deleted in the normal cycle and content we must keep by law or to defend legal claims. Where section 6.3 also applies to content you share as a rider, it continues to apply.
 
 15.4 For business users, consumer protection rules do not apply. To the extent permitted by law, our liability towards business users for slight negligence is excluded and in any case limited to EUR 500 or the amount the business user paid us in the 12 months before the event giving rise to the claim, whichever is higher; section 12.2 still applies.
+
+15.5 **Review of owner content.** Owner content you publish for your own widgets and hosted pages appears there when you publish it. It is shown to users of the Zyflow app and websites only after our team has reviewed and approved it. We may edit (for example to correct formatting or obvious errors), reject or remove owner content that is inaccurate, unlawful or breaks these Terms, and may revoke partner access, with reasons (section 10.3). Section 10.4 does not apply to owner content that is shown in the app.
+
+15.6 **Plans and prices.** Zyflow for Businesses plans are priced **per place**. We currently offer Basic, Pro and Hotel plans. What each plan includes and its price are shown in the partner portal or in our written offer when you order. You can pay monthly or yearly. Prices are in euros and do not include VAT; VAT is added at the applicable rate, or the reverse-charge rule applies if you give us a valid EU VAT ID outside Slovenia. Launch offers, discounts and free trials apply only as stated when you order.
+
+15.7 **Billing and payment.**
+
+- **Card payment through Stripe.** Basic and Pro plans can be paid in the partner portal through our payment provider Stripe. The fee for each billing period is charged in advance at its start. Stripe processes your card details; we do not receive them. Invoices are available under Manage billing.
+- **Invoice.** The Hotel plan, and other plans if we agree, are billed by invoice in advance for each billing period and are payable within the term stated on the invoice.
+- **Free trials.** If we set up a free trial, nothing is charged during the trial. If you choose a paid plan during the trial, the first payment is taken when the trial ends. If you do not choose a plan, the trial ends like a plan that is not renewed (section 15.9).
+
+15.8 **Renewal and cancellation.** Paid plans renew automatically for the same billing period (month or year) unless you cancel before the end of the current period. You can cancel at any time: Stripe plans under Manage billing in the partner portal, invoice plans by email to [info@zyflow.eu](mailto:info@zyflow.eu). The plan then continues until the end of the period you have paid for. Fees already paid are not refunded, except where we end the plan without cause (section 15.10) or where the law requires a refund. We may change plan prices or contents for future billing periods; we will tell you by email at least 30 days before the change applies to you, and you may cancel before then.
+
+15.9 **When a plan ends: grace period, basic map and data.** If a plan ends (because it was cancelled, not renewed, a trial ended or a payment failed and was not settled):
+
+- your map keeps working in full for a **grace period of 14 days** after the end of the paid period;
+- after the grace period, your widgets and hosted pages switch to a **basic Zyflow-branded map** of your place in place of your own branding and extra features, until you remove the embed code from your website;
+- we keep your map settings, owner content and statistics for **12 months** after the grace period ends, so that you can resume your plan with everything in place. After that we may delete them. Owner content that we approved for your place in the Zyflow app may stay there while your place is listed, unless you remove it. Records we must keep by law (for example invoices) are kept for the statutory period.
+
+15.10 **Ending the business relationship.** We may end a plan for convenience with at least 30 days' notice by email; we then refund the fees you paid for the period after the end date. We may suspend or end a plan with immediate effect if you seriously breach these Terms (for example section 15.11) and do not remedy the breach within a reasonable period after our warning, where a warning is appropriate.
+
+15.11 **Zyflow branding stays visible.** Widgets and hosted pages always show the **"Open in Zyflow"** button and the **"Powered by Zyflow"** mark, on every plan. You must not hide, cover, crop, alter or remove them (for example with CSS, overlays or frame sizes), and you may embed Zyflow only with the embed code or links we provide. You must not copy, scrape or reuse map tiles, routes or data from the widget outside it.
+
+15.12 **Your website and its visitors.** You are responsible for your website, including informing its visitors about the Zyflow widget in your privacy information. The widget does not set cookies or store anything on visitors' devices. A text you can use is at [https://www.zyflow.eu/legal-pages/business-privacy](https://www.zyflow.eu/legal-pages/business-privacy), and how we handle data for business customers, including our data processing agreement, is explained at [https://www.zyflow.eu/legal-pages/business-dpa](https://www.zyflow.eu/legal-pages/business-dpa).
 
 ## 16. Changes to these Terms
 
