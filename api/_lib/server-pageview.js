@@ -26,7 +26,8 @@ const MAX_HOST_LENGTH = 253;
  */
 const POSTHOG_PROJECT_KEY = 'phc_Bidx6J3fgqBuQ92kHq68hJQcVkwXybr3MGvAEnvMGAme';
 
-const STATIC_PREFIXES = ['/api/', '/assets/', '/css/', '/js/', '/fonts/', '/gtm/'];
+// /basemap/ and /media/ are proxied to embed.zyflow.eu (map assets, image proxy), not pages.
+const STATIC_PREFIXES = ['/api/', '/assets/', '/css/', '/js/', '/fonts/', '/gtm/', '/basemap/', '/media/'];
 const STATIC_FILES = new Set([
   '/api',
   '/favicon.ico',

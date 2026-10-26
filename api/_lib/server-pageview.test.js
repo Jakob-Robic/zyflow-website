@@ -219,6 +219,8 @@ test('HTML page paths are counted; assets, api, and metadata files are not', () 
   assert.equal(isHtmlPagePath('/sl/blog/e-bike-charging-at-hospitality-stops'), true);
   assert.equal(isHtmlPagePath('/about.html'), true);
   assert.equal(isHtmlPagePath('/api/contact'), false);
+  assert.equal(isHtmlPagePath('/media/x'), false);
+  assert.equal(isHtmlPagePath('/basemap/styles/liberty.json'), false);
   assert.equal(isHtmlPagePath('/api'), false);
   assert.equal(isHtmlPagePath('/assets/images/home/hero.jpg'), false);
   assert.equal(isHtmlPagePath('/css/app.css'), false);
