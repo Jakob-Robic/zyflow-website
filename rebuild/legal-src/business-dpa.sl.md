@@ -71,7 +71,7 @@ O kršitvi varstva osebnih podatkov, ki zadeva podatke, obdelane po tej pogodbi,
 
 ### 2.10 Izbris in vračilo
 
-Ob prenehanju storitve osebne podatke po vaši izbiri v 30 dneh izbrišemo ali vrnemo in izbrišemo obstoječe kopije, razen če nam pravo EU ali Slovenije nalaga njihovo hrambo. Kopije v varnostnih kopijah se izbrišejo v običajnem ciklu (najpozneje 30 dni pozneje) in se do takrat ne uporabljajo.
+Ob prenehanju storitve osebne podatke po vaši izbiri v 30 dneh izbrišemo ali vrnemo in izbrišemo obstoječe kopije, razen če nam pravo EU ali Slovenije nalaga njihovo hrambo. Morebitne kopije v varnostnih kopijah se izbrišejo v običajnem ciklu (najpozneje 30 dni pozneje) in se do takrat ne uporabljajo.
 
 ### 2.11 Informacije in revizije
 
@@ -96,7 +96,6 @@ Izpolni se v podpisanem izvodu za konkretno obdelavo (vrste osebnih podatkov, ka
 - Varnost na ravni vrstic v podatkovni bazi: poslovni uporabniki lahko berejo in spreminjajo le podatke svoje organizacije.
 - Ločeno testno in produkcijsko okolje; skrivnosti niso shranjene v izvorni kodi.
 - Beleženje skrbniškega dostopa; spremljanje napak s prikrivanjem občutljivih podatkov.
-- Redne varnostne kopije, ki se brišejo v tekočem ciklu.
 - Najmanjši obseg podatkov že v zasnovi: gradnik ne uporablja piškotkov, shrambe na napravi ali trajnih identifikatorjev.
 
 ## Priloga 3: Podobdelovalci

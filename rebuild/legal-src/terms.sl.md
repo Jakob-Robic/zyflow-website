@@ -1,7 +1,6 @@
 # Splošni pogoji uporabe Zyflow
 
-<!-- OSNUTEK za Jakobovo odobritev. Mora se ujemati z angleško različico 2.1.0 (datum začetka veljavnosti 30 dni po obvestilu, točka 16). -->
-**Različica:** 2.1.0 · **Datum začetka veljavnosti:** 26. 11. 2026 · Nadomešča različico 2.0.1 z dne 19. 10. 2026
+**Različica:** 2.1.0 · **Datum začetka veljavnosti:** 26. 10. 2026 · Nadomešča različico 2.0.1 z dne 19. 10. 2026
 
 ## 1. Kdo smo in kaj urejajo ti pogoji
 

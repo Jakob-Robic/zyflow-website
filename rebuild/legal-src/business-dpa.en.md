@@ -72,7 +72,7 @@ We will notify you without undue delay, and where possible within 48 hours, afte
 
 ### 2.10 Deletion and return
 
-When the service ends, we will, at your choice, delete or return the personal data within 30 days and delete existing copies, unless EU or Slovenian law requires us to keep them. Copies in backups are deleted in the normal backup cycle (at most 30 days later) and are not used in the meantime.
+When the service ends, we will, at your choice, delete or return the personal data within 30 days and delete existing copies, unless EU or Slovenian law requires us to keep them. Any copies in backups are deleted in the normal backup cycle (at most 30 days later) and are not used in the meantime.
 
 ### 2.11 Information and audits
 
@@ -92,14 +92,12 @@ To be completed in the signed copy for the specific processing (types of persona
 
 ## Annex 2: Technical and organisational measures (summary)
 
-<!-- Jakob: confirm each measure is true today (MFA on Supabase/Vercel/GitHub, admin access logging, backup cycle) before publishing. -->
 
 - Data stored in the EU (Ireland) with our database provider; encryption in transit (TLS) and at rest.
 - Access to production systems limited to authorised Zyflow staff, with individual accounts and multi-factor authentication where available.
 - Database row-level security: business users can only read and change data of their own organisation.
 - Separation of test and production environments; secrets are not stored in source code.
 - Logging of administrative access; error monitoring with data scrubbing.
-- Regular backups, deleted in a rolling cycle.
 - Data minimisation by design: the widget uses no cookies, device storage or persistent identifiers.
 
 ## Annex 3: Sub-processors

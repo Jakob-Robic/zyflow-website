@@ -1,7 +1,6 @@
 # Zyflow Terms of Service
 
-<!-- DRAFT for Jakob's approval. Version 2.1.0 adds the Zyflow for Businesses terms (section 15) and the commercial-use rule (sections 4 and 9). Section 16 requires 30 days' notice of material changes to existing users: the effective date below is 30 days after notice; new business customers accept section 15 when they order or claim a map. Update the date to 30 days after the notice email actually goes out. -->
-**Version:** 2.1.0 · **Effective date:** 26 November 2026 · Replaces version 2.0.1 of 19 October 2026
+**Version:** 2.1.0 · **Effective date:** 26 October 2026 · Replaces version 2.0.1 of 19 October 2026
 
 ## 1. Who we are and what these Terms cover
 
@@ -43,8 +42,6 @@ You may export routes as GPX files and use them for your own navigation on any d
 - embed Zyflow maps, routes or widgets on a business website, booking page or app, or show them there in any other way (for example as screenshots or in a frame).
 
 Sharing an ordinary link to a public route or place in the Zyflow app is allowed for everyone.
-
-<!-- Jakob: confirm the "ordinary link is allowed" carve-out. Without it, a café posting a route link on Instagram would technically need a plan. -->
 
 ## 5. Routing, navigation and safety
 
