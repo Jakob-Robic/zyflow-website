@@ -13,6 +13,10 @@
     "build:rebuild": "node rebuild/scripts/build.js",
     "build:rebuild:prod": "SITE_INDEX=true node rebuild/scripts/build.js",
     "serve:rebuild": "python3 rebuild/serve.py",
+    "blog:new": "node rebuild/scripts/new-post.js",
+    "blog:check": "node rebuild/scripts/check-blog.js",
+    "blog:preview": "node rebuild/scripts/preview-blog.js",
+    "blog:pull": "node rebuild/scripts/pull-post-assets.js",
     "test:rebuild": "node --test rebuild/scripts/test-attribution.js rebuild/scripts/test-asset-versioning.js rebuild/scripts/test-page-meta.js rebuild/scripts/test-app-store-links.js rebuild/scripts/test-image-delivery.js rebuild/scripts/test-publication.js rebuild/scripts/test-blog.js",
     "test:api": "node --test --test-concurrency=1 api/_lib/*.test.js",
     "serve:headers": "node rebuild/scripts/serve-headers.js"

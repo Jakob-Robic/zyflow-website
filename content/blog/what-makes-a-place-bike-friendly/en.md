@@ -11,7 +11,6 @@ author: jakob-robic
 type: practical
 hubLevel: guide
 parentHub: blog
-region: gorenjska
 activities:
   - e-bike
 tags:

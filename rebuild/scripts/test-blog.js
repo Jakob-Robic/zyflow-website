@@ -83,7 +83,61 @@ test("the journal stays unpublished in source", () => {
   assert.equal(getCatalog().pages.length, 0);
   assert.ok(getCatalog().warnings.some((warning) => /placeholder/.test(warning)));
   const areas = getCatalog().taxonomy.regions.find((region) => region.id === "gorenjska").areas.map((area) => area.id);
-  assert.deepEqual(areas, ["bled", "trzic", "jezersko"]);
+  assert.ok(["bled", "trzic", "jezersko", "kranj"].every((id) => areas.includes(id)));
+  assert.equal(getCatalog().taxonomy.regions.find((region) => region.id === "gorenjska").country, "slovenia");
+});
+
+test("the taxonomy maps the neighbours and keeps ids unique", () => {
+  const { taxonomy, errors } = getCatalog();
+  assert.deepEqual(errors, []);
+  assert.deepEqual(taxonomy.countries.map((country) => country.id), ["slovenia", "austria", "italy", "croatia"]);
+  assert.equal(taxonomy.regions.find((region) => region.id === "carinthia").country, "austria");
+  assert.equal(taxonomy.regions.find((region) => region.id === "istria").country, "croatia");
+  assert.equal(taxonomy.regions.find((region) => region.id === "friuli-venezia-giulia").country, "italy");
+  for (const item of [...taxonomy.countries, ...taxonomy.regions, ...taxonomy.tags]) {
+    assert.ok(item.label && item.label.en && item.label.sl, `${item.id} needs en and sl labels`);
+  }
+  assert.ok(taxonomy.tags.every((tag) => ["stops", "riding", "planning"].includes(tag.group) && tag.use), "every tag has a group and a use");
+
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "zyflow-blog-"));
+  writeTree(dir, one(basePost()));
+  const file = path.join(dir, "_taxonomy.yml");
+  fs.writeFileSync(file, fs.readFileSync(file, "utf8").replace("id: trzic,", "id: bled,"));
+  assert.ok(loadBlog(dir, { today: "2026-10-21" }).errors.includes("_taxonomy.yml: place id bled is used twice"));
+});
+
+test("a post in Croatia gets its country, and its area must sit in its region", () => {
+  const catalog = catalogFrom(one(basePost({ region: "istria", area: "rovinj", tags: ["borders", "cycle-paths"] })));
+  assert.deepEqual(catalog.errors, []);
+  assert.equal(catalog.posts[0].country, "croatia");
+  assert.ok(errorsOf(one(basePost({ region: "istria", area: "bled" }))).includes("area bled is not in region istria"));
+});
+
+test("places: country comes from the region, and tips may have no region", () => {
+  const derived = catalogFrom(one(basePost()));
+  assert.deepEqual(derived.errors, []);
+  assert.equal(derived.posts[0].country, "slovenia");
+
+  const tip = catalogFrom(one(basePost({ region: undefined })));
+  assert.deepEqual(tip.errors, []);
+  assert.equal(tip.posts[0].country, "");
+
+  const countryHub = catalogFrom(
+    one(basePost({ region: undefined, country: "slovenia", hubLevel: "country", type: "story" }))
+  );
+  assert.deepEqual(countryHub.errors, []);
+
+  const cases = [
+    [basePost({ region: undefined, type: "spot-list" }), "region is required for spot-list"],
+    [basePost({ region: undefined, hubLevel: "region" }), "region is required for a region hub"],
+    [basePost({ region: undefined, hubLevel: "country" }), "country is required for a country hub"],
+    [basePost({ country: "hungary" }), "country hungary is not in the taxonomy"],
+    [basePost({ country: "croatia" }), "region gorenjska is in slovenia, not croatia"],
+    [basePost({ hubLevel: "area" }), "area is required for an area hub"],
+  ];
+  for (const [data, expected] of cases) {
+    assert.ok(errorsOf(one(data)).includes(expected), expected);
+  }
 });
 
 test("a valid published post produces a single-language page", () => {
@@ -313,6 +367,15 @@ test("published fixture renders posts, JSON-LD, RSS, filters, and sitemap dates"
     assert.match(hub, /data-type="practical"/);
     assert.match(hub, /data-activities="e-bike"/);
     assert.match(hub, /data-blog-filter="region"/);
+    assert.match(hub, /data-country="slovenia"/);
+    assert.match(hub, /data-tags="charging"/);
+    assert.match(hub, /data-blog-filter="topic"/);
+    assert.match(hub, /data-value="charging"/);
+    assert.doesNotMatch(hub, /data-value="borders"/);
+    assert.doesNotMatch(hub, /data-blog-filter="country"/);
+    const explore = hub.match(/<nav class="blog-explore"[\s\S]*?<\/nav>/)[0];
+    assert.match(explore, /class="blog-explore__item">Slovenia: Gorenjska/);
+    assert.doesNotMatch(explore, /Austria|Croatia|Primorska|Bohinj/);
 
     const author = fs.readFileSync(path.join(dist, "blog/author/jakob-robic.html"), "utf8");
     const authorTypes = JSON.parse(author.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])[

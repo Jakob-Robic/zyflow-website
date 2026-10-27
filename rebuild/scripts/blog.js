@@ -16,8 +16,10 @@ const ROUTES_ROOT = path.join(REPO, "content/featured-routes/featured");
 
 const STATUSES = new Set(["draft", "published"]);
 const TYPES = ["route-guide", "spot-list", "itinerary", "practical", "story"];
-const HUB_LEVELS = ["pillar", "region", "area", "guide"];
-const HUB_RANK = { pillar: 0, region: 1, area: 2, guide: 3 };
+const HUB_LEVELS = ["pillar", "country", "region", "area", "guide"];
+const HUB_RANK = { pillar: 0, country: 1, region: 2, area: 3, guide: 4 };
+// These types are about a place, so they need a region. Tips may have none.
+const PLACE_TYPES = new Set(["route-guide", "spot-list", "itinerary"]);
 const ACTIVITIES = ["road", "gravel", "mtb", "e-bike", "ev"];
 const LICENCES = ["own", "partner-permission", "guest-rider", "cc-by-4.0", "cc-by-sa-4.0", "cc0"];
 const SOURCE_KINDS = ["ridden", "own-gpx", "own-photos", "notes", "partner", "municipality", "app-data"];
@@ -112,6 +114,17 @@ function labelOf(items, id, locale) {
 
 function regionOf(taxonomy, id) {
   return listOf(taxonomy, "regions").find((region) => region && region.id === id) || null;
+}
+
+function countryOf(taxonomy, id) {
+  return listOf(taxonomy, "countries").find((country) => country && country.id === id) || null;
+}
+
+/** The label for where a post is: its region, else its country, else nothing. */
+function placeLabel(post, locale) {
+  if (post.region) return labelOf(catalog.taxonomy.regions, post.region, locale);
+  if (post.country) return labelOf(catalog.taxonomy.countries, post.country, locale);
+  return "";
 }
 
 function resolveInside(dir, rel) {
@@ -679,20 +692,44 @@ function loadTaxonomy(dir, errors) {
   const file = path.join(dir, "_taxonomy.yml");
   if (!fs.existsSync(file)) {
     push(errors, "content/blog/_taxonomy.yml is missing");
-    return { regions: [], types: [], activities: [], tags: [] };
+    return { countries: [], regions: [], types: [], activities: [], tags: [] };
   }
   let data;
   try {
     data = YAML.parse(fs.readFileSync(file, "utf8"));
   } catch (error) {
     push(errors, `_taxonomy.yml: ${error.message}`);
-    return { regions: [], types: [], activities: [], tags: [] };
+    return { countries: [], regions: [], types: [], activities: [], tags: [] };
   }
   const taxonomy = data && typeof data === "object" ? data : {};
-  taxonomy.regions = listOf(taxonomy, "regions");
+  // Regions nest under countries; a top-level regions list (no country) still works.
+  taxonomy.countries = listOf(taxonomy, "countries");
+  taxonomy.regions = [
+    ...listOf(taxonomy, "regions"),
+    ...taxonomy.countries.flatMap((country) =>
+      (Array.isArray(country.regions) ? country.regions : []).map((region) => ({ ...region, country: country.id }))
+    ),
+  ];
   taxonomy.types = listOf(taxonomy, "types");
   taxonomy.activities = listOf(taxonomy, "activities");
   taxonomy.tags = listOf(taxonomy, "tags");
+  // Places share one id space, so a post's region or area can never mean two places.
+  const seen = new Set();
+  const places = [
+    ...taxonomy.countries,
+    ...taxonomy.regions,
+    ...taxonomy.regions.flatMap((region) => (Array.isArray(region.areas) ? region.areas : [])),
+  ];
+  for (const place of places) {
+    if (!place || !place.id) continue;
+    if (seen.has(place.id)) push(errors, `_taxonomy.yml: place id ${place.id} is used twice`);
+    seen.add(place.id);
+  }
+  const tagIds = new Set();
+  for (const tag of taxonomy.tags) {
+    if (tag && tagIds.has(tag.id)) push(errors, `_taxonomy.yml: tag ${tag.id} is used twice`);
+    if (tag) tagIds.add(tag.id);
+  }
   for (const type of TYPES) {
     if (!taxonomy.types.some((item) => item && item.id === type)) {
       push(errors, `_taxonomy.yml: missing type ${type}`);
@@ -760,7 +797,8 @@ function normalizePost(entry, errors) {
     type: data.type,
     hubLevel: data.hubLevel,
     parentHub: data.parentHub,
-    region: data.region,
+    country: data.country || "",
+    region: data.region || "",
     area: data.area || "",
     activities: data.activities,
     tags: data.tags || [],
@@ -852,9 +890,21 @@ function validateRelations(posts, authors, taxonomy, errors, warnings, today) {
         push(warnings, `author ${author.id}: bio or photo is a placeholder`);
       }
     }
-    if (!regionOf(taxonomy, post.region)) fail(`region ${post.region} is not in the taxonomy`);
+    const region = post.region ? regionOf(taxonomy, post.region) : null;
+    if (post.region && !region) fail(`region ${post.region} is not in the taxonomy`);
+    if (!post.region && (PLACE_TYPES.has(post.type) || ["region", "area"].includes(post.hubLevel))) {
+      fail(`region is required for ${PLACE_TYPES.has(post.type) ? post.type : `a ${post.hubLevel} hub`}`);
+    }
+    if (post.country && !countryOf(taxonomy, post.country)) fail(`country ${post.country} is not in the taxonomy`);
+    if (region && region.country) {
+      if (post.country && post.country !== region.country) {
+        fail(`region ${post.region} is in ${region.country}, not ${post.country}`);
+      }
+      post.country = region.country;
+    }
+    if (post.hubLevel === "country" && !post.country) fail("country is required for a country hub");
+    if (post.hubLevel === "area" && !post.area) fail("area is required for an area hub");
     if (post.area) {
-      const region = regionOf(taxonomy, post.region);
       const areas = region && Array.isArray(region.areas) ? region.areas : [];
       if (!areas.some((area) => area && area.id === post.area)) {
         fail(`area ${post.area} is not in region ${post.region}`);
@@ -873,7 +923,7 @@ function validateRelations(posts, authors, taxonomy, errors, warnings, today) {
           fail(`parentHub ${post.parentHub} is not published in ${post.lang}`);
         }
         if (HUB_RANK[parent.hubLevel] >= HUB_RANK[post.hubLevel]) {
-          fail("parentHub must sit higher in the chain pillar > region > area > guide");
+          fail("parentHub must sit higher in the chain pillar > country > region > area > guide");
         }
       }
     }
@@ -1010,9 +1060,12 @@ function relatedFor(post, posts) {
       let score = 0;
       if (item.parentHub && item.parentHub === post.parentHub) score += 100;
       if (item.region && item.region === post.region) score += 10;
+      if (item.country && item.country === post.country) score += 3;
       const shared = (item.activities || []).filter((activity) =>
         (post.activities || []).includes(activity)
       ).length;
+      const sharedTags = (item.tags || []).filter((tag) => (post.tags || []).includes(tag)).length;
+      score += shared + sharedTags * 2;
       return { item, score };
     })
     .sort((a, b) => {
@@ -1161,28 +1214,37 @@ function postsFor(locale, authorId) {
     .sort((a, b) => (a.datePublished < b.datePublished ? 1 : a.datePublished > b.datePublished ? -1 : 0));
 }
 
+function cardData(post) {
+  return `data-blog-card data-country="${esc(post.country)}" data-region="${esc(post.region)}" data-type="${esc(post.type)}" data-activities="${esc((post.activities || []).join(" "))}" data-tags="${esc((post.tags || []).join(" "))}"`;
+}
+
 function storyCard(post, messages) {
   const typeLabel = labelOf(catalog.taxonomy.types, post.type, post.lang);
-  const regionLabel = labelOf(catalog.taxonomy.regions, post.region, post.lang);
-  const activities = (post.activities || []).join(" ");
-  return `<article class="blog-story" data-blog-card data-region="${esc(post.region)}" data-type="${esc(post.type)}" data-activities="${esc(activities)}">
+  const where = placeLabel(post, post.lang);
+  return `<article class="blog-story" ${cardData(post)}>
   <a class="blog-story__media" href="./blog/${esc(post.slug)}.html"><img src="${esc(publicImage(post.translationKey, post.hero.src))}" alt="${esc(post.hero.alt)}" /></a>
   <div class="blog-story__body">
     <p class="blog-story__tag"><span class="motif" aria-hidden="true"></span><span>${esc(typeLabel)}</span></p>
     <h3 class="blog-story__title">${esc(post.title)}</h3>
     <p class="blog-story__excerpt">${esc(post.description)}</p>
-    <p class="blog-story__meta"><time datetime="${esc(post.datePublished)}">${esc(formatDate(post.datePublished, post.lang))}</time> · ${esc(fill(messages, "blog.readingTime", { n: post.readingMinutes }))} · ${esc(regionLabel)}</p>
+    <p class="blog-story__meta"><time datetime="${esc(post.datePublished)}">${esc(formatDate(post.datePublished, post.lang))}</time> · ${esc(fill(messages, "blog.readingTime", { n: post.readingMinutes }))}${where ? ` · ${esc(where)}` : ""}</p>
     <a class="link link--arrow link--small" href="./blog/${esc(post.slug)}.html">${esc(t(messages, "blog.readStory"))}</a>
   </div>
 </article>`;
 }
 
-function renderFilterBar(messages) {
+function renderFilterBar(messages, posts) {
+  // Offer only values some post uses, so no button leads to an empty list.
+  const used = (items, values) => items.filter((item) => item && values.has(item.id));
+  const all = (pick) => new Set(posts.flatMap(pick));
+  const countries = used(catalog.taxonomy.countries, all((post) => [post.country]));
   const groups = [
-    ["region", catalog.taxonomy.regions, "blog.filters.region"],
-    ["type", catalog.taxonomy.types, "blog.filters.type"],
-    ["act", catalog.taxonomy.activities, "blog.filters.activity"],
-  ];
+    countries.length > 1 ? ["country", countries, "blog.filters.country"] : null,
+    ["region", used(catalog.taxonomy.regions, all((post) => [post.region])), "blog.filters.region"],
+    ["type", used(catalog.taxonomy.types, all((post) => [post.type])), "blog.filters.type"],
+    ["act", used(catalog.taxonomy.activities, all((post) => post.activities || [])), "blog.filters.activity"],
+    ["topic", used(catalog.taxonomy.tags, all((post) => post.tags || [])), "blog.filters.topic"],
+  ].filter((group) => group && group[1].length);
   const html = groups
     .map(([name, items, labelKey]) => {
       const buttons = [
@@ -1203,31 +1265,46 @@ function filterLocale(messages) {
 }
 
 function renderExplore(locale, messages, posts) {
-  const parts = catalog.taxonomy.regions.map((region) => {
+  const hubLink = (hub, label) =>
+    hub ? `<a href="./blog/${esc(hub.slug)}.html">${esc(label)}</a>` : esc(label);
+  // The taxonomy maps more places than the journal covers; list only places some post uses.
+  const usedCountries = new Set(posts.map((post) => post.country).filter(Boolean));
+  const usedRegions = new Set(posts.map((post) => post.region).filter(Boolean));
+  const usedAreas = new Set(posts.map((post) => post.area).filter(Boolean));
+  const regionPart = (region) => {
     const hub = posts.find((post) => post.hubLevel === "region" && post.region === region.id);
-    const regionHtml = hub
-      ? `<a href="./blog/${esc(hub.slug)}.html">${esc(labelOf([region], region.id, locale))}</a>`
-      : esc(labelOf([region], region.id, locale));
-    const areas = (region.areas || []).map((area) => {
+    const areas = (region.areas || []).filter((area) => usedAreas.has(area.id)).map((area) => {
       const areaHub = posts.find((post) => post.hubLevel === "area" && post.area === area.id);
-      return areaHub
-        ? `<a href="./blog/${esc(areaHub.slug)}.html">${esc(labelOf([area], area.id, locale))}</a>`
-        : esc(labelOf([area], area.id, locale));
+      return hubLink(areaHub, labelOf([area], area.id, locale));
     });
     const areaHtml = areas.length ? ` <span aria-hidden="true">›</span> ${areas.join(" · ")}` : "";
-    return `<span class="blog-explore__item">${regionHtml}${areaHtml}</span>`;
-  });
+    return `${hubLink(hub, labelOf([region], region.id, locale))}${areaHtml}`;
+  };
+  const parts = [
+    ...posts
+      .filter((post) => post.hubLevel === "pillar")
+      .map((hub) => `<span class="blog-explore__item">${hubLink(hub, hub.title)}</span>`),
+    ...catalog.taxonomy.countries.filter((country) => usedCountries.has(country.id)).map((country) => {
+      const hub = posts.find((post) => post.hubLevel === "country" && post.country === country.id);
+      const regions = catalog.taxonomy.regions.filter((region) => region.country === country.id && usedRegions.has(region.id));
+      const regionHtml = regions.length ? `: ${regions.map(regionPart).join("; ")}` : "";
+      return `<span class="blog-explore__item">${hubLink(hub, labelOf([country], country.id, locale))}${regionHtml}</span>`;
+    }),
+    ...catalog.taxonomy.regions
+      .filter((region) => !region.country && usedRegions.has(region.id))
+      .map((region) => `<span class="blog-explore__item">${regionPart(region)}</span>`),
+  ];
   if (!parts.length) return "";
   return `<nav class="blog-explore" aria-label="${esc(t(messages, "blog.explore"))}"><span class="blog-explore__label">${esc(t(messages, "blog.explore"))}</span>${parts.join("")}</nav>`;
 }
 
 function renderBlogHub(locale, messages, options = {}) {
   const posts = options.journalPublic ? postsFor(locale) : [];
-  const featurePool = posts.filter((post) => post.hubLevel === "pillar" || post.hubLevel === "region");
+  const featurePool = posts.filter((post) => ["pillar", "country", "region"].includes(post.hubLevel));
   const feature = featurePool[0] || null;
   const cards = posts.filter((post) => !feature || post.translationKey !== feature.translationKey);
   const featureHtml = feature
-    ? `<article class="blog-feature" data-blog-card data-region="${esc(feature.region)}" data-type="${esc(feature.type)}" data-activities="${esc((feature.activities || []).join(" "))}">
+    ? `<article class="blog-feature" ${cardData(feature)}>
         <a class="blog-feature__media" href="./blog/${esc(feature.slug)}.html"><img src="${esc(publicImage(feature.translationKey, feature.hero.src))}" alt="${esc(feature.hero.alt)}" /></a>
         <div class="blog-feature__body">
           <p class="blog-feature__tag"><span class="motif" aria-hidden="true"></span><span>${esc(labelOf(catalog.taxonomy.types, feature.type, locale))}</span></p>
@@ -1258,7 +1335,7 @@ function renderBlogHub(locale, messages, options = {}) {
       </div>
       ${featureHtml}
     </div>
-    ${posts.length ? renderFilterBar({ ...messages, meta: { ...(messages.meta || {}), locale } }) : ""}
+    ${posts.length ? renderFilterBar({ ...messages, meta: { ...(messages.meta || {}), locale } }, posts) : ""}
     <div class="blog-grid" data-blog-grid>
       ${cards.map((post) => storyCard(post, messages)).join("\n")}
     </div>
@@ -1311,7 +1388,7 @@ function renderBlogPost(page, locale, messages, options = {}) {
   rememberFaqs(post, ctx.faqs);
   const author = catalog.authors.get(post.author);
   const typeLabel = labelOf(catalog.taxonomy.types, post.type, locale);
-  const regionLabel = labelOf(catalog.taxonomy.regions, post.region, locale);
+  const where = placeLabel(post, locale);
   const updated =
     post.dateUpdated > post.datePublished
       ? `<span>${esc(t(messages, "blog.updated"))} <time datetime="${esc(post.dateUpdated)}">${esc(formatDate(post.dateUpdated, locale))}</time></span>`
@@ -1337,7 +1414,7 @@ function renderBlogPost(page, locale, messages, options = {}) {
     <header class="article__header">
       <p class="article__meta">
         <span class="article__tag"><span class="motif" aria-hidden="true"></span>${esc(typeLabel)}</span>
-        <span>${esc(regionLabel)}</span>
+        ${where ? `<span>${esc(where)}</span>` : ""}
         <time datetime="${esc(post.datePublished)}">${esc(formatDate(post.datePublished, locale))}</time>
         ${updated}
         <span>${esc(fill(messages, "blog.readingTime", { n: post.readingMinutes }))}</span>
@@ -1631,6 +1708,7 @@ function rssHref(locale, journalPublic) {
 module.exports = {
   ACTIVITIES,
   HUB_LEVELS,
+  PLACE_TYPES,
   LICENCES,
   SOURCE_KINDS,
   TYPES,
