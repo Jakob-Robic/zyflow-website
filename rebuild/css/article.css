@@ -228,15 +228,54 @@
   max-height: 70vh;
 }
 
+/* The brand's data strip: mono caps between an ink rule and a hairline,
+   values divided by hairlines. */
 .post-facts {
   margin-block: var(--space-gap-6);
+  border-top: 2px solid var(--color-text-heading);
+  border-bottom: 1px solid var(--color-border-default);
 }
 
 .post-facts dl {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: var(--space-gap-4);
   margin: 0;
+}
+
+.post-facts__item {
+  padding: var(--space-gap-4) var(--space-gap-4) var(--space-gap-4) 0;
+}
+
+.post-facts__item + .post-facts__item {
+  padding-inline-start: var(--space-gap-4);
+  border-inline-start: 1px solid var(--color-border-default);
+}
+
+.post-facts__item dt,
+.post-facts__item dd {
+  font-family: var(--font-badge);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.post-facts__item dd {
+  margin-block-start: var(--space-gap-2);
+  color: var(--color-text-heading);
+}
+
+/* Related stories sit in the narrow article column: one row per story. */
+.post-related .blog-grid {
+  grid-template-columns: 1fr;
+  gap: var(--space-gap-6);
+}
+
+.post-related .blog-story__media {
+  width: 120px;
+  height: 120px;
+}
+
+.post-related .blog-story__excerpt {
+  display: none;
 }
 
 .post-facts__item dt,

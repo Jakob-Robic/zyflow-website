@@ -749,7 +749,7 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   }
 })();
 
-/** Journal hub filters (?region=&type=&act=). No-JS visitors still see every card. */
+/** Journal hub filters (?country=&region=&type=&act=&topic=). No-JS visitors still see every card. */
 (function initBlogFilter() {
   const bar = document.querySelector("[data-blog-filters]");
   const grid = document.querySelector("[data-blog-grid]");
@@ -757,7 +757,7 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
 
   const cards = Array.from(document.querySelectorAll("[data-blog-card]"));
   const empty = document.querySelector("[data-blog-empty]");
-  const state = { region: "all", type: "all", act: "all" };
+  const state = { country: "all", region: "all", type: "all", act: "all", topic: "all" };
   const params = new URLSearchParams(window.location.search);
   for (const key of Object.keys(state)) {
     const value = params.get(key);
@@ -767,11 +767,13 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   function apply() {
     let shown = 0;
     for (const card of cards) {
-      const activities = (card.getAttribute("data-activities") || "").split(/\s+/).filter(Boolean);
+      const listOf = (name) => (card.getAttribute(name) || "").split(/\s+/).filter(Boolean);
       const ok =
+        (state.country === "all" || card.getAttribute("data-country") === state.country) &&
         (state.region === "all" || card.getAttribute("data-region") === state.region) &&
         (state.type === "all" || card.getAttribute("data-type") === state.type) &&
-        (state.act === "all" || activities.includes(state.act));
+        (state.act === "all" || listOf("data-activities").includes(state.act)) &&
+        (state.topic === "all" || listOf("data-tags").includes(state.topic));
       card.hidden = !ok;
       if (ok) shown += 1;
     }

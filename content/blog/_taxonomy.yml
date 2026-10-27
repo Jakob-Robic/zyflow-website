@@ -1,81 +1,256 @@
-regions:
-  - id: gorenjska
-    label:
-      en: Gorenjska
-      sl: Gorenjska
-    areas:
-      - id: bled
-        label:
-          en: Bled
-          sl: Bled
-      - id: trzic
-        label:
-          en: Tržič
-          sl: Tržič
-      - id: jezersko
-        label:
-          en: Jezersko
-          sl: Jezersko
+# Where. Countries hold regions, regions hold areas. Ids are unique across the whole file.
+# Route guides, spot lists and itineraries need a region; tips (practical, story) may have none.
+# The map can be bigger than the journal: /blog only shows a place once a post uses it.
+countries:
+  - id: slovenia
+    label: { en: Slovenia, sl: Slovenija }
+    regions:
+      - id: gorenjska
+        label: { en: Gorenjska, sl: Gorenjska }
+        areas:
+          - { id: bled, label: { en: Bled, sl: Bled } }
+          - { id: bohinj, label: { en: Bohinj, sl: Bohinj } }
+          - { id: kranjska-gora, label: { en: Kranjska Gora, sl: Kranjska Gora } }
+          - { id: radovljica, label: { en: Radovljica, sl: Radovljica } }
+          - { id: trzic, label: { en: Tržič, sl: Tržič } }
+          - { id: jezersko, label: { en: Jezersko, sl: Jezersko } }
+          - { id: kranj, label: { en: Kranj, sl: Kranj } }
+      - id: osrednjeslovenska
+        label: { en: Central Slovenia, sl: Osrednja Slovenija }
+        areas:
+          - { id: ljubljana, label: { en: Ljubljana, sl: Ljubljana } }
+          - { id: kamnik, label: { en: Kamnik, sl: Kamnik } }
+      - id: primorska
+        label: { en: Primorska, sl: Primorska }
+        areas:
+          - { id: bovec, label: { en: Bovec, sl: Bovec } }
+          - { id: kobarid, label: { en: Kobarid, sl: Kobarid } }
+          - { id: tolmin, label: { en: Tolmin, sl: Tolmin } }
+          - { id: brda, label: { en: Goriška Brda, sl: Goriška Brda } }
+          - { id: vipava, label: { en: Vipava Valley, sl: Vipavska dolina } }
+          - { id: karst, label: { en: Karst, sl: Kras } }
+          - { id: slovenian-coast, label: { en: Slovenian coast, sl: Obala } }
+      - id: notranjska
+        label: { en: Notranjska, sl: Notranjska }
+        areas:
+          - { id: postojna, label: { en: Postojna, sl: Postojna } }
+          - { id: cerknica, label: { en: Cerknica, sl: Cerknica } }
+      - id: stajerska
+        label: { en: Štajerska, sl: Štajerska }
+        areas:
+          - { id: maribor, label: { en: Maribor, sl: Maribor } }
+          - { id: pohorje, label: { en: Pohorje, sl: Pohorje } }
+          - { id: ptuj, label: { en: Ptuj, sl: Ptuj } }
+          - { id: celje, label: { en: Celje, sl: Celje } }
+          - { id: logarska-dolina, label: { en: Logar Valley, sl: Logarska dolina } }
+          - { id: slovenske-gorice, label: { en: Slovenske gorice, sl: Slovenske gorice } }
+      - id: koroska
+        label: { en: Koroška, sl: Koroška }
+        areas:
+          - { id: mezica, label: { en: Mežica Valley, sl: Mežiška dolina } }
+          - { id: dravograd, label: { en: Dravograd, sl: Dravograd } }
+      - id: dolenjska
+        label: { en: Dolenjska, sl: Dolenjska }
+        areas:
+          - { id: novo-mesto, label: { en: Novo mesto, sl: Novo mesto } }
+          - { id: krka-valley, label: { en: Krka Valley, sl: Dolina Krke } }
+          - { id: bela-krajina, label: { en: Bela krajina, sl: Bela krajina } }
+      - id: pomurje
+        label: { en: Pomurje, sl: Pomurje }
+        areas:
+          - { id: murska-sobota, label: { en: Murska Sobota, sl: Murska Sobota } }
+          - { id: goricko, label: { en: Goričko, sl: Goričko } }
+
+  - id: austria
+    label: { en: Austria, sl: Avstrija }
+    regions:
+      - id: carinthia
+        label: { en: Carinthia, sl: Avstrijska Koroška }
+        areas:
+          - { id: klagenfurt, label: { en: Klagenfurt, sl: Celovec } }
+          - { id: worthersee, label: { en: Wörthersee, sl: Vrbsko jezero } }
+          - { id: villach, label: { en: Villach, sl: Beljak } }
+          - { id: faaker-see, label: { en: Faaker See, sl: Baško jezero } }
+          - { id: ferlach, label: { en: Ferlach, sl: Borovlje } }
+          - { id: nockberge, label: { en: Nockberge, sl: Nockberge } }
+      - id: styria
+        label: { en: Styria, sl: Avstrijska Štajerska }
+        areas:
+          - { id: graz, label: { en: Graz, sl: Gradec } }
+          - { id: south-styria, label: { en: South Styrian wine road, sl: Južnoštajerska vinska cesta } }
+          - { id: schladming, label: { en: Schladming, sl: Schladming } }
+      - id: tyrol
+        label: { en: Tyrol, sl: Tirolska }
+        areas:
+          - { id: innsbruck, label: { en: Innsbruck, sl: Innsbruck } }
+          - { id: otztal, label: { en: Ötztal, sl: Ötztal } }
+          - { id: zillertal, label: { en: Zillertal, sl: Zillertal } }
+      - id: salzburgerland
+        label: { en: Salzburg region, sl: Salzburška }
+        areas:
+          - { id: salzburg, label: { en: Salzburg, sl: Salzburg } }
+          - { id: saalfelden-leogang, label: { en: Saalfelden Leogang, sl: Saalfelden Leogang } }
+
+  - id: italy
+    label: { en: Italy, sl: Italija }
+    regions:
+      - id: friuli-venezia-giulia
+        label: { en: Friuli Venezia Giulia, sl: Furlanija - Julijska krajina }
+        areas:
+          - { id: trieste, label: { en: Trieste, sl: Trst } }
+          - { id: gorizia, label: { en: Gorizia, sl: Gorica } }
+          - { id: cividale, label: { en: Cividale, sl: Čedad } }
+          - { id: udine, label: { en: Udine, sl: Videm } }
+          - { id: tarvisio, label: { en: Tarvisio, sl: Trbiž } }
+      - id: veneto
+        label: { en: Veneto, sl: Veneto }
+        areas:
+          - { id: prosecco-hills, label: { en: Prosecco Hills, sl: Griči prosecca } }
+          - { id: cortina, label: { en: Cortina d'Ampezzo, sl: Cortina d'Ampezzo } }
+      - id: trentino-alto-adige
+        label: { en: Trentino-South Tyrol, sl: Trentinsko - Južna Tirolska }
+        areas:
+          - { id: dolomites, label: { en: Dolomites, sl: Dolomiti } }
+          - { id: bolzano, label: { en: Bolzano, sl: Bocen } }
+          - { id: merano, label: { en: Merano, sl: Meran } }
+          - { id: lake-garda, label: { en: Lake Garda, sl: Gardsko jezero } }
+
+  - id: croatia
+    label: { en: Croatia, sl: Hrvaška }
+    regions:
+      - id: istria
+        label: { en: Istria, sl: Istra }
+        areas:
+          - { id: rovinj, label: { en: Rovinj, sl: Rovinj } }
+          - { id: porec, label: { en: Poreč, sl: Poreč } }
+          - { id: motovun, label: { en: Motovun, sl: Motovun } }
+          - { id: pula, label: { en: Pula, sl: Pulj } }
+      - id: kvarner
+        label: { en: Kvarner, sl: Kvarner }
+        areas:
+          - { id: opatija, label: { en: Opatija, sl: Opatija } }
+          - { id: rijeka, label: { en: Rijeka, sl: Reka } }
+          - { id: krk, label: { en: Krk, sl: Krk } }
+      - id: gorski-kotar
+        label: { en: Gorski kotar, sl: Gorski kotar }
+      - id: zagreb-region
+        label: { en: Zagreb and around, sl: Zagreb z okolico }
+        areas:
+          - { id: zagreb, label: { en: Zagreb, sl: Zagreb } }
+          - { id: samobor, label: { en: Samobor, sl: Samobor } }
+          - { id: zagorje, label: { en: Hrvatsko Zagorje, sl: Hrvaško Zagorje } }
+      - id: lika
+        label: { en: Lika, sl: Lika }
+        areas:
+          - { id: plitvice, label: { en: Plitvice Lakes, sl: Plitvička jezera } }
+      - id: dalmatia
+        label: { en: Dalmatia, sl: Dalmacija }
+        areas:
+          - { id: zadar, label: { en: Zadar, sl: Zadar } }
+          - { id: sibenik, label: { en: Šibenik, sl: Šibenik } }
+          - { id: split, label: { en: Split, sl: Split } }
+
 types:
-  - id: route-guide
-    label:
-      en: Route guide
-      sl: Vodnik po poti
-  - id: spot-list
-    label:
-      en: Spot list
-      sl: Seznam krajev
-  - id: itinerary
-    label:
-      en: Itinerary
-      sl: Načrt poti
-  - id: practical
-    label:
-      en: Practical
-      sl: Praktično
-  - id: story
-    label:
-      en: Story
-      sl: Zgodba
+  - { id: route-guide, label: { en: Route guide, sl: Vodnik po poti } }
+  - { id: spot-list, label: { en: Spot list, sl: Seznam krajev } }
+  - { id: itinerary, label: { en: Itinerary, sl: Načrt poti } }
+  - { id: practical, label: { en: Practical, sl: Praktično } }
+  - { id: story, label: { en: Story, sl: Zgodba } }
+
 activities:
-  - id: road
-    label:
-      en: Road
-      sl: Cesta
-  - id: gravel
-    label:
-      en: Gravel
-      sl: Gravel
-  - id: mtb
-    label:
-      en: MTB
-      sl: MTB
-  - id: e-bike
-    label:
-      en: E-bike
-      sl: E-kolo
-  - id: ev
-    label:
-      en: EV
-      sl: EV
+  - { id: road, label: { en: Road, sl: Cesta } }
+  - { id: gravel, label: { en: Gravel, sl: Gravel } }
+  - { id: mtb, label: { en: MTB, sl: MTB } }
+  - { id: e-bike, label: { en: E-bike, sl: E-kolo } }
+  - { id: ev, label: { en: EV, sl: EV } }
+
+# Topics that cut across places. Give each post 1–3. The Topic filter lists them in this order,
+# so keep each group together. "use" says when a tag applies; check-blog does not read it.
 tags:
-  - id: climbs
-    label:
-      en: Climbs
-      sl: Vzponi
-  - id: charging
-    label:
-      en: Charging
-      sl: Polnjenje
-  - id: borders
-    label:
-      en: Borders
-      sl: Meje
-  - id: stays
-    label:
-      en: Stays
-      sl: Nastanitve
+  # Stops: what the rider finds on the way. The core of "Know where to stop".
   - id: cafes
-    label:
-      en: Cafés
-      sl: Kavarne
+    group: stops
+    label: { en: Cafés, sl: Kavarne }
+    use: Coffee and cake stops, bakeries, places to sit for 20 minutes.
+  - id: food
+    group: stops
+    label: { en: Food, sl: Hrana }
+    use: Gostilne, restaurants and farm stays worth a proper meal.
+  - id: stays
+    group: stops
+    label: { en: Stays, sl: Nastanitve }
+    use: Hotels, guesthouses and campsites with bike storage or charging.
+  - id: huts
+    group: stops
+    label: { en: Mountain huts, sl: Planinske koče }
+    use: Huts and alpine dairies you can ride to.
+  - id: charging
+    group: stops
+    label: { en: Charging, sl: Polnjenje }
+    use: Where and how to charge an e-bike or EV on the way.
+  - id: water
+    group: stops
+    label: { en: Water, sl: Voda }
+    use: Fountains, refill points and toilets.
+  - id: repairs
+    group: stops
+    label: { en: Repairs, sl: Servis }
+    use: Bike shops, repair stations, rental and spare batteries.
+  - id: viewpoints
+    group: stops
+    label: { en: Viewpoints, sl: Razgledi }
+    use: A stop worth it for the view alone.
+  - id: wine
+    group: stops
+    label: { en: Wine roads, sl: Vinske ceste }
+    use: Wine roads, tastings and the farms along them. Never suggest drinking and riding.
+  # Riding: what the route is like.
+  - id: climbs
+    group: riding
+    label: { en: Climbs, sl: Vzponi }
+    use: Passes and steep climbs, with gradients and where to rest.
+  - id: cycle-paths
+    group: riding
+    label: { en: Cycle paths, sl: Kolesarske poti }
+    use: Marked long-distance paths such as Parenzana, Drava or Alpe-Adria.
+  - id: quiet-roads
+    group: riding
+    label: { en: Quiet roads, sl: Mirne ceste }
+    use: Low-traffic roads and how to avoid the busy ones.
+  - id: family
+    group: riding
+    label: { en: Family, sl: Družine }
+    use: Short, flat or safe rides with children.
+  - id: first-rides
+    group: riding
+    label: { en: First rides, sl: Za začetnike }
+    use: For someone new to e-bikes, gravel or longer days.
+  # Planning: what to know before you go.
+  - id: planning
+    group: planning
+    label: { en: Planning, sl: Načrtovanje }
+    use: How to plan a ride or a trip with Zyflow.
+  - id: range
+    group: planning
+    label: { en: Battery range, sl: Doseg baterije }
+    use: How far a battery goes, and what eats it.
+  - id: borders
+    group: planning
+    label: { en: Border crossings, sl: Prehodi meje }
+    use: Rides that cross a border, and what changes on the other side.
+  - id: trains
+    group: planning
+    label: { en: Bike and train, sl: Kolo in vlak }
+    use: Taking a bike on trains, buses and ferries.
+  - id: weather
+    group: planning
+    label: { en: Seasons and weather, sl: Sezona in vreme }
+    use: When to go, heat, rain, snow on passes, road closures.
+  - id: safety
+    group: planning
+    label: { en: Safety, sl: Varnost }
+    use: Traffic, tunnels, descents, rules of the road.
+  - id: gear
+    group: planning
+    label: { en: Gear, sl: Oprema }
+    use: What to bring and what to leave at home.

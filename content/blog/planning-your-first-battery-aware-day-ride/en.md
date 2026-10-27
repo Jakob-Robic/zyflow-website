@@ -10,8 +10,7 @@ dateUpdated: 2026-09-22
 author: jakob-robic
 type: practical
 hubLevel: guide
-parentHub: blog
-region: gorenjska
+parentHub: ride-smarter
 activities:
   - e-bike
 tags:

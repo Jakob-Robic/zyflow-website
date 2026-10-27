@@ -811,9 +811,11 @@
  "updated": "Updated",
  "journalName": "Journal",
  "filters": {
+ "country": "Country",
  "region": "Region",
  "type": "Type",
  "activity": "Activity",
+ "topic": "Topic",
  "all": "All"
  },
  "empty": "No stories match these filters.",
