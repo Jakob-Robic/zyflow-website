@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.1 · **Effective date:** 19 October 2026 · Replaces version 2.0 of 10 October 2026
+**Version:** 2.2 · **Effective date:** 30 October 2026 · Replaces version 2.1 of 19 October 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -49,7 +49,7 @@ Your live position is not stored on our servers. It is stored only if it becomes
 
 ### 3.3 Routes (saved, planned and imported)
 
-**Data:** routes you plan and save, routes you import from GPX files, route names, notes, distance, duration, elevation and other route details, and saved places.
+**Data:** routes you plan and save, routes you import from GPX, FIT or TCX files or from a connected service (3.15), route names, notes, distance, duration, elevation and other route details, and saved places.
 
 **Purpose:** to let you plan, save, export and reuse routes.
 
@@ -151,15 +151,35 @@ The app stores your login session, your last known location and your recent sear
 
 If you agree to product analytics, PostHog also stores a pseudonymous identifier on your device; without your consent it stores nothing. Sentry stores a pseudonymous identifier for crash reporting (see 3.10).
 
-### 3.15 Planned features (not live yet)
+### 3.15 Connected services (optional)
 
-**Push notifications** and **Strava import** are not available yet. Before we launch either feature, we will update this Privacy Policy and describe what data is processed. Push notifications will only be sent if you allow them in your device settings; connecting Strava will always be optional.
+You can connect your Zyflow account to other cycling services. Connecting is always optional, you choose each service yourself, and you can disconnect at any time in Profile → Connected services.
 
-### 3.16 Support and privacy requests
+| Service | What you can do | What we receive and store |
+|---|---|---|
+| **Strava** (Strava, Inc., USA) | Import your rides and your saved Strava routes | Your Strava athlete ID; the rides and routes you choose to import (name, GPS track, distance, elevation, date) |
+| **Garmin Connect** (Garmin Ltd. and its affiliates) | Send routes to your Garmin device; import finished rides | Your Garmin user ID and the permissions you granted; routes you send; rides you choose to import |
+| **Wahoo** (Wahoo Fitness L.L.C., USA) | Send routes to your Wahoo bike computer; import finished rides | Your Wahoo user ID; routes you send; rides you choose to import |
+| **Hammerhead** (SRAM, LLC, USA) | Send routes to your Karoo; import finished rides | Your Hammerhead user ID; routes you send; rides you choose to import |
+| **Ride with GPS** (Ride with GPS, Inc., USA) | Import your routes and rides; send routes | Your Ride with GPS user ID; the routes and rides you choose to import; routes you send |
+
+**How it works:** when you connect a service, you sign in on that service's own page; Zyflow never sees your password there. The service gives us an access token, which we store **encrypted** and use only to do what you ask: send a route you chose, list your rides or routes so you can pick what to import, and import the items you select. When you send a route, we keep a note of where it went, so we can show "Sent to …" and remove the copy if you delete the route in Zyflow.
+
+**Visibility:** data from connected services is shown **only to you**. It is never published to the community, and routes imported from Strava cannot be shared. We never sell this data or use it to train artificial intelligence models.
+
+**Disconnecting:** when you disconnect a service, or delete your Zyflow account, we revoke our access at that service and delete the stored token and user ID. When you disconnect **Strava**, we also delete the rides and routes you imported from Strava. Routes imported from other services stay in your saved routes until you delete them. Copies of routes we sent to a device service remain in your account there; delete them in that service's app if you no longer want them.
+
+**Legal basis:** performance of a contract at your request (Art. 6(1)(b) GDPR). Each service is an independent controller for the data it holds about you; its own privacy policy applies.
+
+### 3.16 Planned features (not live yet)
+
+**Push notifications** are not available yet. Before we launch them, we will update this Privacy Policy. Push notifications will only be sent if you allow them in your device settings.
+
+### 3.17 Support and privacy requests
 
 If you contact us, we process your email address, the content of your message and our reply to handle your request. **Legal basis:** legitimate interest (Art. 6(1)(f) GDPR) or, for privacy requests, our legal obligation (Art. 6(1)(c) GDPR).
 
-### 3.17 What we do not do
+### 3.18 What we do not do
 
 - We do not sell your personal data.
 - We do not show third-party advertising in the app and do not use advertising IDs.
@@ -172,6 +192,7 @@ If you contact us, we process your email address, the content of your message an
 | Purpose | Legal basis (GDPR) |
 |---|---|
 | Account, routes, location features, bike passport, community sharing, maps/search/routing/weather, service emails | Contract, Art. 6(1)(b) |
+| Connected services (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), only if you connect them | Contract, Art. 6(1)(b) |
 | Place reports and submissions, crash monitoring, security and rate limiting, Stay22 links, support | Legitimate interest, Art. 6(1)(f) |
 | Product analytics (PostHog) | Consent, Art. 6(1)(a) |
 | Marketing emails, website cookies and pixels (when introduced), future push notifications | Consent, Art. 6(1)(a) (and ZEKom-2 for cookies and marketing emails) |
@@ -200,6 +221,11 @@ We use the following service providers. Processors act only on our instructions 
 | Public OSRM demo server (project-osrm.org, based on OpenStreetMap) – fallback only | Route calculation if our own routing server is unavailable | IP address, route coordinates | Operated by a third party, not by us; see section 6 |
 | DeepL SE | Translation of traffic-alert texts | No personal data | Germany (EU) |
 | Stay22 (independent controller after you tap a link) | Accommodation affiliate links | Coordinates and name of the place; IP address once you open the link | See section 6 |
+| Strava, Inc. (independent controller) | Importing your rides and routes, only if you connect Strava | Strava athlete ID, access token; imported rides and routes | USA; see section 6 |
+| Garmin Ltd. and affiliates (independent controller) | Sending routes, importing rides, only if you connect Garmin | Garmin user ID, access token; routes you send | Switzerland / USA; see section 6 |
+| Wahoo Fitness L.L.C. (independent controller) | Sending routes, importing rides, only if you connect Wahoo | Wahoo user ID, access token; routes you send | USA; see section 6 |
+| SRAM, LLC (Hammerhead) (independent controller) | Sending routes to Karoo, importing rides, only if you connect Hammerhead | Hammerhead user ID, access token; routes you send | USA; see section 6 |
+| Ride with GPS, Inc. (independent controller) | Importing and sending routes and rides, only if you connect Ride with GPS | Ride with GPS user ID, access token; routes you send or import | USA; see section 6 |
 
 **Other users:** see community sharing (3.4) and place reports (3.5).
 
@@ -211,6 +237,8 @@ We use the following service providers. Processors act only on our instructions 
 
 Your app data is stored in the EU (Ireland). Some recipients are based in, or may access data from, countries outside the EU/EEA, in particular the USA (for example Apple, Google, Vercel and the US parent companies of Supabase and Sentry). We transfer data only where an adequate level of protection is ensured. Depending on the provider, we rely on an adequacy decision of the European Commission (including the EU-US Data Privacy Framework for certified US companies) or on the European Commission's Standard Contractual Clauses (Art. 46 GDPR). Details on the safeguards used for a specific provider are available on request at [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
+If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the routes you send go to that service, which may process them in the USA or Switzerland under its own privacy policy and transfer safeguards.
+
 ## 7. How long we keep data
 
 | Data | Retention |
@@ -218,6 +246,9 @@ Your app data is stored in the EU (Ireland). Some recipients are based in, or ma
 | Account data (email, name, phone, user ID) | While your account exists; deleted immediately when you delete your account in the app |
 | Profile photo | Until you remove it or delete your account |
 | Saved and imported routes, saved places | Until you delete them or your account |
+| Connected-service tokens and user IDs | Until you disconnect the service or delete your account |
+| Rides and routes imported from a connected service | Until you delete them or your account; items imported from Strava are also deleted when you disconnect Strava |
+| Record of routes sent to a device service | Until you delete the route or your account |
 | Shared community routes, their photos and map images | The shared route and its photos are deleted when you remove the route or delete your account; its map images are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
 | Bike passport and bike photos | Until you delete your account; a bike photo is deleted from file storage when you remove it or delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
