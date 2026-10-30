@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.1 · **Datum začetka veljavnosti:** 19. 10. 2026 · Nadomešča različico 2.0 z dne 10. 10. 2026
+**Različica:** 2.2 · **Datum začetka veljavnosti:** 30. 10. 2026 · Nadomešča različico 2.1 z dne 19. 10. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -49,7 +49,7 @@ Vašega trenutnega položaja ne shranjujemo na naših strežnikih. Shrani se le,
 
 ### 3.3 Poti (shranjene, načrtovane in uvožene)
 
-**Podatki:** poti, ki jih načrtujete in shranite, poti, uvožene iz datotek GPX, imena poti, opombe, razdalja, trajanje, višinska razlika in drugi podatki o poti ter shranjeni kraji.
+**Podatki:** poti, ki jih načrtujete in shranite, poti, uvožene iz datotek GPX, FIT ali TCX ali iz povezane storitve (3.15), imena poti, opombe, razdalja, trajanje, višinska razlika in drugi podatki o poti ter shranjeni kraji.
 
 **Namen:** omogočanje načrtovanja, shranjevanja, izvoza in ponovne uporabe poti.
 
@@ -151,15 +151,35 @@ Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lok
 
 Če privolite v analitiko uporabe, PostHog na napravi shrani tudi psevdonimni identifikator; brez vaše privolitve ne shrani ničesar. Sentry za poročanje o napakah shrani psevdonimni identifikator (glejte 3.10).
 
-### 3.15 Načrtovane funkcije (še niso na voljo)
+### 3.15 Povezane storitve (neobvezno)
 
-**Potisna obvestila** in **uvoz iz storitve Strava** še nista na voljo. Pred uvedbo katere koli od teh funkcij bomo posodobili to politiko zasebnosti in opisali, kateri podatki se obdelujejo. Potisna obvestila bomo pošiljali le, če jih boste dovolili v nastavitvah naprave; povezava s storitvijo Strava bo vedno neobvezna.
+Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava je vedno neobvezna, vsako storitev izberete sami in jo lahko kadar koli odklopite v razdelku Profil → Povezane storitve.
 
-### 3.16 Podpora in zahteve v zvezi z varstvom podatkov
+| Storitev | Kaj lahko storite | Kaj prejmemo in hranimo |
+|---|---|---|
+| **Strava** (Strava, Inc., ZDA) | Uvozite svoje vožnje in shranjene poti iz Strave | Vaš ID športnika pri Stravi; vožnje in poti, ki jih izberete za uvoz (ime, sled GPS, razdalja, višinska razlika, datum) |
+| **Garmin Connect** (Garmin Ltd. in povezane družbe) | Pošljete poti v napravo Garmin; uvozite opravljene vožnje | Vaš uporabniški ID pri Garminu in dovoljenja, ki ste jih podelili; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
+| **Wahoo** (Wahoo Fitness L.L.C., ZDA) | Pošljete poti v kolesarski računalnik Wahoo; uvozite opravljene vožnje | Vaš uporabniški ID pri Wahoo; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
+| **Hammerhead** (SRAM, LLC, ZDA) | Pošljete poti v Karoo; uvozite opravljene vožnje | Vaš uporabniški ID pri Hammerheadu; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
+| **Ride with GPS** (Ride with GPS, Inc., ZDA) | Uvozite svoje poti in vožnje; pošljete poti | Vaš uporabniški ID pri Ride with GPS; poti in vožnje, ki jih izberete za uvoz; poti, ki jih pošljete |
+
+**Kako deluje:** ko povežete storitev, se prijavite na strani te storitve; vašega gesla za to storitev Zyflow nikoli ne vidi. Storitev nam izda žeton za dostop, ki ga hranimo **šifriranega** in ga uporabljamo le za to, kar zahtevate: da pošljemo pot, ki ste jo izbrali, prikažemo seznam vaših voženj ali poti, da izberete, kaj uvoziti, in uvozimo izbrane elemente. Ko pošljete pot, si zapomnimo, kam je bila poslana, da lahko prikažemo »Poslano v …« in odstranimo kopijo, če pot v Zyflowu izbrišete.
+
+**Vidnost:** podatki iz povezanih storitev so vidni **samo vam**. Nikoli jih ne objavimo v skupnosti, poti, uvoženih iz Strave, pa ni mogoče deliti. Teh podatkov nikoli ne prodajamo in jih ne uporabljamo za učenje modelov umetne inteligence.
+
+**Odklop:** ko storitev odklopite ali izbrišete račun Zyflow, prekličemo dostop pri tej storitvi ter izbrišemo shranjeni žeton in uporabniški ID. Ko odklopite **Stravo**, izbrišemo tudi vožnje in poti, ki ste jih uvozili iz Strave. Poti, uvožene iz drugih storitev, ostanejo med vašimi shranjenimi potmi, dokler jih ne izbrišete. Kopije poti, ki smo jih poslali v storitev naprave, ostanejo v vašem računu pri tej storitvi; če jih ne želite več, jih izbrišite v aplikaciji te storitve.
+
+**Pravna podlaga:** izvajanje pogodbe na vašo zahtevo (točka (b) prvega odstavka 6. člena Splošne uredbe). Vsaka storitev je samostojni upravljavec podatkov, ki jih hrani o vas; zanjo velja njena politika zasebnosti.
+
+### 3.16 Načrtovane funkcije (še niso na voljo)
+
+**Potisna obvestila** še niso na voljo. Pred uvedbo bomo posodobili to politiko zasebnosti. Potisna obvestila bomo pošiljali le, če jih boste dovolili v nastavitvah naprave.
+
+### 3.17 Podpora in zahteve v zvezi z varstvom podatkov
 
 Če nam pišete, obdelujemo vaš e-naslov, vsebino sporočila in naš odgovor, da obravnavamo vašo zahtevo. **Pravna podlaga:** zakoniti interes (točka (f) prvega odstavka 6. člena Splošne uredbe), pri zahtevah za uveljavljanje pravic pa izpolnjevanje naše zakonske obveznosti (točka (c) prvega odstavka 6. člena Splošne uredbe).
 
-### 3.17 Česa ne počnemo
+### 3.18 Česa ne počnemo
 
 - Vaših osebnih podatkov ne prodajamo.
 - V aplikaciji ne prikazujemo oglasov tretjih oseb in ne uporabljamo oglasnih identifikatorjev.
@@ -172,6 +192,7 @@ Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lok
 | Namen | Pravna podlaga (Splošna uredba) |
 |---|---|
 | Uporabniški račun, poti, lokacijske funkcije, kolesarski potni list, deljenje s skupnostjo, zemljevidi/iskanje/izračun poti/vreme, obvestila v zvezi s storitvijo | Pogodba, točka (b) 6(1) |
+| Povezane storitve (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), le če jih povežete | Pogodba, točka (b) prvega odstavka 6. člena |
 | Prijave in predlogi krajev, spremljanje napak, varnost in omejevanje zahtev, povezave Stay22, podpora | Zakoniti interes, točka (f) 6(1) |
 | Analitika uporabe (PostHog) | Privolitev, točka (a) 6(1) |
 | Trženjska e-pošta, piškotki in sledilne kode na spletnem mestu (ko bodo uvedeni), prihodnja potisna obvestila | Privolitev, točka (a) 6(1) (za piškotke in trženjsko e-pošto tudi ZEKom-2) |
@@ -200,6 +221,11 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 | Javni predstavitveni strežnik OSRM (project-osrm.org, zasnovan na podatkih OpenStreetMap) – samo nadomestna možnost | Izračun poti, če naš lastni strežnik ni dosegljiv | Naslov IP, koordinate poti | Upravlja ga tretja oseba, ne mi; glej točko 6 |
 | DeepL SE | Prevajanje besedil prometnih obvestil | Brez osebnih podatkov | Nemčija (EU) |
 | Stay22 (samostojni upravljavec, ko se dotaknete povezave) | Provizijske povezave za nastanitve | Koordinate in ime kraja; naslov IP, ko odprete povezavo | Glej točko 6 |
+| Strava, Inc. (samostojni upravljavec) | Uvoz voženj in poti, le če povežete Stravo | ID športnika pri Stravi, žeton za dostop; uvožene vožnje in poti | ZDA; glejte 6. razdelek |
+| Garmin Ltd. in povezane družbe (samostojni upravljavec) | Pošiljanje poti, uvoz voženj, le če povežete Garmin | Uporabniški ID pri Garminu, žeton za dostop; poslane poti | Švica / ZDA; glejte 6. razdelek |
+| Wahoo Fitness L.L.C. (samostojni upravljavec) | Pošiljanje poti, uvoz voženj, le če povežete Wahoo | Uporabniški ID pri Wahoo, žeton za dostop; poslane poti | ZDA; glejte 6. razdelek |
+| SRAM, LLC (Hammerhead) (samostojni upravljavec) | Pošiljanje poti v Karoo, uvoz voženj, le če povežete Hammerhead | Uporabniški ID pri Hammerheadu, žeton za dostop; poslane poti | ZDA; glejte 6. razdelek |
+| Ride with GPS, Inc. (samostojni upravljavec) | Uvoz in pošiljanje poti in voženj, le če povežete Ride with GPS | Uporabniški ID pri Ride with GPS, žeton za dostop; poslane ali uvožene poti | ZDA; glejte 6. razdelek |
 
 **Drugi uporabniki:** glej deljenje poti s skupnostjo (točka 3.4) in prijave krajev (točka 3.5).
 
@@ -211,6 +237,8 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 
 Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v tretjih državah zunaj EU/EGP ali lahko do podatkov dostopajo iz njih, zlasti iz ZDA (na primer Apple, Google, Vercel ter matični družbi Supabase in Sentry v ZDA). Podatke prenašamo le, če je zagotovljena ustrezna raven varstva. Glede na ponudnika se opiramo na sklep Evropske komisije o ustreznosti (vključno z okvirom EU-ZDA za zasebnost podatkov za družbe iz ZDA, ki so vanj vključene) ali na standardne pogodbene klavzule Evropske komisije (46. člen Splošne uredbe). Podrobnosti o zaščitnih ukrepih pri posameznem ponudniku so na voljo na zahtevo na [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
+Če povežete Stravo, Garmin, Wahoo, Hammerhead ali Ride with GPS (3.15), poti, ki jih pošljete, prejme ta storitev, ki jih lahko obdeluje v ZDA ali Švici v skladu s svojo politiko zasebnosti in zaščitnimi ukrepi za prenos.
+
 ## 7. Rok hrambe
 
 | Podatki | Rok hrambe |
@@ -218,6 +246,9 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Podatki o računu (e-naslov, ime, telefon, identifikator uporabnika) | Dokler račun obstaja; izbrisani takoj, ko račun izbrišete v aplikaciji |
 | Profilna fotografija | Dokler je ne odstranite ali ne izbrišete računa |
 | Shranjene in uvožene poti, shranjeni kraji | Dokler jih ne izbrišete ali ne izbrišete računa |
+| Žetoni in uporabniški ID-ji povezanih storitev | Dokler storitve ne odklopite ali ne izbrišete računa |
+| Vožnje in poti, uvožene iz povezane storitve | Dokler jih ne izbrišete ali ne izbrišete računa; elementi, uvoženi iz Strave, se izbrišejo tudi ob odklopu Strave |
+| Zapis o poteh, poslanih v storitev naprave | Dokler ne izbrišete poti ali računa |
 | Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot in njene fotografije se izbrišejo, ko pot odstranite ali izbrišete račun; njene slike zemljevidov izbrišemo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glej točko 9) |
 | Kolesarski potni list in fotografije kolesa | Do izbrisa računa; fotografijo kolesa izbrišemo iz hrambe datotek, ko jo odstranite ali izbrišete račun (glej točko 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
