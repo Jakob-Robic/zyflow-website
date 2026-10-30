@@ -1,6 +1,6 @@
 # Splošni pogoji uporabe Zyflow
 
-**Različica:** 2.1.0 · **Datum začetka veljavnosti:** 26. 10. 2026 · Nadomešča različico 2.0.1 z dne 19. 10. 2026
+**Različica:** 2.2.0 · **Datum začetka veljavnosti:** 30. 11. 2026 · Nadomešča različico 2.1.0 z dne 26. 10. 2026
 
 ## 1. Kdo smo in kaj urejajo ti pogoji
 
@@ -35,6 +35,8 @@ Funkcije storitve lahko razvijamo, spreminjamo ali ukinemo. Če bi sprememba na 
 Podeljujemo vam osebno, neizključno in neprenosljivo licenco, ki jo je mogoče v skladu s temi pogoji preklicati, za namestitev in uporabo aplikacije na napravah, ki jih imate v lasti ali pod nadzorom, ter za uporabo storitve za lastne **osebne, nekomercialne namene**. Za prenos aplikacije veljajo tudi pogoji trgovin z aplikacijami (Apple App Store, Google Play).
 
 Poti lahko izvozite kot datoteke GPX in jih uporabljate za lastno navigacijo na kateri koli napravi ali v kateri koli aplikaciji. Izvoženih datotek ali podatkov iz storitve brez našega pisnega soglasja ne smete prodajati ali komercialno razširjati.
+
+**Kopije za uporabo brez povezave.** Aplikacija lahko kraje, poti in zemljevide shrani v vašo napravo, da jih lahko uporabljate brez internetne povezave. Te kopije so del aplikacije: uporabljate jih lahko samo v aplikaciji in samo v napravi, v katero so bile prenesene. Ne smete jih kopirati, izvleči, dešifrirati, deliti ali uporabljati zunaj aplikacije. Količino in pogostost prenosov lahko omejimo, za prenos lahko zahtevamo potrjen račun ali pristno, nespremenjeno različico aplikacije na podprti napravi, kopije pa lahko posodobimo ali izbrišemo, na primer ko zastarijo ali ko se odjavite.
 
 **Za komercialno uporabo potrebujete poslovni paket.** Osebni računi in brezplačne poti so namenjeni izključno osebni, nekomercialni uporabi. Paket Zyflow for Businesses (točka 15) potrebujete, če želite:
 
@@ -102,7 +104,9 @@ Ne smete:
 - podajati lažnih, zavajajočih ali manipulativnih prijav ali ocen, vključno z ocenami lastnega podjetja ali konkurenta;
 - uporabljati storitve za oglaševanje ali neželeno pošto ali se izdajati za druge osebe ali organizacije;
 - uporabljati storitve v komercialne namene brez poslovnega paketa, kadar ga zahteva točka 4;
-- samodejno zajemati ali množično prenašati podatkov, dostopati do naših vmesnikov API drugače kot prek naših aplikacij ali obhajati omejitev zahtev ali varnostnih ukrepov;
+- samodejno zajemati ali množično prenašati podatkov, vključno z izvlekom ali dešifriranjem kopij za uporabo brez povezave (točka 4);
+- dostopati do naših vmesnikov API drugače kot prek naših aplikacij ali za dostop do storitve uporabljati robotov, emulatorjev ali spremenjenih različic naših aplikacij;
+- obhajati omejitev prenosov, omejitev zahtev ali varnostnih ukrepov, na primer z uporabo več računov ali naprav;
 - izvajati povratnega inženiringa aplikacije, razen kadar to dovoljuje zakon;
 - motiti, preobremenjevati ali napadati storitve ali nalagati zlonamerne programske opreme.
 
@@ -148,7 +152,11 @@ Ne smete:
 
 ## 14. Intelektualna lastnina
 
-Aplikacija, programska oprema, oblikovanje, ime in logotip Zyflow, naša besedila, izbrane vsebine in naša baza krajev so zaščiteni in pripadajo nam ali našim dajalcem licenc. Razen licence iz točke 4 vam ti pogoji nanje ne podeljujejo nobenih pravic. Za zemljevidne podatke OpenStreetMap velja licenca Open Database License. Če nam pošljete povratne informacije ali zamisli, jih lahko prosto in brezplačno uporabimo; to ne pomeni prenosa pravic v zvezi z osebnimi podatki.
+Aplikacija, programska oprema, oblikovanje, ime in logotip Zyflow, naša besedila, izbrane vsebine in naša baza krajev so zaščiteni in pripadajo nam ali našim dajalcem licenc. Razen licence iz točke 4 vam ti pogoji nanje ne podeljujejo nobenih pravic.
+
+Naša baza krajev je rezultat znatne naložbe v pridobivanje, preverjanje in predstavitev vsebine in je zaščitena kot baza podatkov po pravu EU (pravica izdelovalca baze podatkov) in z avtorsko pravico. Brez našega pisnega soglasja ne smete izvleči ali ponovno uporabiti celote ali bistvenega dela baze niti ponavljajoče in sistematično izvlekati manjših delov. Naši podatki lahko vsebujejo oznake, po katerih prepoznamo njihove kopije.
+
+Za zemljevidne podatke OpenStreetMap velja licenca Open Database License; te omejitve ne omejujejo vaših pravic do podatkov OpenStreetMap po tej licenci. Če nam pošljete povratne informacije ali zamisli, jih lahko prosto in brezplačno uporabimo; to ne pomeni prenosa pravic v zvezi z osebnimi podatki.
 
 ## 15. Poslovni uporabniki: partnerski portal in Zyflow for Businesses
 

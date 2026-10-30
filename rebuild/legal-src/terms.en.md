@@ -1,6 +1,6 @@
 # Zyflow Terms of Service
 
-**Version:** 2.1.0 · **Effective date:** 26 October 2026 · Replaces version 2.0.1 of 19 October 2026
+**Version:** 2.2.0 · **Effective date:** 30 November 2026 · Replaces version 2.1.0 of 26 October 2026
 
 ## 1. Who we are and what these Terms cover
 
@@ -35,6 +35,8 @@ We may develop, change or discontinue features. If a change significantly affect
 We grant you a personal, non-exclusive, non-transferable licence, revocable in accordance with these Terms, to install and use the app on devices you own or control and to use the Service for your own **personal, non-commercial purposes**. App store terms (Apple App Store, Google Play) also apply to the download.
 
 You may export routes as GPX files and use them for your own navigation on any device or app. You may not sell or commercially distribute exported files or data from the Service without our written consent.
+
+**Offline copies.** The app can save places, routes and maps on your device so you can use them without a connection. Offline copies are part of the app: you may use them only inside the app, on the device that downloaded them. You may not copy, extract, decrypt, share or use them outside the app. We may limit how much and how often you can download, require a confirmed account or a genuine, unmodified copy of the app on a supported device, and update or delete offline copies, for example when they are out of date or when you sign out.
 
 **Commercial use needs a business plan.** Personal accounts and free routes are for personal, non-commercial use only. You need a Zyflow for Businesses plan (section 15) to:
 
@@ -102,7 +104,9 @@ You must not:
 - submit false, misleading or manipulative reports or reviews, including reviews of your own business or a competitor;
 - use the Service for advertising or spam, or impersonate other people or organisations;
 - use the Service commercially without a business plan where section 4 requires one;
-- scrape, harvest or bulk-download data, access our APIs other than through our apps, or circumvent rate limits or security measures;
+- scrape, harvest or bulk-download data, including by extracting or decrypting offline copies (section 4);
+- access our APIs other than through our apps, or use bots, emulators or modified versions of our apps to access the Service;
+- circumvent download limits, rate limits or security measures, for example by using several accounts or devices;
 - reverse engineer the app, except where the law allows this;
 - interfere with, overload or attack the Service, or upload malware.
 
@@ -148,7 +152,11 @@ You must not:
 
 ## 14. Intellectual property
 
-The app, software, design, the Zyflow name and logo, our own texts, curated content and our places database are protected and belong to us or our licensors. Apart from the licence in section 4, these Terms give you no rights to them. Map data from OpenStreetMap is subject to the Open Database License. If you send us feedback or ideas, we may use them freely without payment; this does not transfer any personal data rights.
+The app, software, design, the Zyflow name and logo, our own texts, curated content and our places database are protected and belong to us or our licensors. Apart from the licence in section 4, these Terms give you no rights to them.
+
+Our places database is the result of substantial investment in obtaining, checking and presenting its contents and is protected as a database under EU law (the database maker's right) and copyright. You may not extract or re-use all or a substantial part of it, or repeatedly and systematically extract smaller parts, without our written consent. Our data may contain markers that let us recognise copies of it.
+
+Map data from OpenStreetMap is subject to the Open Database License; these restrictions do not limit your rights to OpenStreetMap data under that licence. If you send us feedback or ideas, we may use them freely without payment; this does not transfer any personal data rights.
 
 ## 15. Business users: partner portal and Zyflow for Businesses
 
