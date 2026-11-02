@@ -909,7 +909,7 @@ Charging stop suggestions
 Weather & wind factors
 
 [tour.aside.items[4]]
-Offline-ready planning
+Places saved for no signal
 
 [tour.aside.items[5]]
 iOS & Android
