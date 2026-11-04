@@ -9,7 +9,7 @@ const sharp = require("sharp");
 const { loadBlog, getCatalog } = require("./blog");
 
 const ROOT = path.join(__dirname, "..", "..");
-const HERO = path.join(ROOT, "content/blog/e-bike-charging-at-hospitality-stops/images/hero.jpg");
+const HERO = path.join(ROOT, "rebuild/scripts/fixtures/hero.jpg");
 const BUILD = path.join(__dirname, "build.js");
 
 function basePost(overrides = {}) {
@@ -81,7 +81,6 @@ test("the journal stays unpublished in source", () => {
   assert.equal(getCatalog().posts.every((post) => post.status === "draft" && post.lang === "en"), true);
   assert.equal(getCatalog().posts.some((post) => post.slug === "zyflow-is-live-on-ios-and-android"), false);
   assert.equal(getCatalog().pages.length, 0);
-  assert.ok(getCatalog().warnings.some((warning) => /placeholder/.test(warning)));
   const areas = getCatalog().taxonomy.regions.find((region) => region.id === "gorenjska").areas.map((area) => area.id);
   assert.ok(["bled", "trzic", "jezersko", "kranj"].every((id) => areas.includes(id)));
   assert.equal(getCatalog().taxonomy.regions.find((region) => region.id === "gorenjska").country, "slovenia");

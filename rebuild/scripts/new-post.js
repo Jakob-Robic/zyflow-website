@@ -73,7 +73,7 @@ function main() {
     .replace(/__TYPE__/g, type)
     .replace(/^region: __REGION__\n/m, region === "none" ? "" : `region: ${region}\n`)
     .replace(/^# area: bled$/m, area ? `area: ${area}` : "# area: bled")
-    .replace(/^parentHub: blog$/m, region === "none" && type === "practical" ? "parentHub: ride-smarter" : "parentHub: blog")
+    .replace(/^parentHub: blog$/m, region === "none" && type === "practical" && fs.existsSync(path.join(dir, "ride-smarter")) ? "parentHub: ride-smarter" : "parentHub: blog")
     .replace(/^tags: \[\]$/m, tags.length ? `tags:\n${tags.map((tag) => `  - ${tag}`).join("\n")}` : "tags: []")
     .replace(/__HERO_ALT__/g, "Describe the hero photo")
     .replace(/__SOURCE_NOTE__/g, "Who rode or checked this, and when.")
