@@ -103,6 +103,8 @@ From brand guidelines §8, applied to long form:
 
 Banned words (the linter warns): amazing, stunning, breathtaking, hidden gem, must-see, ultimate, unlock, discover (as a headline verb), journey (for a ride), paradise.
 
+AI-sounding phrases (the linter warns, in any case and with straight or curly apostrophes): nestled, whether you're, it's worth noting, delve, in conclusion, a testament to, embark, vibrant, boasts, tapestry, picturesque, seamless, elevate, game-changer, look no further, in today's, here's the thing, and "not just X, but Y".
+
 ---
 
 ## 4. Anatomy of a post

@@ -18,6 +18,41 @@ const BANNED = [
   "journey",
   "paradise",
 ];
+// Phrases that make a post read as machine-written. Mirrors AI_PHRASES in the
+// admin repo (src/lib/journal/prompts.ts) and its lint port (checks.ts): keep
+// all three in step. Written with straight apostrophes; the text is normalised
+// so curly ones match too. "not just" only counts as "not just X, but Y".
+const AI_PHRASES = [
+  "nestled",
+  "whether you're",
+  "it's worth noting",
+  "delve",
+  "in conclusion",
+  "a testament to",
+  "embark",
+  "vibrant",
+  "boasts",
+  "tapestry",
+  "picturesque",
+  "seamless",
+  "elevate",
+  "game-changer",
+  "look no further",
+  "in today's",
+  "here's the thing",
+  "not just",
+];
+
+function aiPhraseNotes(text) {
+  const normal = String(text || "").replace(/[\u2018\u2019]/g, "'");
+  const notes = [];
+  for (const phrase of AI_PHRASES) {
+    const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const pattern = phrase === "not just" ? /\bnot just\b[^.]{0,60}\bbut\b/i : new RegExp(`\\b${escaped}`, "i");
+    if (pattern.test(normal)) notes.push(`sounds like AI: "${phrase}"`);
+  }
+  return notes;
+}
 const LENGTH = {
   practical: [600, 1000],
   story: [600, 1000],
@@ -41,6 +76,7 @@ function lint(post) {
   if (/__[A-Z_]+__/.test(post.raw)) notes.push("template placeholders (__…__) are still in the file");
   const lower = `${post.title}\n${post.description}\n${prose}`.toLowerCase();
   for (const word of BANNED) if (lower.includes(word)) notes.push(`uses "${word}"`);
+  notes.push(...aiPhraseNotes(`${post.title}\n${post.description}\n${prose}`));
   if (/^\s*discover\b/i.test(post.title)) notes.push('title starts with "Discover"');
   if (EMOJI.test(`${post.title}${post.description}${prose}`)) notes.push("contains emoji");
   if (prose.replace(/!\[/g, "").includes("!")) notes.push("contains an exclamation mark");
@@ -86,4 +122,6 @@ function main() {
   console.log(`\n${posts.length} post(s) valid · ${warnings} playbook note(s) · ${catalog.warnings.length} engine warning(s)`);
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = { AI_PHRASES, aiPhraseNotes, lint };

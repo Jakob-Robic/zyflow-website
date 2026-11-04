@@ -574,3 +574,37 @@ test("a writer photo is checked, copied and linked from the built assets", () =>
   assert.ok(missing.errors.some((error) => /photo file does not exist/.test(error)));
   assert.ok(imageSources().some((source) => source.key === "_authors" && source.dir.endsWith(path.join("_authors", "images"))));
 });
+
+test("lint warns on AI-sounding phrases once each, curly or straight", () => {
+  const { lint } = require("./check-blog");
+  const post = {
+    ...basePost(),
+    raw: "",
+    body: [
+      "A café nestled under the climb. Whether you’re on a road bike or whether you're not, it’s worth noting the socket.",
+      "",
+      "It Boasts a Seamless terrace.",
+    ].join("\n"),
+  };
+  const notes = lint(post).filter((note) => note.startsWith("sounds like AI"));
+  assert.deepEqual(notes, [
+    'sounds like AI: "nestled"',
+    'sounds like AI: "whether you\'re"',
+    'sounds like AI: "it\'s worth noting"',
+    'sounds like AI: "boasts"',
+    'sounds like AI: "seamless"',
+  ]);
+});
+
+test('lint only warns on "not just" in the "not just X, but Y" pattern', () => {
+  const { aiPhraseNotes } = require("./check-blog");
+  assert.deepEqual(aiPhraseNotes("It is not just a café, but a charging stop."), ['sounds like AI: "not just"']);
+  assert.deepEqual(aiPhraseNotes("Not just yet. But soon."), []);
+  assert.deepEqual(aiPhraseNotes("Bring water, not just snacks."), []);
+});
+
+test("lint ignores AI phrases outside the prose and inside other words", () => {
+  const { lint } = require("./check-blog");
+  const post = { ...basePost({ title: "Ferry stops", description: "Disembark at the pier and ride on." }), raw: "", body: ":::figure nestled\n:::\nPlain text." };
+  assert.deepEqual(lint(post).filter((note) => note.startsWith("sounds like AI")), []);
+});
