@@ -422,7 +422,7 @@ function authorVisible(author, locale) {
   const bioMarked = author.placeholder === true || (author.bio && author.bio.placeholder === true);
   const photoMarked = author.placeholder === true || (author.photo && author.photo.placeholder === true);
   const bio = !bioMarked && author.bio && author.bio[locale] ? author.bio[locale] : "";
-  const photo = !photoMarked && author.photo && author.photo.src ? author.photo.src : "";
+  const photo = !photoMarked && author.photo && author.photo.src ? publicImage(AUTHOR_IMAGES, author.photo.src) : "";
   return { bio, photo };
 }
 
@@ -438,6 +438,10 @@ function renderAuthorBox(author, locale, messages, href) {
   const bioHtml = bio ? `<p class="post-author__bio">${esc(bio)}</p>` : "";
   return `<aside class="post-author">${photoHtml}<div><p class="post-author__name">${name}</p><p class="post-author__role">${esc(role)}</p>${bioHtml}</div></aside>`;
 }
+
+// Writer photos live in _authors/images and are copied beside the post images. Post keys
+// are kebab-case, so this folder name never meets one.
+const AUTHOR_IMAGES = "_authors";
 
 function publicImage(translationKey, src) {
   return `./assets/images/blog/${translationKey}/${path.basename(src)}`;
@@ -1677,6 +1681,7 @@ function imageSources() {
       dir: path.join(post.dir, "images"),
     });
   }
+  sources.push({ key: AUTHOR_IMAGES, dir: path.join(catalog.dir, "_authors", "images") });
   return sources;
 }
 
@@ -1713,6 +1718,7 @@ module.exports = {
   SOURCE_KINDS,
   TYPES,
   BLOG_PAGES: catalog.pages,
+  authorVisible,
   blogContentDir,
   childrenOf,
   faqsFor,
