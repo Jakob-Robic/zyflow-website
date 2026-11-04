@@ -10,7 +10,7 @@
  *   injected on the first focus or input in a form, not at page load;
  *   challenges.cloudflare.com stays in script-src, connect-src, and frame-src.
  * - style-src: self + inline (cookie banner, a few style= attrs). Banner CSS is self-hosted.
- * - img-src: self + data; GTM/GA/Ads/Meta pixels.
+ * - img-src: self + data; GTM/GA/Ads/Meta pixels; fazier.com launch badge in the footer.
  * - font-src: self (DM Sans, Tanker, Courier Prime in /assets/design-system/fonts).
  * - connect-src: self (/api/* including csp-report); GA4; GTM; Google Ads;
  *   PostHog EU ingest + assets; Meta; ChatGPT pixel; Turnstile.
@@ -31,7 +31,7 @@ const CSP_REPORT_ONLY =
   "form-action 'self'; " +
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://connect.facebook.net https://bzrcdn.openai.com https://eu-assets.i.posthog.com https://challenges.cloudflare.com; " +
   "style-src 'self' 'unsafe-inline'; " +
-  "img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://*.google.com https://*.g.doubleclick.net https://www.facebook.com https://*.facebook.com https://*.openfreemap.org https://tiles.openfreemap.org https://api.maptiler.com; " +
+  "img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://*.google.com https://*.g.doubleclick.net https://www.facebook.com https://*.facebook.com https://*.openfreemap.org https://tiles.openfreemap.org https://api.maptiler.com https://fazier.com; " +
   "font-src 'self' data:; " +
   "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://*.googleadservices.com https://*.doubleclick.net https://eu.i.posthog.com https://eu.posthog.com https://eu-assets.i.posthog.com https://www.facebook.com https://connect.facebook.net https://graph.facebook.com https://bzrcdn.openai.com https://bzr.openai.com https://challenges.cloudflare.com https://tiles.openfreemap.org https://*.openfreemap.org https://api.maptiler.com https://overpass-api.de https://overpass.kumi.systems; " +
   "frame-src https://www.googletagmanager.com https://www.facebook.com https://td.doubleclick.net https://challenges.cloudflare.com; " +
