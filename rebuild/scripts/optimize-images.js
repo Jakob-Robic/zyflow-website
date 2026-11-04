@@ -38,6 +38,7 @@ const LAYOUT = {
   },
   "app-map.jpg": { maxCss: 280, sizes: "(max-width: 900px) 70vw, 240px" },
   "app-place.jpg": { maxCss: 240, sizes: "240px" },
+  "app-route.jpg": { maxCss: 200, sizes: "200px" },
   "polaroid-1.jpg": { maxCss: 220, sizes: "220px" },
   "polaroid-3.jpg": { maxCss: 220, sizes: "220px" },
   "forest-boardwalk.jpg": { maxCss: 160, sizes: "160px" },
