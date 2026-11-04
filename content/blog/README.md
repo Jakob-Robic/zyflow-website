@@ -228,7 +228,7 @@ Brand §7, applied:
 
 1. **Idea:** add a row to the plan in §11 (pillar, type, search query, region).
 2. **Brief** (10 minutes): the query, the reader, 3–5 headings, the places and numbers to check, the photos needed, the sources.
-3. **Scaffold:** `npm run blog:new -- <slug> --type <type> --region <id>` (`--region none` for a tip; it then sits under Ride smarter).
+3. **Scaffold:** `npm run blog:new -- <slug> --type <type> --region <id>` (`--region none` for a tip; it then sits under Ride smarter once that hub exists, and under /blog until then).
 4. **Draft** in `en.md` with `status: draft`. AI help is fine; then set `aiAssisted: true` and write `howWeMade`. A person who rode or checked it is the author.
 5. **Check:** `npm run blog:check`. Fix errors; read the warnings.
 6. **Preview:** `npm run blog:preview && npm run serve:rebuild`, then open `/blog/<slug>`.
@@ -256,11 +256,9 @@ The engine is done; these are content and decisions. `JOURNAL_PUBLIC` lives in `
 
 | Item | Owner | State |
 | --- | --- | --- |
-| Author bio (EN + SL) and a square photo in `_authors/jakob-robic.yml` (and Tanja's, if she writes) | Jakob | placeholder |
-| Real hero photos for the four drafts. The current ones show kayaks, rafting and a driver in a car, with no bike in any of them, and they are 600–720 px wide. All break §7 | Jakob | to replace |
-| The four drafts: `facts`, `sources`, 600+ words, 2+ internal links each (`npm run blog:check` lists what is missing) | writer | to do |
+| Author bio (EN + SL) and a square photo for each writer (Jakob, Tanja). Edited on Admin → Journal → Writers, which sends `_authors/<id>.yml` and the photo here as a PR | Jakob, Tanja | placeholder |
 | "Cycling in Gorenjska" region hub, so /blog has a feature | writer | not started |
-| "Ride smarter" pillar hub | writer | drafted; hero is a placeholder |
+| "Ride smarter" pillar hub (tips need it as their parent) | writer | not started |
 | Slovenian versions of the first posts (the SL hub shows "read in English" until then) | writer | not started |
 | Places: Slovenia, Austria, Italy and Croatia are mapped with regions and areas. Check the region split and the Slovenian names | Jakob | to check |
 | A launch batch of at least 6 published posts | writer | 0 of 6 |
@@ -274,18 +272,18 @@ Ordered so the hub fills in the right order. Search queries are the target; chec
 
 | # | Title (≤ 7 words) | Pillar | Type · hubLevel | Where · parentHub | Tags | Search query | Uses |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | Ride smarter | Ride smarter | practical · pillar | none · blog | planning | e-bike ride planning | draft exists |
+| 0 | Ride smarter | Ride smarter | practical · pillar | none · blog | planning | e-bike ride planning | |
 | 1 | Cycling in Gorenjska | Ride it | route-guide · region | gorenjska · blog | climbs, stays | cycling gorenjska / kolesarjenje gorenjska | all Gorenjska featured routes |
 | 2 | Charging stops around Bled | Where to stop | spot-list · guide | gorenjska / bled · cycling-in-gorenjska | charging, cafes | e-bike charging bled | app chargers, `blejcanka` |
 | 3 | Prelaz Ljubelj by e-bike | Ride it | route-guide · guide | gorenjska / trzic · cycling-in-gorenjska | climbs, borders | ljubelj pass by bike | `k35-prelaz-ljubelj` |
-| 4 | Planning your first battery-aware day ride | Ride smarter | practical · guide | none · ride-smarter | planning, charging | e-bike range planning | draft exists |
+| 4 | Planning your first battery-aware day ride | Ride smarter | practical · guide | none · ride-smarter | planning, charging | e-bike range planning | |
 | 5 | Bike-friendly stays in Jezersko | Where to stop | spot-list · guide | gorenjska / jezersko · cycling-in-gorenjska | stays | jezersko accommodation cyclists | `k16-trzic-jezersko`, `jezerski-vrh` |
-| 6 | What makes a place bike-friendly? | Bike-friendly places | story · guide | none · blog | stays, charging | bike friendly accommodation criteria | draft exists |
+| 6 | What makes a place bike-friendly? | Bike-friendly places | story · guide | none · blog | stays, charging | bike friendly accommodation criteria | |
 | 7 | Tržič to Jezersko in one day | Ride it | route-guide · guide | gorenjska / trzic · cycling-in-gorenjska | climbs | trzic jezersko cycling | `k16-trzic-jezersko` |
 | 8 | Coffee stops around Tržič | Where to stop | spot-list · guide | gorenjska / trzic · cycling-in-gorenjska | cafes | cafés tržič cycling | `trzicanka`, `k21-dom-pod-storzicem` |
-| 9 | Reading elevation before a cross-border ride | Ride smarter | practical · guide | none · ride-smarter | climbs, borders | elevation profile cycling | draft exists |
+| 9 | Reading elevation before a cross-border ride | Ride smarter | practical · guide | none · ride-smarter | climbs, borders | elevation profile cycling | |
 | 10 | A weekend around Kamnik and Kranj | Ride it | itinerary · guide | osrednjeslovenska / kamnik · blog | stays | cycling weekend slovenia | `kamnicanka`, `k52-pot-treh-zvonov` |
-| 11 | Charging at cafés and guesthouses | Ride smarter | practical · guide | none · ride-smarter | charging | e-bike charging café | draft exists (retitle) |
+| 11 | Charging at cafés and guesthouses | Ride smarter | practical · guide | none · ride-smarter | charging | e-bike charging café | |
 | 12 | Where to refill water in Gorenjska | Where to stop | spot-list · guide | gorenjska · cycling-in-gorenjska | water | drinking water fountains cycling | app water places |
 
 Write "Cycling in Slovenia" (a country hub) once Central Slovenia or Primorska has its own region hub.
