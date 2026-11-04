@@ -6,6 +6,9 @@ translationKey: __SLUG__
 slug: __SLUG__
 # 7 words or fewer. A place or a claim, sentence case.
 title: __TITLE__
+# Optional. The <title> and share title, 60 characters or fewer: the search query first,
+# then the place. Leave it out to use title.
+# seoTitle: E-bike charging stops around Bled
 # One sentence, 160 characters or fewer, ending with a full stop. Name the place.
 description: __DESCRIPTION__
 datePublished: __TODAY__
@@ -41,7 +44,9 @@ facts:
   # eat: Dom pod Storžičem
   # sleep: Gostišče …
   # charge: Cafés in Tržič
-# Required to publish. kind: ridden | own-gpx | own-photos | notes | partner | municipality | app-data
+# Required to publish. kind: ridden | own-gpx | own-photos | notes | partner | municipality | app-data | checked
+# Publishing needs one first-hand kind: ridden, own-gpx, own-photos, partner or checked
+# (checked: a person visited or phoned each place; put the date in the note).
 sources:
   - kind: ridden
     note: __SOURCE_NOTE__

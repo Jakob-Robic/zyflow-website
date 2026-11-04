@@ -22,7 +22,24 @@ const HUB_RANK = { pillar: 0, country: 1, region: 2, area: 3, guide: 4 };
 const PLACE_TYPES = new Set(["route-guide", "spot-list", "itinerary"]);
 const ACTIVITIES = ["road", "gravel", "mtb", "e-bike", "ev"];
 const LICENCES = ["own", "partner-permission", "guest-rider", "cc-by-4.0", "cc-by-sa-4.0", "cc0"];
-const SOURCE_KINDS = ["ridden", "own-gpx", "own-photos", "notes", "partner", "municipality", "app-data"];
+const SOURCE_KINDS = [
+  "ridden",
+  "own-gpx",
+  "own-photos",
+  "notes",
+  "partner",
+  "municipality",
+  "app-data",
+  // A person checked each place: visited or phoned, with the date in the note.
+  "checked",
+];
+// Kinds where we saw or asked ourselves. Google demotes scaled AI content, so
+// a published post needs at least one: first-hand checking is what makes it worth ranking.
+const FIRST_HAND_SOURCES = ["ridden", "own-gpx", "own-photos", "partner", "checked"];
+const FIRST_HAND_ERROR = "published posts need a first-hand source (ridden, own-gpx, own-photos, partner or checked)";
+// <title>, og:title and twitter:title carry seoTitle as is: components/head.html
+// adds no " · Zyflow" suffix, so the whole budget is the post's own text.
+const MAX_SEO_TITLE = 60;
 const RESERVED_SLUGS = new Set(["author", "rss"]);
 const KEBAB = /^[a-z0-9-]+$/;
 const PLAY_STORE_URL =
@@ -794,6 +811,7 @@ function normalizePost(entry, errors) {
     translationKey: data.translationKey,
     slug: data.slug,
     title: typeof data.title === "string" ? data.title.trim() : "",
+    seoTitle: typeof data.seoTitle === "string" ? data.seoTitle.trim() : "",
     description: typeof data.description === "string" ? data.description.trim() : "",
     datePublished: data.datePublished,
     dateUpdated: data.dateUpdated,
@@ -825,6 +843,11 @@ function normalizePost(entry, errors) {
   else if (RESERVED_SLUGS.has(post.slug)) fail(`slug "${post.slug}" is reserved`);
   if (!post.title) fail("title is required");
   else for (const issue of titleIssues(entry.lang, post.title)) fail(`title ${issue}`);
+  if (data.seoTitle != null && typeof data.seoTitle !== "string") fail("seoTitle must be text");
+  else if (post.seoTitle) {
+    const length = [...post.seoTitle.normalize("NFC")].length;
+    if (length > MAX_SEO_TITLE) fail(`seoTitle is longer than ${MAX_SEO_TITLE} characters (${length})`);
+  }
   if (!post.description) fail("description is required");
   else for (const issue of descriptionIssues(entry.lang, post.description)) fail(`description ${issue}`);
   if (!isIsoDate(post.datePublished)) fail("datePublished must be YYYY-MM-DD");
@@ -991,6 +1014,9 @@ function validateRelations(posts, authors, taxonomy, errors, warnings, today) {
             fail(`source kind must be one of ${SOURCE_KINDS.join(", ")}`);
           } else if (!String(source.note || "").trim()) fail("source note is required");
         }
+        if (!post.sources.some((source) => source && FIRST_HAND_SOURCES.includes(source.kind))) {
+          fail(FIRST_HAND_ERROR);
+        }
       }
     }
     const bodyProblems = [];
@@ -1110,7 +1136,7 @@ function buildPages(posts) {
       postLang: post.lang,
       dateUpdated: post.dateUpdated,
       seo: {
-        title: post.title,
+        title: post.seoTitle || post.title,
         description: post.description,
         ogImage: `/assets/images/og/blog/${post.translationKey}.jpg`,
         ogType: "article",
@@ -1716,6 +1742,7 @@ module.exports = {
   PLACE_TYPES,
   LICENCES,
   SOURCE_KINDS,
+  FIRST_HAND_SOURCES,
   TYPES,
   BLOG_PAGES: catalog.pages,
   authorVisible,

@@ -103,6 +103,8 @@ From brand guidelines §8, applied to long form:
 
 Banned words (the linter warns): amazing, stunning, breathtaking, hidden gem, must-see, ultimate, unlock, discover (as a headline verb), journey (for a ride), paradise.
 
+AI-sounding phrases (the linter warns, in any case and with straight or curly apostrophes): nestled, whether you're, it's worth noting, delve, in conclusion, a testament to, embark, vibrant, boasts, tapestry, picturesque, seamless, elevate, game-changer, look no further, in today's, here's the thing, and "not just X, but Y".
+
 ---
 
 ## 4. Anatomy of a post
@@ -147,6 +149,7 @@ Copy `_template/en.md`, or run `npm run blog:new`. All fields, with the rules th
 | `translationKey` | yes | kebab-case, equals the folder name, same in `en.md` and `sl.md` |
 | `slug` | yes | kebab-case URL; differs between `en` and `sl`; not `author` or `rss` |
 | `title` | yes | ≤ 7 words (lint), no `{{tokens}}` |
+| `seoTitle` | no | the `<title>`, `og:title` and `twitter:title` instead of `title`; ≤ 60 characters (no suffix is added), no `{{tokens}}`; `sl.md` may have its own |
 | `description` | yes | ≤ 160 characters, ends with a full stop |
 | `datePublished` / `dateUpdated` | yes | `YYYY-MM-DD`; not in the future when published; updated ≥ published |
 | `author` | yes | a file in `_authors/`; never AI or a bot |
@@ -159,7 +162,7 @@ Copy `_template/en.md`, or run `npm run blog:new`. All fields, with the rules th
 | `tags` | recommended | 1–3 (max 5) ids from `_taxonomy.yml`; they are the Topic filter |
 | `hero` | yes | `src` under `images/`, `alt`, `credit`, `licence` (see §7) |
 | `facts` | when published | route-guide and itinerary: `distanceKm`, `climbM`, `difficulty`, `bestSeason`; others: `bestSeason` or `charge`. Optional: `eat`, `sleep`, `charge` |
-| `sources` | when published | 1+ `{kind, note}`; kind is `ridden`, `own-gpx`, `own-photos`, `notes`, `partner`, `municipality`, `app-data` |
+| `sources` | when published | 1+ `{kind, note}`; kind is `ridden`, `own-gpx`, `own-photos`, `notes`, `partner`, `municipality`, `app-data`, `checked` (a person checked each place: visited or phoned, with the date in the note). A published post needs at least one first-hand kind (`ridden`, `own-gpx`, `own-photos`, `partner` or `checked`): Google demotes scaled AI content, and first-hand checking is what makes a post worth ranking |
 | `relatedTours` | no | slugs of featured routes |
 | `relatedPosts` | no | translationKeys in the same language |
 | `aiAssisted` | yes | `true` or `false`; if `true`, `howWeMade` is required |
@@ -214,6 +217,7 @@ Brand §7, applied:
 ## 8. SEO
 
 - **One search per post.** Write the query in the brief. Put the place name in the title, the description, the slug and the first paragraph.
+- **seoTitle:** 50–60 characters, the search query near the start, then the place ("E-bike charging stops around Bled"). The display `title` stays ≤ 7 words for the big caps; `seoTitle` is what search and share cards show. Leave it out and `title` is used.
 - **Slug:** 3–6 words, no dates, no stop words ("charging-stops-bled", not "where-to-charge-your-e-bike-in-bled-2026").
 - **FAQ:** 2–4 real questions people type. They become FAQ schema.
 - **Links:** 2+ internal links (a featured route, another post, /business for owners), and link out to official sources (municipality, tourist board) where it helps the reader.
@@ -242,6 +246,8 @@ Brand §7, applied:
 - [ ] The search query is in the title, slug and first paragraph
 - [ ] Every place has a reason it is bike-friendly; anything unchecked says "not confirmed yet"
 - [ ] Numbers are true today and come from `sources`
+- [ ] At least one first-hand source (`ridden`, `own-gpx`, `own-photos`, `partner` or `checked` with the date): the build refuses a published post without one, because Google demotes scaled AI content and first-hand checking is what makes it worth ranking
+- [ ] `seoTitle` (if set) is 50–60 characters with the search query first
 - [ ] Hero follows §7 (no faces, no cars, real roads); every image has alt, credit and licence
 - [ ] 2+ internal links; `relatedTours` set where a route fits
 - [ ] FAQ (spot-list, route-guide, itinerary)

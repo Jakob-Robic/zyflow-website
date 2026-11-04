@@ -35,7 +35,7 @@ function basePost(overrides = {}) {
       licence: "own",
     },
     facts: { bestSeason: "Apr–Oct", charge: "Cafés in Tržič" },
-    sources: [{ kind: "notes", note: "Rider notes from the day." }],
+    sources: [{ kind: "ridden", note: "Ridden on 2026-09-01." }],
     aiAssisted: false,
     ...overrides,
   };
@@ -184,6 +184,15 @@ test("validation reports each §1.4 failure", () => {
     [basePost({ facts: null }), "facts is required"],
     [basePost({ type: "route-guide", facts: { bestSeason: "Apr–Oct" } }), "facts.distanceKm is required"],
     [basePost({ sources: [] }), "sources needs at least one entry"],
+    [basePost({ sources: [{ kind: "guessed", note: "x" }] }), "source kind must be one of ridden, own-gpx, own-photos, notes, partner, municipality, app-data, checked"],
+    [
+      basePost({ sources: [{ kind: "notes", note: "Desk notes." }, { kind: "municipality", note: "Občina Bled site." }] }),
+      "published posts need a first-hand source (ridden, own-gpx, own-photos, partner or checked)",
+    ],
+    [basePost({ status: "draft", sources: [{ kind: "notes", note: "Desk notes." }] }), "first-hand source", false],
+    [basePost({ seoTitle: "E-bike charging stops around Bled and the Julian Alps foothills" }), "seoTitle is longer than 60 characters (63)"],
+    [basePost({ seoTitle: "E-bike charging stops around Bled {{appStoreUrl}}" }), "template tokens {{...}} are not allowed in front matter"],
+    [basePost({ seoTitle: ["E-bike charging"] }), "seoTitle must be text"],
     [basePost({ aiAssisted: true, howWeMade: "" }), "howWeMade is required"],
     [basePost({ status: "draft", datePublished: "2026-10-22", facts: null, sources: [] }), "datePublished is in the future", false],
   ];
@@ -211,6 +220,30 @@ test("validation reports each §1.4 failure", () => {
   assert.match(unknownCard, /Unknown route/);
   const unbuilt = errorsOf(one(basePost(), 'Find the ride.\n\n:::route-map tour="not-a-route"\n:::\n'));
   assert.match(unbuilt, /Unknown route/);
+});
+
+test("every first-hand source kind is enough to publish, checked included", () => {
+  for (const kind of ["ridden", "own-gpx", "own-photos", "partner", "checked"]) {
+    const sources = [{ kind: "municipality", note: "Občina Bled site." }, { kind, note: "Phoned on 2026-10-20." }];
+    assert.deepEqual(catalogFrom(one(basePost({ sources }))).errors, [], kind);
+  }
+});
+
+test("seoTitle goes in seo.title, and the title stays on the page", () => {
+  const seoTitle = "E-bike charging stops around Bled: cafés with a socket";
+  assert.equal([...seoTitle].length <= 60, true);
+  const withSeo = catalogFrom(one(basePost({ seoTitle: `  ${seoTitle}  ` })));
+  assert.deepEqual(withSeo.errors, []);
+  const post = withSeo.pages.find((page) => page.blogKind === "post");
+  assert.equal(post.seo.title, seoTitle);
+  const exactly60 = "x".repeat(59) + "é";
+  assert.deepEqual(catalogFrom(one(basePost({ seoTitle: exactly60 }))).errors, []);
+  const without = catalogFrom(one(basePost({ seoTitle: "" })));
+  assert.deepEqual(without.errors, []);
+  assert.equal(
+    without.pages.find((page) => page.blogKind === "post").seo.title,
+    "Café charging before a Gorenjska climb"
+  );
 });
 
 test("drafts skip published-only rules and a placeholder author warns", () => {
@@ -282,6 +315,7 @@ test("published fixture renders posts, JSON-LD, RSS, filters, and sitemap dates"
     translationKey: "sample-ride",
     dateUpdated: "2026-10-02",
     relatedTours: ["blejcanka"],
+    seoTitle: "E-bike charging at Gorenjska cafés before the climb",
   });
   const sl = basePost({
     translationKey: "sample-ride",
@@ -342,6 +376,10 @@ test("published fixture renders posts, JSON-LD, RSS, filters, and sitemap dates"
     assert.ok(graph.includes("Article"));
     assert.ok(graph.includes("FAQPage"));
     assert.ok(graph.includes("BreadcrumbList"));
+    assert.match(post, /<title>E-bike charging at Gorenjska cafés before the climb<\/title>/);
+    assert.match(post, /property="og:title" content="E-bike charging at Gorenjska cafés before the climb"/);
+    assert.match(post, /name="twitter:title" content="E-bike charging at Gorenjska cafés before the climb"/);
+    assert.match(post, /<h1[^>]*>[^<]*Café charging before a Gorenjska climb/);
     assert.match(post, /property="og:image:width" content="1200"/);
     assert.match(post, /property="og:image:height" content="630"/);
     assert.match(post, /\/tours\/blejcanka/);
@@ -573,4 +611,38 @@ test("a writer photo is checked, copied and linked from the built assets", () =>
   const missing = catalogFrom({ "_authors/tanja-test.yml": writer.replace("hero.jpg", "gone.jpg") });
   assert.ok(missing.errors.some((error) => /photo file does not exist/.test(error)));
   assert.ok(imageSources().some((source) => source.key === "_authors" && source.dir.endsWith(path.join("_authors", "images"))));
+});
+
+test("lint warns on AI-sounding phrases once each, curly or straight", () => {
+  const { lint } = require("./check-blog");
+  const post = {
+    ...basePost(),
+    raw: "",
+    body: [
+      "A café nestled under the climb. Whether you’re on a road bike or whether you're not, it’s worth noting the socket.",
+      "",
+      "It Boasts a Seamless terrace.",
+    ].join("\n"),
+  };
+  const notes = lint(post).filter((note) => note.startsWith("sounds like AI"));
+  assert.deepEqual(notes, [
+    'sounds like AI: "nestled"',
+    'sounds like AI: "whether you\'re"',
+    'sounds like AI: "it\'s worth noting"',
+    'sounds like AI: "boasts"',
+    'sounds like AI: "seamless"',
+  ]);
+});
+
+test('lint only warns on "not just" in the "not just X, but Y" pattern', () => {
+  const { aiPhraseNotes } = require("./check-blog");
+  assert.deepEqual(aiPhraseNotes("It is not just a café, but a charging stop."), ['sounds like AI: "not just"']);
+  assert.deepEqual(aiPhraseNotes("Not just yet. But soon."), []);
+  assert.deepEqual(aiPhraseNotes("Bring water, not just snacks."), []);
+});
+
+test("lint ignores AI phrases outside the prose and inside other words", () => {
+  const { lint } = require("./check-blog");
+  const post = { ...basePost({ title: "Ferry stops", description: "Disembark at the pier and ride on." }), raw: "", body: ":::figure nestled\n:::\nPlain text." };
+  assert.deepEqual(lint(post).filter((note) => note.startsWith("sounds like AI")), []);
 });
