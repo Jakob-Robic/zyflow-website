@@ -6,7 +6,7 @@ const path = require("path");
 const { execFileSync } = require("child_process");
 const YAML = require("yaml");
 const sharp = require("sharp");
-const { loadBlog, getCatalog } = require("./blog");
+const { authorVisible, imageSources, loadBlog, getCatalog } = require("./blog");
 
 const ROOT = path.join(__dirname, "..", "..");
 const HERO = path.join(ROOT, "content/blog/e-bike-charging-at-hospitality-stops/images/hero.jpg");
@@ -562,4 +562,16 @@ test("author photo src uses the images/ path rule", () => {
   fs.writeFileSync(file, YAML.stringify(author));
   const found = loadBlog(dir, { today: "2026-10-21" }).errors.join("\n");
   assert.match(found, /_authors\/jakob-robic\.yml: photo src must be a file under images\//);
+});
+
+test("a writer photo is checked, copied and linked from the built assets", () => {
+  const writer = "id: tanja-test\nname: Tanja\nphoto:\n  src: images/hero.jpg\nbio:\n  en: Rides the Karawanks.\n";
+  const catalog = catalogFrom({ ...one(basePost({ author: "tanja-test" })), "_authors/tanja-test.yml": writer });
+  assert.deepEqual(catalog.errors, []);
+  const { photo, bio } = authorVisible(catalog.authors.get("tanja-test"), "en");
+  assert.equal(photo, "./assets/images/blog/_authors/hero.jpg");
+  assert.equal(bio, "Rides the Karawanks.");
+  const missing = catalogFrom({ "_authors/tanja-test.yml": writer.replace("hero.jpg", "gone.jpg") });
+  assert.ok(missing.errors.some((error) => /photo file does not exist/.test(error)));
+  assert.ok(imageSources().some((source) => source.key === "_authors" && source.dir.endsWith(path.join("_authors", "images"))));
 });
