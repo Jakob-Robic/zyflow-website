@@ -408,6 +408,8 @@ function renderPicture(attrs, variant, { lazy }) {
 
 function rewriteImgTag(tag, { lazy, rasters, contours }) {
   const attrs = parseAttrs(tag);
+  // loading="eager" opts out of below-fold lazy loading (e.g. images inside a closed <dialog>).
+  if (attrs.loading === "eager") lazy = false;
   const src = attrs.src || "";
   if (!src.startsWith("/assets/")) return tag;
 
