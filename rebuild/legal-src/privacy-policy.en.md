@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.2 · **Effective date:** 30 October 2026 · Replaces version 2.1 of 19 October 2026
+**Version:** 2.3 · **Effective date:** [TODO: date of publication] · Replaces version 2.2 of 30 October 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -23,6 +23,7 @@ We have not appointed a data protection officer. For any privacy question or req
 - We do not sell your data and we do not show ads in the app.
 - Product analytics use a pseudonymous user ID, not your email address, and only run if you agree.
 - Location is used only while the app is in use. There is no background location tracking.
+- Push notifications reach you only if you allow them on your phone. News and offers, by push or by email, stay off until you turn them on.
 - You can delete your account in the app at any time.
 
 ## 3. What data we process, why, and on what legal basis
@@ -101,11 +102,15 @@ If you allow it, the app uses the camera and photo library only when you choose 
 
 ### 3.8 Emails
 
-We use Brevo to store your contact details (email address, full name and user ID) and to send emails from Zyflow.
+We use Brevo to store your contact details (email address, full name and user ID) and to send emails from Zyflow. Creating an account adds your contact details to Brevo, but **not to any mailing list**.
 
-**Service emails:** for example the welcome email after signup, account and security emails, and updates about places you submitted. **Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
+**Service emails:** account and security emails (for example sign-in codes and confirmations when you change your email address) and updates about places you submitted. **Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
 
-**Marketing emails (newsletters, product news):** we send these **only if you have given separate, explicit consent** (opt-in). You can withdraw consent at any time via the unsubscribe link in each email or by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu). **Legal basis:** consent (Art. 6(1)(a) GDPR and ZEKom-2). We currently do not send marketing emails.
+> **TODO (Legal), weekly summary email:** decide whether the planned weekly summary email is a service email (contract, Art. 6(1)(b)) or a marketing email (consent). It is not sent yet. Replace this note with the decided text before publishing.
+
+**Marketing emails ("Ride ideas and Zyflow news"):** we send these **only if you turn them on yourself** in the app under Profile → Settings → Notification & Sound → Email notification. The option is never switched on for you. When you turn it on, we add you to our mailing list at Brevo; when you turn it off, we remove you from it. We record your choice, when you made it and where in the app, so that we can show what you agreed to. You can withdraw consent at any time in the app, via the unsubscribe link in each email or by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu). **Legal basis:** consent (Art. 6(1)(a) GDPR and ZEKom-2).
+
+> **TODO (Legal), Brevo welcome automation:** the welcome emails in Brevo start when a contact joins the mailing list, which now happens only with consent. Decide whether a single "how to use Zyflow" welcome email may go to every new account as a service email, or only to riders who turned on marketing emails. Then replace this note and say whether we currently send marketing emails.
 
 ### 3.9 Product analytics
 
@@ -147,7 +152,7 @@ Our search function stores the IP address of the requesting device together with
 
 ### 3.14 Data stored on your device
 
-The app stores your login session, your last known location and your recent searches locally on your device so that the app works quickly and you stay signed in. This storage is strictly necessary for the service you request. It is removed when you uninstall the app.
+The app stores your login session, your last known location, your recent searches and the date it last offered you notifications locally on your device so that the app works quickly, you stay signed in and we do not ask about notifications too often. This storage is strictly necessary for the service you request. It is removed when you uninstall the app.
 
 If you agree to product analytics, PostHog also stores a pseudonymous identifier on your device; without your consent it stores nothing. Sentry stores a pseudonymous identifier for crash reporting (see 3.10).
 
@@ -171,9 +176,29 @@ You can connect your Zyflow account to other cycling services. Connecting is alw
 
 **Legal basis:** performance of a contract at your request (Art. 6(1)(b) GDPR). Each service is an independent controller for the data it holds about you; its own privacy policy applies.
 
-### 3.16 Planned features (not live yet)
+### 3.16 Notifications (push and in the app)
 
-**Push notifications** are not available yet. Before we launch them, we will update this Privacy Policy. Push notifications will only be sent if you allow them in your device settings.
+**When we ask:** the app does not ask about notifications when you open it or when you sign up. After you save a route or a place, it may offer to let you know about it, for example when the weather is good for that route. You can also turn notifications on yourself in the app's notification inbox. Your phone's own permission prompt appears only after you tap "Turn on notifications". If you tap "Not now", the app does not offer again for at least 14 days. You can allow or block notifications for Zyflow at any time in your phone's settings.
+
+**What we store:** if you allow notifications, the app gets a push token for your phone through our push provider Expo. A push token is an address for the Zyflow app on that phone; it contains no name, email address or location. We store the push token with your user ID, the date it was created and last updated, and the build number of your phone's operating system. We also store your notification settings and the notifications we send you, which you can read in the app's notification inbox: title, text, type, time, whether it was sent by push and when you read it.
+
+**How push notifications are delivered:** we pass each push notification to Expo (650 Industries, Inc., USA), which hands it to Apple Push Notification service (iPhone) or Google's Firebase Cloud Messaging (Android) to deliver it to your phone. They receive the push token, the title and text of the notification and an internal notification ID. The text can name a route or place you saved. We do not send your email address or your location with a push notification.
+
+**What decides what we send:** the routes and places you saved, your notification settings and public data such as weather forecasts. We do not use your live location for notifications and do not track your location in the background.
+
+**Notification groups and defaults:**
+
+| Group | Examples | Default after you allow notifications | Legal basis |
+|---|---|---|---|
+| **Your rides & places** | Severe weather, battery and charging alerts for your rides and saved places | On | Contract, Art. 6(1)(b) GDPR |
+| **Your contributions** | Updates on places you suggested, approved partner access | On | Contract, Art. 6(1)(b) GDPR |
+| **News & offers** | Zyflow announcements, new offers and promotions | Off until you turn it on | Consent, Art. 6(1)(a) GDPR |
+
+The first two groups are part of the service you use. News & offers are sent only if you turn them on; you can turn them off again at any time, without affecting what was sent before.
+
+**Changing your choice:** under Profile → Settings → Notification & Sound you can turn each type of notification on or off, both as a push notification and in the inbox. You can also block all Zyflow notifications in your phone's settings; then no push notifications reach you, but the types you left on still appear in the app's inbox.
+
+> **TODO (Legal), legal basis per group:** confirm the legal bases in the table above. The product plan suggests "Your rides & places" and "Your contributions" as part of the contract (Art. 6(1)(b)) and "News & offers" on consent (Art. 6(1)(a)). Please also confirm whether ZEKom-2 applies to promotional push notifications as it does to marketing emails, and whether Apple and Google act as processors or independent controllers when they deliver push notifications.
 
 ### 3.17 Support and privacy requests
 
@@ -192,10 +217,11 @@ If you contact us, we process your email address, the content of your message an
 | Purpose | Legal basis (GDPR) |
 |---|---|
 | Account, routes, location features, bike passport, community sharing, maps/search/routing/weather, service emails | Contract, Art. 6(1)(b) |
+| Notifications about your rides, places and contributions (push and inbox) | Contract, Art. 6(1)(b) |
 | Connected services (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), only if you connect them | Contract, Art. 6(1)(b) |
 | Place reports and submissions, crash monitoring, security and rate limiting, Stay22 links, support | Legitimate interest, Art. 6(1)(f) |
 | Product analytics (PostHog) | Consent, Art. 6(1)(a) |
-| Marketing emails, website cookies and pixels (when introduced), future push notifications | Consent, Art. 6(1)(a) (and ZEKom-2 for cookies and marketing emails) |
+| Marketing emails, news and offers notifications, website cookies and pixels (when introduced) | Consent, Art. 6(1)(a) (and ZEKom-2 for cookies and marketing emails) |
 | Answering rights requests, accounting and legal obligations | Legal obligation, Art. 6(1)(c) |
 
 Where we rely on legitimate interest, you have the right to object (see section 8).
@@ -207,11 +233,13 @@ We use the following service providers. Processors act only on our instructions 
 | Recipient | Purpose | Data | Location / safeguard |
 |---|---|---|---|
 | Supabase, Inc. (processor) | Database, authentication, file storage, backend functions | All app data described above | EU (Ireland, eu-west-1); US parent company: see section 6 |
-| Brevo (Sendinblue SAS, France) (processor) | Contact store and email delivery | Email, full name, user ID, email content | Company based in France (EU); safeguards for any transfer outside the EU/EEA: see section 6 |
+| Brevo (Sendinblue SAS, France) (processor) | Contact store and email delivery | Email, full name, user ID, mailing-list membership (only with your consent), email content | Company based in France (EU); safeguards for any transfer outside the EU/EEA: see section 6 |
+| Expo (650 Industries, Inc.) (processor) | Push notification delivery, only if you allow notifications | Push token, notification title and text, notification ID | USA; see section 6 |
 | PostHog (EU cloud) (processor) | Product analytics | User ID, app events, device/app info; IP discarded | EU |
 | Sentry (Functional Software, Inc.), EU data region (processor) | Crash and performance monitoring | User ID, IP address, device and error data | EU storage; US company: see section 6 |
 | Vercel, Inc. (processor) | Hosting of our websites | IP address, technical request data | Global network incl. USA: see section 6 |
 | Apple / Google (separate controllers) | Sign in with Apple / Google (if you choose it) | Sign-in data, email, name, profile picture link (Google) | Entities in the EU and the USA: see section 6 |
+| Apple (Apple Push Notification service) / Google (Firebase Cloud Messaging) | Delivering push notifications to your phone, only if you allow them | Push token, notification title and text | Entities in the EU and the USA: see section 6 |
 | MapTiler AG | Map tiles | IP address, map area | Company based in Switzerland; see section 6 |
 | komoot GmbH (Photon) | Place search (via our server) | Search text, search area | Company based in Germany (EU) |
 | OpenStreetMap Foundation (Nominatim) | Reverse geocoding | IP address, coordinates | Foundation based in the United Kingdom; see section 6 |
@@ -235,7 +263,7 @@ We use the following service providers. Processors act only on our instructions 
 
 ## 6. Transfers outside the EU/EEA
 
-Your app data is stored in the EU (Ireland). Some recipients are based in, or may access data from, countries outside the EU/EEA, in particular the USA (for example Apple, Google, Vercel and the US parent companies of Supabase and Sentry). We transfer data only where an adequate level of protection is ensured. Depending on the provider, we rely on an adequacy decision of the European Commission (including the EU-US Data Privacy Framework for certified US companies) or on the European Commission's Standard Contractual Clauses (Art. 46 GDPR). Details on the safeguards used for a specific provider are available on request at [legal@zyflow.eu](mailto:legal@zyflow.eu).
+Your app data is stored in the EU (Ireland). Some recipients are based in, or may access data from, countries outside the EU/EEA, in particular the USA (for example Apple, Google, Vercel, Expo and the US parent companies of Supabase and Sentry). We transfer data only where an adequate level of protection is ensured. Depending on the provider, we rely on an adequacy decision of the European Commission (including the EU-US Data Privacy Framework for certified US companies) or on the European Commission's Standard Contractual Clauses (Art. 46 GDPR). Details on the safeguards used for a specific provider are available on request at [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
 If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the routes you send go to that service, which may process them in the USA or Switzerland under its own privacy policy and transfer safeguards.
 
@@ -253,6 +281,9 @@ If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the ro
 | Bike passport and bike photos | Until you delete your account; a bike photo is deleted from file storage when you remove it or delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
 | Brevo contact (email, name, user ID) | While your account exists; deleted automatically when you delete your account (see section 9) |
+| Your marketing email choice (on or off, when and where in the app) | While your account exists, also after you turn marketing emails off, so that we can show what you agreed to; deleted when you delete your account |
+| Push token (with user ID and operating system build number) | Until you delete your account, or until Apple or Google tell us the token no longer works (for example after you uninstall the app) |
+| Notification settings and notifications in your inbox | Until you delete your account |
 | Email sending logs at Brevo | Only as long as needed to deliver emails and resolve delivery problems, in line with the provider's retention settings |
 | Product analytics (PostHog) | 12 months; deleted automatically when you delete your account |
 | Crash and performance reports (Sentry) | Up to 90 days |
@@ -261,7 +292,7 @@ If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the ro
 | Server and hosting logs (Supabase, Vercel) | Up to 30 days |
 | Database backups | We currently keep no separate database backups |
 | Support and privacy-request correspondence | As long as needed to handle your request and, afterwards, for a limited period to document it and to defend legal claims |
-| Data on your device (session, last location, recent searches) | Until you uninstall the app or clear its data |
+| Data on your device (session, last location, recent searches, date of the last notification offer) | Until you uninstall the app or clear its data |
 | Accounting records (if any) | As required by law (for example 10 years for invoices under ZDDV-1) |
 
 ## 8. Your rights
@@ -285,7 +316,7 @@ To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from
 - **On the web:** [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account).
 - **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, and photos and map images of shared routes), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
+When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, and photos and map images of shared routes), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
 ## 10. Complaints
 
