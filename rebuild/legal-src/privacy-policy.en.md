@@ -106,7 +106,7 @@ We use Brevo to store your contact details (email address, full name and user ID
 
 **Service emails:** account and security emails (for example sign-in codes and confirmations when you change your email address) and updates about places you submitted. **Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
 
-**Marketing emails ("Ride ideas and Zyflow news"):** we send these **only if you turn them on yourself** in the app under Profile → Settings → Notification & Sound → Email notification. The option is never switched on for you. When you turn it on, we add you to our mailing list at Brevo; when you turn it off, we remove you from it. We record your choice, when you made it and where in the app, so that we can show what you agreed to. You can withdraw consent at any time in the app, via the unsubscribe link in each email or by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu). **Legal basis:** consent (Art. 6(1)(a) GDPR and ZEKom-2).
+**Marketing emails ("Ride ideas and Zyflow news"):** we send these **only if you turn them on yourself** in the app under Profile → Settings → Notifications → By email. The option is never switched on for you. When you turn it on, we add you to our mailing list at Brevo; when you turn it off, we remove you from it. We record your choice, when you made it and where in the app, so that we can show what you agreed to. You can withdraw consent at any time in the app, via the unsubscribe link in each email or by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu). **Legal basis:** consent (Art. 6(1)(a) GDPR and ZEKom-2).
 
 **What we send today:** marketing emails go only to people who turned them on. When you turn them on, you receive a short series of welcome emails about Zyflow, followed by occasional news. If you don't turn them on, you receive no marketing emails, including welcome emails.
 
@@ -194,7 +194,7 @@ You can connect your Zyflow account to other cycling services. Connecting is alw
 
 The first two groups are part of the service you use. News & offers are sent only if you turn them on; you can turn them off again at any time, without affecting what was sent before.
 
-**Changing your choice:** under Profile → Settings → Notification & Sound you can turn each type of notification on or off, both as a push notification and in the inbox. You can also block all Zyflow notifications in your phone's settings; then no push notifications reach you, but the types you left on still appear in the app's inbox.
+**Changing your choice:** under Profile → Settings → Notifications you can turn each group of notifications on or off, both as push notifications and in the inbox. You can also block all Zyflow notifications in your phone's settings; then no push notifications reach you, but the groups you left on still appear in the app's inbox.
 
 ### 3.17 Support and privacy requests
 

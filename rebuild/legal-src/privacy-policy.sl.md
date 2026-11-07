@@ -106,7 +106,7 @@ Za hrambo kontaktnih podatkov (e-naslov, ime in priimek ter identifikator uporab
 
 **Obvestila v zvezi s storitvijo:** sporočila v zvezi z računom in varnostjo (na primer kode za prijavo in potrditve ob spremembi e-naslova) ter obvestila o krajih, ki ste jih predlagali. **Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
 
-**Trženjska sporočila (»Ideje za vožnje in novice Zyflow«):** pošiljamo jih **samo, če jih sami vklopite** v aplikaciji v razdelku Profil → Nastavitve → Obvestila in zvok → E-poštna obvestila. Ta možnost ni nikoli vklopljena namesto vas. Ko jo vklopite, vas dodamo na naš poštni seznam v storitvi Brevo; ko jo izklopite, vas z njega odstranimo. Zabeležimo vašo izbiro ter kdaj in kje v aplikaciji ste jo izbrali, da lahko izkažemo, v kaj ste privolili. Privolitev lahko kadar koli prekličete v aplikaciji, prek povezave za odjavo v vsakem sporočilu ali s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu). **Pravna podlaga:** privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2).
+**Trženjska sporočila (»Ideje za vožnje in novice Zyflow«):** pošiljamo jih **samo, če jih sami vklopite** v aplikaciji v razdelku Profil → Nastavitve → Obvestila → Po e-pošti. Ta možnost ni nikoli vklopljena namesto vas. Ko jo vklopite, vas dodamo na naš poštni seznam v storitvi Brevo; ko jo izklopite, vas z njega odstranimo. Zabeležimo vašo izbiro ter kdaj in kje v aplikaciji ste jo izbrali, da lahko izkažemo, v kaj ste privolili. Privolitev lahko kadar koli prekličete v aplikaciji, prek povezave za odjavo v vsakem sporočilu ali s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu). **Pravna podlaga:** privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2).
 
 **Kaj pošiljamo zdaj:** trženjska sporočila pošiljamo le tistim, ki so jih vklopili. Ko jih vklopite, prejmete kratko serijo pozdravnih sporočil o storitvi Zyflow, nato pa občasne novice. Če jih ne vklopite, ne prejemate trženjskih sporočil, tudi pozdravnih ne.
 
@@ -194,7 +194,7 @@ Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava j
 
 Prvi dve skupini sta del storitve, ki jo uporabljate. Novice in ponudbe pošiljamo le, če jih vklopite; kadar koli jih lahko znova izklopite, kar ne vpliva na že poslana obvestila.
 
-**Sprememba izbire:** v razdelku Profil → Nastavitve → Obvestila in zvok lahko vsako vrsto obvestil vklopite ali izklopite, kot potisno obvestilo in v nabiralniku. Vsa obvestila Zyflow lahko blokirate tudi v nastavitvah telefona; potem potisna obvestila do vas ne pridejo, vrste, ki ste jih pustili vklopljene, pa se še vedno prikazujejo v nabiralniku v aplikaciji.
+**Sprememba izbire:** v razdelku Profil → Nastavitve → Obvestila lahko vsako skupino obvestil vklopite ali izklopite, kot potisno obvestilo in v nabiralniku. Vsa obvestila Zyflow lahko blokirate tudi v nastavitvah telefona; potem potisna obvestila do vas ne pridejo, skupine, ki ste jih pustili vklopljene, pa se še vedno prikazujejo v nabiralniku v aplikaciji.
 
 ### 3.17 Podpora in zahteve v zvezi z varstvom podatkov
 
