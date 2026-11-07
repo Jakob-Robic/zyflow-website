@@ -336,9 +336,29 @@ const DE_WORDS = [
   "aus",
   "über",
   "fahrt",
+  "ist",
+  "sind",
+  "auf",
+  "bei",
+  "wie",
+  "zum",
+  "zur",
+  "nicht",
+  "oder",
+  "auch",
+  "ohne",
+  "zwischen",
+  "wann",
+  "warum",
+  "welche\\p{L}*",
+  "dein\\p{L}*",
+  "fahrrad\\p{L}*",
+  "radweg\\p{L}*",
+  "strecke\\p{L}*",
+  "ladestation\\p{L}*",
 ];
 
-const LOCALE_NAME = { en: "English", sl: "Slovenian" };
+const LOCALE_NAME = { en: "English", sl: "Slovenian", de: "German" };
 
 /**
  * Geographic nouns that show up inside English sentences (planina, jezero,
@@ -478,8 +498,8 @@ function titleIssues(locale, title) {
 function collectMetaIssues(messagesByLocale, pages, pageLocales) {
   const issues = [];
   for (const page of pages) {
-    // Post and author titles live in frontmatter, checked by blog.js.
-    if (page.blogKind) continue;
+    // Post, author and guide titles live in frontmatter, checked by blog.js / guides.js.
+    if (page.blogKind || page.guideKind === "guide") continue;
     for (const locale of pageLocales(page)) {
       const meta = messagesByLocale[locale]?.meta?.pages?.[page.id] || {};
       for (const problem of descriptionIssues(locale, meta.description)) {
@@ -534,11 +554,13 @@ function ogImageAlt(locale, title) {
     .replace(/^Zyflow,\s*/i, "")
     .trim();
   if (!name) {
-    return locale === "sl"
-      ? "Zyflow, kolesarjem prijazni kraji in poti"
-      : "Zyflow, bike-friendly places and cycling routes";
+    if (locale === "sl") return "Zyflow, kolesarjem prijazni kraji in poti";
+    if (locale === "de") return "Zyflow, fahrradfreundliche Orte und Radrouten";
+    return "Zyflow, bike-friendly places and cycling routes";
   }
-  return locale === "sl" ? `Naslovna fotografija: ${name}` : `Cover photo: ${name}`;
+  if (locale === "sl") return `Naslovna fotografija: ${name}`;
+  if (locale === "de") return `Titelbild: ${name}`;
+  return `Cover photo: ${name}`;
 }
 
 module.exports = {

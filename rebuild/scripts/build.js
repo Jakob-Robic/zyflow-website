@@ -19,6 +19,7 @@ const {
   LOCALES,
   DEFAULT_LOCALE,
   JOURNAL_IS_PUBLIC,
+  GUIDES_ARE_PUBLIC,
   PAGES,
   pageLocales,
   absoluteUrl,
@@ -39,6 +40,16 @@ const {
   structuredNodes,
   getCatalog,
 } = require("./blog");
+const {
+  GUIDE_BASE,
+  GUIDE_INDEX_PAGES,
+  assertGuidesBuildable,
+  guideImageSources,
+  guideSitemapDate,
+  guideStructuredNodes,
+  renderGuide,
+  renderGuidesIndex,
+} = require("./guides");
 const { renderLegalMarkdown } = require("./legal-markdown");
 const { routeBySlug, ROUTES } = require("./routes");
 const { versionAssets } = require("./version-assets");
@@ -86,7 +97,13 @@ function readMapTilerKey() {
   return key;
 }
 
-const OG_LOCALES = { en: "en_US", sl: "sl_SI" };
+const OG_LOCALES = { en: "en_US", sl: "sl_SI", de: "de_DE" };
+
+/**
+ * Locales built only for pages that list them (German guides). Their JSON
+ * holds a subset of en.json: chrome plus the strings those pages use.
+ */
+const PARTIAL_LOCALES = ["de"];
 
 function read(filePath) {
   return fs.readFileSync(filePath, "utf8");
@@ -178,6 +195,37 @@ function assertLocaleParity(messagesByLocale) {
       throw new Error(`Locale key parity failed — ${parts.join("; ")}`);
     }
   }
+}
+
+/** A partial locale may only carry keys that en.json also has (no typos, no strays). */
+function assertPartialLocale(locale, messages, base) {
+  const baseKeys = new Set(flattenKeys(base));
+  const extra = flattenKeys(messages).filter((key) => !baseKeys.has(key));
+  if (extra.length) {
+    throw new Error(
+      `Locale ${locale}.json has keys en.json does not (${extra.length}): ${extra.slice(0, 12).join(", ")}`
+    );
+  }
+}
+
+/**
+ * i18n keys used in built HTML that the page's locale does not define.
+ * applyI18n leaves the template's English text in place when a key is
+ * missing, so a partial locale (German) would silently show English.
+ */
+function missingI18nKeys(html, messages) {
+  const keys = new Set();
+  const single = /\sdata-i18n(?:-html|-aria-label|-placeholder|-label-close)?="([^"]+)"/g;
+  let match;
+  while ((match = single.exec(html))) keys.add(match[1]);
+  const attrs = /\sdata-i18n-attr="([^"]+)"/g;
+  while ((match = attrs.exec(html))) {
+    for (const part of match[1].split(";")) {
+      const colon = part.indexOf(":");
+      if (colon > 0) keys.add(part.slice(colon + 1).trim());
+    }
+  }
+  return [...keys].filter((key) => typeof getByPath(messages, key) !== "string").sort();
 }
 
 /**
@@ -457,6 +505,7 @@ function stripUnpublishedCategories(html, published = publishedCardCategories())
 
 function applyPublicationFlags(html, source = "") {
   html = applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, source);
+  html = applyToggleBlocks(html, "guides", GUIDES_ARE_PUBLIC, source);
   html = stampCardCategories(html);
   html = stripUnpublishedCategories(html);
   return html;
@@ -477,6 +526,7 @@ function resolveIncludes(html, stack = []) {
     // Reject a bad marker in this partial before it is inlined, so the
     // error names this file rather than the page that included it.
     applyToggleBlocks(partial, "journal", JOURNAL_IS_PUBLIC, clean);
+    applyToggleBlocks(partial, "guides", GUIDES_ARE_PUBLIC, clean);
     return resolveIncludes(partial, [...stack, clean]);
   });
 }
@@ -664,7 +714,10 @@ function rewriteAssetPaths(html) {
     .replace(/(href|src)="(assets|css|js)\//g, '$1="/$2/');
 }
 
-function rewriteInternalLinks(html, locale) {
+function rewriteInternalLinks(html, pageLocale) {
+  // German exists only for guides: every other link from a German page goes
+  // to the English site.
+  const locale = LOCALES.includes(pageLocale) ? pageLocale : DEFAULT_LOCALE;
   // ./index.html or index.html → localized home
   html = html.replace(
     /\b(href)="(?:\.\/)?index\.html"/g,
@@ -732,6 +785,25 @@ function injectBlog(html, page, locale, messages) {
     html = html.replace("<!-- BLOG_STYLEGUIDE -->", renderStyleguide(messages, options));
   }
   return html;
+}
+
+/** Guide and guides-index content, the per-page campaign, and the footer guides link. */
+function injectGuides(html, page, locale, messages) {
+  if (html.includes("<!-- GUIDE -->")) {
+    html = html.replace("<!-- GUIDE -->", renderGuide(page, messages));
+  }
+  if (html.includes("<!-- GUIDES_INDEX -->")) {
+    html = html.replace("<!-- GUIDES_INDEX -->", renderGuidesIndex(page, messages));
+  }
+  if (page.campaign) {
+    // attribution.js reads these: the page campaign is used for store and
+    // planner links only when the visitor arrived without a campaign.
+    html = html.replace(
+      /<body([^>]*)>/i,
+      `<body$1 data-page-campaign="${escapeAttr(page.campaign)}" data-page-medium="guide">`
+    );
+  }
+  return html.replaceAll("{{guidesIndex}}", GUIDE_BASE[locale] || GUIDE_BASE.en);
 }
 
 function galleryFigure(src) {
@@ -908,12 +980,12 @@ function injectTourContent(html, routeSlug) {
     .replace("<!-- TOUR_MORE -->", more);
 }
 
+const LANG_LABELS = { en: "EN", de: "DE", sl: "SL" };
+
+/** Language switch targets in display order. Guides add DE; every other page is EN · SL. */
 function pageLangHrefs(page) {
   if (page.langSwitch) {
-    return {
-      en: page.langSwitch.en,
-      sl: page.langSwitch.sl,
-    };
+    return { ...page.langSwitch };
   }
   if (page.hreflang === false) {
     const locales = pageLocales(page);
@@ -931,12 +1003,14 @@ function pageLangHrefs(page) {
 }
 
 function injectLangSwitcher(html, page, locale) {
-  const { en: enHref, sl: slHref } = pageLangHrefs(page);
+  const buttons = Object.entries(pageLangHrefs(page)).map(([lang, href]) => {
+    const active = locale === lang;
+    return `<a class="lang-switch__btn${active ? " is-active" : ""}" href="${href}" hreflang="${lang}" lang="${lang}" data-lang="${lang}"${active ? ' aria-current="true"' : ""}>${LANG_LABELS[lang] || lang.toUpperCase()}</a>`;
+  });
 
   const switcher = `
       <div class="lang-switch" role="group" aria-label="Language">
-        <a class="lang-switch__btn${locale === "en" ? " is-active" : ""}" href="${enHref}" hreflang="en" lang="en" data-lang="en"${locale === "en" ? ' aria-current="true"' : ""}>EN</a>
-        <a class="lang-switch__btn${locale === "sl" ? " is-active" : ""}" href="${slHref}" hreflang="sl" lang="sl" data-lang="sl"${locale === "sl" ? ' aria-current="true"' : ""}>SL</a>
+        ${buttons.join("\n        ")}
       </div>`;
 
   if (html.includes("<!-- lang-switch -->")) {
@@ -1015,6 +1089,16 @@ function organizationLd() {
 
 function structuredData(page, locale, messages) {
   const graph = [organizationLd()];
+  const guideNodes = guideStructuredNodes(
+    page,
+    messages,
+    SITE_ORIGIN,
+    absoluteOgImage(SITE_ORIGIN, "", defaultOgPath(locale))
+  );
+  if (guideNodes) {
+    graph.push(...guideNodes);
+    return { "@context": "https://schema.org", "@graph": graph };
+  }
   const blogNodes = structuredNodes(page, locale, messages, absoluteUrl, SITE_ORIGIN, {
     journalPublic: JOURNAL_IS_PUBLIC,
   });
@@ -1127,22 +1211,16 @@ function buildHead(page, locale, messages) {
   let hreflang = "";
   let ogLocaleAlts = "";
   if (page.hreflang !== false) {
-    const hrefs = page.langSwitch
-      ? {
-          en: `${SITE_ORIGIN}${page.langSwitch.en}`,
-          sl: `${SITE_ORIGIN}${page.langSwitch.sl}`,
-        }
-      : Object.fromEntries(
-          localesForPage.map((lang) => [lang, absoluteUrl(page.path, lang)])
-        );
-    const hreflangLangs = page.langSwitch ? LOCALES : localesForPage;
+    const hrefs = pageAlternateHrefs(page);
+    const hreflangLangs = Object.keys(hrefs);
     const defaultHref = hrefs[DEFAULT_LOCALE] || hrefs[hreflangLangs[0]];
     hreflang = hreflangLangs
       .map((lang) => `<link rel="alternate" hreflang="${lang}" href="${hrefs[lang]}" />`)
       .concat([`<link rel="alternate" hreflang="x-default" href="${defaultHref}" />`])
       .join("\n");
 
-    ogLocaleAlts = localesForPage
+    const ogLangs = page.alternates ? Object.keys(page.alternates) : localesForPage;
+    ogLocaleAlts = ogLangs
       .filter((lang) => lang !== locale)
       .map(
         (lang) =>
@@ -1228,7 +1306,13 @@ function injectDocumentHead(html, page, locale, messages) {
   return html.replace(/<head[^>]*>[\s\S]*?<\/head>/i, `<head>\n${headInner}\n  </head>`);
 }
 
+/** hreflang targets. Guides list only the languages they exist in (page.alternates). */
 function pageAlternateHrefs(page) {
+  if (page.alternates) {
+    return Object.fromEntries(
+      Object.entries(page.alternates).map(([lang, href]) => [lang, `${SITE_ORIGIN}${href}`])
+    );
+  }
   if (page.langSwitch) {
     return {
       en: `${SITE_ORIGIN}${page.langSwitch.en}`,
@@ -1308,6 +1392,10 @@ function pageContentPaths(page) {
     ];
   }
   const rels = [`rebuild/pages/${page.file}`, ...locales];
+  if (page.guideKind) {
+    const own = page.guideLang === "de" ? ["rebuild/locales/de.json"] : [];
+    return [`rebuild/pages/${page.file}`, "content/guides", ...locales, ...own];
+  }
   if (page.blogKind === "post" && page.translationKey) {
     return [`content/blog/${page.translationKey}`, ...locales];
   }
@@ -1342,7 +1430,8 @@ function writeSeoFiles() {
   const urls = [];
   for (const page of indexable) {
     for (const locale of pageLocales(page)) {
-      const blogLastmod = sitemapDate(page, locale);
+      const guideLastmod = guideSitemapDate(page);
+      const blogLastmod = guideLastmod !== null ? guideLastmod : sitemapDate(page, locale);
       const lastmod =
         blogLastmod !== null
           ? blogLastmod
@@ -1397,6 +1486,9 @@ ${urls.join("\n")}
   const disallow = ["Disallow: /styleguide", "Disallow: /sl/styleguide"];
   if (!JOURNAL_IS_PUBLIC) {
     disallow.push("Disallow: /blog", "Disallow: /sl/blog");
+  }
+  if (!GUIDES_ARE_PUBLIC) {
+    disallow.push(...Object.values(GUIDE_BASE).map((base) => `Disallow: ${base}`));
   }
 
   const robots = `User-agent: *
@@ -1544,12 +1636,14 @@ function buildPage(page, locale, messages) {
   const pageRel = path.relative(ROOT, sourcePath);
   let html = read(sourcePath);
   applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, pageRel);
+  applyToggleBlocks(html, "guides", GUIDES_ARE_PUBLIC, pageRel);
   if (page.routeSlug) {
     html = injectTourContent(html, page.routeSlug);
   }
   html = resolveIncludes(html);
   html = applyPublicationFlags(html, pageRel);
   html = injectBlog(html, page, locale, messages);
+  html = injectGuides(html, page, locale, messages);
   html = injectLegalDocument(html, page, locale);
   html = injectRedirectTarget(html, page, locale);
   html = applyI18n(html, messages);
@@ -1566,6 +1660,15 @@ function buildPage(page, locale, messages) {
     html = html.replace(/<body([^>]*)>/i, `<body$1 data-locale="${locale}">`);
   } else {
     html = html.replace(/\sdata-locale="[^"]*"/, ` data-locale="${locale}"`);
+  }
+
+  if (page.guideKind || PARTIAL_LOCALES.includes(locale)) {
+    const missing = missingI18nKeys(html, messages);
+    if (missing.length) {
+      throw new Error(
+        `${page.path} (${locale}) uses strings missing from ${locale}.json: ${missing.join(", ")}`
+      );
+    }
   }
 
   const outDir =
@@ -1598,6 +1701,14 @@ function assertIndexablePages() {
         (/(^|\/)blog$/.test(pathOnly) || /(^|\/)blog\//.test(pathOnly))
       ) {
         found.push(`${rel} links to hidden journal ${href}`);
+      }
+      if (
+        !GUIDES_ARE_PUBLIC &&
+        Object.values(GUIDE_BASE).some(
+          (base) => pathOnly === base || pathOnly.startsWith(`${base}/`)
+        )
+      ) {
+        found.push(`${rel} links to hidden guides ${href}`);
       }
       if (/(^|\/)tour$/.test(pathOnly)) {
         found.push(`${rel} links to legacy /tour ${href}`);
@@ -1645,6 +1756,21 @@ function assertIndexablePages() {
       problems.push("robots.txt still disallows /blog while journal is public");
     }
   }
+  if (!GUIDES_ARE_PUBLIC) {
+    for (const base of Object.values(GUIDE_BASE)) {
+      if (!robots.includes(`Disallow: ${base}\n`)) {
+        problems.push(`robots.txt does not disallow ${base} while guides are hidden`);
+      }
+      if (sitemap.includes(`${SITE_ORIGIN}${base}`)) {
+        problems.push(`sitemap.xml lists ${base} while guides are hidden`);
+      }
+      if (fs.existsSync(path.join(DIST, `${base.slice(1)}.html`))) {
+        problems.push(`${base} was built while guides are hidden`);
+      }
+    }
+  } else if (Object.values(GUIDE_BASE).some((base) => robots.includes(`Disallow: ${base}\n`))) {
+    problems.push("robots.txt still disallows guides while they are public");
+  }
   if (commuteLive) {
     const tours = read(path.join(DIST, "tours.html"));
     if (!/class="tour-card"[^>]*data-category="commute"/.test(tours) &&
@@ -1670,6 +1796,11 @@ function copyBlogImages() {
   for (const source of imageSources()) {
     if (!fs.existsSync(source.dir)) continue;
     copyDir(source.dir, path.join(DIST, "assets/images/blog", source.key));
+  }
+  if (!GUIDES_ARE_PUBLIC) return;
+  for (const source of guideImageSources()) {
+    if (!fs.existsSync(source.dir)) continue;
+    copyDir(source.dir, path.join(DIST, "assets/images/guides", source.key));
   }
 }
 
@@ -1702,8 +1833,16 @@ async function build() {
   }
 
   assertLocaleParity(messagesByLocale);
+  for (const locale of PARTIAL_LOCALES) {
+    const localePath = path.join(LOCALES_DIR, `${locale}.json`);
+    messagesByLocale[locale] = JSON.parse(read(localePath));
+    assertPartialLocale(locale, messagesByLocale[locale], messagesByLocale[DEFAULT_LOCALE]);
+  }
+  assertGuidesBuildable({ guidesPublic: GUIDES_ARE_PUBLIC, siteIndex: SITE_INDEX });
 
-  const metaIssues = collectMetaIssues(messagesByLocale, PAGES, pageLocales);
+  // Guides index meta is checked even while guides are hidden.
+  const metaPages = GUIDES_ARE_PUBLIC ? PAGES : [...PAGES, ...GUIDE_INDEX_PAGES];
+  const metaIssues = collectMetaIssues(messagesByLocale, metaPages, pageLocales);
   if (metaIssues.length) {
     for (const line of metaIssues) console.warn(`meta: ${line}`);
     throw new Error(`Meta descriptions failed checks (${metaIssues.length})`);
@@ -1722,7 +1861,7 @@ async function build() {
   injectTurnstileSiteKey();
   injectMapTilerKey();
 
-  for (const locale of LOCALES) {
+  for (const locale of [...LOCALES, ...PARTIAL_LOCALES]) {
     const messages = messagesByLocale[locale];
     for (const page of PAGES) {
       if (!pageLocales(page).includes(locale)) continue;
@@ -1763,6 +1902,7 @@ if (require.main === module) {
 
 module.exports = {
   applyToggleBlocks,
+  missingI18nKeys,
   stripUnpublishedCategories,
   stampCardCategories,
   collectCardCategories,

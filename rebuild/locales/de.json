@@ -1,0 +1,104 @@
+{
+ "meta": {
+ "brand": "Zyflow",
+ "pages": {
+ "guides": {
+ "title": "Zyflow Ratgeber: Fragen von Radfahrenden, beantwortet",
+ "description": "Kurze, geprüfte Antworten auf Fragen von Radfahrenden und E-Bike-Fahrenden, mit echten Zahlen, Quellen und dem Datum der letzten Prüfung."
+ }
+ }
+ },
+ "chrome": {
+ "announcement": {
+ "label": "App-Update",
+ "text": "Zyflow ist live auf iOS und Android, in 8 Ländern.",
+ "textShort": "Live auf iOS & Android",
+ "cta": "Download →"
+ },
+ "nav": {
+ "cta": "Download",
+ "links": {
+ "home": "Start",
+ "tours": "Routen",
+ "about": "Über uns",
+ "journal": "Journal",
+ "contact": "Kontakt",
+ "business": "Für Unternehmen"
+ },
+ "menu": "Menü",
+ "menuClose": "Menü schließen",
+ "themeDark": "Dunkler Modus",
+ "themeLight": "Heller Modus"
+ },
+ "footer": {
+ "links": {
+ "home": "Start",
+ "tours": "Routen",
+ "about": "Über uns",
+ "journal": "Journal",
+ "contact": "Kontakt",
+ "press": "Presse & Investoren",
+ "legal": "Rechtliches",
+ "privacy": "Datenschutz",
+ "terms": "Nutzungsbedingungen",
+ "cookies": "Cookies",
+ "impressum": "Impressum",
+ "guides": "Ratgeber"
+ },
+ "cats": {
+ "kayak": "Tour",
+ "bike": "Pendeln",
+ "hike": "Alpin",
+ "fourwd": "Gravel"
+ },
+ "newsletter": {
+ "title": "newsletter",
+ "body": "Neue fahrradfreundliche Orte, Routen und App-Updates. Einmal im Monat, kein Spam.",
+ "note": "Wir geben deine Daten nie weiter.",
+ "subscribe": "Abonnieren",
+ "email": "E-Mail",
+ "emailPlaceholder": "E-Mail-Adresse",
+ "honeypot": "Firmenwebsite",
+ "success": "Danke, du bist dabei.",
+ "error": "Etwas ist schiefgelaufen. Bitte versuch es noch einmal.",
+ "errorValidation": "Bitte gib eine gültige E-Mail-Adresse ein.",
+ "errorRateLimit": "Zu viele Versuche. Bitte warte ein paar Minuten.",
+ "errorVerify": "Bitte schließ die Überprüfung ab und versuch es noch einmal."
+ },
+ "company": "Zyflow ist ein Produkt der HERKO d.o.o., Slowenien",
+ "copyright": "© 2026 Zyflow. Alle Rechte vorbehalten.",
+ "cookiePreferences": "Cookie-Einstellungen"
+ },
+ "appModal": {
+ "title": "Hol dir die Zyflow-App",
+ "lede": "Finde fahrradfreundliche Unterkünfte, Cafés und Restaurants, dazu Ladestationen und Fahrradservice auf der Karte. Kostenlos für iOS und Android.",
+ "badge": "Kostenlos für iOS und Android",
+ "downloadTitle": "Zyflow jetzt laden",
+ "downloadBody": "Öffne den App Store oder Google Play, oder scanne den QR-Code mit deinem Handy.",
+ "close": "Schließen"
+ }
+ },
+ "guides": {
+ "name": "Ratgeber",
+ "index": {
+ "title": "Fragen von Radfahrenden, beantwortet",
+ "lede": "Kurze Antworten für Radfahrende und E-Bike-Fahrende, mit den Zahlen und Quellen dahinter.",
+ "empty": "Noch keine Ratgeber auf Deutsch.",
+ "emptyLink": "Zu den englischen Ratgebern"
+ },
+ "dataLabel": "Wichtige Zahlen",
+ "dataSource": "{source}, Stand {date}",
+ "mapCredit": "{credit}, Stand {date}",
+ "cta": {
+ "title": "Finde deine Stopps in Zyflow",
+ "ios": "App Store",
+ "android": "Google Play",
+ "planner": "Im Routenplaner öffnen"
+ },
+ "checked": "Geprüft am",
+ "sources": "Quellen",
+ "accessed": "abgerufen am {date}",
+ "related": "Weitere Ratgeber",
+ "fixtureNote": "Testratgeber für die Vorschau des Layouts. Er wird nie veröffentlicht."
+ }
+}

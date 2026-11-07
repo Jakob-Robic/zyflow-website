@@ -162,3 +162,72 @@ test("decorating twice does not stack Play referrer values", () => {
   assert.equal(referrer, "utm_source=google&utm_medium=cpc&utm_campaign=b");
   assert.equal(referrer.match(/utm_source=/g).length, 1);
 });
+
+// —— Guide pages: a page campaign that never overrides the visitor's own ——
+
+const GUIDE_PAGE = { utm_campaign: "guide-mali-vrh", utm_medium: "guide" };
+
+test("a guide page fills in its campaign when the visitor has none", () => {
+  const utms = attr.getAttribution({
+    search: "",
+    referrer: "https://www.google.com/search?q=mali+vrh",
+    pageHost: "www.zyflow.eu",
+    stored: null,
+    page: GUIDE_PAGE,
+  });
+  assert.deepEqual(utms, {
+    utm_source: "google.com",
+    utm_medium: "guide",
+    utm_campaign: "guide-mali-vrh",
+  });
+  const appStore = new URL(attr.decorateStoreUrl(APP_STORE, { utms, analyticsConsent: false }));
+  assert.equal(appStore.searchParams.get("ct"), "guide-mali-vrh");
+  const play = new URL(attr.decorateStoreUrl(PLAY, { utms, analyticsConsent: false }));
+  assert.equal(
+    play.searchParams.get("referrer"),
+    "utm_source=google.com&utm_medium=guide&utm_campaign=guide-mali-vrh"
+  );
+});
+
+test("a visitor's own campaign wins over the guide page campaign", () => {
+  const fromAd = attr.getAttribution({
+    search: "?utm_source=meta&utm_medium=paid&utm_campaign=spring",
+    referrer: "",
+    pageHost: "www.zyflow.eu",
+    stored: null,
+    page: GUIDE_PAGE,
+  });
+  assert.deepEqual(fromAd, { utm_source: "meta", utm_medium: "paid", utm_campaign: "spring" });
+  const stored = attr.getAttribution({
+    search: "",
+    referrer: "",
+    pageHost: "www.zyflow.eu",
+    stored: { utm_source: "newsletter", utm_medium: "email", utm_campaign: "" },
+    page: GUIDE_PAGE,
+  });
+  assert.deepEqual(stored, { utm_source: "newsletter", utm_medium: "email", utm_campaign: "" });
+});
+
+test("pages without a campaign keep today's attribution", () => {
+  const utms = attr.getAttribution({
+    search: "",
+    referrer: "",
+    pageHost: "www.zyflow.eu",
+    stored: null,
+    page: null,
+  });
+  assert.deepEqual(utms, { utm_source: "direct", utm_medium: "", utm_campaign: "" });
+});
+
+test("planner links take the visitor's campaign and keep the page UTMs otherwise", () => {
+  const href =
+    "https://navigate.zyflow.eu/login?next=/route/mali-vrh&utm_source=zyflow.eu&utm_medium=guide&utm_campaign=guide-mali-vrh";
+  assert.equal(attr.decoratePlannerUrl(href, { utm_source: "direct", utm_medium: "", utm_campaign: "" }), href);
+  const decorated = new URL(
+    attr.decoratePlannerUrl(href, { utm_source: "meta", utm_medium: "paid", utm_campaign: "spring" })
+  );
+  assert.equal(decorated.searchParams.get("next"), "/route/mali-vrh");
+  assert.equal(decorated.searchParams.get("utm_source"), "meta");
+  assert.equal(decorated.searchParams.get("utm_medium"), "paid");
+  assert.equal(decorated.searchParams.get("utm_campaign"), "spring");
+});

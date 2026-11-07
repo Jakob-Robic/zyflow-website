@@ -1,0 +1,160 @@
+/**
+ * Guides: one rider question per page (/guides, /de/ratgeber, /sl/vodniki).
+ * Builds on the article column, data strip (.post-facts) and app CTA
+ * (.post-app) from article.css.
+ */
+
+.guide__header {
+  gap: var(--space-gap-5);
+  margin-bottom: var(--space-gap-6);
+}
+
+/* The answer to the question, right under it. */
+.guide__answer {
+  margin: 0;
+  padding-inline-start: var(--space-gap-5);
+  border-inline-start: 2px solid var(--color-text-heading);
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+  color: var(--color-text-heading);
+}
+
+.guide-data {
+  margin-block: var(--space-gap-6) var(--space-gap-7);
+}
+
+.guide-data .post-facts {
+  margin-block: 0;
+}
+
+.guide-data .post-facts__item dd.guide-data__source {
+  margin-block-start: var(--space-gap-2);
+  font-size: var(--type-small);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--color-text-body-muted);
+}
+
+.guide-data__source a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.guide-cta__planner {
+  margin: var(--space-gap-5) 0 0;
+}
+
+.guide__checked {
+  margin: var(--space-gap-6) 0;
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-body-muted);
+}
+
+.guide-sources,
+.guide-related {
+  margin-block: var(--space-gap-6);
+  padding-top: var(--space-gap-6);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.guide-sources h2,
+.guide-related h2 {
+  margin: 0 0 var(--space-gap-4);
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-body-muted);
+}
+
+.guide-sources ol {
+  margin: 0;
+  padding-inline-start: var(--space-gap-6);
+  font-size: var(--type-small);
+  line-height: var(--leading-body);
+}
+
+.guide-sources li + li {
+  margin-top: var(--space-gap-2);
+}
+
+.guide-sources a {
+  color: var(--color-text-heading);
+  overflow-wrap: anywhere;
+  text-underline-offset: 2px;
+}
+
+.guide-related ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Marks the preview fixture so a screenshot can never pass for real content. */
+.guide-fixture {
+  margin: 0 0 var(--space-gap-6);
+  padding: var(--space-gap-4);
+  border: 1px dashed var(--color-text-heading);
+  border-radius: var(--radius-md);
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* —— Index —— */
+.guides-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 2px solid var(--color-text-heading);
+}
+
+.guides-list__item {
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.guides-list__link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-2);
+  padding-block: var(--space-gap-5);
+  color: inherit;
+  text-decoration: none;
+}
+
+.guides-list__q {
+  font-family: var(--font-heading);
+  font-size: var(--type-h4);
+  line-height: var(--leading-h4);
+  color: var(--color-text-heading);
+}
+
+.guides-list__a {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: var(--color-text-body-muted);
+}
+
+.guides-list__link:hover .guides-list__q,
+.guides-list__link:focus-visible .guides-list__q {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.guides-index__empty {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-4);
+  align-items: center;
+  margin: 0;
+}

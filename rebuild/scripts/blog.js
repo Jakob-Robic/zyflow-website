@@ -114,6 +114,10 @@ function readingMinutes(body) {
 function formatDate(iso, locale) {
   const [year, month, day] = iso.split("-").map(Number);
   if (locale === "sl") return `${day}. ${month}. ${year}`;
+  if (locale === "de") {
+    const monate = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+    return `${day}. ${monate[month - 1]} ${year}`;
+  }
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   return `${day} ${months[month - 1]} ${year}`;
 }
@@ -1751,6 +1755,11 @@ module.exports = {
   faqsFor,
   formatDate,
   getCatalog,
+  hasTemplateToken,
+  hrefProblem,
+  isIsoDate,
+  splitFrontmatter,
+  walkTokens,
   imageSources,
   loadBlog,
   ogSources,
