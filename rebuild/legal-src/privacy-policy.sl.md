@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.2 · **Datum začetka veljavnosti:** 30. 10. 2026 · Nadomešča različico 2.1 z dne 19. 10. 2026
+**Različica:** 2.3 · **Datum začetka veljavnosti:** 7. 11. 2026 · Nadomešča različico 2.2 z dne 30. 10. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -23,6 +23,7 @@ Pooblaščene osebe za varstvo podatkov nismo imenovali. Za vsa vprašanja in za
 - Vaših podatkov ne prodajamo in v aplikaciji ne prikazujemo oglasov.
 - Analitika uporabe deluje s psevdonimnim identifikatorjem uporabnika, ne z vašim e-naslovom, in se vklopi le, če privolite.
 - Lokacijo uporabljamo le med uporabo aplikacije. Lokacije v ozadju ne spremljamo.
+- Potisna obvestila prejmete le, če jih dovolite v telefonu. Novice in ponudbe, po potisnih obvestilih ali po e-pošti, ostanejo izklopljene, dokler jih ne vklopite sami.
 - Uporabniški račun lahko kadar koli izbrišete v aplikaciji.
 
 ## 3. Katere podatke obdelujemo, za kakšen namen in na kateri pravni podlagi
@@ -101,11 +102,13 @@ Posamezno shranjeno pot lahko delite s skupnostjo Zyflow. Nič se ne deli samode
 
 ### 3.8 E-poštna sporočila
 
-Za hrambo kontaktnih podatkov (e-naslov, ime in priimek ter identifikator uporabnika) in pošiljanje e-pošte iz storitve Zyflow uporabljamo storitev Brevo.
+Za hrambo kontaktnih podatkov (e-naslov, ime in priimek ter identifikator uporabnika) in pošiljanje e-pošte iz storitve Zyflow uporabljamo storitev Brevo. Ob ustvarjanju računa se vaši kontaktni podatki shranijo v storitvi Brevo, **ne dodamo pa vas na noben poštni seznam**.
 
-**Obvestila v zvezi s storitvijo:** na primer pozdravno sporočilo po registraciji, sporočila v zvezi z računom in varnostjo ter obvestila o krajih, ki ste jih predlagali. **Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
+**Obvestila v zvezi s storitvijo:** sporočila v zvezi z računom in varnostjo (na primer kode za prijavo in potrditve ob spremembi e-naslova) ter obvestila o krajih, ki ste jih predlagali. **Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
 
-**Trženjska sporočila (novice, obvestila o novostih):** pošiljamo jih **samo, če ste za to dali ločeno, izrecno privolitev**. Privolitev lahko kadar koli prekličete prek povezave za odjavo v vsakem sporočilu ali s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu). **Pravna podlaga:** privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Trženjskih sporočil trenutno ne pošiljamo.
+**Trženjska sporočila (»Ideje za vožnje in novice Zyflow«):** pošiljamo jih **samo, če jih sami vklopite** v aplikaciji v razdelku Profil → Nastavitve → Obvestila → Po e-pošti. Ta možnost ni nikoli vklopljena namesto vas. Ko jo vklopite, vas dodamo na naš poštni seznam v storitvi Brevo; ko jo izklopite, vas z njega odstranimo. Zabeležimo vašo izbiro ter kdaj in kje v aplikaciji ste jo izbrali, da lahko izkažemo, v kaj ste privolili. Privolitev lahko kadar koli prekličete v aplikaciji, prek povezave za odjavo v vsakem sporočilu ali s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu). **Pravna podlaga:** privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2).
+
+**Kaj pošiljamo zdaj:** trženjska sporočila pošiljamo le tistim, ki so jih vklopili. Ko jih vklopite, prejmete kratko serijo pozdravnih sporočil o storitvi Zyflow, nato pa občasne novice. Če jih ne vklopite, ne prejemate trženjskih sporočil, tudi pozdravnih ne.
 
 ### 3.9 Analitika uporabe
 
@@ -147,7 +150,7 @@ Naša iskalna funkcija za kratek čas shrani naslov IP naprave, ki pošlje zahte
 
 ### 3.14 Podatki, shranjeni na vaši napravi
 
-Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lokacijo in nedavna iskanja, da deluje hitro in da ostanete prijavljeni. Ta hramba je nujno potrebna za storitev, ki jo zahtevate. Podatki se izbrišejo, ko odstranite aplikacijo.
+Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lokacijo, nedavna iskanja in datum, ko vam je nazadnje ponudila obvestila, da deluje hitro, da ostanete prijavljeni in da vas o obvestilih ne sprašujemo prepogosto. Ta hramba je nujno potrebna za storitev, ki jo zahtevate. Podatki se izbrišejo, ko odstranite aplikacijo.
 
 Če privolite v analitiko uporabe, PostHog na napravi shrani tudi psevdonimni identifikator; brez vaše privolitve ne shrani ničesar. Sentry za poročanje o napakah shrani psevdonimni identifikator (glejte 3.10).
 
@@ -171,9 +174,27 @@ Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava j
 
 **Pravna podlaga:** izvajanje pogodbe na vašo zahtevo (točka (b) prvega odstavka 6. člena Splošne uredbe). Vsaka storitev je samostojni upravljavec podatkov, ki jih hrani o vas; zanjo velja njena politika zasebnosti.
 
-### 3.16 Načrtovane funkcije (še niso na voljo)
+### 3.16 Obvestila (potisna in v aplikaciji)
 
-**Potisna obvestila** še niso na voljo. Pred uvedbo bomo posodobili to politiko zasebnosti. Potisna obvestila bomo pošiljali le, če jih boste dovolili v nastavitvah naprave.
+**Kdaj vprašamo:** aplikacija vas o obvestilih ne vpraša, ko jo odprete ali se registrirate. Ko shranite pot ali kraj, vam lahko ponudi, da vas o njem obvešča, na primer ko je vreme za to pot dobro. Obvestila lahko vklopite tudi sami v nabiralniku obvestil v aplikaciji. Poziv telefona za dovoljenje se prikaže šele, ko se dotaknete »Vklopi obvestila«. Če se dotaknete »Ne zdaj«, vam aplikacija vsaj 14 dni ne ponudi znova. Obvestila za Zyflow lahko kadar koli dovolite ali blokirate v nastavitvah telefona.
+
+**Kaj hranimo:** če obvestila dovolite, aplikacija prek našega ponudnika potisnih obvestil Expo pridobi žeton za potisna obvestila za vaš telefon. Žeton je naslov aplikacije Zyflow v tem telefonu; ne vsebuje imena, e-naslova ali lokacije. Žeton hranimo skupaj z vašim identifikatorjem uporabnika, datumom, ko je bil ustvarjen in nazadnje posodobljen, ter številko različice operacijskega sistema telefona. Hranimo tudi vaše nastavitve obvestil in obvestila, ki vam jih pošljemo in jih lahko preberete v nabiralniku obvestil v aplikaciji: naslov, besedilo, vrsto, čas, ali je bilo poslano kot potisno obvestilo in kdaj ste ga prebrali.
+
+**Kako dostavimo potisna obvestila:** vsako potisno obvestilo posredujemo storitvi Expo (650 Industries, Inc., ZDA), ki ga preda storitvi Apple Push Notification service (iPhone) ali Googlovi storitvi Firebase Cloud Messaging (Android), da ga dostavi v vaš telefon; v sistemu Android ga lahko pošljemo tudi neposredno storitvi Firebase Cloud Messaging. Prejmejo žeton, naslov in besedilo obvestila ter interni identifikator obvestila. Besedilo lahko vsebuje ime poti ali kraja, ki ste ga shranili. S potisnim obvestilom ne pošljemo vašega e-naslova ali lokacije. Apple in Google potisna obvestila dostavljata v skladu s svojimi pogoji in pravilniki o zasebnosti.
+
+**Na podlagi česa izberemo, kaj pošljemo:** poti in kraji, ki ste jih shranili, vaše nastavitve obvestil in javni podatki, na primer vremenske napovedi. Vaše trenutne lokacije za obvestila ne uporabljamo in je ne spremljamo v ozadju.
+
+**Skupine obvestil in privzete nastavitve:**
+
+| Skupina | Primeri | Privzeto, ko obvestila dovolite | Pravna podlaga |
+|---|---|---|---|
+| **Tvoje vožnje in kraji** | Hudo vreme, opozorila o bateriji in polnjenju za vaše vožnje in shranjene kraje | Vklopljeno | Pogodba, točka (b) prvega odstavka 6. člena Splošne uredbe |
+| **Tvoji prispevki** | Novosti o krajih, ki ste jih predlagali, odobren partnerski dostop | Vklopljeno | Pogodba, točka (b) prvega odstavka 6. člena Splošne uredbe |
+| **Novice in ponudbe** | Obvestila Zyflow, nove ponudbe in promocije | Izklopljeno, dokler ga ne vklopite | Privolitev, točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2 |
+
+Prvi dve skupini sta del storitve, ki jo uporabljate. Novice in ponudbe pošiljamo le, če jih vklopite; kadar koli jih lahko znova izklopite, kar ne vpliva na že poslana obvestila.
+
+**Sprememba izbire:** v razdelku Profil → Nastavitve → Obvestila lahko vsako skupino obvestil vklopite ali izklopite, kot potisno obvestilo in v nabiralniku. Vsa obvestila Zyflow lahko blokirate tudi v nastavitvah telefona; potem potisna obvestila do vas ne pridejo, skupine, ki ste jih pustili vklopljene, pa se še vedno prikazujejo v nabiralniku v aplikaciji.
 
 ### 3.17 Podpora in zahteve v zvezi z varstvom podatkov
 
@@ -192,10 +213,11 @@ Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava j
 | Namen | Pravna podlaga (Splošna uredba) |
 |---|---|
 | Uporabniški račun, poti, lokacijske funkcije, kolesarski potni list, deljenje s skupnostjo, zemljevidi/iskanje/izračun poti/vreme, obvestila v zvezi s storitvijo | Pogodba, točka (b) 6(1) |
+| Obvestila o vaših vožnjah, krajih in prispevkih (potisna in v nabiralniku) | Pogodba, točka (b) 6(1) |
 | Povezane storitve (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), le če jih povežete | Pogodba, točka (b) prvega odstavka 6. člena |
 | Prijave in predlogi krajev, spremljanje napak, varnost in omejevanje zahtev, povezave Stay22, podpora | Zakoniti interes, točka (f) 6(1) |
 | Analitika uporabe (PostHog) | Privolitev, točka (a) 6(1) |
-| Trženjska e-pošta, piškotki in sledilne kode na spletnem mestu (ko bodo uvedeni), prihodnja potisna obvestila | Privolitev, točka (a) 6(1) (za piškotke in trženjsko e-pošto tudi ZEKom-2) |
+| Trženjska e-pošta, obvestila o novicah in ponudbah, piškotki in sledilne kode na spletnem mestu (ko bodo uvedeni) | Privolitev, točka (a) 6(1) (za piškotke in trženjsko e-pošto tudi ZEKom-2) |
 | Odgovarjanje na zahteve za uveljavljanje pravic, računovodske in druge zakonske obveznosti | Zakonska obveznost, točka (c) 6(1) |
 
 Kadar se opiramo na zakoniti interes, imate pravico do ugovora (glej točko 8).
@@ -207,11 +229,13 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 | Uporabnik | Namen | Podatki | Lokacija / zaščita |
 |---|---|---|---|
 | Supabase, Inc. (obdelovalec) | Podatkovna baza, avtentikacija, hramba datotek, zaledne funkcije | Vsi zgoraj opisani podatki aplikacije | EU (Irska, eu-west-1); matična družba v ZDA: glej točko 6 |
-| Brevo (Sendinblue SAS, Francija) (obdelovalec) | Hramba kontaktov in pošiljanje e-pošte | E-naslov, ime in priimek, identifikator uporabnika, vsebina sporočil | Družba s sedežem v Franciji (EU); zaščitni ukrepi ob morebitnem prenosu zunaj EU/EGP: glej točko 6 |
+| Brevo (Sendinblue SAS, Francija) (obdelovalec) | Hramba kontaktov in pošiljanje e-pošte | E-naslov, ime in priimek, identifikator uporabnika, članstvo na poštnem seznamu (le s privolitvijo), vsebina sporočil | Družba s sedežem v Franciji (EU); zaščitni ukrepi ob morebitnem prenosu zunaj EU/EGP: glej točko 6 |
+| Expo (650 Industries, Inc.) (obdelovalec) | Dostava potisnih obvestil, le če obvestila dovolite | Žeton za potisna obvestila, naslov in besedilo obvestila, identifikator obvestila | ZDA; glej točko 6 |
 | PostHog (oblak v EU) (obdelovalec) | Analitika uporabe | Identifikator uporabnika, dogodki v aplikaciji, podatki o napravi/aplikaciji; naslov IP se ne shrani | EU |
 | Sentry (Functional Software, Inc.), hramba v EU (obdelovalec) | Spremljanje napak in delovanja | Identifikator uporabnika, naslov IP, podatki o napravi in napaki | Hramba v EU; družba iz ZDA: glej točko 6 |
 | Vercel, Inc. (obdelovalec) | Gostovanje naših spletnih mest | Naslov IP, tehnični podatki o zahtevi | Globalno omrežje, vključno z ZDA: glej točko 6 |
 | Apple / Google (samostojna upravljavca) | Prijava z Apple / Google (če jo izberete) | Podatki za prijavo, e-naslov, ime, povezava do profilne slike (Google) | Subjekti v EU in ZDA: glej točko 6 |
+| Apple (Apple Push Notification service) / Google (Firebase Cloud Messaging) | Dostava potisnih obvestil v vaš telefon, le če jih dovolite | Žeton za potisna obvestila, naslov in besedilo obvestila | Subjekti v EU in ZDA: glej točko 6 |
 | MapTiler AG | Zemljevidne ploščice | Naslov IP, območje zemljevida | Družba s sedežem v Švici; glej točko 6 |
 | komoot GmbH (Photon) | Iskanje krajev (prek našega strežnika) | Iskalni niz, območje iskanja | Družba s sedežem v Nemčiji (EU) |
 | OpenStreetMap Foundation (Nominatim) | Obratno geokodiranje | Naslov IP, koordinate | Ustanova s sedežem v Združenem kraljestvu; glej točko 6 |
@@ -235,7 +259,7 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 
 ## 6. Prenosi zunaj EU/EGP
 
-Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v tretjih državah zunaj EU/EGP ali lahko do podatkov dostopajo iz njih, zlasti iz ZDA (na primer Apple, Google, Vercel ter matični družbi Supabase in Sentry v ZDA). Podatke prenašamo le, če je zagotovljena ustrezna raven varstva. Glede na ponudnika se opiramo na sklep Evropske komisije o ustreznosti (vključno z okvirom EU-ZDA za zasebnost podatkov za družbe iz ZDA, ki so vanj vključene) ali na standardne pogodbene klavzule Evropske komisije (46. člen Splošne uredbe). Podrobnosti o zaščitnih ukrepih pri posameznem ponudniku so na voljo na zahtevo na [legal@zyflow.eu](mailto:legal@zyflow.eu).
+Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v tretjih državah zunaj EU/EGP ali lahko do podatkov dostopajo iz njih, zlasti iz ZDA (na primer Apple, Google, Vercel, Expo ter matični družbi Supabase in Sentry v ZDA). Podatke prenašamo le, če je zagotovljena ustrezna raven varstva. Glede na ponudnika se opiramo na sklep Evropske komisije o ustreznosti (vključno z okvirom EU-ZDA za zasebnost podatkov za družbe iz ZDA, ki so vanj vključene) ali na standardne pogodbene klavzule Evropske komisije (46. člen Splošne uredbe). Podrobnosti o zaščitnih ukrepih pri posameznem ponudniku so na voljo na zahtevo na [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
 Če povežete Stravo, Garmin, Wahoo, Hammerhead ali Ride with GPS (3.15), poti, ki jih pošljete, prejme ta storitev, ki jih lahko obdeluje v ZDA ali Švici v skladu s svojo politiko zasebnosti in zaščitnimi ukrepi za prenos.
 
@@ -253,6 +277,9 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Kolesarski potni list in fotografije kolesa | Do izbrisa računa; fotografijo kolesa izbrišemo iz hrambe datotek, ko jo odstranite ali izbrišete račun (glej točko 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
 | Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; ob izbrisu računa se samodejno izbriše (glej točko 9) |
+| Vaša izbira glede trženjske e-pošte (vklopljeno ali izklopljeno, kdaj in kje v aplikaciji) | Dokler račun obstaja, tudi potem, ko trženjsko e-pošto izklopite, da lahko izkažemo, v kaj ste privolili; izbriše se ob izbrisu računa |
+| Žeton za potisna obvestila (z identifikatorjem uporabnika in številko različice operacijskega sistema) | Dokler ne izbrišete računa ali dokler nam Apple ali Google ne sporočita, da žeton ne deluje več (na primer ko odstranite aplikacijo) |
+| Nastavitve obvestil in obvestila v nabiralniku | Do izbrisa računa |
 | Dnevniki pošiljanja e-pošte v storitvi Brevo | Le toliko časa, kolikor je potrebno za dostavo e-pošte in odpravo težav pri dostavi, v skladu z nastavitvami ponudnika |
 | Analitika uporabe (PostHog) | 12 mesecev; ob izbrisu računa se samodejno izbriše |
 | Poročila o napakah in delovanju (Sentry) | Do 90 dni |
@@ -261,7 +288,7 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Dnevniki strežnikov in gostovanja (Supabase, Vercel) | Do 30 dni |
 | Varnostne kopije podatkovne baze | Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo |
 | Korespondenca s podporo in v zvezi z zahtevami za uveljavljanje pravic | Toliko časa, kolikor je potrebno za obravnavo vaše zahteve, nato omejen čas za dokumentiranje in uveljavljanje oziroma obrambo pravnih zahtevkov |
-| Podatki na vaši napravi (seja, zadnja lokacija, nedavna iskanja) | Dokler ne odstranite aplikacije ali ne izbrišete njenih podatkov |
+| Podatki na vaši napravi (seja, zadnja lokacija, nedavna iskanja, datum zadnje ponudbe obvestil) | Dokler ne odstranite aplikacije ali ne izbrišete njenih podatkov |
 | Računovodske listine (če obstajajo) | Kot določa zakon (na primer 10 let za račune po ZDDV-1) |
 
 ## 8. Vaše pravice
@@ -285,7 +312,7 @@ Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) 
 - **Na spletu:** [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna).
 - **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa ter fotografije in slike zemljevidov deljenih poti), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
+Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa ter fotografije in slike zemljevidov deljenih poti), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
 ## 10. Pritožbe
 
