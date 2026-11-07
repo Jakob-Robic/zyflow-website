@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.3 · **Datum začetka veljavnosti:** 7. 11. 2026 · Nadomešča različico 2.2 z dne 30. 10. 2026
+**Različica:** 2.4 · **Datum začetka veljavnosti:** 7. 11. 2026 · Nadomešča različico 2.3 z dne 7. 11. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -46,7 +46,7 @@ Pooblaščene osebe za varstvo podatkov nismo imenovali. Za vsa vprašanja in za
 
 **Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe). Dostop do lokacije na napravi nadzirate z dovoljenjem operacijskega sistema, ki ga lahko kadar koli prekličete v nastavitvah naprave. Brez njega nekatere funkcije ne bodo delovale.
 
-Vašega trenutnega položaja ne shranjujemo na naših strežnikih. Shrani se le, če postane del vsebine, ki jo shranite, delite ali posredujete (glej točke 3.3 do 3.5). Nekateri lokacijski podatki se za izvedbo vaše zahteve pošljejo storitvam za zemljevide, iskanje in izračun poti (glej točko 3.11).
+Vašega trenutnega položaja ne shranjujemo na naših strežnikih. Shrani se le, če postane del vsebine, ki jo shranite, delite ali posredujete (glej točke 3.3 do 3.5). Ko zberete žig, vaš položaj uporabimo za preverjanje, ali ste pri kraju, in ga ne shranimo; žig zabeleži kraj in čas (glej točko 3.17). Nekateri lokacijski podatki se za izvedbo vaše zahteve pošljejo storitvam za zemljevide, iskanje in izračun poti (glej točko 3.11).
 
 ### 3.3 Poti (shranjene, načrtovane in uvožene)
 
@@ -150,7 +150,7 @@ Naša iskalna funkcija za kratek čas shrani naslov IP naprave, ki pošlje zahte
 
 ### 3.14 Podatki, shranjeni na vaši napravi
 
-Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lokacijo, nedavna iskanja in datum, ko vam je nazadnje ponudila obvestila, da deluje hitro, da ostanete prijavljeni in da vas o obvestilih ne sprašujemo prepogosto. Ta hramba je nujno potrebna za storitev, ki jo zahtevate. Podatki se izbrišejo, ko odstranite aplikacijo.
+Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lokacijo, nedavna iskanja, datum, ko vam je nazadnje ponudila obvestila, žige, ki čakajo na pošiljanje, ko nimate signala (z meritvijo GPS ob kraju in morebitnimi odgovori), in kraje, na katere vas je danes opomnila, da deluje hitro, da ostanete prijavljeni, da se žigi, zbrani brez signala, ne izgubijo in da vas o obvestilih ne sprašujemo in ne opominjamo prepogosto. Ta hramba je nujno potrebna za storitev, ki jo zahtevate. Podatki se izbrišejo, ko odstranite aplikacijo.
 
 Če privolite v analitiko uporabe, PostHog na napravi shrani tudi psevdonimni identifikator; brez vaše privolitve ne shrani ničesar. Sentry za poročanje o napakah shrani psevdonimni identifikator (glejte 3.10).
 
@@ -196,11 +196,29 @@ Prvi dve skupini sta del storitve, ki jo uporabljate. Novice in ponudbe pošilja
 
 **Sprememba izbire:** v razdelku Profil → Nastavitve → Obvestila lahko vsako skupino obvestil vklopite ali izklopite, kot potisno obvestilo in v nabiralniku. Vsa obvestila Zyflow lahko blokirate tudi v nastavitvah telefona; potem potisna obvestila do vas ne pridejo, skupine, ki ste jih pustili vklopljene, pa se še vedno prikazujejo v nabiralniku v aplikaciji.
 
-### 3.17 Podpora in zahteve v zvezi z varstvom podatkov
+### 3.17 Knjižica žigov (Moji žigi)
+
+**Kaj je:** ko ste pri kraju (do približno 150 metrov), lahko zanj v aplikaciji zberete žig. Žig se zabeleži le, ko ga odtisnete sami; samodejno se ne zabeleži nič.
+
+**Podatki:** ko zberete žig, aplikacija našemu strežniku pošlje vaš trenutni položaj, njegovo natančnost GPS in čas meritve. Strežnik preveri, ali ste pri kraju, ali je meritev sveža in ali ste lahko od prejšnjega žiga prišli tja. Vaš položaj uporabimo le za to preverjanje in ga **ne shranimo**. Shranimo žig: kraj, njegovo stopnjo (bronasti ali srebrni), datum in čas vsakega upoštevanega obiska (največ enega na kraj na dan), oddaljenost od kraja, natančnost GPS in vaš identifikator uporabnika. Če za srebrni žig odgovorite na vprašanja o kraju, se vaši odgovori shranijo kot prijave o krajih (točka 3.5).
+
+**Opomniki v aplikaciji:** ko je odprt zaslon Domov in ste dovolili dostop do lokacije, vas aplikacija lahko opomni, če ste približno dve minuti v bližini kraja, za katerega še nimate žiga. To se zgodi le med uporabo aplikacije. Da najde bližnje kraje, aplikacija naš strežnik vpraša za kraje okoli vašega položaja; položaja ne shranimo, o opomniku pa na naših strežnikih ne shranimo ničesar.
+
+**Brez signala:** če nimate signala, žig, meritev GPS ob kraju in morebitni odgovori počakajo v telefonu in se pošljejo, ko ste spet povezani; strežnik takrat opravi enaka preverjanja. Ko so poslani, se iz telefona izbrišejo.
+
+**Vidnost:** vaša knjižica žigov je **zasebna** in vidna le vam. Drugi uporabniki vidijo le števila brez imen, na primer koliko kolesarjev ima žig nekega kraja ali je dokončalo zbirko.
+
+**Namen:** da lahko zbirate žige krajev, ki jih obiščete s kolesom, in da je zbiranje žigov pošteno.
+
+**Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe); zbiranje žigov je funkcija, ki jo uporabljate po lastni izbiri.
+
+Upoštevajte, da so vaši žigi zapis krajev, ki ste jih obiskali, in časa obiska.
+
+### 3.18 Podpora in zahteve v zvezi z varstvom podatkov
 
 Če nam pišete, obdelujemo vaš e-naslov, vsebino sporočila in naš odgovor, da obravnavamo vašo zahtevo. **Pravna podlaga:** zakoniti interes (točka (f) prvega odstavka 6. člena Splošne uredbe), pri zahtevah za uveljavljanje pravic pa izpolnjevanje naše zakonske obveznosti (točka (c) prvega odstavka 6. člena Splošne uredbe).
 
-### 3.18 Česa ne počnemo
+### 3.19 Česa ne počnemo
 
 - Vaših osebnih podatkov ne prodajamo.
 - V aplikaciji ne prikazujemo oglasov tretjih oseb in ne uporabljamo oglasnih identifikatorjev.
@@ -212,7 +230,7 @@ Prvi dve skupini sta del storitve, ki jo uporabljate. Novice in ponudbe pošilja
 
 | Namen | Pravna podlaga (Splošna uredba) |
 |---|---|
-| Uporabniški račun, poti, lokacijske funkcije, kolesarski potni list, deljenje s skupnostjo, zemljevidi/iskanje/izračun poti/vreme, obvestila v zvezi s storitvijo | Pogodba, točka (b) 6(1) |
+| Uporabniški račun, poti, lokacijske funkcije, knjižica žigov, kolesarski potni list, deljenje s skupnostjo, zemljevidi/iskanje/izračun poti/vreme, obvestila v zvezi s storitvijo | Pogodba, točka (b) 6(1) |
 | Obvestila o vaših vožnjah, krajih in prispevkih (potisna in v nabiralniku) | Pogodba, točka (b) 6(1) |
 | Povezane storitve (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), le če jih povežete | Pogodba, točka (b) prvega odstavka 6. člena |
 | Prijave in predlogi krajev, spremljanje napak, varnost in omejevanje zahtev, povezave Stay22, podpora | Zakoniti interes, točka (f) 6(1) |
@@ -251,7 +269,7 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 | SRAM, LLC (Hammerhead) (samostojni upravljavec) | Pošiljanje poti v Karoo, uvoz voženj, le če povežete Hammerhead | Uporabniški ID pri Hammerheadu, žeton za dostop; poslane poti | ZDA; glejte 6. razdelek |
 | Ride with GPS, Inc. (samostojni upravljavec) | Uvoz in pošiljanje poti in voženj, le če povežete Ride with GPS | Uporabniški ID pri Ride with GPS, žeton za dostop; poslane ali uvožene poti | ZDA; glejte 6. razdelek |
 
-**Drugi uporabniki:** glej deljenje poti s skupnostjo (točka 3.4) in prijave krajev (točka 3.5).
+**Drugi uporabniki:** glej deljenje poti s skupnostjo (točka 3.4), prijave krajev (točka 3.5) in knjižico žigov (točka 3.17).
 
 **Organi:** podatke razkrijemo le, kadar nam to nalaga zakon, na primer na podlagi sodne odredbe.
 
@@ -276,6 +294,7 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot in njene fotografije se izbrišejo, ko pot odstranite ali izbrišete račun; njene slike zemljevidov izbrišemo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glej točko 9) |
 | Kolesarski potni list in fotografije kolesa | Do izbrisa računa; fotografijo kolesa izbrišemo iz hrambe datotek, ko jo odstranite ali izbrišete račun (glej točko 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
+| Žigi in obiski za žige (kraj, stopnja, datum in čas, oddaljenost in natančnost GPS) | Do izbrisa računa |
 | Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; ob izbrisu računa se samodejno izbriše (glej točko 9) |
 | Vaša izbira glede trženjske e-pošte (vklopljeno ali izklopljeno, kdaj in kje v aplikaciji) | Dokler račun obstaja, tudi potem, ko trženjsko e-pošto izklopite, da lahko izkažemo, v kaj ste privolili; izbriše se ob izbrisu računa |
 | Žeton za potisna obvestila (z identifikatorjem uporabnika in številko različice operacijskega sistema) | Dokler ne izbrišete računa ali dokler nam Apple ali Google ne sporočita, da žeton ne deluje več (na primer ko odstranite aplikacijo) |
@@ -288,7 +307,8 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Dnevniki strežnikov in gostovanja (Supabase, Vercel) | Do 30 dni |
 | Varnostne kopije podatkovne baze | Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo |
 | Korespondenca s podporo in v zvezi z zahtevami za uveljavljanje pravic | Toliko časa, kolikor je potrebno za obravnavo vaše zahteve, nato omejen čas za dokumentiranje in uveljavljanje oziroma obrambo pravnih zahtevkov |
-| Podatki na vaši napravi (seja, zadnja lokacija, nedavna iskanja, datum zadnje ponudbe obvestil) | Dokler ne odstranite aplikacije ali ne izbrišete njenih podatkov |
+| Podatki na vaši napravi (seja, zadnja lokacija, nedavna iskanja, datum zadnje ponudbe obvestil, kraji, na katere vas je aplikacija danes opomnila) | Dokler ne odstranite aplikacije ali ne izbrišete njenih podatkov |
+| Žigi, ki v telefonu čakajo na pošiljanje (z meritvijo GPS in odgovori) | Dokler niso poslani ali dokler ne odstranite aplikacije ali ne izbrišete njenih podatkov |
 | Računovodske listine (če obstajajo) | Kot določa zakon (na primer 10 let za račune po ZDDV-1) |
 
 ## 8. Vaše pravice
@@ -312,7 +332,7 @@ Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) 
 - **Na spletu:** [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna).
 - **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa ter fotografije in slike zemljevidov deljenih poti), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
+Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, žigi, kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa ter fotografije in slike zemljevidov deljenih poti), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
 ## 10. Pritožbe
 
