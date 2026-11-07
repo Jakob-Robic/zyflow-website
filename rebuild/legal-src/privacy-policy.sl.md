@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.3 · **Datum začetka veljavnosti:** [TODO: datum objave] · Nadomešča različico 2.2 z dne 30. 10. 2026
+**Različica:** 2.3 · **Datum začetka veljavnosti:** 7. 11. 2026 · Nadomešča različico 2.2 z dne 30. 10. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -106,11 +106,9 @@ Za hrambo kontaktnih podatkov (e-naslov, ime in priimek ter identifikator uporab
 
 **Obvestila v zvezi s storitvijo:** sporočila v zvezi z računom in varnostjo (na primer kode za prijavo in potrditve ob spremembi e-naslova) ter obvestila o krajih, ki ste jih predlagali. **Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
 
-> **TODO (pravna služba), tedenski povzetek po e-pošti:** odločite, ali je načrtovani tedenski povzetek po e-pošti obvestilo v zvezi s storitvijo (pogodba, točka (b) prvega odstavka 6. člena) ali trženjsko sporočilo (privolitev). Zaenkrat se ne pošilja. Pred objavo to opombo nadomestite z dogovorjenim besedilom.
-
 **Trženjska sporočila (»Ideje za vožnje in novice Zyflow«):** pošiljamo jih **samo, če jih sami vklopite** v aplikaciji v razdelku Profil → Nastavitve → Obvestila in zvok → E-poštna obvestila. Ta možnost ni nikoli vklopljena namesto vas. Ko jo vklopite, vas dodamo na naš poštni seznam v storitvi Brevo; ko jo izklopite, vas z njega odstranimo. Zabeležimo vašo izbiro ter kdaj in kje v aplikaciji ste jo izbrali, da lahko izkažemo, v kaj ste privolili. Privolitev lahko kadar koli prekličete v aplikaciji, prek povezave za odjavo v vsakem sporočilu ali s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu). **Pravna podlaga:** privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2).
 
-> **TODO (pravna služba), pozdravna avtomatizacija v storitvi Brevo:** pozdravna sporočila v storitvi Brevo se sprožijo, ko se kontakt pridruži poštnemu seznamu, kar se zdaj zgodi le s privolitvijo. Odločite, ali lahko eno samo sporočilo »kako uporabljati Zyflow« prejme vsak nov račun kot obvestilo v zvezi s storitvijo ali le kolesarji, ki so vklopili trženjska sporočila. Nato to opombo nadomestite in navedite, ali trenutno pošiljamo trženjska sporočila.
+**Kaj pošiljamo zdaj:** trženjska sporočila pošiljamo le tistim, ki so jih vklopili. Ko jih vklopite, prejmete kratko serijo pozdravnih sporočil o storitvi Zyflow, nato pa občasne novice. Če jih ne vklopite, ne prejemate trženjskih sporočil, tudi pozdravnih ne.
 
 ### 3.9 Analitika uporabe
 
@@ -182,7 +180,7 @@ Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava j
 
 **Kaj hranimo:** če obvestila dovolite, aplikacija prek našega ponudnika potisnih obvestil Expo pridobi žeton za potisna obvestila za vaš telefon. Žeton je naslov aplikacije Zyflow v tem telefonu; ne vsebuje imena, e-naslova ali lokacije. Žeton hranimo skupaj z vašim identifikatorjem uporabnika, datumom, ko je bil ustvarjen in nazadnje posodobljen, ter številko različice operacijskega sistema telefona. Hranimo tudi vaše nastavitve obvestil in obvestila, ki vam jih pošljemo in jih lahko preberete v nabiralniku obvestil v aplikaciji: naslov, besedilo, vrsto, čas, ali je bilo poslano kot potisno obvestilo in kdaj ste ga prebrali.
 
-**Kako dostavimo potisna obvestila:** vsako potisno obvestilo posredujemo storitvi Expo (650 Industries, Inc., ZDA), ki ga preda storitvi Apple Push Notification service (iPhone) ali Googlovi storitvi Firebase Cloud Messaging (Android), da ga dostavi v vaš telefon. Prejmejo žeton, naslov in besedilo obvestila ter interni identifikator obvestila. Besedilo lahko vsebuje ime poti ali kraja, ki ste ga shranili. S potisnim obvestilom ne pošljemo vašega e-naslova ali lokacije.
+**Kako dostavimo potisna obvestila:** vsako potisno obvestilo posredujemo storitvi Expo (650 Industries, Inc., ZDA), ki ga preda storitvi Apple Push Notification service (iPhone) ali Googlovi storitvi Firebase Cloud Messaging (Android), da ga dostavi v vaš telefon; v sistemu Android ga lahko pošljemo tudi neposredno storitvi Firebase Cloud Messaging. Prejmejo žeton, naslov in besedilo obvestila ter interni identifikator obvestila. Besedilo lahko vsebuje ime poti ali kraja, ki ste ga shranili. S potisnim obvestilom ne pošljemo vašega e-naslova ali lokacije. Apple in Google potisna obvestila dostavljata v skladu s svojimi pogoji in pravilniki o zasebnosti.
 
 **Na podlagi česa izberemo, kaj pošljemo:** poti in kraji, ki ste jih shranili, vaše nastavitve obvestil in javni podatki, na primer vremenske napovedi. Vaše trenutne lokacije za obvestila ne uporabljamo in je ne spremljamo v ozadju.
 
@@ -192,13 +190,11 @@ Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava j
 |---|---|---|---|
 | **Tvoje vožnje in kraji** | Hudo vreme, opozorila o bateriji in polnjenju za vaše vožnje in shranjene kraje | Vklopljeno | Pogodba, točka (b) prvega odstavka 6. člena Splošne uredbe |
 | **Tvoji prispevki** | Novosti o krajih, ki ste jih predlagali, odobren partnerski dostop | Vklopljeno | Pogodba, točka (b) prvega odstavka 6. člena Splošne uredbe |
-| **Novice in ponudbe** | Obvestila Zyflow, nove ponudbe in promocije | Izklopljeno, dokler ga ne vklopite | Privolitev, točka (a) prvega odstavka 6. člena Splošne uredbe |
+| **Novice in ponudbe** | Obvestila Zyflow, nove ponudbe in promocije | Izklopljeno, dokler ga ne vklopite | Privolitev, točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2 |
 
 Prvi dve skupini sta del storitve, ki jo uporabljate. Novice in ponudbe pošiljamo le, če jih vklopite; kadar koli jih lahko znova izklopite, kar ne vpliva na že poslana obvestila.
 
 **Sprememba izbire:** v razdelku Profil → Nastavitve → Obvestila in zvok lahko vsako vrsto obvestil vklopite ali izklopite, kot potisno obvestilo in v nabiralniku. Vsa obvestila Zyflow lahko blokirate tudi v nastavitvah telefona; potem potisna obvestila do vas ne pridejo, vrste, ki ste jih pustili vklopljene, pa se še vedno prikazujejo v nabiralniku v aplikaciji.
-
-> **TODO (pravna služba), pravna podlaga po skupinah:** potrdite pravne podlage v zgornji tabeli. Načrt izdelka predlaga, da sta »Tvoje vožnje in kraji« in »Tvoji prispevki« del pogodbe (točka (b) prvega odstavka 6. člena), »Novice in ponudbe« pa na podlagi privolitve (točka (a) prvega odstavka 6. člena). Potrdite tudi, ali za promocijska potisna obvestila velja ZEKom-2 tako kot za trženjsko e-pošto ter ali sta Apple in Google pri dostavi potisnih obvestil obdelovalca ali samostojna upravljavca.
 
 ### 3.17 Podpora in zahteve v zvezi z varstvom podatkov
 

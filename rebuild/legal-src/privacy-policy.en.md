@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.3 · **Effective date:** [TODO: date of publication] · Replaces version 2.2 of 30 October 2026
+**Version:** 2.3 · **Effective date:** 7 November 2026 · Replaces version 2.2 of 30 October 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -106,11 +106,9 @@ We use Brevo to store your contact details (email address, full name and user ID
 
 **Service emails:** account and security emails (for example sign-in codes and confirmations when you change your email address) and updates about places you submitted. **Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
 
-> **TODO (Legal), weekly summary email:** decide whether the planned weekly summary email is a service email (contract, Art. 6(1)(b)) or a marketing email (consent). It is not sent yet. Replace this note with the decided text before publishing.
-
 **Marketing emails ("Ride ideas and Zyflow news"):** we send these **only if you turn them on yourself** in the app under Profile → Settings → Notification & Sound → Email notification. The option is never switched on for you. When you turn it on, we add you to our mailing list at Brevo; when you turn it off, we remove you from it. We record your choice, when you made it and where in the app, so that we can show what you agreed to. You can withdraw consent at any time in the app, via the unsubscribe link in each email or by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu). **Legal basis:** consent (Art. 6(1)(a) GDPR and ZEKom-2).
 
-> **TODO (Legal), Brevo welcome automation:** the welcome emails in Brevo start when a contact joins the mailing list, which now happens only with consent. Decide whether a single "how to use Zyflow" welcome email may go to every new account as a service email, or only to riders who turned on marketing emails. Then replace this note and say whether we currently send marketing emails.
+**What we send today:** marketing emails go only to people who turned them on. When you turn them on, you receive a short series of welcome emails about Zyflow, followed by occasional news. If you don't turn them on, you receive no marketing emails, including welcome emails.
 
 ### 3.9 Product analytics
 
@@ -182,7 +180,7 @@ You can connect your Zyflow account to other cycling services. Connecting is alw
 
 **What we store:** if you allow notifications, the app gets a push token for your phone through our push provider Expo. A push token is an address for the Zyflow app on that phone; it contains no name, email address or location. We store the push token with your user ID, the date it was created and last updated, and the build number of your phone's operating system. We also store your notification settings and the notifications we send you, which you can read in the app's notification inbox: title, text, type, time, whether it was sent by push and when you read it.
 
-**How push notifications are delivered:** we pass each push notification to Expo (650 Industries, Inc., USA), which hands it to Apple Push Notification service (iPhone) or Google's Firebase Cloud Messaging (Android) to deliver it to your phone. They receive the push token, the title and text of the notification and an internal notification ID. The text can name a route or place you saved. We do not send your email address or your location with a push notification.
+**How push notifications are delivered:** we pass each push notification to Expo (650 Industries, Inc., USA), which hands it to Apple Push Notification service (iPhone) or Google's Firebase Cloud Messaging (Android) to deliver it to your phone; on Android we can also send it to Firebase Cloud Messaging directly. They receive the push token, the title and text of the notification and an internal notification ID. The text can name a route or place you saved. We do not send your email address or your location with a push notification. Apple and Google deliver push notifications under their own terms and privacy policies.
 
 **What decides what we send:** the routes and places you saved, your notification settings and public data such as weather forecasts. We do not use your live location for notifications and do not track your location in the background.
 
@@ -192,13 +190,11 @@ You can connect your Zyflow account to other cycling services. Connecting is alw
 |---|---|---|---|
 | **Your rides & places** | Severe weather, battery and charging alerts for your rides and saved places | On | Contract, Art. 6(1)(b) GDPR |
 | **Your contributions** | Updates on places you suggested, approved partner access | On | Contract, Art. 6(1)(b) GDPR |
-| **News & offers** | Zyflow announcements, new offers and promotions | Off until you turn it on | Consent, Art. 6(1)(a) GDPR |
+| **News & offers** | Zyflow announcements, new offers and promotions | Off until you turn it on | Consent, Art. 6(1)(a) GDPR and ZEKom-2 |
 
 The first two groups are part of the service you use. News & offers are sent only if you turn them on; you can turn them off again at any time, without affecting what was sent before.
 
 **Changing your choice:** under Profile → Settings → Notification & Sound you can turn each type of notification on or off, both as a push notification and in the inbox. You can also block all Zyflow notifications in your phone's settings; then no push notifications reach you, but the types you left on still appear in the app's inbox.
-
-> **TODO (Legal), legal basis per group:** confirm the legal bases in the table above. The product plan suggests "Your rides & places" and "Your contributions" as part of the contract (Art. 6(1)(b)) and "News & offers" on consent (Art. 6(1)(a)). Please also confirm whether ZEKom-2 applies to promotional push notifications as it does to marketing emails, and whether Apple and Google act as processors or independent controllers when they deliver push notifications.
 
 ### 3.17 Support and privacy requests
 
