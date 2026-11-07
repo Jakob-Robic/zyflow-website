@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.3 · **Effective date:** 7 November 2026 · Replaces version 2.2 of 30 October 2026
+**Version:** 2.4 · **Effective date:** 7 November 2026 · Replaces version 2.3 of 7 November 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -46,7 +46,7 @@ We have not appointed a data protection officer. For any privacy question or req
 
 **Legal basis:** performance of a contract (Art. 6(1)(b) GDPR). Access to location on your device is controlled by your operating system permission, which you can withdraw at any time in your device settings. Without it, some features will not work.
 
-Your live position is not stored on our servers. It is stored only if it becomes part of something you save, share or submit (see 3.3 to 3.5). Some location data is sent to map, search and routing services to answer your request (see 3.10).
+Your live position is not stored on our servers. It is stored only if it becomes part of something you save, share or submit (see 3.3 to 3.5). When you collect a stamp, your position is used to check that you are at the place and is not stored; the stamp records the place and the time (see 3.17). Some location data is sent to map, search and routing services to answer your request (see 3.11).
 
 ### 3.3 Routes (saved, planned and imported)
 
@@ -150,7 +150,7 @@ Our search function stores the IP address of the requesting device together with
 
 ### 3.14 Data stored on your device
 
-The app stores your login session, your last known location, your recent searches and the date it last offered you notifications locally on your device so that the app works quickly, you stay signed in and we do not ask about notifications too often. This storage is strictly necessary for the service you request. It is removed when you uninstall the app.
+The app stores your login session, your last known location, your recent searches, the date it last offered you notifications, stamps waiting to be sent while you have no signal (with the GPS reading taken at the place and any answers) and the places it reminded you about today locally on your device so that the app works quickly, you stay signed in, stamps collected without signal are not lost and we do not ask about notifications or remind you too often. This storage is strictly necessary for the service you request. It is removed when you uninstall the app.
 
 If you agree to product analytics, PostHog also stores a pseudonymous identifier on your device; without your consent it stores nothing. Sentry stores a pseudonymous identifier for crash reporting (see 3.10).
 
@@ -196,11 +196,29 @@ The first two groups are part of the service you use. News & offers are sent onl
 
 **Changing your choice:** under Profile → Settings → Notifications you can turn each group of notifications on or off, both as push notifications and in the inbox. You can also block all Zyflow notifications in your phone's settings; then no push notifications reach you, but the groups you left on still appear in the app's inbox.
 
-### 3.17 Support and privacy requests
+### 3.17 Stamp book
+
+**What it is:** when you are at a place (within about 150 metres), you can collect a stamp for it in the app. A stamp is collected only when you stamp it yourself; nothing is stamped automatically.
+
+**Data:** when you collect a stamp, the app sends your current position, its GPS accuracy and the time of the reading to our server. The server checks that you are at the place, that the reading is recent and that you could have travelled there since your previous stamp. Your position is used only for this check and is **not stored**. We store the stamp: the place, its level (bronze or silver), the date and time of each counted visit (at most one per place per day), how far from the place you were, the GPS accuracy and your user ID. If you answer questions about the place for a silver stamp, your answers are stored as place reports (3.5).
+
+**Reminders in the app:** while the Home screen is open and you have allowed location, the app can remind you when you have been near a place you have not stamped yet for about two minutes. This happens only while you use the app. To find places near you, the app asks our server for places around your position; the position is not stored, and nothing about the reminder is stored on our servers.
+
+**Without signal:** if you have no signal, the stamp, the GPS reading taken at the place and any answers wait on your phone and are sent when you are back online; the server then makes the same checks. Once sent, they are removed from your phone.
+
+**Visibility:** your stamp book is **private** and visible only to you. Other users see only counts without names, for example how many riders have a stamp at a place or have finished a collection.
+
+**Purpose:** to let you collect stamps for the places you visit by bike, and to keep stamps fair.
+
+**Legal basis:** performance of a contract (Art. 6(1)(b) GDPR); collecting stamps is a feature you choose to use.
+
+Please note that your stamps are a record of the places you have visited and when.
+
+### 3.18 Support and privacy requests
 
 If you contact us, we process your email address, the content of your message and our reply to handle your request. **Legal basis:** legitimate interest (Art. 6(1)(f) GDPR) or, for privacy requests, our legal obligation (Art. 6(1)(c) GDPR).
 
-### 3.18 What we do not do
+### 3.19 What we do not do
 
 - We do not sell your personal data.
 - We do not show third-party advertising in the app and do not use advertising IDs.
@@ -212,7 +230,7 @@ If you contact us, we process your email address, the content of your message an
 
 | Purpose | Legal basis (GDPR) |
 |---|---|
-| Account, routes, location features, bike passport, community sharing, maps/search/routing/weather, service emails | Contract, Art. 6(1)(b) |
+| Account, routes, location features, stamp book, bike passport, community sharing, maps/search/routing/weather, service emails | Contract, Art. 6(1)(b) |
 | Notifications about your rides, places and contributions (push and inbox) | Contract, Art. 6(1)(b) |
 | Connected services (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), only if you connect them | Contract, Art. 6(1)(b) |
 | Place reports and submissions, crash monitoring, security and rate limiting, Stay22 links, support | Legitimate interest, Art. 6(1)(f) |
@@ -251,7 +269,7 @@ We use the following service providers. Processors act only on our instructions 
 | SRAM, LLC (Hammerhead) (independent controller) | Sending routes to Karoo, importing rides, only if you connect Hammerhead | Hammerhead user ID, access token; routes you send | USA; see section 6 |
 | Ride with GPS, Inc. (independent controller) | Importing and sending routes and rides, only if you connect Ride with GPS | Ride with GPS user ID, access token; routes you send or import | USA; see section 6 |
 
-**Other users:** see community sharing (3.4) and place reports (3.5).
+**Other users:** see community sharing (3.4), place reports (3.5) and the stamp book (3.17).
 
 **Authorities:** we disclose data only where we are legally required to, for example on a court order.
 
@@ -276,6 +294,7 @@ If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the ro
 | Shared community routes, their photos and map images | The shared route and its photos are deleted when you remove the route or delete your account; its map images are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
 | Bike passport and bike photos | Until you delete your account; a bike photo is deleted from file storage when you remove it or delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
+| Stamps and stamp visits (place, level, date and time, distance and GPS accuracy) | Until you delete your account |
 | Brevo contact (email, name, user ID) | While your account exists; deleted automatically when you delete your account (see section 9) |
 | Your marketing email choice (on or off, when and where in the app) | While your account exists, also after you turn marketing emails off, so that we can show what you agreed to; deleted when you delete your account |
 | Push token (with user ID and operating system build number) | Until you delete your account, or until Apple or Google tell us the token no longer works (for example after you uninstall the app) |
@@ -288,7 +307,8 @@ If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the ro
 | Server and hosting logs (Supabase, Vercel) | Up to 30 days |
 | Database backups | We currently keep no separate database backups |
 | Support and privacy-request correspondence | As long as needed to handle your request and, afterwards, for a limited period to document it and to defend legal claims |
-| Data on your device (session, last location, recent searches, date of the last notification offer) | Until you uninstall the app or clear its data |
+| Data on your device (session, last location, recent searches, date of the last notification offer, places reminded about today) | Until you uninstall the app or clear its data |
+| Stamps waiting on your phone to be sent (with the GPS reading and answers) | Until they are sent, or until you uninstall the app or clear its data |
 | Accounting records (if any) | As required by law (for example 10 years for invoices under ZDDV-1) |
 
 ## 8. Your rights
@@ -312,7 +332,7 @@ To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from
 - **On the web:** [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account).
 - **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, and photos and map images of shared routes), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
+When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, stamps, bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, and photos and map images of shared routes), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
 ## 10. Complaints
 
