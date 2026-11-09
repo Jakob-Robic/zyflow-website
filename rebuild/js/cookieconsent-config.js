@@ -76,6 +76,8 @@ function syncPosthogConsent() {
 function siteLocale() {
   const lang = (document.documentElement.lang || "en").slice(0, 2).toLowerCase();
   if (lang === "sl") return "sl";
+  // German exists only on guide pages; the policies they link to are English.
+  if (lang === "de") return "de";
   if (location.pathname === "/sl" || location.pathname.startsWith("/sl/")) return "sl";
   return "en";
 }
@@ -291,6 +293,54 @@ CookieConsent.run({
             {
               title: "Več informacij",
               description: `Preberite <a href="${cookiePolicyPath}">Politiko piškotkov</a> in <a href="${privacyPolicyPath}">Politiko zasebnosti</a> ali pišite na <a href="mailto:legal@zyflow.eu">legal@zyflow.eu</a>.`,
+            },
+          ],
+        },
+      },
+      de: {
+        consentModal: {
+          title: "Wir verwenden Cookies",
+          description:
+            "Wir nutzen notwendige Cookies, damit zyflow.eu funktioniert, und optionale Analyse- und Werbe-Cookies, um Besuche zu verstehen und Kampagnen zu messen. Optionale Cookies setzen wir erst nach deiner Wahl.",
+          acceptAllBtn: "Alle akzeptieren",
+          acceptNecessaryBtn: "Optionale ablehnen",
+          showPreferencesBtn: "Einstellungen verwalten",
+          footer: `<a href="${privacyPolicyPath}">Datenschutzerklärung (EN)</a><a href="${cookiePolicyPath}">Cookie-Richtlinie (EN)</a>`,
+        },
+        preferencesModal: {
+          title: "Cookie-Einstellungen",
+          acceptAllBtn: "Alle akzeptieren",
+          acceptNecessaryBtn: "Optionale ablehnen",
+          savePreferencesBtn: "Einstellungen speichern",
+          closeIconLabel: "Schließen",
+          serviceCounterLabel: "Dienst|Dienste",
+          sections: [
+            {
+              title: "Deine Wahl",
+              description:
+                "Notwendige Cookies halten die Seite am Laufen. Analyse- und Werbe-Cookies helfen uns, Zyflow zu verbessern und Anzeigen zu messen. Du kannst deine Wahl jederzeit über die Cookie-Einstellungen in der Fußzeile ändern.",
+            },
+            {
+              title: "Unbedingt erforderlich",
+              description:
+                "Nötig für Sicherheit, Lastverteilung und das Speichern dieser Einwilligung. Diese Cookies lassen sich nicht abschalten.",
+              linkedCategory: CAT_NECESSARY,
+            },
+            {
+              title: "Analyse",
+              description:
+                "Google Analytics 4 (über Google Tag Manager) und PostHog helfen uns zu verstehen, wie die Seite genutzt wird: aufgerufene Seiten, Besuchsquellen und wichtige Aktionen wie Klicks zum App Store und Kontaktanfragen. PostHog lädt erst, wenn du diese Kategorie akzeptierst. Sitzungsaufzeichnungen sind auf der Website ausgeschaltet.",
+              linkedCategory: CAT_ANALYTICS,
+            },
+            {
+              title: "Werbung",
+              description:
+                "Für Meta (Facebook) Pixel, die Messung von ChatGPT Ads und ähnliche Werbeplattformen, damit wir Kampagnen messen können. Wird nur nach deiner Zustimmung über Google Tag Manager geladen.",
+              linkedCategory: CAT_ADVERTISEMENT,
+            },
+            {
+              title: "Mehr Informationen",
+              description: `Lies unsere <a href="${cookiePolicyPath}">Cookie-Richtlinie</a> und <a href="${privacyPolicyPath}">Datenschutzerklärung</a> (auf Englisch) oder schreib an <a href="mailto:legal@zyflow.eu">legal@zyflow.eu</a>.`,
             },
           ],
         },

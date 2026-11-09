@@ -194,13 +194,16 @@ test('payload is allowlisted: constant anonymous id, no IP, geoip off', () => {
   assert.equal(serialized.includes('User-Agent') || serialized.includes('user-agent'), false);
 });
 
-test('locale is en/sl from the path only', () => {
+test('locale is en/sl/de from the path only', () => {
   assert.equal(localeFromPath('/'), 'en');
   assert.equal(localeFromPath('/tours'), 'en');
   assert.equal(localeFromPath('/sl'), 'sl');
   assert.equal(localeFromPath('/sl/'), 'sl');
   assert.equal(localeFromPath('/sl/about'), 'sl');
   assert.equal(localeFromPath('/legal-pages/izbris-racuna'), 'sl');
+  assert.equal(localeFromPath('/de/ratgeber'), 'de');
+  assert.equal(localeFromPath('/de/ratgeber/ist-die-kamnicanka-schwer'), 'de');
+  assert.equal(localeFromPath('/guides/is-the-kamnicanka-loop-hard'), 'en');
   assert.equal(buildCapturePayload(page('https://www.zyflow.eu/sl/contact')).properties.locale, 'sl');
 });
 

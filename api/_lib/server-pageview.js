@@ -101,6 +101,8 @@ function pathnameOf(request) {
 function localeFromPath(pathname) {
   const pathName = normalizePathname(pathname);
   if (pathName === '/sl' || pathName.startsWith('/sl/')) return 'sl';
+  // German exists only for guides (/de/ratgeber, see rebuild/scripts/guides.js).
+  if (pathName === '/de' || pathName.startsWith('/de/')) return 'de';
   // SL account-deletion URL is unprefixed (see rebuild/scripts/pages.js).
   if (pathName === '/legal-pages/izbris-racuna') return 'sl';
   return 'en';

@@ -32,6 +32,10 @@
  "title": "Zyflow: Journal",
  "description": "Guides to bike-friendly places, safer rides and product news from the Zyflow team for cyclists and e-bike riders."
  },
+ "guides": {
+ "title": "Zyflow Guides: rider questions, answered",
+ "description": "Short, checked answers to questions cyclists and e-bike riders ask, with real numbers, sources and the date we last checked them."
+ },
  "contact": {
  "title": "Zyflow: Contact",
  "description": "List your place, ask about routes or talk to us about partnerships and investment. Reach the Zyflow team at support@zyflow.eu."
@@ -212,7 +216,8 @@
  "privacy": "Privacy",
  "terms": "Terms",
  "cookies": "Cookies",
- "impressum": "Impressum"
+ "impressum": "Impressum",
+ "guides": "Guides"
  },
  "cats": {
  "kayak": "Tour",
@@ -2086,5 +2091,28 @@
  "social1": "Off-road vehicle in a desert canyon",
  "social2": "Bikepacking camp with a tent by a lake at dusk",
  "social3": "Kayak on a calm sea with icebergs"
+ },
+ "guides": {
+ "name": "Guides",
+ "index": {
+ "title": "Rider questions, answered",
+ "lede": "Short answers for cyclists and e-bike riders, with the numbers and sources behind them.",
+ "empty": "No guides in this language yet.",
+ "emptyLink": "Read the English guides"
+ },
+ "dataLabel": "Key numbers",
+ "dataSource": "{source}, as of {date}",
+ "mapCredit": "{credit}, as of {date}",
+ "cta": {
+ "title": "Find your stops in Zyflow",
+ "ios": "App Store",
+ "android": "Google Play",
+ "planner": "Open in the planner"
+ },
+ "checked": "Checked on",
+ "sources": "Sources",
+ "accessed": "accessed {date}",
+ "related": "Related guides",
+ "fixtureNote": "Test guide for previewing the page layout. It is never published."
  }
 }

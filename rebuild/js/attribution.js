@@ -13,6 +13,7 @@
   var COOKIE_MAX_AGE = 90 * 24 * 60 * 60;
   var STORE_SELECTOR =
     'a[href*="apps.apple.com"]:not([data-app-modal-open]):not([data-business-store]), a[href*="play.google.com"]:not([data-app-modal-open]):not([data-business-store])';
+  var PLANNER_SELECTOR = "a[data-planner-link]";
 
   function emptyUtms() {
     return { utm_source: "", utm_medium: "", utm_campaign: "" };
@@ -72,6 +73,34 @@
       base.utm_source = referrerSource(referrer, pageHost) || "direct";
     }
     return base;
+  }
+
+  /**
+   * Guide pages carry a campaign of their own (<body data-page-campaign>).
+   * It fills in only when the visitor brought no medium or campaign, so a
+   * visitor from an ad or a newsletter keeps that attribution. The source
+   * stays the visitor's (a search engine, "direct"), so store and planner
+   * reports show both where they came from and which guide sent them.
+   */
+  function withPageCampaign(utms, page) {
+    var base = utms || emptyUtms();
+    if (!page || !page.utm_campaign) return base;
+    if (base.utm_campaign || base.utm_medium) return base;
+    return {
+      utm_source: base.utm_source || "direct",
+      utm_medium: page.utm_medium || "",
+      utm_campaign: page.utm_campaign,
+    };
+  }
+
+  function pageCampaign() {
+    if (typeof document === "undefined" || !document.body) return null;
+    var campaign = document.body.getAttribute("data-page-campaign") || "";
+    if (!campaign) return null;
+    return {
+      utm_campaign: campaign,
+      utm_medium: document.body.getAttribute("data-page-medium") || "",
+    };
   }
 
   function firstTouchFromVisit(input) {
@@ -223,7 +252,8 @@
   }
 
   function getAttribution(input) {
-    return resolveAttribution({
+    var page = input && input.page !== undefined ? input.page : pageCampaign();
+    return withPageCampaign(resolveAttribution({
       search: (input && input.search) || (typeof location !== "undefined" ? location.search : ""),
       referrer:
         (input && input.referrer) ||
@@ -232,7 +262,40 @@
         (input && input.pageHost) ||
         (typeof location !== "undefined" ? location.hostname : ""),
       stored: (input && input.stored) || readStored(),
-    });
+    }), page);
+  }
+
+  /**
+   * "Open in the planner" links ship with the page's own UTMs so they work
+   * without JS. When the visitor has a campaign (theirs or the page's), it
+   * replaces them.
+   */
+  function decoratePlannerUrl(href, utms) {
+    if (!utms || !utms.utm_campaign) return href;
+    var url;
+    try {
+      url = new URL(href, "https://www.zyflow.eu");
+    } catch (_e) {
+      return href;
+    }
+    url.searchParams.set("utm_source", utms.utm_source || "direct");
+    if (utms.utm_medium) url.searchParams.set("utm_medium", utms.utm_medium);
+    else url.searchParams.delete("utm_medium");
+    url.searchParams.set("utm_campaign", utms.utm_campaign);
+    return url.toString();
+  }
+
+  function applyPlannerLinks(utms) {
+    if (typeof document === "undefined") return;
+    var current = utms || getAttribution();
+    var nodes = document.querySelectorAll(PLANNER_SELECTOR);
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      if (!el.getAttribute("data-planner-href")) {
+        el.setAttribute("data-planner-href", el.getAttribute("href") || "");
+      }
+      el.setAttribute("href", decoratePlannerUrl(el.getAttribute("data-planner-href"), current));
+    }
   }
 
   function analyticsConsentGranted() {
@@ -263,7 +326,7 @@
     var original = el.getAttribute("data-store-href") || el.getAttribute("href") || "";
     var opts = options || {};
     var href = decorateStoreUrl(original, {
-      utms: opts.utms || getAttribution(),
+      utms: withPageCampaign(opts.utms || getAttribution(), pageCampaign()),
       analyticsConsent: !!opts.analyticsConsent,
       distinctId: opts.distinctId || "",
     });
@@ -293,6 +356,7 @@
   function boot() {
     persistFirstTouch();
     applyStoreLinks({ analyticsConsent: analyticsConsentGranted() });
+    applyPlannerLinks();
   }
 
   if (typeof document !== "undefined") {
@@ -312,6 +376,9 @@
     campaignToken: campaignToken,
     playReferrerValue: playReferrerValue,
     decorateStoreUrl: decorateStoreUrl,
+    withPageCampaign: withPageCampaign,
+    decoratePlannerUrl: decoratePlannerUrl,
+    applyPlannerLinks: applyPlannerLinks,
     persistFirstTouch: persistFirstTouch,
     getAttribution: getAttribution,
     decorateAnchor: decorateAnchor,

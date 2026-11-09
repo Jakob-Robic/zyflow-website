@@ -266,6 +266,30 @@
       "destination": "/sl/tours/:slug.html"
     },
     {
+      "source": "/guides",
+      "destination": "/guides.html"
+    },
+    {
+      "source": "/guides/:slug",
+      "destination": "/guides/:slug.html"
+    },
+    {
+      "source": "/de/ratgeber",
+      "destination": "/de/ratgeber.html"
+    },
+    {
+      "source": "/de/ratgeber/:slug",
+      "destination": "/de/ratgeber/:slug.html"
+    },
+    {
+      "source": "/sl/vodniki",
+      "destination": "/sl/vodniki.html"
+    },
+    {
+      "source": "/sl/vodniki/:slug",
+      "destination": "/sl/vodniki/:slug.html"
+    },
+    {
       "source": "/brand",
       "destination": "/assets/design-system/brand"
     },

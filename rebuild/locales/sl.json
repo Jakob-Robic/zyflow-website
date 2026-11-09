@@ -32,6 +32,10 @@
  "title": "Zyflow: Dnevnik",
  "description": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti ekipe Zyflow za kolesarje in e-kolesarje."
  },
+ "guides": {
+ "title": "Zyflow vodniki: odgovori na kolesarska vprašanja",
+ "description": "Kratki, preverjeni odgovori na vprašanja kolesarjev in voznikov e-koles, s pravimi številkami, viri in datumom zadnjega preverjanja."
+ },
  "contact": {
  "title": "Zyflow: Kontakt",
  "description": "Dodaj svoj kraj, vprašaj o poteh ali se z nami pogovori o partnerstvih in naložbah. Ekipa Zyflow je dosegljiva na support@zyflow.eu."
@@ -212,7 +216,8 @@
  "privacy": "Zasebnost",
  "terms": "Pogoji",
  "cookies": "Piškotki",
- "impressum": "Impressum"
+ "impressum": "Impressum",
+ "guides": "Vodniki"
  },
  "cats": {
  "kayak": "Tura",
@@ -2086,5 +2091,28 @@
  "social1": "Terensko vozilo v puščavskem kanjonu",
  "social2": "Tabor s šotorom ob jezeru v mraku",
  "social3": "Kajak na mirnem morju z ledenimi gorami"
+ },
+ "guides": {
+ "name": "Vodniki",
+ "index": {
+ "title": "Odgovori na kolesarska vprašanja",
+ "lede": "Kratki odgovori za kolesarje in voznike e-koles, s številkami in viri, na katerih temeljijo.",
+ "empty": "V tem jeziku še ni vodnikov.",
+ "emptyLink": "Preberi angleške vodnike"
+ },
+ "dataLabel": "Ključne številke",
+ "dataSource": "{source}, stanje {date}",
+ "mapCredit": "{credit}, stanje {date}",
+ "cta": {
+ "title": "Najdi postanke v Zyflow",
+ "ios": "App Store",
+ "android": "Google Play",
+ "planner": "Odpri v načrtovalniku"
+ },
+ "checked": "Preverjeno",
+ "sources": "Viri",
+ "accessed": "dostopano {date}",
+ "related": "Sorodni vodniki",
+ "fixtureNote": "Testni vodnik za predogled postavitve strani. Nikoli ni objavljen."
  }
 }

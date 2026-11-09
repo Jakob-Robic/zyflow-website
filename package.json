@@ -17,7 +17,8 @@
     "blog:check": "node rebuild/scripts/check-blog.js",
     "blog:preview": "node rebuild/scripts/preview-blog.js",
     "blog:pull": "node rebuild/scripts/pull-post-assets.js",
-    "test:rebuild": "node --test rebuild/scripts/test-attribution.js rebuild/scripts/test-asset-versioning.js rebuild/scripts/test-page-meta.js rebuild/scripts/test-app-store-links.js rebuild/scripts/test-image-delivery.js rebuild/scripts/test-publication.js rebuild/scripts/test-blog.js",
+    "guides:preview": "node rebuild/scripts/preview-guides.js",
+    "test:rebuild": "node --test rebuild/scripts/test-attribution.js rebuild/scripts/test-asset-versioning.js rebuild/scripts/test-page-meta.js rebuild/scripts/test-app-store-links.js rebuild/scripts/test-image-delivery.js rebuild/scripts/test-publication.js rebuild/scripts/test-blog.js rebuild/scripts/test-guides.js",
     "test:api": "node --test --test-concurrency=1 api/_lib/*.test.js",
     "serve:headers": "node rebuild/scripts/serve-headers.js"
   },

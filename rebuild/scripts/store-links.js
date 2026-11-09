@@ -12,6 +12,9 @@ const fs = require("fs");
 const path = require("path");
 
 const APP_STORE_URL = "https://apps.apple.com/si/app/zyflow/id6763228086";
+/** Google Play listing, for templates rendered in JS (guides). HTML partials keep the literal. */
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.jakob_robic.zyflowmobileapp";
 
 /**
  * vanilla-cookieconsent replaces this at runtime. It is not a rebuild token.
@@ -115,6 +118,7 @@ function assertAppStoreLinks(rootDir) {
 
 module.exports = {
   APP_STORE_URL,
+  PLAY_STORE_URL,
   appStoreUrlForLocale,
   assertAppStoreLinks,
 };

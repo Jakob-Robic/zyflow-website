@@ -2,6 +2,7 @@
  * Single source of truth for rebuild routes, SEO, and locale output.
  */
 const { BLOG_PAGES } = require("./blog");
+const { GUIDE_PAGES } = require("./guides");
 const { ROUTE_PAGES } = require("./routes");
 
 const SITE_ORIGIN = process.env.SITE_ORIGIN || "https://www.zyflow.eu";
@@ -28,6 +29,29 @@ function journalIsPublic() {
 }
 
 const JOURNAL_IS_PUBLIC = journalIsPublic();
+
+/**
+ * Guides (/guides, /de/ratgeber, /sl/vodniki) stay off the live site until
+ * real guides are written. While this is false:
+ *   - no guide or guides index page is built
+ *   - nothing is listed in the sitemap, and robots.txt disallows all three paths
+ *   - the footer "Guides" link (<!-- guides:public -->) is dropped
+ * Content in content/guides is still validated on every build.
+ * Turning it on with no published guide fails the build.
+ * A process env GUIDES_PUBLIC=true|false overrides this line for one build
+ * (used by npm run guides:preview and tests). The line itself stays the
+ * switch for a real launch.
+ */
+const GUIDES_PUBLIC = false;
+
+function guidesArePublic() {
+  const override = process.env.GUIDES_PUBLIC;
+  if (override === "true" || override === "1") return true;
+  if (override === "false" || override === "0") return false;
+  return GUIDES_PUBLIC;
+}
+
+const GUIDES_ARE_PUBLIC = guidesArePublic();
 
 /** @typedef {{ id: string, file: string, out: string, path: string, indexable: boolean, locales?: string[], preloadHero?: boolean }} PageDef */
 
@@ -72,6 +96,7 @@ const PAGES = [
     indexable: JOURNAL_IS_PUBLIC,
   },
   ...(JOURNAL_IS_PUBLIC ? BLOG_PAGES.map((page) => ({ ...page, indexable: true })) : []),
+  ...(GUIDES_ARE_PUBLIC ? GUIDE_PAGES : []),
   {
     id: "contact",
     file: "contact.html",
@@ -270,6 +295,9 @@ module.exports = {
   JOURNAL_PUBLIC,
   JOURNAL_IS_PUBLIC,
   journalIsPublic,
+  GUIDES_PUBLIC,
+  GUIDES_ARE_PUBLIC,
+  guidesArePublic,
   PAGES,
   pageLocales,
   localizedPath,
