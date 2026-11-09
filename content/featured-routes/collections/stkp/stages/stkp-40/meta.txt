@@ -1,0 +1,21 @@
+slug: stkp-40
+collection: stkp
+stage: 40
+name_sl: Dom na Čemšeniški planini – Planinski dom v Gorah
+name_en: Dom na Čemšeniški planini – Planinski dom v Gorah
+start_place: Dom na Čemšeniški planini
+end_place: Planinski dom v Gorah
+category: mtb
+difficulty:
+difficulty_technical_sl: Tehnično zahtevnejša tura
+difficulty_fitness_sl:
+duration:
+surface_sl: 37 % asfaltirano, 63 % makadam
+season_sl:
+notes_sl: Koča na Vrheh zaprta (stanje junij 2026). Spran, kamnit kolovoz do ok. 850 m n.v. mestoma zahteva sestop s kolesa.
+source_url: https://stkp.pzs.si/en/2024/07/29/40-dom-na-cemseniski-planini-planinski-dom-v-gorah-2/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

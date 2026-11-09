@@ -1,0 +1,21 @@
+slug: stkp-25
+collection: stkp
+stage: 25
+name_sl: Bohor – Planina pri Sevnici – Resevna
+name_en: Bohor – Planina pri Sevnici – Resevna
+start_place: Bohor
+end_place: Resevna
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2015/09/23/bohor-planina-pri-sevnici-resevna/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

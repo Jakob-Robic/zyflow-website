@@ -1,0 +1,21 @@
+slug: stkp-34
+collection: stkp
+stage: 34
+name_sl: Koča na Naravskih ledinah – Dom na Peci
+name_en: Koča na Naravskih ledinah – Dom na Peci
+start_place: Koča na Naravskih ledinah
+end_place: Dom na Peci
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl: Kratek odsek ob gozdnem rezervatu Pogorevc: vožnja prepovedana, peš ob kolesu. Pri prečenju plazu manj veščim priporočen sestop.
+source_url: https://stkp.pzs.si/en/2016/04/27/dom-na-naravskih-ledinah-dom-na-peci/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

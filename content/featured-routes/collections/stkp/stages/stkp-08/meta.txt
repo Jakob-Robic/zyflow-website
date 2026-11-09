@@ -1,0 +1,21 @@
+slug: stkp-08
+collection: stkp
+stage: 8
+name_sl: Dom v Lepeni – Koča na planini Kuhinja
+name_en: Dom v Lepeni – Koča na planini Kuhinja
+start_place: Dom v Lepeni
+end_place: Koča na planini Kuhinja
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl: Pred kapelico Bes prestrmo za vožnjo, kolo potiskamo. Odsek Koseč–pl. Kuhinja zelo naporen; lažji asfaltni obvoz prek Drežnice, Libušnja, Vrsnega in vasi Krn.
+source_url: https://stkp.pzs.si/en/2016/06/17/08-dom-v-lepeni-koca-na-planini-kuhinja/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

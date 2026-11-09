@@ -1,0 +1,21 @@
+slug: stkp-15
+collection: stkp
+stage: 15
+name_sl: Koča na Kokoši – Piran
+name_en: Koča na Kokoši – Piran
+start_place: Koča na Kokoši
+end_place: Piran
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Manj zahtevna
+difficulty_fitness_sl: Srednje zahtevna
+duration: 5–6 ur
+surface_sl: Makadam, asfalt, kolovoz
+season_sl: Trasa je prevozna celo leto.
+notes_sl: Na nasipu Strunjanskih solin (300 m) vožnja prepovedana, peš ob kolesu. Del poti med Stepani in Tinjanom zaprt zaradi gradnje drugega tira; označen začasni obvoz.
+source_url: https://stkp.pzs.si/en/2016/06/17/15-koca-na-kokosi-piran/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

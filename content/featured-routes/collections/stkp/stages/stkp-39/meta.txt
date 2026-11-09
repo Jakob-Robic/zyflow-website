@@ -1,0 +1,21 @@
+slug: stkp-39
+collection: stkp
+stage: 39
+name_sl: Dom na Menini planini – Dom na Čemšeniški planini
+name_en: Dom na Menini planini – Dom na Čemšeniški planini
+start_place: Dom na Menini planini
+end_place: Dom na Čemšeniški planini
+category: mtb
+difficulty: moderate
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl: 30 % asfaltirano, 70 % makadam
+season_sl:
+notes_sl: Zadnjih ~200 višinskih metrov do Doma na Čemšeniški planini zelo strmih; z obloženim kolesom mestoma peš.
+source_url: https://stkp.pzs.si/en/2024/07/12/39-dom-na-menini-planini-dom-na-cemseniski-planini/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

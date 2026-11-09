@@ -18,6 +18,8 @@ content/featured-routes/**/*.jpeg
 content/featured-routes/**/*.png
 content/featured-routes/**/*.webp
 content/featured-routes/**/*.gif
+# Route collection stages are imported from here (scripts/import-route-collections.ts in the app repo)
+!content/featured-routes/collections/*/stages/*/route.gpx
 content/featured-routes/**/*.heic
 content/featured-routes/**/*.tif
 content/featured-routes/**/*.tiff

@@ -1,0 +1,21 @@
+slug: stkp-28
+collection: stkp
+stage: 28
+name_sl: Gorišnica – Maribor
+name_en: Gorišnica – Maribor
+start_place: Gorišnica
+end_place: Maribor
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/06/18/28-gorisnica-maribor/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

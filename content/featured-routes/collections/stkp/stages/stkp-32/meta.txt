@@ -1,0 +1,21 @@
+slug: stkp-32
+collection: stkp
+stage: 32
+name_sl: Dom na Košenjaku – Poštarski dom pod Plešivcem
+name_en: Dom na Košenjaku – Poštarski dom pod Plešivcem
+start_place: Dom na Košenjaku
+end_place: Poštarski dom pod Plešivcem
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/04/24/dom-na-kosenjaku-postarski-dom-pod-plesivcem/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

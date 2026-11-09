@@ -1,0 +1,21 @@
+slug: stkp-19
+collection: stkp
+stage: 19
+name_sl: Planinski dom na Sviščakih – Loški Potok
+name_en: Planinski dom na Sviščakih – Loški Potok
+start_place: Planinski dom na Sviščakih
+end_place: Loški Potok
+category: mtb
+difficulty: easy
+difficulty_technical_sl: Nezahtevna
+difficulty_fitness_sl: Manj zahtevna
+duration: 4 h
+surface_sl: Makadam, asfalt, kolovoz
+season_sl: Trasa je prevozna v kopnem delu leta. V mokrem in v suhem vremenu.
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/03/08/sviscaki-loski-potok/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

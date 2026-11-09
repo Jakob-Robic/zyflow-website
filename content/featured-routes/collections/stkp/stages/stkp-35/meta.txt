@@ -1,0 +1,21 @@
+slug: stkp-35
+collection: stkp
+stage: 35
+name_sl: Dom na Peci – Pri Kumru – Sv. Duh v Podolševi – Dom planincev v Logarski dolini
+name_en: Dom na Peci – Pri Kumru – Sv. Duh v Podolševi – Dom planincev v Logarski dolini
+start_place: Dom na Peci
+end_place: Dom planincev v Logarski dolini
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/03/29/dom-na-peci-kumer-v-koprivni-sv-duh-v-podolsevi-dom-planincev-v-logarski-dolini/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

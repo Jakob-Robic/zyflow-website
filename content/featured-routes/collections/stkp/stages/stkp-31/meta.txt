@@ -1,0 +1,21 @@
+slug: stkp-31
+collection: stkp
+stage: 31
+name_sl: Ribniška koča – Dom na Košenjaku
+name_en: Ribniška koča – Dom na Košenjaku
+start_place: Ribniška koča
+end_place: Dom na Košenjaku
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl: Od vodnega zbiralnika do zgornje postaje vlečnice Pungart obvezno peš ob kolesu; dostop do zbiralnika in nadaljevanje za vlečnico brez kolesarjenja 1. 4.–30. 6.
+source_url: https://stkp.pzs.si/en/2016/05/04/ribniska-koca-grmovskov-dom-na-kopah-koca-planinc-vuzenica-pernice-dom-na-kosenjaku/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

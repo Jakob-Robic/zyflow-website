@@ -1,0 +1,21 @@
+slug: stkp-06
+collection: stkp
+stage: 6
+name_sl: Aljažev dom v Vratih – Poštarski dom na Vršiču
+name_en: Aljažev dom v Vratih – Poštarski dom na Vršiču
+start_place: Aljažev dom v Vratih
+end_place: Poštarski dom na Vršiču
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl: Stara vršiška cesta Tonkina koča–Poštarski dom: vožnja prepovedana od 1. 3. do 1. 6.
+source_url: https://stkp.pzs.si/en/2016/04/16/kovinarska-koca-v-krmi-planinski-muzej-v-mojstrani-gozd-martuljek-kranjska-gora-mihov-dom-koca-na-gozdu-postarski-dom-na-vrsicu/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

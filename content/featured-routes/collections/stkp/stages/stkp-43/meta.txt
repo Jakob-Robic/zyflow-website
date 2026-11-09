@@ -1,0 +1,21 @@
+slug: stkp-43
+collection: stkp
+stage: 43
+name_sl: Planinski dom na Jančah – Ljubljanski grad
+name_en: Planinski dom na Jančah – Ljubljanski grad
+start_place: Planinski dom na Jančah
+end_place: Ljubljanski grad
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Lahka
+difficulty_fitness_sl: Srednja
+duration: 3–4 ure
+surface_sl: Asfalt, makadam, kolovoz
+season_sl: Trasa je prevozna od pomladi do jeseni.
+notes_sl: Pozimi in v mokrem vremenu precej blatnih odsekov.
+source_url: https://stkp.pzs.si/en/2016/05/15/planinski-dom-na-jancah-ljubljanski-grad-2/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

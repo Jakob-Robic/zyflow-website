@@ -1,0 +1,21 @@
+slug: stkp-20
+collection: stkp
+stage: 20
+name_sl: Hrib Loški potok – Koča pri Jelenovem studencu
+name_en: Hrib Loški potok – Koča pri Jelenovem studencu
+start_place: Hrib Loški potok
+end_place: Koča pri Jelenovem studencu
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Manj zahtevna
+difficulty_fitness_sl: Srednje zahtevna
+duration: 3–4 h
+surface_sl: Makadam, asfalt, kolovoz, vlaka
+season_sl: Trasa je prevozna v kopnem delu leta. V mokrem in v suhem vremenu.
+notes_sl: Na gozdni stezi ok. 5 km pred kočo kolo potiskamo; v mokrem peš po vlaki med Kamnim gričem in Travno goro.
+source_url: https://stkp.pzs.si/en/2016/06/21/20-hrib-loski-potok-koca-pri-jelenovem-studencu-2/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

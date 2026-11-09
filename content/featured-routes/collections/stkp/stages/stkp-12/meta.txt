@@ -1,0 +1,21 @@
+slug: stkp-12
+collection: stkp
+stage: 12
+name_sl: Koča na Hleviški planini – Iztokova koča pod Golaki
+name_en: Koča na Hleviški planini – Iztokova koča pod Golaki
+start_place: Koča na Hleviški planini
+end_place: Iztokova koča pod Golaki
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2015/09/27/koca-na-hleviski-planini-iztokova-koca-pod-golaki/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

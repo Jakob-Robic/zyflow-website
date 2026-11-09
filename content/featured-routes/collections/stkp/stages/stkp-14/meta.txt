@@ -1,0 +1,21 @@
+slug: stkp-14
+collection: stkp
+stage: 14
+name_sl: Stjenkova koča na Trstelju – Koča na Kokoši
+name_en: Stjenkova koča na Trstelju – Koča na Kokoši
+start_place: Stjenkova koča na Trstelju
+end_place: Koča na Kokoši
+category: mtb
+difficulty: easy
+difficulty_technical_sl: Lahka
+difficulty_fitness_sl: Lahka
+duration: 5 ur
+surface_sl: Makadam, asfalt, kolovoz, steza
+season_sl: Trasa je prevozna celo leto.
+notes_sl: Ob močni burji neprijetno; na Trstelju in Kokoši zelo redko nekaj snega.
+source_url: https://stkp.pzs.si/en/2016/01/02/stjenkova-koca-na-trstelju-koca-na-kokosi/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

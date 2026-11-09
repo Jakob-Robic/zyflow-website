@@ -1,0 +1,21 @@
+slug: stkp-04
+collection: stkp
+stage: 4
+name_sl: Koča na Petrovem brdu – Planinska koča na Uskovnici
+name_en: Koča na Petrovem brdu – Planinska koča na Uskovnici
+start_place: Koča na Petrovem brdu
+end_place: Planinska koča na Uskovnici
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/04/11/koca-na-petrovem-brdu-brunarica-na-soriski-planini-bohinjska-bistrica-bohinjsko-jezero-planinska-koca-na-uskovnici/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

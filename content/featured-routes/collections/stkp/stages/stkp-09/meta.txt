@@ -1,0 +1,21 @@
+slug: stkp-09
+collection: stkp
+stage: 9
+name_sl: Koča na planini Kuhinja – Idrija pri Bači
+name_en: Koča na planini Kuhinja – Idrija pri Bači
+start_place: Koča na planini Kuhinja
+end_place: Idrija pri Bači
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl: Cesta v Polog zaprta zaradi podora v Zatolminu; STKP do nadaljnjega po cesti Petrovč–Zatolmin (KTK PZS, 27. 2. 2024). Trasa v Tolminu spremenjena zaradi obvoznice.
+source_url: https://stkp.pzs.si/en/2016/06/18/09-koca-na-planini-kuhinja-most-na-soci/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx
