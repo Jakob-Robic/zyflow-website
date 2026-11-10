@@ -1,0 +1,21 @@
+slug: stkp-07
+collection: stkp
+stage: 7
+name_sl: Poštarski dom na Vršiču – Dom v Lepeni
+name_en: Poštarski dom na Vršiču – Dom v Lepeni
+start_place: Poštarski dom na Vršiču
+end_place: Dom v Lepeni
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl: Koča pri izviru Soče je zaprta zaradi obnove (obvestilo KTK PZS, 19. 6. 2022).
+source_url: https://stkp.pzs.si/en/2016/06/18/07-postarski-dom-na-vrsicu-dom-v-lepeni-2/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

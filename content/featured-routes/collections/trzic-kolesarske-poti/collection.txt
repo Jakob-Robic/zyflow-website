@@ -1,0 +1,20 @@
+slug: trzic-kolesarske-poti
+kind: set
+title_sl: Kolesarske poti Tržič
+title_en: Tržič bike routes
+summary_sl: Označene poti K iz Tržiča: od lahkih krogov po Udin borštu do vzponov pod Košuto in na Ljubelj.
+summary_en: Tržič's signed K routes, from easy loops in the Udin boršt forest to climbs under Košuta and up to Ljubelj.
+aliases: K-poti; K poti Tržič; Visit Tržič
+bike_types:
+season_months:
+source_name: Visit Tržič
+source_url: https://visit-trzic.com/sl/poti/kolesarske-poti
+permission: granted
+license_notes: Permission granted by Visit Tržič.
+contact:
+last_checked:
+published: no
+featured: no
+sort: 30
+keep_original_line: no
+routes: k11-planine-pod-kosuto, k16-trzic-jezersko, k21-dom-pod-storzicem, k35-prelaz-ljubelj, k42-roznovenska, k43-dobrca, k51-udin-borst, k52-pot-treh-zvonov, k53-kriva-jelka, k55-gozd-udin-borst

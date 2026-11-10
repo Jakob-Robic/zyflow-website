@@ -1,0 +1,21 @@
+slug: stkp-29
+collection: stkp
+stage: 29
+name_sl: Maribor – Ruška koča
+name_en: Maribor – Ruška koča
+start_place: Maribor
+end_place: Ruška koča
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/05/03/maribor-stara-trta-ruska-koca/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

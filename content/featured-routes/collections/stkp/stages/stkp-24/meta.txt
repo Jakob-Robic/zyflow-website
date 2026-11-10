@@ -1,0 +1,21 @@
+slug: stkp-24
+collection: stkp
+stage: 24
+name_sl: Brežice – Grad Podsreda – Bohor
+name_en: Brežice – Grad Podsreda – Bohor
+start_place: Brežice
+end_place: Bohor
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2015/09/23/brezice-grad-podsreda-bohor/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

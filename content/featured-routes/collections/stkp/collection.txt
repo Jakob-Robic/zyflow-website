@@ -1,0 +1,20 @@
+slug: stkp
+kind: trail
+title_sl: Slovenska turnokolesarska pot
+title_en: Slovenska turnokolesarska pot
+summary_sl: Gorskokolesarska pot okoli Slovenije v 43 etapah, od koče do koče, z začetkom in koncem v Ljubljani.
+summary_en: A mountain bike loop around Slovenia in 43 stages, hut to hut, starting and ending in Ljubljana.
+aliases: STKP; Slovenska turno kolesarska pot; Turnokolesarska pot; Slovenian Mountain Bike Trail; Slovenia mountain bike trail
+bike_types: mtb
+season_months:
+source_name: Planinska zveza Slovenije
+source_url: https://stkp.pzs.si/
+permission: granted
+license_notes: Permission granted by PZS.
+contact: turno.kolesarstvo@pzs.si
+last_checked: 2026-11-09
+published: no
+featured: no
+sort: 10
+keep_original_line: yes
+routes:

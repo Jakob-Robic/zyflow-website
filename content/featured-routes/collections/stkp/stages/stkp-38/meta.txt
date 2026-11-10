@@ -1,0 +1,21 @@
+slug: stkp-38
+collection: stkp
+stage: 38
+name_sl: Dom na Smrekovcu – Dom na Menini planini
+name_en: Dom na Smrekovcu – Dom na Menini planini
+start_place: Dom na Smrekovcu
+end_place: Dom na Menini planini
+category: mtb
+difficulty: moderate
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl: 30 % asfaltirano, 70 % makadam
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2024/07/10/38-dom-na-smrekovcu-dom-na-menini-planini/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

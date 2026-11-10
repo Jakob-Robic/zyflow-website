@@ -1,0 +1,21 @@
+slug: stkp-17
+collection: stkp
+stage: 17
+name_sl: Marezige – Tumova koča na Slavniku
+name_en: Marezige – Tumova koča na Slavniku
+start_place: Marezige
+end_place: Tumova koča na Slavniku
+category: mtb
+difficulty: hard
+difficulty_technical_sl: Manj zahtevna
+difficulty_fitness_sl: Zahtevna
+duration: 3–4 ure
+surface_sl: Makadam, asfalt, kolovoz
+season_sl: Trasa je prevozna celo leto.
+notes_sl: Ob močni burji neprijetno; Slavnik nekajkrat letno za kratek čas pobeli sneg.
+source_url: https://stkp.pzs.si/en/2016/06/17/17-marezige-tumova-koca-na-slavniku/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

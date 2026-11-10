@@ -1,0 +1,21 @@
+slug: stkp-10
+collection: stkp
+stage: 10
+name_sl: Idrija pri Bači – Cerkno
+name_en: Idrija pri Bači – Cerkno
+start_place: Idrija pri Bači
+end_place: Cerkno
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2015/09/27/naslov-etape-4/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

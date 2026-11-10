@@ -1,0 +1,21 @@
+slug: stkp-41
+collection: stkp
+stage: 41
+name_sl: Planinski dom v Gorah – Planinski dom na Kumu
+name_en: Planinski dom v Gorah – Planinski dom na Kumu
+start_place: Planinski dom v Gorah
+end_place: Planinski dom na Kumu
+category: mtb
+difficulty: hard
+difficulty_technical_sl: Srednje zahtevna
+difficulty_fitness_sl: Zelo zahtevna
+duration: 4–5 ur
+surface_sl: Makadam, asfalt, kolovoz, vlaka, steza
+season_sl: Trasa je prevozna v mokrem in v suhem vremenu.
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/06/18/41-planinski-dom-v-gorah-planinski-dom-na-kumu/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

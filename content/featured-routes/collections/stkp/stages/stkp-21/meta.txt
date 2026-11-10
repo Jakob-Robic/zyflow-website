@@ -1,0 +1,21 @@
+slug: stkp-21
+collection: stkp
+stage: 21
+name_sl: Koča pri Jelenovem studencu – Planinski dom na Mirni gori
+name_en: Koča pri Jelenovem studencu – Planinski dom na Mirni gori
+start_place: Koča pri Jelenovem studencu
+end_place: Planinski dom na Mirni gori
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Srednje zahtevna
+difficulty_fitness_sl: Srednje zahtevna
+duration: 4–5 h
+surface_sl: Makadam, asfalt, kolovoz, vlaka, steza
+season_sl: Trasa je prevozna v kopnem delu leta. V mokrem in v suhem vremenu.
+notes_sl: Del vlake med kočo pri Jelenovem studencu in Fidrihštajnom je treba prehoditi.
+source_url: https://stkp.pzs.si/en/2016/06/17/21-koca-pri-jelenovem-studencu-planinski-dom-na-mirni-gori/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

@@ -1,0 +1,21 @@
+slug: stkp-11
+collection: stkp
+stage: 11
+name_sl: Cerkno – Koča na Hleviški planini
+name_en: Cerkno – Koča na Hleviški planini
+start_place: Cerkno
+end_place: Koča na Hleviški planini
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/05/10/cerkno-koca-na-mrzlem-vrhu-idrija-koca-na-hleviski-planini/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

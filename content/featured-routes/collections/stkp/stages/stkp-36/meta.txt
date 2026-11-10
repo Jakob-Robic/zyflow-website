@@ -1,0 +1,21 @@
+slug: stkp-36
+collection: stkp
+stage: 36
+name_sl: Dom planincev v Logarski dolini – Koča na Loki pod Raduho
+name_en: Dom planincev v Logarski dolini – Koča na Loki pod Raduho
+start_place: Dom planincev v Logarski dolini
+end_place: Koča na Loki pod Raduho
+category: mtb
+difficulty: moderate
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl: 80 % asfaltirano, 20 % makadam
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2024/07/10/36-dom-planincev-v-logarski-dolini-koca-na-loki-pod-raduho/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

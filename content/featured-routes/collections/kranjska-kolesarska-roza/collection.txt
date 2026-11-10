@@ -1,0 +1,20 @@
+slug: kranjska-kolesarska-roza
+kind: set
+title_sl: Kranjska kolesarska roža
+title_en: Kranjska kolesarska roža
+summary_sl: Šest krožnih poti iz Kranja, vsaka proti drugemu kraju.
+summary_en: Six loops from Kranj, each one out to a different town.
+aliases: Kolesarska roža; Kranj cycling rose
+bike_types:
+season_months:
+source_name: Visit Kranj
+source_url: https://www.visitkranj.com/aktivni-oddih/kranjska-kolesarska-roza/
+permission: granted
+license_notes: Permission granted by Visit Kranj.
+contact:
+last_checked:
+published: no
+featured: no
+sort: 20
+keep_original_line: no
+routes: kamnicanka, ljubljancanka, locanka, blejcanka, trzicanka, jezerjanka

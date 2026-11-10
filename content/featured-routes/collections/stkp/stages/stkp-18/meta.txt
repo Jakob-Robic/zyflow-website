@@ -1,0 +1,21 @@
+slug: stkp-18
+collection: stkp
+stage: 18
+name_sl: Tumova koča na Slavniku – Planinski dom na Sviščakih
+name_en: Tumova koča na Slavniku – Planinski dom na Sviščakih
+start_place: Tumova koča na Slavniku
+end_place: Planinski dom na Sviščakih
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Manj zahtevna
+difficulty_fitness_sl: Srednja
+duration: 5 h
+surface_sl: Makadam, asfalt, kolovoz, vlaka
+season_sl: Trasa je prevozna v kopnem delu leta. V mokrem in v suhem vremenu.
+notes_sl: Na vrh Velike Milanje zaradi okoljevarstvenih predpisov peš.
+source_url: https://stkp.pzs.si/en/2016/03/08/slavnik-sviscaki/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

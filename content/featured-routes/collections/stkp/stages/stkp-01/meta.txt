@@ -1,0 +1,21 @@
+slug: stkp-01
+collection: stkp
+stage: 1
+name_sl: Ljubljana – Mihelčičev dom na Govejku
+name_en: Ljubljana – Mihelčičev dom na Govejku
+start_place: Ljubljana
+end_place: Mihelčičev dom na Govejku
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Lahka
+difficulty_fitness_sl: Srednja
+duration: 3 ure
+surface_sl: Asfalt, makadam, kolovoz
+season_sl: Trasa je prevozna v vseh letnih časih.
+notes_sl: Odsek Bokalce – preval nad Podutikom je v mokrem precej blaten.
+source_url: https://stkp.pzs.si/en/2016/06/15/01-ljubljana-mihelcicev-dom-na-govejku/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

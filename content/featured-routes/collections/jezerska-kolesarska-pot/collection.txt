@@ -1,0 +1,20 @@
+slug: jezerska-kolesarska-pot
+kind: set
+title_sl: Jezerska kolesarska pot
+title_en: Jezersko bike routes
+summary_sl: Štiri kratke poti po dolini Jezerskega in na planine nad njo.
+summary_en: Four short rides around the Jezersko valley and up to the pastures above it.
+aliases: Jezersko kolesarjenje; Jezersko
+bike_types:
+season_months:
+source_name: TIC Jezersko
+source_url: https://www.jezersko.info/jezerska-kolesarska-pot.html
+permission: granted
+license_notes: Permission granted by TIC Jezersko.
+contact:
+last_checked:
+published: no
+featured: no
+sort: 40
+keep_original_line: no
+routes: jezerski-vrh, mali-vrh, ravenska-kocna, spodnji-virnik

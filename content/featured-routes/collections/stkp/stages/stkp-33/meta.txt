@@ -1,0 +1,21 @@
+slug: stkp-33
+collection: stkp
+stage: 33
+name_sl: Poštarski dom pod Plešivcem – Koča na Naravskih ledinah
+name_en: Poštarski dom pod Plešivcem – Koča na Naravskih ledinah
+start_place: Poštarski dom pod Plešivcem
+end_place: Koča na Naravskih ledinah
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/06/15/33-postarski-dom-pod-plesivcem-dom-na-naravskih-ledinah/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

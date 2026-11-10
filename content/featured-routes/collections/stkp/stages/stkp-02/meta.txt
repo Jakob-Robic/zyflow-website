@@ -1,0 +1,21 @@
+slug: stkp-02
+collection: stkp
+stage: 2
+name_sl: Mihelčičev dom na Govejku – Koča na Blegošu
+name_en: Mihelčičev dom na Govejku – Koča na Blegošu
+start_place: Mihelčičev dom na Govejku
+end_place: Koča na Blegošu
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Manj zahtevna
+difficulty_fitness_sl: Srednja
+duration: 4–5 ur
+surface_sl: Makadam, asfalt, kolovoz, vlaka, steza
+season_sl: Trasa je prevozna v kopnem delu leta. V mokrem in v suhem vremenu.
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/06/17/02-mihelcicev-dom-na-govejku-koca-na-blegosu/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

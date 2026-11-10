@@ -1,0 +1,21 @@
+slug: stkp-30
+collection: stkp
+stage: 30
+name_sl: Ruška koča – Ribniška koča
+name_en: Ruška koča – Ribniška koča
+start_place: Ruška koča
+end_place: Ribniška koča
+category: mtb
+difficulty:
+difficulty_technical_sl:
+difficulty_fitness_sl:
+duration:
+surface_sl:
+season_sl:
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/05/03/ruska-koca-osankarica-koca-na-pesku-koca-pesnik-ribniska-koca/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

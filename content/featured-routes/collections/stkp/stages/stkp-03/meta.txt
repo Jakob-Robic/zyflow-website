@@ -1,0 +1,21 @@
+slug: stkp-03
+collection: stkp
+stage: 3
+name_sl: Koča na Blegošu – Koča na Petrovem brdu
+name_en: Koča na Blegošu – Koča na Petrovem brdu
+start_place: Koča na Blegošu
+end_place: Koča na Petrovem brdu
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Lahka
+difficulty_fitness_sl: Srednja
+duration: 3–4 ure
+surface_sl: Asfalt, makadam, kolovoz
+season_sl: Trasa je prevozna od pomladi do jeseni.
+notes_sl: Pozimi veliko snega na območju Blegoša, Cerkna in Porezna; del poti vodi čez smučišče Cerkno.
+source_url: https://stkp.pzs.si/en/2016/05/15/blegos-petrovobrdo/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

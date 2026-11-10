@@ -1,0 +1,21 @@
+slug: stkp-13
+collection: stkp
+stage: 13
+name_sl: Iztokova koča pod Golaki – Stjenkova koča na Trstelju
+name_en: Iztokova koča pod Golaki – Stjenkova koča na Trstelju
+start_place: Iztokova koča pod Golaki
+end_place: Stjenkova koča na Trstelju
+category: mtb
+difficulty: moderate
+difficulty_technical_sl: Srednje zahtevna
+difficulty_fitness_sl: Srednje zahtevna
+duration: 6 ur
+surface_sl: Makadam, asfalt, kolovoz, vlaka, steza
+season_sl: Trasa je prevozna celo leto.
+notes_sl: Odsek od Iztokove koče do Predmeje je pozimi navadno zasnežen.
+source_url: https://stkp.pzs.si/en/2016/01/02/iztokova-koca-pod-golaki-stjenkova-koca-na-trstelju/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx

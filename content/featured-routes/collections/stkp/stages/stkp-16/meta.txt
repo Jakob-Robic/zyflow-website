@@ -1,0 +1,21 @@
+slug: stkp-16
+collection: stkp
+stage: 16
+name_sl: Piran – Marezige
+name_en: Piran – Marezige
+start_place: Piran
+end_place: Marezige
+category: mtb
+difficulty: easy
+difficulty_technical_sl: Nezahtevna
+difficulty_fitness_sl: Manj zahtevna
+duration: 2–3 ure
+surface_sl: Makadam, asfalt, kolovoz
+season_sl: Trasa je prevozna celo leto.
+notes_sl:
+source_url: https://stkp.pzs.si/en/2016/06/17/16-piran-marezige/
+gpx_source_url: http://stkp.pzs.si/download/1795/
+gpx_version: julij 2024
+license_notes: Permission granted by PZS.
+status: raw
+gpx_file: route.gpx
