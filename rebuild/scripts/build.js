@@ -1642,6 +1642,8 @@ function buildPage(page, locale, messages) {
   }
   html = resolveIncludes(html);
   html = applyPublicationFlags(html, pageRel);
+  // <!-- sl-only:public --> blocks stay on Slovenian pages only (EU project notice).
+  html = applyToggleBlocks(html, "sl-only", locale === "sl", pageRel);
   html = injectBlog(html, page, locale, messages);
   html = injectGuides(html, page, locale, messages);
   html = injectLegalDocument(html, page, locale);

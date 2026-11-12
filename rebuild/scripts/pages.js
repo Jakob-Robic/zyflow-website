@@ -211,6 +211,20 @@ const PAGES = [
     },
   },
   {
+    // EU co-funded project notice (LEADER / EKSRP). Slovenian only, by the funding rules.
+    id: "e-plus-destinacije",
+    file: "legal-doc.html",
+    out: "e-plus-destinacije.html",
+    path: "/e-plus-destinacije",
+    indexable: true,
+    locales: ["sl"],
+    localePrefix: false,
+    legalDoc: "e-plus-destinacije",
+    legalKey: "e-plus",
+    alternates: { sl: "/e-plus-destinacije" },
+    langSwitch: { en: "/", sl: "/e-plus-destinacije" },
+  },
+  {
     id: "legal-privacy",
     file: "legal-redirect.html",
     out: "legal-privacy.html",
