@@ -153,6 +153,11 @@
       "permanent": true
     },
     {
+      "source": "/sl/e-plus-destinacije",
+      "destination": "/e-plus-destinacije",
+      "permanent": true
+    },
+    {
       "source": "/faqs",
       "destination": "/#faq",
       "permanent": true

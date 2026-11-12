@@ -293,3 +293,107 @@
     min-width: 520px;
   }
 }
+
+/* —— EU co-funded project page (/e-plus-destinacije) ——
+ * Funding rules: the EU flag is never shorter than 1 cm, and no other logo is
+ * taller or wider than the flag. --eu-flag-h is the height of the flag itself
+ * (it fills 86.2% of the "Sofinancira Evropska unija" image); every other logo
+ * is capped from it. Keep --eu-flag-h at 1cm or more. */
+.page-legal-doc[data-legal="e-plus"] .legal-switch,
+.page-legal-doc[data-legal="e-plus"] .legal-doc__toc,
+.page-legal-doc[data-legal="e-plus"] .legal-doc__tag {
+  display: none;
+}
+
+.eu-logos {
+  --eu-flag-h: max(1cm, 56px);
+  --eu-flag-w: calc(var(--eu-flag-h) * 1.5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-gap-5) var(--space-gap-7);
+  margin: 0 0 var(--space-gap-7);
+  padding: var(--space-gap-6);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: #fff; /* logos are drawn for white, in both themes */
+}
+
+.eu-logos__item {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.eu-logos__item img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: var(--eu-flag-h);
+  max-width: var(--eu-flag-w);
+}
+
+.eu-logos__item--small img {
+  max-height: calc(var(--eu-flag-h) * 0.8);
+}
+
+/* The EU image carries the flag plus its text, so it is sized by the flag inside it. */
+.eu-logos__item--eu img {
+  height: calc(var(--eu-flag-h) / 0.862);
+  max-height: none;
+  max-width: none;
+}
+
+.eu-facts {
+  margin: 0 0 var(--space-gap-7);
+  display: grid;
+  gap: var(--space-gap-4);
+}
+
+.eu-facts > div {
+  display: grid;
+  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+  gap: var(--space-gap-5);
+  padding-bottom: var(--space-gap-4);
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.eu-facts dt {
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+.eu-facts dd {
+  margin: 0;
+  line-height: var(--leading-body);
+}
+
+.legal-doc__body .eu-photo {
+  overflow: visible;
+}
+
+.eu-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.eu-photo figcaption {
+  margin-top: var(--space-gap-3);
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+
+@media (max-width: 720px) {
+  .eu-logos {
+    --eu-flag-h: max(1cm, 44px);
+    gap: var(--space-gap-5);
+    padding: var(--space-gap-5);
+  }
+
+  .eu-facts > div {
+    grid-template-columns: 1fr;
+    gap: var(--space-gap-2, 4px);
+  }
+}
