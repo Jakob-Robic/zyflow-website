@@ -251,6 +251,51 @@
       "source": "/styleguide",
       "destination": "/brand",
       "permanent": false
+    },
+    {
+      "source": "/sl/post/zakaj-so-polnilnice:rest(.*)",
+      "destination": "/sl/business",
+      "permanent": true
+    },
+    {
+      "source": "/post/:slug*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sl/post/:slug*",
+      "destination": "/sl",
+      "permanent": true
+    },
+    {
+      "source": "/product-page/:slug*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sl/product-page/:slug*",
+      "destination": "/sl",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sl/category/:slug*",
+      "destination": "/sl",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility-statement",
+      "destination": "/legal",
+      "permanent": true
+    },
+    {
+      "source": "/sl/accessibility-statement",
+      "destination": "/sl/legal",
+      "permanent": true
     }
   ],
   "rewrites": [
