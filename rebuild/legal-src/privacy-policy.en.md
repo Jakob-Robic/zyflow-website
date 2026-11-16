@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.4 · **Effective date:** 7 November 2026 · Replaces version 2.3 of 7 November 2026
+**Version:** 2.5 · **Effective date:** 16 November 2026 · Replaces version 2.4 of 7 November 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -21,7 +21,7 @@ We have not appointed a data protection officer. For any privacy question or req
 - We collect only what we need to run Zyflow: your account, the routes and content you create, and technical data to keep the app working.
 - Your routes are private unless **you decide to share a specific route** with the community.
 - We do not sell your data and we do not show ads in the app.
-- Product analytics use a pseudonymous user ID, not your email address, and only run if you agree.
+- Until you decide, the app counts how it is used anonymously, without any identifier, so we can improve it; you can object in Settings. Detailed product analytics use a pseudonymous user ID, not your email address, and only run if you agree.
 - Location is used only while the app is in use. There is no background location tracking.
 - Push notifications reach you only if you allow them on your phone. News and offers, by push or by email, stay off until you turn them on.
 - You can delete your account in the app at any time.
@@ -112,9 +112,13 @@ We use Brevo to store your contact details (email address, full name and user ID
 
 ### 3.9 Product analytics
 
-We use PostHog (EU cloud) to understand how the app is used and to improve it. We send a pseudonymous **user ID (not your email address or name)**, selected in-app events (for example "route planned" or "GPX exported"), app version and basic device information. If you agree, PostHog also records technical details of app errors (the error message and where in the app it happened) so we can fix them. Automatic capture of all interactions and session recording are not used in the app. PostHog is set to **discard your IP address**.
+**Anonymous usage statistics.** Until you decide about product analytics, and unless you object, the app sends anonymous usage events to PostHog (EU cloud, acting as our processor): which screens are opened and which steps are taken in the app (for example "onboarding finished" or "route planned"), the app version and basic device information (platform and operating system version). These events carry a random number that exists only while the app is open and is never stored on your device, so they cannot be linked to you, to your other app sessions or to your account. They contain no IP address (PostHog discards it), no location, no name, email address or user ID, and no error details. Separately, the app counts app starts and a few key moments (for example "onboarding finished" or "stamp collected") as daily totals in our own database, with no identifier of any kind; to count each moment at most once a day, the app keeps a short list on your device of the moments already counted today. We use these statistics only to measure and improve the app, never for advertising, and we do not share them.
 
-**Legal basis:** your consent (Art. 6(1)(a) GDPR and ZEKom-2). The app asks you before analytics start; analytics are off until you agree. You can withdraw consent at any time in Settings → Share usage statistics; this does not affect processing before withdrawal.
+**Legal basis:** our legitimate interest in measuring and improving the app (Art. 6(1)(f) GDPR). No identifier is stored on or read from your device for this purpose. You can object at any time in Settings → Anonymous usage statistics (shown until you decide about product analytics). If you said no to product analytics, the app sends nothing to PostHog.
+
+**Product analytics (with your consent).** If you agree, we use PostHog (EU cloud) to understand how the app is used over time and to improve it. We send a pseudonymous **user ID (not your email address or name)**, selected in-app events (for example "route planned" or "GPX exported"), app version and basic device information. If you agree, PostHog also records technical details of app errors (the error message and where in the app it happened) so we can fix them. Automatic capture of all interactions and session recording are not used in the app. PostHog is set to **discard your IP address**. When you agree, the app starts with a new identifier; what you did before agreeing stays anonymous and is not linked to you.
+
+**Legal basis:** your consent (Art. 6(1)(a) GDPR and ZEKom-2). The app asks you before these analytics start; they are off until you agree. You can withdraw consent at any time in Settings → Share usage statistics; this does not affect processing before withdrawal.
 
 ### 3.10 Crash and performance monitoring
 
@@ -152,7 +156,7 @@ Our search function stores the IP address of the requesting device together with
 
 The app stores your login session, your last known location, your recent searches, the date it last offered you notifications, stamps waiting to be sent while you have no signal (with the GPS reading taken at the place and any answers) and the places it reminded you about today locally on your device so that the app works quickly, you stay signed in, stamps collected without signal are not lost and we do not ask about notifications or remind you too often. This storage is strictly necessary for the service you request. It is removed when you uninstall the app.
 
-If you agree to product analytics, PostHog also stores a pseudonymous identifier on your device; without your consent it stores nothing. Sentry stores a pseudonymous identifier for crash reporting (see 3.10).
+If you agree to product analytics, PostHog also stores a pseudonymous identifier on your device; otherwise PostHog stores nothing on your device (anonymous usage statistics use a random number kept only in memory while the app is open). To count key moments at most once a day (see 3.9), the app stores today's date, the app version and the names of the moments already counted; this contains no identifier. If you object to anonymous usage statistics, the app stores that choice. Sentry stores a pseudonymous identifier for crash reporting (see 3.10).
 
 ### 3.15 Connected services (optional)
 
@@ -234,6 +238,7 @@ If you contact us, we process your email address, the content of your message an
 | Notifications about your rides, places and contributions (push and inbox) | Contract, Art. 6(1)(b) |
 | Connected services (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), only if you connect them | Contract, Art. 6(1)(b) |
 | Place reports and submissions, crash monitoring, security and rate limiting, Stay22 links, support | Legitimate interest, Art. 6(1)(f) |
+| Anonymous usage statistics (PostHog without identifier, daily counts) | Legitimate interest, Art. 6(1)(f) |
 | Product analytics (PostHog) | Consent, Art. 6(1)(a) |
 | Marketing emails, news and offers notifications, website cookies and pixels (when introduced) | Consent, Art. 6(1)(a) (and ZEKom-2 for cookies and marketing emails) |
 | Answering rights requests, accounting and legal obligations | Legal obligation, Art. 6(1)(c) |
@@ -249,7 +254,7 @@ We use the following service providers. Processors act only on our instructions 
 | Supabase, Inc. (processor) | Database, authentication, file storage, backend functions | All app data described above | EU (Ireland, eu-west-1); US parent company: see section 6 |
 | Brevo (Sendinblue SAS, France) (processor) | Contact store and email delivery | Email, full name, user ID, mailing-list membership (only with your consent), email content | Company based in France (EU); safeguards for any transfer outside the EU/EEA: see section 6 |
 | Expo (650 Industries, Inc.) (processor) | Push notification delivery, only if you allow notifications | Push token, notification title and text, notification ID | USA; see section 6 |
-| PostHog (EU cloud) (processor) | Product analytics | User ID, app events, device/app info; IP discarded | EU |
+| PostHog (EU cloud) (processor) | Product analytics and anonymous usage statistics | With consent: user ID, app events, device/app info; anonymous statistics: app events and device/app info without any identifier; IP discarded | EU |
 | Sentry (Functional Software, Inc.), EU data region (processor) | Crash and performance monitoring | User ID, IP address, device and error data | EU storage; US company: see section 6 |
 | Vercel, Inc. (processor) | Hosting of our websites | IP address, technical request data | Global network incl. USA: see section 6 |
 | Apple / Google (separate controllers) | Sign in with Apple / Google (if you choose it) | Sign-in data, email, name, profile picture link (Google) | Entities in the EU and the USA: see section 6 |
@@ -301,6 +306,8 @@ If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the ro
 | Notification settings and notifications in your inbox | Until you delete your account |
 | Email sending logs at Brevo | Only as long as needed to deliver emails and resolve delivery problems, in line with the provider's retention settings |
 | Product analytics (PostHog) | 12 months; deleted automatically when you delete your account |
+| Anonymous usage statistics (PostHog, no identifier) | 12 months |
+| Daily counts of app starts and key moments (no identifier) | Kept as totals; they contain no personal data |
 | Crash and performance reports (Sentry) | Up to 90 days |
 | Search rate-limit data (IP address and counters) | Only as long as needed to prevent abuse; regularly deleted |
 | Search cache (search text, no link to you) | 24 hours |
@@ -320,7 +327,7 @@ Under the GDPR you have the right to:
 - **erasure** ("right to be forgotten", Art. 17);
 - **restriction** of processing (Art. 18);
 - **data portability** – receive data you provided in a structured, machine-readable format, or have it sent to another controller (Art. 20); routes can also be exported as GPX in the app;
-- **object** to processing based on legitimate interest, for example crash monitoring (Art. 21), and to object at any time to direct marketing;
+- **object** to processing based on legitimate interest, for example crash monitoring or anonymous usage statistics (Art. 21) – for anonymous usage statistics also directly in Settings – and to object at any time to direct marketing;
 - **withdraw consent** at any time, without affecting the lawfulness of processing before the withdrawal (Art. 7(3));
 - **lodge a complaint** with a supervisory authority (section 10).
 
