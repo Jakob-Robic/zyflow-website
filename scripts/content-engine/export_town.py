@@ -66,6 +66,7 @@ PICKS = 6
 SAME_KIND_MAX = 2  # stays: no more than two picks of one kind
 WATER_NEAR_ROUTE_M = 150
 ROUTE_MIN_KM = 1.0
+LEVEL_ORDER = {"international": 0, "national": 1, "regional": 2, "local": 3}
 NEAR_TIE_M = 15  # routes this close to each other count as the same road for "nearest route"
 MAP_CLIP_DEG = 0.025  # route lines are drawn within this distance of the town's border (about 2 km)
 ROUTE_COLORS = ["#2563EB", "#E8590C", "#7C3AED", "#0F9D58", "#D6336C", "#0891B2", "#A16207", "#1F2937"]
@@ -273,6 +274,9 @@ def export(area_code, today=None):
     name_routes(routes)
     unnamed = [r for r in routes if not (r["code"] or r["display_name"])]
     routes = [r for r in routes if r["code"] or r["display_name"]]
+    # Known long routes first (international, national, regional), then local ones; within a
+    # level, the route with more kilometres in town. A page shows the first eight (Jakob, 2026-11-16).
+    routes.sort(key=lambda r: (LEVEL_ORDER.get(r["network_level"], 3), -float(r["km_inside"]), r["id"]))
     lines = route_lines([r["id"] for r in routes])
     # Where two routes share a road, a place is named after the coded route (D2 rather than
     # the long-distance route on the same road), then the one with more kilometres in town.

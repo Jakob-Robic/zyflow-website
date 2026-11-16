@@ -183,7 +183,7 @@ const TEXT = {
               q: `Which cycle routes pass through ${t.name}?`,
               a: `${cap(numberWord(t.counts.routes))} signed ${t.counts.routes === 1 ? "route" : "routes"}: ${listAnd([
                 ...t.routes.slice(0, MAX_ROUTES_SHOWN).map((r) => {
-                  const stops = r.name.split("–").map((part) => part.trim());
+                  const stops = r.name.split(STOPS).map((part) => part.trim());
                   if (r.code && stops.length > 1) return `${r.code} from ${stops[0]} to ${stops[stops.length - 1]}`;
                   return r.code && r.name !== r.code && !r.name.startsWith(r.code) ? `${r.code} (${r.name})` : r.name;
                 }),
@@ -226,11 +226,15 @@ function listOr(items) {
 }
 
 /**
- * A town page shows at most this many signed routes, the ones with the most
- * kilometres inside the town. It is the number of route colours, so each line
+ * A town page shows at most this many signed routes: the data job lists
+ * international, national and regional routes first, then local ones, each
+ * level by kilometres inside the town. It is the number of route colours, so each line
  * on the map keeps a colour of its own. The rest are counted and left to the app.
  */
 const MAX_ROUTES_SHOWN = 8;
+
+/** "Koper–Sečovlje" lists stops; "EuroVelo 8 – Mediterranean Route" (spaced dash) is a title, not stops. */
+const STOPS = /(?<! )–(?! )/;
 
 function cap(text) {
   return text.charAt(0).toUpperCase() + text.slice(1);
@@ -875,7 +879,7 @@ function renderBody(town, t, lang) {
     })
   );
   const signed = town.routes.slice(0, MAX_ROUTES_SHOWN).map((route) => {
-    const stops = route.name.split("–").map((part) => part.trim());
+    const stops = route.name.split(STOPS).map((part) => part.trim());
     const coded = route.code && stops.length > 1;
     return infoCard({
       color: route.color,
