@@ -35,7 +35,8 @@ const TEXT = {
       `Cycling in Slovenia, town by town: signed cycle routes, places to stay and eat, water, repair and e-bike charging. ${n === 1 ? "1 town" : `${n} towns`} so far.`,
     hubQuals: (towns) => [
       towns.length === 1 ? "1 town so far" : `${towns.length} towns`,
-      `${towns.reduce((sum, town) => sum + town.counts.routes, 0)} signed routes`,
+      // A route that runs through several towns is one route.
+      `${new Set(towns.flatMap((town) => town.routes.map((r) => r.id || `${r.code}|${r.name}`))).size} signed routes`,
       "Stays, food, water, repair",
       "Free on iOS & Android",
     ],
@@ -48,11 +49,14 @@ const TEXT = {
     seoDescription: (t) => {
       const codes = t.routes.filter((r) => r.code && r.level === "National route").map((r) => r.code);
       const named = codes.length ? `, including ${listAnd(codes.slice(0, 2))}` : "";
-      return `Cycling in ${t.name}: ${t.counts.routes} signed routes${named}, ${t.counts.stays} places to stay, ${t.counts.food} places to eat, water and repair points. Checked ${longDate(t.checked, "en")}.`;
+      const routes = t.counts.routes ? `${plural(t.counts.routes, "signed route")}${named}, ` : "";
+      return `Cycling in ${t.name}: ${routes}${t.counts.stays} places to stay, ${t.counts.food} places to eat, water and repair points. Checked ${longDate(t.checked, "en")}.`;
     },
     lede: (t) =>
       `Know where to ride, stay, eat and refill in ${t.name}.`,
-    heroCount: (t) => `${t.counts.routes} routes`,
+    // A town with no signed route leads with its places to stay.
+    heroCount: (t) => (t.counts.routes ? plural(t.counts.routes, "route") : `${t.counts.stays} stays`),
+    seeStays: "See where to stay",
     heroCountUnit: "",
     checkedLabel: "Last checked",
     getApp: "Get the app",
@@ -69,7 +73,11 @@ const TEXT = {
         .slice(0, 2)
         .map((r) => `${r.level.toLowerCase()} ${r.code} (${r.name})`);
       const parts = [
-        `${cap(numberWord(t.counts.routes))} signed cycle routes run through ${t.name}${named.length ? `, among them ${named.join(" and ")}` : ""}.`,
+        t.counts.routes === 0
+          ? `${t.name} has no signed cycle route on the map yet.`
+          : t.counts.routes === 1
+            ? `One signed cycle route runs through ${t.name}${named.length ? `: ${named[0]}` : ""}.`
+            : `${cap(numberWord(t.counts.routes))} signed cycle routes run through ${t.name}${named.length ? `, among them ${named.join(" and ")}` : ""}.`,
         `The town and its villages have ${t.counts.stays} places to stay, ${t.counts.food} places to eat and ${t.counts.water} water points.`,
       ];
       if (!t.counts.chargers && t.nearest_charger) {
@@ -95,10 +103,9 @@ const TEXT = {
         ? `From ${stops[0]} to ${stops[stops.length - 1]}, by way of ${listAnd(stops.slice(1, -1))}.`
         : `From ${stops[0]} to ${stops[1]}.`,
     ourRouteNote: "A full day, with the climb, the stops and the surface written up.",
-    staysLead: (t) =>
-      `${cap(numberWord(t.stays.length))} of ${t.name}'s ${t.counts.stays} places to stay, each a short ride from a signed route.`,
-    foodLead: (t) =>
-      `${cap(numberWord(t.food.length))} of ${t.name}'s ${t.counts.food} places to eat, from a lakeside lunch to a slice of cream cake.`,
+    // Fallback lines for a town with no written text: only what holds for every town.
+    staysLead: (t) => `${cap(numberWord(t.stays.length))} of ${t.name}'s ${t.counts.stays} places to stay, each with its own website.`,
+    foodLead: (t) => `${cap(numberWord(t.food.length))} of ${t.name}'s ${t.counts.food} places to eat, each with its own website.`,
     fromRouteShort: (near) => [
       meters(near.m),
       near.route.length > 8 ? " · from a signed route" : ` · from route ${near.route}`,
@@ -150,25 +157,31 @@ const TEXT = {
     photo: "Photo",
     asideTitle: (t) => `In ${t.name}:`,
     asideItems: (t) => [
-      `${t.counts.routes} signed cycle routes`,
+      t.counts.routes ? plural(t.counts.routes, "signed cycle route") : "No signed route yet",
       `${t.counts.stays} places to stay`,
       `${t.counts.food} places to eat`,
       `${t.counts.water} water points`,
-      t.counts.repair === 1 ? "1 repair point" : `${t.counts.repair} repair points`,
+      t.counts.repair === 0 ? "No repair point" : plural(t.counts.repair, "repair point"),
       t.counts.chargers ? `${t.counts.chargers} e-bike chargers` : t.nearest_charger ? `Charger ${km(t.nearest_charger.km)} away` : "No e-bike charger",
     ],
     asideNote: "Full lists, opening hours and the map are in the app.",
     faqTitle: "Common questions",
     faq: (t) => [
-      {
-        q: `Which cycle routes pass through ${t.name}?`,
-        a: `${cap(numberWord(t.counts.routes))} signed routes: ${listAnd(
-          t.routes.map((r) => {
-            const stops = r.name.split("–").map((part) => part.trim());
-            return r.code && stops.length > 1 ? `${r.code} from ${stops[0]} to ${stops[stops.length - 1]}` : r.name;
-          })
-        )}.`,
-      },
+      // No routes question for a town without a signed route; long lists name the first eight.
+      ...(t.counts.routes
+        ? [
+            {
+              q: `Which cycle routes pass through ${t.name}?`,
+              a: `${cap(numberWord(t.counts.routes))} signed ${t.counts.routes === 1 ? "route" : "routes"}: ${listAnd([
+                ...t.routes.slice(0, MAX_ROUTES_SHOWN).map((r) => {
+                  const stops = r.name.split("–").map((part) => part.trim());
+                  return r.code && stops.length > 1 ? `${r.code} from ${stops[0]} to ${stops[stops.length - 1]}` : r.name;
+                }),
+                ...(t.routes.length > MAX_ROUTES_SHOWN ? [`${t.routes.length - MAX_ROUTES_SHOWN} more`] : []),
+              ])}.`,
+            },
+          ]
+        : []),
       { q: `Where can I fill my water bottle in ${t.name}?`, a: TEXT.en.water(t) },
       { q: `Is there a bike repair shop in ${t.name}?`, a: TEXT.en.repair(t) },
       { q: `Where can I charge an e-bike in ${t.name}?`, a: TEXT.en.charge(t) },
@@ -192,6 +205,18 @@ function esc(value) {
 function listAnd(items) {
   return items.length > 2 ? `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}` : items.join(" and ");
 }
+
+/** "1 route", "6 routes". */
+function plural(n, noun) {
+  return `${n} ${noun}${n === 1 ? "" : "s"}`;
+}
+
+/**
+ * A town page shows at most this many signed routes, the ones with the most
+ * kilometres inside the town. It is the number of route colours, so each line
+ * on the map keeps a colour of its own. The rest are counted and left to the app.
+ */
+const MAX_ROUTES_SHOWN = 8;
 
 function cap(text) {
   return text.charAt(0).toUpperCase() + text.slice(1);
@@ -531,7 +556,7 @@ function townLlmsLines(origin) {
     .map((page) => {
       const town = townBySlug(page.townSlug);
       const c = town.counts;
-      return `- [${town.name} by bike](${origin}${page.path}): ${c.routes} signed cycle routes, ${c.stays} places to stay, ${c.food} places to eat, ${c.water} water points. Last checked ${town.checked}.`;
+      return `- [${town.name} by bike](${origin}${page.path}): ${plural(c.routes, "signed cycle route")}, ${c.stays} places to stay, ${c.food} places to eat, ${c.water} water points. Last checked ${town.checked}.`;
     });
 }
 
@@ -740,7 +765,7 @@ function mapJson(town) {
     }
   }
   const routes = [];
-  for (const route of town.routes) {
+  for (const route of town.routes.slice(0, MAX_ROUTES_SHOWN)) {
     if (!route.line) continue;
     const lines = route.line.type === "LineString" ? [route.line.coordinates] : route.line.coordinates;
     routes.push({ color: route.color, name: route.code || route.name, lines });
@@ -773,7 +798,7 @@ function renderHero(town, t, lang) {
               <strong>${esc(shortDate(town.checked, lang))}</strong>
             </div>
             <a class="btn btn--primary" href="{{appStoreUrl}}" data-app-modal-open>${esc(t.getApp)}</a>
-            <a class="btn btn--secondary" href="#routes">${esc(t.seeRoutes)}</a>
+            <a class="btn btn--secondary" href="${town.routes.length || town.featured.length ? "#routes" : "#stays"}">${esc(town.routes.length || town.featured.length ? t.seeRoutes : t.seeStays)}</a>
           </div>
         </div>
       </div>
@@ -835,7 +860,7 @@ function renderBody(town, t, lang) {
       link: { href: `./tours/${route.slug}.html`, label: t.viewRoute },
     })
   );
-  const signed = town.routes.map((route) => {
+  const signed = town.routes.slice(0, MAX_ROUTES_SHOWN).map((route) => {
     const stops = route.name.split("–").map((part) => part.trim());
     const coded = route.code && stops.length > 1;
     return infoCard({
@@ -851,14 +876,21 @@ function renderBody(town, t, lang) {
           : null),
     });
   });
-  const routes = cardSection({
-    id: "routes",
-    title: t.routesTitle,
-    lead: t.routesLead(town),
-    cards: [...featured, ...signed],
-    rail: true,
-    written: written.routes,
-  });
+  const hiddenRoutes = town.routes.length - Math.min(town.routes.length, MAX_ROUTES_SHOWN);
+  // No routes section at all for a town with neither a signed nor a described route.
+  const routes = featured.length + signed.length
+    ? cardSection({
+        id: "routes",
+        title: t.routesTitle,
+        lead: t.routesLead(town),
+        cards: [...featured, ...signed],
+        rail: true,
+        written: written.routes,
+        after: hiddenRoutes
+          ? `\n        <p class="town-more--cards"><a class="link link--arrow" href="{{appStoreUrl}}" data-app-modal-open>${esc(t.more(hiddenRoutes, "signed routes"))}</a></p>`
+          : "",
+      })
+    : "";
 
   const blocks = [
     routes,
@@ -957,7 +989,9 @@ function renderHub(page) {
   const listed = TOWNS.filter((town) => townLangs(town).includes(lang));
   const cards = listed.map((town) => {
     const written = (town.text && town.text[lang]) || {};
-    const photo = (town.photos || [])[0];
+    // A chosen town photo where there is one; otherwise the best-known sight's photo.
+    const sight = town.sights.find((item) => item.image);
+    const photo = (town.photos || [])[0] || (sight ? { ...sight.image, caption: `${sight.name}, ${town.name}` } : null);
     const meta = t
       .hubTownMeta(town.counts)
       .map((fact, i) => `${i ? '<span class="motif" aria-hidden="true"></span>' : ""}<span>${esc(fact)}</span>`)
