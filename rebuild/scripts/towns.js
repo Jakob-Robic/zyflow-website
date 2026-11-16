@@ -64,6 +64,7 @@ const TEXT = {
     facts: {
       region: (t) => `${t.region}, ${t.country}`,
       routes: "Signed cycle routes",
+      sights: "Sights",
       stays: "Places to stay",
       food: "Places to eat",
     },
@@ -73,8 +74,9 @@ const TEXT = {
         .slice(0, 2)
         .map((r) => `${r.level.toLowerCase()} ${r.code} (${r.name})`);
       const parts = [
+        // With no signed route in the data, say nothing about routes (a gap in the map, not a fact).
         t.counts.routes === 0
-          ? `${t.name} has no signed cycle route on the map yet.`
+          ? `${t.name} lies in ${t.region}, ${t.country}.`
           : t.counts.routes === 1
             ? `One signed cycle route runs through ${t.name}${named.length ? `: ${named[0]}` : ""}.`
             : `${cap(numberWord(t.counts.routes))} signed cycle routes run through ${t.name}${named.length ? `, among them ${named.join(" and ")}` : ""}.`,
@@ -157,7 +159,8 @@ const TEXT = {
     photo: "Photo",
     asideTitle: (t) => `In ${t.name}:`,
     asideItems: (t) => [
-      t.counts.routes ? plural(t.counts.routes, "signed cycle route") : "No signed route yet",
+      // No claim about routes where the map has none: that is a gap in the data, not a fact about the town.
+      t.counts.routes ? plural(t.counts.routes, "signed cycle route") : plural(t.counts.sights, "sight"),
       `${t.counts.stays} places to stay`,
       `${t.counts.food} places to eat`,
       `${t.counts.water} water points`,
@@ -814,8 +817,8 @@ function renderHero(town, t, lang) {
         <p class="tour-meta__label"><img src="./assets/images/icons/location.svg" alt="" aria-hidden="true" width="18" height="18" /><span>${esc(t.facts.region(town))}</span></p>
       </div>
       <div class="tour-meta__box">
-        <p class="tour-meta__value">${town.counts.routes}</p>
-        <p class="tour-meta__label"><span class="motif" aria-hidden="true"></span><span>${esc(t.facts.routes)}</span></p>
+        <p class="tour-meta__value">${town.counts.routes || town.counts.sights}</p>
+        <p class="tour-meta__label"><span class="motif" aria-hidden="true"></span><span>${esc(town.counts.routes ? t.facts.routes : t.facts.sights)}</span></p>
       </div>
       <div class="tour-meta__box">
         <p class="tour-meta__value">${town.counts.stays}</p>
