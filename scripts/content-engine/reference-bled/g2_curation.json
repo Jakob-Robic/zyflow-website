@@ -1,0 +1,27 @@
+{
+ "_note": "Picks and one-line descriptions for G2, drafted 2026-11-16 from each place's own website. Needs a human read.",
+ "slug": "g2-lesce-most-na-soci",
+ "from": "Radovljica", "to": "Sorica",
+ "stays": {
+  "1A Adventure Hostel": "A hostel in Lesce with gear rental and organised activities.",
+  "Penzion Zaka": "A pension with its own restaurant in Zaka, at the western end of Lake Bled.",
+  "Garden Village Bled": "An eco resort near the lake where you sleep among the treetops, built around time outdoors.",
+  "Bohinj ECO Hotel": "A large hotel in Bohinjska Bistrica with a water park, wellness, bowling and a cinema.",
+  "Sunrose 7 - Heritage Boutique Hotel": "An adults-only boutique hotel with 18 rooms in a house from 1890, five minutes from Lake Bohinj.",
+  "Gostišče Lajnar": "The guesthouse at Soriška planina, just below the top of the climb."
+ },
+ "food": {
+  "Gostilna Lectar": "A house with a long tradition in Radovljica's old town: restaurant, guesthouse and museum under one roof.",
+  "Blejska Hisa": "A restaurant built on Gorenjska tradition, open every day from noon to 22:00.",
+  "Okrepčevalnica Galetovec": "A small, homely snack bar in Bohinjska Bela, right where the valley road leaves Bled.",
+  "Gostilna Batišt": "An inn in a house built in 1900, when the Vienna to Trieste railway came through. It was first called Hotel Babji zob.",
+  "Gostišče Lajnar": "The inn at Soriška planina. The last stop before the top."
+ },
+ "sights": {
+  "Q12790250": {"name": "Podvin Castle", "about": "A castle at Mošnje, right at the start of the route."},
+  "Q50179542": {"name": "Museum of Apiculture", "about": "Slovenia's beekeeping museum, in the manor on Radovljica's old square."},
+  "Q2049047": {"name": "Bled Castle", "about": "A medieval castle on the cliff above Lake Bled."},
+  "Q2877401": {"name": "Bled Island", "about": "The island in Lake Bled, with its church. You reach it by boat."},
+  "Q12802845": {"name": "Grmečica waterfalls", "about": "Waterfalls 100 metres off the route in the Bohinj valley."}
+ }
+}
