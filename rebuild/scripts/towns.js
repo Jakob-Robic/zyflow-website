@@ -72,7 +72,7 @@ const TEXT = {
       const named = t.routes
         .filter((r) => r.code)
         .slice(0, 2)
-        .map((r) => `${r.level.toLowerCase()} ${r.code} (${r.name})`);
+        .map((r) => `${r.level.toLowerCase()} ${r.code}${r.name && r.name !== r.code ? ` (${r.name})` : ""}`);
       const parts = [
         // With no signed route in the data, say nothing about routes (a gap in the map, not a fact).
         t.counts.routes === 0
@@ -98,8 +98,14 @@ const TEXT = {
     routeVia: (stops) => `By way of ${listAnd(stops)}.`,
     routeDirect: (stops) => `Between ${stops[0]} and ${stops[1]}.`,
     routeNamed: "A long-distance route with its own signs.",
-    routesLead: (t) =>
-      `Each route has its own colour on the map above. A letter and a number mark Slovenia's national cycle network; codes starting with L are local routes around ${t.name}.`,
+    routeLocal: "A local route with its own signs.",
+    routeLoop: (r) =>
+      `A loop from ${r.start}${{ road: ", for road bikes", trekking: ", for trekking bikes", mtb: ", for mountain bikes" }[r.bike] || ""}.`,
+    routesLead: (t) => {
+      const letters = [...new Set(t.routes.filter((r) => r.level === "Local route" && /^[A-Z]{1,2}[- ]?\d/.test(r.code || "")).map((r) => r.code[0]))];
+      const local = letters.length ? `; codes starting with ${listOr(letters)} are local routes around ${t.name}` : "";
+      return `Each route has its own colour on the map above. A letter and a number mark Slovenia's national cycle network${local}.`;
+    },
     routeFromTo: (stops) =>
       stops.length > 2
         ? `From ${stops[0]} to ${stops[stops.length - 1]}, by way of ${listAnd(stops.slice(1, -1))}.`
@@ -178,7 +184,8 @@ const TEXT = {
               a: `${cap(numberWord(t.counts.routes))} signed ${t.counts.routes === 1 ? "route" : "routes"}: ${listAnd([
                 ...t.routes.slice(0, MAX_ROUTES_SHOWN).map((r) => {
                   const stops = r.name.split("–").map((part) => part.trim());
-                  return r.code && stops.length > 1 ? `${r.code} from ${stops[0]} to ${stops[stops.length - 1]}` : r.name;
+                  if (r.code && stops.length > 1) return `${r.code} from ${stops[0]} to ${stops[stops.length - 1]}`;
+                  return r.code && r.name !== r.code && !r.name.startsWith(r.code) ? `${r.code} (${r.name})` : r.name;
                 }),
                 ...(t.routes.length > MAX_ROUTES_SHOWN ? [`${t.routes.length - MAX_ROUTES_SHOWN} more`] : []),
               ])}.`,
@@ -212,6 +219,10 @@ function listAnd(items) {
 /** "1 route", "6 routes". */
 function plural(n, noun) {
   return `${n} ${noun}${n === 1 ? "" : "s"}`;
+}
+
+function listOr(items) {
+  return items.length > 1 ? `${items.slice(0, -1).join(", ")} or ${items[items.length - 1]}` : items[0];
 }
 
 /**
@@ -508,7 +519,7 @@ function townStructuredNodes(page, origin) {
       })),
       ...town.routes.map((route) => ({
         "@type": "TouristTrip",
-        name: route.code ? `${route.code} ${route.name}` : route.name,
+        name: route.code && route.name !== route.code ? `${route.code} ${route.name}` : route.name,
         description: `${route.level}, ${route.length_km} km, ${route.km_inside} km in ${town.name}`,
         ...(route.website ? { url: route.website.url } : {}),
       })),
@@ -868,9 +879,23 @@ function renderBody(town, t, lang) {
     const coded = route.code && stops.length > 1;
     return infoCard({
       color: route.color,
-      name: coded ? `${route.code} · ${stops[0]} to ${stops[stops.length - 1]}` : route.name,
+      // A route with a code and a one-part name (K13, "Dragonja valley") shows both.
+      name: coded
+        ? `${route.code} · ${stops[0]} to ${stops[stops.length - 1]}`
+        : route.code && route.name !== route.code && !route.name.startsWith(route.code)
+          ? `${route.code} · ${route.name}`
+          : route.name,
       facts: [`${route.level}, ${route.length_km} km`],
-      desc: coded && stops.length > 2 ? t.routeVia(stops.slice(1, -1)) : coded ? t.routeDirect(stops) : t.routeNamed,
+      desc:
+        coded && stops.length > 2
+          ? t.routeVia(stops.slice(1, -1))
+          : coded
+            ? t.routeDirect(stops)
+            : route.loop && route.start
+              ? t.routeLoop(route)
+              : route.level === "Local route"
+                ? t.routeLocal
+                : t.routeNamed,
       value: `${route.km_inside} km`,
       unit: t.inTown(town),
       link: signedRouteLink(route, t, lang)

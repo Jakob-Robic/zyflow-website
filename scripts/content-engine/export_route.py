@@ -28,6 +28,7 @@ from urllib.parse import urlparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from db import query  # noqa: E402
 from geo import Line, main_line  # noqa: E402
+from names import name_routes  # noqa: E402
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 ROUTES_DIR = os.path.join(REPO, "content", "signed-routes")
@@ -138,16 +139,17 @@ def export(entry):
         curation = json.load(open(os.path.join(folder, "curation.json")))
     excluded = set(curation.get("exclude", []))
 
-    records = query(f"select id, code, display_name, kind, network_level, length_km, website from signed_routes where id in ({ids}) order by length_km desc")
+    records = name_routes(query(f"select id, code, display_name, kind, network_level, length_km, website, member_names from signed_routes where id in ({ids}) order by length_km desc"))
     head = records[0]
+    title = head["display_name"] or ""  # a route known only by its code has no name to read ends from
     box = query(f"select st_xmin(g) w, st_ymin(g) s, st_xmax(g) e, st_ymax(g) n from (select {geom} g) x")[0]
     pieces = [json.loads(r["g"])["coordinates"] for r in query(f"select st_asgeojson(g, 6) g from (select (st_dump(st_linemerge({geom}))).geom g) x")]
     path, share = main_line(pieces)
 
     # Start at the end the route's own name starts with.
-    first = head["display_name"].split("–")[0].strip()
+    first = title.split("–")[0].strip()
     try:
-        hit = get("https://nominatim.openstreetmap.org/search?" + urllib.parse.urlencode({"q": f"{first}, Slovenia", "format": "jsonv2", "limit": 1}))
+        hit = first and get("https://nominatim.openstreetmap.org/search?" + urllib.parse.urlencode({"q": f"{first}, Slovenia", "format": "jsonv2", "limit": 1}))
         time.sleep(1.1)
         if hit:
             start = (float(hit[0]["lon"]), float(hit[0]["lat"]))
@@ -278,10 +280,10 @@ def export(entry):
     flags = []
     if share < 0.85:
         flags.append(f"only {round(share * 100)}% of the mapped length lies on one line: branches, a loop or gaps")
-    if "–" in head["display_name"] and first.lower() not in (ends["start"] or "").lower() and first.lower() not in (ends["end"] or "").lower():
+    if "–" in title and first.lower() not in (ends["start"] or "").lower() and first.lower() not in (ends["end"] or "").lower():
         flags.append(f"name starts with '{first}' but the mapped line runs {ends['start']} → {ends['end']}")
-    last = head["display_name"].split("–")[-1].strip()
-    if "–" in head["display_name"] and last.lower() not in (ends["end"] or "").lower() and last.lower() not in (ends["start"] or "").lower():
+    last = title.split("–")[-1].strip()
+    if "–" in title and last.lower() not in (ends["end"] or "").lower() and last.lower() not in (ends["start"] or "").lower():
         flags.append(f"name ends with '{last}' but the mapped line ends at {ends['end']}")
     if len(stays) < 3 or len(food) < 3:
         flags.append(f"thin: {len(stays)} stay picks, {len(food)} food picks")

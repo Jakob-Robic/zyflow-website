@@ -37,6 +37,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from db import query  # noqa: E402
 from export_route import FOOD_KIND, LEVELS, SIGHT_KIND, STAY_KIND, commons_photo, get, hours, site  # noqa: E402
 from geo import NearIndex  # noqa: E402
+from names import name_routes  # noqa: E402
 import urllib.error  # noqa: E402
 
 WIKI_PAUSE = 1.5  # seconds between calls to Wikidata and Commons
@@ -262,12 +263,14 @@ def export(area_code, today=None):
     for r in rows:
         r["conf"] = float(r["conf"]) if r["conf"] is not None else 0.0
 
-    routes = query(f"""select r.id, r.code, r.display_name, r.kind, r.network_level, r.length_km, r.website,
+    routes = query(f"""select r.id, r.code, r.display_name, r.kind, r.network_level, r.length_km, r.website, r.member_names,
         round(sum(sm.km_inside)::numeric, 1) km_inside
       from signed_routes r join signed_route_municipalities sm on sm.route_id = r.id
       where sm.area_code = '{area_code}' and sm.country_code = 'SI' and not r.is_proposed
       group by r.id having sum(sm.km_inside) >= {ROUTE_MIN_KM} order by sum(sm.km_inside) desc, r.id""")
-    # A route with neither a code nor a name cannot be shown or told apart; leave it out and count it.
+    # Routes the import left nameless take a looked-up name or their label in the map data (names.py).
+    # One that still has neither cannot be shown or told apart; leave it out and count it.
+    name_routes(routes)
     unnamed = [r for r in routes if not (r["code"] or r["display_name"])]
     routes = [r for r in routes if r["code"] or r["display_name"]]
     lines = route_lines([r["id"] for r in routes])
@@ -399,7 +402,7 @@ def export(area_code, today=None):
             {
                 "id": r["id"], "color": ROUTE_COLORS[i % len(ROUTE_COLORS)], "code": r["code"], "name": r["display_name"] or r["code"],
                 "level": LEVELS.get(r["network_level"], "Marked route"), "kind": r["kind"], "length_km": round(float(r["length_km"])),
-                "km_inside": round(float(r["km_inside"])), "website": site(r["website"]), "line": clip_line(lines[r["id"]], boundary, bounds),
+                "km_inside": round(float(r["km_inside"])), "website": site(r["website"]), "line": clip_line(lines[r["id"]], boundary, bounds), **r.get("hand", {}),
             }
             for i, r in enumerate(routes)
         ],
