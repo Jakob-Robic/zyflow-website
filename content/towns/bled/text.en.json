@@ -1,0 +1,26 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-16 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Bled's data and each place's own website. Needs a read by someone who knows Bled before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Bled.",
+  "intro": "Bled sits where the Julian Alps begin, around a lake with an island in the middle and a castle on the cliff above. Two national cycle routes meet here. Follow G2 and you reach Bohinj and the pass above Sorica; follow D2 and you ride between Rateče and Ljubljana. The villages of Ribno, Zasip and Bohinjska Bela are part of Bled too, each a short ride from the lake.",
+  "routes": {
+    "title": "Cycle routes through Bled",
+    "body": "Six signed routes pass through Bled, so you can follow the signs out of town instead of planning your own line. G2 takes you from Radovljica through Bled and Bohinjska Bistrica up to Sorica, 53 km with one long climb at the end. D2 is the long one: 135 km between Rateče and Ljubljana, passing the lake in the centre of town. The Jakobova pot crosses Bled on its 150 km way through Gorenjska, and three short local routes link the villages around the lake. Want a full day with the ride written up? Blejčanka is a 76 km loop from Kranj to the lake and back, with 944 m of climbing."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 61 places to stay in Bled, from hotels on the lakeshore to guesthouses, apartments and glamping in the villages. Want to roll out of the door and onto a signed route? Grand Hotel Toplice and Hotel Lovec are both within 50 metres of D2 in the centre. Prefer it quiet? Ribno and Zasip are a short ride out, with the local routes LG6 and LG2 on the doorstep."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Stopping to eat is easy here: Bled has 31 places, and several sit right on the routes. On the lakeshore, Špica is open every day from 9:00 to midnight, with the island and the castle in view. For the cream cake Bled is known for, Slaščičarna Zima is open daily from 8:00 to 21:00. Gostilna Pri planincu, a family inn since 1929, cooks traditional Slovenian dishes every day from noon. Heading for Bohinj on G2? Okrepčevalnica Galetovec in Bohinjska Bela opens at 7:00 on weekdays."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "You can refill a bottle at 28 public water points, and 22 of them are within 150 metres of a signed route. There is one public repair stand in town. For a bike shop, ride to Obris Šport in Radovljica, 6.4 km away. Riding an e-bike? Bled has no public charger, so charge before you set off. The nearest is at GALA IN in Radovljica, 6.3 km away."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Three sights are worth getting off the bike for, and all are close to a signed route. Bled Castle stands on its cliff 80 metres from D2. Bled Island sits in the lake about 400 metres from the same route; you reach it by boat. Vintgar Gorge, a narrow canyon north-west of town, is 1.1 km off the local route LG2. Shorter stops: the Adolf Muhr monument in town and the cave under Babji zob, 1.2 km off G2."
+  }
+}

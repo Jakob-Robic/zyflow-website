@@ -17,6 +17,7 @@
 @import url("./home-app.css"); /* REVERT: remove this line to drop app section styles */
 @import url("./tours.css");
 @import url("./tour.css");
+@import url("./town.css");
 @import url("./blog.css");
 @import url("./article.css");
 @import url("./guides.css");

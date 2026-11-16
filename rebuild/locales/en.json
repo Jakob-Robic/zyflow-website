@@ -1,2122 +1,2123 @@
 {
- "meta": {
- "brand": "Zyflow",
- "locale": "en",
- "source": "zyflow",
- "pages": {
- "open": {
- "title": "Zyflow: Open in the app",
- "description": "Open this place or ride in the Zyflow app, or get the app free on iOS and Android."
- },
- "404": {
- "title": "Zyflow: Page not found",
- "description": "This page does not exist. Head home or explore routes in Zyflow."
- },
- "home": {
- "title": "Zyflow: Bike-Friendly Places for Cyclists & E-Bike Riders",
- "description": "Find bike-friendly stays, coffee stops, restaurants and chargers across 8 countries. Free app for cyclists and e-bike riders on iOS and Android."
- },
- "about": {
- "title": "Zyflow: The Team Behind Bike-Friendly Places",
- "description": "Meet the team behind Zyflow, the app for finding bike-friendly stays, coffee stops, restaurants and chargers. Made in Slovenia by HERKO d.o.o."
- },
- "tours": {
- "title": "Zyflow: Cycling Routes in Gorenjska",
- "description": "20 cycling routes across Kranj, Tržič and Jezersko. Open any route in Zyflow."
- },
- "tour": {
- "title": "Zyflow: Cycling Routes",
- "description": "Explore Gorenjska cycling routes and open them in Zyflow."
- },
- "blog": {
- "title": "Zyflow: Journal",
- "description": "Guides to bike-friendly places, safer rides and product news from the Zyflow team for cyclists and e-bike riders."
- },
- "guides": {
- "title": "Zyflow Guides: rider questions, answered",
- "description": "Short, checked answers to questions cyclists and e-bike riders ask, with real numbers, sources and the date we last checked them."
- },
- "contact": {
- "title": "Zyflow: Contact",
- "description": "List your place, ask about routes or talk to us about partnerships and investment. Reach the Zyflow team at support@zyflow.eu."
- },
- "legal": {
- "title": "Zyflow: Legal",
- "description": "Privacy Policy, Cookie Policy, and Terms of Service for Zyflow and HERKO d.o.o."
- },
- "legal-privacy": {
- "title": "Zyflow, Privacy Policy",
- "description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use Zyflow."
- },
- "legal-cookies": {
- "title": "Zyflow, Cookie Policy",
- "description": "How Zyflow uses cookies and similar technologies on zyflow.eu, and how you can control your preferences."
- },
- "legal-terms": {
- "title": "Zyflow, Terms of Service",
- "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
- },
- "styleguide": {
- "title": "Zyflow, Design System Styleguide",
- "description": "Internal design tokens and components for the Zyflow rebuild."
- },
- "business": {
- "title": "Zyflow: For Businesses",
- "description": "Put your café, restaurant, stay or bike shop in front of cyclists and e-bike riders. Show your bike parking, storage or charger on the Zyflow map."
- },
- "press": {
- "title": "Zyflow: Press & Investors",
- "description": "Facts, team and contact for press and investors. Zyflow helps cyclists find bike-friendly places and ride there feeling safe."
- },
- "tour-blejcanka": {
- "title": "Zyflow: Blejčanka",
- "description": "Blejčanka: Kranj to Lake Bled past Kropa and Radovljica: 79 km and 944 m of climbing. Open in Zyflow."
- },
- "tour-jezerjanka": {
- "title": "Zyflow: Jezerjanka",
- "description": "Jezerjanka follows the Kokra from Kranj to Jezersko: 76 km and 603 m of climbing. Open in Zyflow."
- },
- "tour-jezerski-vrh": {
- "title": "Zyflow: Jezerski vrh – Ankova planina",
- "description": "Jezerski vrh to Ankova planina, a panorama above Ravenska Kočna: 18.2 km and 457 m of climbing. Open in Zyflow."
- },
- "tour-k11-planine-pod-kosuto": {
- "title": "Zyflow: Planine pod Košuto",
- "description": "One of Gorenjska’s most scenic MTB tours: shady forests and alpine pastures under the Košuta ridge (Pungrat, Šija, Kofce)."
- },
- "tour-k16-trzic-jezersko": {
- "title": "Zyflow: Tržič – Jezersko",
- "description": "A demanding forest link from Tržič toward Jezersko, quiet, steep in places, rewarded with solitude and mountain views."
- },
- "tour-k21-dom-pod-storzicem": {
- "title": "Zyflow: Dom pod Storžičem",
- "description": "A shorter climb into Lomska dolina toward Dom pod Storžičem, a classic Tržič mountain hut approach."
- },
- "tour-k35-prelaz-ljubelj": {
- "title": "Zyflow: Prelaz Ljubelj",
- "description": "Climb the old Ljubelj / Loibl pass road, Europe’s oldest road pass, closed to cars, with 13 hairpins and big Karawanks views."
- },
- "tour-k42-roznovenska": {
- "title": "Zyflow: Rožnovenska pot",
- "description": "Follow the Rožnovenska pilgrimage route from Tržič through Brezje pri Tržiču: churches, villages and rolling Gorenjska roads."
- },
- "tour-k43-dobrca": {
- "title": "Zyflow: Dobrča",
- "description": "From Tržič along the Gorenjska “balcony” and up to the hut on Dobrča, a popular alpine day ride with big views."
- },
- "tour-k51-udin-borst": {
- "title": "Zyflow: Udin boršt",
- "description": "Explore the karst forest of Udin boršt, sinkholes, quiet tracks and bandit lore, looping from Tržič through the foothills."
- },
- "tour-k52-pot-treh-zvonov": {
- "title": "Zyflow: Pot treh zvonov",
- "description": "An easy foothill ride through Udin boršt on the Path of Three Bells, ideal for families and an e-bike warm-up around Tržič."
- },
- "tour-k53-kriva-jelka": {
- "title": "Zyflow: Kriva jelka",
- "description": "Ride into Udin boršt to the Kriva jelka nature reserve, a calm mid-length forest loop from Tržič."
- },
- "tour-k55-gozd-udin-borst": {
- "title": "Zyflow: Gozd – Udin boršt",
- "description": "A varied foothill loop linking Gozd under Kriška gora with Udin boršt, mountain views without committing to high alpine terrain."
- },
- "tour-kamnicanka": {
- "title": "Zyflow: Kamničanka",
- "description": "Kamničanka from Kranj past Kamnik and Arboretum Volčji Potok: 70 km and 254 m of climbing. Open in Zyflow."
- },
- "tour-ljubljancanka": {
- "title": "Zyflow: Ljubljančanka",
- "description": "Ljubljančanka: Kranj to Ljubljana past Smlednik Castle: 70 km and 460 m of climbing. Open in Zyflow."
- },
- "tour-locanka": {
- "title": "Zyflow: Ločanka",
- "description": "Ločanka: Kranj to Škofja Loka's old town and castle: 64 km and 930 m of climbing. Open in Zyflow."
- },
- "tour-mali-vrh": {
- "title": "Zyflow: Jezersko – Mali vrh lookout",
- "description": "Jezersko lookout under Mali vrh, out and back from Zgornje Jezersko: 17.3 km and 596 m of climbing. Open in Zyflow."
- },
- "tour-ravenska-kocna": {
- "title": "Zyflow: Ravenska Kočna – Štularjeva planina",
- "description": "Ravenska Kočna past Planšarsko jezero to Štularjeva planina: 16.6 km and 408 m of climbing. Open in Zyflow."
- },
- "tour-spodnji-virnik": {
- "title": "Zyflow: Spodnji Virnik – tufa quarry",
- "description": "Short Jezersko loop to the tufa quarry and Spodnji Virnik farm: 9.4 km and 304 m of climbing. Open in Zyflow."
- },
- "tour-trzicanka": {
- "title": "Zyflow: Tržičanka",
- "description": "Tržičanka: Kranj to Tržič through the Kokra canyon and on to Kamen Castle: 68 km. Open in Zyflow."
- },
- "legal-pages-privacy-policy": {
- "title": "Zyflow, Privacy Policy",
- "description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use Zyflow."
- },
- "legal-pages-terms": {
- "title": "Zyflow, Terms of Service",
- "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
- },
- "legal-pages-cookie-policy": {
- "title": "Zyflow, Cookie Policy",
- "description": "How Zyflow uses cookies and similar technologies on zyflow.eu, and how you can control your preferences."
- },
- "legal-pages-impressum": {
- "title": "Zyflow, Impressum",
- "description": "Legal notice and company details for HERKO d.o.o., the operator of Zyflow."
- },
- "legal-pages-delete-account": {
- "title": "Zyflow, Delete your account",
- "description": "How to request deletion of your Zyflow account and what happens to your data."
- },
- "legal-pages-izbris-racuna": {
- "title": "Zyflow, Izbris računa",
- "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
- },
- "e-plus-destinacije": {
- "title": "Zyflow, Model E+ pametne podeželske destinacije",
- "description": "Projekt LEADER: model E+ destinacije za e-kolesarjem prijazno podeželje v sedmih gorenjskih občinah. Sofinancira Evropska unija (EKSRP)."
- },
- "legal-pages-business-privacy": {
- "title": "Zyflow, Privacy text for your website",
- "description": "A privacy paragraph businesses can paste into their own policy: what the Zyflow bike map widget collects and why."
- },
- "legal-pages-business-dpa": {
- "title": "Zyflow, Data processing for businesses",
- "description": "When Zyflow processes personal data for business customers, and our standard GDPR Article 28 data processing agreement."
- }
- }
- },
- "chrome": {
- "announcement": {
- "label": "App update",
- "text": "Zyflow is live on iOS and Android, in 8 countries.",
- "textShort": "Live on iOS & Android",
- "cta": "Download →"
- },
- "nav": {
- "cta": "Download",
- "links": {
- "home": "Home",
- "tours": "Routes",
- "about": "About",
- "journal": "Journal",
- "contact": "Contact",
- "business": "For businesses"
- },
- "menu": "Menu",
- "menuClose": "Close menu",
- "themeDark": "Dark mode",
- "themeLight": "Light mode"
- },
- "footer": {
- "links": {
- "home": "Home",
- "tours": "Routes",
- "about": "About",
- "journal": "Journal",
- "contact": "Contact",
- "press": "Press & investors",
- "legal": "Legal",
- "privacy": "Privacy",
- "terms": "Terms",
- "cookies": "Cookies",
- "impressum": "Impressum",
- "guides": "Guides"
- },
- "cats": {
- "kayak": "Tour",
- "bike": "Commute",
- "hike": "Alpine",
- "fourwd": "Gravel"
- },
- "newsletter": {
- "title": "newsletter",
- "body": "New bike-friendly places, routes and app updates. Once a month, no spam.",
- "note": "We never share your details.",
- "subscribe": "Subscribe",
- "email": "Email",
- "emailPlaceholder": "Email address",
- "honeypot": "Company website",
- "success": "Thanks, you’re on the list.",
- "error": "Something went wrong. Please try again.",
- "errorValidation": "Please enter a valid email address.",
- "errorRateLimit": "Too many attempts. Please wait a few minutes.",
- "errorVerify": "Please complete the verification and try again."
- },
- "company": "Zyflow is made by HERKO d.o.o., Slovenia",
- "copyright": "© 2026 Zyflow. All rights reserved.",
- "cookiePreferences": "Cookie preferences"
- },
- "notFound": {
- "title": "Page not found",
- "body": "This page took a wrong turn. Head home or explore routes instead.",
- "home": "Back home",
- "tours": "Explore Routes"
- },
- "openApp": {
- "title": "Open this in Zyflow",
- "body": "A place or ride was shared with you from a Zyflow bike map. See it in the Zyflow app, free on iOS and Android.",
- "open": "Open the app",
- "get": "No app yet? Get it here, then tap the link again."
- },
- "lang": {
- "label": "Language",
- "en": "EN",
- "sl": "SL"
- },
- "appModal": {
- "title": "Get the Zyflow app",
- "lede": "Find bike-friendly stays, coffee stops and restaurants, with chargers and bike services on the map. Free on iOS and Android.",
- "badge": "Free on iOS and Android",
- "downloadTitle": "Download Zyflow now",
- "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone.",
- "close": "Close"
- },
- "ui": {
- "step": "Step"
- }
- },
- "home": {
- "hero": {
- "titleHtml": "Bike-friendly stays, cafés and chargers",
- "subtitle": "Explore bike-friendly places. Ride there feeling safe. Stays, coffee stops, restaurants and chargers, all on one map.",
- "cta": "Get the app",
- "nextDepartureLabel": "Featured route",
- "nextDepartureTitle": "Ljubljana to Trieste",
- "nextDepartureDate": "134 km · +1,766 m",
- "brandHtml": "explore<br />further."
- },
- "appBanner": {
- "eyebrow": "The Zyflow app",
- "titleHtml": "Every stop.<br />One map.",
- "body": "Stays, coffee stops, restaurants, chargers, water and bike repair, each showing what makes it bike-friendly. Free on iOS and Android.",
- "cta": "Download",
- "phoneTitle": "Every stop.",
- "chips": [
- "Stays",
- "Coffee",
- "Chargers"
- ],
- "phoneFoot": "Free on iOS & Android"
- },
- "trust": {
- "one": "Regional maps and route data",
- "two": "Local cycling community",
- "three": "E-bike charging know-how",
- "four": "Open data on places and mobility"
- },
- "adventures": {
- "titleHtml": "featured<br />routes",
- "allLink": "Explore Routes",
- "viewCta": "View route",
- "cards": [
- {
- "place": "Tržič",
- "region": "Ljubelj pass, Slovenia",
- "title": "Prelaz Ljubelj",
- "meta0": "26 km",
- "meta1": "900 m",
- "meta2": "Alpine",
- "body": "Thirteen hairpins on Europe’s oldest road pass, car-free climbing to 1,370 m above Tržič.",
- "price": "26 km",
- "unit": " · 900 m"
- },
- {
- "place": "Kranj → Kamnik",
- "region": "Gorenjska, Slovenia",
- "title": "Kamničanka",
- "meta0": "70 km",
- "meta1": "254 m",
- "meta2": "Touring",
- "body": "The gentle Kranjska roža petal: castles, Arboretum Volčji Potok and valley roads with almost no hard climbing.",
- "price": "70 km",
- "unit": " · 254 m"
- },
- {
- "place": "Jezersko",
- "region": "Kamnik Alps, Slovenia",
- "title": "Mali vrh",
- "meta0": "17.3 km",
- "meta1": "596 m",
- "meta2": "Alpine",
- "body": "Forest road to a quiet lookout above Jezersko, Grintovec, Košuta and Storžič in one calm half-day.",
- "price": "17.3 km",
- "unit": " · 596 m"
- }
- ]
- },
- "intro": {
- "greeting": "Hey there.",
- "body": "We’re Jakob and Tanja, the small team behind Zyflow in Slovenia. We’re building Zyflow so every ride comes with good places to stop, a charger when you need one, and a welcome for your bike. Questions or ideas? We read every message.",
- "link": "About Zyflow"
- },
- "featuredTour": {
- "eyebrow": "Every route, fully mapped",
- "title": "ljubljana to trieste",
- "metaDuration": "134 km",
- "metaSeason": "+1,766 m",
- "cta": "See what’s on the route",
- "metaStops": "Stays, coffee & chargers",
- "metaChargers": "1 day"
- },
- "categories": {
- "cycle": "slovenia",
- "hike": "croatia",
- "kayak": "austria",
- "fourwd": "italy",
- "cta": "See routes",
- "comingSoon": "routes coming soon",
- "comingSoonHint": "Places live, routes in progress"
- },
- "testimonial": {
- "quote": "Is your place bike-friendly?",
- "body": "Riders choose where to stop in Zyflow before they leave. Put your café, restaurant or stay in front of them, with your bike parking, storage or charger on the map.",
- "cta": "List your place",
- "ctaSecondary": "Investors and press"
- },
- "whyUs": {
- "titleHtml": "Why<br />Zyflow?",
- "items": [
- {
- "title": "places other maps miss",
- "body": "Most maps show you roads. Zyflow shows you where to stop: stays, coffee and restaurants that welcome bikes, with parking, storage and charging marked."
- },
- {
- "title": "safety you can see",
- "body": "Road closures, roadworks and events on your route, bike theft by area, and chargers placed where your battery needs them."
- },
- {
- "title": "a battery plan you can trust",
- "body": "Zyflow plans around your range, the climbs, wind and temperature, so the ride does not end early."
- }
- ]
- },
- "appStage": {
- "eyebrow": "Inside the ride",
- "titleHtml": "The app<br />on the trail.",
- "body": "Battery, elevation, chargers, and weather in one plan, so you leave knowing the ride will finish.",
- "ctaIos": "Download for iOS",
- "ctaAndroid": "Get it on Android"
- },
- "appFlow": {
- "titleHtml": "From map<br />to ride.",
- "steps": [
- {
- "title": "explore",
- "body": "Open the map and find stays, coffee stops and restaurants that welcome bikes, plus chargers, water and repair as you zoom in."
- },
- {
- "title": "plan",
- "body": "Connect the places into a ride. Zyflow plans your battery around the climbs and places chargers before you need them."
- },
- {
- "title": "ride",
- "body": "Check road closures before you leave and see where bikes get stolen. Then ride, and stop wherever looks good."
- }
- ]
- },
- "features": {
- "titleHtml": "Places that<br /><span class=\"accent\">welcome bikes.</span>",
- "items": [
- {
- "title": "find bike-friendly places",
- "body": "Bike parking, secure storage, a pump or a charger, marked on every place. Filter the map to show only places that welcome bikes.",
- "link": "Download"
- },
- {
- "title": "ride feeling safe",
- "body": "See road closures and roadworks before you leave, check bike theft by area, and plan your battery with chargers along the way.",
- "link": "Explore Routes"
- },
- {
- "title": "growing across Europe",
- "body": "Live in 8 countries, starting from Slovenia, Croatia and Austria, and growing country by country.",
- "link": "Read Journal"
- }
- ]
- },
- "journal": {
- "titleHtml": "The Zyflow<br />journal",
- "cta": "Read the journal"
- },
- "faq": {
- "title": "common questions",
- "footnote": "Questions, feedback or a place we’re missing? Email support@zyflow.eu. We read every message.",
- "contactLink": "Contact us",
- "items": [
- {
- "q": "What is Zyflow?",
- "a": "Zyflow is a free app for finding bike-friendly places: stays, coffee stops, restaurants, chargers and bike services. You can see road closures and bike theft by area, and plan a ride between the places with your battery in mind."
- },
- {
- "q": "Is Zyflow free?",
- "a": "Yes. Zyflow is free to download and use on iOS and Android."
- },
- {
- "q": "What bikes does Zyflow support?",
- "a": "Any bike: road, gravel, touring, mountain and e-bikes. With an e-bike, you also get the battery plan and chargers along the way."
- },
- {
- "q": "How do I know a place is bike-friendly?",
- "a": "Places with bike parking, secure storage, a pump or a charger are marked, and you can filter the map to show only bike-friendly places."
- },
- {
- "q": "I run a café, hotel or bike shop. Can I be on Zyflow?",
- "a": "Yes. Get in touch through the contact form and we’ll add your place, with your bike parking, storage or charger on the map."
- }
- ]
- },
- "social": {
- "handle": "@zyflow",
- "cta": "Follow Zyflow",
- "videos": [
- {
- "title": "Ljubljana to Trieste",
- "place": "Slovenia / Italy",
- "coords": "46.0569° N, 14.5058° E"
- },
- {
- "title": "Alpine Pass Loop",
- "place": "Julian Alps, Slovenia",
- "coords": "46.3792° N, 13.8363° E"
- },
- {
- "title": "Coastal Gravel Meander",
- "place": "Istria, Croatia",
- "coords": "45.2396° N, 13.9367° E"
- }
- ]
- }
- },
- "tours": {
- "hero": {
- "title": "cycling routes across gorenjska",
- "lede": "Twenty rides from Kranj, Tržič and Jezersko, lake loops, alpine passes and quiet gravel. Pick a route, then open it in Zyflow.",
- "quals": [
- "20 Gorenjska routes",
- "GPX and descriptions ready",
- "Open in Zyflow",
- "iOS & Android",
- "Free to download"
- ],
- "eyebrow": "our routes"
- },
- "filter": {
- "label": "browse:",
- "all": "all",
- "tour": "tour",
- "alpine": "alpine",
- "commute": "commute",
- "gravel": "gravel"
- },
- "viewCta": "View route",
- "empty": "No routes here yet. New rides are added as we map more bike-friendly places.",
- "region": {
- "slovenia": "Slovenia",
- "croatia": "Croatia",
- "austria": "Austria",
- "italy": "Italy"
- },
- "cards": [
- {
- "place": "Kranj → Bled",
- "region": "Gorenjska, Slovenia",
- "title": "Blejčanka",
- "meta0": "79 km",
- "meta1": "944 m",
- "meta2": "Touring",
- "body": "A full-day loop from Kranj to Lake Bled, Radovljica’s old square, Kropa’s forge streets, then the lake shore before the climb home.",
- "price": "79 km",
- "unit": " · 944 m"
- },
- {
- "place": "Kranj → Jezersko",
- "region": "Gorenjska, Slovenia",
- "title": "Jezerjanka",
- "meta0": "76 km",
- "meta1": "603 m",
- "meta2": "Touring",
- "body": "Follow the Kokra past Preddvor into Slovenia’s first Mountain Village, glacier valleys, alpine farms and quieter roads than the lake circuits.",
- "price": "76 km",
- "unit": " · 603 m"
- },
- {
- "place": "Jezersko",
- "region": "Gorenjska, Slovenia",
- "title": "Jezerski vrh",
- "meta0": "18.2 km",
- "meta1": "457 m",
- "meta2": "Alpine",
- "body": "Climb to the former border crossing, then continue to Ankova planina for a full panorama of Ravenska Kočna and the Kamnik Alps.",
- "price": "18.2 km",
- "unit": " · 457 m"
- },
- {
- "place": "Tržič → Košuta",
- "region": "Gorenjska, Slovenia",
- "title": "Planine pod Košuto",
- "meta0": "39.7 km",
- "meta1": "1740 m",
- "meta2": "Alpine",
- "body": "Tržič’s alpine flagship: forest roads and pasture shelves under the long white wall of Košuta, big climbing, bigger views.",
- "price": "1740 m",
- "unit": " · 1740 m"
- },
- {
- "place": "Tržič → Jezersko",
- "region": "Gorenjska, Slovenia",
- "title": "Tržič – Jezersko",
- "meta0": "28.1 km",
- "meta1": "Alpine",
- "meta2": "Alpine",
- "body": "A linking ride between two alpine valleys, from Tržič’s Karawanks flank across to the glacier bowl of Jezersko.",
- "price": "28.1 km",
- "unit": ""
- },
- {
- "place": "Tržič → Storžič",
- "region": "Gorenjska, Slovenia",
- "title": "Dom pod Storžičem",
- "meta0": "18.1 km",
- "meta1": "Alpine",
- "meta2": "Alpine",
- "body": "A hut-day climb toward Storžič, forest gradients, mountain air and a clear turnaround at Dom pod Storžičem.",
- "price": "18.1 km",
- "unit": ""
- },
- {
- "place": "Tržič → Ljubelj",
- "region": "Gorenjska, Slovenia",
- "title": "Prelaz Ljubelj",
- "meta0": "26 km",
- "meta1": "900 m",
- "meta2": "Alpine",
- "body": "Thirteen hairpins on Europe’s oldest road pass, closed to cars, open to bikes, with a hut at 1,370 m.",
- "price": "26 km",
- "unit": " · 900 m"
- },
- {
- "place": "Tržič → Brezje pri Tržiču",
- "region": "Gorenjska, Slovenia",
- "title": "Rožnovenska pot",
- "meta0": "20.1 km",
- "meta1": "Touring",
- "meta2": "Touring",
- "body": "A culture-forward loop from Tržič through Brezje pri Tržiču, churches, valley towns and riding that stays scenic without going fully alpine.",
- "price": "20.1 km",
- "unit": ""
- },
- {
- "place": "Tržič → Dobrča",
- "region": "Gorenjska, Slovenia",
- "title": "Dobrča",
- "meta0": "26.9 km",
- "meta1": "Alpine",
- "meta2": "Alpine",
- "body": "A full alpine day toward Dobrča, long climbs, ridge air and the feeling of riding the Karawanks rather than around them.",
- "price": "26.9 km",
- "unit": ""
- },
- {
- "place": "Tržič · Udin boršt",
- "region": "Gorenjska, Slovenia",
- "title": "Udin boršt",
- "meta0": "25.3 km",
- "meta1": "Gravel",
- "meta2": "Gravel",
- "body": "Foothill gravel around Udin boršt, forest tracks, gentle rollers and enough variety to feel adventurous without a high pass.",
- "price": "25.3 km",
- "unit": ""
- },
- {
- "place": "Tržič · Three Bells",
- "region": "Gorenjska, Slovenia",
- "title": "Pot treh zvonov",
- "meta0": "10 km",
- "meta1": "Touring",
- "meta2": "Touring",
- "body": "The easy family loop of the Tržič set, gentle terrain, village bells and a rhythm that works for mixed abilities.",
- "price": "10 km",
- "unit": ""
- },
- {
- "place": "Tržič · Kriva jelka",
- "region": "Gorenjska, Slovenia",
- "title": "Kriva jelka",
- "meta0": "24 km",
- "meta1": "Gravel",
- "meta2": "Gravel",
- "body": "Into the Udin boršt nature reserve toward the crooked fir, shaded tracks and a landmark finish in the forest.",
- "price": "24 km",
- "unit": ""
- },
- {
- "place": "Tržič · Gozd",
- "region": "Gorenjska, Slovenia",
- "title": "Gozd – Udin boršt",
- "meta0": "26.9 km",
- "meta1": "Gravel",
- "meta2": "Gravel",
- "body": "A varied foothill loop linking Gozd with Udin boršt, more climbing than the family routes, still short of alpine grades.",
- "price": "26.9 km",
- "unit": ""
- },
- {
- "place": "Kranj → Kamnik",
- "region": "Gorenjska, Slovenia",
- "title": "Kamničanka",
- "meta0": "70 km",
- "meta1": "254 m",
- "meta2": "Touring",
- "body": "Flat-leaning loop via Šenčur, Adergas, Cerklje and Kamnik, Arboretum Volčji Potok, Strmol Castle and Slovenia’s only motorway bike bridge.",
- "price": "70 km",
- "unit": " · 254 m"
- },
- {
- "place": "Kranj → Ljubljana",
- "region": "Gorenjska, Slovenia",
- "title": "Ljubljančanka",
- "meta0": "70 km",
- "meta1": "Touring",
- "meta2": "Touring",
- "body": "South from Kranj to the capital, Smlednik Castle, Tivoli and Ljubljana Castle on a day that mixes countryside with city arrival.",
- "price": "70 km",
- "unit": ""
- },
- {
- "place": "Kranj → Škofja Loka",
- "region": "Gorenjska, Slovenia",
- "title": "Ločanka",
- "meta0": "64 km",
- "meta1": "Touring",
- "meta2": "Touring",
- "body": "Into Škofja Loka’s medieval core, Capuchin bridges, the castle hill and Crngrob church on one of the flower’s prettiest days.",
- "price": "64 km",
- "unit": ""
- },
- {
- "place": "Jezersko · Mali vrh",
- "region": "Gorenjska, Slovenia",
- "title": "Mali vrh",
- "meta0": "17.3 km",
- "meta1": "596 m",
- "meta2": "Alpine",
- "body": "Quiet forest road to the Mali vrh lookout, Virnikov Grintovec, Košuta and Storžič in one calm Jezersko half-day.",
- "price": "17.3 km",
- "unit": " · 596 m"
- },
- {
- "place": "Jezersko · Ravenska Kočna",
- "region": "Gorenjska, Slovenia",
- "title": "Ravenska Kočna",
- "meta0": "16.6 km",
- "meta1": "408 m",
- "meta2": "Alpine",
- "body": "Past Planšarsko jezero into Ravenska Kočna and up to Štularjeva planina, cirque walls and a cargo cableway below Češka koča.",
- "price": "16.6 km",
- "unit": " · 408 m"
- },
- {
- "place": "Jezersko · Virnik",
- "region": "Gorenjska, Slovenia",
- "title": "Spodnji Virnik",
- "meta0": "9.4 km",
- "meta1": "304 m",
- "meta2": "Touring",
- "body": "Short educational loop to the tufa quarry and Spodnji Virnik farm, watch rock forming at the spring, then taste dairy on the meadow.",
- "price": "9.4 km",
- "unit": " · 304 m"
- },
- {
- "place": "Kranj → Tržič",
- "region": "Gorenjska, Slovenia",
- "title": "Tržičanka",
- "meta0": "68 km",
- "meta1": "Touring",
- "meta2": "Touring",
- "body": "North to Tržič’s old town and the Karawanks gateway, Kamen Castle ruins, valley roads and a taste of the alpine network beyond.",
- "price": "68 km",
- "unit": ""
- }
- ]
- },
- "tour": {
- "hero": {
- "crumbParent": "Routes",
- "crumbType": "Touring",
- "titleHtml": "ljubljana<br />to trieste",
- "lede": "134 km from Ljubljana to the Adriatic, past bike-friendly stays, coffee stops and restaurants, with chargers and bike services along the way.",
- "price": "134 km",
- "unit": " · 1 day",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app"
- },
- "meta": {
- "place": "ljubljana",
- "coords": "46.0569° N, 14.5058° E",
- "durationHtml": "1 day<br />134 km",
- "durationLabel": "Duration",
- "difficulty": "intermediate",
- "difficultyLabel": "Difficulty",
- "climb": "+1,766 m",
- "climbLabel": "Elevation"
- },
- "body": {
- "intro": "Ljubljana to Trieste crosses three landscapes in a day: the green edge of the capital, the stone villages of the Karst and the Adriatic coast. Zyflow lines up the bike-friendly places in between, so the ride is as much about where you stop as how far you go.",
- "sections": [
- {
- "title": "Leaving Ljubljana",
- "body": "Roll out past Vrhnika on quiet roads. The first coffee stop comes early, and it is worth it: the climb onto the plateau starts soon after. Zyflow shows your expected battery along the whole route, so you can pace the start instead of guessing."
- },
- {
- "title": "Karst villages & stops",
- "body": "Between Postojna and Divača the road rises and falls through stone villages, with family restaurants and guesthouses that welcome bikes. Charging and water sit right where the hardest sections begin.",
- "bullets": [
- "See road closures and roadworks on the route before you leave",
- "Know which places have bike parking, secure storage or a charger"
- ]
- },
- {
- "title": "Descent to the Adriatic",
- "body": "After Sežana the plateau ends and the road drops toward the Gulf of Trieste. Finish with a coffee by the sea, or stay the night and ride back tomorrow."
- }
- ]
- },
- "aside": {
- "title": "ride with peace of mind:",
- "items": [
- "Road closures before you leave",
- "Bike theft by area",
- "Battery plan with chargers",
- "Bikes welcome where you stay",
- "Places saved for no signal",
- "iOS & Android"
- ],
- "cta": "Open in Zyflow",
- "note": "Open the route in Zyflow, plan with battery, elevation and chargers.",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX"
- },
- "quote": {
- "quote": "Is your place on this route?",
- "body": "Riders choose where to stop in Zyflow before they leave. Put your café, restaurant or stay in front of them, right on the route they are riding."
- },
- "more": {
- "title": "more routes",
- "allLink": "View all"
- }
- },
- "blog": {
- "hero": {
- "titleHtml": "the<br />zyflow<br /><span class=\"is-accent\">journal</span>",
- "lede": "Guides to bike-friendly places, safer rides and what’s new in Zyflow."
- },
- "readStory": "Read Story",
- "readingTime": "{n} min read",
- "updated": "Updated",
- "journalName": "Journal",
- "filters": {
- "country": "Country",
- "region": "Region",
- "type": "Type",
- "activity": "Activity",
- "topic": "Topic",
- "all": "All"
- },
- "empty": "No stories match these filters.",
- "comingSoon": "Stories are on the way.",
- "comingSoonLink": "Read the journal in English",
- "rss": "RSS",
- "explore": "Explore",
- "facts": {
- "distance": "Distance",
- "climb": "Climb",
- "difficulty": "Difficulty",
- "season": "Season",
- "eat": "Eat",
- "sleep": "Sleep",
- "charge": "Charge"
- },
- "howWeMade": "How we made this",
- "relatedTours": "Related routes",
- "relatedPosts": "Related stories",
- "moreIn": "More in {name}",
- "inThisGuide": "In this guide",
- "appCta": {
- "title": "Plan the ride in Zyflow",
- "ios": "Download on the App Store",
- "android": "Get it on Google Play"
- },
- "authorStories": "Stories",
- "authorDescription": "Guides and stories by {name}.",
- "licence": {
- "own": "Zyflow",
- "partner": "Used with permission",
- "guest": "Guest rider",
- "ccBy": "CC BY 4.0",
- "ccBySa": "CC BY-SA 4.0",
- "cc0": "CC0"
- }
- },
- "about": {
- "hero": {
- "eyebrow": "Est 2024",
- "titleHtml": "The team behind bike-friendly places",
- "place": "Slovenia · live in 8 countries",
- "storyTitle": "Great places to stop are everywhere. Most maps just don’t show them.",
- "storyBody": "We’re Jakob and Tanja, the team behind Zyflow, made by HERKO d.o.o. in Slovenia. Zyflow helps cyclists and e-bike riders find bike-friendly stays, coffee stops, restaurants and chargers, and ride between them feeling safe. Today it is live on iOS and Android in 8 countries, with 7,400+ chargers mapped and data from partners like Open Data Hub. Next: more countries, more places, and more ways to keep riders safe.",
- "sign": "Jakob & Tanja",
- "brandHtml": "explore<br />without<br /><span class=\"is-accent\">worry.</span>"
- },
- "values": {
- "title": "our values",
- "items": [
- {
- "titleHtml": "explore<br />without worry.",
- "body": "Zyflow is here so you can say yes to the detour. Every place shows whether your bike is welcome, so the next stop is a choice, not a gamble."
- },
- {
- "titleHtml": "safety you<br />can see.",
- "body": "Road closures, bike theft by area and chargers along the way. We show what we know, so you can decide before you ride."
- },
- {
- "titleHtml": "honesty over<br />hype.",
- "body": "We only promise what the app does today. When something is still being built, we say so, and we listen when riders tell us what to fix next."
- },
- {
- "titleHtml": "free for<br />every rider.",
- "body": "Zyflow is free on iOS and Android, for every rider and every bike. Start with one stop, then go further."
- }
- ]
- },
- "team": {
- "title": "our team",
- "members": [
- {
- "name": "jakob",
- "role": "Co-founder & CEO",
- "bio": "Leads product and partnerships. Builds the app, the data behind it and the partner network that keeps the map growing.",
- "quals": [
- "Product & data",
- "Partnerships",
- "iOS & Android"
- ]
- },
- {
- "name": "tanja",
- "role": "Co-founder & COO",
- "bio": "Runs the company: administration, contracts, legal and tax, plus marketing, market research and local partners.",
- "quals": [
- "Operations & legal",
- "Marketing & research"
- ]
- }
- ]
- }
- },
- "contact": {
- "hero": {
- "title": "contact us",
- "email": "hello@zyflow.eu",
- "support": "support@zyflow.eu",
- "social": [
- "LinkedIn",
- "Instagram",
- "Bluesky",
- "X"
- ]
- },
- "form": {
- "title": "send a message",
- "lede": "Ask about places, routes or chargers, list your café, restaurant or stay, or talk to us about partnerships and investment. We reply to every message.",
- "firstName": "First name",
- "lastName": "Last name",
- "email": "Email",
- "phone": "Phone (optional)",
- "topic": "Topic (optional)",
- "topicPlaceholder": "Choose",
- "topics": [
- "Places & routes",
- "List my place",
- "Partnership",
- "Investors",
- "Press",
- "Other"
- ],
- "message": "Message",
- "submit": "Send message",
- "honeypot": "Company website",
- "success": "Thanks, we got your message.",
- "error": "Something went wrong. Please try again.",
- "errorValidation": "Please check your details and try again.",
- "errorRateLimit": "Too many attempts. Please wait a few minutes.",
- "errorVerify": "Please complete the verification and try again."
- }
- },
- "legal": {
- "nav": {
- "terms": "Terms of Service",
- "privacy": "Privacy Policy",
- "cookies": "Cookie Policy",
- "impressum": "Impressum",
- "deletion": "Delete account"
- },
- "hub": {
- "tag": "Legal",
- "title": "legal",
- "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
- "termsLede": "Usage rules, subscriptions, liability, and legal information for Zyflow.",
- "privacyLede": "How HERKO d.o.o. collects, uses, stores, and protects your personal data.",
- "cookiesLede": "How Zyflow uses cookies and similar technologies on zyflow.eu and in the app.",
- "impressumLede": "Company details for HERKO d.o.o., the operator of Zyflow."
- },
- "terms": {
- "tag": "Updated",
- "date": "30. 11. 2026",
- "dateLabel": "Updated 30. 11. 2026 · v2.2",
- "title": "terms of service",
- "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
- },
- "privacy": {
- "tag": "Updated",
- "date": "30. 6. 2026",
- "dateLabel": "Updated 30. 6. 2026 · v1.1",
- "title": "privacy policy",
- "lede": "This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
- },
- "cookies": {
- "tag": "Updated",
- "date": "9. 10. 2026",
- "dateLabel": "Updated 9. 10. 2026 · v1.1",
- "title": "cookie policy",
- "lede": "How Zyflow uses cookies and similar tracking technologies across the mobile app and zyflow.eu, including optional analytics and advertising cookies you can control."
- },
- "doc": {
- "tag": "Updated"
- },
- "redirect": {
- "body": "This page has moved. Continue to the current version."
- },
- "impressum": {
- "dateLabel": "Legal notice"
- }
- },
- "business": {
- "hero": {
- "crumb1": "For businesses",
- "crumb2": "Cafés, stays, bike shops",
- "titleHtml": "Zyflow for cafés, stays and bike shops",
- "lede": "Riders choose where to stop in Zyflow before they leave. Show them your bike parking, storage or charger, and become a stop on the routes that pass your door. You manage your listing yourself.",
- "price": "Free",
- "unit": " · during launch",
- "nextLabel": "Live in",
- "nextValue": "8 countries",
- "cta": "List your place",
- "brandHtml": "put your place<br />on the map"
- },
- "tiles": [
- {
- "value": "On the map",
- "label": "Riders see you in Explore"
- },
- {
- "value": "Bike facilities",
- "label": "Parking, storage, pump, charger"
- },
- {
- "value": "On routes",
- "label": "Shown on routes that pass you"
- },
- {
- "value": "You’re in control",
- "label": "Edit hours, photos and details"
- }
- ],
- "who": {
- "title": "who it’s for",
- "link": "Ask us anything",
- "chip": "on the map",
- "price": "Free",
- "unit": " · during launch",
- "cta": "List your place",
- "cards": [
- {
- "tag": "Coffee & food",
- "title": "Cafés & restaurants",
- "meta0": "Coffee",
- "meta1": "Restaurants",
- "body": "Be the stop riders plan their break around. Show that bikes are welcome, where to park them and whether they can charge."
- },
- {
- "tag": "Stays",
- "title": "Hotels & guesthouses",
- "meta0": "Stay",
- "meta1": "Overnight",
- "body": "Riders on multi-day routes look for one thing first: a safe place for the bike. Show your storage and charging and get picked for the night."
- },
- {
- "tag": "Utility",
- "title": "Bike shops & services",
- "meta0": "Repair",
- "meta1": "Charging",
- "body": "Repair, rental, charging or a pump at the door. Appear in the utility layer riders open when something goes wrong."
- }
- ]
- },
- "how": {
- "title": "how it works",
- "stepLabel": "step",
- "steps": [
- {
- "title": "Request access",
- "body": "Create an account and tell us about your business. It takes two minutes."
- },
- {
- "title": "We approve your place",
- "body": "We check your request and connect your place on the map."
- },
- {
- "title": "Manage it yourself",
- "body": "Edit details, opening hours, photos and bike facilities any time."
- },
- {
- "title": "Riders find you",
- "body": "You show up in Explore and on the routes that pass you."
- }
- ]
- },
- "data": {
- "title": "tourism boards & data partners",
- "body": "We work with open data providers and local partners to keep places, chargers and routes accurate. If you manage cycling data, tourism listings or a network of venues, let’s connect it.",
- "cta": "Become a data partner"
- },
- "faq": {
- "title": "questions from businesses",
- "items": [
- {
- "q": "Does it cost anything?",
- "a": "Listing your place is free during our launch phase. Later we plan to add paid options, for example extra visibility on routes. We’ll tell you well in advance before anything changes."
- },
- {
- "q": "What counts as bike-friendly?",
- "a": "Any of these helps: a place to park or lock a bike, secure storage, a pump or tools, or a socket where riders can charge an e-bike."
- },
- {
- "q": "Which countries do you cover?",
- "a": "Zyflow is live in 8 countries, starting from Slovenia and its neighbours."
- },
- {
- "q": "How do I change my details?",
- "a": "Sign in to the partner portal and edit your place directly. Changes to the map pin or place type go through our team."
- }
- ],
- "footnote": "Not sure if you fit?",
- "footLink": "Ask us"
- },
- "final": {
- "title": "ready when you are",
- "body": "Tell us about your place and we’ll put it in front of the riders already planning to pass by.",
- "cta": "List your place",
- "ctaSecondary": "Talk to us first"
- },
- "signin": "Already a partner? Sign in"
- },
- "press": {
- "hero": {
- "crumb1": "Press & investors",
- "crumb2": "Fact sheet",
- "titleHtml": "zyflow<br />at a glance",
- "lede": "We’re just getting started. Zyflow helps cyclists and e-bike riders find bike-friendly places and ride between them feeling safe. Here are the facts, the team and how to reach us.",
- "price": "Early stage",
- "unit": " · 2026",
- "nextLabel": "Made in",
- "nextValue": "Slovenia",
- "cta": "Request our deck",
- "eyebrow": "For press and investors"
- },
- "tiles": [
- {
- "value": "iOS + Android",
- "label": "Live in both stores"
- },
- {
- "value": "8",
- "label": "Countries live"
- },
- {
- "value": "7,400+",
- "label": "Chargers mapped"
- },
- {
- "value": "Open Data Hub",
- "label": "Signed data partner"
- }
- ],
- "about": {
- "title": "the short version",
- "p1": "Most maps show cyclists roads. Zyflow shows them where to stop: stays, coffee stops and restaurants that welcome bikes, plus chargers, water and repair. Road closures and bike theft by area are on the map too, so riders can explore without worry.",
- "p2": "Zyflow is built by HERKO d.o.o. in Slovenia and launched publicly on iOS and Android in 2026."
- },
- "next": {
- "title": "what’s next",
- "items": [
- "More countries and places",
- "More safety features",
- "Better route planning",
- "A bike passport",
- "Rider community"
- ]
- },
- "team": {
- "title": "the team",
- "link": "About us",
- "members": [
- {
- "name": "jakob",
- "role": "Co-founder & CEO",
- "bio": "Leads product and partnerships: the app, the data behind it and the partner network."
- },
- {
- "name": "tanja",
- "role": "Co-founder & COO",
- "bio": "Runs the company: administration, contracts, legal and tax, marketing and local partners."
- }
- ]
- },
- "kit": {
- "title": "press kit",
- "body": "We haven’t been in the press yet, so this is a first. If you’re writing about cycling, e-bikes or travel in the region, we’d love to talk, and we’ll send everything you need.",
- "items": [
- {
- "name": "Logo files",
- "note": "SVG + PNG"
- },
- {
- "name": "App screenshots",
- "note": "iOS + Android"
- },
- {
- "name": "Founder photos",
- "note": "On request"
- },
- {
- "name": "Fact sheet",
- "note": "This page"
- }
- ]
- },
- "final": {
- "title": "interested in zyflow?",
- "body": "We share our deck and numbers directly. Tell us a little about yourself and we’ll get back to you.",
- "cta": "Request our deck",
- "ctaSecondary": "Press enquiries"
- }
- },
- "routes": {
- "blejcanka": {
- "crumbType": "Touring",
- "titleHtml": "blejčanka",
- "lede": "Kranj’s western petal to Lake Bled: nearly 80 km, close to 1,000 m of climbing, and the classic Gorenjska postcard, Kropa, the lake, and Radovljica’s square.",
- "place": "kranj",
- "coords": "46.24° N, 14.35° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "79 <span>km</span>",
- "elevationHtml": "944 <span>m</span>",
- "difficulty": "Intermediate",
- "intro": "Blejčanka is the beauty day of the Kranjska roža. You leave the Sava plain, climb toward Jamnik until the Karawanks open, drop into Kropa’s ironworking streets, then arrive at Bled’s castle rock and shoreline before swinging through Radovljica on the way home. It is long enough to matter and scenic enough to justify every metre.",
- "asideNote": "Touring · Kranjska roža · Visit Kranj",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Blejčanka (79 km to Bled) | Zyflow",
- "metaDescription": "Blejčanka: Kranj to Lake Bled past Kropa and Radovljica: 79 km and 944 m of climbing. Open in Zyflow.",
- "climb": "944 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "79 km",
- "unit": " · 944 m",
- "sections": [
- {
- "title": "Climb toward the Karawanks",
- "body": "From central Kranj the road tilts up toward Jamnik. After a few kilometres of honest climbing the ridge views appear, a clear signal you have left the flat petal routes behind.",
- "body2": "Kropa follows: narrow lanes, forge heritage, and one of the most atmospheric villages on any of the flower rides. Pause here before the landscape opens fully toward the lake."
- },
- {
- "title": "Bled, then Radovljica",
- "body": "Bled is the emotional peak of the day, island church, castle, and the shoreline loop that every visitor recognises. Ride it with traffic awareness; the reward is the postcard you came for.",
- "body2": "Radovljica’s baroque square is the cultural cool-down before the return toward Kranj. By then the climbing is largely behind you, but the legs will feel the full 944 m."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "This is an e-bike sweet spot: almost 80 km and nearly a vertical kilometre. Pin chargers near Bled and a lunch stop in Kropa or Radovljica before you roll out.",
- "body2": "Check wind on the exposed sections and save an early café in Kranj for the finish. Open the route in Zyflow when you want navigation plus bike-friendly places on the same map."
- }
- ]
- },
- "jezerjanka": {
- "crumbType": "Touring",
- "titleHtml": "jezerjanka",
- "lede": "North from Kranj along the Kokra into Slovenia’s first Mountain Village, glacier valleys, alpine farms and a quieter rhythm than the lake circuits.",
- "place": "kranj",
- "coords": "46.24° N, 14.35° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "76 <span>km</span>",
- "elevationHtml": "603 <span>m</span>",
- "difficulty": "Intermediate",
- "intro": "Jezerjanka is the alpine petal of the Kranjska roža. Instead of postcard lakes you get working high farms, sudden rock walls and the wide green bowl of Jezersko under the Kamnik–Savinja Alps. At 76 km with around 600 m of climbing it is committing without becoming a race.",
- "asideNote": "Touring · Kranjska roža · Visit Kranj",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Jezerjanka (76 km to Jezersko) | Zyflow",
- "metaDescription": "Jezerjanka follows the Kokra from Kranj to Jezersko: 76 km and 603 m of climbing. Open in Zyflow.",
- "climb": "603 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "76 km",
- "unit": " · 603 m",
- "sections": [
- {
- "title": "Up the Kokra",
- "body": "Leave Kranj and settle into the valley road through Preddvor. The Kokra narrows gradually; traffic thins; the peaks start to stack ahead of you.",
- "body2": "This is where the day changes character, from town touring into mountain valley riding. Keep snacks handy; services grow thinner the higher you go."
- },
- {
- "title": "Into Jezersko",
- "body": "Jezersko opens as a glacial amphitheatre: meadows, farmhouses and ridges that earned the village its Mountain Village status. Ride the valley floor, then decide whether to add a short local loop if legs allow.",
- "body2": "The return follows the same corridor south. Descend with room for hikers and farm traffic, and save a café stop in Preddvor if you skipped lunch higher up."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Map water and food before you leave Kranj, the middle stretch is lean. A charger near the valley mouth is insurance on an e-bike day.",
- "body2": "Pair Jezerjanka with a quieter Jezersko half-day (Mali vrh or Ravenska Kočna) if you overnight. Open the main line in Zyflow for navigation and place filters."
- }
- ]
- },
- "jezerski-vrh": {
- "crumbType": "Alpine",
- "titleHtml": "jezerski vrh",
- "lede": "Climb to the former border crossing, then on to Ankova planina for a full panorama of Ravenska Kočna and the Kamnik Alps.",
- "place": "jezersko",
- "coords": "46.40° N, 14.50° E",
- "durationHtml": "2.5 <span>h</span>",
- "distanceHtml": "18.2 <span>km</span>",
- "elevationHtml": "457 <span>m</span>",
- "difficulty": "Intermediate",
- "intro": "Jezerski vrh is the classic Jezersko panorama ride: mineral spring at the start, border saddle in the middle, meadow lookout at the end. About 18.2 km and 457 m fit in roughly two and a half hours.",
- "asideNote": "Alpine · Jezersko cycling path",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Jezerski vrh – Ankova planina | Zyflow",
- "metaDescription": "Jezerski vrh to Ankova planina, a panorama above Ravenska Kočna: 18.2 km and 457 m of climbing. Open in Zyflow.",
- "climb": "457 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "18.2 km",
- "unit": " · 457 m",
- "sections": [
- {
- "title": "From slatina to the saddle",
- "body": "Share the early road with road cyclists aiming for the border. Fill a little Jezerska slatina at the organised point, a sip is enough; save more for the return bag.",
- "body2": "Climb to the former border crossing. Between the Slovenian and Austrian buildings, turn left for the steeper finish."
- },
- {
- "title": "Ankova planina",
- "body": "Views open fast: Ravenska Kočna, the Kamnik–Savinja wall, then the whole Jezersko valley with Veliki vrh, Kozji vrh and Storžič. Continue on easier road to Ankova planina and the old military post.",
- "body2": "Return the same way. Detour to St Andrew’s church and Šenkova domačija on the way down if time allows."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Weather turns fast on the saddle, check shelter options before the last climb. Pin the slatina and a valley lunch.",
- "body2": "Open Jezerski vrh in Zyflow as the bigger-view sibling to Mali vrh on a Jezersko weekend."
- }
- ]
- },
- "k11-planine-pod-kosuto": {
- "crumbType": "Alpine",
- "titleHtml": "planine pod košuto",
- "lede": "Tržič’s alpine flagship: forest roads and pasture shelves under Košuta’s long white wall, big climbing, bigger views.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "39.7 <span>km</span>",
- "elevationHtml": "1740 <span>m</span>",
- "difficulty": "Hard",
- "intro": "K11 is the high signature of the Tržič network. You leave town for steep forest approaches that open onto a chain of planine under Košuta, with views that stretch toward Austria. This is a full mountain day, not a café loop.",
- "asideNote": "Alpine · Visit Tržič · K11",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K11 Planine pod Košuto | Zyflow",
- "metaDescription": "One of Gorenjska’s most scenic MTB tours: shady forests and alpine pastures under the Košuta ridge (Pungrat, Šija, Kofce).",
- "climb": "1740 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "39.7 km",
- "unit": " · 1740 m",
- "sections": [
- {
- "title": "Into the Karawanks foothills",
- "body": "Climb out of Tržič as the asphalt thins and the forest takes over. Gradients come in waves; shade helps, but the elevation keeps coming.",
- "body2": "Early turnaround options exist if weather shifts. The higher pastures reward those who keep a reserve for the last shelves."
- },
- {
- "title": "Pastures under Košuta",
- "body": "The limestone ridge of Košuta stays in view once you clear the trees. Alpine huts and meadow tracks define the middle of the day, shared with hikers, cattle and silence.",
- "body2": "Descend with discipline. Forest roads cut speed slowly; loose sections punish late braking."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Confirm hut openings and water before you commit. Pin an emergency descent and a town café for the finish.",
- "body2": "Open K11 in Zyflow when you want the line on the map with weather and place context, this is not a route to improvise hungry."
- }
- ]
- },
- "k16-trzic-jezersko": {
- "crumbType": "Alpine",
- "titleHtml": "tržič – jezersko",
- "lede": "A linking alpine day from Tržič’s Karawanks flank across to the glacier bowl of Jezersko, valley to valley, sustained climbing.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "28.1 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Hard",
- "intro": "K16 is the bridge in the Tržič shortlist: fewer postcard stops, more committed mountain kilometres, and a true change of valley when you finally drop toward Jezersko.",
- "asideNote": "Alpine · Visit Tržič · K16",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K16 Tržič – Jezersko | Zyflow",
- "metaDescription": "A demanding forest link from Tržič toward Jezersko, quiet, steep in places, rewarded with solitude and mountain views.",
- "climb": "1299 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "28.1 km",
- "unit": " · 1299 m",
- "sections": [
- {
- "title": "Leaving Tržič",
- "body": "Climb away from town into forest that keeps gaining. The early kilometres set the tone, this is a transfer with teeth, not a scenic meander.",
- "body2": "Carry more food than you think. Services in the middle are thin compared with the lake petals out of Kranj."
- },
- {
- "title": "Into Jezersko",
- "body": "The high traverse eventually tips you toward Jezersko’s open meadows and glacial walls. The contrast with Tržič’s industrial gateway is the point of the ride.",
- "body2": "Decide in advance whether Jezersko is the finish (overnight) or a turnaround. Both work; only one should be improvised."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Plan charging and meals at both ends. Mark a bail-out if weather closes the high section.",
- "body2": "Open K16 in Zyflow to keep the full corridor visible and to browse Jezersko’s shorter loops for the next morning."
- }
- ]
- },
- "k21-dom-pod-storzicem": {
- "crumbType": "Alpine",
- "titleHtml": "dom pod storžičem",
- "lede": "A focused hut day from Tržič toward Dom pod Storžičem, forest gradients, mountain air and a clear turnaround under Storžič’s pyramid.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "18.1 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Hard",
- "intro": "K21 is built around one goal: reach the hut under Storžič, eat, then descend with fresh attention for Tržič’s streets. It is shorter than Košuta or Ljubelj in spirit, still honestly alpine.",
- "asideNote": "Alpine · Visit Tržič · K21",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K21 Dom pod Storžičem | Zyflow",
- "metaDescription": "A shorter climb into Lomska dolina toward Dom pod Storžičem, a classic Tržič mountain hut approach.",
- "climb": "280 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "18.1 km",
- "unit": " · 280 m",
- "sections": [
- {
- "title": "Forest approach",
- "body": "Climb from town into trees that frame glimpses of the summit. The gradient is steady rather than theatrical, good rhythm riding.",
- "body2": "Shared tracks mean courtesy. Announce passes and expect hikers near the hut."
- },
- {
- "title": "Hut and descent",
- "body": "Dom pod Storžičem is the pause that defines the day. Check opening times; a closed hut turns a celebration into a cold sandwich stop.",
- "body2": "Descend the way you came. Brake early on loose corners and save a café in Tržič for the emotional finish."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Pin hut hours and a downhill coffee before you leave. Weather under Storžič can shift while you climb.",
- "body2": "Open K21 in Zyflow for the approach line and to keep the hut location obvious when the forest closes in."
- }
- ]
- },
- "k35-prelaz-ljubelj": {
- "crumbType": "Alpine",
- "titleHtml": "prelaz ljubelj",
- "lede": "Tržič’s signature pass: thirteen hairpins on Europe’s oldest road pass, mostly car-free, with a hut at 1,370 m and about 900 m of climbing.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "3 <span>h</span>",
- "distanceHtml": "26 <span>km</span>",
- "elevationHtml": "900 <span>m</span>",
- "difficulty": "Intermediate",
- "intro": "K35 is the ride people mean when they say “Ljubelj by bike.” From the bus station in Tržič you climb through Podljubelj, share a careful stretch of main road, then take the historic pass that is closed to cars most of the year. The last 300 vertical metres are steep; the hut and the view into Austria are the payoff.",
- "asideNote": "Alpine · Visit Tržič · K35 · 3 h",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K35 Prelaz Ljubelj (26 km, 900 m) | Zyflow",
- "metaDescription": "Climb the old Ljubelj / Loibl pass road, Europe’s oldest road pass, closed to cars, with 13 hairpins and big Karawanks views.",
- "climb": "900 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "26 km",
- "unit": " · 900 m",
- "sections": [
- {
- "title": "Tržič to Podljubelj",
- "body": "Start opposite the bus station and ride north through the old town toward Podljubelj. Village streets give way to the valley approach; parking and services are still close if you need a last stop.",
- "body2": "Beyond the village, a gravel link runs beside the main road toward Ljubelj before you briefly join the tunnel approach. Traffic here is real, ride assertively and predictably."
- },
- {
- "title": "The old pass",
- "body": "Before the tunnel, peel right onto the historic road. Thirteen hairpins and raw gradient remain. This is the section shared with hikers and, one September Sunday, vintage race cars, the rest of the year it belongs to legs and lungs.",
- "body2": "The pass hut is the turnaround. Eat, look into Austria, then descend the same way with cool brakes and eyes up for oncoming riders."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Budget about three hours and 26 km out-and-back. Pin the hut opening and a recovery café in Tržič before you start the steep finale.",
- "body2": "Open K35 in Zyflow for navigation on the mixed surfaces, and keep a weather eye on the saddle, it turns quickly at 1,370 m."
- }
- ]
- },
- "k42-roznovenska": {
- "crumbType": "Touring",
- "titleHtml": "rožnovenska pot",
- "lede": "Tržič’s culture-forward loop through Brezje pri Tržiču, pilgrimage landmarks, valley towns and touring pace without a high pass.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "20.1 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Easy–intermediate",
- "intro": "K42 is for mixed groups and heritage days: quieter roads, churches and villages, and enough distance to feel complete without Košuta’s commitment.",
- "asideNote": "Touring · Visit Tržič · K42",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K42 Rožnovenska pot | Zyflow",
- "metaDescription": "Follow the Rožnovenska pilgrimage route from Tržič through Brezje pri Tržiču: churches, villages and rolling Gorenjska roads.",
- "climb": "369 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "20.1 km",
- "unit": " · 369 m",
- "sections": [
- {
- "title": "Valley heritage",
- "body": "Link Tržič with Brezje pri Tržiču. Café density is kinder than on the alpine set; photo stops come naturally.",
- "body2": "Gradients stay friendly. This is the day you bring someone who loves places more than watts."
- },
- {
- "title": "Pace and pauses",
- "body": "Do not rush the squares and churches, they are the point. Ride assertively on busier connectors, then slow again in village cores.",
- "body2": "A bakery stop on the return seals the tone of the route."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Save lunch pins along the corridor and treat K42 as a warm-up before harder Tržič days.",
- "body2": "Open the route in Zyflow to keep cultural stops and navigation on one map."
- }
- ]
- },
- "k43-dobrca": {
- "crumbType": "Alpine",
- "titleHtml": "dobrča",
- "lede": "A serious alpine day from Tržič toward Dobrča, long climbs, ridge air and the feeling of riding the Karawanks rather than around them.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "26.9 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Hard",
- "intro": "K43 sits with the harder Tržič alpine set: sustained climbing, thinner traffic higher up, and panoramas that justify an early start.",
- "asideNote": "Alpine · Visit Tržič · K43",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K43 Dobrča | Zyflow",
- "metaDescription": "From Tržič along the Gorenjska “balcony” and up to the hut on Dobrča, a popular alpine day ride with big views.",
- "climb": "2067 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "26.9 km",
- "unit": " · 2067 m",
- "sections": [
- {
- "title": "Toward the ridge",
- "body": "Climb out of town into forest roads that refuse to flatten. Patience matters more than peak power.",
- "body2": "Pack layers. Exposure increases as trees thin and the ridge wind finds you."
- },
- {
- "title": "Dobrča rewards",
- "body": "Wide Karawanks views are the payment for the morning’s work. Turn around with time for a careful descent.",
- "body2": "This is not a café-hopping loop, carry food and respect weather windows."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Mark emergency descents and a recovery stop in Tržič. Check conditions before the final push.",
- "body2": "Open K43 in Zyflow so the line and bail-outs stay visible when fog or fatigue set in."
- }
- ]
- },
- "k51-udin-borst": {
- "crumbType": "Gravel",
- "titleHtml": "udin boršt",
- "lede": "Foothill gravel around Udin boršt, forest tracks, gentle rollers and adventure without a high pass.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "25.3 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Intermediate",
- "intro": "K51 is the confident gravel day of the Tržič shortlist: more dirt than asphalt, still close enough to town that a café finish is easy.",
- "asideNote": "Gravel · Visit Tržič · K51",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K51 Udin boršt | Zyflow",
- "metaDescription": "Explore the karst forest of Udin boršt, sinkholes, quiet tracks and bandit lore, looping from Tržič through the foothills.",
- "climb": "286 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "25.3 km",
- "unit": " · 286 m",
- "sections": [
- {
- "title": "Forest edge riding",
- "body": "Mix valley approaches with tracks through the boršt. Expect roots, soft patches after rain and the pleasure of canopy shade.",
- "body2": "Keep tyre pressure honest. Slick clay turns playful into careful."
- },
- {
- "title": "Turn back when you like",
- "body": "The beauty of this loop family is flexibility, extend into the reserve or shorten toward asphalt whenever energy dips.",
- "body2": "Shared paths mean modest speeds near walkers."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Pin a café return in Tržič and an exit to asphalt if the forest turns muddy.",
- "body2": "Open K51 in Zyflow to see the gravel corridor beside the easier K52 bells loop."
- }
- ]
- },
- "k52-pot-treh-zvonov": {
- "crumbType": "Touring",
- "titleHtml": "pot treh zvonov",
- "lede": "The easy family loop of the Tržič set, gentle terrain, village bells and a rhythm that works for mixed abilities.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "10 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Easy",
- "intro": "K52 is the gateway ride: approachable distance and gradient, still unmistakably Gorenjska countryside around Tržič. Bring kids, recovery legs or anyone new to the local roads.",
- "asideNote": "Touring · Visit Tržič · K52",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K52 Pot treh zvonov | Zyflow",
- "metaDescription": "An easy foothill ride through Udin boršt on the Path of Three Bells, ideal for families and an e-bike warm-up around Tržič.",
- "climb": "144 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "10 km",
- "unit": " · 144 m",
- "sections": [
- {
- "title": "Bells and villages",
- "body": "Quiet roads and short connectors pass churches and hamlets. The “three bells” idea is the cultural thread, stop, listen, keep rolling.",
- "body2": "Surfaces stay friendly. This is gravel-lite at most, not a mud-fest."
- },
- {
- "title": "A first local day",
- "body": "Use K52 to learn the basin before you attempt Ljubelj. Landmarks stick; confidence builds.",
- "body2": "Ice cream and water stops are part of the design, do not optimise them away."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Save family-friendly pins before you roll out. Keep the map zoomed for short decisions.",
- "body2": "Open K52 in Zyflow as the soft entry to the Tržič catalogue."
- }
- ]
- },
- "k53-kriva-jelka": {
- "crumbType": "Gravel",
- "titleHtml": "kriva jelka",
- "lede": "Into the Udin boršt nature reserve toward the crooked fir, shaded tracks and a landmark finish in the forest.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "24 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Easy–intermediate",
- "intro": "K53 targets one of the area’s best-known forest landmarks. Expect soft ground after rain and a calmer alternative to the high alpine days above Tržič.",
- "asideNote": "Gravel · Visit Tržič · K53",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K53 Kriva jelka | Zyflow",
- "metaDescription": "Ride into Udin boršt to the Kriva jelka nature reserve, a calm mid-length forest loop from Tržič.",
- "climb": "386 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "24 km",
- "unit": " · 386 m",
- "sections": [
- {
- "title": "Reserve tracks",
- "body": "Enter Udin boršt and follow forest roads toward Kriva jelka. The canopy keeps the day cool; the landmark gives the ride a story.",
- "body2": "Share space with walkers. Announce yourself and keep speeds modest near the tree."
- },
- {
- "title": "Nature-first riding",
- "body": "This is not about elevation bragging rights. It is about quiet kilometres and a destination that locals name with a smile.",
- "body2": "If trails are saturated, divert to firmer connectors, the reserve prefers restraint."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Pin an asphalt exit and a town café. Pair with K51 or K52 for a gravel weekend without alpine weather risk.",
- "body2": "Open K53 in Zyflow to keep the reserve line obvious among similar forest tracks."
- }
- ]
- },
- "k55-gozd-udin-borst": {
- "crumbType": "Gravel",
- "titleHtml": "gozd – udin boršt",
- "lede": "A varied foothill loop linking Gozd with Udin boršt, more climbing than the family routes, still short of alpine grades.",
- "place": "tržič",
- "coords": "46.36° N, 14.31° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "26.9 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Intermediate",
- "intro": "K55 sits between easy bells and hard passes: useful when you want sweat without committing to Ljubelj or Košuta.",
- "asideNote": "Gravel · Visit Tržič · K55",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "K55 Gozd – Udin boršt | Zyflow",
- "metaDescription": "A varied foothill loop linking Gozd under Kriška gora with Udin boršt, mountain views without committing to high alpine terrain.",
- "climb": "763 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "26.9 km",
- "unit": " · 763 m",
- "sections": [
- {
- "title": "Gozd to the boršt",
- "body": "Link the Gozd side with Udin boršt tracks. Expect mixed surfaces and short punches rather than one long climb.",
- "body2": "Navigation matters, similar junctions repeat. A saved line prevents accidental extras."
- },
- {
- "title": "Training without drama",
- "body": "Use this as a midweek spin or a bridge day between culture and alpine plans. Elevation adds up without exposure.",
- "body2": "After rain, choose the firmer options; clay sections get ugly fast."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Pin a bakery return to Tržič and keep K55 beside K51/K52 on your map for mix-and-match weekends.",
- "body2": "Open the route in Zyflow so the foothill corridor stays clear."
- }
- ]
- },
- "kamnicanka": {
- "crumbType": "Touring",
- "titleHtml": "kamničanka",
- "lede": "The gentlest petal of the Kranjska roža: seventy kilometres of valley touring past castles, churches and Arboretum Volčji Potok, with barely 250 m of climbing.",
- "place": "kranj",
- "coords": "46.24° N, 14.35° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "70 <span>km</span>",
- "elevationHtml": "254 <span>m</span>",
- "difficulty": "Easy",
- "intro": "Kamničanka is the route you give someone on their first day in Gorenjska. It leaves Kranj on quiet roads, crosses Slovenia’s only motorway bike bridge near Vokle, and threads heritage stops all the way to Kamnik before a soft return through forest gravel and the Sava plain. Distance without drama, and still a full day that feels like a real tour.",
- "asideNote": "Touring · Kranjska roža · Visit Kranj",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Kamničanka (70 km) | Zyflow",
- "metaDescription": "Kamničanka from Kranj past Kamnik and Arboretum Volčji Potok: 70 km and 254 m of climbing. Open in Zyflow.",
- "climb": "254 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "70 km",
- "unit": " · 254 m",
- "sections": [
- {
- "title": "From Kranj across the plain",
- "body": "Roll out through Šenčur toward Adergas, where the Church of the Annunciation sits in open fields. The Češnjevek ponds and Strmol Castle follow soon after, then Grad near Cerklje, a string of stops that never forces a hard climb.",
- "body2": "Komenda’s oak woodland brings you to the edge of Kamnik. The old town is the natural lunch stop: short alleys, cafés, and enough shade to reset before the arboretum leg."
- },
- {
- "title": "Arboretum, gravel and home",
- "body": "From Šmarca the path reaches Arboretum Volčji Potok. Give it time, the park is one of the best mid-ride pauses in the flower network. Then Radomlje and Mengeš lead toward Vodice.",
- "body2": "The stretch from Vodice toward Voglje turns to good gravel under forest canopy. Back into Kranj the road flattens again: tidy asphalt, easy spinning, and a finish that still has battery to spare on an e-bike."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Mark a charger and a long lunch in Kamnik before you leave. If you want coffee with a view of bikes parked properly, filter for bike-friendly places along the loop.",
- "body2": "At 70 km and only 254 m of climbing this is the safest warm-up before Blejčanka or the Tržič alpine days. Save the GPX, then open the same line in Zyflow when you are ready to navigate."
- }
- ]
- },
- "ljubljancanka": {
- "crumbType": "Touring",
- "titleHtml": "ljubljančanka",
- "lede": "South from Kranj to the capital: countryside connectors, Smlednik Castle, then Tivoli and Ljubljana Castle as the urban climax of the day.",
- "place": "kranj",
- "coords": "46.24° N, 14.35° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "70 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Easy–intermediate",
- "intro": "Ljubljančanka is the city petal of the flower network, enough rural kilometres to feel like a tour, then a clear arrival in Ljubljana. At about 70 km it suits riders who want heritage and café density without alpine grades.",
- "asideNote": "Touring · Kranjska roža · Visit Kranj",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Ljubljančanka (70 km to Ljubljana) | Zyflow",
- "metaDescription": "Ljubljančanka: Kranj to Ljubljana past Smlednik Castle: 70 km and 460 m of climbing. Open in Zyflow.",
- "climb": "460 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "70 km",
- "unit": " · 460 m",
- "sections": [
- {
- "title": "Countryside approach",
- "body": "Leave Kranj on valley roads that gradually trade Gorenjska fields for the Ljubljana basin. Smlednik Castle is the landmark on the approach, a good photo and stretch stop.",
- "body2": "Keep an eye on busier connectors as you near the city. The ride is not technical; the challenge is attention in mixed traffic."
- },
- {
- "title": "Into Ljubljana",
- "body": "Tivoli offers a green entry, then the climb or walk up to Ljubljana Castle for the classic finish frame. Old-town streets below are dense with bike-friendly cafés if you filter for them.",
- "body2": "Return north the way you came, or rail-assist one direction if you prefer a one-way day. Either way, save battery for the urban segment."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Pin a lunch spot near the castle hill and a charger before the return. City traffic rewards a calm pace and clear routing.",
- "body2": "Open Ljubljančanka in Zyflow to keep navigation and place layers together, especially useful when streets get busy around the centre."
- }
- ]
- },
- "locanka": {
- "crumbType": "Touring",
- "titleHtml": "ločanka",
- "lede": "Kranj to Škofja Loka: stone bridges, castle hill and Crngrob on one of the flower’s prettiest heritage days.",
- "place": "kranj",
- "coords": "46.24° N, 14.35° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "64 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Easy–intermediate",
- "intro": "Ločanka is the heritage favourite of the Kranjska roža, slightly shorter than Blejčanka, denser in old-town atmosphere. You ride into a medieval basin that still feels painted, with Capuchin bridges and a castle above the confluence.",
- "asideNote": "Touring · Kranjska roža · Visit Kranj",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Ločanka (64 km to Škofja Loka) | Zyflow",
- "metaDescription": "Ločanka: Kranj to Škofja Loka's old town and castle: 64 km and 930 m of climbing. Open in Zyflow.",
- "climb": "930 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "64 km",
- "unit": " · 930 m",
- "sections": [
- {
- "title": "Toward the Loka basin",
- "body": "Leave Kranj on rolling connectors that tip you into the Škofja Loka landscape. The castle hill appears before the streets do, a useful landmark for pacing the day.",
- "body2": "Traffic is manageable if you keep to the signed cycling links. Save energy for wandering once you reach the centre."
- },
- {
- "title": "Old town and Crngrob",
- "body": "Škofja Loka’s twin bridges and lanes are the main event. Walk sections if crowds are thick; the point is the place, not average speed.",
- "body2": "A short detour to Crngrob adds the frescoed church many riders miss. Then turn for Kranj with a café stop still in the bag."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Pin a long lunch in the old town and a quieter return road. At around 64 km this fits neatly between a recovery spin and a full mountain day.",
- "body2": "Open Ločanka in Zyflow to navigate the approach and keep bike-friendly cafés visible when you arrive."
- }
- ]
- },
- "mali-vrh": {
- "crumbType": "Alpine",
- "titleHtml": "mali vrh",
- "lede": "A calm Jezersko half-day on forest road to the Mali vrh lookout, Virnikov Grintovec, Košuta and Storžič in one panoramic out-and-back.",
- "place": "jezersko",
- "coords": "46.40° N, 14.50° E",
- "durationHtml": "3 <span>h</span>",
- "distanceHtml": "17.3 <span>km</span>",
- "elevationHtml": "596 <span>m</span>",
- "difficulty": "Easy–intermediate",
- "intro": "Mali vrh is the gentle panorama of the Jezersko set. From the TIC in Zgornje Jezersko you cross a wooden bridge toward Makekova Kočna, climb kindly on forest road, pause at the built lookout, then continue to a bench at the end of the road above the Kokra.",
- "asideNote": "Alpine · Jezersko cycling path · ~3 h",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Mali vrh lookout (17.3 km) | Zyflow",
- "metaDescription": "Jezersko lookout under Mali vrh, out and back from Zgornje Jezersko: 17.3 km and 596 m of climbing. Open in Zyflow.",
- "climb": "596 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "17.3 km",
- "unit": " · 596 m",
- "sections": [
- {
- "title": "Toward Makekova Kočna",
- "body": "Orient at the panoramic board near the TIC, then take the asphalt toward Makekova Kočna until the fork for the farm. Stay straight onto the forest road that rises without drama.",
- "body2": "After roughly four kilometres the arranged lookout under Mali vrh appears on a sharp left bend, the first big view toward Virnikov Grintovec, Komatevra, Stegovnik, Storžič and the Košuta ridge."
- },
- {
- "title": "End bench and return",
- "body": "Continue on the same easy forest grade to the end of the road. The bench overlooks the Kokra and Jezerska Kočna, a quiet turnaround.",
- "body2": "Retrace the same line. Share space with hikers and keep speeds down on the shaded descent."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "About 17.3 km and 596 m with roughly three hours on the clock. Pin the TIC and a valley café for afterwards.",
- "body2": "Open Mali vrh in Zyflow when you want this short alpine spin beside Ravenska Kočna or Jezerski vrh for a multi-day Jezersko stay."
- }
- ]
- },
- "ravenska-kocna": {
- "crumbType": "Alpine",
- "titleHtml": "ravenska kočna",
- "lede": "Past Planšarsko jezero into Ravenska Kočna and up to Štularjeva planina, cirque walls, a cargo cableway and one of Jezersko’s most photogenic half-days.",
- "place": "jezersko",
- "coords": "46.40° N, 14.50° E",
- "durationHtml": "2.25 <span>h</span>",
- "distanceHtml": "16.6 <span>km</span>",
- "elevationHtml": "408 <span>m</span>",
- "difficulty": "Intermediate",
- "intro": "Ravenska Kočna is the postcard alpine loop of the valley: lake at the mouth, glacial walls ahead, and a final climb to Štularjeva planina facing Skuta. About 16.6 km and 408 m keep it ambitious but approachable.",
- "asideNote": "Alpine · Jezersko cycling path · ~2.25 h",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Ravenska Kočna – Štularjeva planina | Zyflow",
- "metaDescription": "Ravenska Kočna past Planšarsko jezero to Štularjeva planina: 16.6 km and 408 m of climbing. Open in Zyflow.",
- "climb": "408 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "16.6 km",
- "unit": " · 408 m",
- "sections": [
- {
- "title": "Lake into the valley",
- "body": "From the TIC ride to Planšarsko jezero and skirt it on the right. At the Pod Turni hunting lodge the barrier allows cyclists through into Ravenska Kočna.",
- "body2": "Asphalt becomes gravel past Ancel farm. Follow past the thematic path rest area and the car park to the lower station of the cargo cableway for Češka koča."
- },
- {
- "title": "Štularjeva planina",
- "body": "Turn right for the last two kilometres of climbing. On the pasture, take time for the cirque toward Skuta and the surrounding peaks to Goli vrh.",
- "body2": "Descend the same way with hikers in mind. Pause again at the lake, it earns a slow finish in every season."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Roughly 2 hours 15 minutes if you ride steadily. Pin the lake café options and respect shared trail etiquette.",
- "body2": "Open Ravenska Kočna in Zyflow beside Mali vrh for a two-loop Jezersko day with a swim or coffee between."
- }
- ]
- },
- "spodnji-virnik": {
- "crumbType": "Touring",
- "titleHtml": "spodnji virnik",
- "lede": "The shortest Jezersko ride: the tufa quarry, an active rock-forming spring and Spodnji Virnik farm with dairy worth packing out.",
- "place": "jezersko",
- "coords": "46.40° N, 14.50° E",
- "durationHtml": "1.5 <span>h</span>",
- "distanceHtml": "9.4 <span>km</span>",
- "elevationHtml": "304 <span>m</span>",
- "difficulty": "Easy",
- "intro": "Spodnji Virnik is the curiosity loop, geology you can watch happening, one steep pitch you may walk, and an organic farm finish with Grintovci views. About 9.4 km and 304 m in roughly ninety minutes.",
- "asideNote": "Touring · Jezersko cycling path · ~1.5 h",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Spodnji Virnik – tufa quarry | Zyflow",
- "metaDescription": "Short Jezersko loop to the tufa quarry and Spodnji Virnik farm: 9.4 km and 304 m of climbing. Open in Zyflow.",
- "climb": "304 m",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "9.4 km",
- "unit": " · 304 m",
- "sections": [
- {
- "title": "Into the Kokra side valley",
- "body": "Drop from Zgornje Jezersko to Spodnji Kraj and turn toward the upper Kokra. Virnikov Grintovec appears on the right as you roll the valley floor.",
- "body2": "Past the first rise you reach tufa stacks and the active spring where calcium carbonate is still depositing rock. It is the educational heart of the ride."
- },
- {
- "title": "Farm and spring walk",
- "body": "After the stream crossing a short steep climb leads toward Spodnji Virnik. Leave the bike and walk minutes to the spring; then taste cheeses, yogurt and skuta at the farm if they are offering.",
- "body2": "Descend the gravel to the main road and spin home. One punchy pitch is walkable, still an easy win among short rides."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Bring a backpack for dairy. Pin the farm and the TIC so the short loop never feels lost.",
- "body2": "Open Spodnji Virnik in Zyflow as the rest-day or evening spin beside the bigger Jezersko panoramas."
- }
- ]
- },
- "trzicanka": {
- "crumbType": "Touring",
- "titleHtml": "tržičanka",
- "lede": "Kranj’s northern petal into Tržič, old-town streets, Kamen Castle ruins and the gateway to Ljubelj, Košuta and Udin boršt.",
- "place": "kranj",
- "coords": "46.24° N, 14.35° E",
- "durationHtml": "1 <span>day</span>",
- "distanceHtml": "68 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Intermediate",
- "intro": "Tržičanka connects the Kranj flower to the Tržič alpine catalogue. Ride it as a destination day into a historic basin under the Karawanks, or as the approach before a harder pass the next morning.",
- "asideNote": "Touring · Kranjska roža · Visit Kranj",
- "cta": "Open in Zyflow",
- "ctaSecondary": "Get the app",
- "gpxLabel": "Download GPX",
- "metaTitle": "Tržičanka (68 km to Tržič) | Zyflow",
- "metaDescription": "Tržičanka: Kranj to Tržič through the Kokra canyon and on to Kamen Castle: 68 km. Open in Zyflow.",
- "climb": ", ",
- "climbLabel": "Elevation",
- "durationLabel": "Duration",
- "difficultyLabel": "Difficulty",
- "nextLabel": "Best season",
- "nextValue": "Apr – Oct",
- "price": "68 km",
- "unit": "",
- "sections": [
- {
- "title": "North into the basin",
- "body": "Valley riding from Kranj builds toward Tržič’s gateway feel. The landscape tightens; the town’s historic core and factory heritage sit under steep forest walls.",
- "body2": "Kamen Castle’s ruins are the classic spur stop, a short climb for a wide view back over the valley."
- },
- {
- "title": "Tržič as a hub",
- "body": "Once in town you stand at the start of K35 Ljubelj, the Košuta pastures and the softer Udin boršt gravel days. Use Tržičanka to arrive fresh enough to explore the centre.",
- "body2": "Cafés and supplies are denser here than on the high routes. Stock up before you commit to anything steeper."
- },
- {
- "title": "How to ride it with Zyflow",
- "body": "Save Tržičanka as a transfer day, then chain K35 or K52 from the same map. Pin a charger in town if you are on an e-bike.",
- "body2": "Open the route in Zyflow for the approach navigation, then browse nearby alpine lines without leaving the app."
- }
- ]
- }
- },
- "alts": {
- "appMap": "Zyflow app map showing bike-friendly places, chargers and water points",
- "polaroid1": "Two cyclists riding a rocky mountain trail",
- "aboutPolaroidCyclist": "Cyclist riding past green alpine meadows",
- "polaroid3": "Group of cyclists taking a break in a pine forest",
- "ljubljanaBridge": "Ljubljanica river and the Triple Bridge in Ljubljana",
- "coffeeSign": "Café sign reading \"cyclists need coffee\" on a village street",
- "feature2": "Two bike tourers on an alpine road below snowy peaks",
- "tourHike": "Hikers on a misty grassy ridge",
- "tour4wd": "Off-road vehicle with a rooftop tent",
- "tourKayak": "Kayakers paddling on a river",
- "catSlovenia": "Lake Bled with its island church and the Julian Alps",
- "catCroatia": "Aerial view of Rovinj old town on the Istrian coast",
- "feature1": "Bikes parked on a historic town square",
- "journal1": "Forested hills at sunset",
- "feature3": "Cyclists on a valley trail below jagged alpine peaks",
- "social1": "Off-road vehicle in a desert canyon",
- "social2": "Bikepacking camp with a tent by a lake at dusk",
- "social3": "Kayak on a calm sea with icebergs"
- },
- "guides": {
- "name": "Guides",
- "index": {
- "title": "Rider questions, answered",
- "lede": "Short answers for cyclists and e-bike riders, with the numbers and sources behind them.",
- "empty": "No guides in this language yet.",
- "emptyLink": "Read the English guides"
- },
- "dataLabel": "Key numbers",
- "dataSource": "{source}, as of {date}",
- "mapCredit": "{credit}, as of {date}",
- "cta": {
- "title": "Find your stops in Zyflow",
- "ios": "App Store",
- "android": "Google Play",
- "planner": "Open in the planner"
- },
- "checked": "Checked on",
- "sources": "Sources",
- "accessed": "accessed {date}",
- "related": "Related guides",
- "fixtureNote": "Test guide for previewing the page layout. It is never published."
- }
+  "meta": {
+    "brand": "Zyflow",
+    "locale": "en",
+    "source": "zyflow",
+    "pages": {
+      "open": {
+        "title": "Zyflow: Open in the app",
+        "description": "Open this place or ride in the Zyflow app, or get the app free on iOS and Android."
+      },
+      "404": {
+        "title": "Zyflow: Page not found",
+        "description": "This page does not exist. Head home or explore routes in Zyflow."
+      },
+      "home": {
+        "title": "Zyflow: Bike-Friendly Places for Cyclists & E-Bike Riders",
+        "description": "Find bike-friendly stays, coffee stops, restaurants and chargers across 8 countries. Free app for cyclists and e-bike riders on iOS and Android."
+      },
+      "about": {
+        "title": "Zyflow: The Team Behind Bike-Friendly Places",
+        "description": "Meet the team behind Zyflow, the app for finding bike-friendly stays, coffee stops, restaurants and chargers. Made in Slovenia by HERKO d.o.o."
+      },
+      "tours": {
+        "title": "Zyflow: Cycling Routes in Gorenjska",
+        "description": "20 cycling routes across Kranj, Tržič and Jezersko. Open any route in Zyflow."
+      },
+      "tour": {
+        "title": "Zyflow: Cycling Routes",
+        "description": "Explore Gorenjska cycling routes and open them in Zyflow."
+      },
+      "blog": {
+        "title": "Zyflow: Journal",
+        "description": "Guides to bike-friendly places, safer rides and product news from the Zyflow team for cyclists and e-bike riders."
+      },
+      "guides": {
+        "title": "Zyflow Guides: rider questions, answered",
+        "description": "Short, checked answers to questions cyclists and e-bike riders ask, with real numbers, sources and the date we last checked them."
+      },
+      "contact": {
+        "title": "Zyflow: Contact",
+        "description": "List your place, ask about routes or talk to us about partnerships and investment. Reach the Zyflow team at support@zyflow.eu."
+      },
+      "legal": {
+        "title": "Zyflow: Legal",
+        "description": "Privacy Policy, Cookie Policy, and Terms of Service for Zyflow and HERKO d.o.o."
+      },
+      "legal-privacy": {
+        "title": "Zyflow, Privacy Policy",
+        "description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use Zyflow."
+      },
+      "legal-cookies": {
+        "title": "Zyflow, Cookie Policy",
+        "description": "How Zyflow uses cookies and similar technologies on zyflow.eu, and how you can control your preferences."
+      },
+      "legal-terms": {
+        "title": "Zyflow, Terms of Service",
+        "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
+      },
+      "styleguide": {
+        "title": "Zyflow, Design System Styleguide",
+        "description": "Internal design tokens and components for the Zyflow rebuild."
+      },
+      "business": {
+        "title": "Zyflow: For Businesses",
+        "description": "Put your café, restaurant, stay or bike shop in front of cyclists and e-bike riders. Show your bike parking, storage or charger on the Zyflow map."
+      },
+      "press": {
+        "title": "Zyflow: Press & Investors",
+        "description": "Facts, team and contact for press and investors. Zyflow helps cyclists find bike-friendly places and ride there feeling safe."
+      },
+      "tour-blejcanka": {
+        "title": "Zyflow: Blejčanka",
+        "description": "Blejčanka: Kranj to Lake Bled past Kropa and Radovljica: 79 km and 944 m of climbing. Open in Zyflow."
+      },
+      "tour-jezerjanka": {
+        "title": "Zyflow: Jezerjanka",
+        "description": "Jezerjanka follows the Kokra from Kranj to Jezersko: 76 km and 603 m of climbing. Open in Zyflow."
+      },
+      "tour-jezerski-vrh": {
+        "title": "Zyflow: Jezerski vrh – Ankova planina",
+        "description": "Jezerski vrh to Ankova planina, a panorama above Ravenska Kočna: 18.2 km and 457 m of climbing. Open in Zyflow."
+      },
+      "tour-k11-planine-pod-kosuto": {
+        "title": "Zyflow: Planine pod Košuto",
+        "description": "One of Gorenjska’s most scenic MTB tours: shady forests and alpine pastures under the Košuta ridge (Pungrat, Šija, Kofce)."
+      },
+      "tour-k16-trzic-jezersko": {
+        "title": "Zyflow: Tržič – Jezersko",
+        "description": "A demanding forest link from Tržič toward Jezersko, quiet, steep in places, rewarded with solitude and mountain views."
+      },
+      "tour-k21-dom-pod-storzicem": {
+        "title": "Zyflow: Dom pod Storžičem",
+        "description": "A shorter climb into Lomska dolina toward Dom pod Storžičem, a classic Tržič mountain hut approach."
+      },
+      "tour-k35-prelaz-ljubelj": {
+        "title": "Zyflow: Prelaz Ljubelj",
+        "description": "Climb the old Ljubelj / Loibl pass road, Europe’s oldest road pass, closed to cars, with 13 hairpins and big Karawanks views."
+      },
+      "tour-k42-roznovenska": {
+        "title": "Zyflow: Rožnovenska pot",
+        "description": "Follow the Rožnovenska pilgrimage route from Tržič through Brezje pri Tržiču: churches, villages and rolling Gorenjska roads."
+      },
+      "tour-k43-dobrca": {
+        "title": "Zyflow: Dobrča",
+        "description": "From Tržič along the Gorenjska “balcony” and up to the hut on Dobrča, a popular alpine day ride with big views."
+      },
+      "tour-k51-udin-borst": {
+        "title": "Zyflow: Udin boršt",
+        "description": "Explore the karst forest of Udin boršt, sinkholes, quiet tracks and bandit lore, looping from Tržič through the foothills."
+      },
+      "tour-k52-pot-treh-zvonov": {
+        "title": "Zyflow: Pot treh zvonov",
+        "description": "An easy foothill ride through Udin boršt on the Path of Three Bells, ideal for families and an e-bike warm-up around Tržič."
+      },
+      "tour-k53-kriva-jelka": {
+        "title": "Zyflow: Kriva jelka",
+        "description": "Ride into Udin boršt to the Kriva jelka nature reserve, a calm mid-length forest loop from Tržič."
+      },
+      "tour-k55-gozd-udin-borst": {
+        "title": "Zyflow: Gozd – Udin boršt",
+        "description": "A varied foothill loop linking Gozd under Kriška gora with Udin boršt, mountain views without committing to high alpine terrain."
+      },
+      "tour-kamnicanka": {
+        "title": "Zyflow: Kamničanka",
+        "description": "Kamničanka from Kranj past Kamnik and Arboretum Volčji Potok: 70 km and 254 m of climbing. Open in Zyflow."
+      },
+      "tour-ljubljancanka": {
+        "title": "Zyflow: Ljubljančanka",
+        "description": "Ljubljančanka: Kranj to Ljubljana past Smlednik Castle: 70 km and 460 m of climbing. Open in Zyflow."
+      },
+      "tour-locanka": {
+        "title": "Zyflow: Ločanka",
+        "description": "Ločanka: Kranj to Škofja Loka's old town and castle: 64 km and 930 m of climbing. Open in Zyflow."
+      },
+      "tour-mali-vrh": {
+        "title": "Zyflow: Jezersko – Mali vrh lookout",
+        "description": "Jezersko lookout under Mali vrh, out and back from Zgornje Jezersko: 17.3 km and 596 m of climbing. Open in Zyflow."
+      },
+      "tour-ravenska-kocna": {
+        "title": "Zyflow: Ravenska Kočna – Štularjeva planina",
+        "description": "Ravenska Kočna past Planšarsko jezero to Štularjeva planina: 16.6 km and 408 m of climbing. Open in Zyflow."
+      },
+      "tour-spodnji-virnik": {
+        "title": "Zyflow: Spodnji Virnik – tufa quarry",
+        "description": "Short Jezersko loop to the tufa quarry and Spodnji Virnik farm: 9.4 km and 304 m of climbing. Open in Zyflow."
+      },
+      "tour-trzicanka": {
+        "title": "Zyflow: Tržičanka",
+        "description": "Tržičanka: Kranj to Tržič through the Kokra canyon and on to Kamen Castle: 68 km. Open in Zyflow."
+      },
+      "legal-pages-privacy-policy": {
+        "title": "Zyflow, Privacy Policy",
+        "description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use Zyflow."
+      },
+      "legal-pages-terms": {
+        "title": "Zyflow, Terms of Service",
+        "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
+      },
+      "legal-pages-cookie-policy": {
+        "title": "Zyflow, Cookie Policy",
+        "description": "How Zyflow uses cookies and similar technologies on zyflow.eu, and how you can control your preferences."
+      },
+      "legal-pages-impressum": {
+        "title": "Zyflow, Impressum",
+        "description": "Legal notice and company details for HERKO d.o.o., the operator of Zyflow."
+      },
+      "legal-pages-delete-account": {
+        "title": "Zyflow, Delete your account",
+        "description": "How to request deletion of your Zyflow account and what happens to your data."
+      },
+      "legal-pages-izbris-racuna": {
+        "title": "Zyflow, Izbris računa",
+        "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
+      },
+      "e-plus-destinacije": {
+        "title": "Zyflow, Model E+ pametne podeželske destinacije",
+        "description": "Projekt LEADER: model E+ destinacije za e-kolesarjem prijazno podeželje v sedmih gorenjskih občinah. Sofinancira Evropska unija (EKSRP)."
+      },
+      "legal-pages-business-privacy": {
+        "title": "Zyflow, Privacy text for your website",
+        "description": "A privacy paragraph businesses can paste into their own policy: what the Zyflow bike map widget collects and why."
+      },
+      "legal-pages-business-dpa": {
+        "title": "Zyflow, Data processing for businesses",
+        "description": "When Zyflow processes personal data for business customers, and our standard GDPR Article 28 data processing agreement."
+      }
+    }
+  },
+  "chrome": {
+    "announcement": {
+      "label": "App update",
+      "text": "Zyflow is live on iOS and Android, in 8 countries.",
+      "textShort": "Live on iOS & Android",
+      "cta": "Download →"
+    },
+    "nav": {
+      "cta": "Download",
+      "links": {
+        "home": "Home",
+        "tours": "Routes",
+        "about": "About",
+        "journal": "Journal",
+        "contact": "Contact",
+        "business": "For businesses"
+      },
+      "menu": "Menu",
+      "menuClose": "Close menu",
+      "themeDark": "Dark mode",
+      "themeLight": "Light mode"
+    },
+    "footer": {
+      "links": {
+        "home": "Home",
+        "tours": "Routes",
+        "about": "About",
+        "journal": "Journal",
+        "contact": "Contact",
+        "press": "Press & investors",
+        "legal": "Legal",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "cookies": "Cookies",
+        "impressum": "Impressum",
+        "guides": "Guides",
+        "towns": "Cycling by town"
+      },
+      "cats": {
+        "kayak": "Tour",
+        "bike": "Commute",
+        "hike": "Alpine",
+        "fourwd": "Gravel"
+      },
+      "newsletter": {
+        "title": "newsletter",
+        "body": "New bike-friendly places, routes and app updates. Once a month, no spam.",
+        "note": "We never share your details.",
+        "subscribe": "Subscribe",
+        "email": "Email",
+        "emailPlaceholder": "Email address",
+        "honeypot": "Company website",
+        "success": "Thanks, you’re on the list.",
+        "error": "Something went wrong. Please try again.",
+        "errorValidation": "Please enter a valid email address.",
+        "errorRateLimit": "Too many attempts. Please wait a few minutes.",
+        "errorVerify": "Please complete the verification and try again."
+      },
+      "company": "Zyflow is made by HERKO d.o.o., Slovenia",
+      "copyright": "© 2026 Zyflow. All rights reserved.",
+      "cookiePreferences": "Cookie preferences"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "body": "This page took a wrong turn. Head home or explore routes instead.",
+      "home": "Back home",
+      "tours": "Explore Routes"
+    },
+    "openApp": {
+      "title": "Open this in Zyflow",
+      "body": "A place or ride was shared with you from a Zyflow bike map. See it in the Zyflow app, free on iOS and Android.",
+      "open": "Open the app",
+      "get": "No app yet? Get it here, then tap the link again."
+    },
+    "lang": {
+      "label": "Language",
+      "en": "EN",
+      "sl": "SL"
+    },
+    "appModal": {
+      "title": "Get the Zyflow app",
+      "lede": "Find bike-friendly stays, coffee stops and restaurants, with chargers and bike services on the map. Free on iOS and Android.",
+      "badge": "Free on iOS and Android",
+      "downloadTitle": "Download Zyflow now",
+      "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone.",
+      "close": "Close"
+    },
+    "ui": {
+      "step": "Step"
+    }
+  },
+  "home": {
+    "hero": {
+      "titleHtml": "Bike-friendly stays, cafés and chargers",
+      "subtitle": "Explore bike-friendly places. Ride there feeling safe. Stays, coffee stops, restaurants and chargers, all on one map.",
+      "cta": "Get the app",
+      "nextDepartureLabel": "Featured route",
+      "nextDepartureTitle": "Ljubljana to Trieste",
+      "nextDepartureDate": "134 km · +1,766 m",
+      "brandHtml": "explore<br />further."
+    },
+    "appBanner": {
+      "eyebrow": "The Zyflow app",
+      "titleHtml": "Every stop.<br />One map.",
+      "body": "Stays, coffee stops, restaurants, chargers, water and bike repair, each showing what makes it bike-friendly. Free on iOS and Android.",
+      "cta": "Download",
+      "phoneTitle": "Every stop.",
+      "chips": [
+        "Stays",
+        "Coffee",
+        "Chargers"
+      ],
+      "phoneFoot": "Free on iOS & Android"
+    },
+    "trust": {
+      "one": "Regional maps and route data",
+      "two": "Local cycling community",
+      "three": "E-bike charging know-how",
+      "four": "Open data on places and mobility"
+    },
+    "adventures": {
+      "titleHtml": "featured<br />routes",
+      "allLink": "Explore Routes",
+      "viewCta": "View route",
+      "cards": [
+        {
+          "place": "Tržič",
+          "region": "Ljubelj pass, Slovenia",
+          "title": "Prelaz Ljubelj",
+          "meta0": "26 km",
+          "meta1": "900 m",
+          "meta2": "Alpine",
+          "body": "Thirteen hairpins on Europe’s oldest road pass, car-free climbing to 1,370 m above Tržič.",
+          "price": "26 km",
+          "unit": " · 900 m"
+        },
+        {
+          "place": "Kranj → Kamnik",
+          "region": "Gorenjska, Slovenia",
+          "title": "Kamničanka",
+          "meta0": "70 km",
+          "meta1": "254 m",
+          "meta2": "Touring",
+          "body": "The gentle Kranjska roža petal: castles, Arboretum Volčji Potok and valley roads with almost no hard climbing.",
+          "price": "70 km",
+          "unit": " · 254 m"
+        },
+        {
+          "place": "Jezersko",
+          "region": "Kamnik Alps, Slovenia",
+          "title": "Mali vrh",
+          "meta0": "17.3 km",
+          "meta1": "596 m",
+          "meta2": "Alpine",
+          "body": "Forest road to a quiet lookout above Jezersko, Grintovec, Košuta and Storžič in one calm half-day.",
+          "price": "17.3 km",
+          "unit": " · 596 m"
+        }
+      ]
+    },
+    "intro": {
+      "greeting": "Hey there.",
+      "body": "We’re Jakob and Tanja, the small team behind Zyflow in Slovenia. We’re building Zyflow so every ride comes with good places to stop, a charger when you need one, and a welcome for your bike. Questions or ideas? We read every message.",
+      "link": "About Zyflow"
+    },
+    "featuredTour": {
+      "eyebrow": "Every route, fully mapped",
+      "title": "ljubljana to trieste",
+      "metaDuration": "134 km",
+      "metaSeason": "+1,766 m",
+      "cta": "See what’s on the route",
+      "metaStops": "Stays, coffee & chargers",
+      "metaChargers": "1 day"
+    },
+    "categories": {
+      "cycle": "slovenia",
+      "hike": "croatia",
+      "kayak": "austria",
+      "fourwd": "italy",
+      "cta": "See routes",
+      "comingSoon": "routes coming soon",
+      "comingSoonHint": "Places live, routes in progress"
+    },
+    "testimonial": {
+      "quote": "Is your place bike-friendly?",
+      "body": "Riders choose where to stop in Zyflow before they leave. Put your café, restaurant or stay in front of them, with your bike parking, storage or charger on the map.",
+      "cta": "List your place",
+      "ctaSecondary": "Investors and press"
+    },
+    "whyUs": {
+      "titleHtml": "Why<br />Zyflow?",
+      "items": [
+        {
+          "title": "places other maps miss",
+          "body": "Most maps show you roads. Zyflow shows you where to stop: stays, coffee and restaurants that welcome bikes, with parking, storage and charging marked."
+        },
+        {
+          "title": "safety you can see",
+          "body": "Road closures, roadworks and events on your route, bike theft by area, and chargers placed where your battery needs them."
+        },
+        {
+          "title": "a battery plan you can trust",
+          "body": "Zyflow plans around your range, the climbs, wind and temperature, so the ride does not end early."
+        }
+      ]
+    },
+    "appStage": {
+      "eyebrow": "Inside the ride",
+      "titleHtml": "The app<br />on the trail.",
+      "body": "Battery, elevation, chargers, and weather in one plan, so you leave knowing the ride will finish.",
+      "ctaIos": "Download for iOS",
+      "ctaAndroid": "Get it on Android"
+    },
+    "appFlow": {
+      "titleHtml": "From map<br />to ride.",
+      "steps": [
+        {
+          "title": "explore",
+          "body": "Open the map and find stays, coffee stops and restaurants that welcome bikes, plus chargers, water and repair as you zoom in."
+        },
+        {
+          "title": "plan",
+          "body": "Connect the places into a ride. Zyflow plans your battery around the climbs and places chargers before you need them."
+        },
+        {
+          "title": "ride",
+          "body": "Check road closures before you leave and see where bikes get stolen. Then ride, and stop wherever looks good."
+        }
+      ]
+    },
+    "features": {
+      "titleHtml": "Places that<br /><span class=\"accent\">welcome bikes.</span>",
+      "items": [
+        {
+          "title": "find bike-friendly places",
+          "body": "Bike parking, secure storage, a pump or a charger, marked on every place. Filter the map to show only places that welcome bikes.",
+          "link": "Download"
+        },
+        {
+          "title": "ride feeling safe",
+          "body": "See road closures and roadworks before you leave, check bike theft by area, and plan your battery with chargers along the way.",
+          "link": "Explore Routes"
+        },
+        {
+          "title": "growing across Europe",
+          "body": "Live in 8 countries, starting from Slovenia, Croatia and Austria, and growing country by country.",
+          "link": "Read Journal"
+        }
+      ]
+    },
+    "journal": {
+      "titleHtml": "The Zyflow<br />journal",
+      "cta": "Read the journal"
+    },
+    "faq": {
+      "title": "common questions",
+      "footnote": "Questions, feedback or a place we’re missing? Email support@zyflow.eu. We read every message.",
+      "contactLink": "Contact us",
+      "items": [
+        {
+          "q": "What is Zyflow?",
+          "a": "Zyflow is a free app for finding bike-friendly places: stays, coffee stops, restaurants, chargers and bike services. You can see road closures and bike theft by area, and plan a ride between the places with your battery in mind."
+        },
+        {
+          "q": "Is Zyflow free?",
+          "a": "Yes. Zyflow is free to download and use on iOS and Android."
+        },
+        {
+          "q": "What bikes does Zyflow support?",
+          "a": "Any bike: road, gravel, touring, mountain and e-bikes. With an e-bike, you also get the battery plan and chargers along the way."
+        },
+        {
+          "q": "How do I know a place is bike-friendly?",
+          "a": "Places with bike parking, secure storage, a pump or a charger are marked, and you can filter the map to show only bike-friendly places."
+        },
+        {
+          "q": "I run a café, hotel or bike shop. Can I be on Zyflow?",
+          "a": "Yes. Get in touch through the contact form and we’ll add your place, with your bike parking, storage or charger on the map."
+        }
+      ]
+    },
+    "social": {
+      "handle": "@zyflow",
+      "cta": "Follow Zyflow",
+      "videos": [
+        {
+          "title": "Ljubljana to Trieste",
+          "place": "Slovenia / Italy",
+          "coords": "46.0569° N, 14.5058° E"
+        },
+        {
+          "title": "Alpine Pass Loop",
+          "place": "Julian Alps, Slovenia",
+          "coords": "46.3792° N, 13.8363° E"
+        },
+        {
+          "title": "Coastal Gravel Meander",
+          "place": "Istria, Croatia",
+          "coords": "45.2396° N, 13.9367° E"
+        }
+      ]
+    }
+  },
+  "tours": {
+    "hero": {
+      "title": "cycling routes across gorenjska",
+      "lede": "Twenty rides from Kranj, Tržič and Jezersko, lake loops, alpine passes and quiet gravel. Pick a route, then open it in Zyflow.",
+      "quals": [
+        "20 Gorenjska routes",
+        "GPX and descriptions ready",
+        "Open in Zyflow",
+        "iOS & Android",
+        "Free to download"
+      ],
+      "eyebrow": "our routes"
+    },
+    "filter": {
+      "label": "browse:",
+      "all": "all",
+      "tour": "tour",
+      "alpine": "alpine",
+      "commute": "commute",
+      "gravel": "gravel"
+    },
+    "viewCta": "View route",
+    "empty": "No routes here yet. New rides are added as we map more bike-friendly places.",
+    "region": {
+      "slovenia": "Slovenia",
+      "croatia": "Croatia",
+      "austria": "Austria",
+      "italy": "Italy"
+    },
+    "cards": [
+      {
+        "place": "Kranj → Bled",
+        "region": "Gorenjska, Slovenia",
+        "title": "Blejčanka",
+        "meta0": "79 km",
+        "meta1": "944 m",
+        "meta2": "Touring",
+        "body": "A full-day loop from Kranj to Lake Bled, Radovljica’s old square, Kropa’s forge streets, then the lake shore before the climb home.",
+        "price": "79 km",
+        "unit": " · 944 m"
+      },
+      {
+        "place": "Kranj → Jezersko",
+        "region": "Gorenjska, Slovenia",
+        "title": "Jezerjanka",
+        "meta0": "76 km",
+        "meta1": "603 m",
+        "meta2": "Touring",
+        "body": "Follow the Kokra past Preddvor into Slovenia’s first Mountain Village, glacier valleys, alpine farms and quieter roads than the lake circuits.",
+        "price": "76 km",
+        "unit": " · 603 m"
+      },
+      {
+        "place": "Jezersko",
+        "region": "Gorenjska, Slovenia",
+        "title": "Jezerski vrh",
+        "meta0": "18.2 km",
+        "meta1": "457 m",
+        "meta2": "Alpine",
+        "body": "Climb to the former border crossing, then continue to Ankova planina for a full panorama of Ravenska Kočna and the Kamnik Alps.",
+        "price": "18.2 km",
+        "unit": " · 457 m"
+      },
+      {
+        "place": "Tržič → Košuta",
+        "region": "Gorenjska, Slovenia",
+        "title": "Planine pod Košuto",
+        "meta0": "39.7 km",
+        "meta1": "1740 m",
+        "meta2": "Alpine",
+        "body": "Tržič’s alpine flagship: forest roads and pasture shelves under the long white wall of Košuta, big climbing, bigger views.",
+        "price": "1740 m",
+        "unit": " · 1740 m"
+      },
+      {
+        "place": "Tržič → Jezersko",
+        "region": "Gorenjska, Slovenia",
+        "title": "Tržič – Jezersko",
+        "meta0": "28.1 km",
+        "meta1": "Alpine",
+        "meta2": "Alpine",
+        "body": "A linking ride between two alpine valleys, from Tržič’s Karawanks flank across to the glacier bowl of Jezersko.",
+        "price": "28.1 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič → Storžič",
+        "region": "Gorenjska, Slovenia",
+        "title": "Dom pod Storžičem",
+        "meta0": "18.1 km",
+        "meta1": "Alpine",
+        "meta2": "Alpine",
+        "body": "A hut-day climb toward Storžič, forest gradients, mountain air and a clear turnaround at Dom pod Storžičem.",
+        "price": "18.1 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič → Ljubelj",
+        "region": "Gorenjska, Slovenia",
+        "title": "Prelaz Ljubelj",
+        "meta0": "26 km",
+        "meta1": "900 m",
+        "meta2": "Alpine",
+        "body": "Thirteen hairpins on Europe’s oldest road pass, closed to cars, open to bikes, with a hut at 1,370 m.",
+        "price": "26 km",
+        "unit": " · 900 m"
+      },
+      {
+        "place": "Tržič → Brezje pri Tržiču",
+        "region": "Gorenjska, Slovenia",
+        "title": "Rožnovenska pot",
+        "meta0": "20.1 km",
+        "meta1": "Touring",
+        "meta2": "Touring",
+        "body": "A culture-forward loop from Tržič through Brezje pri Tržiču, churches, valley towns and riding that stays scenic without going fully alpine.",
+        "price": "20.1 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič → Dobrča",
+        "region": "Gorenjska, Slovenia",
+        "title": "Dobrča",
+        "meta0": "26.9 km",
+        "meta1": "Alpine",
+        "meta2": "Alpine",
+        "body": "A full alpine day toward Dobrča, long climbs, ridge air and the feeling of riding the Karawanks rather than around them.",
+        "price": "26.9 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič · Udin boršt",
+        "region": "Gorenjska, Slovenia",
+        "title": "Udin boršt",
+        "meta0": "25.3 km",
+        "meta1": "Gravel",
+        "meta2": "Gravel",
+        "body": "Foothill gravel around Udin boršt, forest tracks, gentle rollers and enough variety to feel adventurous without a high pass.",
+        "price": "25.3 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič · Three Bells",
+        "region": "Gorenjska, Slovenia",
+        "title": "Pot treh zvonov",
+        "meta0": "10 km",
+        "meta1": "Touring",
+        "meta2": "Touring",
+        "body": "The easy family loop of the Tržič set, gentle terrain, village bells and a rhythm that works for mixed abilities.",
+        "price": "10 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič · Kriva jelka",
+        "region": "Gorenjska, Slovenia",
+        "title": "Kriva jelka",
+        "meta0": "24 km",
+        "meta1": "Gravel",
+        "meta2": "Gravel",
+        "body": "Into the Udin boršt nature reserve toward the crooked fir, shaded tracks and a landmark finish in the forest.",
+        "price": "24 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič · Gozd",
+        "region": "Gorenjska, Slovenia",
+        "title": "Gozd – Udin boršt",
+        "meta0": "26.9 km",
+        "meta1": "Gravel",
+        "meta2": "Gravel",
+        "body": "A varied foothill loop linking Gozd with Udin boršt, more climbing than the family routes, still short of alpine grades.",
+        "price": "26.9 km",
+        "unit": ""
+      },
+      {
+        "place": "Kranj → Kamnik",
+        "region": "Gorenjska, Slovenia",
+        "title": "Kamničanka",
+        "meta0": "70 km",
+        "meta1": "254 m",
+        "meta2": "Touring",
+        "body": "Flat-leaning loop via Šenčur, Adergas, Cerklje and Kamnik, Arboretum Volčji Potok, Strmol Castle and Slovenia’s only motorway bike bridge.",
+        "price": "70 km",
+        "unit": " · 254 m"
+      },
+      {
+        "place": "Kranj → Ljubljana",
+        "region": "Gorenjska, Slovenia",
+        "title": "Ljubljančanka",
+        "meta0": "70 km",
+        "meta1": "Touring",
+        "meta2": "Touring",
+        "body": "South from Kranj to the capital, Smlednik Castle, Tivoli and Ljubljana Castle on a day that mixes countryside with city arrival.",
+        "price": "70 km",
+        "unit": ""
+      },
+      {
+        "place": "Kranj → Škofja Loka",
+        "region": "Gorenjska, Slovenia",
+        "title": "Ločanka",
+        "meta0": "64 km",
+        "meta1": "Touring",
+        "meta2": "Touring",
+        "body": "Into Škofja Loka’s medieval core, Capuchin bridges, the castle hill and Crngrob church on one of the flower’s prettiest days.",
+        "price": "64 km",
+        "unit": ""
+      },
+      {
+        "place": "Jezersko · Mali vrh",
+        "region": "Gorenjska, Slovenia",
+        "title": "Mali vrh",
+        "meta0": "17.3 km",
+        "meta1": "596 m",
+        "meta2": "Alpine",
+        "body": "Quiet forest road to the Mali vrh lookout, Virnikov Grintovec, Košuta and Storžič in one calm Jezersko half-day.",
+        "price": "17.3 km",
+        "unit": " · 596 m"
+      },
+      {
+        "place": "Jezersko · Ravenska Kočna",
+        "region": "Gorenjska, Slovenia",
+        "title": "Ravenska Kočna",
+        "meta0": "16.6 km",
+        "meta1": "408 m",
+        "meta2": "Alpine",
+        "body": "Past Planšarsko jezero into Ravenska Kočna and up to Štularjeva planina, cirque walls and a cargo cableway below Češka koča.",
+        "price": "16.6 km",
+        "unit": " · 408 m"
+      },
+      {
+        "place": "Jezersko · Virnik",
+        "region": "Gorenjska, Slovenia",
+        "title": "Spodnji Virnik",
+        "meta0": "9.4 km",
+        "meta1": "304 m",
+        "meta2": "Touring",
+        "body": "Short educational loop to the tufa quarry and Spodnji Virnik farm, watch rock forming at the spring, then taste dairy on the meadow.",
+        "price": "9.4 km",
+        "unit": " · 304 m"
+      },
+      {
+        "place": "Kranj → Tržič",
+        "region": "Gorenjska, Slovenia",
+        "title": "Tržičanka",
+        "meta0": "68 km",
+        "meta1": "Touring",
+        "meta2": "Touring",
+        "body": "North to Tržič’s old town and the Karawanks gateway, Kamen Castle ruins, valley roads and a taste of the alpine network beyond.",
+        "price": "68 km",
+        "unit": ""
+      }
+    ]
+  },
+  "tour": {
+    "hero": {
+      "crumbParent": "Routes",
+      "crumbType": "Touring",
+      "titleHtml": "ljubljana<br />to trieste",
+      "lede": "134 km from Ljubljana to the Adriatic, past bike-friendly stays, coffee stops and restaurants, with chargers and bike services along the way.",
+      "price": "134 km",
+      "unit": " · 1 day",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app"
+    },
+    "meta": {
+      "place": "ljubljana",
+      "coords": "46.0569° N, 14.5058° E",
+      "durationHtml": "1 day<br />134 km",
+      "durationLabel": "Duration",
+      "difficulty": "intermediate",
+      "difficultyLabel": "Difficulty",
+      "climb": "+1,766 m",
+      "climbLabel": "Elevation"
+    },
+    "body": {
+      "intro": "Ljubljana to Trieste crosses three landscapes in a day: the green edge of the capital, the stone villages of the Karst and the Adriatic coast. Zyflow lines up the bike-friendly places in between, so the ride is as much about where you stop as how far you go.",
+      "sections": [
+        {
+          "title": "Leaving Ljubljana",
+          "body": "Roll out past Vrhnika on quiet roads. The first coffee stop comes early, and it is worth it: the climb onto the plateau starts soon after. Zyflow shows your expected battery along the whole route, so you can pace the start instead of guessing."
+        },
+        {
+          "title": "Karst villages & stops",
+          "body": "Between Postojna and Divača the road rises and falls through stone villages, with family restaurants and guesthouses that welcome bikes. Charging and water sit right where the hardest sections begin.",
+          "bullets": [
+            "See road closures and roadworks on the route before you leave",
+            "Know which places have bike parking, secure storage or a charger"
+          ]
+        },
+        {
+          "title": "Descent to the Adriatic",
+          "body": "After Sežana the plateau ends and the road drops toward the Gulf of Trieste. Finish with a coffee by the sea, or stay the night and ride back tomorrow."
+        }
+      ]
+    },
+    "aside": {
+      "title": "ride with peace of mind:",
+      "items": [
+        "Road closures before you leave",
+        "Bike theft by area",
+        "Battery plan with chargers",
+        "Bikes welcome where you stay",
+        "Places saved for no signal",
+        "iOS & Android"
+      ],
+      "cta": "Open in Zyflow",
+      "note": "Open the route in Zyflow, plan with battery, elevation and chargers.",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX"
+    },
+    "quote": {
+      "quote": "Is your place on this route?",
+      "body": "Riders choose where to stop in Zyflow before they leave. Put your café, restaurant or stay in front of them, right on the route they are riding."
+    },
+    "more": {
+      "title": "more routes",
+      "allLink": "View all"
+    }
+  },
+  "blog": {
+    "hero": {
+      "titleHtml": "the<br />zyflow<br /><span class=\"is-accent\">journal</span>",
+      "lede": "Guides to bike-friendly places, safer rides and what’s new in Zyflow."
+    },
+    "readStory": "Read Story",
+    "readingTime": "{n} min read",
+    "updated": "Updated",
+    "journalName": "Journal",
+    "filters": {
+      "country": "Country",
+      "region": "Region",
+      "type": "Type",
+      "activity": "Activity",
+      "topic": "Topic",
+      "all": "All"
+    },
+    "empty": "No stories match these filters.",
+    "comingSoon": "Stories are on the way.",
+    "comingSoonLink": "Read the journal in English",
+    "rss": "RSS",
+    "explore": "Explore",
+    "facts": {
+      "distance": "Distance",
+      "climb": "Climb",
+      "difficulty": "Difficulty",
+      "season": "Season",
+      "eat": "Eat",
+      "sleep": "Sleep",
+      "charge": "Charge"
+    },
+    "howWeMade": "How we made this",
+    "relatedTours": "Related routes",
+    "relatedPosts": "Related stories",
+    "moreIn": "More in {name}",
+    "inThisGuide": "In this guide",
+    "appCta": {
+      "title": "Plan the ride in Zyflow",
+      "ios": "Download on the App Store",
+      "android": "Get it on Google Play"
+    },
+    "authorStories": "Stories",
+    "authorDescription": "Guides and stories by {name}.",
+    "licence": {
+      "own": "Zyflow",
+      "partner": "Used with permission",
+      "guest": "Guest rider",
+      "ccBy": "CC BY 4.0",
+      "ccBySa": "CC BY-SA 4.0",
+      "cc0": "CC0"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Est 2024",
+      "titleHtml": "The team behind bike-friendly places",
+      "place": "Slovenia · live in 8 countries",
+      "storyTitle": "Great places to stop are everywhere. Most maps just don’t show them.",
+      "storyBody": "We’re Jakob and Tanja, the team behind Zyflow, made by HERKO d.o.o. in Slovenia. Zyflow helps cyclists and e-bike riders find bike-friendly stays, coffee stops, restaurants and chargers, and ride between them feeling safe. Today it is live on iOS and Android in 8 countries, with 7,400+ chargers mapped and data from partners like Open Data Hub. Next: more countries, more places, and more ways to keep riders safe.",
+      "sign": "Jakob & Tanja",
+      "brandHtml": "explore<br />without<br /><span class=\"is-accent\">worry.</span>"
+    },
+    "values": {
+      "title": "our values",
+      "items": [
+        {
+          "titleHtml": "explore<br />without worry.",
+          "body": "Zyflow is here so you can say yes to the detour. Every place shows whether your bike is welcome, so the next stop is a choice, not a gamble."
+        },
+        {
+          "titleHtml": "safety you<br />can see.",
+          "body": "Road closures, bike theft by area and chargers along the way. We show what we know, so you can decide before you ride."
+        },
+        {
+          "titleHtml": "honesty over<br />hype.",
+          "body": "We only promise what the app does today. When something is still being built, we say so, and we listen when riders tell us what to fix next."
+        },
+        {
+          "titleHtml": "free for<br />every rider.",
+          "body": "Zyflow is free on iOS and Android, for every rider and every bike. Start with one stop, then go further."
+        }
+      ]
+    },
+    "team": {
+      "title": "our team",
+      "members": [
+        {
+          "name": "jakob",
+          "role": "Co-founder & CEO",
+          "bio": "Leads product and partnerships. Builds the app, the data behind it and the partner network that keeps the map growing.",
+          "quals": [
+            "Product & data",
+            "Partnerships",
+            "iOS & Android"
+          ]
+        },
+        {
+          "name": "tanja",
+          "role": "Co-founder & COO",
+          "bio": "Runs the company: administration, contracts, legal and tax, plus marketing, market research and local partners.",
+          "quals": [
+            "Operations & legal",
+            "Marketing & research"
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "contact us",
+      "email": "hello@zyflow.eu",
+      "support": "support@zyflow.eu",
+      "social": [
+        "LinkedIn",
+        "Instagram",
+        "Bluesky",
+        "X"
+      ]
+    },
+    "form": {
+      "title": "send a message",
+      "lede": "Ask about places, routes or chargers, list your café, restaurant or stay, or talk to us about partnerships and investment. We reply to every message.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "topic": "Topic (optional)",
+      "topicPlaceholder": "Choose",
+      "topics": [
+        "Places & routes",
+        "List my place",
+        "Partnership",
+        "Investors",
+        "Press",
+        "Other"
+      ],
+      "message": "Message",
+      "submit": "Send message",
+      "honeypot": "Company website",
+      "success": "Thanks, we got your message.",
+      "error": "Something went wrong. Please try again.",
+      "errorValidation": "Please check your details and try again.",
+      "errorRateLimit": "Too many attempts. Please wait a few minutes.",
+      "errorVerify": "Please complete the verification and try again."
+    }
+  },
+  "legal": {
+    "nav": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "impressum": "Impressum",
+      "deletion": "Delete account"
+    },
+    "hub": {
+      "tag": "Legal",
+      "title": "legal",
+      "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
+      "termsLede": "Usage rules, subscriptions, liability, and legal information for Zyflow.",
+      "privacyLede": "How HERKO d.o.o. collects, uses, stores, and protects your personal data.",
+      "cookiesLede": "How Zyflow uses cookies and similar technologies on zyflow.eu and in the app.",
+      "impressumLede": "Company details for HERKO d.o.o., the operator of Zyflow."
+    },
+    "terms": {
+      "tag": "Updated",
+      "date": "30. 11. 2026",
+      "dateLabel": "Updated 30. 11. 2026 · v2.2",
+      "title": "terms of service",
+      "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
+    },
+    "privacy": {
+      "tag": "Updated",
+      "date": "30. 6. 2026",
+      "dateLabel": "Updated 30. 6. 2026 · v1.1",
+      "title": "privacy policy",
+      "lede": "This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
+    },
+    "cookies": {
+      "tag": "Updated",
+      "date": "9. 10. 2026",
+      "dateLabel": "Updated 9. 10. 2026 · v1.1",
+      "title": "cookie policy",
+      "lede": "How Zyflow uses cookies and similar tracking technologies across the mobile app and zyflow.eu, including optional analytics and advertising cookies you can control."
+    },
+    "doc": {
+      "tag": "Updated"
+    },
+    "redirect": {
+      "body": "This page has moved. Continue to the current version."
+    },
+    "impressum": {
+      "dateLabel": "Legal notice"
+    }
+  },
+  "business": {
+    "hero": {
+      "crumb1": "For businesses",
+      "crumb2": "Cafés, stays, bike shops",
+      "titleHtml": "Zyflow for cafés, stays and bike shops",
+      "lede": "Riders choose where to stop in Zyflow before they leave. Show them your bike parking, storage or charger, and become a stop on the routes that pass your door. You manage your listing yourself.",
+      "price": "Free",
+      "unit": " · during launch",
+      "nextLabel": "Live in",
+      "nextValue": "8 countries",
+      "cta": "List your place",
+      "brandHtml": "put your place<br />on the map"
+    },
+    "tiles": [
+      {
+        "value": "On the map",
+        "label": "Riders see you in Explore"
+      },
+      {
+        "value": "Bike facilities",
+        "label": "Parking, storage, pump, charger"
+      },
+      {
+        "value": "On routes",
+        "label": "Shown on routes that pass you"
+      },
+      {
+        "value": "You’re in control",
+        "label": "Edit hours, photos and details"
+      }
+    ],
+    "who": {
+      "title": "who it’s for",
+      "link": "Ask us anything",
+      "chip": "on the map",
+      "price": "Free",
+      "unit": " · during launch",
+      "cta": "List your place",
+      "cards": [
+        {
+          "tag": "Coffee & food",
+          "title": "Cafés & restaurants",
+          "meta0": "Coffee",
+          "meta1": "Restaurants",
+          "body": "Be the stop riders plan their break around. Show that bikes are welcome, where to park them and whether they can charge."
+        },
+        {
+          "tag": "Stays",
+          "title": "Hotels & guesthouses",
+          "meta0": "Stay",
+          "meta1": "Overnight",
+          "body": "Riders on multi-day routes look for one thing first: a safe place for the bike. Show your storage and charging and get picked for the night."
+        },
+        {
+          "tag": "Utility",
+          "title": "Bike shops & services",
+          "meta0": "Repair",
+          "meta1": "Charging",
+          "body": "Repair, rental, charging or a pump at the door. Appear in the utility layer riders open when something goes wrong."
+        }
+      ]
+    },
+    "how": {
+      "title": "how it works",
+      "stepLabel": "step",
+      "steps": [
+        {
+          "title": "Request access",
+          "body": "Create an account and tell us about your business. It takes two minutes."
+        },
+        {
+          "title": "We approve your place",
+          "body": "We check your request and connect your place on the map."
+        },
+        {
+          "title": "Manage it yourself",
+          "body": "Edit details, opening hours, photos and bike facilities any time."
+        },
+        {
+          "title": "Riders find you",
+          "body": "You show up in Explore and on the routes that pass you."
+        }
+      ]
+    },
+    "data": {
+      "title": "tourism boards & data partners",
+      "body": "We work with open data providers and local partners to keep places, chargers and routes accurate. If you manage cycling data, tourism listings or a network of venues, let’s connect it.",
+      "cta": "Become a data partner"
+    },
+    "faq": {
+      "title": "questions from businesses",
+      "items": [
+        {
+          "q": "Does it cost anything?",
+          "a": "Listing your place is free during our launch phase. Later we plan to add paid options, for example extra visibility on routes. We’ll tell you well in advance before anything changes."
+        },
+        {
+          "q": "What counts as bike-friendly?",
+          "a": "Any of these helps: a place to park or lock a bike, secure storage, a pump or tools, or a socket where riders can charge an e-bike."
+        },
+        {
+          "q": "Which countries do you cover?",
+          "a": "Zyflow is live in 8 countries, starting from Slovenia and its neighbours."
+        },
+        {
+          "q": "How do I change my details?",
+          "a": "Sign in to the partner portal and edit your place directly. Changes to the map pin or place type go through our team."
+        }
+      ],
+      "footnote": "Not sure if you fit?",
+      "footLink": "Ask us"
+    },
+    "final": {
+      "title": "ready when you are",
+      "body": "Tell us about your place and we’ll put it in front of the riders already planning to pass by.",
+      "cta": "List your place",
+      "ctaSecondary": "Talk to us first"
+    },
+    "signin": "Already a partner? Sign in"
+  },
+  "press": {
+    "hero": {
+      "crumb1": "Press & investors",
+      "crumb2": "Fact sheet",
+      "titleHtml": "zyflow<br />at a glance",
+      "lede": "We’re just getting started. Zyflow helps cyclists and e-bike riders find bike-friendly places and ride between them feeling safe. Here are the facts, the team and how to reach us.",
+      "price": "Early stage",
+      "unit": " · 2026",
+      "nextLabel": "Made in",
+      "nextValue": "Slovenia",
+      "cta": "Request our deck",
+      "eyebrow": "For press and investors"
+    },
+    "tiles": [
+      {
+        "value": "iOS + Android",
+        "label": "Live in both stores"
+      },
+      {
+        "value": "8",
+        "label": "Countries live"
+      },
+      {
+        "value": "7,400+",
+        "label": "Chargers mapped"
+      },
+      {
+        "value": "Open Data Hub",
+        "label": "Signed data partner"
+      }
+    ],
+    "about": {
+      "title": "the short version",
+      "p1": "Most maps show cyclists roads. Zyflow shows them where to stop: stays, coffee stops and restaurants that welcome bikes, plus chargers, water and repair. Road closures and bike theft by area are on the map too, so riders can explore without worry.",
+      "p2": "Zyflow is built by HERKO d.o.o. in Slovenia and launched publicly on iOS and Android in 2026."
+    },
+    "next": {
+      "title": "what’s next",
+      "items": [
+        "More countries and places",
+        "More safety features",
+        "Better route planning",
+        "A bike passport",
+        "Rider community"
+      ]
+    },
+    "team": {
+      "title": "the team",
+      "link": "About us",
+      "members": [
+        {
+          "name": "jakob",
+          "role": "Co-founder & CEO",
+          "bio": "Leads product and partnerships: the app, the data behind it and the partner network."
+        },
+        {
+          "name": "tanja",
+          "role": "Co-founder & COO",
+          "bio": "Runs the company: administration, contracts, legal and tax, marketing and local partners."
+        }
+      ]
+    },
+    "kit": {
+      "title": "press kit",
+      "body": "We haven’t been in the press yet, so this is a first. If you’re writing about cycling, e-bikes or travel in the region, we’d love to talk, and we’ll send everything you need.",
+      "items": [
+        {
+          "name": "Logo files",
+          "note": "SVG + PNG"
+        },
+        {
+          "name": "App screenshots",
+          "note": "iOS + Android"
+        },
+        {
+          "name": "Founder photos",
+          "note": "On request"
+        },
+        {
+          "name": "Fact sheet",
+          "note": "This page"
+        }
+      ]
+    },
+    "final": {
+      "title": "interested in zyflow?",
+      "body": "We share our deck and numbers directly. Tell us a little about yourself and we’ll get back to you.",
+      "cta": "Request our deck",
+      "ctaSecondary": "Press enquiries"
+    }
+  },
+  "routes": {
+    "blejcanka": {
+      "crumbType": "Touring",
+      "titleHtml": "blejčanka",
+      "lede": "Kranj’s western petal to Lake Bled: nearly 80 km, close to 1,000 m of climbing, and the classic Gorenjska postcard, Kropa, the lake, and Radovljica’s square.",
+      "place": "kranj",
+      "coords": "46.24° N, 14.35° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "79 <span>km</span>",
+      "elevationHtml": "944 <span>m</span>",
+      "difficulty": "Intermediate",
+      "intro": "Blejčanka is the beauty day of the Kranjska roža. You leave the Sava plain, climb toward Jamnik until the Karawanks open, drop into Kropa’s ironworking streets, then arrive at Bled’s castle rock and shoreline before swinging through Radovljica on the way home. It is long enough to matter and scenic enough to justify every metre.",
+      "asideNote": "Touring · Kranjska roža · Visit Kranj",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Blejčanka (79 km to Bled) | Zyflow",
+      "metaDescription": "Blejčanka: Kranj to Lake Bled past Kropa and Radovljica: 79 km and 944 m of climbing. Open in Zyflow.",
+      "climb": "944 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "79 km",
+      "unit": " · 944 m",
+      "sections": [
+        {
+          "title": "Climb toward the Karawanks",
+          "body": "From central Kranj the road tilts up toward Jamnik. After a few kilometres of honest climbing the ridge views appear, a clear signal you have left the flat petal routes behind.",
+          "body2": "Kropa follows: narrow lanes, forge heritage, and one of the most atmospheric villages on any of the flower rides. Pause here before the landscape opens fully toward the lake."
+        },
+        {
+          "title": "Bled, then Radovljica",
+          "body": "Bled is the emotional peak of the day, island church, castle, and the shoreline loop that every visitor recognises. Ride it with traffic awareness; the reward is the postcard you came for.",
+          "body2": "Radovljica’s baroque square is the cultural cool-down before the return toward Kranj. By then the climbing is largely behind you, but the legs will feel the full 944 m."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "This is an e-bike sweet spot: almost 80 km and nearly a vertical kilometre. Pin chargers near Bled and a lunch stop in Kropa or Radovljica before you roll out.",
+          "body2": "Check wind on the exposed sections and save an early café in Kranj for the finish. Open the route in Zyflow when you want navigation plus bike-friendly places on the same map."
+        }
+      ]
+    },
+    "jezerjanka": {
+      "crumbType": "Touring",
+      "titleHtml": "jezerjanka",
+      "lede": "North from Kranj along the Kokra into Slovenia’s first Mountain Village, glacier valleys, alpine farms and a quieter rhythm than the lake circuits.",
+      "place": "kranj",
+      "coords": "46.24° N, 14.35° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "76 <span>km</span>",
+      "elevationHtml": "603 <span>m</span>",
+      "difficulty": "Intermediate",
+      "intro": "Jezerjanka is the alpine petal of the Kranjska roža. Instead of postcard lakes you get working high farms, sudden rock walls and the wide green bowl of Jezersko under the Kamnik–Savinja Alps. At 76 km with around 600 m of climbing it is committing without becoming a race.",
+      "asideNote": "Touring · Kranjska roža · Visit Kranj",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Jezerjanka (76 km to Jezersko) | Zyflow",
+      "metaDescription": "Jezerjanka follows the Kokra from Kranj to Jezersko: 76 km and 603 m of climbing. Open in Zyflow.",
+      "climb": "603 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "76 km",
+      "unit": " · 603 m",
+      "sections": [
+        {
+          "title": "Up the Kokra",
+          "body": "Leave Kranj and settle into the valley road through Preddvor. The Kokra narrows gradually; traffic thins; the peaks start to stack ahead of you.",
+          "body2": "This is where the day changes character, from town touring into mountain valley riding. Keep snacks handy; services grow thinner the higher you go."
+        },
+        {
+          "title": "Into Jezersko",
+          "body": "Jezersko opens as a glacial amphitheatre: meadows, farmhouses and ridges that earned the village its Mountain Village status. Ride the valley floor, then decide whether to add a short local loop if legs allow.",
+          "body2": "The return follows the same corridor south. Descend with room for hikers and farm traffic, and save a café stop in Preddvor if you skipped lunch higher up."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Map water and food before you leave Kranj, the middle stretch is lean. A charger near the valley mouth is insurance on an e-bike day.",
+          "body2": "Pair Jezerjanka with a quieter Jezersko half-day (Mali vrh or Ravenska Kočna) if you overnight. Open the main line in Zyflow for navigation and place filters."
+        }
+      ]
+    },
+    "jezerski-vrh": {
+      "crumbType": "Alpine",
+      "titleHtml": "jezerski vrh",
+      "lede": "Climb to the former border crossing, then on to Ankova planina for a full panorama of Ravenska Kočna and the Kamnik Alps.",
+      "place": "jezersko",
+      "coords": "46.40° N, 14.50° E",
+      "durationHtml": "2.5 <span>h</span>",
+      "distanceHtml": "18.2 <span>km</span>",
+      "elevationHtml": "457 <span>m</span>",
+      "difficulty": "Intermediate",
+      "intro": "Jezerski vrh is the classic Jezersko panorama ride: mineral spring at the start, border saddle in the middle, meadow lookout at the end. About 18.2 km and 457 m fit in roughly two and a half hours.",
+      "asideNote": "Alpine · Jezersko cycling path",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Jezerski vrh – Ankova planina | Zyflow",
+      "metaDescription": "Jezerski vrh to Ankova planina, a panorama above Ravenska Kočna: 18.2 km and 457 m of climbing. Open in Zyflow.",
+      "climb": "457 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "18.2 km",
+      "unit": " · 457 m",
+      "sections": [
+        {
+          "title": "From slatina to the saddle",
+          "body": "Share the early road with road cyclists aiming for the border. Fill a little Jezerska slatina at the organised point, a sip is enough; save more for the return bag.",
+          "body2": "Climb to the former border crossing. Between the Slovenian and Austrian buildings, turn left for the steeper finish."
+        },
+        {
+          "title": "Ankova planina",
+          "body": "Views open fast: Ravenska Kočna, the Kamnik–Savinja wall, then the whole Jezersko valley with Veliki vrh, Kozji vrh and Storžič. Continue on easier road to Ankova planina and the old military post.",
+          "body2": "Return the same way. Detour to St Andrew’s church and Šenkova domačija on the way down if time allows."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Weather turns fast on the saddle, check shelter options before the last climb. Pin the slatina and a valley lunch.",
+          "body2": "Open Jezerski vrh in Zyflow as the bigger-view sibling to Mali vrh on a Jezersko weekend."
+        }
+      ]
+    },
+    "k11-planine-pod-kosuto": {
+      "crumbType": "Alpine",
+      "titleHtml": "planine pod košuto",
+      "lede": "Tržič’s alpine flagship: forest roads and pasture shelves under Košuta’s long white wall, big climbing, bigger views.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "39.7 <span>km</span>",
+      "elevationHtml": "1740 <span>m</span>",
+      "difficulty": "Hard",
+      "intro": "K11 is the high signature of the Tržič network. You leave town for steep forest approaches that open onto a chain of planine under Košuta, with views that stretch toward Austria. This is a full mountain day, not a café loop.",
+      "asideNote": "Alpine · Visit Tržič · K11",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K11 Planine pod Košuto | Zyflow",
+      "metaDescription": "One of Gorenjska’s most scenic MTB tours: shady forests and alpine pastures under the Košuta ridge (Pungrat, Šija, Kofce).",
+      "climb": "1740 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "39.7 km",
+      "unit": " · 1740 m",
+      "sections": [
+        {
+          "title": "Into the Karawanks foothills",
+          "body": "Climb out of Tržič as the asphalt thins and the forest takes over. Gradients come in waves; shade helps, but the elevation keeps coming.",
+          "body2": "Early turnaround options exist if weather shifts. The higher pastures reward those who keep a reserve for the last shelves."
+        },
+        {
+          "title": "Pastures under Košuta",
+          "body": "The limestone ridge of Košuta stays in view once you clear the trees. Alpine huts and meadow tracks define the middle of the day, shared with hikers, cattle and silence.",
+          "body2": "Descend with discipline. Forest roads cut speed slowly; loose sections punish late braking."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Confirm hut openings and water before you commit. Pin an emergency descent and a town café for the finish.",
+          "body2": "Open K11 in Zyflow when you want the line on the map with weather and place context, this is not a route to improvise hungry."
+        }
+      ]
+    },
+    "k16-trzic-jezersko": {
+      "crumbType": "Alpine",
+      "titleHtml": "tržič – jezersko",
+      "lede": "A linking alpine day from Tržič’s Karawanks flank across to the glacier bowl of Jezersko, valley to valley, sustained climbing.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "28.1 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Hard",
+      "intro": "K16 is the bridge in the Tržič shortlist: fewer postcard stops, more committed mountain kilometres, and a true change of valley when you finally drop toward Jezersko.",
+      "asideNote": "Alpine · Visit Tržič · K16",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K16 Tržič – Jezersko | Zyflow",
+      "metaDescription": "A demanding forest link from Tržič toward Jezersko, quiet, steep in places, rewarded with solitude and mountain views.",
+      "climb": "1299 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "28.1 km",
+      "unit": " · 1299 m",
+      "sections": [
+        {
+          "title": "Leaving Tržič",
+          "body": "Climb away from town into forest that keeps gaining. The early kilometres set the tone, this is a transfer with teeth, not a scenic meander.",
+          "body2": "Carry more food than you think. Services in the middle are thin compared with the lake petals out of Kranj."
+        },
+        {
+          "title": "Into Jezersko",
+          "body": "The high traverse eventually tips you toward Jezersko’s open meadows and glacial walls. The contrast with Tržič’s industrial gateway is the point of the ride.",
+          "body2": "Decide in advance whether Jezersko is the finish (overnight) or a turnaround. Both work; only one should be improvised."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Plan charging and meals at both ends. Mark a bail-out if weather closes the high section.",
+          "body2": "Open K16 in Zyflow to keep the full corridor visible and to browse Jezersko’s shorter loops for the next morning."
+        }
+      ]
+    },
+    "k21-dom-pod-storzicem": {
+      "crumbType": "Alpine",
+      "titleHtml": "dom pod storžičem",
+      "lede": "A focused hut day from Tržič toward Dom pod Storžičem, forest gradients, mountain air and a clear turnaround under Storžič’s pyramid.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "18.1 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Hard",
+      "intro": "K21 is built around one goal: reach the hut under Storžič, eat, then descend with fresh attention for Tržič’s streets. It is shorter than Košuta or Ljubelj in spirit, still honestly alpine.",
+      "asideNote": "Alpine · Visit Tržič · K21",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K21 Dom pod Storžičem | Zyflow",
+      "metaDescription": "A shorter climb into Lomska dolina toward Dom pod Storžičem, a classic Tržič mountain hut approach.",
+      "climb": "280 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "18.1 km",
+      "unit": " · 280 m",
+      "sections": [
+        {
+          "title": "Forest approach",
+          "body": "Climb from town into trees that frame glimpses of the summit. The gradient is steady rather than theatrical, good rhythm riding.",
+          "body2": "Shared tracks mean courtesy. Announce passes and expect hikers near the hut."
+        },
+        {
+          "title": "Hut and descent",
+          "body": "Dom pod Storžičem is the pause that defines the day. Check opening times; a closed hut turns a celebration into a cold sandwich stop.",
+          "body2": "Descend the way you came. Brake early on loose corners and save a café in Tržič for the emotional finish."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Pin hut hours and a downhill coffee before you leave. Weather under Storžič can shift while you climb.",
+          "body2": "Open K21 in Zyflow for the approach line and to keep the hut location obvious when the forest closes in."
+        }
+      ]
+    },
+    "k35-prelaz-ljubelj": {
+      "crumbType": "Alpine",
+      "titleHtml": "prelaz ljubelj",
+      "lede": "Tržič’s signature pass: thirteen hairpins on Europe’s oldest road pass, mostly car-free, with a hut at 1,370 m and about 900 m of climbing.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "3 <span>h</span>",
+      "distanceHtml": "26 <span>km</span>",
+      "elevationHtml": "900 <span>m</span>",
+      "difficulty": "Intermediate",
+      "intro": "K35 is the ride people mean when they say “Ljubelj by bike.” From the bus station in Tržič you climb through Podljubelj, share a careful stretch of main road, then take the historic pass that is closed to cars most of the year. The last 300 vertical metres are steep; the hut and the view into Austria are the payoff.",
+      "asideNote": "Alpine · Visit Tržič · K35 · 3 h",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K35 Prelaz Ljubelj (26 km, 900 m) | Zyflow",
+      "metaDescription": "Climb the old Ljubelj / Loibl pass road, Europe’s oldest road pass, closed to cars, with 13 hairpins and big Karawanks views.",
+      "climb": "900 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "26 km",
+      "unit": " · 900 m",
+      "sections": [
+        {
+          "title": "Tržič to Podljubelj",
+          "body": "Start opposite the bus station and ride north through the old town toward Podljubelj. Village streets give way to the valley approach; parking and services are still close if you need a last stop.",
+          "body2": "Beyond the village, a gravel link runs beside the main road toward Ljubelj before you briefly join the tunnel approach. Traffic here is real, ride assertively and predictably."
+        },
+        {
+          "title": "The old pass",
+          "body": "Before the tunnel, peel right onto the historic road. Thirteen hairpins and raw gradient remain. This is the section shared with hikers and, one September Sunday, vintage race cars, the rest of the year it belongs to legs and lungs.",
+          "body2": "The pass hut is the turnaround. Eat, look into Austria, then descend the same way with cool brakes and eyes up for oncoming riders."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Budget about three hours and 26 km out-and-back. Pin the hut opening and a recovery café in Tržič before you start the steep finale.",
+          "body2": "Open K35 in Zyflow for navigation on the mixed surfaces, and keep a weather eye on the saddle, it turns quickly at 1,370 m."
+        }
+      ]
+    },
+    "k42-roznovenska": {
+      "crumbType": "Touring",
+      "titleHtml": "rožnovenska pot",
+      "lede": "Tržič’s culture-forward loop through Brezje pri Tržiču, pilgrimage landmarks, valley towns and touring pace without a high pass.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "20.1 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Easy–intermediate",
+      "intro": "K42 is for mixed groups and heritage days: quieter roads, churches and villages, and enough distance to feel complete without Košuta’s commitment.",
+      "asideNote": "Touring · Visit Tržič · K42",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K42 Rožnovenska pot | Zyflow",
+      "metaDescription": "Follow the Rožnovenska pilgrimage route from Tržič through Brezje pri Tržiču: churches, villages and rolling Gorenjska roads.",
+      "climb": "369 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "20.1 km",
+      "unit": " · 369 m",
+      "sections": [
+        {
+          "title": "Valley heritage",
+          "body": "Link Tržič with Brezje pri Tržiču. Café density is kinder than on the alpine set; photo stops come naturally.",
+          "body2": "Gradients stay friendly. This is the day you bring someone who loves places more than watts."
+        },
+        {
+          "title": "Pace and pauses",
+          "body": "Do not rush the squares and churches, they are the point. Ride assertively on busier connectors, then slow again in village cores.",
+          "body2": "A bakery stop on the return seals the tone of the route."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Save lunch pins along the corridor and treat K42 as a warm-up before harder Tržič days.",
+          "body2": "Open the route in Zyflow to keep cultural stops and navigation on one map."
+        }
+      ]
+    },
+    "k43-dobrca": {
+      "crumbType": "Alpine",
+      "titleHtml": "dobrča",
+      "lede": "A serious alpine day from Tržič toward Dobrča, long climbs, ridge air and the feeling of riding the Karawanks rather than around them.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "26.9 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Hard",
+      "intro": "K43 sits with the harder Tržič alpine set: sustained climbing, thinner traffic higher up, and panoramas that justify an early start.",
+      "asideNote": "Alpine · Visit Tržič · K43",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K43 Dobrča | Zyflow",
+      "metaDescription": "From Tržič along the Gorenjska “balcony” and up to the hut on Dobrča, a popular alpine day ride with big views.",
+      "climb": "2067 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "26.9 km",
+      "unit": " · 2067 m",
+      "sections": [
+        {
+          "title": "Toward the ridge",
+          "body": "Climb out of town into forest roads that refuse to flatten. Patience matters more than peak power.",
+          "body2": "Pack layers. Exposure increases as trees thin and the ridge wind finds you."
+        },
+        {
+          "title": "Dobrča rewards",
+          "body": "Wide Karawanks views are the payment for the morning’s work. Turn around with time for a careful descent.",
+          "body2": "This is not a café-hopping loop, carry food and respect weather windows."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Mark emergency descents and a recovery stop in Tržič. Check conditions before the final push.",
+          "body2": "Open K43 in Zyflow so the line and bail-outs stay visible when fog or fatigue set in."
+        }
+      ]
+    },
+    "k51-udin-borst": {
+      "crumbType": "Gravel",
+      "titleHtml": "udin boršt",
+      "lede": "Foothill gravel around Udin boršt, forest tracks, gentle rollers and adventure without a high pass.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "25.3 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Intermediate",
+      "intro": "K51 is the confident gravel day of the Tržič shortlist: more dirt than asphalt, still close enough to town that a café finish is easy.",
+      "asideNote": "Gravel · Visit Tržič · K51",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K51 Udin boršt | Zyflow",
+      "metaDescription": "Explore the karst forest of Udin boršt, sinkholes, quiet tracks and bandit lore, looping from Tržič through the foothills.",
+      "climb": "286 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "25.3 km",
+      "unit": " · 286 m",
+      "sections": [
+        {
+          "title": "Forest edge riding",
+          "body": "Mix valley approaches with tracks through the boršt. Expect roots, soft patches after rain and the pleasure of canopy shade.",
+          "body2": "Keep tyre pressure honest. Slick clay turns playful into careful."
+        },
+        {
+          "title": "Turn back when you like",
+          "body": "The beauty of this loop family is flexibility, extend into the reserve or shorten toward asphalt whenever energy dips.",
+          "body2": "Shared paths mean modest speeds near walkers."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Pin a café return in Tržič and an exit to asphalt if the forest turns muddy.",
+          "body2": "Open K51 in Zyflow to see the gravel corridor beside the easier K52 bells loop."
+        }
+      ]
+    },
+    "k52-pot-treh-zvonov": {
+      "crumbType": "Touring",
+      "titleHtml": "pot treh zvonov",
+      "lede": "The easy family loop of the Tržič set, gentle terrain, village bells and a rhythm that works for mixed abilities.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "10 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Easy",
+      "intro": "K52 is the gateway ride: approachable distance and gradient, still unmistakably Gorenjska countryside around Tržič. Bring kids, recovery legs or anyone new to the local roads.",
+      "asideNote": "Touring · Visit Tržič · K52",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K52 Pot treh zvonov | Zyflow",
+      "metaDescription": "An easy foothill ride through Udin boršt on the Path of Three Bells, ideal for families and an e-bike warm-up around Tržič.",
+      "climb": "144 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "10 km",
+      "unit": " · 144 m",
+      "sections": [
+        {
+          "title": "Bells and villages",
+          "body": "Quiet roads and short connectors pass churches and hamlets. The “three bells” idea is the cultural thread, stop, listen, keep rolling.",
+          "body2": "Surfaces stay friendly. This is gravel-lite at most, not a mud-fest."
+        },
+        {
+          "title": "A first local day",
+          "body": "Use K52 to learn the basin before you attempt Ljubelj. Landmarks stick; confidence builds.",
+          "body2": "Ice cream and water stops are part of the design, do not optimise them away."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Save family-friendly pins before you roll out. Keep the map zoomed for short decisions.",
+          "body2": "Open K52 in Zyflow as the soft entry to the Tržič catalogue."
+        }
+      ]
+    },
+    "k53-kriva-jelka": {
+      "crumbType": "Gravel",
+      "titleHtml": "kriva jelka",
+      "lede": "Into the Udin boršt nature reserve toward the crooked fir, shaded tracks and a landmark finish in the forest.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "24 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Easy–intermediate",
+      "intro": "K53 targets one of the area’s best-known forest landmarks. Expect soft ground after rain and a calmer alternative to the high alpine days above Tržič.",
+      "asideNote": "Gravel · Visit Tržič · K53",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K53 Kriva jelka | Zyflow",
+      "metaDescription": "Ride into Udin boršt to the Kriva jelka nature reserve, a calm mid-length forest loop from Tržič.",
+      "climb": "386 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "24 km",
+      "unit": " · 386 m",
+      "sections": [
+        {
+          "title": "Reserve tracks",
+          "body": "Enter Udin boršt and follow forest roads toward Kriva jelka. The canopy keeps the day cool; the landmark gives the ride a story.",
+          "body2": "Share space with walkers. Announce yourself and keep speeds modest near the tree."
+        },
+        {
+          "title": "Nature-first riding",
+          "body": "This is not about elevation bragging rights. It is about quiet kilometres and a destination that locals name with a smile.",
+          "body2": "If trails are saturated, divert to firmer connectors, the reserve prefers restraint."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Pin an asphalt exit and a town café. Pair with K51 or K52 for a gravel weekend without alpine weather risk.",
+          "body2": "Open K53 in Zyflow to keep the reserve line obvious among similar forest tracks."
+        }
+      ]
+    },
+    "k55-gozd-udin-borst": {
+      "crumbType": "Gravel",
+      "titleHtml": "gozd – udin boršt",
+      "lede": "A varied foothill loop linking Gozd with Udin boršt, more climbing than the family routes, still short of alpine grades.",
+      "place": "tržič",
+      "coords": "46.36° N, 14.31° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "26.9 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Intermediate",
+      "intro": "K55 sits between easy bells and hard passes: useful when you want sweat without committing to Ljubelj or Košuta.",
+      "asideNote": "Gravel · Visit Tržič · K55",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "K55 Gozd – Udin boršt | Zyflow",
+      "metaDescription": "A varied foothill loop linking Gozd under Kriška gora with Udin boršt, mountain views without committing to high alpine terrain.",
+      "climb": "763 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "26.9 km",
+      "unit": " · 763 m",
+      "sections": [
+        {
+          "title": "Gozd to the boršt",
+          "body": "Link the Gozd side with Udin boršt tracks. Expect mixed surfaces and short punches rather than one long climb.",
+          "body2": "Navigation matters, similar junctions repeat. A saved line prevents accidental extras."
+        },
+        {
+          "title": "Training without drama",
+          "body": "Use this as a midweek spin or a bridge day between culture and alpine plans. Elevation adds up without exposure.",
+          "body2": "After rain, choose the firmer options; clay sections get ugly fast."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Pin a bakery return to Tržič and keep K55 beside K51/K52 on your map for mix-and-match weekends.",
+          "body2": "Open the route in Zyflow so the foothill corridor stays clear."
+        }
+      ]
+    },
+    "kamnicanka": {
+      "crumbType": "Touring",
+      "titleHtml": "kamničanka",
+      "lede": "The gentlest petal of the Kranjska roža: seventy kilometres of valley touring past castles, churches and Arboretum Volčji Potok, with barely 250 m of climbing.",
+      "place": "kranj",
+      "coords": "46.24° N, 14.35° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "70 <span>km</span>",
+      "elevationHtml": "254 <span>m</span>",
+      "difficulty": "Easy",
+      "intro": "Kamničanka is the route you give someone on their first day in Gorenjska. It leaves Kranj on quiet roads, crosses Slovenia’s only motorway bike bridge near Vokle, and threads heritage stops all the way to Kamnik before a soft return through forest gravel and the Sava plain. Distance without drama, and still a full day that feels like a real tour.",
+      "asideNote": "Touring · Kranjska roža · Visit Kranj",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Kamničanka (70 km) | Zyflow",
+      "metaDescription": "Kamničanka from Kranj past Kamnik and Arboretum Volčji Potok: 70 km and 254 m of climbing. Open in Zyflow.",
+      "climb": "254 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "70 km",
+      "unit": " · 254 m",
+      "sections": [
+        {
+          "title": "From Kranj across the plain",
+          "body": "Roll out through Šenčur toward Adergas, where the Church of the Annunciation sits in open fields. The Češnjevek ponds and Strmol Castle follow soon after, then Grad near Cerklje, a string of stops that never forces a hard climb.",
+          "body2": "Komenda’s oak woodland brings you to the edge of Kamnik. The old town is the natural lunch stop: short alleys, cafés, and enough shade to reset before the arboretum leg."
+        },
+        {
+          "title": "Arboretum, gravel and home",
+          "body": "From Šmarca the path reaches Arboretum Volčji Potok. Give it time, the park is one of the best mid-ride pauses in the flower network. Then Radomlje and Mengeš lead toward Vodice.",
+          "body2": "The stretch from Vodice toward Voglje turns to good gravel under forest canopy. Back into Kranj the road flattens again: tidy asphalt, easy spinning, and a finish that still has battery to spare on an e-bike."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Mark a charger and a long lunch in Kamnik before you leave. If you want coffee with a view of bikes parked properly, filter for bike-friendly places along the loop.",
+          "body2": "At 70 km and only 254 m of climbing this is the safest warm-up before Blejčanka or the Tržič alpine days. Save the GPX, then open the same line in Zyflow when you are ready to navigate."
+        }
+      ]
+    },
+    "ljubljancanka": {
+      "crumbType": "Touring",
+      "titleHtml": "ljubljančanka",
+      "lede": "South from Kranj to the capital: countryside connectors, Smlednik Castle, then Tivoli and Ljubljana Castle as the urban climax of the day.",
+      "place": "kranj",
+      "coords": "46.24° N, 14.35° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "70 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Easy–intermediate",
+      "intro": "Ljubljančanka is the city petal of the flower network, enough rural kilometres to feel like a tour, then a clear arrival in Ljubljana. At about 70 km it suits riders who want heritage and café density without alpine grades.",
+      "asideNote": "Touring · Kranjska roža · Visit Kranj",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Ljubljančanka (70 km to Ljubljana) | Zyflow",
+      "metaDescription": "Ljubljančanka: Kranj to Ljubljana past Smlednik Castle: 70 km and 460 m of climbing. Open in Zyflow.",
+      "climb": "460 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "70 km",
+      "unit": " · 460 m",
+      "sections": [
+        {
+          "title": "Countryside approach",
+          "body": "Leave Kranj on valley roads that gradually trade Gorenjska fields for the Ljubljana basin. Smlednik Castle is the landmark on the approach, a good photo and stretch stop.",
+          "body2": "Keep an eye on busier connectors as you near the city. The ride is not technical; the challenge is attention in mixed traffic."
+        },
+        {
+          "title": "Into Ljubljana",
+          "body": "Tivoli offers a green entry, then the climb or walk up to Ljubljana Castle for the classic finish frame. Old-town streets below are dense with bike-friendly cafés if you filter for them.",
+          "body2": "Return north the way you came, or rail-assist one direction if you prefer a one-way day. Either way, save battery for the urban segment."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Pin a lunch spot near the castle hill and a charger before the return. City traffic rewards a calm pace and clear routing.",
+          "body2": "Open Ljubljančanka in Zyflow to keep navigation and place layers together, especially useful when streets get busy around the centre."
+        }
+      ]
+    },
+    "locanka": {
+      "crumbType": "Touring",
+      "titleHtml": "ločanka",
+      "lede": "Kranj to Škofja Loka: stone bridges, castle hill and Crngrob on one of the flower’s prettiest heritage days.",
+      "place": "kranj",
+      "coords": "46.24° N, 14.35° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "64 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Easy–intermediate",
+      "intro": "Ločanka is the heritage favourite of the Kranjska roža, slightly shorter than Blejčanka, denser in old-town atmosphere. You ride into a medieval basin that still feels painted, with Capuchin bridges and a castle above the confluence.",
+      "asideNote": "Touring · Kranjska roža · Visit Kranj",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Ločanka (64 km to Škofja Loka) | Zyflow",
+      "metaDescription": "Ločanka: Kranj to Škofja Loka's old town and castle: 64 km and 930 m of climbing. Open in Zyflow.",
+      "climb": "930 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "64 km",
+      "unit": " · 930 m",
+      "sections": [
+        {
+          "title": "Toward the Loka basin",
+          "body": "Leave Kranj on rolling connectors that tip you into the Škofja Loka landscape. The castle hill appears before the streets do, a useful landmark for pacing the day.",
+          "body2": "Traffic is manageable if you keep to the signed cycling links. Save energy for wandering once you reach the centre."
+        },
+        {
+          "title": "Old town and Crngrob",
+          "body": "Škofja Loka’s twin bridges and lanes are the main event. Walk sections if crowds are thick; the point is the place, not average speed.",
+          "body2": "A short detour to Crngrob adds the frescoed church many riders miss. Then turn for Kranj with a café stop still in the bag."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Pin a long lunch in the old town and a quieter return road. At around 64 km this fits neatly between a recovery spin and a full mountain day.",
+          "body2": "Open Ločanka in Zyflow to navigate the approach and keep bike-friendly cafés visible when you arrive."
+        }
+      ]
+    },
+    "mali-vrh": {
+      "crumbType": "Alpine",
+      "titleHtml": "mali vrh",
+      "lede": "A calm Jezersko half-day on forest road to the Mali vrh lookout, Virnikov Grintovec, Košuta and Storžič in one panoramic out-and-back.",
+      "place": "jezersko",
+      "coords": "46.40° N, 14.50° E",
+      "durationHtml": "3 <span>h</span>",
+      "distanceHtml": "17.3 <span>km</span>",
+      "elevationHtml": "596 <span>m</span>",
+      "difficulty": "Easy–intermediate",
+      "intro": "Mali vrh is the gentle panorama of the Jezersko set. From the TIC in Zgornje Jezersko you cross a wooden bridge toward Makekova Kočna, climb kindly on forest road, pause at the built lookout, then continue to a bench at the end of the road above the Kokra.",
+      "asideNote": "Alpine · Jezersko cycling path · ~3 h",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Mali vrh lookout (17.3 km) | Zyflow",
+      "metaDescription": "Jezersko lookout under Mali vrh, out and back from Zgornje Jezersko: 17.3 km and 596 m of climbing. Open in Zyflow.",
+      "climb": "596 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "17.3 km",
+      "unit": " · 596 m",
+      "sections": [
+        {
+          "title": "Toward Makekova Kočna",
+          "body": "Orient at the panoramic board near the TIC, then take the asphalt toward Makekova Kočna until the fork for the farm. Stay straight onto the forest road that rises without drama.",
+          "body2": "After roughly four kilometres the arranged lookout under Mali vrh appears on a sharp left bend, the first big view toward Virnikov Grintovec, Komatevra, Stegovnik, Storžič and the Košuta ridge."
+        },
+        {
+          "title": "End bench and return",
+          "body": "Continue on the same easy forest grade to the end of the road. The bench overlooks the Kokra and Jezerska Kočna, a quiet turnaround.",
+          "body2": "Retrace the same line. Share space with hikers and keep speeds down on the shaded descent."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "About 17.3 km and 596 m with roughly three hours on the clock. Pin the TIC and a valley café for afterwards.",
+          "body2": "Open Mali vrh in Zyflow when you want this short alpine spin beside Ravenska Kočna or Jezerski vrh for a multi-day Jezersko stay."
+        }
+      ]
+    },
+    "ravenska-kocna": {
+      "crumbType": "Alpine",
+      "titleHtml": "ravenska kočna",
+      "lede": "Past Planšarsko jezero into Ravenska Kočna and up to Štularjeva planina, cirque walls, a cargo cableway and one of Jezersko’s most photogenic half-days.",
+      "place": "jezersko",
+      "coords": "46.40° N, 14.50° E",
+      "durationHtml": "2.25 <span>h</span>",
+      "distanceHtml": "16.6 <span>km</span>",
+      "elevationHtml": "408 <span>m</span>",
+      "difficulty": "Intermediate",
+      "intro": "Ravenska Kočna is the postcard alpine loop of the valley: lake at the mouth, glacial walls ahead, and a final climb to Štularjeva planina facing Skuta. About 16.6 km and 408 m keep it ambitious but approachable.",
+      "asideNote": "Alpine · Jezersko cycling path · ~2.25 h",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Ravenska Kočna – Štularjeva planina | Zyflow",
+      "metaDescription": "Ravenska Kočna past Planšarsko jezero to Štularjeva planina: 16.6 km and 408 m of climbing. Open in Zyflow.",
+      "climb": "408 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "16.6 km",
+      "unit": " · 408 m",
+      "sections": [
+        {
+          "title": "Lake into the valley",
+          "body": "From the TIC ride to Planšarsko jezero and skirt it on the right. At the Pod Turni hunting lodge the barrier allows cyclists through into Ravenska Kočna.",
+          "body2": "Asphalt becomes gravel past Ancel farm. Follow past the thematic path rest area and the car park to the lower station of the cargo cableway for Češka koča."
+        },
+        {
+          "title": "Štularjeva planina",
+          "body": "Turn right for the last two kilometres of climbing. On the pasture, take time for the cirque toward Skuta and the surrounding peaks to Goli vrh.",
+          "body2": "Descend the same way with hikers in mind. Pause again at the lake, it earns a slow finish in every season."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Roughly 2 hours 15 minutes if you ride steadily. Pin the lake café options and respect shared trail etiquette.",
+          "body2": "Open Ravenska Kočna in Zyflow beside Mali vrh for a two-loop Jezersko day with a swim or coffee between."
+        }
+      ]
+    },
+    "spodnji-virnik": {
+      "crumbType": "Touring",
+      "titleHtml": "spodnji virnik",
+      "lede": "The shortest Jezersko ride: the tufa quarry, an active rock-forming spring and Spodnji Virnik farm with dairy worth packing out.",
+      "place": "jezersko",
+      "coords": "46.40° N, 14.50° E",
+      "durationHtml": "1.5 <span>h</span>",
+      "distanceHtml": "9.4 <span>km</span>",
+      "elevationHtml": "304 <span>m</span>",
+      "difficulty": "Easy",
+      "intro": "Spodnji Virnik is the curiosity loop, geology you can watch happening, one steep pitch you may walk, and an organic farm finish with Grintovci views. About 9.4 km and 304 m in roughly ninety minutes.",
+      "asideNote": "Touring · Jezersko cycling path · ~1.5 h",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Spodnji Virnik – tufa quarry | Zyflow",
+      "metaDescription": "Short Jezersko loop to the tufa quarry and Spodnji Virnik farm: 9.4 km and 304 m of climbing. Open in Zyflow.",
+      "climb": "304 m",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "9.4 km",
+      "unit": " · 304 m",
+      "sections": [
+        {
+          "title": "Into the Kokra side valley",
+          "body": "Drop from Zgornje Jezersko to Spodnji Kraj and turn toward the upper Kokra. Virnikov Grintovec appears on the right as you roll the valley floor.",
+          "body2": "Past the first rise you reach tufa stacks and the active spring where calcium carbonate is still depositing rock. It is the educational heart of the ride."
+        },
+        {
+          "title": "Farm and spring walk",
+          "body": "After the stream crossing a short steep climb leads toward Spodnji Virnik. Leave the bike and walk minutes to the spring; then taste cheeses, yogurt and skuta at the farm if they are offering.",
+          "body2": "Descend the gravel to the main road and spin home. One punchy pitch is walkable, still an easy win among short rides."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Bring a backpack for dairy. Pin the farm and the TIC so the short loop never feels lost.",
+          "body2": "Open Spodnji Virnik in Zyflow as the rest-day or evening spin beside the bigger Jezersko panoramas."
+        }
+      ]
+    },
+    "trzicanka": {
+      "crumbType": "Touring",
+      "titleHtml": "tržičanka",
+      "lede": "Kranj’s northern petal into Tržič, old-town streets, Kamen Castle ruins and the gateway to Ljubelj, Košuta and Udin boršt.",
+      "place": "kranj",
+      "coords": "46.24° N, 14.35° E",
+      "durationHtml": "1 <span>day</span>",
+      "distanceHtml": "68 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Intermediate",
+      "intro": "Tržičanka connects the Kranj flower to the Tržič alpine catalogue. Ride it as a destination day into a historic basin under the Karawanks, or as the approach before a harder pass the next morning.",
+      "asideNote": "Touring · Kranjska roža · Visit Kranj",
+      "cta": "Open in Zyflow",
+      "ctaSecondary": "Get the app",
+      "gpxLabel": "Download GPX",
+      "metaTitle": "Tržičanka (68 km to Tržič) | Zyflow",
+      "metaDescription": "Tržičanka: Kranj to Tržič through the Kokra canyon and on to Kamen Castle: 68 km. Open in Zyflow.",
+      "climb": ", ",
+      "climbLabel": "Elevation",
+      "durationLabel": "Duration",
+      "difficultyLabel": "Difficulty",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "price": "68 km",
+      "unit": "",
+      "sections": [
+        {
+          "title": "North into the basin",
+          "body": "Valley riding from Kranj builds toward Tržič’s gateway feel. The landscape tightens; the town’s historic core and factory heritage sit under steep forest walls.",
+          "body2": "Kamen Castle’s ruins are the classic spur stop, a short climb for a wide view back over the valley."
+        },
+        {
+          "title": "Tržič as a hub",
+          "body": "Once in town you stand at the start of K35 Ljubelj, the Košuta pastures and the softer Udin boršt gravel days. Use Tržičanka to arrive fresh enough to explore the centre.",
+          "body2": "Cafés and supplies are denser here than on the high routes. Stock up before you commit to anything steeper."
+        },
+        {
+          "title": "How to ride it with Zyflow",
+          "body": "Save Tržičanka as a transfer day, then chain K35 or K52 from the same map. Pin a charger in town if you are on an e-bike.",
+          "body2": "Open the route in Zyflow for the approach navigation, then browse nearby alpine lines without leaving the app."
+        }
+      ]
+    }
+  },
+  "alts": {
+    "appMap": "Zyflow app map showing bike-friendly places, chargers and water points",
+    "polaroid1": "Two cyclists riding a rocky mountain trail",
+    "aboutPolaroidCyclist": "Cyclist riding past green alpine meadows",
+    "polaroid3": "Group of cyclists taking a break in a pine forest",
+    "ljubljanaBridge": "Ljubljanica river and the Triple Bridge in Ljubljana",
+    "coffeeSign": "Café sign reading \"cyclists need coffee\" on a village street",
+    "feature2": "Two bike tourers on an alpine road below snowy peaks",
+    "tourHike": "Hikers on a misty grassy ridge",
+    "tour4wd": "Off-road vehicle with a rooftop tent",
+    "tourKayak": "Kayakers paddling on a river",
+    "catSlovenia": "Lake Bled with its island church and the Julian Alps",
+    "catCroatia": "Aerial view of Rovinj old town on the Istrian coast",
+    "feature1": "Bikes parked on a historic town square",
+    "journal1": "Forested hills at sunset",
+    "feature3": "Cyclists on a valley trail below jagged alpine peaks",
+    "social1": "Off-road vehicle in a desert canyon",
+    "social2": "Bikepacking camp with a tent by a lake at dusk",
+    "social3": "Kayak on a calm sea with icebergs"
+  },
+  "guides": {
+    "name": "Guides",
+    "index": {
+      "title": "Rider questions, answered",
+      "lede": "Short answers for cyclists and e-bike riders, with the numbers and sources behind them.",
+      "empty": "No guides in this language yet.",
+      "emptyLink": "Read the English guides"
+    },
+    "dataLabel": "Key numbers",
+    "dataSource": "{source}, as of {date}",
+    "mapCredit": "{credit}, as of {date}",
+    "cta": {
+      "title": "Find your stops in Zyflow",
+      "ios": "App Store",
+      "android": "Google Play",
+      "planner": "Open in the planner"
+    },
+    "checked": "Checked on",
+    "sources": "Sources",
+    "accessed": "accessed {date}",
+    "related": "Related guides",
+    "fixtureNote": "Test guide for previewing the page layout. It is never published."
+  }
 }

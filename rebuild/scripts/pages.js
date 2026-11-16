@@ -4,6 +4,8 @@
 const { BLOG_PAGES } = require("./blog");
 const { GUIDE_PAGES } = require("./guides");
 const { ROUTE_PAGES } = require("./routes");
+const { townPages } = require("./towns");
+const { signedRoutePages } = require("./signed-routes");
 
 const SITE_ORIGIN = process.env.SITE_ORIGIN || "https://www.zyflow.eu";
 const LOCALES = ["en", "sl"];
@@ -52,6 +54,23 @@ function guidesArePublic() {
 }
 
 const GUIDES_ARE_PUBLIC = guidesArePublic();
+
+/**
+ * Town pages (/cycling/<town>) stay off the live site until batch 1 is
+ * reviewed. While this is false no town page is built or listed anywhere.
+ * A process env TOWNS_PUBLIC=true|false overrides this line for one build
+ * (local preview). The line itself stays the switch for a real launch.
+ */
+const TOWNS_PUBLIC = false;
+
+function townsArePublic() {
+  const override = process.env.TOWNS_PUBLIC;
+  if (override === "true" || override === "1") return true;
+  if (override === "false" || override === "0") return false;
+  return TOWNS_PUBLIC;
+}
+
+const TOWNS_ARE_PUBLIC = townsArePublic();
 
 /** @typedef {{ id: string, file: string, out: string, path: string, indexable: boolean, locales?: string[], preloadHero?: boolean }} PageDef */
 
@@ -275,6 +294,9 @@ const PAGES = [
   },
 ];
 
+// Town pages and the signed route pages they link to go public together.
+if (TOWNS_ARE_PUBLIC) PAGES.push(...townPages(), ...signedRoutePages());
+
 function pageLocales(page) {
   return page.locales || LOCALES;
 }
@@ -312,6 +334,8 @@ module.exports = {
   GUIDES_PUBLIC,
   GUIDES_ARE_PUBLIC,
   guidesArePublic,
+  TOWNS_PUBLIC,
+  TOWNS_ARE_PUBLIC,
   PAGES,
   pageLocales,
   localizedPath,

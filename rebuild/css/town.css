@@ -1,0 +1,807 @@
+/**
+ * Town pages. Everything else on the page is the route page's own parts
+ * (tour.css) and the route card (home.css); this file adds only the place row.
+ */
+
+.town-rows {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-gap-5);
+  display: flex;
+  flex-direction: column;
+}
+
+.town-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-gap-5);
+  padding-block: var(--space-gap-5);
+  border-bottom: 1px dashed var(--color-surface-4);
+}
+
+.town-row:first-child {
+  border-top: 1px dashed var(--color-surface-4);
+}
+
+.town-row--lead .town-row__text {
+  flex: 1;
+}
+
+/* The same pin the place carries on the map above. */
+.town-row__pin {
+  flex: none;
+  width: 40px;
+  height: 40px;
+}
+
+.town-row__photo {
+  flex: none;
+  width: 96px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* The route's colour on the map. */
+.town-row__line {
+  flex: none;
+  width: 28px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.town-lead {
+  margin: 0 0 var(--space-gap-5);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+.town-lead--wide {
+  max-width: 628px;
+  margin: calc(-1 * var(--space-gap-6)) 0 var(--space-gap-7);
+}
+
+.town-row__text {
+  min-width: 0;
+}
+
+.town-row__name {
+  font-family: var(--font-heading);
+  font-size: var(--type-h5);
+  line-height: var(--leading-h5);
+  margin: 0 0 var(--space-gap-2);
+  overflow-wrap: anywhere;
+}
+
+/* Same line of facts as the route card (.tour-card__meta). */
+.town-row__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-gap-2) var(--space-gap-4);
+  margin: 0;
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+}
+
+/* The separator travels with the fact after it, so a wrapped line never ends on one. */
+.town-row__fact {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-4);
+  min-width: 0;
+}
+
+.town-row__note {
+  margin: var(--space-gap-2) 0 0;
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+
+/* Same pill as the route card's "View route" (.tour-card__cta). */
+.town-row__link {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-2);
+  max-width: 45%;
+  height: var(--button-height-sm);
+  padding-inline: var(--button-padding-sm);
+  background: var(--color-surface-3);
+  border-radius: var(--button-radius-md);
+  font-size: var(--type-small);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 200ms ease;
+}
+
+.town-row__link:hover,
+.town-row__link:focus-visible {
+  background: var(--color-surface-4);
+}
+
+.town-row__link img {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.town-more,
+.town-note {
+  margin: 0 0 var(--space-gap-7);
+}
+
+.town-note {
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+
+.town-sight__credit {
+  margin: 0;
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+
+.town-sight__credit a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Intro: one wide paragraph across the page, not a narrow article column. */
+.town-intro {
+  padding-block: 0 var(--section-pad-md);
+}
+
+.town-intro__text {
+  margin: 0;
+  font-size: var(--type-lead);
+  line-height: 1.5;
+}
+
+.town-place__line {
+  flex: none;
+  width: 44px;
+  height: 8px;
+  margin-top: 14px;
+  border-radius: 4px;
+}
+
+.town-note--cards {
+  margin: var(--space-gap-6) 0 0;
+}
+
+.town-places .town-lead--wide {
+  max-width: none;
+}
+
+/* Place cards: the route card without a photo. */
+.town-places {
+  padding-top: 0;
+}
+
+.town-place .tour-card__body {
+  height: 100%;
+}
+
+.town-place__head {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-gap-4);
+}
+
+.town-place__pin {
+  flex: none;
+  width: 44px;
+  height: 44px;
+}
+
+.town-place .tour-card__name {
+  overflow-wrap: anywhere;
+}
+
+.town-place__meta {
+  flex-wrap: wrap;
+  gap: var(--space-gap-2) var(--space-gap-4);
+  margin-top: var(--space-gap-2);
+}
+
+.town-place__desc {
+  flex: 1;
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+.town-place .tour-card__foot {
+  gap: var(--space-gap-4);
+}
+
+.town-more--cards {
+  margin: var(--space-gap-7) 0 0;
+}
+
+.town-sights {
+  padding-top: 0;
+}
+
+@media (max-width: 720px) {
+  .town-row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-gap-4);
+  }
+
+  .town-row--lead .town-row__text {
+    flex: 1 1 60%;
+  }
+
+  .town-row__link {
+    max-width: 100%;
+  }
+}
+
+/* —— Two columns that fill the page: content on the left, the town card on the right —— */
+.town-main {
+  min-width: 0;
+}
+
+.town-intro__text {
+  margin: 0 0 var(--space-gap-9);
+}
+
+.town-block {
+  margin-bottom: var(--space-gap-9);
+}
+
+.town-block:last-child {
+  margin-bottom: 0;
+}
+
+.town-block__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  line-height: 1;
+  margin: 0 0 var(--space-gap-5);
+  overflow-wrap: anywhere;
+}
+
+.town-block .town-lead {
+  margin-bottom: var(--space-gap-6);
+}
+
+.town-block__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 720px) {
+  .town-block__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Town photos between the card sections. */
+.town-figure {
+  margin: 0 0 var(--space-gap-9);
+  overflow: visible;
+  border-radius: 0;
+}
+
+.town-figure img {
+  height: 420px;
+  border-radius: var(--radius-md);
+}
+
+.town-figure__caption {
+  margin-top: var(--space-gap-3);
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+
+.town-figure__caption a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .town-figure img {
+    height: 240px;
+  }
+}
+
+/* —— Swipe rows —— */
+.town-block__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-gap-5);
+  margin-bottom: var(--space-gap-5);
+}
+
+.town-block__head .town-block__title {
+  margin: 0;
+}
+
+.town-rail__arrows {
+  flex: none;
+  display: flex;
+  gap: var(--space-gap-2);
+}
+
+.town-rail__arrows--phone {
+  display: none;
+}
+
+.town-rail__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--button-height-sm);
+  height: var(--button-height-sm);
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-surface-3);
+  cursor: pointer;
+  transition: background-color 200ms ease, opacity 200ms ease;
+}
+
+.town-rail__arrow:hover {
+  background: var(--color-surface-4);
+}
+
+.town-rail__arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.town-rail__arrow img {
+  width: 18px;
+  height: 18px;
+}
+
+.town-rail__arrow--prev img {
+  transform: rotate(180deg);
+}
+
+/* One row; the next card peeks in so it is clear there is more. */
+.town-block__grid.town-rail {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.town-block__grid.town-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.town-block__grid.town-rail > * {
+  flex: 0 0 44%;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.town-block__grid:focus-visible {
+  outline: 2px solid var(--color-neutral-0);
+  outline-offset: 4px;
+}
+
+@media (max-width: 720px) {
+  .town-rail__arrows--phone {
+    display: none;
+  }
+
+  .town-rail__arrows {
+    display: none;
+  }
+
+  .town-block__grid.town-rail,
+  .town-block__grid.town-rail--phone {
+    display: flex;
+    align-items: stretch;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    /* let the row run to the screen edge so the peek reads as "more" */
+    margin-inline: calc(-1 * var(--town-gutter, 0px));
+    padding-inline: var(--town-gutter, 0px);
+    scroll-padding-inline: var(--town-gutter, 0px);
+  }
+
+  .town-block__grid.town-rail::-webkit-scrollbar,
+  .town-block__grid.town-rail--phone::-webkit-scrollbar {
+    display: none;
+  }
+
+  .town-block__grid.town-rail > *,
+  .town-block__grid.town-rail--phone > * {
+    flex: 0 0 84%;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+}
+
+/*
+ * No fade-in-on-scroll inside the town body. It is one very tall section and
+ * its cards sit in sideways rows, where a card that has not been scrolled to
+ * yet would otherwise stay invisible. Content here is always shown.
+ */
+.town-body.reveal,
+.town-body .reveal,
+.town-body .reveal--child {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/*
+ * —— House rules (design-system/docs/brand-guidelines.md) ——
+ * Editorial pages are flat: no drop shadows, no hover lift, no fade masks.
+ * Depth on zyflow.eu comes from torn paper, polaroids and the 12px corner.
+ * Motion: 160 ms for colour and opacity, ease-out cubic; press scales to 0.97.
+ * Never a grey circle behind an icon, so the row arrows are bare glyphs.
+ */
+.town-rail__arrows {
+  gap: 0;
+}
+
+.town-rail__arrow {
+  width: 44px; /* minimum hit target */
+  height: 44px;
+  background: none;
+  border-radius: 0;
+  transition: opacity 160ms cubic-bezier(0.33, 1, 0.68, 1), transform 160ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.town-rail__arrow:hover {
+  background: none;
+}
+
+.town-rail__arrow:hover:not(:disabled) {
+  opacity: 0.6;
+}
+
+.town-rail__arrow:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.town-rail__arrow:disabled {
+  opacity: 0.25;
+}
+
+.town-rail__arrow img {
+  display: none;
+}
+
+.town-rail__arrow::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: var(--zy-text-primary);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M3.75 9h10.5M9.75 4.5 14.25 9l-4.5 4.5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M3.75 9h10.5M9.75 4.5 14.25 9l-4.5 4.5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.town-rail__arrow--prev::before {
+  transform: rotate(180deg);
+}
+
+/* The foot never squeezes its button onto two lines. */
+.town-place .tour-card__foot {
+  flex-wrap: wrap;
+  row-gap: var(--space-gap-3);
+}
+
+.town-place .tour-card__cta {
+  flex: none;
+  white-space: nowrap;
+}
+
+/* Place-type icon: the design system's line icon in ink, 24px, nothing behind it. */
+.town-place__icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin-top: 6px;
+  color: var(--zy-text-primary);
+}
+
+/*
+ * Rows show whole cards only. On desktop exactly two fit, and the counter
+ * beside the arrows says how many there are; no card is cut by the column edge.
+ */
+.town-rail__nav {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-gap-3);
+}
+
+.town-rail__nav--phone {
+  display: none;
+}
+
+.town-rail__count {
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  white-space: nowrap;
+}
+
+.town-block__grid.town-rail {
+  margin: 0;
+  padding: 0;
+  scroll-padding-inline: 0;
+}
+
+.town-block__grid.town-rail > * {
+  flex: 0 0 calc((100% - var(--space-gap-6)) / 2);
+}
+
+/*
+ * Phone: one card and the edge of the next, with the row running to the
+ * screen edge so the next card slides in from off-screen, not from a cut.
+ */
+@media (max-width: 720px) {
+  .town-rail__nav,
+  .town-rail__nav--phone {
+    display: flex;
+  }
+
+  .town-block__grid.town-rail,
+  .town-block__grid.town-rail--phone {
+    margin: 0 calc(-1 * var(--town-gutter, 0px));
+    padding: 0 var(--town-gutter, 0px);
+    scroll-padding-inline: var(--town-gutter, 0px);
+  }
+
+  .town-block__grid.town-rail > *,
+  .town-block__grid.town-rail--phone > * {
+    flex: 0 0 84%;
+  }
+}
+
+@media (max-width: 720px) {
+  /* The home grid pins this to width: 100%, which would stop the row short of the screen edge. */
+  .town-block__grid.town-rail,
+  .town-block__grid.town-rail--phone {
+    width: auto;
+    max-width: none;
+  }
+}
+
+/*
+ * Desktop rows: two cards and the start of a third, which dissolves into the
+ * page instead of being cut by the column edge. The fade is on the row, not a
+ * shadow on the cards, and shows only on a side that has more cards.
+ */
+@media (min-width: 721px) {
+  .town-block__grid.town-rail > * {
+    flex: 0 0 43%;
+  }
+
+  .town-block__grid.town-rail {
+    --fade-start: 0px;
+    --fade-end: 96px;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--fade-start),
+      #000 calc(100% - var(--fade-end)),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--fade-start),
+      #000 calc(100% - var(--fade-end)),
+      transparent 100%
+    );
+  }
+
+  .town-block__grid.town-rail.is-scrolled {
+    --fade-start: 56px;
+  }
+
+  .town-block__grid.town-rail.is-at-end {
+    --fade-end: 0px;
+  }
+}
+
+/*
+ * —— Layout: the town card sits beside the intro and first photo only. ——
+ * Below that, every section uses the full page width (three cards per row),
+ * so nothing further down is squeezed into a column.
+ */
+.town-body {
+  padding-bottom: var(--space-gap-9);
+}
+
+.town-body .tour-aside {
+  position: static;
+}
+
+.town-main .town-figure {
+  margin-bottom: 0;
+}
+
+.town-wide {
+  padding-block: 0 var(--section-pad-md);
+}
+
+.town-wide.reveal,
+.town-wide .reveal,
+.town-wide .reveal--child {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.town-wide .town-figure img {
+  height: 480px;
+}
+
+@media (min-width: 1101px) {
+  .town-wide .town-block__grid:not(.town-rail) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .town-wide .town-block__grid.town-rail > * {
+    flex: 0 0 30%;
+  }
+}
+
+@media (max-width: 720px) {
+  .town-wide .town-figure img {
+    height: 240px;
+  }
+}
+
+/* The written answer that opens a section: reading text at a readable measure. */
+.town-answer {
+  max-width: 860px;
+  font-size: var(--type-lead);
+  line-height: 1.5;
+  margin-bottom: var(--space-gap-7);
+}
+
+.town-block__title {
+  max-width: 960px;
+}
+
+/*
+ * —— Breathing room ——
+ * Same rhythm as the route pages: a full section gap between blocks, and
+ * clear steps from heading to text to cards. The counter and arrows sit
+ * directly under the row they move.
+ */
+.town-body {
+  padding-bottom: var(--section-pad-lg);
+}
+
+.town-intro__text {
+  margin-bottom: var(--space-gap-8);
+}
+
+.town-wide {
+  padding-bottom: var(--section-pad-lg);
+}
+
+.town-wide .town-block,
+.town-wide .town-figure {
+  margin-bottom: var(--section-pad-lg);
+}
+
+.town-wide .container > :last-child {
+  margin-bottom: 0;
+}
+
+.town-block__title {
+  margin: 0 0 var(--space-gap-6);
+}
+
+.town-block .town-lead,
+.town-block .town-answer {
+  margin-bottom: var(--space-gap-8);
+}
+
+.town-block__grid:not(.town-rail) {
+  gap: var(--space-gap-7) var(--space-gap-6);
+}
+
+.town-rail__nav {
+  justify-content: flex-end;
+  margin-top: var(--space-gap-6);
+}
+
+.town-more--cards {
+  margin-top: var(--space-gap-8);
+}
+
+.town-place .tour-card__body {
+  gap: var(--space-gap-7);
+  padding: var(--space-gap-6) var(--space-gap-6) var(--space-gap-6);
+}
+
+@media (max-width: 720px) {
+  .town-rail__nav {
+    justify-content: flex-start;
+    margin-top: var(--space-gap-5);
+  }
+}
+
+/*
+ * Questions on a town page: the site's own accordion rows, laid out like the
+ * page's other sections (left-aligned on the page grid, section-size heading,
+ * reading measure) instead of the centred home-page block.
+ */
+.faq--town {
+  padding-block: 0 var(--section-pad-lg);
+}
+
+.faq--town .faq__inner {
+  max-width: var(--grid-col-12);
+  padding-inline: 0;
+}
+
+/* Same page gutter as .container below the full grid width (base.css). */
+@media (max-width: 1280px) {
+  .faq--town .faq__inner {
+    padding-inline: var(--page-pad-sm);
+  }
+}
+
+.faq--town .faq__title {
+  font-size: var(--type-h2);
+  line-height: 1;
+  text-align: left;
+  margin: 0 0 var(--space-gap-6);
+}
+
+.faq--town .faq__list,
+.faq--town .faq__foot {
+  max-width: 860px;
+}
+
+.faq--town .faq__item {
+  border-bottom: 1px dashed var(--color-surface-4);
+}
+
+.faq--town .faq__foot {
+  justify-content: flex-start;
+  text-align: left;
+  margin-inline: 0;
+}
+
+.town-credits {
+  margin: var(--space-gap-8) 0 0;
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+
+/* Questions are headings for the outline; the button keeps the look. */
+.faq__heading {
+  margin: 0;
+  font: inherit;
+}
+
+.town-rail__arrow:focus-visible {
+  outline: 2px solid var(--zy-text-primary);
+  outline-offset: 2px;
+}
+
+/* Towns hub: the routes list page, without its filter bar. */
+.page-towns .tours-hero__top {
+  margin-bottom: var(--space-gap-9);
+}
+
+.page-towns .tour-card__name a {
+  color: inherit;
+}

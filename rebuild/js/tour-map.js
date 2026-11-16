@@ -222,6 +222,7 @@
     if (!jsonEl) return null;
     try {
       const data = JSON.parse(jsonEl.textContent || "null");
+      if (data && data.town && Array.isArray(data.routes)) return data;
       if (!data || !Array.isArray(data.coords) || data.coords.length < 2) {
         return null;
       }
@@ -459,6 +460,97 @@
     };
   }
 
+  /**
+   * Town page map: every marked route through the town as a line, the page's
+   * picks as the app's POI pins, fitted to the municipality. No Overpass call.
+   */
+  function mountTownMap(zyMap, baseStyle, el, town) {
+    const map = new maplibregl.Map({
+      container: el,
+      style: baseStyle,
+      attributionControl: { compact: true },
+      interactive: true,
+      cooperativeGestures: true,
+      fadeDuration: 0,
+    });
+    map.addControl(
+      new maplibregl.NavigationControl({ showCompass: false }),
+      "top-right"
+    );
+
+    let painted = false;
+    // Until the rider moves the map themselves, keep the town in view: the
+    // box can still be tiny or change size while the page lays out, and a fit
+    // into a box smaller than its padding is silently dropped.
+    let riderMoved = false;
+    function fit() {
+      if (riderMoved || el.clientWidth < 120 || el.clientHeight < 120) return;
+      const [w, s, e, n] = town.bounds;
+      map.fitBounds(
+        [
+          [w, s],
+          [e, n],
+        ],
+        { padding: 24, maxZoom: 14, duration: 0 }
+      );
+    }
+    for (const type of ["dragstart", "zoomstart"]) {
+      map.on(type, (ev) => {
+        if (ev && ev.originalEvent) riderMoved = true;
+      });
+    }
+    function paint() {
+      try {
+        if (!map.isStyleLoaded()) return;
+        // One white-cased line per route, each in its own colour (the same
+        // colour marks the route's row in the list below the map).
+        town.routes.forEach((route, i) => {
+          const id = `town-route-${i}`;
+          zyMap.addRoute(
+            map,
+            id,
+            {
+              type: "Feature",
+              properties: {},
+              geometry: { type: "MultiLineString", coordinates: route.lines },
+            },
+            { variant: "hero" }
+          );
+          if (map.getLayer(id)) map.setPaintProperty(id, "line-color", route.color);
+        });
+        if (painted) return;
+        painted = true;
+        fit();
+        for (const pin of town.pins) {
+          const node = zyMap.poiMarker(zyMap.poiPinType(pin.type), {
+            basePath: MAP_PINS_PATH,
+            title: pin.name,
+          });
+          zyMap.addMarker(maplibregl, map, pin.coordinates, node);
+        }
+      } catch (err) {
+        console.warn("[tour-map] town paint", err);
+      }
+    }
+    map.on("load", paint);
+    map.on("style.load", paint);
+
+    let lastW = 0;
+    let lastH = 0;
+    const ro = new ResizeObserver((entries) => {
+      const cr = entries[0] && entries[0].contentRect;
+      if (!cr) return;
+      const w = Math.round(cr.width);
+      const h = Math.round(cr.height);
+      if ((w === lastW && h === lastH) || w < 2 || h < 2) return;
+      lastW = w;
+      lastH = h;
+      map.resize();
+      fit();
+    });
+    ro.observe(el);
+  }
+
   async function resolveCoords(el) {
     const embedded = readEmbeddedRoute(el);
     if (embedded) {
@@ -499,6 +591,16 @@
     const kitReady = ensureMapKit();
 
     try {
+      const town = readEmbeddedRoute(el);
+      if (town && town.town) {
+        const [, zyMap] = await Promise.all([maplibreReady, kitReady]);
+        const townStyle = await resolveBaseStyle(zyMap);
+        el.innerHTML = "";
+        el.classList.remove("is-loading");
+        el.classList.add("is-ready");
+        mountTownMap(zyMap, townStyle, el, town);
+        return;
+      }
       const [{ coords, stops }, , zyMap] = await Promise.all([
         resolveCoords(el),
         maplibreReady,
