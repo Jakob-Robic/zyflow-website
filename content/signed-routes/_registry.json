@@ -1,18 +1,110 @@
 {
   "_note": "Which database records make one route page. A route can be mapped as several records (stages, branches, an older and a newer mapping); listing them here under one slug merges them into one page. 'review' marks a grouping that is a guess and needs a person's yes. Tier: 1 = known by name, built with full care; 2 = national and regional; 3 = local.",
   "routes": [
-    { "slug": "g2-lesce-most-na-soci", "tier": 2, "records": ["c4339bd7-7140-417e-8f97-d2cbbec6aee1"] },
-
-    { "slug": "parenzana", "tier": 1, "records": ["d1ec5ce4-c31d-4c0c-9ba2-5d7325df5057"] },
-    { "slug": "drava-cycle-route", "tier": 1, "records": ["278b2d05-2c86-420f-9717-84d0ea177653"], "review": "A 6 km record named 'drava bike' (8172401e) is left out; check whether it is a missing piece of this route." },
-    { "slug": "sava-cycle-route-d2", "tier": 1, "records": ["a8637946-5880-4ac8-a6f5-302ad53a92a4"], "review": "A second record carries the same code D2 ('Rateče–Jesenice–Kranj–Ljubljana', 883b3706, 135 km). Decide: same route mapped twice, or two pages." },
-    { "slug": "spa-cycle-route-d8", "tier": 1, "records": ["5b5f2718-c2fd-4218-b56b-8d0f4856095f"], "review": "Three more records carry code D8 (Ptuj–Polčane 47 km, Murska Sobota–Gederovci 10 km, Dobrovnik–Bogojina 6 km). Decide whether they are stages of this route." },
-    { "slug": "jakobova-pot-gorenjska", "tier": 1, "records": ["d35e7d8d-c649-4e31-a4dd-78cbc02a5740"] },
-    { "slug": "jakobova-pot", "tier": 1, "records": ["7cbaf265-6dae-4b6a-81b3-beae9acc5b6f"], "review": "Main line of the Jakobova pot; the Gorenjska and Prekmurje–Štajerska branches have their own entries. Decide: one page with branches, or three pages." },
-    { "slug": "jakobova-pot-prekmurje-stajerska", "tier": 1, "records": ["558df883-5fb4-4bab-96e4-38ad8835f5f5"] },
-    { "slug": "eurovelo-9-slovenia", "tier": 1, "records": ["d915ad22-5c67-4c6d-80ca-ffe194387962"] },
-    { "slug": "eurovelo-8-slovenia", "tier": 1, "records": ["c0092818-7f79-4fbd-833c-223e5818d4b3"], "review": "The record is 1,187 km long and mapped in three separate parts; only a short part is in Slovenia. Needs clipping to Slovenia before it can be a page." },
-    { "slug": "iron-curtain-trail-ev13", "tier": 1, "records": ["c57898f0-5bc0-4415-8c71-3b78c9d576c0"] },
-    { "slug": "slovenska-turnokolesarska-pot", "tier": 1, "records": ["338fe367-4c35-4358-8412-cc0b2de4b98f", "31cfa035-9617-4745-b176-c0d1cd37ee6e", "c80e5c8d-a4aa-431a-976b-05ac20f47004", "a057febf-5933-4200-bf6c-8363a409c335", "a0dd9de4-78cd-4624-ae95-c649c2d8a253", "b31abeb4-bbed-4b55-9145-932d3a37032d"], "review": "Six records of the mountain-bike STKP merged as stages of one route. The app already has STKP as a collection; decide whether it gets a route page too." }
-  ]
+    {
+      "slug": "g2-lesce-most-na-soci",
+      "tier": 2,
+      "records": [
+        "c4339bd7-7140-417e-8f97-d2cbbec6aee1"
+      ]
+    },
+    {
+      "slug": "parenzana",
+      "tier": 1,
+      "records": [
+        "d1ec5ce4-c31d-4c0c-9ba2-5d7325df5057"
+      ]
+    },
+    {
+      "slug": "drava-cycle-route",
+      "tier": 1,
+      "records": [
+        "278b2d05-2c86-420f-9717-84d0ea177653"
+      ],
+      "review": "A 6 km record named 'drava bike' (8172401e) is left out; check whether it is a missing piece of this route."
+    },
+    {
+      "slug": "d2-ratece-ljubljana",
+      "tier": 1,
+      "records": [
+        "883b3706-e7d9-433c-aac0-3233d233c87b"
+      ],
+      "continues": "d2-ljubljana-brezice",
+      "note": "Upper half of the national Sava route D2. Decided 2026-11-16: two pages, each naming the other as its continuation."
+    },
+    {
+      "slug": "d2-ljubljana-brezice",
+      "tier": 1,
+      "records": [
+        "a8637946-5880-4ac8-a6f5-302ad53a92a4"
+      ],
+      "continues": "d2-ratece-ljubljana",
+      "note": "Lower half of D2, mapped as 'Savska kolesarska pot'."
+    },
+    {
+      "slug": "spa-cycle-route-d8",
+      "tier": 1,
+      "records": [
+        "5b5f2718-c2fd-4218-b56b-8d0f4856095f"
+      ],
+      "note": "Main mapped part of the national spa route D8 (133 km). Decided 2026-11-16: its own page; the detached Ptuj–Polčane part gets its own page too; the two short Prekmurje pieces (10 km and 6 km) are not merged in."
+    },
+    {
+      "slug": "d8-ptuj-poljcane",
+      "tier": 2,
+      "records": [
+        "4bf7d0e2-e992-4e3c-a1d2-64138467b78e"
+      ],
+      "note": "Detached 47 km part of D8, 7 km from the main part. Decided 2026-11-16: its own page, so the towns it passes have all their routes."
+    },
+    {
+      "slug": "jakobova-pot-gorenjska",
+      "tier": 1,
+      "records": [
+        "d35e7d8d-c649-4e31-a4dd-78cbc02a5740"
+      ],
+      "note": "One of the three arms of the Jakobova pot; they do not overlap and all meet in Ljubljana. Decided 2026-11-16: three pages now, an overview page for the whole route later."
+    },
+    {
+      "slug": "jakobova-pot",
+      "tier": 1,
+      "records": [
+        "7cbaf265-6dae-4b6a-81b3-beae9acc5b6f"
+      ],
+      "note": "One of the three arms of the Jakobova pot; they do not overlap and all meet in Ljubljana. Decided 2026-11-16: three pages now, an overview page for the whole route later."
+    },
+    {
+      "slug": "jakobova-pot-prekmurje-stajerska",
+      "tier": 1,
+      "records": [
+        "558df883-5fb4-4bab-96e4-38ad8835f5f5"
+      ],
+      "note": "One of the three arms of the Jakobova pot; they do not overlap and all meet in Ljubljana. Decided 2026-11-16: three pages now, an overview page for the whole route later."
+    },
+    {
+      "slug": "eurovelo-9-slovenia",
+      "tier": 1,
+      "records": [
+        "d915ad22-5c67-4c6d-80ca-ffe194387962"
+      ]
+    },
+    {
+      "slug": "eurovelo-8-slovenia",
+      "tier": 1,
+      "records": [
+        "c0092818-7f79-4fbd-833c-223e5818d4b3"
+      ],
+      "review": "The record is 1,187 km long and mapped in three separate parts; only a short part is in Slovenia. Needs clipping to Slovenia before it can be a page."
+    },
+    {
+      "slug": "iron-curtain-trail-ev13",
+      "tier": 1,
+      "records": [
+        "c57898f0-5bc0-4415-8c71-3b78c9d576c0"
+      ]
+    }
+  ],
+  "_not_here": {
+    "slovenska-turnokolesarska-pot": "Decided 2026-11-16: STKP is built from our own collection data (43 stages, 1,831 km, from PZS), not from the six partial OpenStreetMap records. It is not a registry route."
+  }
 }
