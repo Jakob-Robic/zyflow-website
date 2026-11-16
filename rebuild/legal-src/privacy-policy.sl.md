@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.4 · **Datum začetka veljavnosti:** 7. 11. 2026 · Nadomešča različico 2.3 z dne 7. 11. 2026
+**Različica:** 2.5 · **Datum začetka veljavnosti:** 16. 11. 2026 · Nadomešča različico 2.4 z dne 7. 11. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -21,7 +21,7 @@ Pooblaščene osebe za varstvo podatkov nismo imenovali. Za vsa vprašanja in za
 - Zbiramo le podatke, ki jih potrebujemo za delovanje storitve Zyflow: vaš uporabniški račun, poti in vsebine, ki jih ustvarite, ter tehnične podatke za delovanje aplikacije.
 - Vaše poti so zasebne, razen če se **sami odločite, da posamezno pot delite** s skupnostjo.
 - Vaših podatkov ne prodajamo in v aplikaciji ne prikazujemo oglasov.
-- Analitika uporabe deluje s psevdonimnim identifikatorjem uporabnika, ne z vašim e-naslovom, in se vklopi le, če privolite.
+- Dokler se ne odločite, aplikacija anonimno, brez kakršnega koli identifikatorja, šteje, kako se uporablja, da jo lahko izboljšujemo; temu lahko ugovarjate v Nastavitvah. Podrobna analitika uporabe deluje s psevdonimnim identifikatorjem uporabnika, ne z vašim e-naslovom, in se vklopi le, če privolite.
 - Lokacijo uporabljamo le med uporabo aplikacije. Lokacije v ozadju ne spremljamo.
 - Potisna obvestila prejmete le, če jih dovolite v telefonu. Novice in ponudbe, po potisnih obvestilih ali po e-pošti, ostanejo izklopljene, dokler jih ne vklopite sami.
 - Uporabniški račun lahko kadar koli izbrišete v aplikaciji.
@@ -112,9 +112,13 @@ Za hrambo kontaktnih podatkov (e-naslov, ime in priimek ter identifikator uporab
 
 ### 3.9 Analitika uporabe
 
-Za razumevanje uporabe aplikacije in njeno izboljševanje uporabljamo PostHog (oblak v EU). Pošiljamo psevdonimni **identifikator uporabnika (ne vašega e-naslova ali imena)**, izbrane dogodke v aplikaciji (na primer »pot načrtovana« ali »izvoz GPX«), različico aplikacije in osnovne podatke o napravi. Če privolite, PostHog beleži tudi tehnične podrobnosti o napakah v aplikaciji (sporočilo o napaki in mesto v aplikaciji, kjer je nastala), da jih lahko odpravimo. Samodejnega zajema vseh interakcij in snemanja sej v aplikaciji ne uporabljamo. PostHog je nastavljen tako, da **vašega naslova IP ne shrani**.
+**Anonimna statistika uporabe.** Dokler se ne odločite glede analitike uporabe in če temu ne ugovarjate, aplikacija storitvi PostHog (oblak v EU, ki deluje kot naš obdelovalec) pošilja anonimne dogodke o uporabi: katere zaslone odprete in katere korake v aplikaciji opravite (na primer »uvajanje končano« ali »pot načrtovana«), različico aplikacije in osnovne podatke o napravi (platformo in različico operacijskega sistema). Ti dogodki nosijo naključno številko, ki obstaja le, dokler je aplikacija odprta, in se nikoli ne shrani na vašo napravo, zato jih ni mogoče povezati z vami, z vašimi drugimi uporabami aplikacije ali z vašim računom. Ne vsebujejo naslova IP (PostHog ga zavrže), lokacije, imena, e-naslova ali identifikatorja uporabnika in ne podrobnosti o napakah. Poleg tega aplikacija v naši podatkovni bazi šteje zagone aplikacije in nekaj ključnih trenutkov (na primer »uvajanje končano« ali »žig zbran«) kot dnevne seštevke, brez kakršnega koli identifikatorja; da vsak trenutek šteje največ enkrat na dan, aplikacija na vaši napravi hrani kratek seznam trenutkov, ki so bili danes že šteti. To statistiko uporabljamo le za merjenje in izboljševanje aplikacije, nikoli za oglaševanje, in je ne delimo z drugimi.
 
-**Pravna podlaga:** vaša privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Aplikacija vas vpraša, preden se analitika vklopi; dokler ne privolite, je izklopljena. Privolitev lahko kadar koli prekličete v Nastavitvah → Deli statistiko uporabe; preklic ne vpliva na obdelavo pred preklicem.
+**Pravna podlaga:** naš zakoniti interes za merjenje in izboljševanje aplikacije (točka (f) prvega odstavka 6. člena Splošne uredbe). Za ta namen na vaši napravi ne shranimo in z nje ne beremo nobenega identifikatorja. Temu lahko kadar koli ugovarjate v Nastavitvah → Anonimna statistika uporabe (prikazano, dokler se ne odločite glede analitike uporabe). Če ste analitiko uporabe zavrnili, aplikacija storitvi PostHog ne pošilja ničesar.
+
+**Analitika uporabe (z vašo privolitvijo).** Če privolite, uporabljamo PostHog (oblak v EU) za razumevanje, kako se aplikacija uporablja skozi čas, in za njeno izboljševanje. Pošiljamo psevdonimni **identifikator uporabnika (ne vašega e-naslova ali imena)**, izbrane dogodke v aplikaciji (na primer »pot načrtovana« ali »izvoz GPX«), različico aplikacije in osnovne podatke o napravi. Če privolite, PostHog beleži tudi tehnične podrobnosti o napakah v aplikaciji (sporočilo o napaki in mesto v aplikaciji, kjer je nastala), da jih lahko odpravimo. Samodejnega zajema vseh interakcij in snemanja sej v aplikaciji ne uporabljamo. PostHog je nastavljen tako, da **vašega naslova IP ne shrani**. Ko privolite, aplikacija začne z novim identifikatorjem; kar ste počeli pred privolitvijo, ostane anonimno in se z vami ne poveže.
+
+**Pravna podlaga:** vaša privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Aplikacija vas vpraša, preden se ta analitika vklopi; dokler ne privolite, je izklopljena. Privolitev lahko kadar koli prekličete v Nastavitvah → Deli statistiko uporabe; preklic ne vpliva na obdelavo pred preklicem.
 
 ### 3.10 Spremljanje napak in delovanja
 
@@ -152,7 +156,7 @@ Naša iskalna funkcija za kratek čas shrani naslov IP naprave, ki pošlje zahte
 
 Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lokacijo, nedavna iskanja, datum, ko vam je nazadnje ponudila obvestila, žige, ki čakajo na pošiljanje, ko nimate signala (z meritvijo GPS ob kraju in morebitnimi odgovori), in kraje, na katere vas je danes opomnila, da deluje hitro, da ostanete prijavljeni, da se žigi, zbrani brez signala, ne izgubijo in da vas o obvestilih ne sprašujemo in ne opominjamo prepogosto. Ta hramba je nujno potrebna za storitev, ki jo zahtevate. Podatki se izbrišejo, ko odstranite aplikacijo.
 
-Če privolite v analitiko uporabe, PostHog na napravi shrani tudi psevdonimni identifikator; brez vaše privolitve ne shrani ničesar. Sentry za poročanje o napakah shrani psevdonimni identifikator (glejte 3.10).
+Če privolite v analitiko uporabe, PostHog na napravi shrani tudi psevdonimni identifikator; sicer PostHog na napravi ne shrani ničesar (anonimna statistika uporabe uporablja naključno številko, ki obstaja le v pomnilniku, dokler je aplikacija odprta). Da ključne trenutke šteje največ enkrat na dan (glejte 3.9), aplikacija shrani današnji datum, različico aplikacije in imena že štetih trenutkov; ta zapis ne vsebuje identifikatorja. Če anonimni statistiki uporabe ugovarjate, aplikacija shrani to vašo izbiro. Sentry za poročanje o napakah shrani psevdonimni identifikator (glejte 3.10).
 
 ### 3.15 Povezane storitve (neobvezno)
 
@@ -234,6 +238,7 @@ Upoštevajte, da so vaši žigi zapis krajev, ki ste jih obiskali, in časa obis
 | Obvestila o vaših vožnjah, krajih in prispevkih (potisna in v nabiralniku) | Pogodba, točka (b) 6(1) |
 | Povezane storitve (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), le če jih povežete | Pogodba, točka (b) prvega odstavka 6. člena |
 | Prijave in predlogi krajev, spremljanje napak, varnost in omejevanje zahtev, povezave Stay22, podpora | Zakoniti interes, točka (f) 6(1) |
+| Anonimna statistika uporabe (PostHog brez identifikatorja, dnevni seštevki) | Zakoniti interes, točka (f) 6(1) |
 | Analitika uporabe (PostHog) | Privolitev, točka (a) 6(1) |
 | Trženjska e-pošta, obvestila o novicah in ponudbah, piškotki in sledilne kode na spletnem mestu (ko bodo uvedeni) | Privolitev, točka (a) 6(1) (za piškotke in trženjsko e-pošto tudi ZEKom-2) |
 | Odgovarjanje na zahteve za uveljavljanje pravic, računovodske in druge zakonske obveznosti | Zakonska obveznost, točka (c) 6(1) |
@@ -249,7 +254,7 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 | Supabase, Inc. (obdelovalec) | Podatkovna baza, avtentikacija, hramba datotek, zaledne funkcije | Vsi zgoraj opisani podatki aplikacije | EU (Irska, eu-west-1); matična družba v ZDA: glej točko 6 |
 | Brevo (Sendinblue SAS, Francija) (obdelovalec) | Hramba kontaktov in pošiljanje e-pošte | E-naslov, ime in priimek, identifikator uporabnika, članstvo na poštnem seznamu (le s privolitvijo), vsebina sporočil | Družba s sedežem v Franciji (EU); zaščitni ukrepi ob morebitnem prenosu zunaj EU/EGP: glej točko 6 |
 | Expo (650 Industries, Inc.) (obdelovalec) | Dostava potisnih obvestil, le če obvestila dovolite | Žeton za potisna obvestila, naslov in besedilo obvestila, identifikator obvestila | ZDA; glej točko 6 |
-| PostHog (oblak v EU) (obdelovalec) | Analitika uporabe | Identifikator uporabnika, dogodki v aplikaciji, podatki o napravi/aplikaciji; naslov IP se ne shrani | EU |
+| PostHog (oblak v EU) (obdelovalec) | Analitika uporabe in anonimna statistika uporabe | S privolitvijo: identifikator uporabnika, dogodki v aplikaciji, podatki o napravi/aplikaciji; anonimna statistika: dogodki v aplikaciji in podatki o napravi/aplikaciji brez identifikatorja; naslov IP se ne shrani | EU |
 | Sentry (Functional Software, Inc.), hramba v EU (obdelovalec) | Spremljanje napak in delovanja | Identifikator uporabnika, naslov IP, podatki o napravi in napaki | Hramba v EU; družba iz ZDA: glej točko 6 |
 | Vercel, Inc. (obdelovalec) | Gostovanje naših spletnih mest | Naslov IP, tehnični podatki o zahtevi | Globalno omrežje, vključno z ZDA: glej točko 6 |
 | Apple / Google (samostojna upravljavca) | Prijava z Apple / Google (če jo izberete) | Podatki za prijavo, e-naslov, ime, povezava do profilne slike (Google) | Subjekti v EU in ZDA: glej točko 6 |
@@ -301,6 +306,8 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Nastavitve obvestil in obvestila v nabiralniku | Do izbrisa računa |
 | Dnevniki pošiljanja e-pošte v storitvi Brevo | Le toliko časa, kolikor je potrebno za dostavo e-pošte in odpravo težav pri dostavi, v skladu z nastavitvami ponudnika |
 | Analitika uporabe (PostHog) | 12 mesecev; ob izbrisu računa se samodejno izbriše |
+| Anonimna statistika uporabe (PostHog, brez identifikatorja) | 12 mesecev |
+| Dnevni seštevki zagonov aplikacije in ključnih trenutkov (brez identifikatorja) | Hranimo jih kot seštevke; osebnih podatkov ne vsebujejo |
 | Poročila o napakah in delovanju (Sentry) | Do 90 dni |
 | Podatki za omejevanje iskalnih zahtev (naslov IP in števci) | Le toliko časa, kolikor je potrebno za preprečevanje zlorab; redno se brišejo |
 | Predpomnilnik iskanja (iskalni niz brez povezave z vami) | 24 ur |
@@ -320,7 +327,7 @@ Po Splošni uredbi imate pravico do:
 - **izbrisa** (»pravica do pozabe«, 17. člen);
 - **omejitve** obdelave (18. člen);
 - **prenosljivosti** podatkov – da podatke, ki ste nam jih posredovali, prejmete v strukturirani, strojno berljivi obliki ali da jih posredujemo drugemu upravljavcu (20. člen); poti lahko v aplikaciji izvozite tudi v obliki GPX;
-- **ugovora** obdelavi na podlagi zakonitega interesa, na primer spremljanju napak (21. člen), in kadar koli ugovora obdelavi za namene neposrednega trženja;
+- **ugovora** obdelavi na podlagi zakonitega interesa, na primer spremljanju napak ali anonimni statistiki uporabe (21. člen) – anonimni statistiki uporabe tudi neposredno v Nastavitvah –, in kadar koli ugovora obdelavi za namene neposrednega trženja;
 - **preklica privolitve** kadar koli, ne da bi to vplivalo na zakonitost obdelave pred preklicem (tretji odstavek 7. člena);
 - **vložitve pritožbe** pri nadzornem organu (točka 10).
 
