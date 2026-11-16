@@ -1,6 +1,8 @@
 {
  "slug": "bled",
+ "area_code": "bled",
  "name": "Bled",
+ "official_name": "Bled",
  "region": "Gorenjska",
  "country": "Slovenia",
  "checked": "2026-11-16",
@@ -388,9 +390,10 @@
   "chargers": 0,
   "sights": 29
  },
- "water_near_route": 22,
+ "water_near_route": 21,
  "routes": [
   {
+   "id": "c4339bd7-7140-417e-8f97-d2cbbec6aee1",
    "color": "#2563EB",
    "code": "G2",
    "name": "Lesce–Bled–Bohinjska Bistrica–Podbrdo–Most na Soči",
@@ -408,56 +411,60 @@
        46.29809
       ],
       [
-       14.03827,
-       46.29849
+       14.03823,
+       46.29854
       ],
       [
        14.03865,
        46.29753
       ],
       [
-       14.03874,
-       46.29612
+       14.03856,
+       46.29402
       ],
       [
        14.03826,
        46.293
       ],
       [
-       14.03708,
-       46.29211
+       14.03712,
+       46.2922
       ],
       [
-       14.03723,
-       46.29095
+       14.03727,
+       46.29102
       ],
       [
        14.03599,
        46.2897
       ],
       [
-       14.03564,
-       46.28887
+       14.03573,
+       46.28898
       ],
       [
        14.03402,
        46.28752
       ],
       [
-       14.03265,
-       46.28683
+       14.03279,
+       46.28687
       ],
       [
-       14.03161,
+       14.03127,
        46.28702
       ],
       [
-       14.03043,
-       46.28691
+       14.03022,
+       46.28681
       ],
       [
-       14.02924,
-       46.28595
+       14.02926,
+       46.286
+      ],
+      [
+       14.02902,
+       46.28472
       ]
      ],
      [
@@ -806,8 +813,12 @@
        46.3733
       ],
       [
-       14.08983,
-       46.37456
+       14.08938,
+       46.37439
+      ],
+      [
+       14.09065,
+       46.37477
       ],
       [
        14.09317,
@@ -1006,8 +1017,8 @@
        46.34086
       ],
       [
-       14.18017,
-       46.34156
+       14.18077,
+       46.34171
       ]
      ],
      [
@@ -1032,6 +1043,7 @@
    }
   },
   {
+   "id": "d35e7d8d-c649-4e31-a4dd-78cbc02a5740",
    "color": "#E8590C",
    "code": null,
    "name": "Kolesarska Jakobova pot–Gorenjska veja",
@@ -1188,12 +1200,8 @@
        46.3761
       ],
       [
-       14.055,
-       46.37599
-      ],
-      [
-       14.05468,
-       46.37619
+       14.05487,
+       46.37601
       ],
       [
        14.05468,
@@ -1252,8 +1260,8 @@
        46.38506
       ],
       [
-       14.03046,
-       46.38607
+       14.03016,
+       46.38632
       ]
      ],
      [
@@ -1628,8 +1636,8 @@
      ],
      [
       [
-       14.18017,
-       46.34156
+       14.18077,
+       46.34171
       ],
       [
        14.1789,
@@ -1648,6 +1656,7 @@
    }
   },
   {
+   "id": "883b3706-e7d9-433c-aac0-3233d233c87b",
    "color": "#7C3AED",
    "code": "D2",
    "name": "Rateče–Jesenice–Kranj–Ljubljana",
@@ -1805,20 +1814,16 @@
        46.41019
       ],
       [
-       14.08223,
-       46.41708
+       14.08205,
+       46.41688
       ],
       [
-       14.08368,
-       46.41855
+       14.08388,
+       46.41867
       ],
       [
-       14.0854,
-       46.41888
-      ],
-      [
-       14.08616,
-       46.41862
+       14.0857,
+       46.41881
       ],
       [
        14.08799,
@@ -1829,44 +1834,48 @@
        46.41557
       ],
       [
-       14.09037,
-       46.41389
+       14.09001,
+       46.4141
       ],
       [
-       14.0911,
-       46.41381
+       14.09085,
+       46.41371
+      ],
+      [
+       14.09109,
+       46.41389
       ],
       [
        14.09025,
        46.41446
       ],
       [
-       14.08996,
-       46.41544
+       14.08992,
+       46.4154
       ],
       [
        14.09025,
        46.41541
       ],
       [
-       14.0908,
-       46.41446
+       14.0909,
+       46.41435
       ],
       [
-       14.0913,
-       46.41422
+       14.09167,
+       46.41428
       ],
       [
-       14.09208,
-       46.41452
+       14.0927,
+       46.41525
       ],
       [
-       14.09278,
-       46.41542
+       14.0928,
+       46.41592
       ],
       [
-       14.09273,
-       46.41619
+       14.09261,
+       46.4164
       ],
       [
        14.09208,
@@ -1881,26 +1890,22 @@
        46.41994
       ],
       [
-       14.08467,
-       46.4217
+       14.08491,
+       46.42157
       ],
       [
-       14.08372,
-       46.42198
+       14.08339,
+       46.42209
       ]
      ],
      [
       [
-       14.09623,
-       46.42551
+       14.0947,
+       46.42582
       ],
       [
-       14.09903,
-       46.42465
-      ],
-      [
-       14.10239,
-       46.42297
+       14.09744,
+       46.4252
       ],
       [
        14.10482,
@@ -1915,48 +1920,44 @@
        46.41994
       ],
       [
-       14.10931,
-       46.41749
-      ],
-      [
-       14.11033,
-       46.41684
+       14.11018,
+       46.4169
       ],
       [
        14.11486,
        46.41617
       ],
       [
-       14.12017,
-       46.41496
+       14.11979,
+       46.41503
       ],
       [
        14.12269,
        46.4147
       ],
       [
-       14.12599,
-       46.41374
+       14.12524,
+       46.41406
+      ],
+      [
+       14.12625,
+       46.41359
       ],
       [
        14.12897,
        46.4113
       ],
       [
-       14.13146,
-       46.40989
+       14.13103,
+       46.41011
       ],
       [
-       14.13227,
-       46.40982
+       14.13338,
+       46.40934
       ],
       [
-       14.13343,
-       46.4093
-      ],
-      [
-       14.13336,
-       46.409
+       14.13339,
+       46.40901
       ],
       [
        14.13213,
@@ -1971,30 +1972,34 @@
        46.40605
       ],
       [
-       14.13643,
-       46.40332
+       14.13633,
+       46.40339
       ],
       [
        14.13884,
        46.40222
       ],
       [
-       14.14207,
-       46.40027
+       14.14153,
+       46.4006
       ],
       [
-       14.14375,
-       46.39887
+       14.14431,
+       46.39856
       ],
       [
-       14.14915,
-       46.39667
+       14.14843,
+       46.39688
+      ],
+      [
+       14.15108,
+       46.39629
       ]
      ],
      [
       [
-       14.15245,
-       46.39349
+       14.15406,
+       46.39514
       ],
       [
        14.15126,
@@ -2005,8 +2010,12 @@
        46.39127
       ],
       [
-       14.15555,
-       46.38898
+       14.15363,
+       46.39044
+      ],
+      [
+       14.15619,
+       46.38851
       ]
      ],
      [
@@ -2511,17 +2520,18 @@
        46.34086
       ],
       [
-       14.18017,
-       46.34156
+       14.18077,
+       46.34171
       ]
      ]
     ]
    }
   },
   {
+   "id": "8a7277e4-0d7a-46cc-8465-010e363b4bea",
    "color": "#0F9D58",
    "code": "LG-1",
-   "name": "Mojstrana–Bohinjsko Jezero–Bohinjska Bistrica",
+   "name": "Mojstrana–Bohinjsko Jezero–Bohinska Bistrica",
    "level": "Local route",
    "kind": "road",
    "length_km": 55,
@@ -2531,8 +2541,8 @@
     "type": "LineString",
     "coordinates": [
      [
-      14.03046,
-      46.38607
+      14.03016,
+      46.38632
      ],
      [
       14.0315,
@@ -2635,7 +2645,7 @@
       46.37094
      ],
      [
-      14.05234,
+      14.05242,
       46.37041
      ],
      [
@@ -2643,16 +2653,20 @@
       46.37058
      ],
      [
-      14.0518,
-      46.37164
+      14.05188,
+      46.3716
      ],
      [
-      14.0474,
-      46.37266
+      14.04973,
+      46.37222
      ],
      [
-      14.04621,
-      46.37261
+      14.04713,
+      46.37267
+     ],
+     [
+      14.04604,
+      46.37258
      ],
      [
       14.04502,
@@ -2679,12 +2693,8 @@
       46.37558
      ],
      [
-      14.0379,
-      46.37565
-     ],
-     [
-      14.037,
-      46.37596
+      14.0369,
+      46.37592
      ],
      [
       14.0361,
@@ -3007,8 +3017,8 @@
       46.32882
      ],
      [
-      14.02751,
-      46.32805
+      14.02747,
+      46.32815
      ],
      [
       14.02745,
@@ -3115,21 +3125,22 @@
       46.30415
      ],
      [
-      13.99478,
-      46.30525
+      13.99521,
+      46.30516
      ],
      [
-      13.99377,
-      46.30524
+      13.9943,
+      46.30528
      ],
      [
-      13.99182,
-      46.30461
+      13.99141,
+      46.30454
      ]
     ]
    }
   },
   {
+   "id": "54008a6b-b8e5-46b4-b0e5-a1521f384909",
    "color": "#D6336C",
    "code": "LG6",
    "name": "Bled–Podblica",
@@ -3355,24 +3366,20 @@
      ],
      [
       [
-       14.17024,
-       46.32372
+       14.17154,
+       46.32266
       ],
       [
        14.16921,
        46.32457
       ],
       [
-       14.16632,
-       46.32601
+       14.16593,
+       46.32627
       ],
       [
-       14.16547,
-       46.32672
-      ],
-      [
-       14.16498,
-       46.32772
+       14.16508,
+       46.32739
       ],
       [
        14.16479,
@@ -3380,15 +3387,19 @@
       ],
       [
        14.16337,
-       46.33262
+       46.33249
       ],
       [
-       14.16381,
-       46.33311
+       14.16345,
+       46.3329
       ],
       [
-       14.16629,
-       46.33288
+       14.16395,
+       46.33312
+      ],
+      [
+       14.16643,
+       46.33285
       ],
       [
        14.16778,
@@ -3400,11 +3411,7 @@
       ],
       [
        14.16952,
-       46.33164
-      ],
-      [
-       14.16946,
-       46.33183
+       46.33174
       ],
       [
        14.16764,
@@ -3427,8 +3434,8 @@
        46.33551
       ],
       [
-       14.16021,
-       46.33614
+       14.16019,
+       46.33626
       ],
       [
        14.16092,
@@ -3477,6 +3484,7 @@
    }
   },
   {
+   "id": "8f84b099-e317-4851-9871-8b675e0abd5b",
    "color": "#0891B2",
    "code": "LG2",
    "name": "Moste–Krnica",
@@ -3759,22 +3767,23 @@
  ],
  "stays": [
   {
-   "name": "Grand Hotel Toplice",
-   "kind": "Hotel",
+   "id": "464d36e8-14f2-4dd7-9c53-40b7ceb873c6",
+   "name": "Turistična kmetija Mulej",
+   "kind": "Guesthouse",
    "pin": "accommodation",
-   "lon": 14.1073706,
-   "lat": 46.3656689,
+   "lon": 14.1047787,
+   "lat": 46.3525276,
    "site": {
-    "url": "http://www.sava-hotels-resorts.com/",
-    "label": "sava-hotels-resorts.com"
+    "url": "https://mulej-bled.com/",
+    "label": "mulej-bled.com"
    },
    "near": {
-    "route": "D2",
-    "m": 16
-   },
-   "about": "A lakeside hotel in the centre of Bled, run by Sava Hotels & Resorts. The D2 route passes the front door."
+    "route": "Kolesarska Jakobova pot–Gorenjska veja",
+    "m": 88
+   }
   },
   {
+   "id": "adfcbcec-c35b-4008-93fb-2217761c3f8a",
    "name": "Penzion Kaps",
    "kind": "Guesthouse",
    "pin": "accommodation",
@@ -3786,11 +3795,11 @@
    },
    "near": {
     "route": "D2",
-    "m": 189
-   },
-   "about": "Ten rooms in a quiet part of central Bled, several with a balcony or terrace and one sized for a family."
+    "m": 197
+   }
   },
   {
+   "id": "a46a1b4e-14ab-41d5-9c0e-fcfd7fbdbc5e",
    "name": "Hotel Lovec",
    "kind": "Hotel",
    "pin": "accommodation",
@@ -3802,29 +3811,29 @@
    },
    "near": {
     "route": "D2",
-    "m": 36
-   },
-   "about": "A boutique hotel in the heart of Bled, on the spot where a guesthouse has stood for over a hundred years. Some rooms look onto the lake, and there is a grill restaurant and a pub."
+    "m": 28
+   }
   },
   {
-   "name": "Garden Village Bled",
+   "id": "ab1d4387-4965-48c8-a144-2f9a8822cdb7",
+   "name": "Penzion Zaka",
    "kind": "Hotel",
    "pin": "accommodation",
-   "lon": 14.0974753,
-   "lat": 46.3574925,
+   "lon": 14.0850848,
+   "lat": 46.3671542,
    "site": {
-    "url": "https://gardenvillagebled.com",
-    "label": "gardenvillagebled.com"
+    "url": "http://www.bled-zaka.com",
+    "label": "bled-zaka.com"
    },
    "near": {
-    "route": "D2",
-    "m": 205
-   },
-   "about": "An eco resort near the lake where you sleep among the treetops, built around time outdoors."
+    "route": "G2",
+    "m": 10
+   }
   },
   {
+   "id": "34fdbe3f-c621-454b-94b3-bd526b85d574",
    "name": "Ribno Luxury Glamping",
-   "kind": "Glamping",
+   "kind": "Apartment",
    "pin": "accommodation",
    "lon": 14.1207504,
    "lat": 46.346705,
@@ -3834,11 +3843,11 @@
    },
    "near": {
     "route": "LG6",
-    "m": 256
-   },
-   "about": "A family-run resort at the edge of a spruce forest in the village of Ribno, with glamping tents next to a small hotel."
+    "m": 262
+   }
   },
   {
+   "id": "f5436f16-78c2-4ab1-9851-049ec927b8ac",
    "name": "Apartments and Rooms Tavcar",
    "kind": "Apartment",
    "pin": "accommodation",
@@ -3850,13 +3859,13 @@
    },
    "near": {
     "route": "LG2",
-    "m": 64
-   },
-   "about": "Private apartments and rooms in Zasip, the village next to Bled. Quiet, with open views, and suited to families and couples."
+    "m": 69
+   }
   }
  ],
  "food": [
   {
+   "id": "ed83bcee-e603-41a5-8599-435dd8a05922",
    "name": "Gostilna Pri planincu",
    "kind": "Restaurant",
    "pin": "restaurant",
@@ -3866,18 +3875,18 @@
     "url": "http://www.pri-planincu.com/",
     "label": "pri-planincu.com"
    },
+   "near": {
+    "route": "Kolesarska Jakobova pot–Gorenjska veja",
+    "m": 21
+   },
    "hours": "Mo–Su 12:00–21:30",
    "extras": [
     "Pizza, regional",
     "Outdoor seating"
-   ],
-   "near": {
-    "route": "Kolesarska Jakobova pot–Gorenjska veja",
-    "m": 22
-   },
-   "about": "A family inn since 1929 serving traditional Slovenian dishes, open every day from noon."
+   ]
   },
   {
+   "id": "0db0015d-e77f-4d1e-987a-849e04b0c766",
    "name": "Bar in restavracija Špica",
    "kind": "Restaurant",
    "pin": "restaurant",
@@ -3887,17 +3896,17 @@
     "url": "https://www.restavracija-spica.si/",
     "label": "restavracija-spica.si"
    },
-   "hours": "Mo–Su 09:00–24:00",
-   "extras": [
-    "Local"
-   ],
    "near": {
     "route": "D2",
     "m": 33
    },
-   "about": "One of Bled's longest-running restaurants, on the lakeshore with a view of the island and the castle. Restaurant, pizzeria and bar under one roof, fitted out in rowing style."
+   "hours": "Mo–Su 09:00–24:00",
+   "extras": [
+    "Local"
+   ]
   },
   {
+   "id": "a806a5b8-233a-4822-bb4c-3b0434227b22",
    "name": "Arroi Restaurant",
    "kind": "Restaurant",
    "pin": "restaurant",
@@ -3907,17 +3916,37 @@
     "url": "https://www.arroi.si",
     "label": "arroi.si"
    },
-   "hours": "Mo–Su 12:00–22:00",
-   "extras": [
-    "Asian, sushi, thai"
-   ],
    "near": {
     "route": "D2",
     "m": 15
    },
-   "about": "An Asian kitchen with Thai food at its centre, plus sushi and cocktails."
+   "hours": "Mo–Su 12:00–22:00",
+   "extras": [
+    "Asian, sushi, thai"
+   ]
   },
   {
+   "id": "aa300541-1107-4599-9358-5e8e46921f7e",
+   "name": "Central Bled",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 14.1117801,
+   "lat": 46.3676358,
+   "site": {
+    "url": "https://restavracija-central.si/",
+    "label": "restavracija-central.si"
+   },
+   "near": {
+    "route": "D2",
+    "m": 10
+   },
+   "hours": "Mo–Su and holidays 12:00–22:00",
+   "extras": [
+    "Outdoor seating"
+   ]
+  },
+  {
+   "id": "a8f656fd-8d29-4312-8d0a-cd1b417cce80",
    "name": "Steak House Berc",
    "kind": "Restaurant",
    "pin": "restaurant",
@@ -3927,38 +3956,17 @@
     "url": "https://www.penzion-berc.si/en/steakhouse/",
     "label": "penzion-berc.si"
    },
+   "near": {
+    "route": "D2",
+    "m": 139
+   },
    "hours": "Mo–Sa 18:00–23:00",
    "extras": [
     "Steak house"
-   ],
-   "near": {
-    "route": "D2",
-    "m": 131
-   },
-   "about": "The steakhouse of Penzion Berc, a family house with sixty years behind it. Evenings only."
+   ]
   },
   {
-   "name": "Slaščičarna Zima",
-   "kind": "Café",
-   "pin": "cafe",
-   "lon": 14.1054774,
-   "lat": 46.3715308,
-   "site": {
-    "url": "https://slascicarna-zima.si/",
-    "label": "slascicarna-zima.si"
-   },
-   "hours": "Mo–Su 08:00–21:00",
-   "extras": [
-    "Cake, dessert, pastry",
-    "Outdoor seating"
-   ],
-   "near": {
-    "route": "Kolesarska Jakobova pot–Gorenjska veja",
-    "m": 9
-   },
-   "about": "A pastry shop for Bled's cream cake, gibanica and homemade ice cream, made fresh each day."
-  },
-  {
+   "id": "b67c9194-0811-4d0d-b7d1-3153aa58b4ed",
    "name": "Okrepčevalnica Galetovec",
    "kind": "Café",
    "pin": "cafe",
@@ -3968,59 +3976,17 @@
     "url": "https://www.facebook.com/OkrepcevalnicaGaletovec/?locale=sl_SI",
     "label": "facebook.com"
    },
-   "hours": "Mo–Fr 7:00–22:00, Fr–Sa 7:00–23:00, Su 8:00–22:00",
-   "extras": [],
    "near": {
     "route": "G2",
-    "m": 151
+    "m": 150
    },
-   "about": "A small, homely snack bar in Bohinjska Bela, on the way from Bled towards Bohinj."
+   "hours": "Mo–Fr 7:00–22:00, Fr–Sa 7:00–23:00, Su 8:00–22:00",
+   "extras": []
   }
  ],
  "sights": [
   {
-   "name": "Bled Island",
-   "local_name": "Blejski otok",
-   "kind": "Attraction",
-   "pin": "attraction",
-   "lon": 14.0900489,
-   "lat": 46.3622957,
-   "about": "island in Lake Bled, Slovenia",
-   "near": {
-    "route": "D2",
-    "m": 414
-   },
-   "wiki": null,
-   "image": {
-    "src": "./assets/images/towns/bled/sight-1.jpg",
-    "author": "James Southorn",
-    "licence": "CC BY 2.0",
-    "licence_url": "https://creativecommons.org/licenses/by/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Church_of_the_Assumption,_Slovenia.jpg"
-   }
-  },
-  {
-   "name": "Vintgar Gorge",
-   "local_name": "Blejski Vintgar",
-   "kind": "Attraction",
-   "pin": "attraction",
-   "lon": 14.0930745,
-   "lat": 46.3972924,
-   "about": "slot canyon in the municipalities of Bled, Gorje and Jesenice in Slovenia",
-   "near": {
-    "route": "LG2",
-    "m": 1136
-   },
-   "wiki": "https://en.wikipedia.org/wiki/Vintgar_Gorge",
-   "image": {
-    "src": "./assets/images/towns/bled/sight-2.jpg",
-    "author": "Zairon",
-    "licence": "CC BY-SA 4.0",
-    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Bled_Vintgar-Klamm_38.JPG"
-   }
-  },
-  {
+   "id": "ef3d606f-d4b6-4c39-bc61-9088ca62df16",
    "name": "Bled Castle",
    "local_name": "Blejski grad",
    "kind": "Historic site",
@@ -4030,18 +3996,69 @@
    "about": "medieval castle in Bled, Slovenia",
    "near": {
     "route": "D2",
-    "m": 80
+    "m": 72
    },
    "wiki": "https://en.wikipedia.org/wiki/Bled_Castle",
+   "wikidata": "Q2049047",
    "image": {
-    "src": "./assets/images/towns/bled/sight-3.jpg",
+    "src": "./assets/images/towns/bled/sight-ef3d606f.jpg",
     "author": "Henrik søvang",
     "licence": "CC BY 3.0",
     "licence_url": "https://creativecommons.org/licenses/by/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:4260_Bled,_Slovenia_-_panoramio.jpg"
-   }
+   },
+   "image_file": "4260 Bled, Slovenia - panoramio.jpg"
   },
   {
+   "id": "3e884844-6994-4b0a-9f30-6e81d8b68818",
+   "name": "Vintgar Gorge",
+   "local_name": "Soteska Vintgar",
+   "kind": "Gorge",
+   "pin": "gorge",
+   "lon": 14.0938473,
+   "lat": 46.3973007,
+   "about": "slot canyon in the municipalities of Bled, Gorje and Jesenice in Slovenia",
+   "near": {
+    "route": "LG2",
+    "m": 1130
+   },
+   "wiki": "https://en.wikipedia.org/wiki/Vintgar_Gorge",
+   "wikidata": "Q671860",
+   "image": {
+    "src": "./assets/images/towns/bled/sight-3e884844.jpg",
+    "author": "Zairon",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bled_Vintgar-Klamm_38.JPG"
+   },
+   "image_file": "Bled Vintgar-Klamm 38.JPG"
+  },
+  {
+   "id": "cea54bf5-a059-4065-862d-baf3e614c8ca",
+   "name": "Bled Island",
+   "local_name": "Blejski otok",
+   "kind": "Attraction",
+   "pin": "attraction",
+   "lon": 14.0900489,
+   "lat": 46.3622957,
+   "about": "island in Lake Bled, Slovenia",
+   "near": {
+    "route": "G2",
+    "m": 416
+   },
+   "wiki": null,
+   "wikidata": "Q2877401",
+   "image": {
+    "src": "./assets/images/towns/bled/sight-cea54bf5.jpg",
+    "author": "James Southorn",
+    "licence": "CC BY 2.0",
+    "licence_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Church_of_the_Assumption,_Slovenia.jpg"
+   },
+   "image_file": "Church of the Assumption, Slovenia.jpg"
+  },
+  {
+   "id": "75e40f68-281f-44c0-8a65-b630734f3a2f",
    "name": "Jama pod Babjim zobom",
    "local_name": "Jama pod Babjim zobom",
    "kind": "Cave",
@@ -4051,11 +4068,13 @@
    "about": "cave in Slovenia",
    "near": {
     "route": "G2",
-    "m": 1190
+    "m": 1188
    },
-   "wiki": null
+   "wiki": null,
+   "wikidata": "Q19934098"
   },
   {
+   "id": "bc4982cf-e473-44db-acf3-b00632815e4f",
    "name": "Adolf Muhr Monument",
    "local_name": "Adolf Muhr",
    "kind": "Historic site",
@@ -4065,34 +4084,15 @@
    "about": "statue in Bled, Slovenia",
    "near": {
     "route": "D2",
-    "m": 225
+    "m": 234
    },
    "wiki": null,
-   "image": {
-    "src": "./assets/images/towns/bled/sight-muhr.jpg",
-    "author": "Živa Rant",
-    "licence": "CC BY-SA 4.0",
-    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Spomenik_Adolfu_Muhru.jpg"
-   }
-  },
-  {
-   "name": "Turn",
-   "local_name": "Turn",
-   "kind": "Viewpoint",
-   "pin": "viewpoint",
-   "lon": 14.0363539,
-   "lat": 46.3391119,
-   "about": null,
-   "near": {
-    "route": "LG-1",
-    "m": 1333
-   },
-   "wiki": null
+   "wikidata": "Q58312458"
   }
  ],
  "repair": [
   {
+   "id": "d632d941-d049-428d-975d-c5c5e33d6949",
    "name": "Bike repair station",
    "type": "bicycle_repair",
    "lon": 14.1130713,
@@ -4109,7 +4109,7 @@
   "lat": 46.3687586551695,
   "lon": 14.1530928534481,
   "municipality": "Radovljica",
-  "name": "GALA IN",
+  "name": "Restaurant, Pizzeria, Brewery – GALA IN",
   "type": "charging_station"
  },
  "neighbours": [
@@ -4118,31 +4118,5 @@
   "Jesenice",
   "Radovljica",
   "Žirovnica"
- ],
- "photos": [
-  {
-   "src": "./assets/images/towns/bled/photo-1.jpg",
-   "author": "Petar Milošević",
-   "licence": "CC BY-SA 4.0",
-   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Blejsko_jezero_(Lake_Bled_in_autumn).jpg",
-   "caption": "Lake Bled with the island, looking west towards the Julian Alps."
-  },
-  {
-   "src": "./assets/images/towns/bled/photo-2.jpg",
-   "author": "Jakub Hałun",
-   "licence": "CC BY 4.0",
-   "licence_url": "https://creativecommons.org/licenses/by/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Bled_Lake_and_Bled_Castle,_Slovenia,_20240504_1109_8446.jpg",
-   "caption": "Rowing boats on the lake below Bled Castle."
-  },
-  {
-   "src": "./assets/images/towns/bled/photo-3.jpg",
-   "author": "Jakub Hałun",
-   "licence": "CC BY 4.0",
-   "licence_url": "https://creativecommons.org/licenses/by/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Bled_Lake,_Slovenia,_20240504_0851_8264.jpg",
-   "caption": "Bled Castle on its rock, with the parish church at the shore."
-  }
  ]
 }

@@ -22,5 +22,20 @@
   "sights": {
     "title": "What to see on the way",
     "body": "Three sights are worth getting off the bike for, and all are close to a signed route. Bled Castle stands on its cliff 80 metres from D2. Bled Island sits in the lake about 400 metres from the same route; you reach it by boat. Vintgar Gorge, a narrow canyon north-west of town, is 1.1 km off the local route LG2. Shorter stops: the Adolf Muhr monument in town and the cave under Babji zob, 1.2 km off G2."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website (moved here from data.json on 2026-11-16 so a data refresh keeps them). A place without a line shows its type and town.",
+    "c43b9476": "A lakeside hotel in the centre of Bled, run by Sava Hotels & Resorts. The D2 route passes the front door.",
+    "adfcbcec": "Ten rooms in a quiet part of central Bled, several with a balcony or terrace and one sized for a family.",
+    "a46a1b4e": "A boutique hotel in the heart of Bled, on the spot where a guesthouse has stood for over a hundred years. Some rooms look onto the lake, and there is a grill restaurant and a pub.",
+    "7701fdf9": "An eco resort near the lake where you sleep among the treetops, built around time outdoors.",
+    "34fdbe3f": "A family-run resort at the edge of a spruce forest in the village of Ribno, with glamping tents next to a small hotel.",
+    "f5436f16": "Private apartments and rooms in Zasip, the village next to Bled. Quiet, with open views, and suited to families and couples.",
+    "ed83bcee": "A family inn since 1929 serving traditional Slovenian dishes, open every day from noon.",
+    "0db0015d": "One of Bled's longest-running restaurants, on the lakeshore with a view of the island and the castle. Restaurant, pizzeria and bar under one roof, fitted out in rowing style.",
+    "a806a5b8": "An Asian kitchen with Thai food at its centre, plus sushi and cocktails.",
+    "a8f656fd": "The steakhouse of Penzion Berc, a family house with sixty years behind it. Evenings only.",
+    "d1a459a5": "A pastry shop for Bled's cream cake, gibanica and homemade ice cream, made fresh each day.",
+    "b67c9194": "A small, homely snack bar in Bohinjska Bela, on the way from Bled towards Bohinj."
   }
 }

@@ -1,0 +1,940 @@
+{
+ "slug": "bovec",
+ "area_code": "bovec",
+ "name": "Bovec",
+ "official_name": "Bovec",
+ "region": "Goriška",
+ "country": "Slovenia",
+ "checked": "2026-11-16",
+ "center": [
+  13.6237,
+  46.3556
+ ],
+ "bounds": [
+  13.3996666,
+  46.2659927,
+  13.8365548,
+  46.4467062
+ ],
+ "boundary": {
+  "type": "MultiPolygon",
+  "coordinates": [
+   [
+    [
+     [
+      13.68403,
+      46.43747
+     ],
+     [
+      13.67636,
+      46.44039
+     ],
+     [
+      13.65465,
+      46.43946
+     ],
+     [
+      13.65407,
+      46.44375
+     ],
+     [
+      13.64904,
+      46.44671
+     ],
+     [
+      13.63694,
+      46.44379
+     ],
+     [
+      13.63471,
+      46.44199
+     ],
+     [
+      13.62192,
+      46.44275
+     ],
+     [
+      13.61632,
+      46.43925
+     ],
+     [
+      13.61064,
+      46.44166
+     ],
+     [
+      13.60713,
+      46.4394
+     ],
+     [
+      13.60495,
+      46.44012
+     ],
+     [
+      13.60034,
+      46.43824
+     ],
+     [
+      13.59775,
+      46.43938
+     ],
+     [
+      13.59163,
+      46.43644
+     ],
+     [
+      13.58786,
+      46.43163
+     ],
+     [
+      13.58237,
+      46.43115
+     ],
+     [
+      13.57941,
+      46.42685
+     ],
+     [
+      13.57673,
+      46.41418
+     ],
+     [
+      13.57792,
+      46.40871
+     ],
+     [
+      13.57476,
+      46.40855
+     ],
+     [
+      13.57335,
+      46.40477
+     ],
+     [
+      13.56554,
+      46.39797
+     ],
+     [
+      13.55942,
+      46.39863
+     ],
+     [
+      13.55365,
+      46.39305
+     ],
+     [
+      13.54155,
+      46.39147
+     ],
+     [
+      13.53869,
+      46.3861
+     ],
+     [
+      13.5335,
+      46.38537
+     ],
+     [
+      13.52749,
+      46.38814
+     ],
+     [
+      13.51692,
+      46.38297
+     ],
+     [
+      13.51695,
+      46.37678
+     ],
+     [
+      13.5089,
+      46.37684
+     ],
+     [
+      13.49813,
+      46.37078
+     ],
+     [
+      13.48625,
+      46.37049
+     ],
+     [
+      13.47603,
+      46.36345
+     ],
+     [
+      13.46975,
+      46.36103
+     ],
+     [
+      13.45224,
+      46.36308
+     ],
+     [
+      13.43875,
+      46.36001
+     ],
+     [
+      13.43699,
+      46.35431
+     ],
+     [
+      13.44239,
+      46.34863
+     ],
+     [
+      13.44139,
+      46.3465
+     ],
+     [
+      13.44418,
+      46.34433
+     ],
+     [
+      13.44452,
+      46.34024
+     ],
+     [
+      13.44945,
+      46.33483
+     ],
+     [
+      13.44826,
+      46.33113
+     ],
+     [
+      13.44395,
+      46.33028
+     ],
+     [
+      13.43848,
+      46.3221
+     ],
+     [
+      13.42552,
+      46.32252
+     ],
+     [
+      13.41816,
+      46.31822
+     ],
+     [
+      13.41537,
+      46.31475
+     ],
+     [
+      13.41569,
+      46.30968
+     ],
+     [
+      13.41832,
+      46.30582
+     ],
+     [
+      13.40647,
+      46.30571
+     ],
+     [
+      13.40288,
+      46.30014
+     ],
+     [
+      13.39967,
+      46.29629
+     ],
+     [
+      13.41226,
+      46.29255
+     ],
+     [
+      13.41077,
+      46.2889
+     ],
+     [
+      13.41355,
+      46.28769
+     ],
+     [
+      13.43073,
+      46.2855
+     ],
+     [
+      13.45336,
+      46.27809
+     ],
+     [
+      13.45924,
+      46.27826
+     ],
+     [
+      13.47062,
+      46.27416
+     ],
+     [
+      13.49559,
+      46.27339
+     ],
+     [
+      13.51964,
+      46.26599
+     ],
+     [
+      13.52945,
+      46.27481
+     ],
+     [
+      13.5304,
+      46.27979
+     ],
+     [
+      13.52963,
+      46.28666
+     ],
+     [
+      13.5237,
+      46.28671
+     ],
+     [
+      13.52237,
+      46.28312
+     ],
+     [
+      13.52004,
+      46.28455
+     ],
+     [
+      13.51922,
+      46.28966
+     ],
+     [
+      13.52068,
+      46.29271
+     ],
+     [
+      13.5347,
+      46.30165
+     ],
+     [
+      13.53896,
+      46.30048
+     ],
+     [
+      13.54295,
+      46.30209
+     ],
+     [
+      13.55645,
+      46.29823
+     ],
+     [
+      13.56102,
+      46.29958
+     ],
+     [
+      13.57111,
+      46.295
+     ],
+     [
+      13.59252,
+      46.28934
+     ],
+     [
+      13.6174,
+      46.29618
+     ],
+     [
+      13.62245,
+      46.30069
+     ],
+     [
+      13.64021,
+      46.29554
+     ],
+     [
+      13.65064,
+      46.28796
+     ],
+     [
+      13.66341,
+      46.28424
+     ],
+     [
+      13.69825,
+      46.29669
+     ],
+     [
+      13.71145,
+      46.29426
+     ],
+     [
+      13.72482,
+      46.2968
+     ],
+     [
+      13.72552,
+      46.29914
+     ],
+     [
+      13.73062,
+      46.30107
+     ],
+     [
+      13.73419,
+      46.30542
+     ],
+     [
+      13.73864,
+      46.30666
+     ],
+     [
+      13.74589,
+      46.31168
+     ],
+     [
+      13.74656,
+      46.31571
+     ],
+     [
+      13.74199,
+      46.32243
+     ],
+     [
+      13.74091,
+      46.33264
+     ],
+     [
+      13.74429,
+      46.33436
+     ],
+     [
+      13.74468,
+      46.33736
+     ],
+     [
+      13.75073,
+      46.33778
+     ],
+     [
+      13.75508,
+      46.34213
+     ],
+     [
+      13.76362,
+      46.34224
+     ],
+     [
+      13.7702,
+      46.346
+     ],
+     [
+      13.77731,
+      46.34737
+     ],
+     [
+      13.78237,
+      46.35039
+     ],
+     [
+      13.78485,
+      46.35408
+     ],
+     [
+      13.78686,
+      46.3529
+     ],
+     [
+      13.7918,
+      46.35659
+     ],
+     [
+      13.80269,
+      46.35575
+     ],
+     [
+      13.80758,
+      46.36002
+     ],
+     [
+      13.8157,
+      46.35917
+     ],
+     [
+      13.8174,
+      46.36168
+     ],
+     [
+      13.82703,
+      46.36431
+     ],
+     [
+      13.83655,
+      46.37601
+     ],
+     [
+      13.83583,
+      46.38134
+     ],
+     [
+      13.8318,
+      46.38265
+     ],
+     [
+      13.82717,
+      46.38088
+     ],
+     [
+      13.82401,
+      46.38135
+     ],
+     [
+      13.81506,
+      46.38763
+     ],
+     [
+      13.81416,
+      46.39032
+     ],
+     [
+      13.81635,
+      46.39408
+     ],
+     [
+      13.81267,
+      46.39802
+     ],
+     [
+      13.81153,
+      46.4042
+     ],
+     [
+      13.81398,
+      46.40732
+     ],
+     [
+      13.81146,
+      46.40985
+     ],
+     [
+      13.80087,
+      46.41016
+     ],
+     [
+      13.79912,
+      46.41368
+     ],
+     [
+      13.79209,
+      46.41406
+     ],
+     [
+      13.79264,
+      46.41624
+     ],
+     [
+      13.77815,
+      46.4228
+     ],
+     [
+      13.77225,
+      46.42224
+     ],
+     [
+      13.7697,
+      46.42463
+     ],
+     [
+      13.76064,
+      46.42368
+     ],
+     [
+      13.75363,
+      46.42591
+     ],
+     [
+      13.75047,
+      46.42753
+     ],
+     [
+      13.74666,
+      46.43414
+     ],
+     [
+      13.74035,
+      46.43638
+     ],
+     [
+      13.73918,
+      46.4391
+     ],
+     [
+      13.72693,
+      46.43596
+     ],
+     [
+      13.71644,
+      46.42896
+     ],
+     [
+      13.71439,
+      46.42977
+     ],
+     [
+      13.70553,
+      46.42603
+     ],
+     [
+      13.69939,
+      46.42617
+     ],
+     [
+      13.68186,
+      46.41962
+     ],
+     [
+      13.67742,
+      46.4237
+     ],
+     [
+      13.68182,
+      46.42897
+     ],
+     [
+      13.68077,
+      46.43195
+     ],
+     [
+      13.68403,
+      46.43747
+     ]
+    ]
+   ]
+  ]
+ },
+ "counts": {
+  "routes": 0,
+  "stays": 28,
+  "food": 21,
+  "water": 90,
+  "repair": 0,
+  "chargers": 5,
+  "sights": 120
+ },
+ "water_near_route": 0,
+ "routes": [],
+ "featured": [],
+ "stays": [
+  {
+   "id": "686caef9-7bfd-4e26-96eb-95a655f1d1ac",
+   "name": "Camp Liza",
+   "kind": "Campsite",
+   "pin": "accommodation",
+   "lon": 13.5737976,
+   "lat": 46.3322975,
+   "site": {
+    "url": "http://www.camp-liza.com/",
+    "label": "camp-liza.com"
+   },
+   "near": null
+  },
+  {
+   "id": "4b040541-3a0e-430d-8b19-a0ef81d73066",
+   "name": "Pristava Lepena",
+   "kind": "Hotel",
+   "pin": "accommodation",
+   "lon": 13.6459521,
+   "lat": 46.3309778,
+   "site": {
+    "url": "https://pristava-lepena.com/",
+    "label": "pristava-lepena.com"
+   },
+   "near": null
+  },
+  {
+   "id": "37dbb8f5-8e5b-44bf-b69e-02bdda25190c",
+   "name": "Soča Rocks",
+   "kind": "Hostel",
+   "pin": "accommodation",
+   "lon": 13.5569817,
+   "lat": 46.3385503,
+   "site": {
+    "url": "https://hostelsocarocks.com/en/",
+    "label": "hostelsocarocks.com"
+   },
+   "near": null
+  },
+  {
+   "id": "45ebdc26-0d56-4a0b-ac20-2c1c5c0638f6",
+   "name": "Glamping gozdna jasa",
+   "kind": "Campsite",
+   "pin": "accommodation",
+   "lon": 13.4976777,
+   "lat": 46.3208805,
+   "site": {
+    "url": "https://gozdnajasa.com",
+    "label": "gozdnajasa.com"
+   },
+   "near": null
+  },
+  {
+   "id": "ed8fc75d-b027-4a61-82bf-1d26332145e0",
+   "name": "Dobra vila",
+   "kind": "Hotel",
+   "pin": "accommodation",
+   "lon": 13.5573864,
+   "lat": 46.3381262,
+   "site": {
+    "url": "https://www.dobra-vila-bovec.si",
+    "label": "dobra-vila-bovec.si"
+   },
+   "near": null
+  },
+  {
+   "id": "8cc2172c-6334-4185-8a8e-de84d5d0f605",
+   "name": "Penzion Klin",
+   "kind": "Guesthouse",
+   "pin": "accommodation",
+   "lon": 13.6443041,
+   "lat": 46.3299753,
+   "site": {
+    "url": "https://www.sloveniaholidays.com/kamp-klin-lepena-soca.html",
+    "label": "sloveniaholidays.com"
+   },
+   "near": null
+  }
+ ],
+ "food": [
+  {
+   "id": "7ac208d3-7a35-4bf1-963b-4ff1868aa221",
+   "name": "Pristava Lepena",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.6458724,
+   "lat": 46.330949,
+   "site": {
+    "url": "https://pristava-lepena.com/",
+    "label": "pristava-lepena.com"
+   },
+   "near": null,
+   "hours": "Mo–Su 12:00–22:00",
+   "extras": [
+    "Regional, italian"
+   ]
+  },
+  {
+   "id": "08b8490b-c4d9-4a26-b943-df1969ec91d6",
+   "name": "Pizzeria Žagca",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.4814987,
+   "lat": 46.304106,
+   "site": {
+    "url": "https://www.pizzeriazagca.com/",
+    "label": "pizzeriazagca.com"
+   },
+   "near": null,
+   "hours": "Mo–We 12:00–21:00; Fr–Su 12:00–21:00",
+   "extras": []
+  },
+  {
+   "id": "20636114-d4a9-4a4b-9914-589c5e737244",
+   "name": "Casa Monte",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.5768214,
+   "lat": 46.3479003,
+   "site": {
+    "url": "https://restaurantguru.com/Casa-Monte-Bovec",
+    "label": "restaurantguru.com"
+   },
+   "near": null,
+   "hours": "Fr 17:00–22:00; Sa,Su 12:00–22:00",
+   "extras": []
+  },
+  {
+   "id": "bc027d0d-f0d8-49b4-968b-3b948b755697",
+   "name": "Gostilna Vančar",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.5500357,
+   "lat": 46.3207132,
+   "site": {
+    "url": "https://gostiscevancar.com/restaurant/",
+    "label": "gostiscevancar.com"
+   },
+   "near": null,
+   "hours": "Tu–Su 12:00–21:00",
+   "extras": []
+  },
+  {
+   "id": "8d8c9033-e12c-4198-8408-e34f3e3cedf9",
+   "name": "Gostilna Žvikar",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.4994751,
+   "lat": 46.3200259,
+   "site": {
+    "url": "https://zvikar.si/en/home/",
+    "label": "zvikar.si"
+   },
+   "near": null,
+   "hours": "Tu–Su 12:00–21:00, Mo off",
+   "extras": []
+  },
+  {
+   "id": "1729ca32-1fca-420e-942c-8e7b676b38e8",
+   "name": "King Pizza",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.5386758,
+   "lat": 46.332808,
+   "site": {
+    "url": "https://kingpizza.si/",
+    "label": "kingpizza.si"
+   },
+   "near": null,
+   "hours": "Su, Tu–Th 11:00–22:00; Fr–Sa 11:00–23:00",
+   "extras": [
+    "Pizza"
+   ]
+  }
+ ],
+ "sights": [
+  {
+   "id": "e89fe9c5-2f4d-4372-b6e7-179973aa37f0",
+   "name": "Boka",
+   "local_name": "Slap Boka",
+   "kind": "Waterfall",
+   "pin": "waterfall",
+   "lon": 13.4815846,
+   "lat": 46.3222113,
+   "about": "river in Slovenia",
+   "near": null,
+   "wiki": "https://en.wikipedia.org/wiki/Boka_(waterfall)",
+   "wikidata": "Q352429",
+   "image": {
+    "src": "./assets/images/towns/bovec/sight-e89fe9c5.jpg",
+    "author": "Doremo",
+    "licence": "CC BY-SA 3.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Boka_Falls_Slovenia.JPG"
+   },
+   "image_file": "Boka Falls Slovenia.JPG"
+  },
+  {
+   "id": "b992dbe3-a524-4609-aa45-317e37d4c739",
+   "name": "Log pod Mangartom Mosque",
+   "local_name": "Ostanki džamije v Logu pod Mangartom",
+   "kind": "Historic site",
+   "pin": "historic",
+   "lon": 13.5959131,
+   "lat": 46.3998375,
+   "about": "former mosque in Slovenia",
+   "near": null,
+   "wiki": "https://en.wikipedia.org/wiki/Log_pod_Mangartom_Mosque",
+   "wikidata": "Q4022506",
+   "image": {
+    "src": "./assets/images/towns/bovec/sight-b992dbe3.jpg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "licence_url": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Mo%C5%A1eja-Log_pod_Mangartom4.jpg"
+   },
+   "image_file": "Mošeja-Log pod Mangartom4.jpg"
+  },
+  {
+   "id": "04b6b0c9-e560-4c96-bc88-ee4b86e9fadc",
+   "name": "Kluže",
+   "local_name": "Trdnjava Kluže",
+   "kind": "Historic site",
+   "pin": "historic",
+   "lon": 13.5897674,
+   "lat": 46.3611927,
+   "about": "fort in Slovenia",
+   "near": null,
+   "wiki": "https://en.wikipedia.org/wiki/Kluže_Fortress",
+   "wikidata": "Q2027148",
+   "image": {
+    "src": "./assets/images/towns/bovec/sight-04b6b0c9.jpg",
+    "author": "Žiga",
+    "licence": "Public domain",
+    "licence_url": null,
+    "source": "https://commons.wikimedia.org/wiki/File:SpodnjeKluze1.jpg"
+   },
+   "image_file": "SpodnjeKluze1.jpg"
+  },
+  {
+   "id": "174107fb-a9c8-4039-bf7d-885e865e8f10",
+   "name": "Fort Hermann",
+   "local_name": "Hermanova utrdba",
+   "kind": "Historic site",
+   "pin": "historic",
+   "lon": 13.5879737,
+   "lat": 46.359826,
+   "about": null,
+   "near": null,
+   "wiki": "https://en.wikipedia.org/wiki/Fort_Hermann",
+   "wikidata": "Q12806668",
+   "image": {
+    "src": "./assets/images/towns/bovec/sight-174107fb.jpg",
+    "author": "AndrejS.K",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hermanova_utrdba_(Zgornja_trdnjava_Klu%C5%BEe)_14.jpg"
+   },
+   "image_file": "Hermanova utrdba (Zgornja trdnjava Kluže) 14.jpg"
+  },
+  {
+   "id": "ff9ac963-4fab-44b3-ac42-0e5a62d6b370",
+   "name": "Juliana Alpine Botanical Garden",
+   "local_name": "Alpski botanični vrt Juliana",
+   "kind": "Attraction",
+   "pin": "attraction",
+   "lon": 13.7454387,
+   "lat": 46.3989409,
+   "about": null,
+   "near": null,
+   "wiki": null,
+   "wikidata": "Q12786244",
+   "image": {
+    "src": "./assets/images/towns/bovec/sight-ff9ac963.jpg",
+    "author": "Ljuba brank at Slovenian Wikipedia",
+    "licence": "GFDL",
+    "licence_url": "http://www.gnu.org/copyleft/fdl.html",
+    "source": "https://commons.wikimedia.org/wiki/File:Alpinum_Juliana.jpg"
+   },
+   "image_file": "Alpinum Juliana.jpg"
+  },
+  {
+   "id": "3b14660c-d2cf-4558-bd53-d1323b174810",
+   "name": "Virje Falls",
+   "local_name": "Slap Virje",
+   "kind": "Waterfall",
+   "pin": "waterfall",
+   "lon": 13.5139723,
+   "lat": 46.334916,
+   "about": null,
+   "near": null,
+   "wiki": null,
+   "wikidata": "Q12802847",
+   "image": {
+    "src": "./assets/images/towns/bovec/sight-3b14660c.jpg",
+    "author": "The original uploader was Ljuba brank at Slovenian Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Slap_Virje_(2).JPG"
+   },
+   "image_file": "Slap Virje (2).JPG"
+  }
+ ],
+ "repair": [],
+ "nearest_shop": {
+  "km": 12.6,
+  "municipality": "Kobarid",
+  "name": "Positive Sport"
+ },
+ "nearest_charger": null,
+ "neighbours": [
+  "Bohinj",
+  "Kobarid",
+  "Kranjska Gora"
+ ]
+}

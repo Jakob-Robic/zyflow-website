@@ -248,6 +248,16 @@ function loadTowns(dir = TOWNS_DIR) {
         const textFile = path.join(path.dirname(file), `text.${lang}.json`);
         if (fs.existsSync(textFile)) town.text[lang] = JSON.parse(fs.readFileSync(textFile, "utf8"));
       }
+      // Photos chosen by a person (photos.json): the town's large photos, and sight photos
+      // the encyclopedia does not have, keyed by the start of the sight's id. The export
+      // job writes data.json only, so a data refresh never touches these.
+      const photosFile = path.join(path.dirname(file), "photos.json");
+      const chosen = fs.existsSync(photosFile) ? JSON.parse(fs.readFileSync(photosFile, "utf8")) : {};
+      town.photos = chosen.photos || [];
+      for (const sight of town.sights) {
+        const key = Object.keys(chosen.sights || {}).find((id) => String(sight.id || "").startsWith(id));
+        if (!sight.image && key) sight.image = chosen.sights[key];
+      }
       return town;
     })
     .sort((a, b) => a.slug.localeCompare(b.slug));
@@ -262,6 +272,8 @@ function townBySlug(slug) {
 }
 
 function townLangs(town) {
+  // A preview also builds a town nobody has written for yet, in English, with the generated lines.
+  if (SHOW_DRAFTS && !Object.keys(town.text || {}).length) return ["en"];
   return TOWN_LANGS.filter((lang) => {
     const text = TEXT[lang] && town.text && town.text[lang];
     return text && (text.status === "published" || SHOW_DRAFTS);
@@ -477,7 +489,7 @@ function townStructuredNodes(page, origin) {
       "@type": SCHEMA_STAY[place.kind] || "LodgingBusiness",
       name: place.name,
       ...(place.site ? { url: place.site.url } : {}),
-      ...(place.about ? { description: place.about } : {}),
+      ...(aboutPlace(place, town, written, "") ? { description: aboutPlace(place, town, written, "") } : {}),
       geo: geo(place),
       address,
     }))),
@@ -485,7 +497,7 @@ function townStructuredNodes(page, origin) {
       "@type": SCHEMA_FOOD[place.kind] || "FoodEstablishment",
       name: place.name,
       ...(place.site ? { url: place.site.url } : {}),
-      ...(place.about ? { description: place.about } : {}),
+      ...(aboutPlace(place, town, written, "") ? { description: aboutPlace(place, town, written, "") } : {}),
       geo: geo(place),
       address,
     }))),
@@ -673,8 +685,15 @@ ${cards.join("\n")}
       </div>`;
 }
 
-function renderPlaces(town, t, key, title, lead, total, what, written) {
-  const places = town[key];
+/** A place's one-line description: the written line for its id ("places" in text.<lang>.json), or its type and town. */
+function aboutPlace(place, town, written, fallback = `${place.kind} in ${town.name}.`) {
+  const lines = (written && written.places) || {};
+  const key = Object.keys(lines).find((id) => id !== "_note" && String(place.id || "").startsWith(id));
+  return key ? lines[key] : fallback;
+}
+
+function renderPlaces(town, t, key, title, lead, total, what, written, lines) {
+  const places = town[key].map((place) => ({ ...place, about: aboutPlace(place, town, lines) }));
   if (!places.length) return "";
   const after =
     total > places.length
@@ -844,8 +863,8 @@ function renderBody(town, t, lang) {
   const blocks = [
     routes,
     photoFigure(town, 1, t),
-    renderPlaces(town, t, "stays", t.staysTitle, t.staysLead(town), town.counts.stays, t.moreStays, written.stays),
-    renderPlaces(town, t, "food", t.foodTitle, t.foodLead(town), town.counts.food, t.moreFood, written.food),
+    renderPlaces(town, t, "stays", t.staysTitle, t.staysLead(town), town.counts.stays, t.moreStays, written.stays, written),
+    renderPlaces(town, t, "food", t.foodTitle, t.foodLead(town), town.counts.food, t.moreFood, written.food, written),
     photoFigure(town, 2, t),
     renderPractical(town, t, written.practical),
     renderSights(town, t, written.sights),

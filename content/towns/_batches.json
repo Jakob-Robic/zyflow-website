@@ -1,0 +1,34 @@
+{
+ "_note": "Which towns get a page, per batch. A town is in a batch because it passed the bar on the day the batch was decided; export_town.py --batch N warns when that changes.",
+ "1": {
+  "decided": "2026-11-16",
+  "bar": "8 confirmed places to stay, 8 confirmed places to eat, 2 water points, 3 sights",
+  "towns": [
+   "ajdovtcina",
+   "bled",
+   "bohinj",
+   "bovec",
+   "brda",
+   "bretice",
+   "celje",
+   "cerklje_na_gorenjskem",
+   "ilirska_bistrica",
+   "izola_isola",
+   "kamnik",
+   "kobarid",
+   "koper_capodistria",
+   "kranjska_gora",
+   "ljubljana",
+   "maribor",
+   "medvode",
+   "nova_gorica",
+   "novo_mesto",
+   "piran_pirano",
+   "postojna",
+   "ptuj",
+   "radovljica",
+   "senana",
+   "tolmin"
+  ]
+ }
+}

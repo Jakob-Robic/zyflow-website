@@ -180,7 +180,8 @@ function signedRoutePages() {
 
 /** A town on the route: links to its town page where one is published in this language. */
 function townCard(town, route, t, lang) {
-  const page = towns.TOWNS.find((entry) => entry.slug === town.area_code && towns.townLangs(entry).includes(lang));
+  // Towns are matched on the database code; the page slug is a cleaned name (senana -> sezana).
+  const page = towns.TOWNS.find((entry) => (entry.area_code || entry.slug) === town.area_code && towns.townLangs(entry).includes(lang));
   const written = page && page.text[lang];
   const intro = written && written.intro ? (written.intro.match(/[^.!?]+[.!?]+/g) || [written.intro])[0].trim() : "";
   return infoCard({

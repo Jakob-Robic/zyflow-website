@@ -80,3 +80,67 @@ class Line:
         pts = [[round(c[0], 5), round(c[1], 5)] for c in self.path[::step]]
         last = [round(self.path[-1][0], 5), round(self.path[-1][1], 5)]
         return pts if pts[-1] == last else pts + [last]
+
+
+class NearIndex:
+    """Nearest-line lookups for many points, done locally instead of in the database.
+
+    lines: [(label, [[lon, lat], ...]), ...]. Distances in metres on a flat projection
+    around the lines' middle latitude: good to a few metres across one municipality.
+    """
+
+    CELL = 1000.0  # metres
+
+    def __init__(self, lines):
+        lats = [c[1] for _, coords in lines for c in coords] or [46.0]
+        self._kx = 111195.0 * math.cos(math.radians((min(lats) + max(lats)) / 2))
+        self._ky = 111195.0
+        self.labels = [label for label, _ in lines]
+        self.grid = {}
+        for li, (_, coords) in enumerate(lines):
+            pts = [self._xy(c[0], c[1]) for c in coords]
+            for a, b in zip(pts, pts[1:]):
+                seg = (a[0], a[1], b[0], b[1], li)
+                for gx in range(int(min(a[0], b[0]) // self.CELL), int(max(a[0], b[0]) // self.CELL) + 1):
+                    for gy in range(int(min(a[1], b[1]) // self.CELL), int(max(a[1], b[1]) // self.CELL) + 1):
+                        self.grid.setdefault((gx, gy), []).append(seg)
+
+    def _xy(self, lon, lat):
+        return lon * self._kx, lat * self._ky
+
+    @staticmethod
+    def _dist(px, py, seg):
+        ax, ay, bx, by, _ = seg
+        dx, dy = bx - ax, by - ay
+        t = 0.0 if dx == dy == 0 else max(0.0, min(1.0, ((px - ax) * dx + (py - ay) * dy) / (dx * dx + dy * dy)))
+        return math.hypot(px - ax - t * dx, py - ay - t * dy)
+
+    def nearest(self, lon, lat, max_m=60000, tie_m=0):
+        """(label, metres) of the nearest line, or None when none is within max_m.
+
+        Lines within tie_m of the nearest count as a tie (two routes on one road);
+        the tie goes to the line listed first.
+        """
+        if not self.grid:
+            return None
+        px, py = self._xy(lon, lat)
+        cx, cy = int(px // self.CELL), int(py // self.CELL)
+        per_line, best = {}, float("inf")
+        for ring in range(int(max_m // self.CELL) + 2):
+            cells = [(cx + i, cy + j) for i in range(-ring, ring + 1) for j in range(-ring, ring + 1) if max(abs(i), abs(j)) == ring]
+            for cell in cells:
+                for seg in self.grid.get(cell, ()):
+                    d = self._dist(px, py, seg)
+                    if d < per_line.get(seg[4], float("inf")):
+                        per_line[seg[4]] = d
+                        best = min(best, d)
+            if per_line and best + tie_m <= ring * self.CELL:
+                break
+        if not per_line or best > max_m:
+            return None
+        line = min(i for i, d in per_line.items() if d <= best + tie_m)
+        return self.labels[line], round(per_line[line])
+
+    def within(self, lon, lat, metres):
+        hit = self.nearest(lon, lat, max_m=metres)
+        return hit is not None
