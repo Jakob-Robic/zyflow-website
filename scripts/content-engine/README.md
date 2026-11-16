@@ -25,7 +25,7 @@ too few picks, an open question in the registry).
 | `content/signed-routes/_registry.json` | a person | which database records make one page, the tier, open questions |
 | `<slug>/data.json` | the job | line, length, climb, towns, counts, picks, sights. Never edit by hand |
 | `<slug>/text.<lang>.json` | a person or a writing agent | page texts, `places` (one line per place, by id), `from` / `to` names, `status` |
-| `<slug>/curation.json` | a person, optional | `{"exclude": ["<place id>"]}` to drop a pick |
+| `<slug>/curation.json` | a person, optional | `{"exclude": ["<place id>"]}` to drop a pick; for towns also `{"picks": {"stays": [ids], "food": [ids]}}` to keep hand-chosen picks ahead of the rule |
 
 A page is built only when its text file has `"status": "published"` (or in a preview
 with `TOWNS_DRAFTS=true`).
@@ -79,7 +79,7 @@ route pages match towns on it.
 | `<slug>/data.json` | the job | boundary, counts, routes and their lines, picks, sights, services. Never edit by hand |
 | `<slug>/text.<lang>.json` | a person or a writing agent | page texts, `places` (one line per place, keyed by the start of its id), `status` |
 | `<slug>/photos.json` | a person | `photos`: the town's large photos with captions and credits; `sights`: a photo for a sight whose encyclopedia entry has none, keyed by the start of its id |
-| `<slug>/curation.json` | a person, optional | `{"exclude": ["<place id>"]}` to drop a pick |
+| `<slug>/curation.json` | a person, optional | `{"exclude": ["<place id>"]}` to drop a pick; for towns also `{"picks": {"stays": [ids], "food": [ids]}}` to keep hand-chosen picks ahead of the rule |
 | `rebuild/assets/images/towns/<slug>/photo-*`, `chosen-*` | a person | the photos named in photos.json |
 
 A town without a text file still builds in a preview (`TOWNS_DRAFTS=true`), with a

@@ -390,6 +390,7 @@
   "chargers": 0,
   "sights": 29
  },
+ "unnamed_routes": [],
  "water_near_route": 21,
  "routes": [
   {
@@ -3767,19 +3768,19 @@
  ],
  "stays": [
   {
-   "id": "464d36e8-14f2-4dd7-9c53-40b7ceb873c6",
-   "name": "Turistična kmetija Mulej",
-   "kind": "Guesthouse",
+   "id": "c43b9476-ac20-4157-b29d-6d943f6f44f4",
+   "name": "Grand Hotel Toplice",
+   "kind": "Hotel",
    "pin": "accommodation",
-   "lon": 14.1047787,
-   "lat": 46.3525276,
+   "lon": 14.1073706,
+   "lat": 46.3656689,
    "site": {
-    "url": "https://mulej-bled.com/",
-    "label": "mulej-bled.com"
+    "url": "http://www.sava-hotels-resorts.com/",
+    "label": "sava-hotels-resorts.com"
    },
    "near": {
-    "route": "Kolesarska Jakobova pot–Gorenjska veja",
-    "m": 88
+    "route": "D2",
+    "m": 8
    }
   },
   {
@@ -3815,19 +3816,19 @@
    }
   },
   {
-   "id": "ab1d4387-4965-48c8-a144-2f9a8822cdb7",
-   "name": "Penzion Zaka",
+   "id": "7701fdf9-cb78-4f28-abc8-4de460d50a70",
+   "name": "Garden Village Bled",
    "kind": "Hotel",
    "pin": "accommodation",
-   "lon": 14.0850848,
-   "lat": 46.3671542,
+   "lon": 14.0974753,
+   "lat": 46.3574925,
    "site": {
-    "url": "http://www.bled-zaka.com",
-    "label": "bled-zaka.com"
+    "url": "https://gardenvillagebled.com",
+    "label": "gardenvillagebled.com"
    },
    "near": {
     "route": "G2",
-    "m": 10
+    "m": 202
    }
   },
   {
@@ -3926,26 +3927,6 @@
    ]
   },
   {
-   "id": "aa300541-1107-4599-9358-5e8e46921f7e",
-   "name": "Central Bled",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 14.1117801,
-   "lat": 46.3676358,
-   "site": {
-    "url": "https://restavracija-central.si/",
-    "label": "restavracija-central.si"
-   },
-   "near": {
-    "route": "D2",
-    "m": 10
-   },
-   "hours": "Mo–Su and holidays 12:00–22:00",
-   "extras": [
-    "Outdoor seating"
-   ]
-  },
-  {
    "id": "a8f656fd-8d29-4312-8d0a-cd1b417cce80",
    "name": "Steak House Berc",
    "kind": "Restaurant",
@@ -3963,6 +3944,27 @@
    "hours": "Mo–Sa 18:00–23:00",
    "extras": [
     "Steak house"
+   ]
+  },
+  {
+   "id": "d1a459a5-49c4-49e0-9d3b-b18b3a6e5c87",
+   "name": "Slaščičarna Zima",
+   "kind": "Café",
+   "pin": "cafe",
+   "lon": 14.1054774,
+   "lat": 46.3715308,
+   "site": {
+    "url": "https://slascicarna-zima.si/",
+    "label": "slascicarna-zima.si"
+   },
+   "near": {
+    "route": "Kolesarska Jakobova pot–Gorenjska veja",
+    "m": 9
+   },
+   "hours": "Mo–Su 08:00–21:00",
+   "extras": [
+    "Cake, dessert, pastry",
+    "Outdoor seating"
    ]
   },
   {

@@ -1,0 +1,29 @@
+{
+  "_note": "Bled's picks were chosen by hand with Jakob on 2026-11-16 and he decided to keep them over the automatic rule. Two places are excluded because reading their websites showed a problem the automatic check missed.",
+  "picks": {
+    "stays": [
+      "c43b9476",
+      "adfcbcec",
+      "a46a1b4e",
+      "7701fdf9",
+      "34fdbe3f",
+      "f5436f16"
+    ],
+    "food": [
+      "ed83bcee",
+      "0db0015d",
+      "a806a5b8",
+      "a8f656fd",
+      "d1a459a5",
+      "b67c9194"
+    ]
+  },
+  "exclude": [
+    "464d36e8",
+    "aa300541"
+  ],
+  "exclude_why": {
+    "464d36e8": "Turistična kmetija Mulej: its web address now shows an unrelated spam page",
+    "aa300541": "Central Bled: its website says only that a new site is coming"
+  }
+}

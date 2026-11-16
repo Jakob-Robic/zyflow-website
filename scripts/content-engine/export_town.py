@@ -10,7 +10,9 @@ Everything in data.json comes from this job; nothing in it is edited by hand.
 Hand-written material lives next to it and is never written or deleted here:
   text.<lang>.json   page texts and "places" (one line per place, keyed by the start of its id)
   photos.json        the town's large photos, chosen by a person, with captions and credits
-  curation.json      optional {"exclude": [place ids]} for picks a person rejected
+  curation.json      optional. {"exclude": [place ids]} drops places a person rejected;
+                     {"picks": {"stays": [ids], "food": [ids]}} keeps hand-chosen picks,
+                     in that order, ahead of the rule (ids may be shortened to their start)
 
 The page address comes from the municipality's short name (Sežana -> sezana), never
 from area_code, which is damaged for some towns (senana, bretice) and doubled for the
@@ -188,10 +190,27 @@ def cuisine(raw):
     return [str(i).strip().replace("_", " ") for i in items if str(i).strip()]
 
 
-def pick(rows, rank, count=PICKS, kind_max=None):
-    """Up to `count` places in rank order: one per website, at most `kind_max` of one kind."""
+def pick(rows, rank, count=PICKS, kind_max=None, chosen_first=()):
+    """Up to `count` places in rank order: one per website, at most `kind_max` of one kind.
+
+    `chosen_first` are id prefixes a person picked by hand: those places come first, in
+    the order given, and are not held to the kind limit. The rule fills what is left.
+    """
     chosen, sites, kinds = [], set(), {}
+    for prefix in chosen_first:
+        row = next((r for r in rows if r["id"].startswith(prefix)), None)
+        if row is None or row in chosen or len(chosen) == count:
+            continue
+        chosen.append(row)
+        label = (site(row.get("website")) or {}).get("label")
+        if label:
+            sites.add(label)
+        kinds[row["kind"]] = kinds.get(row["kind"], 0) + 1
     for row in sorted(rows, key=rank):
+        if len(chosen) == count:
+            break
+        if row in chosen:
+            continue
         label = (site(row.get("website")) or {}).get("label")
         if label and label in sites:
             continue
@@ -218,9 +237,11 @@ def export(area_code, today=None):
     folder = os.path.join(TOWNS_DIR, slug)
     boundary = json.loads(muni["boundary"])
     bounds = [muni["w"], muni["s"], muni["e"], muni["n"]]
-    excluded = set()
+    excluded, hand = set(), {}
     if os.path.exists(os.path.join(folder, "curation.json")):
-        excluded = set(json.load(open(os.path.join(folder, "curation.json"))).get("exclude", []))
+        curation = json.load(open(os.path.join(folder, "curation.json")))
+        excluded = set(curation.get("exclude", []))
+        hand = curation.get("picks", {})
 
     in_town = f"join poi_municipalities pm on pm.poi_id = p.id and pm.area_code = '{area_code}' and pm.country_code = 'SI'"
     counts_raw = {r["type"]: r for r in query(f"""select p.type, count(*) n, count(*) filter (where c.high_confidence) high
@@ -237,7 +258,7 @@ def export(area_code, today=None):
       where {LIVE} and (
         (p.type in ('accommodation','restaurant','cafe') and c.high_confidence)
         or p.type in ('water_point','bicycle_repair','bicycle_shop','charging_station',{sql_list(SIGHT_TYPES)}))""")
-    rows = [r for r in rows if r["id"] not in excluded]
+    rows = [r for r in rows if not any(r["id"].startswith(x) for x in excluded)]
     for r in rows:
         r["conf"] = float(r["conf"]) if r["conf"] is not None else 0.0
 
@@ -267,12 +288,12 @@ def export(area_code, today=None):
     stays_all = [r for r in rows if r["type"] == "accommodation"]
     for r in stays_all:
         r["kind"] = STAY_KINDS.get(r["stay_type"], "Stay")
-    stays = pick([r for r in stays_all if r["usable"] and r["conf"] >= 0.7], lambda r: (-r["conf"], r["near_m"], r["id"]), kind_max=SAME_KIND_MAX)
+    stays = pick([r for r in stays_all if r["usable"] and r["conf"] >= 0.7], lambda r: (-r["conf"], r["near_m"], r["id"]), kind_max=SAME_KIND_MAX, chosen_first=hand.get("stays", ()))
     # Food: confirmed, working website; places with opening hours first, then agreement.
     food_all = [r for r in rows if r["type"] in ("restaurant", "cafe")]
     for r in food_all:
         r["kind"] = FOOD_KIND.get(r["type"], "Food")
-    food = pick([r for r in food_all if r["usable"]], lambda r: (r["hours"] is None, -r["conf"], r["near_m"], r["id"]))
+    food = pick([r for r in food_all if r["usable"]], lambda r: (r["hours"] is None, -r["conf"], r["near_m"], r["id"]), chosen_first=hand.get("food", ()))
 
     def place(row, pin):
         item = {
