@@ -1,0 +1,41 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Mariboru.",
+  "intro": "Maribor leži ob Dravi pod Pohorjem, zato lahko kolesariš ob reki ali se zapelješ v hribe. Skozi mesto pelje devet označenih kolesarskih poti, med njimi EuroVelo 9 (od Baltika do Jadrana), Dravska kolesarska pot in STKP (Slovenska turnokolesarska pot). Na samem Pohorju so označene poti za gorska kolesa, kot sta Pohorje Flow Line in Okoli pohorskih smučišč.",
+  "routes": {
+    "title": "Kolesarske poti skozi Maribor",
+    "body": "Skozi Maribor pelje devet označenih kolesarskih poti, zato se po označeni poti lahko pelješ ob reki ali v hribe. Dravska kolesarska pot meri 190 km ob Dravi, od tega 29 km v Mariboru. EuroVelo 9 (od Baltika do Jadrana) prečka mesto na 128 km dolgem odseku. Državna kolesarska pot D1 doda 15 km, STKP, 276 km dolga pot za gorska kolesa, pa 19 km. Na Pohorju sta za gorska kolesa označeni Pohorje Flow Line (7 km) in Okoli pohorskih smučišč (23 km). Severno od mesta je Kungoška kolesarska pot, 52 km dolga cestna pot."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Mariboru imaš 37 nastanitev, od hostla ob reki do hotelov na Pohorju. Hostel Pekarna na desnem bregu Drave blizu starega mestnega jedra je 386 metrov od Dravske kolesarske poti in rad sprejme kolesarje. Voziš gorsko kolo? Gozdna Villa Mari je 22 metrov od STKP ob vznožju Pohorja. Hotel Bellevue Pohorje stoji na vrhu kabinske žičnice, 50 metrov od poti Pohorje Flow Line. Mlada lipa, B&B na Pohorju, ima varno shrambo za kolesa."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Mariboru je 130 krajev, kjer lahko ješ, in več jih je kratko vožnjo od Drave. Fudo na Poštni ulici, 147 metrov od Dravske kolesarske poti, kuha iz lokalnih ekoloških sestavin in je ob nedeljah zaprt. Sedem (7), restavracija mariborske šole za gostinstvo in turizem, je 61 metrov od EuroVelo 9 in ponuja degustacijski meni. Za vietnamsko hrano je Ngon 131 metrov od Dravske kolesarske poti. Cantante Tabor na Taboru streže kubanske jedi in koktajle."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "V Mariboru je 29 javnih točk s pitno vodo, a le 6 jih je manj kot 150 metrov od označene poti, zato napolni bidon, kadar le lahko. Za popravila imaš 16 možnosti: eno javno servisno stojalo in 15 kolesarskih trgovin s servisom. Voziš e-kolo? Maribor ima 5 javnih polnilnic."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Večina mariborskih znamenitosti je ob reki, le nekaj metrov od Dravske kolesarske poti. Vodni stolp, obrambni stolp iz leta 1555, je 19 metrov od poti, Stara trta pa 20 metrov. Nekdanja sinagoga, danes muzej, je 29 metrov od iste poti, Kužno znamenje pa 126 metrov. Mariborski grad je 203 metre od EuroVelo 9."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "069cbb8f": "Športni hotel pod Pohorjem, blizu smučišč. Ima restavracijo z domačo hrano in kavarniško teraso s pogledom na Pohorje. Organizira tudi športne tabore.",
+    "c82f9b0f": "Hotel s štirimi zvezdicami na vrhu pohorske kabinske žičnice, med gozdovi nad Mariborom, z velnesom in fitnesom.",
+    "5a98b48a": "Majhen garni hotel na Beograjski ulici s trinajstimi sobami, studii in družinskimi apartmaji. Za shrambo koles se dogovoriš vnaprej.",
+    "05d7ccff": "B&B na Pohorju za kolesarje v bike parku, smučarje in pohodnike, z varno shrambo za kolesa, parkiriščem in zajtrkom.",
+    "8e5f1964": "Hostel na desnem bregu Drave ob robu Magdalenskega parka, blizu starega mestnega jedra. Posebej je naklonjen kolesarjem in pohodnikom.",
+    "6a7925cf": "Družinski apartmaji in sobe ob vznožju Pohorja, pri snežnem stadionu in 6 km od središča Maribora.",
+    "6d66826e": "Kubanska restavracija z dolgo tradicijo na Taboru, s kubanskimi in južnoameriškimi jedmi ter koktajli.",
+    "90364bc6": "Restavracija in vinski bar na Poštni ulici s fuzijskimi jedmi iz lokalnih ekoloških sestavin. Ob nedeljah je zaprta.",
+    "25db661d": "Vietnamska restavracija v središču s pho juho, jedmi iz voka, riževimi rezanci in vietnamsko kavo.",
+    "dbdafc96": "Restavracija in kavarna mariborske šole za gostinstvo in turizem na Cafovi ulici, z degustacijskim menijem. Ob nedeljah je zaprta.",
+    "f15b3b81": "Restavracija v trgovini Interspar v Mariboru, 60 metrov od Dravske kolesarske poti.",
+    "39c28f84": "Rekreacijski center ob Dravi v Limbušu z barom in rečno plažo, izposojo čolnov in otroškim igriščem."
+  }
+}

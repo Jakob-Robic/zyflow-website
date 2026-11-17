@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/ilirska-bistrica/hero.jpg",
+      "author": "Doremo",
+      "licence": "CC BY-SA 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Trnovo_Ilirska_Bistrica_Slovenia_1.jpg",
+      "caption": "Ilirska Bistrica (Trnovo quarter) with the hills behind."
+    }
+  ],
+  "hero": "./assets/images/towns/ilirska-bistrica/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}

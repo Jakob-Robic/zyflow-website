@@ -1,0 +1,39 @@
+{
+ "_note": "The town's large photos, chosen by a person from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+ "photos": [
+  {
+   "src": "./assets/images/towns/bled/photo-1.jpg",
+   "author": "Petar Milošević",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Blejsko_jezero_(Lake_Bled_in_autumn).jpg",
+   "caption": "Lake Bled with the island, looking west towards the Julian Alps."
+  },
+  {
+   "src": "./assets/images/towns/bled/photo-2.jpg",
+   "author": "Jakub Hałun",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bled_Lake_and_Bled_Castle,_Slovenia,_20240504_1109_8446.jpg",
+   "caption": "Rowing boats on the lake below Bled Castle."
+  },
+  {
+   "src": "./assets/images/towns/bled/photo-3.jpg",
+   "author": "Jakub Hałun",
+   "licence": "CC BY 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bled_Lake,_Slovenia,_20240504_0851_8264.jpg",
+   "caption": "Bled Castle on its rock, with the parish church at the shore."
+  }
+ ],
+ "sights": {
+  "_note": "Photos for sights whose encyclopedia entry has none, keyed by the start of the sight's id. Chosen by a person from Wikimedia Commons.",
+  "bc4982cf": {
+   "src": "./assets/images/towns/bled/chosen-muhr.jpg",
+   "author": "Živa Rant",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Spomenik_Adolfu_Muhru.jpg"
+  }
+ }
+}

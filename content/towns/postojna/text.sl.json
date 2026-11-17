@@ -1,0 +1,40 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Postojni.",
+  "intro": "Postojna leži na krasu med Ljubljano in obalo, najbolj znana pa je po svoji jami. Za kolesarje je stičišče označenih poti. Tu sta dve lokalni cestni poti in sedem poti za gorska kolesa v gozdove Nanosa in Javornika, skozi kraj pa pelje tudi Jakobova pot. Tudi vasi, kot so Hruševje, Razdrto, Prestranek in Planina, spadajo pod Postojno.",
+  "routes": {
+    "title": "Kolesarske poti skozi Postojno",
+    "body": "Skozi Postojno pelje deset označenih kolesarskih poti, večinoma oštevilčenih lokalnih poti. S cestnim kolesom izberi pot 2 (Jamska), 36 km, ki pelje blizu jame, ali pot 3 (Grajska), 54 km, ki vodi proti Planini. Kolesarska Jakobova pot Slovenija Camino prečka območje na svojih 311 km po Sloveniji in pelje mimo Predjamskega gradu. Območje prečka sedem označenih poti za gorska kolesa, med njimi pot 7 (Postojna), 68 km, in pot 9 (Nanos), 57 km. Pot 10 (Medvedova dežela) je s 117 km najdaljša."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Postojni je 19 nastanitev, od hotelov v kraju do kmetij po vaseh. EkoTurizem Hudičevec je 15 metrov od poti 7, Lipizzaner Lodge, kjer lahko najameš e-kolo, pa 44 metrov od iste poti. V kraju sta blizu poti 7 Hotel Kras in Sweet Dreams, Hotel Jama pa stoji ob jami, 324 metrov od poti 2. Če imaš šotor ali avtodom, je Camp Mirjam v Razdrtem 73 metrov od Jakobove poti, odprt pa je od sredine aprila do začetka oktobra."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Postojni je 11 krajev, kjer lahko ješ, nekaj jih je ob poteh. Gostilna in picerija Hruševje je 19 metrov od poti 3 in kuha tradicionalne slovenske jedi, pico in burgerje. Greš po poti 9? Avio Pub v Rakitniku je 99 metrov od nje in je ob ponedeljkih zaprt. V kraju ima Pizzerija Čuk neapeljsko pico, Bistro Štorja pa kuha iz sezonskih lokalnih pridelkov."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Bidon lahko napolniš na 23 javnih točkah s pitno vodo, 13 jih je manj kot 150 metrov od označene poti. V kraju so tri javna servisna stojala in ena kolesarska trgovina s servisom, Ceho Bike. Voziš e-kolo? Postojna ima 9 javnih polnilnic."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "V Postojni je 50 znamenitosti, najbolj znane pa so pod zemljo. Postojnska jama je 323 metrov od poti 2, ob isti poti pa sta tudi Otoška jama in Betalov spodmol, jama, kjer so našli orodje iz kamene dobe. Predjamski grad, zgrajen v ustje jame, je 140 metrov od Jakobove poti. Planinska jama je 265 metrov od poti 3, Pivka jama pa 39 metrov od poti 9."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "a2a1b07d": "Hotel parka Postojnska jama, tik ob jami, z lastno restavracijo in sejnimi sobami.",
+    "ff59cd6e": "Sodoben hotel v Postojni s 24 dvoposteljnimi sobami in tremi suitami s terasami v zgornjem nadstropju, s kavarno in garažo.",
+    "99d79550": "Kamp za šotore in avtodome pod starimi orehi v Razdrtem, ob Penzionu Mirjam. Odprt od 15. aprila do 5. oktobra.",
+    "0b7b8bf1": "Kmetija z apartmaji, suitami in sobami, domačo hrano in ježo konj.",
+    "42383b3f": "Penzion s sedmimi sobami blizu Postojne, kjer lahko najameš e-kolo in dobiš predloge za poti v okolici.",
+    "be2be954": "Sobe v Postojni, 150 metrov od središča kraja, z zasebnim parkiriščem.",
+    "9fa80a91": "Bistro, ki kuha iz svežih lokalnih pridelkov iz regije, jedilnik pa se menja s sezonami.",
+    "889e31e9": "Pub in restavracija v Rakitniku pri Prestranku, s pico, mesnimi jedmi in solatami. Ob ponedeljkih je zaprt.",
+    "a463fecc": "Restavracija in picerija v Postojni, odprta leta 1991, z neapeljsko pico ter slovenskimi in mednarodnimi jedmi.",
+    "6adc33ed": "Vaška gostilna v Hruševju s tradicionalnimi slovenskimi jedmi, pico in burgerji ter sedeži zunaj.",
+    "2775b917": "Gostilna med smrekami ob majhnem ribniku, s kaminom in domačo hrano."
+  }
+}

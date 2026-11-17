@@ -500,6 +500,17 @@ function collectMetaIssues(messagesByLocale, pages, pageLocales) {
   for (const page of pages) {
     // Post, author and guide titles live in frontmatter, checked by blog.js / guides.js.
     if (page.blogKind || page.guideKind === "guide") continue;
+    if (page.townSlug || page.townHub || page.signedRouteSlug) {
+      // Town titles and descriptions are generated from data, so check the result.
+      const lang = page.townLang;
+      for (const problem of descriptionIssues(lang, page.seo && page.seo.description)) {
+        issues.push(`${lang} ${page.id}: ${problem}`);
+      }
+      for (const problem of titleIssues(lang, page.seo && page.seo.title)) {
+        issues.push(`${lang} ${page.id} title: ${problem}`);
+      }
+      continue;
+    }
     for (const locale of pageLocales(page)) {
       const meta = messagesByLocale[locale]?.meta?.pages?.[page.id] || {};
       for (const problem of descriptionIssues(locale, meta.description)) {

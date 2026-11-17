@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/nova-gorica/hero.jpg",
+      "author": "Loxy!! from Vancouver, Canada",
+      "licence": "CC BY 2.0",
+      "licence_url": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Slovenia_IMG_7846_(21642476339).jpg",
+      "caption": "The Solkan bridge over the Soča, Nova Gorica."
+    }
+  ],
+  "hero": "./assets/images/towns/nova-gorica/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}

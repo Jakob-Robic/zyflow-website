@@ -20,6 +20,7 @@ const {
   DEFAULT_LOCALE,
   JOURNAL_IS_PUBLIC,
   GUIDES_ARE_PUBLIC,
+  TOWNS_ARE_PUBLIC,
   PAGES,
   pageLocales,
   absoluteUrl,
@@ -50,6 +51,21 @@ const {
   renderGuide,
   renderGuidesIndex,
 } = require("./guides");
+const {
+  injectTown,
+  TOWN_BASE,
+  assertTownsBuildable,
+  townSitemapDate,
+  townStructuredNodes,
+  townLlmsLines,
+  townOgSources,
+} = require("./towns");
+const {
+  injectSignedRoute,
+  signedRouteSitemapDate,
+  signedRouteStructuredNodes,
+  signedRouteLlmsLines,
+} = require("./signed-routes");
 const { renderLegalMarkdown } = require("./legal-markdown");
 const { routeBySlug, ROUTES } = require("./routes");
 const { versionAssets } = require("./version-assets");
@@ -506,6 +522,7 @@ function stripUnpublishedCategories(html, published = publishedCardCategories())
 function applyPublicationFlags(html, source = "") {
   html = applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, source);
   html = applyToggleBlocks(html, "guides", GUIDES_ARE_PUBLIC, source);
+  html = applyToggleBlocks(html, "towns", TOWNS_ARE_PUBLIC, source);
   html = stampCardCategories(html);
   html = stripUnpublishedCategories(html);
   return html;
@@ -527,6 +544,7 @@ function resolveIncludes(html, stack = []) {
     // error names this file rather than the page that included it.
     applyToggleBlocks(partial, "journal", JOURNAL_IS_PUBLIC, clean);
     applyToggleBlocks(partial, "guides", GUIDES_ARE_PUBLIC, clean);
+    applyToggleBlocks(partial, "towns", TOWNS_ARE_PUBLIC, clean);
     return resolveIncludes(partial, [...stack, clean]);
   });
 }
@@ -803,7 +821,11 @@ function injectGuides(html, page, locale, messages) {
       `<body$1 data-page-campaign="${escapeAttr(page.campaign)}" data-page-medium="guide">`
     );
   }
-  return html.replaceAll("{{guidesIndex}}", GUIDE_BASE[locale] || GUIDE_BASE.en);
+  // The towns hub in this language where it exists, otherwise the English one.
+  const townsIndex = PAGES.some((p) => p.townHub && p.townLang === locale) ? TOWN_BASE[locale] : TOWN_BASE.en;
+  return html
+    .replaceAll("{{guidesIndex}}", GUIDE_BASE[locale] || GUIDE_BASE.en)
+    .replaceAll("{{townsIndex}}", townsIndex);
 }
 
 function galleryFigure(src) {
@@ -1099,6 +1121,11 @@ function structuredData(page, locale, messages) {
     graph.push(...guideNodes);
     return { "@context": "https://schema.org", "@graph": graph };
   }
+  const townNodes = townStructuredNodes(page, SITE_ORIGIN) || signedRouteStructuredNodes(page, SITE_ORIGIN);
+  if (townNodes) {
+    graph.push(...townNodes);
+    return { "@context": "https://schema.org", "@graph": graph };
+  }
   const blogNodes = structuredNodes(page, locale, messages, absoluteUrl, SITE_ORIGIN, {
     journalPublic: JOURNAL_IS_PUBLIC,
   });
@@ -1238,7 +1265,7 @@ function buildHead(page, locale, messages) {
       `<link rel="preload" href="/assets/images/home/hero.jpg" as="image" fetchpriority="high" />`
     );
   }
-  if (page.routeSlug) {
+  if (page.routeSlug || page.townSlug || page.signedRouteSlug) {
     const tileOrigin = MAPTILER_KEY
       ? "https://api.maptiler.com"
       : "https://tiles.openfreemap.org";
@@ -1392,6 +1419,15 @@ function pageContentPaths(page) {
     ];
   }
   const rels = [`rebuild/pages/${page.file}`, ...locales];
+  if (page.townSlug) {
+    return [`content/towns/${page.townSlug}`, "rebuild/scripts/towns.js", `rebuild/pages/${page.file}`];
+  }
+  if (page.townHub) {
+    return ["content/towns", "rebuild/scripts/towns.js", `rebuild/pages/${page.file}`];
+  }
+  if (page.signedRouteSlug) {
+    return [`content/signed-routes/${page.signedRouteSlug}`, "rebuild/scripts/signed-routes.js", `rebuild/pages/${page.file}`];
+  }
   if (page.guideKind) {
     const own = page.guideLang === "de" ? ["rebuild/locales/de.json"] : [];
     return [`rebuild/pages/${page.file}`, "content/guides", ...locales, ...own];
@@ -1430,7 +1466,8 @@ function writeSeoFiles() {
   const urls = [];
   for (const page of indexable) {
     for (const locale of pageLocales(page)) {
-      const guideLastmod = guideSitemapDate(page);
+      const townLastmod = townSitemapDate(page) !== null ? townSitemapDate(page) : signedRouteSitemapDate(page);
+      const guideLastmod = townLastmod !== null ? townLastmod : guideSitemapDate(page);
       const blogLastmod = guideLastmod !== null ? guideLastmod : sitemapDate(page, locale);
       const lastmod =
         blogLastmod !== null
@@ -1490,6 +1527,53 @@ ${urls.join("\n")}
   if (!GUIDES_ARE_PUBLIC) {
     disallow.push(...Object.values(GUIDE_BASE).map((base) => `Disallow: ${base}`));
   }
+  if (!TOWNS_ARE_PUBLIC) {
+    disallow.push(...Object.values(TOWN_BASE).map((base) => `Disallow: ${base}`));
+  }
+
+  // llms.txt: a plain-text map of the site for AI assistants. An emerging
+  // convention with no confirmed crawler support; cheap to keep accurate
+  // because it is generated from the same page list as the sitemap.
+  const urlFor = (pagePath) => `${SITE_ORIGIN}${pagePath}`;
+  const has = (pagePath) => indexable.some((p) => p.path === pagePath);
+  const llms = [
+    "# Zyflow",
+    "",
+    "> Zyflow is a cycling place guide and a free app for iOS and Android. It shows bike-friendly places (places to stay, coffee stops, restaurants, e-bike chargers, water points and bike repair) and cycling routes. Site languages: English and Slovenian.",
+    "",
+    "Place and route data is based on OpenStreetMap (© OpenStreetMap contributors) and each place's own website. Town pages state the date their data was last checked.",
+  ];
+  const townLines = TOWNS_ARE_PUBLIC ? townLlmsLines(SITE_ORIGIN) : [];
+  if (townLines.length) {
+    llms.push(
+      "",
+      "## Cycling by town",
+      "One page per town: signed cycle routes through it, selected places to stay and eat with their distance from the nearest route, water, repair and e-bike charging, sights, and common questions.",
+      `- [All towns](${urlFor(TOWN_BASE.en)})`,
+      ...townLines
+    );
+  }
+  const routePages = indexable.filter((p) => p.routeSlug);
+  const signedLines = TOWNS_ARE_PUBLIC ? signedRouteLlmsLines(SITE_ORIGIN) : [];
+  if (has("/tours")) {
+    llms.push("", "## Routes", `- [All cycling routes](${urlFor("/tours")}): described routes with distance, climb and map.`);
+    const enRoutes = JSON.parse(read(path.join(LOCALES_DIR, "en.json"))).routes || {};
+    for (const p of routePages) {
+      const copy = enRoutes[p.routeSlug] || {};
+      const name = (copy.metaTitle || p.routeSlug).replace(/ \| Zyflow$/, "");
+      llms.push(`- [${name}](${urlFor(p.path)})${copy.metaDescription ? `: ${copy.metaDescription}` : ""}`);
+    }
+  }
+  if (signedLines.length) {
+    llms.push("", "## Signed cycle routes", "National, regional and local signed routes, each with its length, climb, the towns it passes and the stops along it.", ...signedLines);
+  }
+  llms.push("", "## About");
+  for (const [pagePath, label] of [["/about", "About Zyflow"], ["/business", "For businesses"], ["/press", "Press"], ["/contact", "Contact"]]) {
+    if (has(pagePath)) llms.push(`- [${label}](${urlFor(pagePath)})`);
+  }
+  llms.push("", "## Optional", `- [Slovenian site](${SITE_ORIGIN}/sl)`, "");
+  fs.writeFileSync(path.join(DIST, "llms.txt"), llms.join("\n"), "utf8");
+  console.log("built llms.txt");
 
   const robots = `User-agent: *
 Allow: /
@@ -1640,6 +1724,8 @@ function buildPage(page, locale, messages) {
   if (page.routeSlug) {
     html = injectTourContent(html, page.routeSlug);
   }
+  html = injectTown(html, page);
+  html = injectSignedRoute(html, page);
   html = resolveIncludes(html);
   html = applyPublicationFlags(html, pageRel);
   // <!-- sl-only:public --> blocks stay on Slovenian pages only (EU project notice).
@@ -1823,6 +1909,18 @@ async function writeBlogOgImages() {
   }
 }
 
+async function writeTownOgImages() {
+  if (!TOWNS_ARE_PUBLIC) return;
+  const sharp = require("sharp");
+  for (const source of townOgSources()) {
+    const file = path.join(ROOT, source.file);
+    if (!fs.existsSync(file)) throw new Error(`Missing image for town OG crop ${source.slug}: ${source.file}`);
+    const dest = path.join(DIST, "assets/images/og/towns", `${source.slug}.jpg`);
+    ensureDir(path.dirname(dest));
+    await sharp(file).resize(TOUR_OG_WIDTH, TOUR_OG_HEIGHT, { fit: "cover", position: "centre" }).jpeg({ quality: 82 }).toFile(dest);
+  }
+}
+
 async function build() {
   const messagesByLocale = {};
   for (const locale of LOCALES) {
@@ -1841,6 +1939,7 @@ async function build() {
     assertPartialLocale(locale, messagesByLocale[locale], messagesByLocale[DEFAULT_LOCALE]);
   }
   assertGuidesBuildable({ guidesPublic: GUIDES_ARE_PUBLIC, siteIndex: SITE_INDEX });
+  assertTownsBuildable({ townsPublic: TOWNS_ARE_PUBLIC, siteIndex: SITE_INDEX });
 
   // Guides index meta is checked even while guides are hidden.
   const metaPages = GUIDES_ARE_PUBLIC ? PAGES : [...PAGES, ...GUIDE_INDEX_PAGES];
@@ -1879,6 +1978,7 @@ async function build() {
   // One stylesheet instead of the @import chain (render-blocking).
   bundleCss(DIST);
   await writeBlogOgImages();
+  await writeTownOgImages();
   // AVIF/WebP srcsets + simplified contour SVGs. Runs before versioning so
   // the JS/CSS ?v= pass still sees the final HTML.
   await optimizeImages(DIST);

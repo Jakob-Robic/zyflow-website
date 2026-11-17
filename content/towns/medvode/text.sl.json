@@ -1,0 +1,34 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Medvodah.",
+  "intro": "Medvode ležijo ob sotočju Sore in Save, med Ljubljano in Kranjem, malo gorvodno pa je Zbiljsko jezero. Kraj leži na glavnih smereh iz Ljubljane, zato skozenj pelje veliko poti. Med njimi so D2 od Rateč do Ljubljane, G3 od Ljubljane do Želina, dva kraka Jakobove poti in pot za gorska kolesa STKP. Tudi Smlednik, Zbilje, Pirniče in Preska spadajo pod Medvode.",
+  "routes": {
+    "title": "Kolesarske poti skozi Medvode",
+    "body": "Skozi Medvode pelje deset označenih kolesarskih poti. Največ kilometrov tu ima L-039, ki pelje iz Podutika čez Topol do Trboj: 20 km od svojih 25 km, tudi mimo Zbiljskega jezera. STKP ima tu 16 km, gorenjski krak Jakobove poti 12 km, D2 9 km in G3 6 km. Dve lokalni poti se končata v Medvodah: LG10 iz Križa, 26 km, in LG9 iz Polhovega Gradca, 18 km. Za cel dan od tu izberi Ljubljančanko, opisano turo, dolgo 71 km, s 460 m vzpona."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Medvodah imaš 8 nastanitev, več jih je ob Zbiljskem jezeru. Hotel Kanu je tik ob jezeru, 40 metrov od L-039. Kamp FKK Smlednik je tam, kjer se Sava izliva v jezero, 240 metrov od iste poti. V Smledniku je Hotel Baron 30 metrov od LG10, z 11 sobami, 2 apartmajema in kolesi za najem."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Medvodah je 8 krajev, kjer lahko ješ. Gostilna Mihovec v Zgornjih Pirničah sprejema goste že od leta 1857 in kuha slovensko hrano s sodobnim pridihom, 1,0 km od D2. V Zbiljah je Pizza Sedmica 370 metrov od L-039 in ob delavnikih od 10.00 do 15.00 ponuja meni za kosilo."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Bidon lahko napolniš na 21 javnih točkah s pitno vodo, 14 jih je manj kot 150 metrov od označene poti. Na voljo sta eno javno servisno stojalo in ena kolesarska trgovina s servisom, Servis Koles. Za e-kolo so v Medvodah 4 javne polnilnice."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Več znamenitosti je le nekaj metrov od poti. Spomenik petim padlim talcem je 10 metrov od D2, Dvorec Lazarini pa 50 metrov. Dvorec Goričane je 40 metrov od gorenjskega kraka Jakobove poti. Stari grad na Smledniškem hribu stoji 430 metrov od prekmursko-štajerskega kraka Jakobove poti, rojstna hiša Jakoba Aljaža pa je 490 metrov od D2."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "f2e2e5a6": "Hotel v Smledniku blizu Zbiljskega jezera z 11 sobami in 2 apartmajema, vsi imajo balkon ali teraso. Kolo si lahko tudi najameš.",
+    "5dd1cac1": "Kamp ob Savi na robu Zbiljskega jezera, z lastno plažo in ločenim naturističnim delom.",
+    "b85a263f": "Družinski hotel tik ob Zbiljskem jezeru v Smledniku, z restavracijo, prostorom za piknike in panoramsko ladjo.",
+    "cd06affe": "Picerija v Zbiljah s pico, ki jo poješ na mestu ali vzameš domov, in kosili med tednom.",
+    "5a4cef72": "Družinska gostilna v Zgornjih Pirničah od leta 1857, s slovensko hrano s sodobnim pridihom ter prodajo sezonskih pridelkov in domačih izdelkov."
+  }
+}

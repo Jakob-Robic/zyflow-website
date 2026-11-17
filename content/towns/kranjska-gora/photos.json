@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/kranjska-gora/hero.jpg",
+      "author": "Matijap",
+      "licence": "CC BY-SA 3.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Krnica.jpg",
+      "caption": "The Krnica valley near Kranjska Gora, with Škrlatica in the clouds."
+    }
+  ],
+  "hero": "./assets/images/towns/kranjska-gora/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}

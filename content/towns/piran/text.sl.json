@@ -1,0 +1,41 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Piranu.",
+  "intro": "Piran zajema jugozahodni konec slovenske obale. Vanj spadajo obzidano staro mestno jedro na rtu, Portorož in Lucija ob zalivu, Strunjan na severu in soline v Sečovljah. Skozi Piran peljeta Parenzana in EuroVelo 8 (Sredozemska pot), skupaj z državnima kolesarskima potema D1 od Kopra do Sečovelj in D 6. Od osmih krožnih poti K iz vodnika Uživajmo podeželje, ki peljejo skozi Piran, se jih sedem začne v piranskih krajih: v Luciji, Seči, Padni in Svetem Petru.",
+  "routes": {
+    "title": "Kolesarske poti skozi Piran",
+    "body": "Skozi Piran pelje 12 označenih kolesarskih poti: dve mednarodni, dve državni in osem lokalnih krožnih poti. Parenzana (skupaj 119 km) in EuroVelo 8 sledita obali, D1 pa meri 30 km med Koprom in Sečovljami. S cestnim kolesom izberi K13 (Čez Istro za zahtevne), 80 km dolgo krožno pot iz Lucije, ali K8 (Čez izolsko zaledje), 50 km iz Izole. Za treking kolo je tu K12 (Iz Portoroža na kavo v Izolo), 27 km iz Lucije. K14 (Po korteški strmini) meri 15 km iz Seče. K10, K11 in K15 so za gorska kolesa."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Piranu je 62 nastanitev, od hostlov v starem mestnem jedru do hotelov ob plaži in kampov. Barbara, hotel ob plaži v Fiesi, je 24 metrov od K12, Grand Hotel Portorož na promenadi pa 62 metrov od K13. Želiš spati znotraj obzidja? Hostel Piran in Miracolo di Mare sta oba le kakih 100 metrov od K12. Za šotor je tu Avtokamp Strunjan, 58 metrov od K13."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Piranu je 68 krajev, kjer lahko ješ, mnogi v starem mestnem jedru ob K12. PiranArt na obali, 133 metrov od poti, sam dela testenine, kruh in sladoled. Porta Marciana kuha italijansko hrano 53 metrov od K12. Greš po K13 v notranjost? Gostilna Na burji je 8 metrov od nje. V Portorožu je Pizzeria Santalucia odprta vsak dan od 11.00 do 22.00, 243 metrov od K10."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Od 23 javnih točk s pitno vodo v Piranu jih je 16 manj kot 150 metrov od označene poti. Na voljo so tri javna servisna stojala in dve kolesarski trgovini s servisom: Bike Art v Portorožu in Luna Šport v Piranu. Če tvoje e-kolo potrebuje polnjenje, ima Piran 6 javnih polnilnic."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "V Piranu je 39 znamenitosti, večina starega mestnega jedra je le nekaj minut hoje od K12. Pomorski muzej Sergej Mašera v Palači Gabrielli je 7 metrov od poti. Benečanka stoji 8 metrov stran. Za razgled na mesto se povzpni na Mestno obzidje, 108 metrov od K12. Na poti greš skozi stara mestna vrata, kot sta Dolfinova vrata in Prva Rasporska vrata."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "a8f7a4b5": "Hotel z dolgo tradicijo na glavni promenadi Portoroža, z zasebno plažo, restavracijami in termalnim velnesom.",
+    "e29b8726": "Dva hostla v peš coni starega mestnega jedra Pirana, približno 100 metrov od Tartinijevega trga in plaže.",
+    "238e72fb": "Majhen butični hotel v Piranu z retro in sodobnimi sobami, nekatere s teraso nad vrtom.",
+    "bc3e3746": "Hotel ob plaži v zalivu Fiesa, med morjem in jezerom, z restavracijo, barom na plaži in velnesom.",
+    "c469694a": "Kamp v Strunjanskem zalivu, ki ga upravlja lokalno avto-moto društvo, blizu lagune in starih solin.",
+    "e86fd8e9": "Picerija in špageterija v Portorožu, znana po pici iz krušne peči na drva. Odprta vsak dan od 11.00 do 22.00.",
+    "8ef98a40": "Italijanska restavracija v Piranu, ki kuha od leta 1988, s testeninami, morsko hrano in istrskimi fuži s tartufi.",
+    "f2878861": "Gostilna s tradicionalno istrsko kuhinjo v hribih nad obalo.",
+    "02d78f98": "Restavracija na piranski obali z domačo hrano, svežimi testeninami in kruhom ter sladoledom.",
+    "69c5f3a1": "Restavracija in bar na plaži ob morju v Strunjanu, z neapeljsko pico in domačimi testeninami, s pogledom na Piran.",
+    "fba7b5a2": "Apartmaji na mirni zeleni lokaciji blizu plaže Fiesa in središča Pirana.",
+    "fcb516a6": "Kavarna verige Cacao s sladoledom, tortami in sladicami, pa tudi kavo, vročo čokolado in koktajli."
+  }
+}

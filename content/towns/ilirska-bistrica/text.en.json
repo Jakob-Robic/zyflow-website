@@ -1,0 +1,32 @@
+{
+  "status": "published",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Ilirska Bistrica's data and the places' own websites. Needs a read by someone who knows Ilirska Bistrica before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Ilirska Bistrica.",
+  "intro": "Ilirska Bistrica lies in the valley of the Reka, below the forests of Snežnik and the hills of Brkini. It is a quiet base with a long municipality around it, reaching from Hrušica and Podgrad in the south-west to the Snežnik forests in the north-east. One signed route crosses it: route 10 (Medvedova dežela), a marked mountain-bike route through those forests.",
+  "routes": {
+    "title": "The cycle route through Ilirska Bistrica",
+    "body": "One signed route crosses Ilirska Bistrica: route 10 (Medvedova dežela), a marked mountain-bike route of 117 km, 30 km of it inside the municipality. It runs through the forests in the north-east, past Gostišče Mašun, which is 78 metres from the route. The town itself lies well away from it, so plan the ride out to the forest before you set off."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "Ilirska Bistrica has 11 places to stay, spread across the valley and its villages. Pension Patrik in Hrušica is a family-run guesthouse with a camper park and a café bar, 21.9 km from route 10. Closer to town, Domačija Bubec in Brce is 4 km from Ilirska Bistrica and 14.6 km from the route."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Ilirska Bistrica has 8 places to eat. On route 10, Gostišče Mašun sits in the Snežnik forest, 78 metres from the route. Near town, Domačija Bubec grills fresh trout from its own fish farm and is open Friday evening and all day Saturday and Sunday."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "There are 13 public water points, but none of them is within 150 metres of the signed route, so carry enough water for the forest. There is no public repair stand, but two bike shops in town: Kolesar - Bf, športna trgovina in servis, and Velocenter Ilirska Bistrica. E-bike riders can charge at 5 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Ilirska Bistrica has 51 sights, most of them away from the signed route. Prem Castle stands above the village of Prem, 14.3 km from route 10. Slap Sušec, a waterfall near town, is 11.2 km from the route. Both make a ride on their own from Ilirska Bistrica."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town.",
+    "2a63763d": "A family-run guesthouse in Hrušica, renovated in 2013, with air-conditioned rooms, a fitness room, a camper park and a café bar.",
+    "5d9c3b4c": "A homestead with a trout farm and snack bar in Brce, 4 km from Ilirska Bistrica. Open Friday from 17:00 to 22:00, Saturday and Sunday from 12:00 to 22:00.",
+    "8a513bb5": "A guesthouse with rooms at 1,024 metres in the Snežnik forests, where forest roads from several valleys meet."
+  }
+}

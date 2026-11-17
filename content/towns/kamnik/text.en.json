@@ -1,0 +1,38 @@
+{
+  "status": "published",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Kamnik's data and the places' own websites. Needs a local read by someone who knows Kamnik before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Kamnik.",
+  "intro": "Kamnik is an old town at the foot of the Kamnik and Savinja Alps, where the Kamniška Bistrica leaves the mountains for the plain north of Ljubljana. Ride north and the valley climbs towards the Velika planina cable car; ride south and the land opens out. The Prekmurje and Štajerska branch of the Jakobova pot, G7 and G13 meet here. L-041 runs from Mekinje to Kamniška Bistrica, following the valley into the mountains. Stahovica, Mekinje and the Tuhinj valley belong to Kamnik too.",
+  "routes": {
+    "title": "Cycle routes through Kamnik",
+    "body": "Four signed routes pass through Kamnik. The Jakobova pot covers 32 km here on its 263 km way across Slovenia. L-041, from Mekinje to Kamniška Bistrica, is a 12 km regional route up the valley, all of it in Kamnik. G7 from Kranj runs 4 km through town. G13, which runs from Ljubljana through Kamnik and Vransko to Celje, has 3 km here. For a longer day, Kamničanka takes you 72 km, an easy ride with 254 m of climbing."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "Kamnik has 9 places to stay, and several are in the valley north of town. Pri planinskem orlu in Stahovica is a family inn with rooms, 40 metres from L-041. Further up, Kraljev hrib has a campsite 170 metres from the route and 300 metres from the Velika planina cable car. Kamp Resnik is 90 metres from the Jakobova pot and open from 1 May to 30 September. For a rest day, Terme Snovik in the Tuhinj valley is a thermal spa 920 metres from the same route."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Kamnik has 13 places to eat. Picerija Murka, on the north side of town with a view of the mountains, is 20 metres from L-041 and bakes in a bread oven. In town, Picerija Napoli is 60 metres from G7 and open Monday to Saturday from 11:00 to 22:00, Sundays and holidays from 12:00 to 21:00. Up the valley, Kraljev hrib serves home cooking 160 metres from L-041. For Balkan food grilled over charcoal, Leskovački žar Kordun is on the Kamnik bypass, 1.0 km from G7."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Kamnik has 26 public water points, but only 6 are within 150 metres of a signed route. There is one public repair stand and two bike shops, Bikes and Fun and Pro kolo. Kamnik has 5 public chargers, handy on an e-bike before the climb up the valley."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "The old town is full of stops, and most sit right on G7. Rudolf Maister's birth house is 10 metres from the route and the Little Castle 50 metres. Zaprice Mansion, 160 metres from G7, is now a museum. Up the valley, the Ursuline monastery at Mekinje is 80 metres from L-041, and the Upper Castle is 260 metres from the Jakobova pot."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "5ea511b3": "A campsite at Kraljev hrib in the Kamniška Bistrica valley, 300 metres from the Velika planina cable car, with tent pitches, motorhome spaces and a restaurant.",
+    "7d1fe24a": "A family inn with rooms in Stahovica, at the entrance to the Kamniška Bistrica valley, cooking home dishes and game on an old fire.",
+    "a1d813c1": "A thermal spa in the Tuhinj valley with a hotel, apartments and an eco camp, built around Kneipp treatments.",
+    "1c263c92": "Glamping and large wooden houses by the Kamniška Bistrica river, with an inn, a campsite and animals to visit.",
+    "2c534837": "A family campsite close enough to Kamnik to walk or ride into town, open from May to September.",
+    "b7699d55": "A pizzeria on the north side of Kamnik with pizza from a bread oven, gluten-free pizza too, and free parking.",
+    "a12b94d7": "A pizzeria in Kamnik with pasta, risotto, lasagne and salads alongside the pizza.",
+    "0c615eb9": "The restaurant at Kraljev hrib, below Velika planina near the source of the Kamniška Bistrica, with home cooking and dishes baked under a bell lid.",
+    "7c1d5e60": "A Balkan grill on the Kamnik bypass, cooking over wood charcoal, with lamb on Fridays and suckling pig on Saturdays."
+  }
+}

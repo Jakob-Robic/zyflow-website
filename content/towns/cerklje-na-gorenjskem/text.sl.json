@@ -1,0 +1,38 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Cerkljah na Gorenjskem.",
+  "intro": "Cerklje na Gorenjskem ležijo na ravnini pod Krvavcem, med Kranjem in Kamnikom, v občini pa je tudi Letališče Ljubljana na Brniku. Po ravnini se pelješ lahko, cesta na Krvavec pa je pravi vzpon. Občino prečka G7, ki pelje iz Kranja čez Cerklje na Gorenjskem do Kamnika. LG4 od Križ do Velesovega se je le na kratko dotakne. Tudi vasi, kot so Vopovlje, Ambrož pod Krvavcem in Štefanja Gora, spadajo pod Cerklje.",
+  "routes": {
+    "title": "Kolesarske poti skozi Cerklje",
+    "body": "Skozi Cerklje peljeta dve označeni kolesarski poti. Glavna je G7, ki na poti iz Kranja do Kamnika pelje skozi občino 14 km od svojih 32 km. LG4 od Križ do Velesovega je lokalna pot, dolga 20 km, od tega 2 km v občini. Želiš cel dan na kolesu? Kamničanka je lahka opisana tura, dolga 72 km, s 254 m vzpona."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "Cerklje imajo 8 nastanitev, več od njih je zgoraj na Krvavcu in ne na ravnini. Hotel Krvavec, Hotel Rozka in Apartma Krvavec so ob smučiščih, več kot 4 km od G7 in na koncu dolgega vzpona. Pr Ambružarju, turistična kmetija v Ambrožu pod Krvavcem, je 2,3 km od poti. Ti je ljubše spati spodaj? Sobe in apartmaji Jana v Vopovljah so 2,2 km od G7 in 4 km od letališča."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "Cerklje imajo 8 krajev, kjer lahko ješ. Ob G7 je Pizzerija Pod Jenkovo lipo 40 metrov od poti in odprta vsak dan. Gostilna pod Krvavcem, družinska gostilna od leta 1958, je 820 metrov od G7 in kuha po sezoni. Kmečki turizem Pri Mežnarju je kmetija na Štefanji Gori, 1,2 km od poti, do nje pa pelješ v klanec. Odletiš z Brnika? Lolita Sweet & Salty je v javnem delu potniškega terminala."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Le ena od 12 javnih točk s pitno vodo je manj kot 150 metrov od označene poti, zato vzemi s seboj dovolj vode. V kraju je ena javna servisna točka. Najbližja kolesarska trgovina s servisom je Pro kolo v Kamniku, 9,5 km stran. Če voziš e-kolo, imajo Cerklje 4 javne polnilnice."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Tri znamenitosti stojijo blizu G7, vsaka je lahek postanek med Kranjem in Kamnikom. Grad Strmol je 340 metrov od poti. Grad Kamen nad Adergasom, nekdanji grad nad vasjo, je 170 metrov od poti. Šmajčevo znamenje je 160 metrov od G7."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "f822e292": "Gorski hotel tik ob smučiščih Krvavca, s samopostrežno restavracijo, barom na terasi in savnami.",
+    "7fc3d339": "Turistična kmetija v Ambrožu pod Krvavcem z dvoposteljnimi in štiriposteljnimi sobami ter domačo hrano, od enolončnic do štrukljev.",
+    "2773a509": "Hotel z 20 sobami v Ambrožu pod Krvavcem, s smučišči tik pred vrati, finsko savno in teraso z razgledom na Gorenjsko.",
+    "6ee5773c": "Sobe in apartmaji v Vopovljah, 4 km od Letališča Ljubljana, z brezplačnim parkiriščem in izposojo koles.",
+    "fd9f8791": "Apartma na Kriški planini, v smučarskem središču Krvavec, z neposrednim dostopom do smučišč.",
+    "612d1603": "Gostilna in picerija s pico iz krušne peči, jedmi z žara in dnevnimi kosili med tednom, odprta vsak dan v letu.",
+    "bddde5d9": "Kmetija na Štefanji Gori z domačo hrano in domačimi živalmi, ki jih lahko spoznaš.",
+    "007516f6": "Družinska gostilna od leta 1958, danes v rokah tretje generacije, s sezonskim menijem iz lokalnih sestavin.",
+    "9b8f28dc": "Kavarna s sladkimi in slanimi prigrizki v javnem delu potniškega terminala Letališča Ljubljana na Brniku."
+  }
+}

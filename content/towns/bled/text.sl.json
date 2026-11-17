@@ -1,0 +1,41 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon na Bledu.",
+  "intro": "Bled leži na začetku Julijskih Alp, ob jezeru z otokom na sredini in gradom na pečini nad njim. Tu se srečata dve državni kolesarski poti. Po G2 prideš do Bohinja in na prelaz nad Sorico, po D2 pa se pelješ med Ratečami in Ljubljano. Tudi vasi Ribno, Zasip in Bohinjska Bela spadajo pod Bled, vsaka le kratko vožnjo od jezera.",
+  "routes": {
+    "title": "Kolesarske poti skozi Bled",
+    "body": "Skozi Bled pelje šest označenih kolesarskih poti, zato lahko iz kraja slediš tablam, namesto da si pot rišeš po svoje. G2 te iz Radovljice čez Bled in Bohinjsko Bistrico pripelje do Sorice: 53 km z enim dolgim vzponom na koncu. D2 je najdaljša, 135 km med Ratečami in Ljubljano, sredi kraja pa pelje mimo jezera. Gorenjski krak Jakobove poti prečka Bled na svojih 150 km po Gorenjski, tri lokalne poti pa povezujejo vasi okoli jezera. Želiš cel dan z opisano turo? Blejčanka je 76 km dolg krog iz Kranja do jezera in nazaj, s 944 m vzpona."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "Na Bledu imaš 61 nastanitev, od hotelov ob jezeru do penzionov, apartmajev in glampinga po vaseh. Želiš iz vrat zapeljati naravnost na označeno pot? Grand Hotel Toplice in Hotel Lovec sta v središču, oba manj kot 50 metrov od D2. Ti je ljubši mir? Ribno in Zasip sta kratko vožnjo stran, z lokalnima potema LG6 in LG2 tik pred vrati."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "Postanek za hrano tu ni težava: na Bledu je 31 krajev, kjer lahko ješ, in več jih leži ravno ob poteh. Na obali jezera je Špica odprta vsak dan od 9.00 do polnoči, s pogledom na otok in grad. Za kremno rezino, po kateri je Bled znan, zavij v Slaščičarno Zima, odprto vsak dan od 8.00 do 21.00. Gostilna Pri planincu, družinska gostilna od leta 1929, vsak dan od poldneva kuha tradicionalne slovenske jedi. Greš po G2 proti Bohinju? Okrepčevalnica Galetovec v Bohinjski Beli ob delavnikih odpre ob 7.00."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Bidon lahko napolniš na 28 javnih točkah s pitno vodo, 21 jih je manj kot 150 metrov od označene poti. V kraju je eno javno servisno stojalo. Najbližja kolesarska trgovina s servisom je Obris Šport v Radovljici, 6,4 km stran. Voziš e-kolo? Na Bledu ni javne polnilnice za e-kolesa, zato baterijo napolni pred odhodom. Najbližja je pri GALA IN v Radovljici, 6,3 km stran."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Tri znamenitosti so vredne, da stopiš s kolesa, in vse so blizu označene poti. Blejski grad stoji na pečini 70 metrov od D2. Blejski otok je sredi jezera 420 metrov od G2, nanj prideš s čolnom. Soteska Vintgar, ozek kanjon severozahodno od kraja, je 1,1 km od lokalne poti LG2. Za krajše postanke: spomenik Adolfu Muhrju v kraju in Jama pod Babjim zobom, 1,2 km od G2."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "c43b9476": "Hotel ob jezeru v središču Bleda, ki ga upravlja Sava Hotels & Resorts. Pot D2 pelje tik mimo vhoda.",
+    "adfcbcec": "Deset sob v mirnem delu središča Bleda, več z balkonom ali teraso in ena dovolj velika za družino.",
+    "a46a1b4e": "Butični hotel v srcu Bleda, na mestu, kjer že več kot sto let stoji penzion. Nekatere sobe gledajo na jezero, v hiši sta tudi restavracija z žarom in pub.",
+    "7701fdf9": "Eko resort blizu jezera, kjer spiš med krošnjami, zasnovan za čas na prostem.",
+    "34fdbe3f": "Družinski resort na robu smrekovega gozda v vasi Ribno, z glamping šotori ob majhnem hotelu.",
+    "f5436f16": "Zasebni apartmaji in sobe v Zasipu, vasi tik ob Bledu. Mirno, z odprtim razgledom, primerno za družine in pare.",
+    "ed83bcee": "Družinska gostilna od leta 1929 s tradicionalnimi slovenskimi jedmi, odprta vsak dan od poldneva.",
+    "0db0015d": "Ena najstarejših restavracij na Bledu, na obali jezera s pogledom na otok in grad. Restavracija, picerija in bar pod eno streho, urejeni v veslaškem slogu.",
+    "a806a5b8": "Azijska kuhinja s tajsko hrano v ospredju, poleg nje pa suši in koktajli.",
+    "a8f656fd": "Steakhouse Penziona Berc, družinske hiše s šestdesetimi leti tradicije. Odprt le zvečer.",
+    "d1a459a5": "Slaščičarna z blejsko kremno rezino, gibanico in domačim sladoledom, vsak dan sveže pripravljenimi.",
+    "b67c9194": "Majhna, domača okrepčevalnica v Bohinjski Beli, na poti z Bleda proti Bohinju."
+  }
+}

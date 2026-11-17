@@ -1,0 +1,39 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon na Ptuju.",
+  "intro": "Ptuj, ki ga pogosto imenujejo najstarejše mesto v Sloveniji, leži ob Dravi pod svojim gradom. Skozi mesto peljejo tri označene kolesarske poti: Dravska kolesarska pot ob reki, prekmursko-štajerski krak Jakobove poti skozi središče in lokalna pot LAS-8.",
+  "routes": {
+    "title": "Kolesarske poti skozi Ptuj",
+    "body": "Skozi Ptuj peljejo tri označene kolesarske poti, dve od njih sta dolgi. Dravska kolesarska pot sledi reki 190 km, od tega 17 km na Ptuju. Prekmursko-štajerski krak Jakobove poti meri 263 km in pelje skozi središče. Seznam dopolni lokalna pot LAS-8, 16 km."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "Na Ptuju je 14 nastanitev, tiste v središču pa so le nekaj korakov od Jakobove poti. Sobe Proštija ob župnijski cerkvi na Slovenskem trgu so 16 metrov od poti. MuziKafe, B&B v hiši iz leta 1618, je 79 metrov stran. Si po vožnji želiš bazen? Grand hotel Primus v Termah Ptuj je 66 metrov od iste poti, s termalnimi bazeni in savnami."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "Na Ptuju je 23 krajev, kjer lahko ješ, in pico ob poteh najdeš zlahka. Pivnica Zlatorog je tik ob Jakobovi poti in je odprta vsak dan. Pizzeria Slonček pod gradom je 11 metrov od Dravske kolesarske poti. Za sladoled in sladice, ki jih naredijo sami, je Pomaranča ob Dravi 45 metrov od Jakobove poti. Gostilna pri ovinku na robu mesta kuha slovensko hrano in je odprta vsak dan."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Skoraj vsa pitna voda je ob poti: 9 od 10 javnih točk s pitno vodo je manj kot 150 metrov od označene poti. Za popravila sta tu dve javni servisni stojali in tri kolesarske trgovine s servisom. Za e-kolesa so na voljo 4 javne polnilnice."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Večino Ptuja vidiš kar z Dravske kolesarske poti. Ptujski grad stoji na hribu nad reko, 113 metrov od poti. Dominikanski samostan je 15 metrov od poti, Dravski stolp pa 14 metrov. Arheološko najdišče Panorama je 79 metrov stran, do Gradu Turnišče pa je slabe 2 km odcepa."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "f74e17f7": "B&B in kavarna v prenovljeni hiši iz leta 1618, s sobami od majhnih dvoposteljnih do suite ter rednimi glasbenimi in kulturnimi dogodki.",
+    "486d871e": "Hotel z igralnico na Vinarskem trgu v središču Ptuja.",
+    "ffb19e2f": "Štiri sobe v stari proštiji ob župnijski cerkvi in zvoniku v središču Ptuja.",
+    "b2f37c63": "Sodoben hotel v Termah Ptuj, ki ga upravlja Sava Hotels & Resorts, s termalnimi bazeni, savnami in igriščem za golf tik ob njem.",
+    "f08f95b2": "Družinska kavarna, restavracija in butični hotel ob Dravi, odprt od leta 2004. Sladoled in sladice naredijo sami.",
+    "2aecdaa3": "Restavracija v Spuhlji z dnevnimi kosili in jedmi po naročilu. Odprta od ponedeljka do četrtka od 10.00 do 21.00, v petek od 10.00 do 22.00 in v soboto od 11.00 do 22.00. Ob nedeljah in praznikih je odprta od 12.00 do 21.00.",
+    "a5274d20": "Pivnica in okrepčevalnica na Slomškovi ulici, najbolj znana po pici. Odprta vsak dan.",
+    "705dea58": "Picerija na najstarejši ulici v mestu, tik pod Ptujskim gradom, ki pico peče že desetletja. Dostava po Ptuju je brezplačna.",
+    "e6b8ffd7": "Picerija na Vošnjakovi ulici z jedilnico in poletno teraso, kjer strežejo tudi lazanjo in tople sendviče.",
+    "9b1d06c1": "Gostilna na robu Ptuja s svežo slovensko hrano, mesom in vinom lokalnih pridelovalcev. Odprta vsak dan."
+  }
+}

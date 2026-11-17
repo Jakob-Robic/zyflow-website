@@ -1,0 +1,39 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Kranjski Gori.",
+  "intro": "Kranjska Gora leži na zgornjem koncu Zgornjesavske doline, blizu meje z Avstrijo in Italijo. Na jugu so Julijske Alpe, na severu Karavanke. Dno doline je položno, vzponi pa se dvigajo na obeh straneh. Tu se začne D2, ki čez Jesenice in Kranj pelje do Ljubljane. Območje prečkata poti za gorska kolesa STKP (Slovenska turnokolesarska pot) in Trans Karavanke. Tudi Rateče, Podkoren, Gozd Martuljek in Mojstrana spadajo pod Kranjsko Goro.",
+  "routes": {
+    "title": "Kolesarske poti skozi Kranjsko Goro",
+    "body": "Skozi Kranjsko Goro pelje osem označenih kolesarskih poti, tako za cestna kot za gorska kolesa. D2 je dolga 135 km, od tega jih 27 pelje po dolini od Rateč proti Jesenicam. Gorenjski krak Jakobove poti sledi dolini 26 km od svojih 150 km. Za gorsko kolo je tu 35 km STKP, 42 km od 165 km poti Trans Karavanke in 10 km od 92 km poti SI-C (SICAI Ciclo). Tri lokalne poti, 1 (Rateče), 2 (Jesenice) in LG-1, povezujejo vasi."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Kranjski Gori imaš 48 nastanitev, od velikih hotelov ob smučišču do kampov in sob po vaseh. Berghi je 20 metrov od STKP, ob kolesarski stezi proti Gozdu Martuljku, in ima zaklenjeno sobo za kolesa. Ramada Resort by Wyndham je 70 metrov od D2, ob vznožju smučišča in 100 metrov od središča. Želiš spati na prostem? Kamp Špik v Gozdu Martuljku ima 200 parcel pod Špikovo skupino."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Kranjski Gori je 29 krajev, kjer lahko ješ, in več jih je le nekaj metrov od poti. Gostilna pri Martinu v središču, 10 metrov od STKP, kuha slovenske jedi in je odprta vsak dan razen torka od 10.00 do 22.00. Gostilna Mojmir pod vrhom, kjer se stikajo Slovenija, Italija in Avstrija, je 20 metrov od D2. V Gozdu Martuljku Gostilna Jožica kuha od leta 1932, s pogledom na Špikovo skupino. Si želiš nagrade po vzponu? Mojčin dom na Vitrancu je lesena koča visoko nad krajem."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Od 33 javnih točk s pitno vodo jih je 16 manj kot 150 metrov od označene poti. Servisnih točk je šest: štiri javna servisna stojala po dolini in dve kolesarski trgovini v Kranjski Gori, Sport point in Športna točka. Z e-kolesom lahko baterijo napolniš na 10 javnih polnilnicah v dolini."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Več znamenitosti stoji tik ob STKP. Liznjekova domačija, etnografski muzej v Kranjski Gori, je 10 metrov od poti. V Mojstrani je Slovenski planinski muzej 40 metrov stran. Pocarjeva domačija, stara kmečka hiša, je 430 metrov od poti. Slap Peričnik je 2,9 km od STKP. Po stezi lahko stopiš za spodnji slap."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "fbb77319": "Hotel s štirimi zvezdicami in 118 sobami ob vznožju smučišča, 100 metrov od središča, z velnesom in vodnim parkom pod stekleno streho.",
+    "9d2feee3": "Hotel v središču Kranjske Gore s sobami, opremljenimi z jesenovim in hrastovim lesom, z vključenim zajtrkom.",
+    "270c0779": "Kamp z 200 parcelami v Gozdu Martuljku pod Špikovo skupino, večinoma v senci. Odprt je le del leta, zato preveri datume.",
+    "e5cf7ce7": "Sobe in apartmaji 400 metrov od središča, ob kolesarski stezi proti Martuljku, z zaklenjeno sobo za kolesa in zajtrkom.",
+    "62d7bc2a": "Slaščičarna in kavarna v Kranjski Gori, ki oddaja tudi sobe.",
+    "8ebab4eb": "Družinska gostilna v Gozdu Martuljku od leta 1932, ob glavni cesti s pogledom na Špikovo skupino, kjer kuhajo na odprtem ognju in pečejo pice.",
+    "20c68c72": "Družinska gostilna pod Tromejo pri Ratečah, s sobami od leta 2017.",
+    "816a0454": "Slovenska gostilna v središču Kranjske Gore, 400 metrov od smučišča, s sobami in prostorom za skupine ob kaminu.",
+    "f986272c": "Lesena planinska koča na vrhu Vitranca nad Kranjsko Goro, z domačo hrano in sončno teraso. Gor greš peš ali s sedežnico.",
+    "68b4fc47": "Majhen hostel v Mojstrani z zasebnimi sobami in posteljami v skupnih sobah, skupno kuhinjo, shrambo za kolesa in gorskimi kolesi za najem."
+  }
+}

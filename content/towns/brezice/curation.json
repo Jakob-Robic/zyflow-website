@@ -1,0 +1,9 @@
+{
+  "exclude": [
+    "9f89b2f3"
+  ],
+  "exclude_reasons": {
+    "9f89b2f3": "2026-11-17 website check: Facebook link dead"
+  },
+  "_note": "Hand decisions for this town's picks. exclude: place ids (prefix) never picked; exclude_reasons: why. Dropped 2026-11-17 on Jakob's OK after the writers' website check."
+}

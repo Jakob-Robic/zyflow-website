@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/cerklje-na-gorenjskem/hero.jpg",
+      "author": "Doremo",
+      "licence": "CC BY 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%C4%8Ce%C5%A1njevek_Cerklje_na_Gorenjskem_Slovenia.jpg",
+      "caption": "Češnjevek with its church and snow-capped Kamnik Alps, Municipality of Cerklje na Gorenjskem."
+    }
+  ],
+  "hero": "./assets/images/towns/cerklje-na-gorenjskem/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 2."
+}

@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/brda/hero.jpg",
+      "author": "Lan G.",
+      "licence": "CC BY-SA 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%C5%A0martno_v_Brdih_z_JZ.jpg",
+      "caption": "Šmartno on its hilltop among the vineyards of Goriška Brda, seen from Veliko."
+    }
+  ],
+  "hero": "./assets/images/towns/brda/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}

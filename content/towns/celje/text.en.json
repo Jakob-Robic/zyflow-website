@@ -1,0 +1,39 @@
+{
+  "status": "published",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Celje's data and each place's own website. Needs a read by someone who knows Celje before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Celje.",
+  "intro": "Celje lies on the Savinja river, with the ruins of its castle on the hills south-east of town. Five signed routes run through it, among them D1, EuroVelo 9 (Baltic-Adriatic) and the Kolesarska Jakobova pot. Šmartinsko jezero, a lake north-east of the centre, is on the Jakobova pot.",
+  "routes": {
+    "title": "Cycle routes through Celje",
+    "body": "Five signed routes pass through Celje, and three of them are long-distance routes. D1 crosses the town on a 183 km line, and EuroVelo 9 (Baltic-Adriatic) passes on a 128 km section. The Prekmurje and Štajerska branch of the Jakobova pot runs 263 km, 10 km of it in Celje. G13 has 4 km here. The Drameljska kolesarska pot, a local route of 30 km, has 2 km in Celje."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 12 places to stay in Celje, from hotels in town to two campervan stops. Hotel Evropa, in the old town, is 78 metres from EuroVelo 9. Hotel Faraon has rooms facing the Savinja, 408 metres from G13. Travelling by campervan? The stop on Ulica XIV. divizije is 13 metres from D1 and next to a bike-share station, and there is a second stop up at Celjska koča."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Celje has 17 places to eat. In the old town, LALU Bistro on Trg celjskih knezov is 164 metres from G13 and cooks simple dishes with local wine and beer. Stari pisker, 256 metres from EuroVelo 9, is the place for steaks and burgers. Riding the Jakobova pot past Šmartinsko jezero? Na Golfu, 90 metres from the route, serves breakfast and brunch every day until noon."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Celje has 9 public water points, but only 2 are within 150 metres of a signed route, so fill your bottle when you pass one. For repairs you have one public repair stand and five bike shops. There is no public charger in Celje; the nearest is at Dom na Golavi in Prebold, 12.7 km away, so charge your e-bike before you set off."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Celje's sights are close to the routes, though the castle means a climb. Celje Castle, once the seat of the Counts of Celje, stands on the hills 453 metres from D1. In the old town, the Ducal Court is 133 metres from G13 and St. Mary's Column 127 metres. The Teharje memorial park is 1.6 km from EuroVelo 9."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "43d5a74d": "A hotel with 32 rooms in a quiet part of Celje on the Savinja, some with a balcony over the river. It has a café, a restaurant and a casino.",
+    "ffb9f658": "A four-star hotel in Celje's historic old town, with a restaurant and a café and pastry shop. The café is open Monday to Saturday from 8:00 to 22:00, and on Sundays and holidays from 8:00 to 21:00.",
+    "a6403659": "A campervan stop at Celjska koča above Celje, next to an adventure park and a summer bobsled track.",
+    "90495994": "A campervan stop on Ulica XIV. divizije, 100 metres from the railway station, with a KolesCE bike-share station next to it. A path runs from here along the Savinja to Celjska koča.",
+    "a397a30d": "An inn and steakhouse with aged steaks, burgers, pork ribs and fresh daily lunches.",
+    "694f342b": "A café and bistro near Šmartinsko jezero, serving breakfast and brunch every day until 12:00.",
+    "cd9015ff": "An inn on Mariborska cesta that has stood in the same place for more than a hundred years. Open every day from 11:00 to 22:00.",
+    "1eea5738": "A bistro on Trg celjskih knezov in the centre from chef Marko Pavčnik, with simple comfort food and local wine and beer.",
+    "36e9eb85": "A Japanese bistro on Prešernova ulica in the centre of Celje, with dishes to eat in or take away.",
+    "7fa22539": "An inn by the old town walls with its own wine shop and a terrace for summer evenings, 260 metres from EuroVelo 9."
+  }
+}

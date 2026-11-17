@@ -1,0 +1,37 @@
+{
+  "status": "published",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Izola's data and the places' own websites. Needs a read by someone who knows Izola before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Izola.",
+  "intro": "Izola is the small town between Koper and Piran, with its old town on what was once an island, and hills behind it. Parenzana and EuroVelo 8 run along the coast here, with the national routes D1, from Koper to Sečovlje, and D 6. The K loops of the Enjoy the Hinterland guide reach Izola too, and K8 (Through the hinterland of Izola) starts in town.",
+  "routes": {
+    "title": "Cycle routes through Izola",
+    "body": "Ten signed routes pass through Izola: two international routes, two national ones and six local loops. Parenzana (119 km in total) and EuroVelo 8 follow the coast between Koper and Piran. On a road bike, start from town on K8 (Through the hinterland of Izola), a 50 km loop. Or take K13 (The challenge of Istria), 80 km from Lucija. For a trekking bike, K12 (From Portorož for a coffee to Izola) is a 27 km loop from Lucija. K6 and K14 are trekking loops from Seča, and K10 is for mountain bikes."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 14 places to stay in Izola, from a B&B in the centre to apartments. B&B Centrum Izola is 159 metres from K8, the loop that starts in town. Laguna Izola rents apartments and private rooms in Izola and along the coast, from 233 metres off K8."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Izola has 35 places to eat, and several sit within a few metres of K8. Casa della Pizza is 13 metres from it, and Gostilnica Gušt, open every day from 11:00 to 22:00, is 21 metres away. Riding K13? Primavera, a pizzeria and restaurant, is 28 metres from the route. For a view over the bay, Restavracija Kamin at Belvedere is 61 metres from K8."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "You can refill a bottle at 10 public water points, and 8 of them are within 150 metres of a signed route. Izola has no public repair stand, but two bike shops: Koloset and Ritoša. Izola also has 3 public chargers for e-bike riders."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Izola has 23 sights. The one to stop for is Haliaetum, the remains of a Roman villa and harbour at Simonov zaliv, 323 metres from K8. Haliaetum was the Roman settlement that came before Izola, so this is where the town's story begins."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town.",
+    "da2e256e": "A local agency renting apartments and private rooms in Izola, Strunjan and elsewhere on the coast.",
+    "1f47c0ae": "A bed and breakfast in an old fisherman's house in the centre of Izola, with stone walls, a handful of rooms and a buffet breakfast.",
+    "b594144c": "A pizzeria and restaurant a short walk from the sea, with daily lunches, grill dishes and seafood.",
+    "5fb0ab1d": "The restaurant of Hotel Marina, by the sea in Izola, cooking Mediterranean food.",
+    "1425ce39": "The restaurant of the Belvedere resort above Izola, with a view over the sea.",
+    "7619a62b": "A pizzeria in Izola whose dough rises for 48 hours on a sourdough starter. Closed on Mondays.",
+    "c032bb92": "An inn with pizza from a wood-fired oven, pasta and Mediterranean dishes. Open every day from 11:00 to 22:00.",
+    "4e8871f3": "A traditional Istrian inn in the village of Korte, in the hills behind Izola, cooking with fresh local ingredients and serving local wine."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Novi Gorici.",
+  "intro": "Nova Gorica leži ob meji z Italijo, kjer Soča zapusti hribe in se proti vzhodu odpre Vipavska dolina. Skozi mesto peljejo štiri označene kolesarske poti, med njimi mednarodna cestna pot Bimobis, državna kolesarska pot D7 in G1 (Soška kolesarska pot) ob Soči. Vipava (Učna pot ob reki Vipavi) sledi istoimenski reki skozi dolino. Solkan, Kromberk, Ozeljan, Branik in Banjška planota spadajo pod Novo Gorico.",
+  "routes": {
+    "title": "Kolesarske poti skozi Novo Gorico",
+    "body": "Skozi Novo Gorico peljejo štiri označene kolesarske poti, dve od njih ob Soči in Vipavi. Bimobis je mednarodna cestna pot, dolga 144 km, od tega 12 km v Novi Gorici. D7, državna kolesarska pot od Robiča čez Novo Gorico do Jelšan, ima tu 7 km. G1 (Soška kolesarska pot) meri 15 km, od tega 7 km v Novi Gorici. Vipava (Učna pot ob reki Vipavi) je 48 km dolga lokalna pot, od tega 13 km tu."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Novi Gorici imaš 20 nastanitev, od hotela v mestu do kampov v hribih. Hotel Sabotin, nekdanji baročni dvorec, je 297 metrov od D7. V Solkanu ima Restavracija Primula sobe 210 metrov od Bimobisa. Želiš kolesariti po hribih nad Vipavsko dolino? Camp Park Lijak v Ozeljanu ima pumptrack in izposojo koles, 5,2 km od poti Vipava. DS Camping na Banjški planoti, 5,0 km od Bimobisa, ima glamping hiške, konje in e-kolesa."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Novi Gorici je 37 krajev, kjer lahko ješ, in večina spodaj naštetih je blizu Bimobisa. Gostilna pri hrastu, 829 metrov od Bimobisa, je odprta vsak dan, s furmanskimi jedmi in dnevnimi kosili. Gostilnica pr' Mikiju v Solkanu sama dela njoke, testenine in sladice. Bar Fabrika, 66 metrov od Bimobisa, peče burgerje in suho zorjeno govedino na žaru. Pri Parku Lijak Gostilna Termika kuha goriške njoke od četrtka do nedelje od 12.00 do 22.00."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "V Novi Gorici je 45 javnih točk s pitno vodo, 10 jih je manj kot 150 metrov od označene poti. Na voljo so štiri javna servisna stojala in samopostrežna servisna točka Samopomoč. Bisport prodaja in servisira kolesa, Velocenter Solkan pa je druga kolesarska trgovina. Z e-kolesom lahko baterijo napolniš na 13 javnih polnilnicah."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "V Novi Gorici je 115 znamenitosti, od gradov do jame. Vila Rafut (Villa Lasciac) stoji 408 metrov od Bimobisa, Sv. Valentin pa 664 metrov od njega. Grad Kromberk je 2,9 km od iste poti. Grad Rihemberk v Braniku je iz 13. stoletja in je 2,5 km od poti Vipava. Velika ledena jama v Paradani je za daljši izlet, 12,7 km od iste poti."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json. Not written: 2313a461 Čajnica in kavarna Dnevna (no English line).",
+    "a0754b9a": "Hotel s tremi zvezdicami in restavracija v nekdanjem baročnem dvorcu, del skupine HIT.",
+    "6d4be8f4": "Družinski kamp v Ozeljanu pod robom Trnovske planote, med vinogradi, z mobilnimi hišicami, pumptrackom, izposojo koles in restavracijo Termika.",
+    "9b15dbef": "Kamp na Banjški planoti s prostorom za šotore in avtodome, glamping hiškami, skupno kuhinjo in kuriščem, ježo konj in e-kolesi.",
+    "47400cd0": "Restavracija s sobami s tremi zvezdicami v Solkanu. Odprta od ponedeljka do sobote od 12.00 do 22.30, ob nedeljah zaprta.",
+    "c2e1bb3e": "Gostilna s petnajstimi leti tradicije, s furmanskimi in sezonskimi jedmi ter dnevnimi kosili.",
+    "f51a31c6": "Restavracija kampa Park Lijak, znana po goriških njokih, domačem siru in marinirani soški postrvi. Odprta od četrtka do nedelje od 12.00 do 22.00, druge dni po naročilu.",
+    "7fc2538a": "Gostilna na stoletnem posestvu v Ajševici, na robu Vipavske doline, z domačo primorsko hrano iz lokalnih pridelkov. Odprta od četrtka do ponedeljka.",
+    "dacc7c01": "Gostilna v Solkanu blizu italijanske meje, z domačimi njoki, testeninami in sladicami.",
+    "4f2ee170": "Bar in kuhinja za burgerje, suho zorjeno govedino, gin tonik in vino. Kuhinja je odprta vsak dan.",
+    "2d7c22b4": "Najstarejša gostilna v Novi Gorici, poštna postaja s sobami od leta 1918 ob železniški postaji Bohinjske proge. Kuha s hrano lokalnih pridelovalcev in toči vina iz Brd, Vipave in s Krasa."
+  }
+}

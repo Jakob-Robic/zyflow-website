@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/ptuj/hero.jpg",
+      "author": "focusonmore.com",
+      "licence": "CC BY 2.0",
+      "licence_url": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ptuj_Castle_and_Drava_river.jpg",
+      "caption": "Ptuj Castle and the old town above the Drava river."
+    }
+  ],
+  "hero": "./assets/images/towns/ptuj/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}

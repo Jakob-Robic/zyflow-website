@@ -1,0 +1,37 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Izoli.",
+  "intro": "Izola je mestece med Koprom in Piranom, s starim mestnim jedrom na nekdanjem otoku in griči v zaledju. Ob obali tu peljeta Parenzana in EuroVelo 8 (Sredozemska pot), pa tudi državni kolesarski poti D1 od Kopra do Sečovelj in D 6. Do Izole sežejo tudi krožne poti K iz vodnika Uživajmo podeželje, K8 (Čez izolsko zaledje) pa se začne v mestu.",
+  "routes": {
+    "title": "Kolesarske poti skozi Izolo",
+    "body": "Skozi Izolo pelje deset označenih kolesarskih poti: dve mednarodni, dve državni in šest lokalnih krožnih poti. Parenzana (skupaj 119 km) in EuroVelo 8 sledita obali med Koprom in Piranom. S cestnim kolesom začni v mestu na K8 (Čez izolsko zaledje), krožni poti, dolgi 50 km. Lahko pa izbereš K13 (Čez Istro za zahtevne), 80 km iz Lucije. Za treking kolo je K12 (Iz Portoroža na kavo v Izolo) 27 km dolg krog iz Lucije. K6 in K14 sta treking kroga iz Seče, K10 pa je za gorska kolesa."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Izoli imaš 14 nastanitev, od prenočišča z zajtrkom v središču do apartmajev. B&B Centrum Izola je 159 metrov od K8, krožne poti, ki se začne v mestu. Apartments Laguna Izola oddaja apartmaje in zasebne sobe v Izoli in ob obali, najbližje 233 metrov od K8."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "Izola ima 35 krajev, kjer lahko ješ, več jih je le nekaj metrov od K8. Casa della Pizza je 13 metrov od nje, Gostilnica Gušt, odprta vsak dan od 11.00 do 22.00, pa 21 metrov. Greš po K13? Primavera, picerija in restavracija, je 28 metrov od poti. Za razgled na zaliv je Restavracija Kamin pri Belvederu 61 metrov od K8."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Bidon lahko napolniš na 10 javnih točkah s pitno vodo, 8 jih je manj kot 150 metrov od označene poti. Izola nima javnega servisnega stojala, ima pa dve kolesarski trgovini: Koloset in Ritoša. Za e-kolesa so v Izoli tudi 3 javne polnilnice."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Izola ima 23 znamenitosti. Ustavi se pri Haliaetumu, ostankih rimske vile in pristanišča v Simonovem zalivu, 323 metrov od K8. Haliaetum je bil rimska naselbina pred Izolo, zato se tu začne zgodba mesta."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "da2e256e": "Lokalna agencija, ki oddaja apartmaje in zasebne sobe v Izoli, Strunjanu in drugod ob obali.",
+    "1f47c0ae": "Prenočišče z zajtrkom v stari ribiški hiši v središču Izole, s kamnitimi zidovi, nekaj sobami in samopostrežnim zajtrkom.",
+    "b594144c": "Picerija in restavracija nekaj korakov od morja, z dnevnimi kosili, jedmi z žara in morsko hrano.",
+    "5fb0ab1d": "Restavracija Hotela Marina ob morju v Izoli, s sredozemsko kuhinjo.",
+    "1425ce39": "Restavracija resorta Belvedere nad Izolo, z razgledom na morje.",
+    "7619a62b": "Picerija v Izoli, kjer testo 48 ur vzhaja na drožeh. Ob ponedeljkih zaprta.",
+    "c032bb92": "Gostilnica s pico iz peči na drva, testeninami in sredozemskimi jedmi. Odprta vsak dan od 11.00 do 22.00.",
+    "4e8871f3": "Tradicionalna istrska gostilna v vasi Korte v gričih za Izolo, ki kuha s svežimi lokalnimi sestavinami in streže domače vino."
+  }
+}

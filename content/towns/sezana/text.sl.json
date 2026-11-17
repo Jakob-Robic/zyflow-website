@@ -1,0 +1,41 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Sežani.",
+  "intro": "Sežana je osrednje mesto kraške planote, blizu italijanske meje in Trsta. Tu kolesariš po mirnih cestah med kamnitimi vasmi, vinogradi terana in gozdovi. Jakobova pot prečka Sežano na poti čez Slovenijo, štiri kratke poti GEOMOB pa vodijo iz mesta do Komna, Tomačevice, Kobjeglave in Volčjega Grada. Tudi vasi, kot so Dutovlje, Tomaj, Pliskovica, Štorje in Lokev, spadajo pod Sežano.",
+  "routes": {
+    "title": "Kolesarske poti skozi Sežano",
+    "body": "Skozi Sežano pelje pet označenih kolesarskih poti. Dolga pot je Kolesarska Jakobova pot Slovenija Camino: skupaj 311 km, od tega 29 km v Sežani, skozi Dutovlje in mimo Tomaja. Štiri poti GEOMOB so kratke lokalne poti iz Sežane na Kras: do Komna (20 km), Tomačevice (18 km), Kobjeglave (17 km) in Volčjega Grada (20 km). Vsaka je kratka, zato lahko eno prevoziš pred kosilom, drugo pa po njem."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Sežani imaš 14 nastanitev, od hotelov v mestu do turističnih kmetij po vaseh. Turistična kmetija Škerlj v Tomaju je 207 metrov od Jakobove poti. V Pliskovici ima Mladinski Hotel Pliskovica 35 postelj v obnovljeni kraški domačiji, 1,2 km od poti GEOMOB do Komna. V mestu sta Hotel Grahor in sobe Nataly približno 1 km od iste poti. Če imaš šotor ali avtodom, izberi Brajdo v Štorjah, majhen kamp 2,9 km od Jakobove poti."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Sežani je 26 krajev, kjer lahko ješ. Ob Jakobovi poti je Gostilna Ukmar v Dutovljah, 61 metrov od poti, odprta od srede do ponedeljka od 8.00 do 23.00. V mestu Okrepčevalnica Kantina streže pico, jedi z žara in kosila med tednom, ob ponedeljkih pa je zaprta. Gostilna Spark na Partizanski cesti ima ob delavnikih meni za kosilo."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Javnih točk s pitno vodo je 27, a le 7 jih je manj kot 150 metrov od označene poti, zato napolni bidon pri vsaki, mimo katere pelješ. Na voljo je pet javnih servisnih stojal in tri kolesarske trgovine s servisom: AP Bike, Core Riding in Mathitech Bike Center Sežana. Voziš e-kolo? Sežana ima 8 javnih polnilnic."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "V Sežani je 58 znamenitosti, glavna pa je kraško podzemlje. Jama Vilenica pri Lokvi, ena najstarejših turističnih jam v Evropi, je 5 km od poti GEOMOB do Komna. Živi muzej Krasa, naravoslovna pot, ki predstavi kraško pokrajino, je 1,3 km od iste poti. Še dve jami, Jama Malanca in Golokratna jama, sta 2,9 km in 3,4 km od iste poti."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "ea96b86d": "Hostel v obnovljeni kraški domačiji v Pliskovici, s 35 posteljami v šestih sobah, skupno kuhinjo in jedilnico.",
+    "a143223a": "Garni hotel s štirimi zvezdicami v Sežani s 16 sobami in suito ter velneškim delom.",
+    "bec73f06": "Hotel z igralnico, restavracijo Carat s kraškimi in sredozemskimi jedmi ter velnes centrom.",
+    "c0cb0db9": "Družinske sobe, studii in apartmaji v Sežani z brezstično prijavo. Samo prenočišče, brez zajtrka.",
+    "4da893bd": "Družinska turistična kmetija v Tomaju s sobami, domačo hrano iz lastnih pridelkov in lastnim teranom.",
+    "ba9e3209": "Kmetija v vasi Štorje, 5 km od Sežane, z majhnim kampom z 20 parcelami.",
+    "d891f0df": "Gostilna na Partizanski cesti v Sežani, z menijem za kosilo ob delavnikih.",
+    "aa1501b9": "Vaška gostilna v Dutovljah z domačo hrano, divjačino, jedmi z žara in morsko hrano, ob koncih tedna pa s pujskom in jagnjetino. Odprta od srede do ponedeljka od 8.00 do 23.00.",
+    "d54f92b9": "Picerija v sežanski poslovni coni z jedmi z žara, testeninami, solatami in kosili med tednom. Ob ponedeljkih je zaprta.",
+    "dce7d881": "Restavracija z regionalno hrano v občini Sežana, 830 metrov od poti GEOMOB med Sežano in Komnom.",
+    "99198a5e": "Restavracija Hotela Grahor v Sežani s 110 sedeži in poletnim vrtom.",
+    "270c1130": "Turistična kmetija in vinska klet v Pliskovici na Krasu, z degustacijami lastnega terana, domačo hrano in sobami."
+  }
+}

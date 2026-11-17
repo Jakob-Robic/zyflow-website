@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/kobarid/hero.jpg",
+      "author": "Krzysztof Golik",
+      "licence": "CC BY-SA 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:View_of_Kobarid_01.jpg",
+      "caption": "Kobarid in the Soča valley below Mount Krn, with morning mist."
+    }
+  ],
+  "hero": "./assets/images/towns/kobarid/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}

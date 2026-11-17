@@ -96,6 +96,12 @@ const LAYOUT = {
 function layoutFor(sitePath) {
   const base = path.posix.basename(sitePath);
   if (LAYOUT[base]) return LAYOUT[base];
+  if (sitePath.includes("/towns/")) {
+    // Town pages: wide photos between sections, and sight photos in cards.
+    return base.startsWith("photo-")
+      ? { maxCss: 1280, sizes: "(max-width: 720px) 100vw, (max-width: 1340px) 92vw, 1280px" }
+      : { maxCss: 480, sizes: "(max-width: 720px) 84vw, (max-width: 1240px) 44vw, 400px" };
+  }
   if (sitePath.includes("/gallery/")) {
     return { maxCss: 800, sizes: "(max-width: 720px) 100vw, 720px" };
   }

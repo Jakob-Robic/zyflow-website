@@ -1,0 +1,38 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Kamniku.",
+  "intro": "Kamnik je staro mesto ob vznožju Kamniško-Savinjskih Alp, kjer Kamniška Bistrica zapusti gore in priteče na ravnino severno od Ljubljane. Zapelji proti severu in dolina se vzpne proti nihalki na Veliko planino, proti jugu pa se pokrajina odpre. Tu se srečajo prekmursko-štajerski krak Jakobove poti, G7 in G13. L-041 pelje od Mekinj do Kamniške Bistrice in sledi dolini v gore. Tudi Stahovica, Mekinje in Tuhinjska dolina spadajo pod Kamnik.",
+  "routes": {
+    "title": "Kolesarske poti skozi Kamnik",
+    "body": "Skozi Kamnik peljejo štiri označene kolesarske poti. Prekmursko-štajerski krak Jakobove poti ima tu 32 km od svojih 263 km čez Slovenijo. L-041 od Mekinj do Kamniške Bistrice je 12 km dolga regionalna kolesarska pot po dolini navzgor, vsa v Kamniku. G7 iz Kranja pelje 4 km skozi mesto. G13, ki pelje iz Ljubljane čez Kamnik in Vransko do Celja, ima tu 3 km. Za daljši dan izberi Kamničanko, lahko opisano turo, dolgo 72 km, s 254 m vzpona."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "Kamnik ima 9 nastanitev, več jih je v dolini severno od mesta. Pri planinskem orlu v Stahovici je družinska gostilna s sobami, 40 metrov od L-041. Višje v dolini je kamp Kraljev hrib, 170 metrov od poti in 300 metrov od nihalke na Veliko planino. Kamp Resnik je 90 metrov od Jakobove poti in odprt od 1. maja do 30. septembra. Za dan počitka izberi Terme Snovik, termalno zdravilišče v Tuhinjski dolini, 920 metrov od iste poti."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "Kamnik ima 13 krajev, kjer lahko ješ. Picerija Murka na severni strani mesta, z razgledom na gore, je 20 metrov od L-041 in peče v krušni peči. V mestu je Picerija Napoli 60 metrov od G7, odprta od ponedeljka do sobote od 11.00 do 22.00, ob nedeljah in praznikih od 12.00 do 21.00. Višje v dolini Kraljev hrib streže domačo hrano 160 metrov od L-041. Za balkanske jedi z žara na oglju zavij v Leskovački Žar Kordun na kamniški obvoznici, 1,0 km od G7."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Kamnik ima 26 javnih točk s pitno vodo, le 6 pa jih je manj kot 150 metrov od označene poti. Na voljo imaš eno javno servisno stojalo in dve kolesarski trgovini, Bikes and Fun in Pro kolo. Kamnik ima 5 javnih polnilnic, ki ti z e-kolesom pridejo prav pred vzponom po dolini."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Staro mestno jedro je polno postankov, večina jih je kar ob G7. Rojstna hiša Rudolfa Maistra je 10 metrov od poti, Mali grad pa 50 metrov. Grad Zaprice, 160 metrov od G7, je danes muzej. Višje v dolini je uršulinski samostan v Mekinjah 80 metrov od L-041, Stari grad pa 260 metrov od Jakobove poti."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "5ea511b3": "Kamp na Kraljevem hribu v dolini Kamniške Bistrice, 300 metrov od nihalke na Veliko planino, s prostori za šotore in avtodome ter restavracijo.",
+    "7d1fe24a": "Družinska gostilna s sobami v Stahovici, na vstopu v dolino Kamniške Bistrice, ki domače jedi in divjačino kuha na starem ognjišču.",
+    "a1d813c1": "Termalno zdravilišče v Tuhinjski dolini s hotelom, apartmaji in eko kampom, zasnovano okoli Kneippovih terapij.",
+    "1c263c92": "Glamping in velike lesene hiše ob reki Kamniški Bistrici, z gostilno, kampom in živalmi, ki jih lahko obiščeš.",
+    "2c534837": "Družinski kamp tako blizu Kamnika, da greš v mesto peš ali s kolesom, odprt od maja do septembra.",
+    "b7699d55": "Picerija na severni strani Kamnika s pico iz krušne peči, tudi brez glutena, in brezplačnim parkiriščem.",
+    "a12b94d7": "Picerija v Kamniku, kjer poleg pice dobiš tudi testenine, rižote, lazanjo in solate.",
+    "0c615eb9": "Restavracija na Kraljevem hribu pod Veliko planino, blizu izvira Kamniške Bistrice, z domačo hrano in jedmi izpod peke.",
+    "7c1d5e60": "Balkanski žar na kamniški obvoznici. Pečejo na lesnem oglju, ob petkih jagnjetino, ob sobotah pa pujska."
+  }
+}

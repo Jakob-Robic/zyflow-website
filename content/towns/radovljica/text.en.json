@@ -1,0 +1,41 @@
+{
+  "status": "published",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Radovljica's data and the places' own websites. Needs a local read by someone who knows Radovljica before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Radovljica.",
+  "intro": "Radovljica sits on a terrace above the Sava a few kilometres from Bled, with a medieval old town at its centre. It is a crossroads for riders. D2 from Rateče to Ljubljana, G2 towards Bled and Bohinj and the Jakobova pot all pass through. Lesce, with the Lesce-Bled railway station, belongs to Radovljica, and so do Begunje and the villages under Dobrča and Begunjščica.",
+  "routes": {
+    "title": "Cycle routes through Radovljica",
+    "body": "Seven signed routes pass through Radovljica. The longest stretches here are on the Gorenjska branch of the Jakobova pot, with 23 km, and D2, with 20 km. G2 has 8 km on its 53 km way from Lesce towards Bohinj. LG6, from Bled to Podblica, runs 16 km through the municipality, and LG3, from Slovenski Javornik to Tržič, 7 km. For mountain bikes, Trans Karavanke and K32 head up under the Karavanke. Four rides are written up in full, among them Blejčanka, 76 km with 944 m of climbing, and K42 (Rožnovenska pot), 20 km with 369 m."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 25 places to stay in Radovljica and Lesce. 1A Adventure Hostel in Lesce is 80 metres from D2 and 200 metres from the Lesce-Bled station. Camping Radovljica is 220 metres from D2, next to the town pools and a short walk from the old town. On the old town square, Gostilna Lectar has nine rooms, 20 metres from LG6. Camping Šobec, by the river near Lesce, rents, stores and repairs bikes."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Radovljica has 22 places to eat, and most of the ones in town are close to D2. Gostilna Lectar on the old town square has cooked Slovenian food since 1822 and keeps a gingerbread museum; it is open every day from 12:00 to 22:00. Pizzeria Matiček bakes in a bread oven in the centre, 80 metres from D2. Čajna soba, 20 metres from the route, is a tea shop where you can sit and taste. In Lesce, Krčma Mexico is open every day from 12:00 to 22:00, and Slaščičarna Lincer is a pastry shop 10 metres from D2."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Water is easy to find: 21 of the 29 public water points are within 150 metres of a signed route. The one repair point is a bike shop, Obris Šport. Riding an e-bike? Radovljica has 2 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Several sights are a short stop from the routes. The Museum of Apiculture is 30 metres from LG6. Kamen Castle is 70 metres from Trans Karavanke, and the Museum of Hostages 90 metres from LG3. Podvin Castle is 90 metres from the Jakobova pot. Want a short walk? Peračica Waterfall is 570 metres off D2."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "488edad3": "A hostel in the old part of Lesce, 200 metres from the Lesce-Bled station, with rooms from one to twelve beds and bikes and e-bikes to rent.",
+    "3aef37e2": "A campsite by the river near Lesce, with bell tents, bungalows and pitches, a restaurant, and bike rental, storage and repair.",
+    "435310b4": "Nine rooms furnished in medieval style above Gostilna Lectar, on the main square of Radovljica's old town.",
+    "63571954": "A small hotel in Radovljica with 14 rooms, most with balconies, an outdoor pool in summer and saunas.",
+    "5ec5d6bf": "A campsite with 80 pitches next to the town pools, a short walk from the old town. Campers swim free in summer.",
+    "968b2151": "A hotel with a restaurant in Lesce, near the motorway exit and about 4 km from both Bled and Radovljica.",
+    "f45d5ba4": "A family restaurant in the old town since 1822, cooking Slovenian food, with rooms and a gingerbread museum in the same house.",
+    "faaa59cd": "A tea shop in Radovljica where you can also sit down and taste the teas.",
+    "13eb2931": "A pizzeria and inn in the centre of Radovljica, with pizza from a bread oven and dishes made to order, also to take away.",
+    "7e7236cd": "A Mexican restaurant in Lesce, with taquitos, burritos and chilli, open every day from noon.",
+    "dd854d32": "A pastry shop in Lesce that makes hand-painted cakes, with gluten-, milk- and egg-free products too.",
+    "ad8d7e42": "A pizzeria and spaghetti house with a lunch menu that changes every week."
+  }
+}

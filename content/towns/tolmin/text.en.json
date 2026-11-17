@@ -1,0 +1,38 @@
+{
+  "status": "published",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Tolmin's data and each place's own website. Needs a read by someone who knows Tolmin before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Tolmin.",
+  "intro": "Tolmin lies in the middle of the Soča valley, where the Tolminka river meets the Soča. Two signed routes run through it: the international road route Bimobis, and the national route D7. Most na Soči, where the Soča widens into a lake, belongs to Tolmin, and so do Zatolmin and Modrejce.",
+  "routes": {
+    "title": "Cycle routes through Tolmin",
+    "body": "Two signed routes pass through Tolmin, and Bimobis does most of the work. It is an international road route of 144 km, with 20 km inside Tolmin, passing the museum and the hotels in the centre. D7, a national route from Robič through Kobarid and Most na Soči to Jelšane, crosses Tolmin for 4 km. Most of the places to stay and eat below are within a short ride of Bimobis."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "There are 24 places to stay in Tolmin, from riverside campsites to a hotel in the centre. Hotel Dvorec is 7 metres from Bimobis and has bicycle storage and a wellness area. In Most na Soči, Penzion Sterk is 187 metres from the route and has its own restaurant. Šotorišče Senca, 555 metres off Bimobis, is a small family campsite on the right bank of the Soča where it becomes a lake. Penzion Kobala, 1.2 km from the route, has balconies over the valley and an outdoor pool."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Tolmin has 9 places to eat, and one opens early for breakfast. Soca 202 in the centre, 51 metres from Bimobis, serves pizza, grill and fish every day from 6:00. Kavarna in Gostilna pri Noni, 444 metres off the route, cooks traditional dishes from local ingredients. Heading for the Tolmin Gorges? The Tolminska Korita snack bar in Zatolmin is open every day from 9:00."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Tolmin has 85 public water points, 14 of them within 150 metres of a signed route. There are two public repair stations. For parts or a service, VEB Company and Špica Šport Tolmin are bike shops in town. If your e-bike runs low, Tolmin has 2 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Tolmin has 91 sights, and these five are worth getting off the bike for. The Tolmin Museum, in the Coronini mansion, is 50 metres from the route. The ruins of Tolmin Castle on the Kozlov rob ridge are 286 metres away. The German charnel house from the First World War is 412 metres off. The Tolmin Gorges are 1.6 km from Bimobis. For a full day in the mountains, Črna Prst rises to 1,844 metres, 15.3 km from the route."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town.",
+    "d943582e": "A family-run guesthouse that began with two apartments for paragliders. Every room has a balcony towards the Soča valley, and there is an outdoor pool, a jacuzzi and a large car park.",
+    "b519684d": "A campsite on the Soča run by the Maya team adventure agency, with its own pizza and grill. The agency books rafting, canyoning and kayaking.",
+    "beaaef9d": "A family guesthouse by the Soča in Most na Soči, taking guests for three decades, with its own restaurant.",
+    "1bd575ef": "A hotel in Tolmin with renovated rooms, a café, bicycle storage and a wellness area with four saunas.",
+    "98149d40": "A small family campsite in Modrejce, on the right bank of the Soča just before Most na Soči, with tent pitches, glamping and an apartment. It also hosts concerts.",
+    "22367cad": "A family inn with rooms in Most na Soči, running for more than 30 years. Open from April to September, every day from 12:00 to 15:00 and 18:00 to 21:00.",
+    "acbf29e0": "A restaurant in the centre of Tolmin for pizza, grilled meat, calamari and local trout.",
+    "6f1a09bc": "A café and inn in Tolmin cooking traditional dishes from local ingredients.",
+    "8dde2a30": "A snack bar in Zatolmin near the Tolmin Gorges, with traditional dishes, rooms and a van transfer service."
+  }
+}

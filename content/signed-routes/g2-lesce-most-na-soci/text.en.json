@@ -1,0 +1,50 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-16 in the brand voice from the route's data and each place's own website. Needs a read by someone who knows the route before publishing.",
+  "title": "G2: Radovljica to Sorica",
+  "lede": "53 km from the Sava plain past Lake Bled and through the Bohinj valley, then up to the pass above Sorica.",
+  "intro": "G2 is one of Slovenia's national cycle routes. It starts in the flat country by the Sava near Radovljica, passes Lake Bled and follows the valley to Bohinjska Bistrica. For 36 km you barely leave 500 metres above sea level. Then the road climbs about 770 metres in 12 km to the pass at 1,287 m and drops to Sorica. The full G2 goes on to Podbrdo and Most na Soči; this page covers the 53 km mapped so far.",
+  "towns": {
+    "title": "Towns along the route",
+    "body": "You ride through four municipalities. Radovljica has the first 8 km, with its old town three kilometres in. Bled has the next 16, including the lake. Then come 24 km through Bohinj, and the last 5 km over the pass belong to Železniki."
+  },
+  "stays": {
+    "title": "Where to stay along G2",
+    "body": "46 places to stay lie within 400 metres of the route. They gather in three places: Lesce and Radovljica at the start, Bled around kilometre 13, and Bohinjska Bistrica at kilometre 36, the last town before the climb. Gostišče Lajnar at Soriška planina is the one near the top."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "24 places to eat lie within 300 metres of the route, most of them in Radovljica and Bled. Gostilna Batišt at kilometre 20 is seven metres from the road. At the top of the climb, Gostišče Lajnar is open every day."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "You pass 25 public water points within 150 metres of the route: 5 in Radovljica, 10 in Bled, 6 in Bohinj and 4 on the way up in Železniki. There are public repair stands in Bled at kilometre 10 and in Bohinj at kilometre 36, and a bike shop, Obris Šport, at kilometre 6. Riding an e-bike? The only charger near the route is at GALA IN in Radovljica, at kilometre 6. Leave with a full battery: the climb starts 30 km later."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Six stops, in the order you reach them. The beekeeping museum is on Radovljica's old square at kilometre 3. Bled Castle and Bled Island come at kilometres 11 and 14, each about 500 metres off the route. The cave under Babji zob is 1.2 km off the road at kilometre 22. In the Bohinj valley, the Grmečica waterfalls are 100 metres from the road at kilometre 31, and the Tomaž Godec museum is in Bohinjska Bistrica at kilometre 36."
+  },
+  "from": "Radovljica",
+  "to": "Sorica",
+  "places": {
+    "_note": "One or two sentences per place, keyed by place id, written from the place's own website. A place without an entry shows its type and town.",
+    "488edad3": "A hostel in Lesce with gear rental and organised activities.",
+    "ab1d4387": "A pension with its own restaurant in Zaka, at the western end of Lake Bled.",
+    "68421611": "Rooms above an inn in a house built in 1900, when the Vienna to Trieste railway came through.",
+    "843686bd": "An adults-only boutique hotel with 18 rooms in a house from 1890, five minutes from Lake Bohinj.",
+    "63e08940": "A hotel with its own restaurant and pizzeria in Bohinjska Bistrica.",
+    "947cc732": "The guesthouse at Soriška planina, just below the top of the climb.",
+    "f45d5ba4": "A house with a long tradition in Radovljica's old town: restaurant, guesthouse and museum under one roof.",
+    "faaa59cd": "A tea room and café at Radovljica's library, with a tea shop of its own.",
+    "13eb2931": "A pizzeria in Radovljica, open every day from noon to 22:00.",
+    "8dc39c67": "The restaurant of Hotel Starkl in Bled.",
+    "b67c9194": "A small, homely snack bar in Bohinjska Bela, right where the valley road leaves Bled.",
+    "37051f88": "The inn at Soriška planina. The last stop before the top.",
+    "ea11a017": "Slovenia's beekeeping museum, in the manor on Radovljica's old square.",
+    "ef3d606f": "A medieval castle on the cliff above Lake Bled.",
+    "cea54bf5": "The island in Lake Bled, with its church. You reach it by boat.",
+    "75e40f68": "A cave under the Babji zob rock, above the valley road.",
+    "48438957": "Waterfalls 100 metres off the route in the Bohinj valley.",
+    "e95017fc": "A museum in Bohinjska Bistrica, 500 metres off the route."
+  }
+}

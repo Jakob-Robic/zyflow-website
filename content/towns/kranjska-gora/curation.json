@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "cf58527d",
+    "13a81d73",
+    "f35cc63e",
+    "283fc4ec",
+    "98bd1b97"
+  ],
+  "exclude_reasons": {
+    "cf58527d": "2026-11-17 website check: Booking.com link",
+    "13a81d73": "2026-11-17 website check: Facebook link dead",
+    "f35cc63e": "2026-11-17 website check: closed 30 Sep 2026 per its site",
+    "283fc4ec": "2026-11-17 website check: Facebook link dead",
+    "98bd1b97": "2026-11-17 website check: third-party price-list page"
+  },
+  "_note": "Hand decisions for this town's picks. exclude: place ids (prefix) never picked; exclude_reasons: why. Dropped 2026-11-17 on Jakob's OK after the writers' website check."
+}

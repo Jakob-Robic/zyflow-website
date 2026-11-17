@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/bovec/hero.jpg",
+      "author": "Tiia Monto",
+      "licence": "CC BY-SA 3.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:So%C4%8Da_in_Bovec.jpg",
+      "caption": "The Soča river winding through the Bovec basin, seen from the path to the Boka waterfall."
+    }
+  ],
+  "hero": "./assets/images/towns/bovec/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 2."
+}

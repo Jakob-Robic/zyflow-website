@@ -1,2122 +1,2123 @@
 {
- "meta": {
- "brand": "Zyflow",
- "locale": "sl",
- "source": "zyflow",
- "pages": {
- "open": {
- "title": "Zyflow: Odpri v aplikaciji",
- "description": "Odprite ta kraj ali turo v aplikaciji Zyflow ali si brezplačno prenesite aplikacijo za iOS in Android."
- },
- "404": {
- "title": "Zyflow: Stran ne obstaja",
- "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
- },
- "home": {
- "title": "Zyflow: kraji, prijazni kolesarjem in e-kolesarjem",
- "description": "Najdi kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice v 8 državah. Brezplačna aplikacija za kolesarje in e-kolesarje za iOS in Android."
- },
- "about": {
- "title": "Zyflow: ekipa za kolesarjem prijaznimi kraji",
- "description": "Spoznaj ekipo za Zyflowom, aplikacijo za iskanje kolesarjem prijaznih nastanitev, kavarn, restavracij in polnilnic. Narejeno v Sloveniji, HERKO d.o.o."
- },
- "tours": {
- "title": "Zyflow: Kolesarske poti po Gorenjski",
- "description": "20 kolesarskih poti po Kranju, Tržiču in Jezerskem. Odpri katerokoli pot v Zyflow."
- },
- "tour": {
- "title": "Zyflow: Kolesarske poti",
- "description": "Razišči kolesarske poti po Gorenjski in jih odpri v Zyflow."
- },
- "blog": {
- "title": "Zyflow: Dnevnik",
- "description": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti ekipe Zyflow za kolesarje in e-kolesarje."
- },
- "guides": {
- "title": "Zyflow vodniki: odgovori na kolesarska vprašanja",
- "description": "Kratki, preverjeni odgovori na vprašanja kolesarjev in voznikov e-koles, s pravimi številkami, viri in datumom zadnjega preverjanja."
- },
- "contact": {
- "title": "Zyflow: Kontakt",
- "description": "Dodaj svoj kraj, vprašaj o poteh ali se z nami pogovori o partnerstvih in naložbah. Ekipa Zyflow je dosegljiva na support@zyflow.eu."
- },
- "legal": {
- "title": "Zyflow: Pravno",
- "description": "Politika zasebnosti, politika piškotkov in pogoji uporabe za Zyflow in HERKO d.o.o."
- },
- "legal-privacy": {
- "title": "Zyflow, Politika zasebnosti",
- "description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke, ko uporabljate Zyflow."
- },
- "legal-cookies": {
- "title": "Zyflow, Politika piškotkov",
- "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljaš."
- },
- "legal-terms": {
- "title": "Zyflow, Pogoji uporabe",
- "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
- },
- "styleguide": {
- "title": "Zyflow, Design System Styleguide",
- "description": "Internal design tokens and components for the Zyflow rebuild."
- },
- "business": {
- "title": "Zyflow: za podjetja",
- "description": "Pokaži svoj lokal, nastanitev ali kolesarsko trgovino kolesarjem in e-kolesarjem. Na zemljevidu Zyflow označi parkirišče, shrambo ali polnilnico."
- },
- "press": {
- "title": "Zyflow: mediji in vlagatelji",
- "description": "Dejstva, ekipa in kontakt za medije in vlagatelje. Zyflow kolesarjem pomaga najti kolesarjem prijazne kraje in tja kolesariti brez skrbi."
- },
- "tour-blejcanka": {
- "title": "Zyflow: Blejčanka",
- "description": "Blejčanka: iz Kranja do Bleda mimo Krope in Radovljice, 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-jezerjanka": {
- "title": "Zyflow: Jezerjanka",
- "description": "Jezerjanka ob Kokri iz Kranja do Jezerskega: 76 km in 603 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-jezerski-vrh": {
- "title": "Zyflow: Jezerski vrh in Ankova planina",
- "description": "Jezerski vrh do Ankove planine z razgledom na Ravensko Kočno: 18,2 km in 457 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k11-planine-pod-kosuto": {
- "title": "Zyflow: Planine pod Košuto",
- "description": "Alpska tura iz Tržiča na planine pod Košuto. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k16-trzic-jezersko": {
- "title": "Zyflow: Tržič - Jezersko",
- "description": "Gozdna povezava iz Tržiča do Jezerskega. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k21-dom-pod-storzicem": {
- "title": "Zyflow: Dom pod Storžičem",
- "description": "Krajši vzpon iz Tržiča do Doma pod Storžičem. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k35-prelaz-ljubelj": {
- "title": "Zyflow: Prelaz Ljubelj",
- "description": "Iz Tržiča po stari cesti na prelaz Ljubelj, zaprti za promet. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k42-roznovenska": {
- "title": "Zyflow: Rožnovenska pot po kolesarsko",
- "description": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k43-dobrca": {
- "title": "Zyflow: Dobrča",
- "description": "Alpska tura iz Tržiča do koče na Dobrči. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k51-udin-borst": {
- "title": "Zyflow: Udin boršt - s kolesom ob vznožju in pogumno čezenj",
- "description": "Makadamska tura po Udin borštu iz Tržiča. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k52-pot-treh-zvonov": {
- "title": "Zyflow: Lahkotno kolesarjenje po Poti treh zvonov",
- "description": "Pot treh zvonov: lahka družinska krožna tura pri Tržiču. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k53-kriva-jelka": {
- "title": "Zyflow: Na Udin boršt do Krive jelke",
- "description": "Makadamska pot do Krive jelke v Udin borštu. Odpri pot v aplikaciji Zyflow."
- },
- "tour-k55-gozd-udin-borst": {
- "title": "Zyflow: Gozd - Udin boršt",
- "description": "Makadamska tura med Gozdom in Udin borštom. Odpri pot v aplikaciji Zyflow."
- },
- "tour-kamnicanka": {
- "title": "Zyflow: Kamničanka",
- "description": "Kamničanka iz Kranja mimo Kamnika in Arboretuma Volčji Potok: 70 km in 254 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-ljubljancanka": {
- "title": "Zyflow: Ljubljančanka",
- "description": "Ljubljančanka iz Kranja do Ljubljane mimo gradu Smlednik: 70 km in 460 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-locanka": {
- "title": "Zyflow: Ločanka",
- "description": "Ločanka iz Kranja do starega jedra Škofje Loke: 64 km in 930 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-mali-vrh": {
- "title": "Zyflow: Jezersko in razgledišče Mali vrh",
- "description": "Z Zgornjega Jezerskega do razgledišča pod Malim vrhom: 17,3 km in 596 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-ravenska-kocna": {
- "title": "Zyflow: Ravenska Kočna in Štularjeva planina",
- "description": "Ravenska Kočna mimo Planšarskega jezera do Štularjeve planine: 16,6 km in 408 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-spodnji-virnik": {
- "title": "Zyflow: Spodnji Virnik in kamnolom lehnjaka",
- "description": "Kratka krožna tura na Jezerskem mimo kamnoloma lehnjaka do ekološke kmetije Spodnji Virnik: 9,4 km in 304 m vzpona. Odpri pot v aplikaciji Zyflow."
- },
- "tour-trzicanka": {
- "title": "Zyflow: Tržičanka",
- "description": "Tržičanka iz Kranja do Tržiča skozi kanjon Kokre in mimo gradu Kamen: 68 km. Odpri pot v aplikaciji Zyflow."
- },
- "legal-pages-privacy-policy": {
- "title": "Zyflow, Politika zasebnosti",
- "description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke, ko uporabljate Zyflow."
- },
- "legal-pages-terms": {
- "title": "Zyflow, Pogoji uporabe",
- "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
- },
- "legal-pages-cookie-policy": {
- "title": "Zyflow, Politika piškotkov",
- "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljate."
- },
- "legal-pages-impressum": {
- "title": "Zyflow, Impressum",
- "description": "Pravno obvestilo in podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
- },
- "legal-pages-delete-account": {
- "title": "Zyflow, Delete your account",
- "description": "How to request deletion of your Zyflow account and what happens to your data."
- },
- "legal-pages-izbris-racuna": {
- "title": "Zyflow, Izbris računa",
- "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
- },
- "e-plus-destinacije": {
- "title": "Zyflow, Model E+ pametne podeželske destinacije",
- "description": "Projekt LEADER: model E+ destinacije za e-kolesarjem prijazno podeželje v sedmih gorenjskih občinah. Sofinancira Evropska unija (EKSRP)."
- },
- "legal-pages-business-privacy": {
- "title": "Zyflow, Besedilo o zasebnosti za vaše spletno mesto",
- "description": "Odstavek o zasebnosti za vaše spletno mesto: kaj zbira gradnik s kolesarskim zemljevidom Zyflow in zakaj."
- },
- "legal-pages-business-dpa": {
- "title": "Zyflow, Obdelava podatkov za podjetja",
- "description": "Kdaj Zyflow obdeluje osebne podatke za poslovne stranke in naša standardna pogodba o obdelavi po 28. členu GDPR."
- }
- }
- },
- "chrome": {
- "announcement": {
- "label": "Novost",
- "text": "Zyflow je na voljo za iOS in Android, v 8 državah.",
- "textShort": "Na voljo za iOS in Android",
- "cta": "Prenesi →"
- },
- "nav": {
- "cta": "Prenesi",
- "links": {
- "home": "Domov",
- "tours": "Poti",
- "about": "O nas",
- "journal": "Dnevnik",
- "contact": "Kontakt",
- "business": "Za podjetja"
- },
- "menu": "Meni",
- "menuClose": "Zapri meni",
- "themeDark": "Temni način",
- "themeLight": "Svetli način"
- },
- "footer": {
- "links": {
- "home": "Domov",
- "tours": "Poti",
- "about": "O nas",
- "journal": "Dnevnik",
- "contact": "Kontakt",
- "press": "Mediji in vlagatelji",
- "legal": "Pravno",
- "privacy": "Zasebnost",
- "terms": "Pogoji",
- "cookies": "Piškotki",
- "impressum": "Impressum",
- "guides": "Vodniki"
- },
- "cats": {
- "kayak": "Tura",
- "bike": "Vsakodnevno",
- "hike": "Alpsko",
- "fourwd": "Makadam"
- },
- "newsletter": {
- "title": "novice",
- "body": "Novi kolesarjem prijazni kraji, poti in novosti v aplikaciji. Enkrat na mesec, brez spama.",
- "note": "Tvojih podatkov ne delimo z nikomer.",
- "subscribe": "Naroči se",
- "email": "E-pošta",
- "emailPlaceholder": "E-poštni naslov",
- "honeypot": "Spletna stran podjetja",
- "success": "Hvala, e-naslov smo shranili.",
- "error": "Nekaj je šlo narobe. Poskusi znova.",
- "errorValidation": "Vnesi veljaven e-poštni naslov.",
- "errorRateLimit": "Preveč poskusov. Počakaj nekaj minut.",
- "errorVerify": "Dokončaj preverjanje in poskusi znova."
- },
- "company": "Zyflow ustvarja HERKO d.o.o., Slovenija",
- "copyright": "© 2026 Zyflow. Vse pravice pridržane.",
- "cookiePreferences": "Nastavitve piškotkov"
- },
- "notFound": {
- "title": "Strani ni mogoče najti",
- "body": "Ta stran je zavila napačno. Vrni se domov ali razišči poti.",
- "home": "Nazaj domov",
- "tours": "Razišči poti"
- },
- "openApp": {
- "title": "Odprite v aplikaciji Zyflow",
- "body": "Nekdo vam je s kolesarskega zemljevida Zyflow poslal kraj ali turo. Oglejte si jo v aplikaciji Zyflow, brezplačno za iOS in Android.",
- "open": "Odpri aplikacijo",
- "get": "Še nimate aplikacije? Prenesite jo tukaj in nato znova tapnite povezavo."
- },
- "lang": {
- "label": "Jezik",
- "en": "EN",
- "sl": "SL"
- },
- "appModal": {
- "title": "Prenesi aplikacijo Zyflow",
- "lede": "Najdi kolesarjem prijazne nastanitve, kavarne in restavracije, s polnilnicami in kolesarskimi storitvami na zemljevidu. Brezplačno za iOS in Android.",
- "badge": "Brezplačno za iOS in Android",
- "downloadTitle": "Prenesi Zyflow zdaj",
- "downloadBody": "Obišči App Store, Google Play ali s telefonom skeniraj QR kodo.",
- "close": "Zapri"
- },
- "ui": {
- "step": "Korak"
- }
- },
- "home": {
- "hero": {
- "titleHtml": "Kolesarjem prijazne nastanitve, kavarne in polnilnice",
- "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
- "cta": "Prenesi aplikacijo",
- "nextDepartureLabel": "Izpostavljena pot",
- "nextDepartureTitle": "Ljubljana–Trst",
- "nextDepartureDate": "134 km · +1.766 m",
- "brandHtml": "raziskuj<br>dlje."
- },
- "appBanner": {
- "eyebrow": "Aplikacija Zyflow",
- "titleHtml": "Vsak postanek.<br>En zemljevid.",
- "body": "Nastanitve, kavarne, restavracije, polnilnice, pitna voda in servis koles, pri vsakem pa vidiš, zakaj je prijazen kolesarjem. Brezplačno za iOS in Android.",
- "cta": "Prenesi",
- "phoneTitle": "Vsak postanek.",
- "chips": [
- "Nočitve",
- "Kava",
- "Polnilnice"
- ],
- "phoneFoot": "Brezplačno za iOS in Android"
- },
- "trust": {
- "one": "Regionalni zemljevidi in podatki o poteh",
- "two": "Lokalna kolesarska skupnost",
- "three": "Znanje o polnjenju e-koles",
- "four": "Odprti podatki o krajih in mobilnosti"
- },
- "adventures": {
- "titleHtml": "izpostavljene<br />poti",
- "allLink": "Razišči poti",
- "viewCta": "Poglej pot",
- "cards": [
- {
- "place": "Tržič",
- "region": "Prelaz Ljubelj, Slovenija",
- "title": "Prelaz Ljubelj",
- "meta0": "26 km",
- "meta1": "900 m",
- "meta2": "Alpska",
- "body": "Trinajst serpentin na najstarejšem cestnem prelazu v Evropi, vzpon brez avtov do 1.370 m nad Tržičem.",
- "price": "26 km",
- "unit": " · 900 m"
- },
- {
- "place": "Kranj → Kamnik",
- "region": "Gorenjska, Slovenija",
- "title": "Kamničanka",
- "meta0": "70 km",
- "meta1": "254 m",
- "meta2": "Turistična",
- "body": "Blagi cvet Kranjske rože: gradovi, Arboretum Volčji Potok in dolinske ceste skoraj brez težkega vzpona.",
- "price": "70 km",
- "unit": " · 254 m"
- },
- {
- "place": "Jezersko",
- "region": "Kamniške Alpe, Slovenija",
- "title": "Mali vrh",
- "meta0": "17,3 km",
- "meta1": "596 m",
- "meta2": "Alpska",
- "body": "Gozdna cesta do mirnega razgledišča nad Jezerskim, Grintovec, Košuta in Storžič v enem mirnem poldnevu.",
- "price": "17,3 km",
- "unit": " · 596 m"
- }
- ]
- },
- "intro": {
- "greeting": "Živjo.",
- "body": "Sva Jakob in Tanja, mala ekipa za Zyflowom iz Slovenije. Zyflow gradiva zato, da ima vsaka vožnja dobre postanke, polnilnico, ko jo potrebuješ, in dobrodošlico za tvoje kolo. Vprašanja ali ideje? Prebereva vsako sporočilo.",
- "link": "O Zyflowu"
- },
- "featuredTour": {
- "eyebrow": "Vsaka pot, v celoti na zemljevidu",
- "title": "ljubljana–trst",
- "metaDuration": "134 km",
- "metaSeason": "+1.766 m",
- "cta": "Poglej, kaj je ob poti",
- "metaStops": "Nastanitve, kava in polnilnice",
- "metaChargers": "1 dan"
- },
- "categories": {
- "cycle": "slovenija",
- "hike": "hrvaška",
- "kayak": "avstrija",
- "fourwd": "italija",
- "cta": "Poglej poti",
- "comingSoon": "poti kmalu",
- "comingSoonHint": "Kraji že na voljo, poti v pripravi"
- },
- "testimonial": {
- "quote": "Je tvoj kraj prijazen kolesarjem?",
- "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, skupaj s parkiriščem za kolesa, shrambo ali polnilnico na zemljevidu.",
- "cta": "Dodaj svoj kraj",
- "ctaSecondary": "Vlagatelji in mediji"
- },
- "whyUs": {
- "titleHtml": "Zakaj<br />Zyflow?",
- "items": [
- {
- "title": "kraji, ki jih drugi zemljevidi spregledajo",
- "body": "Večina zemljevidov ti pokaže ceste. Zyflow ti pokaže, kje se ustaviti: nastanitve, kavarne in restavracije, ki sprejmejo kolesa, z označenim parkiriščem, shrambo in polnjenjem."
- },
- {
- "title": "varnost, ki jo vidiš",
- "body": "Zapore cest, dela na cesti in dogodki na tvoji poti, kraje koles po območjih in polnilnice tam, kjer jih baterija potrebuje."
- },
- {
- "title": "načrt baterije, ki mu lahko zaupaš",
- "body": "Zyflow načrtuje glede na tvoj doseg, vzpone, veter in temperaturo, da se vožnja ne konča prezgodaj."
- }
- ]
- },
- "appStage": {
- "eyebrow": "V aplikaciji",
- "titleHtml": "Aplikacija<br />na poti.",
- "body": "Baterija, vzponi, polnilnice in vreme v enem načrtu, da veš, da bo vožnja šla do konca.",
- "ctaIos": "Prenesi za iOS",
- "ctaAndroid": "Prenesi za Android"
- },
- "appFlow": {
- "titleHtml": "Od zemljevida<br>do vožnje.",
- "steps": [
- {
- "title": "raziskuj",
- "body": "Odpri zemljevid in najdi nastanitve, kavarne in restavracije, ki sprejmejo kolesa, ob približevanju pa še polnilnice, vodo in servis."
- },
- {
- "title": "načrtuj",
- "body": "Poveži kraje v vožnjo. Zyflow načrtuje baterijo glede na vzpone in postavi polnilnice, preden jih potrebuješ."
- },
- {
- "title": "kolesari",
- "body": "Pred odhodom preveri zapore cest in poglej, kje kradejo kolesa. Potem kolesari in se ustavi, kjer ti je všeč."
- }
- ]
- },
- "features": {
- "titleHtml": "Kraji, ki<br><span class=\"accent\">sprejmejo kolesa.</span>",
- "items": [
- {
- "title": "najdi kolesarjem prijazne kraje",
- "body": "Parkirišče za kolesa, varna shramba, tlačilka ali polnilnica, označeno pri vsakem kraju. Zemljevid lahko filtriraš, da pokaže samo kraje, ki sprejmejo kolesa.",
- "link": "Prenesi"
- },
- {
- "title": "kolesari brez skrbi",
- "body": "Pred odhodom poglej zapore cest in dela na cesti, preveri kraje koles po območjih in načrtuj baterijo s polnilnicami ob poti.",
- "link": "Razišči poti"
- },
- {
- "title": "rastemo po Evropi",
- "body": "Na voljo v 8 državah, začenši s Slovenijo, Hrvaško in Avstrijo, in rastemo država za državo.",
- "link": "Preberi dnevnik"
- }
- ]
- },
- "journal": {
- "titleHtml": "Zyflow<br />dnevnik",
- "cta": "Preberi dnevnik"
- },
- "faq": {
- "title": "pogosta vprašanja",
- "footnote": "Vprašanja, povratne informacije ali kraj, ki nam manjka? Piši na support@zyflow.eu. Preberemo vsako sporočilo.",
- "contactLink": "Piši nam",
- "items": [
- {
- "q": "Kaj je Zyflow?",
- "a": "Zyflow je brezplačna aplikacija za iskanje kolesarjem prijaznih krajev: nastanitev, kavarn, restavracij, polnilnic in kolesarskih storitev. Vidiš lahko zapore cest in kraje koles po območjih ter med kraji načrtuješ vožnjo z mislijo na baterijo."
- },
- {
- "q": "Je Zyflow brezplačen?",
- "a": "Da. Zyflow je brezplačen za prenos in uporabo na iOS in Android."
- },
- {
- "q": "Katera kolesa Zyflow podpira?",
- "a": "Vsa: cestna, gravel, potovalna, gorska in e-kolesa. Z e-kolesom dobiš še načrt baterije in polnilnice ob poti."
- },
- {
- "q": "Kako vem, da je kraj prijazen kolesarjem?",
- "a": "Kraji s parkiriščem za kolesa, varno shrambo, tlačilko ali polnilnico so označeni, zemljevid pa lahko filtriraš, da pokaže samo kolesarjem prijazne kraje."
- },
- {
- "q": "Imam kavarno, hotel ali kolesarsko trgovino. Sem lahko na Zyflowu?",
- "a": "Seveda. Piši nam prek kontaktnega obrazca in dodali bomo tvoj kraj, skupaj s parkiriščem za kolesa, shrambo ali polnilnico na zemljevidu."
- }
- ]
- },
- "social": {
- "handle": "@zyflow",
- "cta": "Sledi Zyflowu",
- "videos": [
- {
- "title": "Ljubljana–Trst",
- "place": "Slovenija / Italija",
- "coords": "46.0569° N, 14.5058° E"
- },
- {
- "title": "Zanka čez alpske prelaze",
- "place": "Julijske Alpe, Slovenija",
- "coords": "46.3792° N, 13.8363° E"
- },
- {
- "title": "Obalni gravel",
- "place": "Istra, Hrvaška",
- "coords": "45.2396° N, 13.9367° E"
- }
- ]
- }
- },
- "tours": {
- "hero": {
- "title": "kolesarske poti po gorenjski",
- "lede": "Dvajset tur iz Kranja, Tržiča in Jezerskega, jezerske zanke, alpski prelazi in miren gravel. Izberi pot in jo odpri v Zyflow.",
- "quals": [
- "20 poti po Gorenjski",
- "GPX in opisi pripravljeni",
- "Odpri v Zyflow",
- "iOS in Android",
- "Brezplačen prenos"
- ],
- "eyebrow": "naše poti"
- },
- "filter": {
- "label": "pregled:",
- "all": "vse",
- "tour": "potovanje",
- "alpine": "alpsko",
- "commute": "vsakdan",
- "gravel": "gravel"
- },
- "viewCta": "Poglej pot",
- "empty": "Tukaj še ni poti. Nove dodajamo, ko na zemljevid dodamo več kolesarjem prijaznih krajev.",
- "region": {
- "slovenia": "Slovenija",
- "croatia": "Hrvaška",
- "austria": "Avstrija",
- "italy": "Italija"
- },
- "cards": [
- {
- "place": "Kranj → Bled",
- "region": "Gorenjska, Slovenija",
- "title": "Blejčanka",
- "meta0": "79 km",
- "meta1": "944 m",
- "meta2": "Turistična",
- "body": "Celodnevna zanka iz Kranja do Blejskega jezera, trg Radovljice, kovaška Kropa in obala jezera, nato vzpon nazaj.",
- "price": "79 km",
- "unit": " · 944 m"
- },
- {
- "place": "Kranj → Jezersko",
- "region": "Gorenjska, Slovenija",
- "title": "Jezerjanka",
- "meta0": "76 km",
- "meta1": "603 m",
- "meta2": "Turistična",
- "body": "Ob Kokri mimo Preddvora v prvo gorniško vas, ledeniške doline, planine in mirnejše ceste kot ob jezerih.",
- "price": "76 km",
- "unit": " · 603 m"
- },
- {
- "place": "Jezersko",
- "region": "Gorenjska, Slovenija",
- "title": "Jezerski vrh",
- "meta0": "18.2 km",
- "meta1": "457 m",
- "meta2": "Alpska",
- "body": "Vzpon na nekdanji mejni prehod in naprej do Ankove planine, panorama Ravenske Kočne in Kamniških Alp.",
- "price": "18.2 km",
- "unit": " · 457 m"
- },
- {
- "place": "Tržič → Košuta",
- "region": "Gorenjska, Slovenija",
- "title": "Planine pod Košuto",
- "meta0": "39,7 km",
- "meta1": "1740 m",
- "meta2": "Alpska",
- "body": "Alpska zastavonoša Tržiča: gozdne ceste in police planin pod belo steno Košute, veliko vzpona, še več razgleda.",
- "price": "1740 m",
- "unit": " · 1740 m"
- },
- {
- "place": "Tržič → Jezersko",
- "region": "Gorenjska, Slovenija",
- "title": "Tržič – Jezersko",
- "meta0": "28,1 km",
- "meta1": "Alpska",
- "meta2": "Alpska",
- "body": "Povezovalna tura med dvema alpskima dolinama, s tržiške strani Karavank v ledeniško skledo Jezerskega.",
- "price": "28,1 km",
- "unit": ""
- },
- {
- "place": "Tržič → Storžič",
- "region": "Gorenjska, Slovenija",
- "title": "Dom pod Storžičem",
- "meta0": "18,1 km",
- "meta1": "Alpska",
- "meta2": "Alpska",
- "body": "Koča pod Storžičem: gozdni vzponi, gorski zrak in jasen obrat pri Domu pod Storžičem.",
- "price": "18,1 km",
- "unit": ""
- },
- {
- "place": "Tržič → Ljubelj",
- "region": "Gorenjska, Slovenija",
- "title": "Prelaz Ljubelj",
- "meta0": "26 km",
- "meta1": "900 m",
- "meta2": "Alpska",
- "body": "Trinajst serpentin na najstarejšem cestnem prelazu v Evropi, zaprto za avte, odprto za kolesa, koča na 1.370 m.",
- "price": "26 km",
- "unit": " · 900 m"
- },
- {
- "place": "Tržič → Brezje pri Tržiču",
- "region": "Gorenjska, Slovenija",
- "title": "Rožnovenska pot",
- "meta0": "20,1 km",
- "meta1": "Turistična",
- "meta2": "Turistična",
- "body": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču, cerkve, doline in razgledna vožnja brez polne alpske zahtevnosti.",
- "price": "20,1 km",
- "unit": ""
- },
- {
- "place": "Tržič → Dobrča",
- "region": "Gorenjska, Slovenija",
- "title": "Dobrča",
- "meta0": "26,9 km",
- "meta1": "Alpska",
- "meta2": "Alpska",
- "body": "Alpska tura proti Dobrči, dolgi vzponi, grebenski zrak in občutek, da kolesariš Karavanke, ne mimo njih.",
- "price": "26,9 km",
- "unit": ""
- },
- {
- "place": "Tržič · Udin boršt",
- "region": "Gorenjska, Slovenija",
- "title": "Udin boršt",
- "meta0": "25,3 km",
- "meta1": "Gravel",
- "meta2": "Gravel",
- "body": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in dovolj raznolikosti brez visokega prelaza.",
- "price": "25,3 km",
- "unit": ""
- },
- {
- "place": "Tržič · Trije zvonovi",
- "region": "Gorenjska, Slovenija",
- "title": "Pot treh zvonov",
- "meta0": "10 km",
- "meta1": "Turistična",
- "meta2": "Turistična",
- "body": "Lahka družinska zanka tržiškega nabora, blag teren, vaški zvonovi in ritem za različne zmožnosti.",
- "price": "10 km",
- "unit": ""
- },
- {
- "place": "Tržič · Kriva jelka",
- "region": "Gorenjska, Slovenija",
- "title": "Kriva jelka",
- "meta0": "24 km",
- "meta1": "Gravel",
- "meta2": "Gravel",
- "body": "V naravni rezervat Udin boršt do Krive jelke, senčne sledi in znamenit zaključek v gozdu.",
- "price": "24 km",
- "unit": ""
- },
- {
- "place": "Tržič · Gozd",
- "region": "Gorenjska, Slovenija",
- "title": "Gozd – Udin boršt",
- "meta0": "26,9 km",
- "meta1": "Gravel",
- "meta2": "Gravel",
- "body": "Raznolika predalpska zanka med Gozdom in Udin borštom, več vzpona kot družinske, še vedno pod alpskimi nakloni.",
- "price": "26,9 km",
- "unit": ""
- },
- {
- "place": "Kranj → Kamnik",
- "region": "Gorenjska, Slovenija",
- "title": "Kamničanka",
- "meta0": "70 km",
- "meta1": "254 m",
- "meta2": "Turistična",
- "body": "Bolj ravninska zanka čez Šenčur, Adergas, Cerklje in Kamnik, Arboretum Volčji Potok, grad Strmol in edini kolesarski most čez avtocesto.",
- "price": "70 km",
- "unit": " · 254 m"
- },
- {
- "place": "Kranj → Ljubljana",
- "region": "Gorenjska, Slovenija",
- "title": "Ljubljančanka",
- "meta0": "70 km",
- "meta1": "Turistična",
- "meta2": "Turistična",
- "body": "Iz Kranja proti prestolnici, grad Smlednik, Tivoli in Ljubljanski grad na dnevu, ki zmeša podeželje z mestnim prihodom.",
- "price": "70 km",
- "unit": ""
- },
- {
- "place": "Kranj → Škofja Loka",
- "region": "Gorenjska, Slovenija",
- "title": "Ločanka",
- "meta0": "64 km",
- "meta1": "Turistična",
- "meta2": "Turistična",
- "body": "V srednjeveško jedro Škofje Loke, kapucinska mostova, grajski hrib in Crngrob na enem najlepših dni Kranjske rože.",
- "price": "64 km",
- "unit": ""
- },
- {
- "place": "Jezersko · Mali vrh",
- "region": "Gorenjska, Slovenija",
- "title": "Mali vrh",
- "meta0": "17.3 km",
- "meta1": "596 m",
- "meta2": "Alpska",
- "body": "Mirna gozdna cesta do razgledišča Mali vrh, Virnikov Grintovec, Košuta in Storžič v enem mirnem jezerskem poldnevu.",
- "price": "17.3 km",
- "unit": " · 596 m"
- },
- {
- "place": "Jezersko · Ravenska Kočna",
- "region": "Gorenjska, Slovenija",
- "title": "Ravenska Kočna",
- "meta0": "16.6 km",
- "meta1": "408 m",
- "meta2": "Alpska",
- "body": "Mimo Planšarskega jezera v Ravensko Kočno in na Štularjevo planino, zatrep in tovorna žičnica pod Češko kočo.",
- "price": "16.6 km",
- "unit": " · 408 m"
- },
- {
- "place": "Jezersko · Virnik",
- "region": "Gorenjska, Slovenija",
- "title": "Spodnji Virnik",
- "meta0": "9.4 km",
- "meta1": "304 m",
- "meta2": "Turistična",
- "body": "Kratka poučna zanka do kamnoloma lehnjaka in kmetije Spodnji Virnik, kamnina nastaja pred vami, nato mlečni izdelki na paši.",
- "price": "9.4 km",
- "unit": " · 304 m"
- },
- {
- "place": "Kranj → Tržič",
- "region": "Gorenjska, Slovenija",
- "title": "Tržičanka",
- "meta0": "68 km",
- "meta1": "Turistična",
- "meta2": "Turistična",
- "body": "Proti severu v staro jedro Tržiča in predprostor Karavank, razvaline gradu Kamen, doline in predokus alpske mreže naprej.",
- "price": "68 km",
- "unit": ""
- }
- ]
- },
- "tour": {
- "hero": {
- "crumbParent": "Poti",
- "crumbType": "Potovanje",
- "titleHtml": "ljubljana<br />– trst",
- "lede": "134 km od Ljubljane do Jadrana, mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami in kolesarskimi storitvami ob poti.",
- "price": "134 km",
- "unit": " · 1 dan",
- "nextLabel": "Najboljša sezona",
- "nextValue": "Apr – Oct",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo"
- },
- "meta": {
- "place": "ljubljana",
- "coords": "46.0569° N, 14.5058° E",
- "durationHtml": "1 day<br />134 km",
- "durationLabel": "Trajanje",
- "difficulty": "srednje",
- "difficultyLabel": "Zahtevnost",
- "climb": "+1,766 m",
- "climbLabel": "Višina"
- },
- "body": {
- "intro": "Pot od Ljubljane do Trsta v enem dnevu prečka tri pokrajine: zeleni rob prestolnice, kamnite vasi Krasa in jadransko obalo. Zyflow vmes postavi kolesarjem prijazne kraje, zato vožnja ni le to, kako daleč prideš, ampak tudi, kje se ustaviš.",
- "sections": [
- {
- "title": "Odhod iz Ljubljane",
- "body": "Mimo Vrhnike se odpelješ po mirnih cestah. Prvi postanek za kavo pride hitro in se splača: kmalu zatem se začne vzpon na planoto. Zyflow pokaže pričakovano stanje baterije na celotni poti, zato lahko začetek odpelješ premišljeno in ne na pamet."
- },
- {
- "title": "Kraške vasi in postanki",
- "body": "Med Postojno in Divačo se cesta dviga in spušča skozi kamnite vasi, z družinskimi restavracijami in gostišči, ki sprejmejo kolesa. Polnilnice in voda so tam, kjer se začnejo najtežji odseki.",
- "bullets": [
- "Pred odhodom poglej zapore cest in dela na cesti na poti",
- "Vedi, kateri kraji imajo parkirišče za kolesa, varno shrambo ali polnilnico"
- ]
- },
- {
- "title": "Spust do Jadrana",
- "body": "Za Sežano se planota konča in cesta se spusti proti Tržaškemu zalivu. Končaj s kavo ob morju ali ostani čez noč in se jutri vrni."
- }
- ]
- },
- "aside": {
- "title": "kolesari brez skrbi:",
- "items": [
- "Zapore cest pred odhodom",
- "Kraje koles po območjih",
- "Načrt baterije s polnilnicami",
- "Kolo je dobrodošlo, kjer spiš",
- "Kraji tudi brez signala",
- "iOS in Android"
- ],
- "cta": "Odpri v Zyflow",
- "note": "Odpri pot v aplikaciji Zyflow, načrtovanje z baterijo, višino in polnilnicami.",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX"
- },
- "quote": {
- "quote": "Je tvoj kraj ob tej poti?",
- "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, prav na poti, ki jo vozijo."
- },
- "more": {
- "title": "več poti",
- "allLink": "Poglej vse"
- }
- },
- "blog": {
- "hero": {
- "titleHtml": "zyflow<br />dnevnik",
- "lede": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti v Zyflowu."
- },
- "readStory": "Preberi zgodbo",
- "readingTime": "{n} min branja",
- "updated": "Posodobljeno",
- "journalName": "Dnevnik",
- "filters": {
- "country": "Država",
- "region": "Regija",
- "type": "Vrsta",
- "activity": "Aktivnost",
- "topic": "Tema",
- "all": "Vse"
- },
- "empty": "Nobena zgodba ne ustreza tem filtrom.",
- "comingSoon": "Članki v slovenščini še prihajajo.",
- "comingSoonLink": "Preberi dnevnik v angleščini",
- "rss": "RSS",
- "explore": "Razišči",
- "facts": {
- "distance": "Razdalja",
- "climb": "Vzpon",
- "difficulty": "Težavnost",
- "season": "Sezona",
- "eat": "Hrana",
- "sleep": "Spanje",
- "charge": "Polnjenje"
- },
- "howWeMade": "Kako smo to pripravili",
- "relatedTours": "Sorodne poti",
- "relatedPosts": "Sorodne zgodbe",
- "moreIn": "Več v {name}",
- "inThisGuide": "V tem vodniku",
- "appCta": {
- "title": "Načrtuj turo v Zyflowu",
- "ios": "Prenesi v App Store",
- "android": "Prenesi v Google Play"
- },
- "authorStories": "Zgodbe",
- "authorDescription": "Vodniki in zgodbe, ki jih piše {name}.",
- "licence": {
- "own": "Zyflow",
- "partner": "Uporabljeno z dovoljenjem",
- "guest": "Gostujoči kolesar",
- "ccBy": "CC BY 4.0",
- "ccBySa": "CC BY-SA 4.0",
- "cc0": "CC0"
- }
- },
- "about": {
- "hero": {
- "eyebrow": "Ustanovljeno 2024",
- "titleHtml": "Ekipa za kolesarjem prijaznimi kraji",
- "place": "Slovenija · na voljo v 8 državah",
- "storyTitle": "Dobrih krajev za postanek je povsod dovolj. Večina zemljevidov jih le ne pokaže.",
- "storyBody": "Sva Jakob in Tanja, ekipa za Zyflowom, ki ga razvija HERKO d.o.o. v Sloveniji. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice ter med njimi kolesariti brez skrbi. Danes je na voljo za iOS in Android v 8 državah, s 7.400+ polnilnicami na zemljevidu in podatki partnerjev, kot je Open Data Hub. Naslednji koraki: več držav, več krajev in več načinov, kako kolesarjem zagotoviti varnost.",
- "sign": "Jakob in Tanja",
- "brandHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>"
- },
- "values": {
- "title": "naše vrednote",
- "items": [
- {
- "titleHtml": "raziskuj<br>brez skrbi.",
- "body": "Zyflow je tu zato, da lahko rečeš da ovinku. Pri vsakem kraju vidiš, ali je tvoje kolo dobrodošlo, zato je naslednji postanek izbira in ne loterija."
- },
- {
- "titleHtml": "varnost, ki<br>jo vidiš.",
- "body": "Zapore cest, kraje koles po območjih in polnilnice ob poti. Pokažemo, kar vemo, da se lahko odločiš, preden se odpelješ."
- },
- {
- "titleHtml": "iskrenost pred<br>pompom.",
- "body": "Obljubimo samo to, kar aplikacija zna danes. Ko nekaj še nastaja, to povemo, in prisluhnemo, ko nam kolesarji povedo, kaj naj popravimo."
- },
- {
- "titleHtml": "brezplačno za<br>vsakega kolesarja.",
- "body": "Zyflow je brezplačen za iOS in Android, za vsakega kolesarja in vsako kolo. Začni z enim postankom, potem pojdi dlje."
- }
- ]
- },
- "team": {
- "title": "naša ekipa",
- "members": [
- {
- "name": "jakob",
- "role": "Soustanovitelj in direktor",
- "bio": "Vodi produkt in partnerstva. Gradi aplikacijo, podatke v ozadju in mrežo partnerjev, s katero zemljevid raste.",
- "quals": [
- "Produkt in podatki",
- "Partnerstva",
- "iOS in Android"
- ]
- },
- {
- "name": "tanja",
- "role": "Soustanoviteljica in operativna direktorica",
- "bio": "Vodi podjetje: administracijo, pogodbe, pravna in davčna vprašanja, pa tudi marketing, raziskave trga in lokalne partnerje.",
- "quals": [
- "Operativa in pravo",
- "Marketing in raziskave"
- ]
- }
- ]
- }
- },
- "contact": {
- "hero": {
- "title": "kontakt",
- "email": "hello@zyflow.eu",
- "support": "support@zyflow.eu",
- "social": [
- "LinkedIn",
- "Instagram",
- "Bluesky",
- "X"
- ]
- },
- "form": {
- "title": "pošlji sporočilo",
- "lede": "Vprašaj o krajih, poteh ali polnilnicah, dodaj svojo kavarno, restavracijo ali nastanitev ali se z nami pogovori o partnerstvih in naložbah. Odgovorimo na vsako sporočilo.",
- "firstName": "Ime",
- "lastName": "Priimek",
- "email": "E-pošta",
- "phone": "Telefon (neobvezno)",
- "topic": "Tema (neobvezno)",
- "topicPlaceholder": "Izberi",
- "topics": [
- "Kraji in poti",
- "Dodaj moj kraj",
- "Partnerstvo",
- "Vlagatelji",
- "Mediji",
- "Drugo"
- ],
- "message": "Sporočilo",
- "submit": "Pošlji sporočilo",
- "honeypot": "Spletna stran podjetja",
- "success": "Hvala, sporočilo smo prejeli.",
- "error": "Nekaj je šlo narobe. Poskusi znova.",
- "errorValidation": "Preveri vnesene podatke in poskusi znova.",
- "errorRateLimit": "Preveč poskusov. Počakaj nekaj minut.",
- "errorVerify": "Dokončaj preverjanje in poskusi znova."
- }
- },
- "legal": {
- "nav": {
- "terms": "Pogoji uporabe",
- "privacy": "Politika zasebnosti",
- "cookies": "Politika piškotkov",
- "impressum": "Impressum",
- "deletion": "Izbris računa"
- },
- "hub": {
- "tag": "Pravno",
- "title": "pravno",
- "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
- "termsLede": "Pravila uporabe, naročnine, odgovornost in pravne informacije za Zyflow.",
- "privacyLede": "How HERKO d.o.o. collects, uses, stores, and protects your personal data.",
- "cookiesLede": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in v aplikaciji.",
- "impressumLede": "Podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
- },
- "terms": {
- "tag": "Posodobljeno",
- "date": "30. 11. 2026",
- "dateLabel": "Posodobljeno 30. 11. 2026 · v2.2",
- "title": "pogoji uporabe",
- "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
- },
- "privacy": {
- "tag": "Posodobljeno",
- "date": "30. 6. 2026",
- "dateLabel": "Updated 30. 6. 2026 · v1.1",
- "title": "politika zasebnosti",
- "lede": "This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
- },
- "cookies": {
- "tag": "Posodobljeno",
- "date": "9. 10. 2026",
- "dateLabel": "Posodobljeno 9. 10. 2026 · v1.1",
- "title": "politika piškotkov",
- "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v aplikaciji in na zyflow.eu, vključno z neobveznimi analitičnimi in oglaševalskimi piškotki, ki jih lahko upravljate."
- },
- "doc": {
- "tag": "Posodobljeno"
- },
- "redirect": {
- "body": "Ta stran se je prestavila. Nadaljujte na trenutno različico."
- },
- "impressum": {
- "dateLabel": "Pravno obvestilo"
- }
- },
- "business": {
- "hero": {
- "crumb1": "Za podjetja",
- "crumb2": "Kavarne, nastanitve, kolesarske trgovine",
- "titleHtml": "Zyflow za kavarne, nastanitve in kolesarske trgovine",
- "lede": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svoje parkirišče za kolesa, shrambo ali polnilnico in postani postanek na poteh, ki vodijo mimo tvojih vrat. Svoj vnos urejaš sam.",
- "price": "Brezplačno",
- "unit": " · v času zagona",
- "nextLabel": "Na voljo v",
- "nextValue": "8 državah",
- "cta": "Dodaj svoj kraj",
- "brandHtml": "postavi svoj kraj<br>na zemljevid"
- },
- "tiles": [
- {
- "value": "Na zemljevidu",
- "label": "Kolesarji te vidijo v Raziskuj"
- },
- {
- "value": "Kolesarska oprema",
- "label": "Parkirišče, shramba, tlačilka, polnilnica"
- },
- {
- "value": "Na poteh",
- "label": "Prikazan na poteh, ki vodijo mimo tebe"
- },
- {
- "value": "Vse imaš v rokah",
- "label": "Urejaj urnik, fotografije in podatke"
- }
- ],
- "who": {
- "title": "komu je namenjeno",
- "link": "Vprašaj nas karkoli",
- "chip": "na zemljevidu",
- "price": "Brezplačno",
- "unit": " · v času zagona",
- "cta": "Dodaj svoj kraj",
- "cards": [
- {
- "tag": "Kava in hrana",
- "title": "Kavarne in restavracije",
- "meta0": "Kava",
- "meta1": "Restavracije",
- "body": "Bodi postanek, okoli katerega kolesarji načrtujejo odmor. Pokaži, da so kolesa dobrodošla, kje jih parkirati in ali jih lahko napolnijo."
- },
- {
- "tag": "Nastanitve",
- "title": "Hoteli in gostišča",
- "meta0": "Nastanitev",
- "meta1": "Prenočitev",
- "body": "Kolesarji na večdnevnih poteh najprej iščejo eno stvar: varno mesto za kolo. Pokaži svojo shrambo in polnjenje in bodi izbran za noč."
- },
- {
- "tag": "Storitve",
- "title": "Kolesarske trgovine in servisi",
- "meta0": "Servis",
- "meta1": "Polnjenje",
- "body": "Servis, izposoja, polnjenje ali tlačilka pred vrati. Pojavi se v sloju storitev, ki ga kolesarji odprejo, ko gre kaj narobe."
- }
- ]
- },
- "how": {
- "title": "kako deluje",
- "stepLabel": "korak",
- "steps": [
- {
- "title": "Zaprosi za dostop",
- "body": "Ustvari račun in nam povej o svojem podjetju. Vzame dve minuti."
- },
- {
- "title": "Odobrimo tvoj kraj",
- "body": "Preverimo tvojo prošnjo in tvoj kraj povežemo z zemljevidom."
- },
- {
- "title": "Urejaj ga sam",
- "body": "Kadarkoli urejaj podatke, odpiralni čas, fotografije in kolesarsko opremo."
- },
- {
- "title": "Kolesarji te najdejo",
- "body": "Pojaviš se v Raziskuj in na poteh, ki vodijo mimo tebe."
- }
- ]
- },
- "data": {
- "title": "turistične organizacije in podatkovni partnerji",
- "body": "Z odprtimi viri podatkov in lokalnimi partnerji skrbimo, da so kraji, polnilnice in poti točni. Če upravljaš kolesarske podatke, turistične vnose ali mrežo lokalov, jih povežimo.",
- "cta": "Postani podatkovni partner"
- },
- "faq": {
- "title": "vprašanja podjetij",
- "items": [
- {
- "q": "Ali to kaj stane?",
- "a": "Dodajanje kraja je v času zagona brezplačno. Kasneje nameravamo dodati plačljive možnosti, na primer večjo vidnost na poteh. O vsaki spremembi te bomo obvestili dovolj zgodaj."
- },
- {
- "q": "Kaj šteje kot prijazno kolesarjem?",
- "a": "Pomaga karkoli od tega: prostor za parkiranje ali zaklepanje kolesa, varna shramba, tlačilka ali orodje ali vtičnica, kjer lahko kolesarji napolnijo e-kolo."
- },
- {
- "q": "Katere države pokrivate?",
- "a": "Zyflow je na voljo v 8 državah, začenši s Slovenijo in sosednjimi državami."
- },
- {
- "q": "Kako spremenim svoje podatke?",
- "a": "Prijavi se v partnerski portal in svoj kraj uredi neposredno. Spremembe lokacije na zemljevidu ali vrste kraja gredo prek naše ekipe."
- }
- ],
- "footnote": "Nisi prepričan, ali spadaš sem?",
- "footLink": "Vprašaj nas"
- },
- "final": {
- "title": "pripravljeni, ko si ti",
- "body": "Povej nam o svojem kraju in pokazali ga bomo kolesarjem, ki se že odpravljajo mimo.",
- "cta": "Dodaj svoj kraj",
- "ctaSecondary": "Najprej se pogovorimo"
- },
- "signin": "Že sodeluješ z nami? Prijava"
- },
- "press": {
- "hero": {
- "crumb1": "Mediji in vlagatelji",
- "crumb2": "Dejstva",
- "titleHtml": "zyflow<br>na kratko",
- "lede": "Šele začenjamo. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne kraje in med njimi kolesariti brez skrbi. Tu so dejstva, ekipa in kontakt.",
- "price": "Zgodnja faza",
- "unit": " · 2026",
- "nextLabel": "Narejeno v",
- "nextValue": "Sloveniji",
- "cta": "Zaprosi za predstavitev",
- "eyebrow": "Za medije in vlagatelje"
- },
- "tiles": [
- {
- "value": "iOS + Android",
- "label": "Na voljo v obeh trgovinah"
- },
- {
- "value": "8",
- "label": "Držav"
- },
- {
- "value": "7.400+",
- "label": "Polnilnic na zemljevidu"
- },
- {
- "value": "Open Data Hub",
- "label": "Podpisan podatkovni partner"
- }
- ],
- "about": {
- "title": "na kratko",
- "p1": "Večina zemljevidov kolesarjem pokaže ceste. Zyflow jim pokaže, kje se ustaviti: nastanitve, kavarne in restavracije, ki sprejmejo kolesa, ter polnilnice, vodo in servis. Na zemljevidu so tudi zapore cest in kraje koles po območjih, da lahko kolesarji raziskujejo brez skrbi.",
- "p2": "Zyflow razvija HERKO d.o.o. v Sloveniji, javno je bil zagnan za iOS in Android leta 2026."
- },
- "next": {
- "title": "kaj sledi",
- "items": [
- "Več držav in krajev",
- "Več varnostnih funkcij",
- "Boljše načrtovanje poti",
- "Kolesarski potni list",
- "Skupnost kolesarjev"
- ]
- },
- "team": {
- "title": "ekipa",
- "link": "O nas",
- "members": [
- {
- "name": "jakob",
- "role": "Soustanovitelj in direktor",
- "bio": "Vodi produkt in partnerstva: aplikacijo, podatke v ozadju in mrežo partnerjev."
- },
- {
- "name": "tanja",
- "role": "Soustanoviteljica in operativna direktorica",
- "bio": "Vodi podjetje: administracijo, pogodbe, pravna in davčna vprašanja, marketing in lokalne partnerje."
- }
- ]
- },
- "kit": {
- "title": "medijski paket",
- "body": "V medijih še nismo bili, zato bi bilo to prvič. Če pišeš o kolesarjenju, e-kolesih ali potovanjih v regiji, se z veseljem pogovorimo in pošljemo vse, kar potrebuješ.",
- "items": [
- {
- "name": "Logotipi",
- "note": "SVG + PNG"
- },
- {
- "name": "Posnetki zaslona",
- "note": "iOS + Android"
- },
- {
- "name": "Fotografije ustanoviteljev",
- "note": "Na zahtevo"
- },
- {
- "name": "Dejstva",
- "note": "Ta stran"
- }
- ]
- },
- "final": {
- "title": "te zanima zyflow?",
- "body": "Predstavitev in številke delimo neposredno. Povej nam nekaj o sebi in oglasili se bomo.",
- "cta": "Zaprosi za predstavitev",
- "ctaSecondary": "Vprašanja medijev"
- }
- },
- "routes": {
- "blejcanka": {
- "crumbType": "Turistična",
- "titleHtml": "blejčanka",
- "lede": "Zahodni cvet Kranjske rože do Blejskega jezera: skoraj 80 km, blizu 1.000 m vzpona in klasika Gorenjske, Kropa, jezero in trg Radovljice.",
- "place": "kranj",
- "coords": "46,24° S, 14,35° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "79 <span>km</span>",
- "elevationHtml": "944 <span>m</span>",
- "difficulty": "Srednje",
- "intro": "Blejčanka je lepota dneva Kranjske rože. Zapustite savsko ravnino, se vzpnete proti Jamniku, dokler se ne odprejo Karavanke, nato v kovaške ulice Krope in do blejskega gradu ter obale, pred povratkom še skozi Radovljico. Dovolj dolgo, da šteje, in dovolj razgledno, da se izplača vsak meter.",
- "asideNote": "Turistična · Kranjska roža · Visit Kranj",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Blejčanka (79 km do Bleda) | Zyflow",
- "metaDescription": "Blejčanka: iz Kranja do Bleda mimo Krope in Radovljice, 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "944 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "79 km",
- "unit": " · 944 m",
- "sections": [
- {
- "title": "Vzpon proti Karavankam",
- "body": "Iz središča Kranja se cesta nagne proti Jamniku. Po nekaj kilometrih poštenega vzpona se odprejo grebenski razgledi, znak, da ste zapustili ravninske cvetove.",
- "body2": "Sledi Kropa: ozke ulice, kovaška dediščina in ena najbolj atmosferičnih vasi v vsej roži. Ustavitve si zasluži, preden se krajina povsem odpre proti jezeru."
- },
- {
- "title": "Bled, nato Radovljica",
- "body": "Bled je čustveni vrhunec dneva, otok, grad in obala, ki jo prepozna vsak. Vozite previdno zaradi prometa; nagrada je razglednica, zaradi katere ste prišli.",
- "body2": "Baročni trg Radovljice je kulturni iztek pred povratkom proti Kranju. Vzponi so večinoma za vami, noge pa začutijo vseh 944 m."
- },
- {
- "title": "Kako z Zyflow",
- "body": "To je sladka točka za e-kolo: skoraj 80 km in skoraj tisoč višincev. Pred odhodom označite polnilnice pri Bledu in kosilo v Kropi ali Radovljici.",
- "body2": "Preverite veter na izpostavljenih odsekih in si za zaključek shranite zgodnjo kavarno v Kranju. Pot odprite v Zyflow, ko želite navigacijo in kolesarju prijazna mesta na istem zemljevidu."
- }
- ]
- },
- "jezerjanka": {
- "crumbType": "Turistična",
- "titleHtml": "jezerjanka",
- "lede": "Iz Kranja ob Kokri v prvo slovensko gorniško vas, ledeniške doline, planine in mirnejši ritem kot ob jezerih.",
- "place": "kranj",
- "coords": "46,24° S, 14,35° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "76 <span>km</span>",
- "elevationHtml": "603 <span>m</span>",
- "difficulty": "Srednje",
- "intro": "Jezerjanka je alpski cvet Kranjske rože. Namesto razglednic dobite delujoče planine, ostre stene in zeleno skledo Jezerskega pod Kamniško-Savinjskimi Alpami. Pri 76 km in okoli 600 m vzpona je zavezujoča, a ne dirkaška.",
- "asideNote": "Turistična · Kranjska roža · Visit Kranj",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Jezerjanka (76 km do Jezerskega) | Zyflow",
- "metaDescription": "Jezerjanka ob Kokri iz Kranja do Jezerskega: 76 km in 603 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "603 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "76 km",
- "unit": " · 603 m",
- "sections": [
- {
- "title": "Ob Kokri navzgor",
- "body": "Iz Kranja se ustalite na dolinski cesti skozi Preddvor. Kokra se postopoma zoži, prometa je manj, vrhovi se zložijo pred vami.",
- "body2": "Tu dan spremeni značaj, iz mestne ture v gorsko dolinsko vožnjo. Imate pri roki prigrizke; storitev je višje vse manj."
- },
- {
- "title": "V Jezersko",
- "body": "Jezersko se odpre kot ledeniški amfiteater: trate, kmetije in grebeni, zaradi katerih je vas dobila status gorniške. Peljite dno doline, nato po želji dodajte kratko lokalno zanko.",
- "body2": "Povratek gre po istem koridorju proti jugu. Spuščajte se s prostorom za pohodnike in kmečki promet ter si shranite kavarno v Preddvoru, če ste višje izpustili kosilo."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Vodo in hrano označite pred odhodom iz Kranja, srednji del je reven. Polnilnica pri ustju doline je zavarovanje na e-kolesu.",
- "body2": "Jezerjanko lahko povežete s krajšim jezerskim poldnevom (Mali vrh ali Ravenska Kočna), če ostanete čez noč. Glavno linijo odprite v Zyflow za navigacijo in filtre mest."
- }
- ]
- },
- "jezerski-vrh": {
- "crumbType": "Alpska",
- "titleHtml": "jezerski vrh",
- "lede": "Vzpon na nekdanji mejni prehod in naprej do Ankove planine, panorama Ravenske Kočne in Kamniških Alp.",
- "place": "jezersko",
- "coords": "46,40° S, 14,50° V",
- "durationHtml": "2,5 <span>h</span>",
- "distanceHtml": "18.2 <span>km</span>",
- "elevationHtml": "457 <span>m</span>",
- "difficulty": "Srednje",
- "intro": "Jezerski vrh je klasična jezerska razgledna tura: slatina na začetku, sedlo na meji na sredini, planina na koncu. Okoli 18,2 km in 457 m v približno dveh urah in pol.",
- "asideNote": "Alpska · Jezerska kolesarska pot",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Jezerski vrh – Ankova planina | Zyflow",
- "metaDescription": "Jezerski vrh do Ankove planine z razgledom na Ravensko Kočno: 18,2 km in 457 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "457 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "18.2 km",
- "unit": " · 457 m",
- "sections": [
- {
- "title": "Od slatine do sedla",
- "body": "Zgodnjo cesto delite s cestnimi kolesarji proti meji. Natočite malo Jezerske slatine na urejeni točki, požirek zadošča; več shranite za povratek.",
- "body2": "Vzpon do nekdanjega mejnega prehoda. Med slovenskim in avstrijskim objektom levo za strmejši zaključek."
- },
- {
- "title": "Ankova planina",
- "body": "Razgledi se odprejo hitro: Ravenska Kočna, stena Kamniško-Savinjskih Alp, nato vsa jezerska dolina z Velikim vrhom, Kozjim vrhom in Storžičem. Nadaljujte po položnejši cesti do Ankove planine in nekdanje vojaške karavle.",
- "body2": "Nazaj po isti poti. Ob spustu po želji še cerkev sv. Andreja in Šenkova domačija."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Na sedlu se vreme hitro obrne, pred zadnjim vzponom preverite zavetje. Označite slatino in kosilo v dolini.",
- "body2": "Jezerski vrh odprite v Zyflow kot večji razgledni brat Malega vrha za vikend na Jezerskem."
- }
- ]
- },
- "k11-planine-pod-kosuto": {
- "crumbType": "Alpska",
- "titleHtml": "planine pod košuto",
- "lede": "Alpska zastavonoša Tržiča: gozdne ceste in police planin pod belo steno Košute, veliko vzpona, še več razgleda.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "39,7 <span>km</span>",
- "elevationHtml": "1740 <span>m</span>",
- "difficulty": "Zahtevno",
- "intro": "K11 je visoki podpis tržiške mreže. Iz mesta v strme gozdne pristope, ki se odprejo v verigo planin pod Košuto, z razgledi proti Avstriji. To je poln gorski dan, ne kavarniška zanka.",
- "asideNote": "Alpska · Visit Tržič · K11",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K11 Planine pod Košuto | Zyflow",
- "metaDescription": "Alpska tura iz Tržiča na planine pod Košuto. Odpri pot v aplikaciji Zyflow.",
- "climb": "1740 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "39,7 km",
- "unit": " · 1740 m",
- "sections": [
- {
- "title": "V podnožje Karavank",
- "body": "Iz Tržiča, ko asfalt redči in prevzame gozd. Nakloni prihajajo v valovih; senca pomaga, višinci pa ne ponehajo.",
- "body2": "Zgodnji obrati obstajajo, če se vreme spremeni. Višje planine nagradijo tiste, ki si prihranijo rezervo za zadnje police."
- },
- {
- "title": "Planine pod Košuto",
- "body": "Apnenčasti greben Košute ostane v vidnem polju, ko zapustite drevje. Alpske koče in travnate sledi določajo sredino dneva, skupaj s pohodniki, živino in tišino.",
- "body2": "Spust z disciplino. Gozdne ceste hitrost znižujejo počasi; sipki odseki kaznujejo pozno zaviranje."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Pred zavezo preverite odprtost koč in vodo. Označite zasilni spust in mestno kavarno za zaključek.",
- "body2": "K11 odprite v Zyflow, ko hočete linijo na zemljevidu z vremennom in kontekstom mest, to ni pot za improvizacijo na prazno."
- }
- ]
- },
- "k16-trzic-jezersko": {
- "crumbType": "Alpska",
- "titleHtml": "tržič – jezersko",
- "lede": "Povezovalni alpski dan s tržiške strani Karavank v ledeniško skledo Jezerskega, iz doline v dolino, vztrajen vzpon.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "28,1 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Zahtevno",
- "intro": "K16 je most v tržiškem naboru: manj razglednic, več zavezujočih gorskih kilometrov in prava menjava doline, ko se končno spustite proti Jezerskemu.",
- "asideNote": "Alpska · Visit Tržič · K16",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K16 Tržič – Jezersko | Zyflow",
- "metaDescription": "Gozdna povezava iz Tržiča do Jezerskega. Odpri pot v aplikaciji Zyflow.",
- "climb": "1299 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "28,1 km",
- "unit": " · 1299 m",
- "sections": [
- {
- "title": "Iz Tržiča",
- "body": "Iz mesta v gozd, ki vseeno nenehno pridobiva. Zgodnji kilometri dajo ton, to je prenos z zobmi, ne sprehod.",
- "body2": "Vzemite več hrane, kot mislite. V sredini je storitev manj kot na jezerskih cvetovih iz Kranja."
- },
- {
- "title": "V Jezersko",
- "body": "Visoki prehod vas naposled nagne proti odprtim tratam in ledeniškim stenam Jezerskega. Kontrast s tržiškim industrijskim vhodom je smisel ture.",
- "body2": "Vnaprej se odločite, ali je Jezersko cilj (prenočitev) ali obrat. Oboje deluje; improvizirati sme samo eno."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Polnjenje in obroke načrtujte na obeh koncih. Označite zasilni izhod, če se visoki del zapre zaradi vremena.",
- "body2": "K16 odprite v Zyflow, da vidite ves koridor, in brskajte po krajših jezerskih zankah za naslednje jutro."
- }
- ]
- },
- "k21-dom-pod-storzicem": {
- "crumbType": "Alpska",
- "titleHtml": "dom pod storžičem",
- "lede": "Zbran dan h koči iz Tržiča proti Domu pod Storžičem, gozdni nakloni, gorski zrak in jasen obrat pod piramido Storžiča.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "18,1 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Zahtevno",
- "intro": "K21 ima en cilj: koča pod Storžičem, hrana, nato spust s svežo pozornostjo v tržiške ulice. V duhu krajša od Košute ali Ljubelja, še vedno pošteno alpska.",
- "asideNote": "Alpska · Visit Tržič · K21",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K21 Dom pod Storžičem | Zyflow",
- "metaDescription": "Krajši vzpon iz Tržiča do Doma pod Storžičem. Odpri pot v aplikaciji Zyflow.",
- "climb": "280 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "18,1 km",
- "unit": " · 280 m",
- "sections": [
- {
- "title": "Gozdni pristop",
- "body": "Iz mesta v drevje z utrinki vrha. Naklon je enakomeren, ne teatralen, dobra ritmična vožnja.",
- "body2": "Skupne poti pomenijo vljudnost. Napovejte prehitevanja in pričakujte pohodnike pri koči."
- },
- {
- "title": "Koča in spust",
- "body": "Dom pod Storžičem je postanek, ki opredeli dan. Preverite odpiralni čas; zaprta koča proslavo spremeni v mrzel sendvič.",
- "body2": "Spust po isti poti. Zgodaj zavirajte v sipkih ovinkih in si za čustveni zaključek shranite kavarno v Tržiču."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Pred odhodom označite ure koče in kavo ob spustu. Vreme pod Storžičem se lahko obrne med vzponom.",
- "body2": "K21 odprite v Zyflow za linijo pristopa in jasno lokacijo koče, ko se gozd zgosti."
- }
- ]
- },
- "k35-prelaz-ljubelj": {
- "crumbType": "Alpska",
- "titleHtml": "prelaz ljubelj",
- "lede": "Podpisni prelaz Tržiča: trinajst serpentin na najstarejšem cestnem prelazu v Evropi, večinoma brez avtov, koča na 1.370 m in okoli 900 m vzpona.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "3 <span>h</span>",
- "distanceHtml": "26 <span>km</span>",
- "elevationHtml": "900 <span>m</span>",
- "difficulty": "Srednje",
- "intro": "K35 je tura, ki jo ljudje mislijo, ko rečejo »Ljubelj s kolesom«. Od avtobusne postaje v Tržiču skozi Podljubelj, previdno po odseku glavne ceste, nato na zgodovinski prelaz, ki je večino leta zaprt za avte. Zadnjih 300 višincev je strmih; koča in razgled v Avstrijo sta nagrada.",
- "asideNote": "Alpska · Visit Tržič · K35 · 3 h",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K35 Prelaz Ljubelj (26 km, 900 m) | Zyflow",
- "metaDescription": "Iz Tržiča po stari cesti na prelaz Ljubelj, zaprti za promet. Odpri pot v aplikaciji Zyflow.",
- "climb": "900 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "26 km",
- "unit": " · 900 m",
- "sections": [
- {
- "title": "Tržič–Podljubelj",
- "body": "Začnite nasproti avtobusne postaje in proti severu skozi staro jedro proti Podljubelju. Vaške ulice preidejo v dolinski pristop; storitve so še blizu za zadnji postanek.",
- "body2": "Za vasjo makadamska povezava teče ob glavni cesti proti Ljubelju, nato na kratko na pristop k predoru. Promet je resničen, vozite predvidljivo in odločno."
- },
- {
- "title": "Stari prelaz",
- "body": "Pred predorom desno na zgodovinsko cesto. Ostane trinajst serpentin in surov naklon. Odsek delite s pohodniki in, eno septembrsko nedeljo, s starodobniki; sicer pripada nogam in pljučem.",
- "body2": "Koča na prelazu je obrat. Jejte, poglejte v Avstrijo, nato isti spust s hladnimi zavorami in očmi za nasprotne kolesarje."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Računajte na približno tri ure in 26 km tja in nazaj. Pred strmim zaključkom označite odprtost koče in regeneracijsko kavarno v Tržiču.",
- "body2": "K35 odprite v Zyflow za vodenje po mešanih podlagah in spremljajte vreme na sedlu, na 1.370 m se hitro obrne."
- }
- ]
- },
- "k42-roznovenska": {
- "crumbType": "Turistična",
- "titleHtml": "rožnovenska pot",
- "lede": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču, romarske točke, doline in turistični ritem brez visokega prelaza.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "20,1 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Lahko–srednje",
- "intro": "K42 je za mešane skupine in dediščinske dni: mirnejše ceste, cerkve in vasi ter dovolj razdalje, da se počuti celovito, brez zaveze Košute.",
- "asideNote": "Turistična · Visit Tržič · K42",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K42 Rožnovenska pot | Zyflow",
- "metaDescription": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču. Odpri pot v aplikaciji Zyflow.",
- "climb": "369 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "20,1 km",
- "unit": " · 369 m",
- "sections": [
- {
- "title": "Dediščina doline",
- "body": "Povežite Tržič z brezjansko stranjo doline. Kavarn je več kot na alpskem naboru; foto postanki pridejo sami.",
- "body2": "Nakloni ostanejo prijazni. To je dan za nekoga, ki ljubi kraje bolj kot vate."
- },
- {
- "title": "Ritem in postanki",
- "body": "Ne hitite skozi trge in cerkve, to je smisel. Na prometnejših povezavah odločno, v vaških jedrih spet počasi.",
- "body2": "Pekarna na povratku zapečati ton poti."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Shranite kosila vzdolž koridorja in K42 uporabite kot ogrevanje pred težjimi tržiškimi dnevi.",
- "body2": "Pot odprite v Zyflow, da imate kulturne postanke in navigacijo na istem zemljevidu."
- }
- ]
- },
- "k43-dobrca": {
- "crumbType": "Alpska",
- "titleHtml": "dobrča",
- "lede": "Zaresen alpski dan iz Tržiča proti Dobrči, dolgi vzponi, grebenski zrak in občutek, da kolesariš Karavanke, ne mimo njih.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "26,9 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Zahtevno",
- "intro": "K43 sodi med težje tržiške alpske ture: dolgotrajen vzpon, višje manj prometa in panorame, zaradi katerih vstanete zgodaj.",
- "asideNote": "Alpska · Visit Tržič · K43",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K43 Dobrča | Zyflow",
- "metaDescription": "Alpska tura iz Tržiča do koče na Dobrči. Odpri pot v aplikaciji Zyflow.",
- "climb": "2067 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "26,9 km",
- "unit": " · 2067 m",
- "sections": [
- {
- "title": "Proti grebenu",
- "body": "Iz mesta v gozdne ceste, ki nočejo splohniti. Pomembnejša je potrpežljivost kot vrhunska moč.",
- "body2": "Vzemite plastenje. Izpostavljenost raste, ko redči drevje in vas najde grebenski veter."
- },
- {
- "title": "Nagrada Dobrče",
- "body": "Široki razgledi na Karavanke so plačilo za jutranje delo. Obrnite z dovolj časa za previden spust.",
- "body2": "To ni kavarniška zanka, nosite hrano in spoštujte vremenska okna."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Označite zasilne spuste in regeneracijo v Tržiču. Pred zadnjim pritiskom preverite razmere.",
- "body2": "K43 odprite v Zyflow, da ostaneta linija in izhodi vidna, ko prideta megla ali utrujenost."
- }
- ]
- },
- "k51-udin-borst": {
- "crumbType": "Gravel",
- "titleHtml": "udin boršt",
- "lede": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in pustolovščina brez visokega prelaza.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "25,3 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Srednje",
- "intro": "K51 je samozavestni gravel dan tržiškega nabora: več makedama kot asfalta, še vedno dovolj blizu mesta, da je kavarniški zaključek lahek.",
- "asideNote": "Gravel · Visit Tržič · K51",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K51 Udin boršt | Zyflow",
- "metaDescription": "Makadamska tura po Udin borštu iz Tržiča. Odpri pot v aplikaciji Zyflow.",
- "climb": "286 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "25,3 km",
- "unit": " · 286 m",
- "sections": [
- {
- "title": "Ob gozdnem robu",
- "body": "Zmešajte dolinske pristope s potmi skozi boršt. Pričakujte korenine, mehke zaplate po dežju in užitek sence pod krošnjami.",
- "body2": "Pritisk v pnevmatikah naj bo pošten. Spolzka glina iz igrivega naredi previdno."
- },
- {
- "title": "Obrat po želji",
- "body": "Lepota te družine zank je prilagodljivost, podaljšajte v rezervat ali skrajšajte na asfalt, ko energija pade.",
- "body2": "Skupne poti pomenijo umirjene hitrosti pri sprehajalcih."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Označite kavarniški povratek v Tržič in izhod na asfalt, če se gozd zablati.",
- "body2": "K51 odprite v Zyflow, da vidite gravel koridor poleg lažje zanke K52."
- }
- ]
- },
- "k52-pot-treh-zvonov": {
- "crumbType": "Turistična",
- "titleHtml": "pot treh zvonov",
- "lede": "Lahka družinska zanka tržiškega nabora, blag teren, vaški zvonovi in ritem za različne zmožnosti.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "10 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Lahko",
- "intro": "K52 je vhodna tura: prijazna razdalja in naklon, a še vedno prava gorenjska pokrajina okoli Tržiča. Vzemite otroke, regeneracijske noge ali nekoga novega na lokalnih cestah.",
- "asideNote": "Turistična · Visit Tržič · K52",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K52 Pot treh zvonov | Zyflow",
- "metaDescription": "Pot treh zvonov: lahka družinska krožna tura pri Tržiču. Odpri pot v aplikaciji Zyflow.",
- "climb": "144 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "10 km",
- "unit": " · 144 m",
- "sections": [
- {
- "title": "Zvonovi in vasi",
- "body": "Mirne ceste in kratke povezave mimo cerkva in zaselkov. »Trije zvonovi« so kulturna nit, ustavite se, poslušajte, peljite naprej.",
- "body2": "Podlage ostanejo prijazne. To je kvečjemu lahek gravel, ne blatna pustolovščina."
- },
- {
- "title": "Prvi lokalni dan",
- "body": "Z K52 spoznate kotlino, preden poskusite Ljubelj. Znamenitosti se usedejo; samozavest raste.",
- "body2": "Sladoled in voda sta del zasnove, ne optimizirajte ju stran."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Pred odhodom shranite družinam prijazne pinne. Zemljevid držite približan za hitre odločitve.",
- "body2": "K52 odprite v Zyflow kot mehki vstop v tržiški katalog."
- }
- ]
- },
- "k53-kriva-jelka": {
- "crumbType": "Gravel",
- "titleHtml": "kriva jelka",
- "lede": "V naravni rezervat Udin boršt do Krive jelke, senčne sledi in znamenit zaključek v gozdu.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "24 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Lahko–srednje",
- "intro": "K53 cilja na eno najbolj znanih gozdnih znamenitosti. Po dežju mehka tla in mirnejša alternativa visokim alpskim dnem nad Tržičem.",
- "asideNote": "Gravel · Visit Tržič · K53",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K53 Kriva jelka | Zyflow",
- "metaDescription": "Makadamska pot do Krive jelke v Udin borštu. Odpri pot v aplikaciji Zyflow.",
- "climb": "386 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "24 km",
- "unit": " · 386 m",
- "sections": [
- {
- "title": "Sledi rezervata",
- "body": "Vstopite v Udin boršt in sledite gozdnim cestam do Krive jelke. Krošnje držijo dan hladen; znamenitost da turi zgodbo.",
- "body2": "Prostor delite s sprehajalci. Napovejte se in pri drevesu umirite tempo."
- },
- {
- "title": "Najprej narava",
- "body": "Tu ne gre za hvalisanje z višinci. Gre za tihe kilometre in cilj, ki ga domačini imenujejo z nasmehom.",
- "body2": "Če so poti razmočene, izberite trdnejše povezave, rezervat ima raje zadržanost."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Označite izhod na asfalt in mestno kavarno. Povežite s K51 ali K52 za gravel vikend brez alpskega vremenskega tveganja.",
- "body2": "K53 odprite v Zyflow, da ostane linija rezervata jasna med podobnimi gozdnimi sledmi."
- }
- ]
- },
- "k55-gozd-udin-borst": {
- "crumbType": "Gravel",
- "titleHtml": "gozd – udin boršt",
- "lede": "Raznolika predalpska zanka med Gozdom in Udin borštom, več vzpona kot družinske, še vedno pod alpskimi nakloni.",
- "place": "tržič",
- "coords": "46,36° S, 14,31° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "26,9 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Srednje",
- "intro": "K55 je med lahkimi zvonovi in težkimi prelazi, ko hočete znoj, a ne Ljubelja ali Košute.",
- "asideNote": "Gravel · Visit Tržič · K55",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "K55 Gozd – Udin boršt | Zyflow",
- "metaDescription": "Makadamska tura med Gozdom in Udin borštom. Odpri pot v aplikaciji Zyflow.",
- "climb": "763 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "26,9 km",
- "unit": " · 763 m",
- "sections": [
- {
- "title": "Iz Gozda v boršt",
- "body": "Povežite stran Gozda s sledmi Udin boršta. Mešane podlage in kratki sunki namesto enega dolgega vzpona.",
- "body2": "Navigacija šteje, podobna križišča se ponavljajo. Shranjena linija prepreči nenamerne ekstra kilometre."
- },
- {
- "title": "Trening brez drame",
- "body": "Uporabite kot sredin tedna ali most med kulturo in alpskimi načrti. Višinci se naberejo brez izpostavljenosti.",
- "body2": "Po dežju izberite trdnejše možnosti; glinasti odseki hitro postanejo grdi."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Označite pekarno nazaj v Tržič in K55 držite ob K51/K52 na zemljevidu za vikende po meri.",
- "body2": "Pot odprite v Zyflow, da ostane predalpski koridor jasen."
- }
- ]
- },
- "kamnicanka": {
- "crumbType": "Turistična",
- "titleHtml": "kamničanka",
- "lede": "Najblažji cvet Kranjske rože: 70 km dolinske ture mimo gradov, cerkva in Arboretuma Volčji Potok, z komaj 250 m vzpona.",
- "place": "kranj",
- "coords": "46,24° S, 14,35° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "70 <span>km</span>",
- "elevationHtml": "254 <span>m</span>",
- "difficulty": "Lahko",
- "intro": "Kamničanka je pot, ki jo daste nekomu na prvi dan na Gorenjskem. Iz Kranja pelje po mirnih cestah, čez edini kolesarski most nad avtocesto pri Voklah, in poveže dediščinske postanke do Kamnika, nato pa mehko nazaj skozi gozdni makadam in savsko ravnino. Razdalja brez drame, in še vedno cel dan prave ture.",
- "asideNote": "Turistična · Kranjska roža · Visit Kranj",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Kamničanka (70 km) | Zyflow",
- "metaDescription": "Kamničanka iz Kranja mimo Kamnika in Arboretuma Volčji Potok: 70 km in 254 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "254 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "70 km",
- "unit": " · 254 m",
- "sections": [
- {
- "title": "Iz Kranja čez ravnino",
- "body": "Skozi Šenčur proti Adergasu, kjer stoji cerkev Marijinega oznanjenja sredi polj. Kmalu sledijo jezerca Češnjevek in grad Strmol, nato Grad pri Cerkljah, niz postankov brez težkega vzpona.",
- "body2": "Komendska dobrava vas pripelje do roba Kamnika. Staro mestno jedro je naravni kosilni postanek: ozke ulice, kavarne in dovolj sence pred arboretumskim delom."
- },
- {
- "title": "Arboretum, makadam in domov",
- "body": "Od Šmarce pot doseže Arboretum Volčji Potok. Vzemite si čas, to je eden najboljših vmesnih postankov v mreži Kranjske rože. Nato Radomlje in Mengeš proti Vodicam.",
- "body2": "Od Vodic proti Voglam se podlaga spremeni v dober makadam pod krošnjami. Nazaj v Kranj cesta spet splohni: urejen asfalt, lahka vožnja in zaključek, kjer na e-kolesu še ostane baterije."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Pred odhodom označite polnilnico in daljše kosilo v Kamniku. Če želite kavo pri kraju, ki ima urejeno parkiranje za kolesa, filtrirajte kolesarju prijazna mesta vzdolž zanke.",
- "body2": "Pri 70 km in le 254 m vzpona je to najvarnejši ogrevalni dan pred Blejčanko ali alpskimi turami iz Tržiča. Shranite GPX in isto linijo odprite v Zyflow, ko ste pripravljeni na navigacijo."
- }
- ]
- },
- "ljubljancanka": {
- "crumbType": "Turistična",
- "titleHtml": "ljubljančanka",
- "lede": "Iz Kranja proti prestolnici: podeželske povezave, grad Smlednik, nato Tivoli in Ljubljanski grad kot mestni vrhunec dneva.",
- "place": "kranj",
- "coords": "46,24° S, 14,35° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "70 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Lahko–srednje",
- "intro": "Ljubljančanka je mestni cvet mreže, dovolj podeželskih kilometrov za občutek ture, nato jasen prihod v Ljubljano. Okoli 70 km ustreza tistim, ki hočejo dediščino in gostoto kavarn brez alpskih naklonov.",
- "asideNote": "Turistična · Kranjska roža · Visit Kranj",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Ljubljančanka (70 km do Ljubljane) | Zyflow",
- "metaDescription": "Ljubljančanka iz Kranja do Ljubljane mimo gradu Smlednik: 70 km in 460 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "460 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "70 km",
- "unit": " · 460 m",
- "sections": [
- {
- "title": "Podeželski pristop",
- "body": "Iz Kranja po dolinskih cestah, ki postopoma zamenjajo gorenjska polja z ljubljansko kotlino. Grad Smlednik je znamenitost v pristopu, dober foto in raztezni postanek.",
- "body2": "Blizu mesta bodite pozorni na prometnejše povezave. Vožnja ni tehnična; izziv je pozornost v mešanem prometu."
- },
- {
- "title": "V Ljubljano",
- "body": "Tivoli ponudi zelen vstop, nato vzpon ali sprehod do Ljubljanskega gradu za klasični zaključek. Spodaj je staro mestno jedro polno kavarn, filtrirajte kolesarju prijazne.",
- "body2": "Nazaj proti severu po isti poti ali z vlakom v eno smer, če želite enosmerni dan. V vsakem primeru prihranite baterijo za mestni del."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Označite kosilo pri grajskem hribu in polnilnico pred povratkom. Mestni promet nagradi miren tempo in jasno vodenje.",
- "body2": "Ljubljančanko odprite v Zyflow, da imate navigacijo in plasti mest skupaj, posebej koristno, ko se okoli središča zgosti promet."
- }
- ]
- },
- "locanka": {
- "crumbType": "Turistična",
- "titleHtml": "ločanka",
- "lede": "Kranj–Škofja Loka: kamniti mostovi, grajski hrib in Crngrob na enem najlepših dediščinskih dni Kranjske rože.",
- "place": "kranj",
- "coords": "46,24° S, 14,35° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "64 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Lahko–srednje",
- "intro": "Ločanka je ljubljenka dediščine v Kranjski roži, nekoliko krajša od Blejčanke, gostejša v atmosferi starega mestnega jedra. Peljete v srednjeveško kotlino, ki je še vedno kot slika, s kapucinskima mostovoma in gradom nad sotočjem.",
- "asideNote": "Turistična · Kranjska roža · Visit Kranj",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Ločanka (64 km do Škofje Loke) | Zyflow",
- "metaDescription": "Ločanka iz Kranja do starega jedra Škofje Loke: 64 km in 930 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "930 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "64 km",
- "unit": " · 930 m",
- "sections": [
- {
- "title": "Proti loški kotlini",
- "body": "Iz Kranja po valovitih povezavah, ki vas nagnejo v loško krajino. Grajski hrib se pokaže, še preden ulice, uporaben orientir za ritem dneva.",
- "body2": "Promet je obvladljiv, če ostanete na označenih kolesarskih povezavah. Energijo prihranite za sprehod po jedru."
- },
- {
- "title": "Staro jedro in Crngrob",
- "body": "Mostova in ulice Škofje Loke so glavni dogodek. Če je gneča, dele peš, gre za kraj, ne za povprečno hitrost.",
- "body2": "Kratek ovinek v Crngrob doda freskirano cerkev, ki jo mnogi izpustijo. Nato proti Kranju z še enim kavarniškim postankom v rezervi."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Označite daljše kosilo v starem jedru in mirnejšo pot nazaj. Okoli 64 km se lepo usede med regeneracijo in poln gorski dan.",
- "body2": "Ločanko odprite v Zyflow za vodenje pristopa in vidnost kolesarju prijaznih kavarn ob prihodu."
- }
- ]
- },
- "mali-vrh": {
- "crumbType": "Alpska",
- "titleHtml": "mali vrh",
- "lede": "Miren jezerski poldan po gozdni cesti do razgledišča Mali vrh, Virnikov Grintovec, Košuta in Storžič v eni panoramski vožnji tja in nazaj.",
- "place": "jezersko",
- "coords": "46,40° S, 14,50° V",
- "durationHtml": "3 <span>h</span>",
- "distanceHtml": "17.3 <span>km</span>",
- "elevationHtml": "596 <span>m</span>",
- "difficulty": "Lahko–srednje",
- "intro": "Mali vrh je blaga panorama jezerskega nabora. Od TIC-a v Zgornjem Jezerskem čez lesen most proti Makekovi Kočni, blago po gozdni cesti, postanek na urejenem razgledišču, nato do klopi na koncu ceste nad Kokro.",
- "asideNote": "Alpska · Jezerska kolesarska pot · ~3 h",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Razgledišče Mali vrh (17,3 km) | Zyflow",
- "metaDescription": "Z Zgornjega Jezerskega do razgledišča pod Malim vrhom: 17,3 km in 596 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "596 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "17.3 km",
- "unit": " · 596 m",
- "sections": [
- {
- "title": "Proti Makekovi Kočni",
- "body": "Orientirajte se pri panoramski tabli pri TIC-u, nato asfalt proti Makekovi Kočni do odcepa za domačijo. Naravnost naprej po gozdni cesti, ki se vzpenja brez drame.",
- "body2": "Po približno štirih kilometrih se na ostrem levem ovinku pojavi urejeno razgledišče pod Malim vrhom, prvi veliki pogled proti Virnikovemu Grintovcu, Komatevri, Stegovniku, Storžiču in grebenu Košute."
- },
- {
- "title": "Končna klop in povratek",
- "body": "Nadaljujte po isti lahki gozdni cesti do konca. Klop gleda na Kokro in Jezersko Kočno, tih obrat.",
- "body2": "Nazaj po isti liniji. Prostor delite s pohodniki in na senčnem spustu umirite tempo."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Okoli 17,3 km in 596 m ter približno tri ure. Označite TIC in kavarnico v dolini za potem.",
- "body2": "Mali vrh odprite v Zyflow, ko hočete to kratko alpsko vožnjo poleg Ravenske Kočne ali Jezerskega vrha za večdnevno bivanje na Jezerskem."
- }
- ]
- },
- "ravenska-kocna": {
- "crumbType": "Alpska",
- "titleHtml": "ravenska kočna",
- "lede": "Mimo Planšarskega jezera v Ravensko Kočno in na Štularjevo planino, zatrep, tovorna žičnica in eden najbolj fotogeničnih jezerskih poldnevov.",
- "place": "jezersko",
- "coords": "46,40° S, 14,50° V",
- "durationHtml": "2,25 <span>h</span>",
- "distanceHtml": "16.6 <span>km</span>",
- "elevationHtml": "408 <span>m</span>",
- "difficulty": "Srednje",
- "intro": "Ravenska Kočna je razgledniška alpska zanka doline: jezero na ustju, ledeniške stene naprej in zaključni vzpon na Štularjevo planino proti Skuti. Okoli 16,6 km in 408 m jo držita ambiciozno, a še dosegljivo.",
- "asideNote": "Alpska · Jezerska kolesarska pot · ~2,25 h",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Ravenska Kočna – Štularjeva planina | Zyflow",
- "metaDescription": "Ravenska Kočna mimo Planšarskega jezera do Štularjeve planine: 16,6 km in 408 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "408 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "16.6 km",
- "unit": " · 408 m",
- "sections": [
- {
- "title": "Z jezera v dolino",
- "body": "Od TIC-a do Planšarskega jezera in obidite po desni. Pri lovskem domu Pod Turni imajo kolesarji prost prehod v Ravensko Kočno.",
- "body2": "Pri kmetiji Ancel asfalt preide v makadam. Mimo počivališča tematske poti in parkirišča do spodnje postaje tovorne žičnice za Češko kočo."
- },
- {
- "title": "Štularjeva planina",
- "body": "Desno še dobra dva kilometra vzpona. Na planini si vzemite čas za zatrep proti Skuti in vrhovom do Golega vrha.",
- "body2": "Spust po isti poti s pohodniki v mislih. Spet se ustavite ob jezeru, zasluži si počasen zaključek v vsakem letnem času."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Približno 2 uri 15 minut ob enakomerni vožnji. Označite možnosti ob jezeru in spoštujte skupne poti.",
- "body2": "Ravensko Kočno odprite v Zyflow poleg Malega vrha za dan z dvema zankama in kavo ali kopanjem vmes."
- }
- ]
- },
- "spodnji-virnik": {
- "crumbType": "Turistična",
- "titleHtml": "spodnji virnik",
- "lede": "Najkrajša jezerska tura: kamnolom lehnjaka, aktivni izvir in ekološka kmetija Spodnji Virnik z mlečnimi izdelki, ki jih velja odnesti.",
- "place": "jezersko",
- "coords": "46,40° S, 14,50° V",
- "durationHtml": "1,5 <span>h</span>",
- "distanceHtml": "9.4 <span>km</span>",
- "elevationHtml": "304 <span>m</span>",
- "difficulty": "Lahko",
- "intro": "Spodnji Virnik je zanka radovednosti, geologija, ki se dogaja pred vami, en strm odsek, ki ga lahko prehodite, in ekološka kmetija z razgledom na Grintovce. Okoli 9,4 km in 304 m v približno 90 minutah.",
- "asideNote": "Turistična · Jezerska kolesarska pot · ~1,5 h",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Spodnji Virnik – kamnolom lehnjaka | Zyflow",
- "metaDescription": "Kratka krožna tura na Jezerskem mimo kamnoloma lehnjaka do ekološke kmetije Spodnji Virnik: 9,4 km in 304 m vzpona. Odpri pot v aplikaciji Zyflow.",
- "climb": "304 m",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "9.4 km",
- "unit": " · 304 m",
- "sections": [
- {
- "title": "V stransko dolino Kokre",
- "body": "Iz Zgornjega Jezerskega v Spodnji Kraj in proti zgornji dolini Kokre. Desno se odpre Virnikov Grintovec, medtem ko peljete dno doline.",
- "body2": "Po prvem vzponu pridete do skladov lehnjaka in aktivnega izvira, kjer se kalcijev karbonat še vedno odlaga. To je poučno srce ture."
- },
- {
- "title": "Kmetija in sprehod do izvira",
- "body": "Po prečkanju potoka kratek strm vzpon proti Spodnjemu Virniku. Kolo pustite in peš do izvira; nato na kmetiji po želji siri, jogurt in skuta.",
- "body2": "Po makadamu na glavno cesto in domov. En sunkovit odsek je prehodljiv, še vedno lahka zmaga med kratkimi turami."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Vzemite nahrbtnik za mlečne izdelke. Označite kmetijo in TIC, da kratka zanka ne deluje izgubljeno.",
- "body2": "Spodnji Virnik odprite v Zyflow kot počitniški ali večerni spin poleg večjih jezerskih panoram."
- }
- ]
- },
- "trzicanka": {
- "crumbType": "Turistična",
- "titleHtml": "tržičanka",
- "lede": "Severni cvet Kranjske rože v Tržič, staro jedro, razvaline gradu Kamen in predprostor Ljubelja, Košute ter Udin boršta.",
- "place": "kranj",
- "coords": "46,24° S, 14,35° V",
- "durationHtml": "1 <span>dan</span>",
- "distanceHtml": "68 <span>km</span>",
- "elevationHtml": ", ",
- "difficulty": "Srednje",
- "intro": "Tržičanka poveže kranjsko rožo s tržiškim alpskim katalogom. Kot ciljni dan v zgodovinsko kotlino pod Karavankami ali kot pristop pred težjim prelazom naslednje jutro.",
- "asideNote": "Turistična · Kranjska roža · Visit Kranj",
- "cta": "Odpri v Zyflow",
- "ctaSecondary": "Prenesi aplikacijo",
- "gpxLabel": "Prenesi GPX",
- "metaTitle": "Tržičanka (68 km do Tržiča) | Zyflow",
- "metaDescription": "Tržičanka iz Kranja do Tržiča skozi kanjon Kokre in mimo gradu Kamen: 68 km. Odpri pot v aplikaciji Zyflow.",
- "climb": ", ",
- "climbLabel": "Višinci",
- "durationLabel": "Trajanje",
- "difficultyLabel": "Zahtevnost",
- "nextLabel": "Sezona",
- "nextValue": "apr. – okt.",
- "price": "68 km",
- "unit": "",
- "sections": [
- {
- "title": "Proti severu v kotlino",
- "body": "Dolinska vožnja iz Kranja gradi občutek vhoda v Tržič. Krajina se zoži; zgodovinsko jedro in industrijska dediščina ležita pod strmimi gozdnimi stenami.",
- "body2": "Razvaline gradu Kamen so klasični stranski postanek, kratek vzpon za širok razgled nazaj po dolini."
- },
- {
- "title": "Tržič kot vozlišče",
- "body": "V mestu stojite na začetku K35 Ljubelj, planin pod Košuto in mehkejših gravel dni po Udin borštu. S Tržičanko pridete dovolj sveži, da raziščete središče.",
- "body2": "Kavarn in oskrbe je tu več kot na visokih poteh. Zaloge napolnite, preden se zavežete čemur koli strmejšemu."
- },
- {
- "title": "Kako z Zyflow",
- "body": "Tržičanko shranite kot prenosni dan, nato z istega zemljevida povežite K35 ali K52. V mestu si označite polnilnico, če ste na e-kolesu.",
- "body2": "Pot odprite v Zyflow za vodenje pristopa, nato brskajte po bližnjih alpskih linijah, ne da bi zapustili aplikacijo."
- }
- ]
- }
- },
- "alts": {
- "appMap": "Zemljevid v aplikaciji Zyflow s kolesarjem prijaznimi kraji, polnilnicami in pitno vodo",
- "polaroid1": "Kolesarja na kamniti gorski poti",
- "aboutPolaroidCyclist": "Kolesar med zelenimi alpskimi travniki",
- "polaroid3": "Skupina kolesarjev na postanku v borovem gozdu",
- "ljubljanaBridge": "Ljubljanica in Tromostovje v Ljubljani",
- "coffeeSign": "Tabla pred kavarno z napisom »cyclists need coffee«",
- "feature2": "Kolesarja s prtljago na alpski cesti pod zasneženimi vrhovi",
- "tourHike": "Pohodniki na meglenem travnatem grebenu",
- "tour4wd": "Terensko vozilo s šotorom na strehi",
- "tourKayak": "Kajakaši na reki",
- "catSlovenia": "Blejsko jezero z otokom in Julijskimi Alpami",
- "catCroatia": "Pogled iz zraka na staro mestno jedro Rovinja v Istri",
- "feature1": "Kolesa, parkirana na starem mestnem trgu",
- "journal1": "Gozdnati griči ob sončnem zahodu",
- "feature3": "Kolesarji na dolinski poti pod nazobčanimi gorskimi vrhovi",
- "social1": "Terensko vozilo v puščavskem kanjonu",
- "social2": "Tabor s šotorom ob jezeru v mraku",
- "social3": "Kajak na mirnem morju z ledenimi gorami"
- },
- "guides": {
- "name": "Vodniki",
- "index": {
- "title": "Odgovori na kolesarska vprašanja",
- "lede": "Kratki odgovori za kolesarje in voznike e-koles, s številkami in viri, na katerih temeljijo.",
- "empty": "V tem jeziku še ni vodnikov.",
- "emptyLink": "Preberi angleške vodnike"
- },
- "dataLabel": "Ključne številke",
- "dataSource": "{source}, stanje {date}",
- "mapCredit": "{credit}, stanje {date}",
- "cta": {
- "title": "Najdi postanke v Zyflow",
- "ios": "App Store",
- "android": "Google Play",
- "planner": "Odpri v načrtovalniku"
- },
- "checked": "Preverjeno",
- "sources": "Viri",
- "accessed": "dostopano {date}",
- "related": "Sorodni vodniki",
- "fixtureNote": "Testni vodnik za predogled postavitve strani. Nikoli ni objavljen."
- }
+  "meta": {
+    "brand": "Zyflow",
+    "locale": "sl",
+    "source": "zyflow",
+    "pages": {
+      "open": {
+        "title": "Zyflow: Odpri v aplikaciji",
+        "description": "Odprite ta kraj ali turo v aplikaciji Zyflow ali si brezplačno prenesite aplikacijo za iOS in Android."
+      },
+      "404": {
+        "title": "Zyflow: Stran ne obstaja",
+        "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
+      },
+      "home": {
+        "title": "Zyflow: kraji, prijazni kolesarjem in e-kolesarjem",
+        "description": "Najdi kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice v 8 državah. Brezplačna aplikacija za kolesarje in e-kolesarje za iOS in Android."
+      },
+      "about": {
+        "title": "Zyflow: ekipa za kolesarjem prijaznimi kraji",
+        "description": "Spoznaj ekipo za Zyflowom, aplikacijo za iskanje kolesarjem prijaznih nastanitev, kavarn, restavracij in polnilnic. Narejeno v Sloveniji, HERKO d.o.o."
+      },
+      "tours": {
+        "title": "Zyflow: Kolesarske poti po Gorenjski",
+        "description": "20 kolesarskih poti po Kranju, Tržiču in Jezerskem. Odpri katerokoli pot v Zyflow."
+      },
+      "tour": {
+        "title": "Zyflow: Kolesarske poti",
+        "description": "Razišči kolesarske poti po Gorenjski in jih odpri v Zyflow."
+      },
+      "blog": {
+        "title": "Zyflow: Dnevnik",
+        "description": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti ekipe Zyflow za kolesarje in e-kolesarje."
+      },
+      "guides": {
+        "title": "Zyflow vodniki: odgovori na kolesarska vprašanja",
+        "description": "Kratki, preverjeni odgovori na vprašanja kolesarjev in voznikov e-koles, s pravimi številkami, viri in datumom zadnjega preverjanja."
+      },
+      "contact": {
+        "title": "Zyflow: Kontakt",
+        "description": "Dodaj svoj kraj, vprašaj o poteh ali se z nami pogovori o partnerstvih in naložbah. Ekipa Zyflow je dosegljiva na support@zyflow.eu."
+      },
+      "legal": {
+        "title": "Zyflow: Pravno",
+        "description": "Politika zasebnosti, politika piškotkov in pogoji uporabe za Zyflow in HERKO d.o.o."
+      },
+      "legal-privacy": {
+        "title": "Zyflow, Politika zasebnosti",
+        "description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke, ko uporabljate Zyflow."
+      },
+      "legal-cookies": {
+        "title": "Zyflow, Politika piškotkov",
+        "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljaš."
+      },
+      "legal-terms": {
+        "title": "Zyflow, Pogoji uporabe",
+        "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
+      },
+      "styleguide": {
+        "title": "Zyflow, Design System Styleguide",
+        "description": "Internal design tokens and components for the Zyflow rebuild."
+      },
+      "business": {
+        "title": "Zyflow: za podjetja",
+        "description": "Pokaži svoj lokal, nastanitev ali kolesarsko trgovino kolesarjem in e-kolesarjem. Na zemljevidu Zyflow označi parkirišče, shrambo ali polnilnico."
+      },
+      "press": {
+        "title": "Zyflow: mediji in vlagatelji",
+        "description": "Dejstva, ekipa in kontakt za medije in vlagatelje. Zyflow kolesarjem pomaga najti kolesarjem prijazne kraje in tja kolesariti brez skrbi."
+      },
+      "tour-blejcanka": {
+        "title": "Zyflow: Blejčanka",
+        "description": "Blejčanka: iz Kranja do Bleda mimo Krope in Radovljice, 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-jezerjanka": {
+        "title": "Zyflow: Jezerjanka",
+        "description": "Jezerjanka ob Kokri iz Kranja do Jezerskega: 76 km in 603 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-jezerski-vrh": {
+        "title": "Zyflow: Jezerski vrh in Ankova planina",
+        "description": "Jezerski vrh do Ankove planine z razgledom na Ravensko Kočno: 18,2 km in 457 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k11-planine-pod-kosuto": {
+        "title": "Zyflow: Planine pod Košuto",
+        "description": "Alpska tura iz Tržiča na planine pod Košuto. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k16-trzic-jezersko": {
+        "title": "Zyflow: Tržič - Jezersko",
+        "description": "Gozdna povezava iz Tržiča do Jezerskega. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k21-dom-pod-storzicem": {
+        "title": "Zyflow: Dom pod Storžičem",
+        "description": "Krajši vzpon iz Tržiča do Doma pod Storžičem. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k35-prelaz-ljubelj": {
+        "title": "Zyflow: Prelaz Ljubelj",
+        "description": "Iz Tržiča po stari cesti na prelaz Ljubelj, zaprti za promet. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k42-roznovenska": {
+        "title": "Zyflow: Rožnovenska pot po kolesarsko",
+        "description": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k43-dobrca": {
+        "title": "Zyflow: Dobrča",
+        "description": "Alpska tura iz Tržiča do koče na Dobrči. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k51-udin-borst": {
+        "title": "Zyflow: Udin boršt - s kolesom ob vznožju in pogumno čezenj",
+        "description": "Makadamska tura po Udin borštu iz Tržiča. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k52-pot-treh-zvonov": {
+        "title": "Zyflow: Lahkotno kolesarjenje po Poti treh zvonov",
+        "description": "Pot treh zvonov: lahka družinska krožna tura pri Tržiču. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k53-kriva-jelka": {
+        "title": "Zyflow: Na Udin boršt do Krive jelke",
+        "description": "Makadamska pot do Krive jelke v Udin borštu. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-k55-gozd-udin-borst": {
+        "title": "Zyflow: Gozd - Udin boršt",
+        "description": "Makadamska tura med Gozdom in Udin borštom. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-kamnicanka": {
+        "title": "Zyflow: Kamničanka",
+        "description": "Kamničanka iz Kranja mimo Kamnika in Arboretuma Volčji Potok: 70 km in 254 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-ljubljancanka": {
+        "title": "Zyflow: Ljubljančanka",
+        "description": "Ljubljančanka iz Kranja do Ljubljane mimo gradu Smlednik: 70 km in 460 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-locanka": {
+        "title": "Zyflow: Ločanka",
+        "description": "Ločanka iz Kranja do starega jedra Škofje Loke: 64 km in 930 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-mali-vrh": {
+        "title": "Zyflow: Jezersko in razgledišče Mali vrh",
+        "description": "Z Zgornjega Jezerskega do razgledišča pod Malim vrhom: 17,3 km in 596 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-ravenska-kocna": {
+        "title": "Zyflow: Ravenska Kočna in Štularjeva planina",
+        "description": "Ravenska Kočna mimo Planšarskega jezera do Štularjeve planine: 16,6 km in 408 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-spodnji-virnik": {
+        "title": "Zyflow: Spodnji Virnik in kamnolom lehnjaka",
+        "description": "Kratka krožna tura na Jezerskem mimo kamnoloma lehnjaka do ekološke kmetije Spodnji Virnik: 9,4 km in 304 m vzpona. Odpri pot v aplikaciji Zyflow."
+      },
+      "tour-trzicanka": {
+        "title": "Zyflow: Tržičanka",
+        "description": "Tržičanka iz Kranja do Tržiča skozi kanjon Kokre in mimo gradu Kamen: 68 km. Odpri pot v aplikaciji Zyflow."
+      },
+      "legal-pages-privacy-policy": {
+        "title": "Zyflow, Politika zasebnosti",
+        "description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke, ko uporabljate Zyflow."
+      },
+      "legal-pages-terms": {
+        "title": "Zyflow, Pogoji uporabe",
+        "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
+      },
+      "legal-pages-cookie-policy": {
+        "title": "Zyflow, Politika piškotkov",
+        "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljate."
+      },
+      "legal-pages-impressum": {
+        "title": "Zyflow, Impressum",
+        "description": "Pravno obvestilo in podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
+      },
+      "legal-pages-delete-account": {
+        "title": "Zyflow, Delete your account",
+        "description": "How to request deletion of your Zyflow account and what happens to your data."
+      },
+      "legal-pages-izbris-racuna": {
+        "title": "Zyflow, Izbris računa",
+        "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
+      },
+      "e-plus-destinacije": {
+        "title": "Zyflow, Model E+ pametne podeželske destinacije",
+        "description": "Projekt LEADER: model E+ destinacije za e-kolesarjem prijazno podeželje v sedmih gorenjskih občinah. Sofinancira Evropska unija (EKSRP)."
+      },
+      "legal-pages-business-privacy": {
+        "title": "Zyflow, Besedilo o zasebnosti za vaše spletno mesto",
+        "description": "Odstavek o zasebnosti za vaše spletno mesto: kaj zbira gradnik s kolesarskim zemljevidom Zyflow in zakaj."
+      },
+      "legal-pages-business-dpa": {
+        "title": "Zyflow, Obdelava podatkov za podjetja",
+        "description": "Kdaj Zyflow obdeluje osebne podatke za poslovne stranke in naša standardna pogodba o obdelavi po 28. členu GDPR."
+      }
+    }
+  },
+  "chrome": {
+    "announcement": {
+      "label": "Novost",
+      "text": "Zyflow je na voljo za iOS in Android, v 8 državah.",
+      "textShort": "Na voljo za iOS in Android",
+      "cta": "Prenesi →"
+    },
+    "nav": {
+      "cta": "Prenesi",
+      "links": {
+        "home": "Domov",
+        "tours": "Poti",
+        "about": "O nas",
+        "journal": "Dnevnik",
+        "contact": "Kontakt",
+        "business": "Za podjetja"
+      },
+      "menu": "Meni",
+      "menuClose": "Zapri meni",
+      "themeDark": "Temni način",
+      "themeLight": "Svetli način"
+    },
+    "footer": {
+      "links": {
+        "home": "Domov",
+        "tours": "Poti",
+        "about": "O nas",
+        "journal": "Dnevnik",
+        "contact": "Kontakt",
+        "press": "Mediji in vlagatelji",
+        "legal": "Pravno",
+        "privacy": "Zasebnost",
+        "terms": "Pogoji",
+        "cookies": "Piškotki",
+        "impressum": "Impressum",
+        "guides": "Vodniki",
+        "towns": "Kolesarjenje po krajih"
+      },
+      "cats": {
+        "kayak": "Tura",
+        "bike": "Vsakodnevno",
+        "hike": "Alpsko",
+        "fourwd": "Makadam"
+      },
+      "newsletter": {
+        "title": "novice",
+        "body": "Novi kolesarjem prijazni kraji, poti in novosti v aplikaciji. Enkrat na mesec, brez spama.",
+        "note": "Tvojih podatkov ne delimo z nikomer.",
+        "subscribe": "Naroči se",
+        "email": "E-pošta",
+        "emailPlaceholder": "E-poštni naslov",
+        "honeypot": "Spletna stran podjetja",
+        "success": "Hvala, e-naslov smo shranili.",
+        "error": "Nekaj je šlo narobe. Poskusi znova.",
+        "errorValidation": "Vnesi veljaven e-poštni naslov.",
+        "errorRateLimit": "Preveč poskusov. Počakaj nekaj minut.",
+        "errorVerify": "Dokončaj preverjanje in poskusi znova."
+      },
+      "company": "Zyflow ustvarja HERKO d.o.o., Slovenija",
+      "copyright": "© 2026 Zyflow. Vse pravice pridržane.",
+      "cookiePreferences": "Nastavitve piškotkov"
+    },
+    "notFound": {
+      "title": "Strani ni mogoče najti",
+      "body": "Ta stran je zavila napačno. Vrni se domov ali razišči poti.",
+      "home": "Nazaj domov",
+      "tours": "Razišči poti"
+    },
+    "openApp": {
+      "title": "Odprite v aplikaciji Zyflow",
+      "body": "Nekdo vam je s kolesarskega zemljevida Zyflow poslal kraj ali turo. Oglejte si jo v aplikaciji Zyflow, brezplačno za iOS in Android.",
+      "open": "Odpri aplikacijo",
+      "get": "Še nimate aplikacije? Prenesite jo tukaj in nato znova tapnite povezavo."
+    },
+    "lang": {
+      "label": "Jezik",
+      "en": "EN",
+      "sl": "SL"
+    },
+    "appModal": {
+      "title": "Prenesi aplikacijo Zyflow",
+      "lede": "Najdi kolesarjem prijazne nastanitve, kavarne in restavracije, s polnilnicami in kolesarskimi storitvami na zemljevidu. Brezplačno za iOS in Android.",
+      "badge": "Brezplačno za iOS in Android",
+      "downloadTitle": "Prenesi Zyflow zdaj",
+      "downloadBody": "Obišči App Store, Google Play ali s telefonom skeniraj QR kodo.",
+      "close": "Zapri"
+    },
+    "ui": {
+      "step": "Korak"
+    }
+  },
+  "home": {
+    "hero": {
+      "titleHtml": "Kolesarjem prijazne nastanitve, kavarne in polnilnice",
+      "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
+      "cta": "Prenesi aplikacijo",
+      "nextDepartureLabel": "Izpostavljena pot",
+      "nextDepartureTitle": "Ljubljana–Trst",
+      "nextDepartureDate": "134 km · +1.766 m",
+      "brandHtml": "raziskuj<br>dlje."
+    },
+    "appBanner": {
+      "eyebrow": "Aplikacija Zyflow",
+      "titleHtml": "Vsak postanek.<br>En zemljevid.",
+      "body": "Nastanitve, kavarne, restavracije, polnilnice, pitna voda in servis koles, pri vsakem pa vidiš, zakaj je prijazen kolesarjem. Brezplačno za iOS in Android.",
+      "cta": "Prenesi",
+      "phoneTitle": "Vsak postanek.",
+      "chips": [
+        "Nočitve",
+        "Kava",
+        "Polnilnice"
+      ],
+      "phoneFoot": "Brezplačno za iOS in Android"
+    },
+    "trust": {
+      "one": "Regionalni zemljevidi in podatki o poteh",
+      "two": "Lokalna kolesarska skupnost",
+      "three": "Znanje o polnjenju e-koles",
+      "four": "Odprti podatki o krajih in mobilnosti"
+    },
+    "adventures": {
+      "titleHtml": "izpostavljene<br />poti",
+      "allLink": "Razišči poti",
+      "viewCta": "Poglej pot",
+      "cards": [
+        {
+          "place": "Tržič",
+          "region": "Prelaz Ljubelj, Slovenija",
+          "title": "Prelaz Ljubelj",
+          "meta0": "26 km",
+          "meta1": "900 m",
+          "meta2": "Alpska",
+          "body": "Trinajst serpentin na najstarejšem cestnem prelazu v Evropi, vzpon brez avtov do 1.370 m nad Tržičem.",
+          "price": "26 km",
+          "unit": " · 900 m"
+        },
+        {
+          "place": "Kranj → Kamnik",
+          "region": "Gorenjska, Slovenija",
+          "title": "Kamničanka",
+          "meta0": "70 km",
+          "meta1": "254 m",
+          "meta2": "Turistična",
+          "body": "Blagi cvet Kranjske rože: gradovi, Arboretum Volčji Potok in dolinske ceste skoraj brez težkega vzpona.",
+          "price": "70 km",
+          "unit": " · 254 m"
+        },
+        {
+          "place": "Jezersko",
+          "region": "Kamniške Alpe, Slovenija",
+          "title": "Mali vrh",
+          "meta0": "17,3 km",
+          "meta1": "596 m",
+          "meta2": "Alpska",
+          "body": "Gozdna cesta do mirnega razgledišča nad Jezerskim, Grintovec, Košuta in Storžič v enem mirnem poldnevu.",
+          "price": "17,3 km",
+          "unit": " · 596 m"
+        }
+      ]
+    },
+    "intro": {
+      "greeting": "Živjo.",
+      "body": "Sva Jakob in Tanja, mala ekipa za Zyflowom iz Slovenije. Zyflow gradiva zato, da ima vsaka vožnja dobre postanke, polnilnico, ko jo potrebuješ, in dobrodošlico za tvoje kolo. Vprašanja ali ideje? Prebereva vsako sporočilo.",
+      "link": "O Zyflowu"
+    },
+    "featuredTour": {
+      "eyebrow": "Vsaka pot, v celoti na zemljevidu",
+      "title": "ljubljana–trst",
+      "metaDuration": "134 km",
+      "metaSeason": "+1.766 m",
+      "cta": "Poglej, kaj je ob poti",
+      "metaStops": "Nastanitve, kava in polnilnice",
+      "metaChargers": "1 dan"
+    },
+    "categories": {
+      "cycle": "slovenija",
+      "hike": "hrvaška",
+      "kayak": "avstrija",
+      "fourwd": "italija",
+      "cta": "Poglej poti",
+      "comingSoon": "poti kmalu",
+      "comingSoonHint": "Kraji že na voljo, poti v pripravi"
+    },
+    "testimonial": {
+      "quote": "Je tvoj kraj prijazen kolesarjem?",
+      "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, skupaj s parkiriščem za kolesa, shrambo ali polnilnico na zemljevidu.",
+      "cta": "Dodaj svoj kraj",
+      "ctaSecondary": "Vlagatelji in mediji"
+    },
+    "whyUs": {
+      "titleHtml": "Zakaj<br />Zyflow?",
+      "items": [
+        {
+          "title": "kraji, ki jih drugi zemljevidi spregledajo",
+          "body": "Večina zemljevidov ti pokaže ceste. Zyflow ti pokaže, kje se ustaviti: nastanitve, kavarne in restavracije, ki sprejmejo kolesa, z označenim parkiriščem, shrambo in polnjenjem."
+        },
+        {
+          "title": "varnost, ki jo vidiš",
+          "body": "Zapore cest, dela na cesti in dogodki na tvoji poti, kraje koles po območjih in polnilnice tam, kjer jih baterija potrebuje."
+        },
+        {
+          "title": "načrt baterije, ki mu lahko zaupaš",
+          "body": "Zyflow načrtuje glede na tvoj doseg, vzpone, veter in temperaturo, da se vožnja ne konča prezgodaj."
+        }
+      ]
+    },
+    "appStage": {
+      "eyebrow": "V aplikaciji",
+      "titleHtml": "Aplikacija<br />na poti.",
+      "body": "Baterija, vzponi, polnilnice in vreme v enem načrtu, da veš, da bo vožnja šla do konca.",
+      "ctaIos": "Prenesi za iOS",
+      "ctaAndroid": "Prenesi za Android"
+    },
+    "appFlow": {
+      "titleHtml": "Od zemljevida<br>do vožnje.",
+      "steps": [
+        {
+          "title": "raziskuj",
+          "body": "Odpri zemljevid in najdi nastanitve, kavarne in restavracije, ki sprejmejo kolesa, ob približevanju pa še polnilnice, vodo in servis."
+        },
+        {
+          "title": "načrtuj",
+          "body": "Poveži kraje v vožnjo. Zyflow načrtuje baterijo glede na vzpone in postavi polnilnice, preden jih potrebuješ."
+        },
+        {
+          "title": "kolesari",
+          "body": "Pred odhodom preveri zapore cest in poglej, kje kradejo kolesa. Potem kolesari in se ustavi, kjer ti je všeč."
+        }
+      ]
+    },
+    "features": {
+      "titleHtml": "Kraji, ki<br><span class=\"accent\">sprejmejo kolesa.</span>",
+      "items": [
+        {
+          "title": "najdi kolesarjem prijazne kraje",
+          "body": "Parkirišče za kolesa, varna shramba, tlačilka ali polnilnica, označeno pri vsakem kraju. Zemljevid lahko filtriraš, da pokaže samo kraje, ki sprejmejo kolesa.",
+          "link": "Prenesi"
+        },
+        {
+          "title": "kolesari brez skrbi",
+          "body": "Pred odhodom poglej zapore cest in dela na cesti, preveri kraje koles po območjih in načrtuj baterijo s polnilnicami ob poti.",
+          "link": "Razišči poti"
+        },
+        {
+          "title": "rastemo po Evropi",
+          "body": "Na voljo v 8 državah, začenši s Slovenijo, Hrvaško in Avstrijo, in rastemo država za državo.",
+          "link": "Preberi dnevnik"
+        }
+      ]
+    },
+    "journal": {
+      "titleHtml": "Zyflow<br />dnevnik",
+      "cta": "Preberi dnevnik"
+    },
+    "faq": {
+      "title": "pogosta vprašanja",
+      "footnote": "Vprašanja, povratne informacije ali kraj, ki nam manjka? Piši na support@zyflow.eu. Preberemo vsako sporočilo.",
+      "contactLink": "Piši nam",
+      "items": [
+        {
+          "q": "Kaj je Zyflow?",
+          "a": "Zyflow je brezplačna aplikacija za iskanje kolesarjem prijaznih krajev: nastanitev, kavarn, restavracij, polnilnic in kolesarskih storitev. Vidiš lahko zapore cest in kraje koles po območjih ter med kraji načrtuješ vožnjo z mislijo na baterijo."
+        },
+        {
+          "q": "Je Zyflow brezplačen?",
+          "a": "Da. Zyflow je brezplačen za prenos in uporabo na iOS in Android."
+        },
+        {
+          "q": "Katera kolesa Zyflow podpira?",
+          "a": "Vsa: cestna, gravel, potovalna, gorska in e-kolesa. Z e-kolesom dobiš še načrt baterije in polnilnice ob poti."
+        },
+        {
+          "q": "Kako vem, da je kraj prijazen kolesarjem?",
+          "a": "Kraji s parkiriščem za kolesa, varno shrambo, tlačilko ali polnilnico so označeni, zemljevid pa lahko filtriraš, da pokaže samo kolesarjem prijazne kraje."
+        },
+        {
+          "q": "Imam kavarno, hotel ali kolesarsko trgovino. Sem lahko na Zyflowu?",
+          "a": "Seveda. Piši nam prek kontaktnega obrazca in dodali bomo tvoj kraj, skupaj s parkiriščem za kolesa, shrambo ali polnilnico na zemljevidu."
+        }
+      ]
+    },
+    "social": {
+      "handle": "@zyflow",
+      "cta": "Sledi Zyflowu",
+      "videos": [
+        {
+          "title": "Ljubljana–Trst",
+          "place": "Slovenija / Italija",
+          "coords": "46.0569° N, 14.5058° E"
+        },
+        {
+          "title": "Zanka čez alpske prelaze",
+          "place": "Julijske Alpe, Slovenija",
+          "coords": "46.3792° N, 13.8363° E"
+        },
+        {
+          "title": "Obalni gravel",
+          "place": "Istra, Hrvaška",
+          "coords": "45.2396° N, 13.9367° E"
+        }
+      ]
+    }
+  },
+  "tours": {
+    "hero": {
+      "title": "kolesarske poti po gorenjski",
+      "lede": "Dvajset tur iz Kranja, Tržiča in Jezerskega, jezerske zanke, alpski prelazi in miren gravel. Izberi pot in jo odpri v Zyflow.",
+      "quals": [
+        "20 poti po Gorenjski",
+        "GPX in opisi pripravljeni",
+        "Odpri v Zyflow",
+        "iOS in Android",
+        "Brezplačen prenos"
+      ],
+      "eyebrow": "naše poti"
+    },
+    "filter": {
+      "label": "pregled:",
+      "all": "vse",
+      "tour": "potovanje",
+      "alpine": "alpsko",
+      "commute": "vsakdan",
+      "gravel": "gravel"
+    },
+    "viewCta": "Poglej pot",
+    "empty": "Tukaj še ni poti. Nove dodajamo, ko na zemljevid dodamo več kolesarjem prijaznih krajev.",
+    "region": {
+      "slovenia": "Slovenija",
+      "croatia": "Hrvaška",
+      "austria": "Avstrija",
+      "italy": "Italija"
+    },
+    "cards": [
+      {
+        "place": "Kranj → Bled",
+        "region": "Gorenjska, Slovenija",
+        "title": "Blejčanka",
+        "meta0": "79 km",
+        "meta1": "944 m",
+        "meta2": "Turistična",
+        "body": "Celodnevna zanka iz Kranja do Blejskega jezera, trg Radovljice, kovaška Kropa in obala jezera, nato vzpon nazaj.",
+        "price": "79 km",
+        "unit": " · 944 m"
+      },
+      {
+        "place": "Kranj → Jezersko",
+        "region": "Gorenjska, Slovenija",
+        "title": "Jezerjanka",
+        "meta0": "76 km",
+        "meta1": "603 m",
+        "meta2": "Turistična",
+        "body": "Ob Kokri mimo Preddvora v prvo gorniško vas, ledeniške doline, planine in mirnejše ceste kot ob jezerih.",
+        "price": "76 km",
+        "unit": " · 603 m"
+      },
+      {
+        "place": "Jezersko",
+        "region": "Gorenjska, Slovenija",
+        "title": "Jezerski vrh",
+        "meta0": "18.2 km",
+        "meta1": "457 m",
+        "meta2": "Alpska",
+        "body": "Vzpon na nekdanji mejni prehod in naprej do Ankove planine, panorama Ravenske Kočne in Kamniških Alp.",
+        "price": "18.2 km",
+        "unit": " · 457 m"
+      },
+      {
+        "place": "Tržič → Košuta",
+        "region": "Gorenjska, Slovenija",
+        "title": "Planine pod Košuto",
+        "meta0": "39,7 km",
+        "meta1": "1740 m",
+        "meta2": "Alpska",
+        "body": "Alpska zastavonoša Tržiča: gozdne ceste in police planin pod belo steno Košute, veliko vzpona, še več razgleda.",
+        "price": "1740 m",
+        "unit": " · 1740 m"
+      },
+      {
+        "place": "Tržič → Jezersko",
+        "region": "Gorenjska, Slovenija",
+        "title": "Tržič – Jezersko",
+        "meta0": "28,1 km",
+        "meta1": "Alpska",
+        "meta2": "Alpska",
+        "body": "Povezovalna tura med dvema alpskima dolinama, s tržiške strani Karavank v ledeniško skledo Jezerskega.",
+        "price": "28,1 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič → Storžič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Dom pod Storžičem",
+        "meta0": "18,1 km",
+        "meta1": "Alpska",
+        "meta2": "Alpska",
+        "body": "Koča pod Storžičem: gozdni vzponi, gorski zrak in jasen obrat pri Domu pod Storžičem.",
+        "price": "18,1 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič → Ljubelj",
+        "region": "Gorenjska, Slovenija",
+        "title": "Prelaz Ljubelj",
+        "meta0": "26 km",
+        "meta1": "900 m",
+        "meta2": "Alpska",
+        "body": "Trinajst serpentin na najstarejšem cestnem prelazu v Evropi, zaprto za avte, odprto za kolesa, koča na 1.370 m.",
+        "price": "26 km",
+        "unit": " · 900 m"
+      },
+      {
+        "place": "Tržič → Brezje pri Tržiču",
+        "region": "Gorenjska, Slovenija",
+        "title": "Rožnovenska pot",
+        "meta0": "20,1 km",
+        "meta1": "Turistična",
+        "meta2": "Turistična",
+        "body": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču, cerkve, doline in razgledna vožnja brez polne alpske zahtevnosti.",
+        "price": "20,1 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič → Dobrča",
+        "region": "Gorenjska, Slovenija",
+        "title": "Dobrča",
+        "meta0": "26,9 km",
+        "meta1": "Alpska",
+        "meta2": "Alpska",
+        "body": "Alpska tura proti Dobrči, dolgi vzponi, grebenski zrak in občutek, da kolesariš Karavanke, ne mimo njih.",
+        "price": "26,9 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič · Udin boršt",
+        "region": "Gorenjska, Slovenija",
+        "title": "Udin boršt",
+        "meta0": "25,3 km",
+        "meta1": "Gravel",
+        "meta2": "Gravel",
+        "body": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in dovolj raznolikosti brez visokega prelaza.",
+        "price": "25,3 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič · Trije zvonovi",
+        "region": "Gorenjska, Slovenija",
+        "title": "Pot treh zvonov",
+        "meta0": "10 km",
+        "meta1": "Turistična",
+        "meta2": "Turistična",
+        "body": "Lahka družinska zanka tržiškega nabora, blag teren, vaški zvonovi in ritem za različne zmožnosti.",
+        "price": "10 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič · Kriva jelka",
+        "region": "Gorenjska, Slovenija",
+        "title": "Kriva jelka",
+        "meta0": "24 km",
+        "meta1": "Gravel",
+        "meta2": "Gravel",
+        "body": "V naravni rezervat Udin boršt do Krive jelke, senčne sledi in znamenit zaključek v gozdu.",
+        "price": "24 km",
+        "unit": ""
+      },
+      {
+        "place": "Tržič · Gozd",
+        "region": "Gorenjska, Slovenija",
+        "title": "Gozd – Udin boršt",
+        "meta0": "26,9 km",
+        "meta1": "Gravel",
+        "meta2": "Gravel",
+        "body": "Raznolika predalpska zanka med Gozdom in Udin borštom, več vzpona kot družinske, še vedno pod alpskimi nakloni.",
+        "price": "26,9 km",
+        "unit": ""
+      },
+      {
+        "place": "Kranj → Kamnik",
+        "region": "Gorenjska, Slovenija",
+        "title": "Kamničanka",
+        "meta0": "70 km",
+        "meta1": "254 m",
+        "meta2": "Turistična",
+        "body": "Bolj ravninska zanka čez Šenčur, Adergas, Cerklje in Kamnik, Arboretum Volčji Potok, grad Strmol in edini kolesarski most čez avtocesto.",
+        "price": "70 km",
+        "unit": " · 254 m"
+      },
+      {
+        "place": "Kranj → Ljubljana",
+        "region": "Gorenjska, Slovenija",
+        "title": "Ljubljančanka",
+        "meta0": "70 km",
+        "meta1": "Turistična",
+        "meta2": "Turistična",
+        "body": "Iz Kranja proti prestolnici, grad Smlednik, Tivoli in Ljubljanski grad na dnevu, ki zmeša podeželje z mestnim prihodom.",
+        "price": "70 km",
+        "unit": ""
+      },
+      {
+        "place": "Kranj → Škofja Loka",
+        "region": "Gorenjska, Slovenija",
+        "title": "Ločanka",
+        "meta0": "64 km",
+        "meta1": "Turistična",
+        "meta2": "Turistična",
+        "body": "V srednjeveško jedro Škofje Loke, kapucinska mostova, grajski hrib in Crngrob na enem najlepših dni Kranjske rože.",
+        "price": "64 km",
+        "unit": ""
+      },
+      {
+        "place": "Jezersko · Mali vrh",
+        "region": "Gorenjska, Slovenija",
+        "title": "Mali vrh",
+        "meta0": "17.3 km",
+        "meta1": "596 m",
+        "meta2": "Alpska",
+        "body": "Mirna gozdna cesta do razgledišča Mali vrh, Virnikov Grintovec, Košuta in Storžič v enem mirnem jezerskem poldnevu.",
+        "price": "17.3 km",
+        "unit": " · 596 m"
+      },
+      {
+        "place": "Jezersko · Ravenska Kočna",
+        "region": "Gorenjska, Slovenija",
+        "title": "Ravenska Kočna",
+        "meta0": "16.6 km",
+        "meta1": "408 m",
+        "meta2": "Alpska",
+        "body": "Mimo Planšarskega jezera v Ravensko Kočno in na Štularjevo planino, zatrep in tovorna žičnica pod Češko kočo.",
+        "price": "16.6 km",
+        "unit": " · 408 m"
+      },
+      {
+        "place": "Jezersko · Virnik",
+        "region": "Gorenjska, Slovenija",
+        "title": "Spodnji Virnik",
+        "meta0": "9.4 km",
+        "meta1": "304 m",
+        "meta2": "Turistična",
+        "body": "Kratka poučna zanka do kamnoloma lehnjaka in kmetije Spodnji Virnik, kamnina nastaja pred vami, nato mlečni izdelki na paši.",
+        "price": "9.4 km",
+        "unit": " · 304 m"
+      },
+      {
+        "place": "Kranj → Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Tržičanka",
+        "meta0": "68 km",
+        "meta1": "Turistična",
+        "meta2": "Turistična",
+        "body": "Proti severu v staro jedro Tržiča in predprostor Karavank, razvaline gradu Kamen, doline in predokus alpske mreže naprej.",
+        "price": "68 km",
+        "unit": ""
+      }
+    ]
+  },
+  "tour": {
+    "hero": {
+      "crumbParent": "Poti",
+      "crumbType": "Potovanje",
+      "titleHtml": "ljubljana<br />– trst",
+      "lede": "134 km od Ljubljane do Jadrana, mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami in kolesarskimi storitvami ob poti.",
+      "price": "134 km",
+      "unit": " · 1 dan",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo"
+    },
+    "meta": {
+      "place": "ljubljana",
+      "coords": "46.0569° N, 14.5058° E",
+      "durationHtml": "1 day<br />134 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednje",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+1,766 m",
+      "climbLabel": "Višina"
+    },
+    "body": {
+      "intro": "Pot od Ljubljane do Trsta v enem dnevu prečka tri pokrajine: zeleni rob prestolnice, kamnite vasi Krasa in jadransko obalo. Zyflow vmes postavi kolesarjem prijazne kraje, zato vožnja ni le to, kako daleč prideš, ampak tudi, kje se ustaviš.",
+      "sections": [
+        {
+          "title": "Odhod iz Ljubljane",
+          "body": "Mimo Vrhnike se odpelješ po mirnih cestah. Prvi postanek za kavo pride hitro in se splača: kmalu zatem se začne vzpon na planoto. Zyflow pokaže pričakovano stanje baterije na celotni poti, zato lahko začetek odpelješ premišljeno in ne na pamet."
+        },
+        {
+          "title": "Kraške vasi in postanki",
+          "body": "Med Postojno in Divačo se cesta dviga in spušča skozi kamnite vasi, z družinskimi restavracijami in gostišči, ki sprejmejo kolesa. Polnilnice in voda so tam, kjer se začnejo najtežji odseki.",
+          "bullets": [
+            "Pred odhodom poglej zapore cest in dela na cesti na poti",
+            "Vedi, kateri kraji imajo parkirišče za kolesa, varno shrambo ali polnilnico"
+          ]
+        },
+        {
+          "title": "Spust do Jadrana",
+          "body": "Za Sežano se planota konča in cesta se spusti proti Tržaškemu zalivu. Končaj s kavo ob morju ali ostani čez noč in se jutri vrni."
+        }
+      ]
+    },
+    "aside": {
+      "title": "kolesari brez skrbi:",
+      "items": [
+        "Zapore cest pred odhodom",
+        "Kraje koles po območjih",
+        "Načrt baterije s polnilnicami",
+        "Kolo je dobrodošlo, kjer spiš",
+        "Kraji tudi brez signala",
+        "iOS in Android"
+      ],
+      "cta": "Odpri v Zyflow",
+      "note": "Odpri pot v aplikaciji Zyflow, načrtovanje z baterijo, višino in polnilnicami.",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "quote": {
+      "quote": "Je tvoj kraj ob tej poti?",
+      "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, prav na poti, ki jo vozijo."
+    },
+    "more": {
+      "title": "več poti",
+      "allLink": "Poglej vse"
+    }
+  },
+  "blog": {
+    "hero": {
+      "titleHtml": "zyflow<br />dnevnik",
+      "lede": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti v Zyflowu."
+    },
+    "readStory": "Preberi zgodbo",
+    "readingTime": "{n} min branja",
+    "updated": "Posodobljeno",
+    "journalName": "Dnevnik",
+    "filters": {
+      "country": "Država",
+      "region": "Regija",
+      "type": "Vrsta",
+      "activity": "Aktivnost",
+      "topic": "Tema",
+      "all": "Vse"
+    },
+    "empty": "Nobena zgodba ne ustreza tem filtrom.",
+    "comingSoon": "Članki v slovenščini še prihajajo.",
+    "comingSoonLink": "Preberi dnevnik v angleščini",
+    "rss": "RSS",
+    "explore": "Razišči",
+    "facts": {
+      "distance": "Razdalja",
+      "climb": "Vzpon",
+      "difficulty": "Težavnost",
+      "season": "Sezona",
+      "eat": "Hrana",
+      "sleep": "Spanje",
+      "charge": "Polnjenje"
+    },
+    "howWeMade": "Kako smo to pripravili",
+    "relatedTours": "Sorodne poti",
+    "relatedPosts": "Sorodne zgodbe",
+    "moreIn": "Več v {name}",
+    "inThisGuide": "V tem vodniku",
+    "appCta": {
+      "title": "Načrtuj turo v Zyflowu",
+      "ios": "Prenesi v App Store",
+      "android": "Prenesi v Google Play"
+    },
+    "authorStories": "Zgodbe",
+    "authorDescription": "Vodniki in zgodbe, ki jih piše {name}.",
+    "licence": {
+      "own": "Zyflow",
+      "partner": "Uporabljeno z dovoljenjem",
+      "guest": "Gostujoči kolesar",
+      "ccBy": "CC BY 4.0",
+      "ccBySa": "CC BY-SA 4.0",
+      "cc0": "CC0"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Ustanovljeno 2024",
+      "titleHtml": "Ekipa za kolesarjem prijaznimi kraji",
+      "place": "Slovenija · na voljo v 8 državah",
+      "storyTitle": "Dobrih krajev za postanek je povsod dovolj. Večina zemljevidov jih le ne pokaže.",
+      "storyBody": "Sva Jakob in Tanja, ekipa za Zyflowom, ki ga razvija HERKO d.o.o. v Sloveniji. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice ter med njimi kolesariti brez skrbi. Danes je na voljo za iOS in Android v 8 državah, s 7.400+ polnilnicami na zemljevidu in podatki partnerjev, kot je Open Data Hub. Naslednji koraki: več držav, več krajev in več načinov, kako kolesarjem zagotoviti varnost.",
+      "sign": "Jakob in Tanja",
+      "brandHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>"
+    },
+    "values": {
+      "title": "naše vrednote",
+      "items": [
+        {
+          "titleHtml": "raziskuj<br>brez skrbi.",
+          "body": "Zyflow je tu zato, da lahko rečeš da ovinku. Pri vsakem kraju vidiš, ali je tvoje kolo dobrodošlo, zato je naslednji postanek izbira in ne loterija."
+        },
+        {
+          "titleHtml": "varnost, ki<br>jo vidiš.",
+          "body": "Zapore cest, kraje koles po območjih in polnilnice ob poti. Pokažemo, kar vemo, da se lahko odločiš, preden se odpelješ."
+        },
+        {
+          "titleHtml": "iskrenost pred<br>pompom.",
+          "body": "Obljubimo samo to, kar aplikacija zna danes. Ko nekaj še nastaja, to povemo, in prisluhnemo, ko nam kolesarji povedo, kaj naj popravimo."
+        },
+        {
+          "titleHtml": "brezplačno za<br>vsakega kolesarja.",
+          "body": "Zyflow je brezplačen za iOS in Android, za vsakega kolesarja in vsako kolo. Začni z enim postankom, potem pojdi dlje."
+        }
+      ]
+    },
+    "team": {
+      "title": "naša ekipa",
+      "members": [
+        {
+          "name": "jakob",
+          "role": "Soustanovitelj in direktor",
+          "bio": "Vodi produkt in partnerstva. Gradi aplikacijo, podatke v ozadju in mrežo partnerjev, s katero zemljevid raste.",
+          "quals": [
+            "Produkt in podatki",
+            "Partnerstva",
+            "iOS in Android"
+          ]
+        },
+        {
+          "name": "tanja",
+          "role": "Soustanoviteljica in operativna direktorica",
+          "bio": "Vodi podjetje: administracijo, pogodbe, pravna in davčna vprašanja, pa tudi marketing, raziskave trga in lokalne partnerje.",
+          "quals": [
+            "Operativa in pravo",
+            "Marketing in raziskave"
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "kontakt",
+      "email": "hello@zyflow.eu",
+      "support": "support@zyflow.eu",
+      "social": [
+        "LinkedIn",
+        "Instagram",
+        "Bluesky",
+        "X"
+      ]
+    },
+    "form": {
+      "title": "pošlji sporočilo",
+      "lede": "Vprašaj o krajih, poteh ali polnilnicah, dodaj svojo kavarno, restavracijo ali nastanitev ali se z nami pogovori o partnerstvih in naložbah. Odgovorimo na vsako sporočilo.",
+      "firstName": "Ime",
+      "lastName": "Priimek",
+      "email": "E-pošta",
+      "phone": "Telefon (neobvezno)",
+      "topic": "Tema (neobvezno)",
+      "topicPlaceholder": "Izberi",
+      "topics": [
+        "Kraji in poti",
+        "Dodaj moj kraj",
+        "Partnerstvo",
+        "Vlagatelji",
+        "Mediji",
+        "Drugo"
+      ],
+      "message": "Sporočilo",
+      "submit": "Pošlji sporočilo",
+      "honeypot": "Spletna stran podjetja",
+      "success": "Hvala, sporočilo smo prejeli.",
+      "error": "Nekaj je šlo narobe. Poskusi znova.",
+      "errorValidation": "Preveri vnesene podatke in poskusi znova.",
+      "errorRateLimit": "Preveč poskusov. Počakaj nekaj minut.",
+      "errorVerify": "Dokončaj preverjanje in poskusi znova."
+    }
+  },
+  "legal": {
+    "nav": {
+      "terms": "Pogoji uporabe",
+      "privacy": "Politika zasebnosti",
+      "cookies": "Politika piškotkov",
+      "impressum": "Impressum",
+      "deletion": "Izbris računa"
+    },
+    "hub": {
+      "tag": "Pravno",
+      "title": "pravno",
+      "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
+      "termsLede": "Pravila uporabe, naročnine, odgovornost in pravne informacije za Zyflow.",
+      "privacyLede": "How HERKO d.o.o. collects, uses, stores, and protects your personal data.",
+      "cookiesLede": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in v aplikaciji.",
+      "impressumLede": "Podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
+    },
+    "terms": {
+      "tag": "Posodobljeno",
+      "date": "30. 11. 2026",
+      "dateLabel": "Posodobljeno 30. 11. 2026 · v2.2",
+      "title": "pogoji uporabe",
+      "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
+    },
+    "privacy": {
+      "tag": "Posodobljeno",
+      "date": "30. 6. 2026",
+      "dateLabel": "Updated 30. 6. 2026 · v1.1",
+      "title": "politika zasebnosti",
+      "lede": "This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
+    },
+    "cookies": {
+      "tag": "Posodobljeno",
+      "date": "9. 10. 2026",
+      "dateLabel": "Posodobljeno 9. 10. 2026 · v1.1",
+      "title": "politika piškotkov",
+      "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v aplikaciji in na zyflow.eu, vključno z neobveznimi analitičnimi in oglaševalskimi piškotki, ki jih lahko upravljate."
+    },
+    "doc": {
+      "tag": "Posodobljeno"
+    },
+    "redirect": {
+      "body": "Ta stran se je prestavila. Nadaljujte na trenutno različico."
+    },
+    "impressum": {
+      "dateLabel": "Pravno obvestilo"
+    }
+  },
+  "business": {
+    "hero": {
+      "crumb1": "Za podjetja",
+      "crumb2": "Kavarne, nastanitve, kolesarske trgovine",
+      "titleHtml": "Zyflow za kavarne, nastanitve in kolesarske trgovine",
+      "lede": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svoje parkirišče za kolesa, shrambo ali polnilnico in postani postanek na poteh, ki vodijo mimo tvojih vrat. Svoj vnos urejaš sam.",
+      "price": "Brezplačno",
+      "unit": " · v času zagona",
+      "nextLabel": "Na voljo v",
+      "nextValue": "8 državah",
+      "cta": "Dodaj svoj kraj",
+      "brandHtml": "postavi svoj kraj<br>na zemljevid"
+    },
+    "tiles": [
+      {
+        "value": "Na zemljevidu",
+        "label": "Kolesarji te vidijo v Raziskuj"
+      },
+      {
+        "value": "Kolesarska oprema",
+        "label": "Parkirišče, shramba, tlačilka, polnilnica"
+      },
+      {
+        "value": "Na poteh",
+        "label": "Prikazan na poteh, ki vodijo mimo tebe"
+      },
+      {
+        "value": "Vse imaš v rokah",
+        "label": "Urejaj urnik, fotografije in podatke"
+      }
+    ],
+    "who": {
+      "title": "komu je namenjeno",
+      "link": "Vprašaj nas karkoli",
+      "chip": "na zemljevidu",
+      "price": "Brezplačno",
+      "unit": " · v času zagona",
+      "cta": "Dodaj svoj kraj",
+      "cards": [
+        {
+          "tag": "Kava in hrana",
+          "title": "Kavarne in restavracije",
+          "meta0": "Kava",
+          "meta1": "Restavracije",
+          "body": "Bodi postanek, okoli katerega kolesarji načrtujejo odmor. Pokaži, da so kolesa dobrodošla, kje jih parkirati in ali jih lahko napolnijo."
+        },
+        {
+          "tag": "Nastanitve",
+          "title": "Hoteli in gostišča",
+          "meta0": "Nastanitev",
+          "meta1": "Prenočitev",
+          "body": "Kolesarji na večdnevnih poteh najprej iščejo eno stvar: varno mesto za kolo. Pokaži svojo shrambo in polnjenje in bodi izbran za noč."
+        },
+        {
+          "tag": "Storitve",
+          "title": "Kolesarske trgovine in servisi",
+          "meta0": "Servis",
+          "meta1": "Polnjenje",
+          "body": "Servis, izposoja, polnjenje ali tlačilka pred vrati. Pojavi se v sloju storitev, ki ga kolesarji odprejo, ko gre kaj narobe."
+        }
+      ]
+    },
+    "how": {
+      "title": "kako deluje",
+      "stepLabel": "korak",
+      "steps": [
+        {
+          "title": "Zaprosi za dostop",
+          "body": "Ustvari račun in nam povej o svojem podjetju. Vzame dve minuti."
+        },
+        {
+          "title": "Odobrimo tvoj kraj",
+          "body": "Preverimo tvojo prošnjo in tvoj kraj povežemo z zemljevidom."
+        },
+        {
+          "title": "Urejaj ga sam",
+          "body": "Kadarkoli urejaj podatke, odpiralni čas, fotografije in kolesarsko opremo."
+        },
+        {
+          "title": "Kolesarji te najdejo",
+          "body": "Pojaviš se v Raziskuj in na poteh, ki vodijo mimo tebe."
+        }
+      ]
+    },
+    "data": {
+      "title": "turistične organizacije in podatkovni partnerji",
+      "body": "Z odprtimi viri podatkov in lokalnimi partnerji skrbimo, da so kraji, polnilnice in poti točni. Če upravljaš kolesarske podatke, turistične vnose ali mrežo lokalov, jih povežimo.",
+      "cta": "Postani podatkovni partner"
+    },
+    "faq": {
+      "title": "vprašanja podjetij",
+      "items": [
+        {
+          "q": "Ali to kaj stane?",
+          "a": "Dodajanje kraja je v času zagona brezplačno. Kasneje nameravamo dodati plačljive možnosti, na primer večjo vidnost na poteh. O vsaki spremembi te bomo obvestili dovolj zgodaj."
+        },
+        {
+          "q": "Kaj šteje kot prijazno kolesarjem?",
+          "a": "Pomaga karkoli od tega: prostor za parkiranje ali zaklepanje kolesa, varna shramba, tlačilka ali orodje ali vtičnica, kjer lahko kolesarji napolnijo e-kolo."
+        },
+        {
+          "q": "Katere države pokrivate?",
+          "a": "Zyflow je na voljo v 8 državah, začenši s Slovenijo in sosednjimi državami."
+        },
+        {
+          "q": "Kako spremenim svoje podatke?",
+          "a": "Prijavi se v partnerski portal in svoj kraj uredi neposredno. Spremembe lokacije na zemljevidu ali vrste kraja gredo prek naše ekipe."
+        }
+      ],
+      "footnote": "Nisi prepričan, ali spadaš sem?",
+      "footLink": "Vprašaj nas"
+    },
+    "final": {
+      "title": "pripravljeni, ko si ti",
+      "body": "Povej nam o svojem kraju in pokazali ga bomo kolesarjem, ki se že odpravljajo mimo.",
+      "cta": "Dodaj svoj kraj",
+      "ctaSecondary": "Najprej se pogovorimo"
+    },
+    "signin": "Že sodeluješ z nami? Prijava"
+  },
+  "press": {
+    "hero": {
+      "crumb1": "Mediji in vlagatelji",
+      "crumb2": "Dejstva",
+      "titleHtml": "zyflow<br>na kratko",
+      "lede": "Šele začenjamo. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne kraje in med njimi kolesariti brez skrbi. Tu so dejstva, ekipa in kontakt.",
+      "price": "Zgodnja faza",
+      "unit": " · 2026",
+      "nextLabel": "Narejeno v",
+      "nextValue": "Sloveniji",
+      "cta": "Zaprosi za predstavitev",
+      "eyebrow": "Za medije in vlagatelje"
+    },
+    "tiles": [
+      {
+        "value": "iOS + Android",
+        "label": "Na voljo v obeh trgovinah"
+      },
+      {
+        "value": "8",
+        "label": "Držav"
+      },
+      {
+        "value": "7.400+",
+        "label": "Polnilnic na zemljevidu"
+      },
+      {
+        "value": "Open Data Hub",
+        "label": "Podpisan podatkovni partner"
+      }
+    ],
+    "about": {
+      "title": "na kratko",
+      "p1": "Večina zemljevidov kolesarjem pokaže ceste. Zyflow jim pokaže, kje se ustaviti: nastanitve, kavarne in restavracije, ki sprejmejo kolesa, ter polnilnice, vodo in servis. Na zemljevidu so tudi zapore cest in kraje koles po območjih, da lahko kolesarji raziskujejo brez skrbi.",
+      "p2": "Zyflow razvija HERKO d.o.o. v Sloveniji, javno je bil zagnan za iOS in Android leta 2026."
+    },
+    "next": {
+      "title": "kaj sledi",
+      "items": [
+        "Več držav in krajev",
+        "Več varnostnih funkcij",
+        "Boljše načrtovanje poti",
+        "Kolesarski potni list",
+        "Skupnost kolesarjev"
+      ]
+    },
+    "team": {
+      "title": "ekipa",
+      "link": "O nas",
+      "members": [
+        {
+          "name": "jakob",
+          "role": "Soustanovitelj in direktor",
+          "bio": "Vodi produkt in partnerstva: aplikacijo, podatke v ozadju in mrežo partnerjev."
+        },
+        {
+          "name": "tanja",
+          "role": "Soustanoviteljica in operativna direktorica",
+          "bio": "Vodi podjetje: administracijo, pogodbe, pravna in davčna vprašanja, marketing in lokalne partnerje."
+        }
+      ]
+    },
+    "kit": {
+      "title": "medijski paket",
+      "body": "V medijih še nismo bili, zato bi bilo to prvič. Če pišeš o kolesarjenju, e-kolesih ali potovanjih v regiji, se z veseljem pogovorimo in pošljemo vse, kar potrebuješ.",
+      "items": [
+        {
+          "name": "Logotipi",
+          "note": "SVG + PNG"
+        },
+        {
+          "name": "Posnetki zaslona",
+          "note": "iOS + Android"
+        },
+        {
+          "name": "Fotografije ustanoviteljev",
+          "note": "Na zahtevo"
+        },
+        {
+          "name": "Dejstva",
+          "note": "Ta stran"
+        }
+      ]
+    },
+    "final": {
+      "title": "te zanima zyflow?",
+      "body": "Predstavitev in številke delimo neposredno. Povej nam nekaj o sebi in oglasili se bomo.",
+      "cta": "Zaprosi za predstavitev",
+      "ctaSecondary": "Vprašanja medijev"
+    }
+  },
+  "routes": {
+    "blejcanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "blejčanka",
+      "lede": "Zahodni cvet Kranjske rože do Blejskega jezera: skoraj 80 km, blizu 1.000 m vzpona in klasika Gorenjske, Kropa, jezero in trg Radovljice.",
+      "place": "kranj",
+      "coords": "46,24° S, 14,35° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "79 <span>km</span>",
+      "elevationHtml": "944 <span>m</span>",
+      "difficulty": "Srednje",
+      "intro": "Blejčanka je lepota dneva Kranjske rože. Zapustite savsko ravnino, se vzpnete proti Jamniku, dokler se ne odprejo Karavanke, nato v kovaške ulice Krope in do blejskega gradu ter obale, pred povratkom še skozi Radovljico. Dovolj dolgo, da šteje, in dovolj razgledno, da se izplača vsak meter.",
+      "asideNote": "Turistična · Kranjska roža · Visit Kranj",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Blejčanka (79 km do Bleda) | Zyflow",
+      "metaDescription": "Blejčanka: iz Kranja do Bleda mimo Krope in Radovljice, 79 km in 944 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "944 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "79 km",
+      "unit": " · 944 m",
+      "sections": [
+        {
+          "title": "Vzpon proti Karavankam",
+          "body": "Iz središča Kranja se cesta nagne proti Jamniku. Po nekaj kilometrih poštenega vzpona se odprejo grebenski razgledi, znak, da ste zapustili ravninske cvetove.",
+          "body2": "Sledi Kropa: ozke ulice, kovaška dediščina in ena najbolj atmosferičnih vasi v vsej roži. Ustavitve si zasluži, preden se krajina povsem odpre proti jezeru."
+        },
+        {
+          "title": "Bled, nato Radovljica",
+          "body": "Bled je čustveni vrhunec dneva, otok, grad in obala, ki jo prepozna vsak. Vozite previdno zaradi prometa; nagrada je razglednica, zaradi katere ste prišli.",
+          "body2": "Baročni trg Radovljice je kulturni iztek pred povratkom proti Kranju. Vzponi so večinoma za vami, noge pa začutijo vseh 944 m."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "To je sladka točka za e-kolo: skoraj 80 km in skoraj tisoč višincev. Pred odhodom označite polnilnice pri Bledu in kosilo v Kropi ali Radovljici.",
+          "body2": "Preverite veter na izpostavljenih odsekih in si za zaključek shranite zgodnjo kavarno v Kranju. Pot odprite v Zyflow, ko želite navigacijo in kolesarju prijazna mesta na istem zemljevidu."
+        }
+      ]
+    },
+    "jezerjanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "jezerjanka",
+      "lede": "Iz Kranja ob Kokri v prvo slovensko gorniško vas, ledeniške doline, planine in mirnejši ritem kot ob jezerih.",
+      "place": "kranj",
+      "coords": "46,24° S, 14,35° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "76 <span>km</span>",
+      "elevationHtml": "603 <span>m</span>",
+      "difficulty": "Srednje",
+      "intro": "Jezerjanka je alpski cvet Kranjske rože. Namesto razglednic dobite delujoče planine, ostre stene in zeleno skledo Jezerskega pod Kamniško-Savinjskimi Alpami. Pri 76 km in okoli 600 m vzpona je zavezujoča, a ne dirkaška.",
+      "asideNote": "Turistična · Kranjska roža · Visit Kranj",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Jezerjanka (76 km do Jezerskega) | Zyflow",
+      "metaDescription": "Jezerjanka ob Kokri iz Kranja do Jezerskega: 76 km in 603 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "603 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "76 km",
+      "unit": " · 603 m",
+      "sections": [
+        {
+          "title": "Ob Kokri navzgor",
+          "body": "Iz Kranja se ustalite na dolinski cesti skozi Preddvor. Kokra se postopoma zoži, prometa je manj, vrhovi se zložijo pred vami.",
+          "body2": "Tu dan spremeni značaj, iz mestne ture v gorsko dolinsko vožnjo. Imate pri roki prigrizke; storitev je višje vse manj."
+        },
+        {
+          "title": "V Jezersko",
+          "body": "Jezersko se odpre kot ledeniški amfiteater: trate, kmetije in grebeni, zaradi katerih je vas dobila status gorniške. Peljite dno doline, nato po želji dodajte kratko lokalno zanko.",
+          "body2": "Povratek gre po istem koridorju proti jugu. Spuščajte se s prostorom za pohodnike in kmečki promet ter si shranite kavarno v Preddvoru, če ste višje izpustili kosilo."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Vodo in hrano označite pred odhodom iz Kranja, srednji del je reven. Polnilnica pri ustju doline je zavarovanje na e-kolesu.",
+          "body2": "Jezerjanko lahko povežete s krajšim jezerskim poldnevom (Mali vrh ali Ravenska Kočna), če ostanete čez noč. Glavno linijo odprite v Zyflow za navigacijo in filtre mest."
+        }
+      ]
+    },
+    "jezerski-vrh": {
+      "crumbType": "Alpska",
+      "titleHtml": "jezerski vrh",
+      "lede": "Vzpon na nekdanji mejni prehod in naprej do Ankove planine, panorama Ravenske Kočne in Kamniških Alp.",
+      "place": "jezersko",
+      "coords": "46,40° S, 14,50° V",
+      "durationHtml": "2,5 <span>h</span>",
+      "distanceHtml": "18.2 <span>km</span>",
+      "elevationHtml": "457 <span>m</span>",
+      "difficulty": "Srednje",
+      "intro": "Jezerski vrh je klasična jezerska razgledna tura: slatina na začetku, sedlo na meji na sredini, planina na koncu. Okoli 18,2 km in 457 m v približno dveh urah in pol.",
+      "asideNote": "Alpska · Jezerska kolesarska pot",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Jezerski vrh – Ankova planina | Zyflow",
+      "metaDescription": "Jezerski vrh do Ankove planine z razgledom na Ravensko Kočno: 18,2 km in 457 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "457 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "18.2 km",
+      "unit": " · 457 m",
+      "sections": [
+        {
+          "title": "Od slatine do sedla",
+          "body": "Zgodnjo cesto delite s cestnimi kolesarji proti meji. Natočite malo Jezerske slatine na urejeni točki, požirek zadošča; več shranite za povratek.",
+          "body2": "Vzpon do nekdanjega mejnega prehoda. Med slovenskim in avstrijskim objektom levo za strmejši zaključek."
+        },
+        {
+          "title": "Ankova planina",
+          "body": "Razgledi se odprejo hitro: Ravenska Kočna, stena Kamniško-Savinjskih Alp, nato vsa jezerska dolina z Velikim vrhom, Kozjim vrhom in Storžičem. Nadaljujte po položnejši cesti do Ankove planine in nekdanje vojaške karavle.",
+          "body2": "Nazaj po isti poti. Ob spustu po želji še cerkev sv. Andreja in Šenkova domačija."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Na sedlu se vreme hitro obrne, pred zadnjim vzponom preverite zavetje. Označite slatino in kosilo v dolini.",
+          "body2": "Jezerski vrh odprite v Zyflow kot večji razgledni brat Malega vrha za vikend na Jezerskem."
+        }
+      ]
+    },
+    "k11-planine-pod-kosuto": {
+      "crumbType": "Alpska",
+      "titleHtml": "planine pod košuto",
+      "lede": "Alpska zastavonoša Tržiča: gozdne ceste in police planin pod belo steno Košute, veliko vzpona, še več razgleda.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "39,7 <span>km</span>",
+      "elevationHtml": "1740 <span>m</span>",
+      "difficulty": "Zahtevno",
+      "intro": "K11 je visoki podpis tržiške mreže. Iz mesta v strme gozdne pristope, ki se odprejo v verigo planin pod Košuto, z razgledi proti Avstriji. To je poln gorski dan, ne kavarniška zanka.",
+      "asideNote": "Alpska · Visit Tržič · K11",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K11 Planine pod Košuto | Zyflow",
+      "metaDescription": "Alpska tura iz Tržiča na planine pod Košuto. Odpri pot v aplikaciji Zyflow.",
+      "climb": "1740 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "39,7 km",
+      "unit": " · 1740 m",
+      "sections": [
+        {
+          "title": "V podnožje Karavank",
+          "body": "Iz Tržiča, ko asfalt redči in prevzame gozd. Nakloni prihajajo v valovih; senca pomaga, višinci pa ne ponehajo.",
+          "body2": "Zgodnji obrati obstajajo, če se vreme spremeni. Višje planine nagradijo tiste, ki si prihranijo rezervo za zadnje police."
+        },
+        {
+          "title": "Planine pod Košuto",
+          "body": "Apnenčasti greben Košute ostane v vidnem polju, ko zapustite drevje. Alpske koče in travnate sledi določajo sredino dneva, skupaj s pohodniki, živino in tišino.",
+          "body2": "Spust z disciplino. Gozdne ceste hitrost znižujejo počasi; sipki odseki kaznujejo pozno zaviranje."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Pred zavezo preverite odprtost koč in vodo. Označite zasilni spust in mestno kavarno za zaključek.",
+          "body2": "K11 odprite v Zyflow, ko hočete linijo na zemljevidu z vremennom in kontekstom mest, to ni pot za improvizacijo na prazno."
+        }
+      ]
+    },
+    "k16-trzic-jezersko": {
+      "crumbType": "Alpska",
+      "titleHtml": "tržič – jezersko",
+      "lede": "Povezovalni alpski dan s tržiške strani Karavank v ledeniško skledo Jezerskega, iz doline v dolino, vztrajen vzpon.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "28,1 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Zahtevno",
+      "intro": "K16 je most v tržiškem naboru: manj razglednic, več zavezujočih gorskih kilometrov in prava menjava doline, ko se končno spustite proti Jezerskemu.",
+      "asideNote": "Alpska · Visit Tržič · K16",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K16 Tržič – Jezersko | Zyflow",
+      "metaDescription": "Gozdna povezava iz Tržiča do Jezerskega. Odpri pot v aplikaciji Zyflow.",
+      "climb": "1299 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "28,1 km",
+      "unit": " · 1299 m",
+      "sections": [
+        {
+          "title": "Iz Tržiča",
+          "body": "Iz mesta v gozd, ki vseeno nenehno pridobiva. Zgodnji kilometri dajo ton, to je prenos z zobmi, ne sprehod.",
+          "body2": "Vzemite več hrane, kot mislite. V sredini je storitev manj kot na jezerskih cvetovih iz Kranja."
+        },
+        {
+          "title": "V Jezersko",
+          "body": "Visoki prehod vas naposled nagne proti odprtim tratam in ledeniškim stenam Jezerskega. Kontrast s tržiškim industrijskim vhodom je smisel ture.",
+          "body2": "Vnaprej se odločite, ali je Jezersko cilj (prenočitev) ali obrat. Oboje deluje; improvizirati sme samo eno."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Polnjenje in obroke načrtujte na obeh koncih. Označite zasilni izhod, če se visoki del zapre zaradi vremena.",
+          "body2": "K16 odprite v Zyflow, da vidite ves koridor, in brskajte po krajših jezerskih zankah za naslednje jutro."
+        }
+      ]
+    },
+    "k21-dom-pod-storzicem": {
+      "crumbType": "Alpska",
+      "titleHtml": "dom pod storžičem",
+      "lede": "Zbran dan h koči iz Tržiča proti Domu pod Storžičem, gozdni nakloni, gorski zrak in jasen obrat pod piramido Storžiča.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "18,1 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Zahtevno",
+      "intro": "K21 ima en cilj: koča pod Storžičem, hrana, nato spust s svežo pozornostjo v tržiške ulice. V duhu krajša od Košute ali Ljubelja, še vedno pošteno alpska.",
+      "asideNote": "Alpska · Visit Tržič · K21",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K21 Dom pod Storžičem | Zyflow",
+      "metaDescription": "Krajši vzpon iz Tržiča do Doma pod Storžičem. Odpri pot v aplikaciji Zyflow.",
+      "climb": "280 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "18,1 km",
+      "unit": " · 280 m",
+      "sections": [
+        {
+          "title": "Gozdni pristop",
+          "body": "Iz mesta v drevje z utrinki vrha. Naklon je enakomeren, ne teatralen, dobra ritmična vožnja.",
+          "body2": "Skupne poti pomenijo vljudnost. Napovejte prehitevanja in pričakujte pohodnike pri koči."
+        },
+        {
+          "title": "Koča in spust",
+          "body": "Dom pod Storžičem je postanek, ki opredeli dan. Preverite odpiralni čas; zaprta koča proslavo spremeni v mrzel sendvič.",
+          "body2": "Spust po isti poti. Zgodaj zavirajte v sipkih ovinkih in si za čustveni zaključek shranite kavarno v Tržiču."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Pred odhodom označite ure koče in kavo ob spustu. Vreme pod Storžičem se lahko obrne med vzponom.",
+          "body2": "K21 odprite v Zyflow za linijo pristopa in jasno lokacijo koče, ko se gozd zgosti."
+        }
+      ]
+    },
+    "k35-prelaz-ljubelj": {
+      "crumbType": "Alpska",
+      "titleHtml": "prelaz ljubelj",
+      "lede": "Podpisni prelaz Tržiča: trinajst serpentin na najstarejšem cestnem prelazu v Evropi, večinoma brez avtov, koča na 1.370 m in okoli 900 m vzpona.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "3 <span>h</span>",
+      "distanceHtml": "26 <span>km</span>",
+      "elevationHtml": "900 <span>m</span>",
+      "difficulty": "Srednje",
+      "intro": "K35 je tura, ki jo ljudje mislijo, ko rečejo »Ljubelj s kolesom«. Od avtobusne postaje v Tržiču skozi Podljubelj, previdno po odseku glavne ceste, nato na zgodovinski prelaz, ki je večino leta zaprt za avte. Zadnjih 300 višincev je strmih; koča in razgled v Avstrijo sta nagrada.",
+      "asideNote": "Alpska · Visit Tržič · K35 · 3 h",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K35 Prelaz Ljubelj (26 km, 900 m) | Zyflow",
+      "metaDescription": "Iz Tržiča po stari cesti na prelaz Ljubelj, zaprti za promet. Odpri pot v aplikaciji Zyflow.",
+      "climb": "900 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "26 km",
+      "unit": " · 900 m",
+      "sections": [
+        {
+          "title": "Tržič–Podljubelj",
+          "body": "Začnite nasproti avtobusne postaje in proti severu skozi staro jedro proti Podljubelju. Vaške ulice preidejo v dolinski pristop; storitve so še blizu za zadnji postanek.",
+          "body2": "Za vasjo makadamska povezava teče ob glavni cesti proti Ljubelju, nato na kratko na pristop k predoru. Promet je resničen, vozite predvidljivo in odločno."
+        },
+        {
+          "title": "Stari prelaz",
+          "body": "Pred predorom desno na zgodovinsko cesto. Ostane trinajst serpentin in surov naklon. Odsek delite s pohodniki in, eno septembrsko nedeljo, s starodobniki; sicer pripada nogam in pljučem.",
+          "body2": "Koča na prelazu je obrat. Jejte, poglejte v Avstrijo, nato isti spust s hladnimi zavorami in očmi za nasprotne kolesarje."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Računajte na približno tri ure in 26 km tja in nazaj. Pred strmim zaključkom označite odprtost koče in regeneracijsko kavarno v Tržiču.",
+          "body2": "K35 odprite v Zyflow za vodenje po mešanih podlagah in spremljajte vreme na sedlu, na 1.370 m se hitro obrne."
+        }
+      ]
+    },
+    "k42-roznovenska": {
+      "crumbType": "Turistična",
+      "titleHtml": "rožnovenska pot",
+      "lede": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču, romarske točke, doline in turistični ritem brez visokega prelaza.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "20,1 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Lahko–srednje",
+      "intro": "K42 je za mešane skupine in dediščinske dni: mirnejše ceste, cerkve in vasi ter dovolj razdalje, da se počuti celovito, brez zaveze Košute.",
+      "asideNote": "Turistična · Visit Tržič · K42",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K42 Rožnovenska pot | Zyflow",
+      "metaDescription": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču. Odpri pot v aplikaciji Zyflow.",
+      "climb": "369 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "20,1 km",
+      "unit": " · 369 m",
+      "sections": [
+        {
+          "title": "Dediščina doline",
+          "body": "Povežite Tržič z brezjansko stranjo doline. Kavarn je več kot na alpskem naboru; foto postanki pridejo sami.",
+          "body2": "Nakloni ostanejo prijazni. To je dan za nekoga, ki ljubi kraje bolj kot vate."
+        },
+        {
+          "title": "Ritem in postanki",
+          "body": "Ne hitite skozi trge in cerkve, to je smisel. Na prometnejših povezavah odločno, v vaških jedrih spet počasi.",
+          "body2": "Pekarna na povratku zapečati ton poti."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Shranite kosila vzdolž koridorja in K42 uporabite kot ogrevanje pred težjimi tržiškimi dnevi.",
+          "body2": "Pot odprite v Zyflow, da imate kulturne postanke in navigacijo na istem zemljevidu."
+        }
+      ]
+    },
+    "k43-dobrca": {
+      "crumbType": "Alpska",
+      "titleHtml": "dobrča",
+      "lede": "Zaresen alpski dan iz Tržiča proti Dobrči, dolgi vzponi, grebenski zrak in občutek, da kolesariš Karavanke, ne mimo njih.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "26,9 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Zahtevno",
+      "intro": "K43 sodi med težje tržiške alpske ture: dolgotrajen vzpon, višje manj prometa in panorame, zaradi katerih vstanete zgodaj.",
+      "asideNote": "Alpska · Visit Tržič · K43",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K43 Dobrča | Zyflow",
+      "metaDescription": "Alpska tura iz Tržiča do koče na Dobrči. Odpri pot v aplikaciji Zyflow.",
+      "climb": "2067 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "26,9 km",
+      "unit": " · 2067 m",
+      "sections": [
+        {
+          "title": "Proti grebenu",
+          "body": "Iz mesta v gozdne ceste, ki nočejo splohniti. Pomembnejša je potrpežljivost kot vrhunska moč.",
+          "body2": "Vzemite plastenje. Izpostavljenost raste, ko redči drevje in vas najde grebenski veter."
+        },
+        {
+          "title": "Nagrada Dobrče",
+          "body": "Široki razgledi na Karavanke so plačilo za jutranje delo. Obrnite z dovolj časa za previden spust.",
+          "body2": "To ni kavarniška zanka, nosite hrano in spoštujte vremenska okna."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Označite zasilne spuste in regeneracijo v Tržiču. Pred zadnjim pritiskom preverite razmere.",
+          "body2": "K43 odprite v Zyflow, da ostaneta linija in izhodi vidna, ko prideta megla ali utrujenost."
+        }
+      ]
+    },
+    "k51-udin-borst": {
+      "crumbType": "Gravel",
+      "titleHtml": "udin boršt",
+      "lede": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in pustolovščina brez visokega prelaza.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "25,3 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Srednje",
+      "intro": "K51 je samozavestni gravel dan tržiškega nabora: več makedama kot asfalta, še vedno dovolj blizu mesta, da je kavarniški zaključek lahek.",
+      "asideNote": "Gravel · Visit Tržič · K51",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K51 Udin boršt | Zyflow",
+      "metaDescription": "Makadamska tura po Udin borštu iz Tržiča. Odpri pot v aplikaciji Zyflow.",
+      "climb": "286 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "25,3 km",
+      "unit": " · 286 m",
+      "sections": [
+        {
+          "title": "Ob gozdnem robu",
+          "body": "Zmešajte dolinske pristope s potmi skozi boršt. Pričakujte korenine, mehke zaplate po dežju in užitek sence pod krošnjami.",
+          "body2": "Pritisk v pnevmatikah naj bo pošten. Spolzka glina iz igrivega naredi previdno."
+        },
+        {
+          "title": "Obrat po želji",
+          "body": "Lepota te družine zank je prilagodljivost, podaljšajte v rezervat ali skrajšajte na asfalt, ko energija pade.",
+          "body2": "Skupne poti pomenijo umirjene hitrosti pri sprehajalcih."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Označite kavarniški povratek v Tržič in izhod na asfalt, če se gozd zablati.",
+          "body2": "K51 odprite v Zyflow, da vidite gravel koridor poleg lažje zanke K52."
+        }
+      ]
+    },
+    "k52-pot-treh-zvonov": {
+      "crumbType": "Turistična",
+      "titleHtml": "pot treh zvonov",
+      "lede": "Lahka družinska zanka tržiškega nabora, blag teren, vaški zvonovi in ritem za različne zmožnosti.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "10 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Lahko",
+      "intro": "K52 je vhodna tura: prijazna razdalja in naklon, a še vedno prava gorenjska pokrajina okoli Tržiča. Vzemite otroke, regeneracijske noge ali nekoga novega na lokalnih cestah.",
+      "asideNote": "Turistična · Visit Tržič · K52",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K52 Pot treh zvonov | Zyflow",
+      "metaDescription": "Pot treh zvonov: lahka družinska krožna tura pri Tržiču. Odpri pot v aplikaciji Zyflow.",
+      "climb": "144 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "10 km",
+      "unit": " · 144 m",
+      "sections": [
+        {
+          "title": "Zvonovi in vasi",
+          "body": "Mirne ceste in kratke povezave mimo cerkva in zaselkov. »Trije zvonovi« so kulturna nit, ustavite se, poslušajte, peljite naprej.",
+          "body2": "Podlage ostanejo prijazne. To je kvečjemu lahek gravel, ne blatna pustolovščina."
+        },
+        {
+          "title": "Prvi lokalni dan",
+          "body": "Z K52 spoznate kotlino, preden poskusite Ljubelj. Znamenitosti se usedejo; samozavest raste.",
+          "body2": "Sladoled in voda sta del zasnove, ne optimizirajte ju stran."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Pred odhodom shranite družinam prijazne pinne. Zemljevid držite približan za hitre odločitve.",
+          "body2": "K52 odprite v Zyflow kot mehki vstop v tržiški katalog."
+        }
+      ]
+    },
+    "k53-kriva-jelka": {
+      "crumbType": "Gravel",
+      "titleHtml": "kriva jelka",
+      "lede": "V naravni rezervat Udin boršt do Krive jelke, senčne sledi in znamenit zaključek v gozdu.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "24 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Lahko–srednje",
+      "intro": "K53 cilja na eno najbolj znanih gozdnih znamenitosti. Po dežju mehka tla in mirnejša alternativa visokim alpskim dnem nad Tržičem.",
+      "asideNote": "Gravel · Visit Tržič · K53",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K53 Kriva jelka | Zyflow",
+      "metaDescription": "Makadamska pot do Krive jelke v Udin borštu. Odpri pot v aplikaciji Zyflow.",
+      "climb": "386 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "24 km",
+      "unit": " · 386 m",
+      "sections": [
+        {
+          "title": "Sledi rezervata",
+          "body": "Vstopite v Udin boršt in sledite gozdnim cestam do Krive jelke. Krošnje držijo dan hladen; znamenitost da turi zgodbo.",
+          "body2": "Prostor delite s sprehajalci. Napovejte se in pri drevesu umirite tempo."
+        },
+        {
+          "title": "Najprej narava",
+          "body": "Tu ne gre za hvalisanje z višinci. Gre za tihe kilometre in cilj, ki ga domačini imenujejo z nasmehom.",
+          "body2": "Če so poti razmočene, izberite trdnejše povezave, rezervat ima raje zadržanost."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Označite izhod na asfalt in mestno kavarno. Povežite s K51 ali K52 za gravel vikend brez alpskega vremenskega tveganja.",
+          "body2": "K53 odprite v Zyflow, da ostane linija rezervata jasna med podobnimi gozdnimi sledmi."
+        }
+      ]
+    },
+    "k55-gozd-udin-borst": {
+      "crumbType": "Gravel",
+      "titleHtml": "gozd – udin boršt",
+      "lede": "Raznolika predalpska zanka med Gozdom in Udin borštom, več vzpona kot družinske, še vedno pod alpskimi nakloni.",
+      "place": "tržič",
+      "coords": "46,36° S, 14,31° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "26,9 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Srednje",
+      "intro": "K55 je med lahkimi zvonovi in težkimi prelazi, ko hočete znoj, a ne Ljubelja ali Košute.",
+      "asideNote": "Gravel · Visit Tržič · K55",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "K55 Gozd – Udin boršt | Zyflow",
+      "metaDescription": "Makadamska tura med Gozdom in Udin borštom. Odpri pot v aplikaciji Zyflow.",
+      "climb": "763 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "26,9 km",
+      "unit": " · 763 m",
+      "sections": [
+        {
+          "title": "Iz Gozda v boršt",
+          "body": "Povežite stran Gozda s sledmi Udin boršta. Mešane podlage in kratki sunki namesto enega dolgega vzpona.",
+          "body2": "Navigacija šteje, podobna križišča se ponavljajo. Shranjena linija prepreči nenamerne ekstra kilometre."
+        },
+        {
+          "title": "Trening brez drame",
+          "body": "Uporabite kot sredin tedna ali most med kulturo in alpskimi načrti. Višinci se naberejo brez izpostavljenosti.",
+          "body2": "Po dežju izberite trdnejše možnosti; glinasti odseki hitro postanejo grdi."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Označite pekarno nazaj v Tržič in K55 držite ob K51/K52 na zemljevidu za vikende po meri.",
+          "body2": "Pot odprite v Zyflow, da ostane predalpski koridor jasen."
+        }
+      ]
+    },
+    "kamnicanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "kamničanka",
+      "lede": "Najblažji cvet Kranjske rože: 70 km dolinske ture mimo gradov, cerkva in Arboretuma Volčji Potok, z komaj 250 m vzpona.",
+      "place": "kranj",
+      "coords": "46,24° S, 14,35° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "70 <span>km</span>",
+      "elevationHtml": "254 <span>m</span>",
+      "difficulty": "Lahko",
+      "intro": "Kamničanka je pot, ki jo daste nekomu na prvi dan na Gorenjskem. Iz Kranja pelje po mirnih cestah, čez edini kolesarski most nad avtocesto pri Voklah, in poveže dediščinske postanke do Kamnika, nato pa mehko nazaj skozi gozdni makadam in savsko ravnino. Razdalja brez drame, in še vedno cel dan prave ture.",
+      "asideNote": "Turistična · Kranjska roža · Visit Kranj",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Kamničanka (70 km) | Zyflow",
+      "metaDescription": "Kamničanka iz Kranja mimo Kamnika in Arboretuma Volčji Potok: 70 km in 254 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "254 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "70 km",
+      "unit": " · 254 m",
+      "sections": [
+        {
+          "title": "Iz Kranja čez ravnino",
+          "body": "Skozi Šenčur proti Adergasu, kjer stoji cerkev Marijinega oznanjenja sredi polj. Kmalu sledijo jezerca Češnjevek in grad Strmol, nato Grad pri Cerkljah, niz postankov brez težkega vzpona.",
+          "body2": "Komendska dobrava vas pripelje do roba Kamnika. Staro mestno jedro je naravni kosilni postanek: ozke ulice, kavarne in dovolj sence pred arboretumskim delom."
+        },
+        {
+          "title": "Arboretum, makadam in domov",
+          "body": "Od Šmarce pot doseže Arboretum Volčji Potok. Vzemite si čas, to je eden najboljših vmesnih postankov v mreži Kranjske rože. Nato Radomlje in Mengeš proti Vodicam.",
+          "body2": "Od Vodic proti Voglam se podlaga spremeni v dober makadam pod krošnjami. Nazaj v Kranj cesta spet splohni: urejen asfalt, lahka vožnja in zaključek, kjer na e-kolesu še ostane baterije."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Pred odhodom označite polnilnico in daljše kosilo v Kamniku. Če želite kavo pri kraju, ki ima urejeno parkiranje za kolesa, filtrirajte kolesarju prijazna mesta vzdolž zanke.",
+          "body2": "Pri 70 km in le 254 m vzpona je to najvarnejši ogrevalni dan pred Blejčanko ali alpskimi turami iz Tržiča. Shranite GPX in isto linijo odprite v Zyflow, ko ste pripravljeni na navigacijo."
+        }
+      ]
+    },
+    "ljubljancanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "ljubljančanka",
+      "lede": "Iz Kranja proti prestolnici: podeželske povezave, grad Smlednik, nato Tivoli in Ljubljanski grad kot mestni vrhunec dneva.",
+      "place": "kranj",
+      "coords": "46,24° S, 14,35° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "70 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Lahko–srednje",
+      "intro": "Ljubljančanka je mestni cvet mreže, dovolj podeželskih kilometrov za občutek ture, nato jasen prihod v Ljubljano. Okoli 70 km ustreza tistim, ki hočejo dediščino in gostoto kavarn brez alpskih naklonov.",
+      "asideNote": "Turistična · Kranjska roža · Visit Kranj",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Ljubljančanka (70 km do Ljubljane) | Zyflow",
+      "metaDescription": "Ljubljančanka iz Kranja do Ljubljane mimo gradu Smlednik: 70 km in 460 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "460 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "70 km",
+      "unit": " · 460 m",
+      "sections": [
+        {
+          "title": "Podeželski pristop",
+          "body": "Iz Kranja po dolinskih cestah, ki postopoma zamenjajo gorenjska polja z ljubljansko kotlino. Grad Smlednik je znamenitost v pristopu, dober foto in raztezni postanek.",
+          "body2": "Blizu mesta bodite pozorni na prometnejše povezave. Vožnja ni tehnična; izziv je pozornost v mešanem prometu."
+        },
+        {
+          "title": "V Ljubljano",
+          "body": "Tivoli ponudi zelen vstop, nato vzpon ali sprehod do Ljubljanskega gradu za klasični zaključek. Spodaj je staro mestno jedro polno kavarn, filtrirajte kolesarju prijazne.",
+          "body2": "Nazaj proti severu po isti poti ali z vlakom v eno smer, če želite enosmerni dan. V vsakem primeru prihranite baterijo za mestni del."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Označite kosilo pri grajskem hribu in polnilnico pred povratkom. Mestni promet nagradi miren tempo in jasno vodenje.",
+          "body2": "Ljubljančanko odprite v Zyflow, da imate navigacijo in plasti mest skupaj, posebej koristno, ko se okoli središča zgosti promet."
+        }
+      ]
+    },
+    "locanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "ločanka",
+      "lede": "Kranj–Škofja Loka: kamniti mostovi, grajski hrib in Crngrob na enem najlepših dediščinskih dni Kranjske rože.",
+      "place": "kranj",
+      "coords": "46,24° S, 14,35° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "64 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Lahko–srednje",
+      "intro": "Ločanka je ljubljenka dediščine v Kranjski roži, nekoliko krajša od Blejčanke, gostejša v atmosferi starega mestnega jedra. Peljete v srednjeveško kotlino, ki je še vedno kot slika, s kapucinskima mostovoma in gradom nad sotočjem.",
+      "asideNote": "Turistična · Kranjska roža · Visit Kranj",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Ločanka (64 km do Škofje Loke) | Zyflow",
+      "metaDescription": "Ločanka iz Kranja do starega jedra Škofje Loke: 64 km in 930 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "930 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "64 km",
+      "unit": " · 930 m",
+      "sections": [
+        {
+          "title": "Proti loški kotlini",
+          "body": "Iz Kranja po valovitih povezavah, ki vas nagnejo v loško krajino. Grajski hrib se pokaže, še preden ulice, uporaben orientir za ritem dneva.",
+          "body2": "Promet je obvladljiv, če ostanete na označenih kolesarskih povezavah. Energijo prihranite za sprehod po jedru."
+        },
+        {
+          "title": "Staro jedro in Crngrob",
+          "body": "Mostova in ulice Škofje Loke so glavni dogodek. Če je gneča, dele peš, gre za kraj, ne za povprečno hitrost.",
+          "body2": "Kratek ovinek v Crngrob doda freskirano cerkev, ki jo mnogi izpustijo. Nato proti Kranju z še enim kavarniškim postankom v rezervi."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Označite daljše kosilo v starem jedru in mirnejšo pot nazaj. Okoli 64 km se lepo usede med regeneracijo in poln gorski dan.",
+          "body2": "Ločanko odprite v Zyflow za vodenje pristopa in vidnost kolesarju prijaznih kavarn ob prihodu."
+        }
+      ]
+    },
+    "mali-vrh": {
+      "crumbType": "Alpska",
+      "titleHtml": "mali vrh",
+      "lede": "Miren jezerski poldan po gozdni cesti do razgledišča Mali vrh, Virnikov Grintovec, Košuta in Storžič v eni panoramski vožnji tja in nazaj.",
+      "place": "jezersko",
+      "coords": "46,40° S, 14,50° V",
+      "durationHtml": "3 <span>h</span>",
+      "distanceHtml": "17.3 <span>km</span>",
+      "elevationHtml": "596 <span>m</span>",
+      "difficulty": "Lahko–srednje",
+      "intro": "Mali vrh je blaga panorama jezerskega nabora. Od TIC-a v Zgornjem Jezerskem čez lesen most proti Makekovi Kočni, blago po gozdni cesti, postanek na urejenem razgledišču, nato do klopi na koncu ceste nad Kokro.",
+      "asideNote": "Alpska · Jezerska kolesarska pot · ~3 h",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Razgledišče Mali vrh (17,3 km) | Zyflow",
+      "metaDescription": "Z Zgornjega Jezerskega do razgledišča pod Malim vrhom: 17,3 km in 596 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "596 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "17.3 km",
+      "unit": " · 596 m",
+      "sections": [
+        {
+          "title": "Proti Makekovi Kočni",
+          "body": "Orientirajte se pri panoramski tabli pri TIC-u, nato asfalt proti Makekovi Kočni do odcepa za domačijo. Naravnost naprej po gozdni cesti, ki se vzpenja brez drame.",
+          "body2": "Po približno štirih kilometrih se na ostrem levem ovinku pojavi urejeno razgledišče pod Malim vrhom, prvi veliki pogled proti Virnikovemu Grintovcu, Komatevri, Stegovniku, Storžiču in grebenu Košute."
+        },
+        {
+          "title": "Končna klop in povratek",
+          "body": "Nadaljujte po isti lahki gozdni cesti do konca. Klop gleda na Kokro in Jezersko Kočno, tih obrat.",
+          "body2": "Nazaj po isti liniji. Prostor delite s pohodniki in na senčnem spustu umirite tempo."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Okoli 17,3 km in 596 m ter približno tri ure. Označite TIC in kavarnico v dolini za potem.",
+          "body2": "Mali vrh odprite v Zyflow, ko hočete to kratko alpsko vožnjo poleg Ravenske Kočne ali Jezerskega vrha za večdnevno bivanje na Jezerskem."
+        }
+      ]
+    },
+    "ravenska-kocna": {
+      "crumbType": "Alpska",
+      "titleHtml": "ravenska kočna",
+      "lede": "Mimo Planšarskega jezera v Ravensko Kočno in na Štularjevo planino, zatrep, tovorna žičnica in eden najbolj fotogeničnih jezerskih poldnevov.",
+      "place": "jezersko",
+      "coords": "46,40° S, 14,50° V",
+      "durationHtml": "2,25 <span>h</span>",
+      "distanceHtml": "16.6 <span>km</span>",
+      "elevationHtml": "408 <span>m</span>",
+      "difficulty": "Srednje",
+      "intro": "Ravenska Kočna je razgledniška alpska zanka doline: jezero na ustju, ledeniške stene naprej in zaključni vzpon na Štularjevo planino proti Skuti. Okoli 16,6 km in 408 m jo držita ambiciozno, a še dosegljivo.",
+      "asideNote": "Alpska · Jezerska kolesarska pot · ~2,25 h",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Ravenska Kočna – Štularjeva planina | Zyflow",
+      "metaDescription": "Ravenska Kočna mimo Planšarskega jezera do Štularjeve planine: 16,6 km in 408 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "408 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "16.6 km",
+      "unit": " · 408 m",
+      "sections": [
+        {
+          "title": "Z jezera v dolino",
+          "body": "Od TIC-a do Planšarskega jezera in obidite po desni. Pri lovskem domu Pod Turni imajo kolesarji prost prehod v Ravensko Kočno.",
+          "body2": "Pri kmetiji Ancel asfalt preide v makadam. Mimo počivališča tematske poti in parkirišča do spodnje postaje tovorne žičnice za Češko kočo."
+        },
+        {
+          "title": "Štularjeva planina",
+          "body": "Desno še dobra dva kilometra vzpona. Na planini si vzemite čas za zatrep proti Skuti in vrhovom do Golega vrha.",
+          "body2": "Spust po isti poti s pohodniki v mislih. Spet se ustavite ob jezeru, zasluži si počasen zaključek v vsakem letnem času."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Približno 2 uri 15 minut ob enakomerni vožnji. Označite možnosti ob jezeru in spoštujte skupne poti.",
+          "body2": "Ravensko Kočno odprite v Zyflow poleg Malega vrha za dan z dvema zankama in kavo ali kopanjem vmes."
+        }
+      ]
+    },
+    "spodnji-virnik": {
+      "crumbType": "Turistična",
+      "titleHtml": "spodnji virnik",
+      "lede": "Najkrajša jezerska tura: kamnolom lehnjaka, aktivni izvir in ekološka kmetija Spodnji Virnik z mlečnimi izdelki, ki jih velja odnesti.",
+      "place": "jezersko",
+      "coords": "46,40° S, 14,50° V",
+      "durationHtml": "1,5 <span>h</span>",
+      "distanceHtml": "9.4 <span>km</span>",
+      "elevationHtml": "304 <span>m</span>",
+      "difficulty": "Lahko",
+      "intro": "Spodnji Virnik je zanka radovednosti, geologija, ki se dogaja pred vami, en strm odsek, ki ga lahko prehodite, in ekološka kmetija z razgledom na Grintovce. Okoli 9,4 km in 304 m v približno 90 minutah.",
+      "asideNote": "Turistična · Jezerska kolesarska pot · ~1,5 h",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Spodnji Virnik – kamnolom lehnjaka | Zyflow",
+      "metaDescription": "Kratka krožna tura na Jezerskem mimo kamnoloma lehnjaka do ekološke kmetije Spodnji Virnik: 9,4 km in 304 m vzpona. Odpri pot v aplikaciji Zyflow.",
+      "climb": "304 m",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "9.4 km",
+      "unit": " · 304 m",
+      "sections": [
+        {
+          "title": "V stransko dolino Kokre",
+          "body": "Iz Zgornjega Jezerskega v Spodnji Kraj in proti zgornji dolini Kokre. Desno se odpre Virnikov Grintovec, medtem ko peljete dno doline.",
+          "body2": "Po prvem vzponu pridete do skladov lehnjaka in aktivnega izvira, kjer se kalcijev karbonat še vedno odlaga. To je poučno srce ture."
+        },
+        {
+          "title": "Kmetija in sprehod do izvira",
+          "body": "Po prečkanju potoka kratek strm vzpon proti Spodnjemu Virniku. Kolo pustite in peš do izvira; nato na kmetiji po želji siri, jogurt in skuta.",
+          "body2": "Po makadamu na glavno cesto in domov. En sunkovit odsek je prehodljiv, še vedno lahka zmaga med kratkimi turami."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Vzemite nahrbtnik za mlečne izdelke. Označite kmetijo in TIC, da kratka zanka ne deluje izgubljeno.",
+          "body2": "Spodnji Virnik odprite v Zyflow kot počitniški ali večerni spin poleg večjih jezerskih panoram."
+        }
+      ]
+    },
+    "trzicanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "tržičanka",
+      "lede": "Severni cvet Kranjske rože v Tržič, staro jedro, razvaline gradu Kamen in predprostor Ljubelja, Košute ter Udin boršta.",
+      "place": "kranj",
+      "coords": "46,24° S, 14,35° V",
+      "durationHtml": "1 <span>dan</span>",
+      "distanceHtml": "68 <span>km</span>",
+      "elevationHtml": ", ",
+      "difficulty": "Srednje",
+      "intro": "Tržičanka poveže kranjsko rožo s tržiškim alpskim katalogom. Kot ciljni dan v zgodovinsko kotlino pod Karavankami ali kot pristop pred težjim prelazom naslednje jutro.",
+      "asideNote": "Turistična · Kranjska roža · Visit Kranj",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX",
+      "metaTitle": "Tržičanka (68 km do Tržiča) | Zyflow",
+      "metaDescription": "Tržičanka iz Kranja do Tržiča skozi kanjon Kokre in mimo gradu Kamen: 68 km. Odpri pot v aplikaciji Zyflow.",
+      "climb": ", ",
+      "climbLabel": "Višinci",
+      "durationLabel": "Trajanje",
+      "difficultyLabel": "Zahtevnost",
+      "nextLabel": "Sezona",
+      "nextValue": "apr. – okt.",
+      "price": "68 km",
+      "unit": "",
+      "sections": [
+        {
+          "title": "Proti severu v kotlino",
+          "body": "Dolinska vožnja iz Kranja gradi občutek vhoda v Tržič. Krajina se zoži; zgodovinsko jedro in industrijska dediščina ležita pod strmimi gozdnimi stenami.",
+          "body2": "Razvaline gradu Kamen so klasični stranski postanek, kratek vzpon za širok razgled nazaj po dolini."
+        },
+        {
+          "title": "Tržič kot vozlišče",
+          "body": "V mestu stojite na začetku K35 Ljubelj, planin pod Košuto in mehkejših gravel dni po Udin borštu. S Tržičanko pridete dovolj sveži, da raziščete središče.",
+          "body2": "Kavarn in oskrbe je tu več kot na visokih poteh. Zaloge napolnite, preden se zavežete čemur koli strmejšemu."
+        },
+        {
+          "title": "Kako z Zyflow",
+          "body": "Tržičanko shranite kot prenosni dan, nato z istega zemljevida povežite K35 ali K52. V mestu si označite polnilnico, če ste na e-kolesu.",
+          "body2": "Pot odprite v Zyflow za vodenje pristopa, nato brskajte po bližnjih alpskih linijah, ne da bi zapustili aplikacijo."
+        }
+      ]
+    }
+  },
+  "alts": {
+    "appMap": "Zemljevid v aplikaciji Zyflow s kolesarjem prijaznimi kraji, polnilnicami in pitno vodo",
+    "polaroid1": "Kolesarja na kamniti gorski poti",
+    "aboutPolaroidCyclist": "Kolesar med zelenimi alpskimi travniki",
+    "polaroid3": "Skupina kolesarjev na postanku v borovem gozdu",
+    "ljubljanaBridge": "Ljubljanica in Tromostovje v Ljubljani",
+    "coffeeSign": "Tabla pred kavarno z napisom »cyclists need coffee«",
+    "feature2": "Kolesarja s prtljago na alpski cesti pod zasneženimi vrhovi",
+    "tourHike": "Pohodniki na meglenem travnatem grebenu",
+    "tour4wd": "Terensko vozilo s šotorom na strehi",
+    "tourKayak": "Kajakaši na reki",
+    "catSlovenia": "Blejsko jezero z otokom in Julijskimi Alpami",
+    "catCroatia": "Pogled iz zraka na staro mestno jedro Rovinja v Istri",
+    "feature1": "Kolesa, parkirana na starem mestnem trgu",
+    "journal1": "Gozdnati griči ob sončnem zahodu",
+    "feature3": "Kolesarji na dolinski poti pod nazobčanimi gorskimi vrhovi",
+    "social1": "Terensko vozilo v puščavskem kanjonu",
+    "social2": "Tabor s šotorom ob jezeru v mraku",
+    "social3": "Kajak na mirnem morju z ledenimi gorami"
+  },
+  "guides": {
+    "name": "Vodniki",
+    "index": {
+      "title": "Odgovori na kolesarska vprašanja",
+      "lede": "Kratki odgovori za kolesarje in voznike e-koles, s številkami in viri, na katerih temeljijo.",
+      "empty": "V tem jeziku še ni vodnikov.",
+      "emptyLink": "Preberi angleške vodnike"
+    },
+    "dataLabel": "Ključne številke",
+    "dataSource": "{source}, stanje {date}",
+    "mapCredit": "{credit}, stanje {date}",
+    "cta": {
+      "title": "Najdi postanke v Zyflow",
+      "ios": "App Store",
+      "android": "Google Play",
+      "planner": "Odpri v načrtovalniku"
+    },
+    "checked": "Preverjeno",
+    "sources": "Viri",
+    "accessed": "dostopano {date}",
+    "related": "Sorodni vodniki",
+    "fixtureNote": "Testni vodnik za predogled postavitve strani. Nikoli ni objavljen."
+  }
 }

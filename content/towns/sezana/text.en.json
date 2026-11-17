@@ -1,0 +1,41 @@
+{
+  "status": "published",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Sežana's data and the places' own websites. Needs a read by someone who knows Sežana before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Sežana.",
+  "intro": "Sežana is the main town of the Karst plateau, close to the Italian border and Trieste. The riding here is on quiet roads between stone villages, vineyards of teran wine and woods. The Jakobova pot crosses Sežana on its way through Slovenia, and four short GEOMOB routes lead from town to Komen, Tomačevica, Kobjeglava and Volčji Grad. Villages such as Dutovlje, Tomaj, Pliskovica, Štorje and Lokev belong to Sežana too.",
+  "routes": {
+    "title": "Cycle routes through Sežana",
+    "body": "Five signed routes cross Sežana. The Kolesarska Jakobova pot Slovenija Camino is the long one: 311 km in total, 29 km of it inside Sežana, through Dutovlje and past Tomaj. The four GEOMOB routes are short local rides from Sežana into the Karst: to Komen (20 km), Tomačevica (18 km), Kobjeglava (17 km) and Volčji Grad (20 km). Each is a short ride, so you can do one before lunch and another after."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 14 places to stay in Sežana, from hotels in town to farm stays in the villages. Turistična kmetija Škerlj in Tomaj is 207 metres from the Jakobova pot. In Pliskovica, the hostel Mladinski Hotel Pliskovica has 35 beds in a restored Karst homestead, 1.2 km from the GEOMOB route to Komen. In town, Hotel Grahor and the rooms at Nataly are both about 1 km from the same route. With a tent or camper, Brajda in Štorje has a small campsite, 2.9 km off the Jakobova pot."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Sežana has 26 places to eat. On the Jakobova pot, Gostilna Ukmar in Dutovlje is 61 metres from the route and is open Wednesday to Monday from 8:00 to 23:00. In town, Okrepčevalnica Kantina serves pizza, grill dishes and weekday lunches, and is closed on Mondays. Gostilna Spark on Partizanska cesta has a set lunch menu on weekdays."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "There are 27 public water points, but only 7 are within 150 metres of a signed route, so top up whenever you pass one. There are five public repair stands and three bike shops: AP Bike, Core Riding and Mathitech Bike Center Sežana. Charging an e-bike? Sežana has 8 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Sežana has 58 sights, and the Karst underground is the main one. Vilenica Cave near Lokev, one of the oldest show caves in Europe, is 5 km from the GEOMOB route to Komen. The Karst Living Museum, a nature trail that explains the karst landscape, is 1.3 km from the same route. Two more caves, Jama Malanca and Golokratna Cave, are 2.9 km and 3.4 km from the same route."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town.",
+    "ea96b86d": "A hostel in a restored Karst homestead in Pliskovica, with 35 beds in six rooms, a shared kitchen and dining room.",
+    "a143223a": "A four-star garni hotel in Sežana with 16 rooms and a suite, and a wellness area.",
+    "bec73f06": "A hotel with a casino, the Carat restaurant cooking Karst and Mediterranean dishes, and a wellness centre.",
+    "c0cb0db9": "Family-run rooms, studios and apartments in Sežana, with contactless check-in. Rooms only, no breakfast.",
+    "4da893bd": "A family tourist farm in Tomaj with rooms, home cooking from its own produce and its own teran wine.",
+    "ba9e3209": "A farm in the village of Štorje, 5 km from Sežana, with a small campsite of 20 pitches.",
+    "d891f0df": "An inn on Partizanska cesta in Sežana, with set lunch menus on weekdays.",
+    "aa1501b9": "A village inn in Dutovlje with home cooking, game, grill and seafood, and suckling pig and lamb at weekends. Open Wednesday to Monday from 8:00 to 23:00.",
+    "d54f92b9": "A pizzeria in Sežana's business zone with grill dishes, pasta, salads and weekday lunches. Closed on Mondays.",
+    "dce7d881": "A restaurant with regional food in the municipality of Sežana, 830 m from the GEOMOB route between Sežana and Komen.",
+    "99198a5e": "The restaurant of Hotel Grahor in Sežana, with 110 seats and a summer garden.",
+    "270c1130": "A tourist farm and wine estate in Pliskovica on the Karst, with tastings of its own teran, home cooking and rooms to stay."
+  }
+}

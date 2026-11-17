@@ -1,0 +1,11 @@
+{
+  "exclude": [
+    "36245309",
+    "6ddd0bfd"
+  ],
+  "exclude_reasons": {
+    "36245309": "2026-11-17 website check: site is a fitness centre, not a hostel",
+    "6ddd0bfd": "2026-11-17 website check: old directory page"
+  },
+  "_note": "Hand decisions for this town's picks. exclude: place ids (prefix) never picked; exclude_reasons: why. Dropped 2026-11-17 on Jakob's OK after the writers' website check."
+}

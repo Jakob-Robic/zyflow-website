@@ -1,0 +1,37 @@
+{
+  "status": "published",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Bovcu.",
+  "intro": "Bovec leži v zgornji Soški dolini, z vseh strani obdan z vrhovi Julijskih Alp. Cesta se iz kraja vzpenja proti severu, mimo trdnjave Kluže do Loga pod Mangartom in prelaza Predel, ob reki pa se spušča proti Kobaridu. V občino spadajo tudi Čezsoča, Žaga, dolina Lepene in Trenta, zato je veliko spodaj naštetih krajev le kratko vožnjo od središča.",
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Bovcu imaš 28 nastanitev, od kampov ob reki do majhnih hotelov in hostla v kraju. Hostel Soča Rocks je tik ob središču, z 68 posteljami in skupno kuhinjo. Za mir izberi hotel Dobra vila na robu kraja, ki ima enajst sob. Camp Liza je 200 metrov od sotočja Koritnice in Soče, s prostori za šotore, sobami in hiškami. Pristava Lepena na planoti nad dolino in Glamping gozdna jasa ti ponudita noč med drevesi in gorami."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Bovcu imaš 21 krajev, kjer lahko ješ, od vaških gostiln do picerij. Gostilna Žvikar, približno 4 km pred Bovcem na cesti iz Kobarida, je odprta od 12.00 do 21.00 vsak dan razen ponedeljka. V Čezsoči Gostilna Vančar streže kosila in večerje od 12.00 do 21.00, od torka do nedelje. Za pico v kraju zavij v picerijo King Pizza, ki je ob ponedeljkih zaprta. Pizzeria Žagca v Žagi peče neapeljsko pico v krušni peči na drva."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Bovec ima po vsej občini 90 javnih točk s pitno vodo. Javnega servisnega stojala v Bovcu ni. Najbližja kolesarska trgovina s servisom je Positive Sport v Kobaridu, 12,6 km stran. Voziš e-kolo? Bovec ima 5 javnih polnilnic za e-kolesa."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Bovec ima 120 znamenitosti, tu so tiste, za katere se splača načrtovati postanek. Slap Boka pada iz kraškega izvira nad Sočo, že prvi skok je visok 106 metrov. Trdnjava Kluže stoji ob cesti proti Predelu, Hermanova utrdba pa višje na Rombonu. V Logu pod Mangartom najdeš ostanke džamije, zgrajene leta 1916 med prvo svetovno vojno. Slap Virje in Alpski botanični vrt Juliana v Trenti sta krajša postanka."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "686caef9": "Kamp 200 metrov od sotočja Koritnice in Soče. Ima prostore za šotore in avtodome, dvoposteljne in triposteljne sobe, glamping hiške, gostilno in majhno trgovino.",
+    "4b040541": "Majhen resort v starem trentarskem slogu na planoti nad Soško dolino, z družinskimi hišami in sobami, spa centrom in lastno restavracijo.",
+    "37dbb8f5": "Hostel z 68 posteljami tik ob središču Bovca, s skupno kuhinjo, dnevnim prostorom in barom. Gostje dobijo popust pri aktivnostih, ki jih rezervirajo prek hostla.",
+    "45ebdc26": "Glamping na gozdni jasi: okrogli šotori Lotus Belle za dva ali štiri, dve gozdni sobi in prostor za lasten šotor, s samopostrežnim zajtrkom.",
+    "ed8fc75d": "Hotel z enajstimi sobami na robu Bovca, v stavbi nekdanje telefonske centrale. Ima vinsko klet, zimski vrt in knjižnico.",
+    "7ac208d3": "Restavracija resorta Pristava Lepena nad Soško dolino, poleg nje pa lounge bar in vinska soba.",
+    "08b8490b": "Neapeljska pica iz krušne peči na drva v Žagi, ki jo peče pizzaiolo iz Neaplja.",
+    "bc027d0d": "Domača restavracija Gostišča Vančar v Čezsoči, z velikim pokritim vrtom in igriščem. Odprta od torka do nedelje od 12.00 do 21.00.",
+    "8d8c9033": "Družinska restavracija na cesti iz Kobarida proti Bovcu, približno 4 km pred Bovcem. Salame suši sama, postrvi so iz lastnega ribnika, ob ponedeljkih je zaprta.",
+    "1729ca32": "Picerija v središču Bovca od leta 2019. Pico poješ na mestu, jo vzameš s seboj ali naročiš dostavo. Ob ponedeljkih je zaprta.",
+    "f4d0c768": "Ekološka turistična kmetija visoko v dolini Trente v Triglavskem narodnem parku, s petimi apartmaji, ležišči na seniku in domačo hrano.",
+    "1368bc7c": "Planinska koča v dolini Lepene."
+  }
+}
