@@ -285,6 +285,43 @@ function simplifyContourSvg(svgText, epsilon = CONTOUR_EPSILON) {
 
 /* —— raster variants —— */
 
+/**
+ * Encoded variants are kept between builds, keyed by the source's content hash, the
+ * requested width, the format and the encoder settings. Vercel keeps node_modules
+ * between builds, so the cache lives in node_modules/.cache; IMAGE_CACHE_DIR moves it,
+ * IMAGE_CACHE=off turns it off. A changed photo has a new hash, so it is encoded again.
+ */
+const ENCODE_SETTINGS = `a${AVIF_QUALITY}-w${WEBP_QUALITY}-j${JPEG_QUALITY}-e4`;
+const CACHE_DIR =
+  process.env.IMAGE_CACHE === "off"
+    ? null
+    : process.env.IMAGE_CACHE_DIR || path.join(__dirname, "..", "..", "node_modules", ".cache", "zyflow-images");
+const cacheStats = { hits: 0, misses: 0 };
+
+async function encodeVariantCached(input, hash, width, format) {
+  if (!CACHE_DIR) return encodeVariant(input, width, format);
+  const key = `${hash}-${width || "full"}-${format}-${ENCODE_SETTINGS}`;
+  const file = path.join(CACHE_DIR, key);
+  try {
+    const meta = JSON.parse(fs.readFileSync(`${file}.json`, "utf8"));
+    const data = fs.readFileSync(file);
+    cacheStats.hits++;
+    return { data, width: meta.width };
+  } catch {
+    /* not cached yet */
+  }
+  const result = await encodeVariant(input, width, format);
+  cacheStats.misses++;
+  try {
+    fs.mkdirSync(CACHE_DIR, { recursive: true });
+    fs.writeFileSync(file, result.data);
+    fs.writeFileSync(`${file}.json`, JSON.stringify({ width: result.width }));
+  } catch {
+    /* a read-only cache is not an error */
+  }
+  return result;
+}
+
 async function encodeVariant(input, width, format) {
   let pipeline = sharp(input, { limitInputPixels: false }).rotate();
   if (width) pipeline = pipeline.resize({ width, withoutEnlargement: true, fit: "inside" });
@@ -337,7 +374,7 @@ async function buildRaster(dist, absFile, sitePath) {
   fs.mkdirSync(dir, { recursive: true });
 
   const encoded = await mapPool(jobs, 3, async (job) => {
-    const result = await encodeVariant(source, job.width, job.format);
+    const result = await encodeVariantCached(source, hash, job.width, job.format);
     const name = job.fallback
       ? `fallback.${fallbackExt}`
       : `${result.width}.${job.format === "jpeg" ? "jpg" : job.format}`;
@@ -380,7 +417,9 @@ async function buildRaster(dist, absFile, sitePath) {
 }
 
 function renderPicture(attrs, variant, { lazy }) {
-  const sizes = variant.sizes;
+  // A sizes attribute written on the <img> (the same photo shown smaller, e.g. a hub card)
+  // wins over the layout rule for that file.
+  const sizes = attrs.sizes || variant.sizes;
   const sources = [
     ["image/avif", variant.avif],
     ["image/webp", variant.webp],
@@ -403,7 +442,8 @@ function renderPicture(attrs, variant, { lazy }) {
     imgAttrs.push(`${key}="${attrEscape(value)}"`);
   }
   imgAttrs.push(`decoding="async"`);
-  if (variant.priority === "high" && !lazy) {
+  // fetchpriority="high" written on the <img> (a page's hero) also marks it as the first image.
+  if ((variant.priority === "high" && !lazy && !attrs.sizes) || attrs.fetchpriority === "high") {
     imgAttrs.push(`fetchpriority="high"`);
   } else if (lazy) {
     imgAttrs.push(`loading="lazy"`);
@@ -567,7 +607,7 @@ async function optimizeImages(dist) {
   const rasterGenerated = [...rasters.values()].reduce((sum, item) => sum + item.generated, 0);
   const largestAvif = [...rasters.values()].reduce((sum, item) => sum + item.largestAvif, 0);
   console.log(
-    `optimized ${rasters.size} rasters (sources ${rasterBefore} bytes, largest AVIF each ${largestAvif} bytes, all variants ${rasterGenerated} bytes) and ${contours.size} contour SVGs (${contourBefore} → ${contourAfter} bytes); removed ${droppedBytes} bytes of unreferenced originals`
+    `optimized ${rasters.size} rasters (sources ${rasterBefore} bytes, largest AVIF each ${largestAvif} bytes, all variants ${rasterGenerated} bytes) and ${contours.size} contour SVGs (${contourBefore} → ${contourAfter} bytes); removed ${droppedBytes} bytes of unreferenced originals; image cache ${CACHE_DIR ? `${cacheStats.hits} reused, ${cacheStats.misses} encoded` : "off"}`
   );
   return { rasters, contours, rasterBefore, rasterGenerated, contourBefore, contourAfter };
 }

@@ -26,6 +26,10 @@ const SHOW_DRAFTS = process.env.TOWNS_DRAFTS === "true" || process.env.TOWNS_DRA
 const TEXT = {
   en: {
     lang: "en",
+    nearbyTitle: "Towns nearby",
+    crumbLabel: "Breadcrumb",
+    nearbyLead: (t) => `The closest towns to ${t.name} with their own page: routes, places to stay and eat, water and repair.`,
+    nearbyKm: (d) => `${Math.round(d)} km away`,
     placeFallback: (kind, town) => (town ? `${kind} in ${town.name}.` : `${kind} in the municipality.`),
     crumb: "Cycling",
     hubEyebrow: "cycling by town",
@@ -217,6 +221,10 @@ const TEXT = {
   },
   sl: {
     lang: "sl",
+    nearbyTitle: "Kraji v bližini",
+    crumbLabel: "Drobtinice",
+    nearbyLead: (t) => `Najbližji kraji z lastno stranjo: poti, nastanitve, kje jesti, pitna voda in servis.`,
+    nearbyKm: (d) => `${Math.round(d)} km stran`,
     placeFallback: (kind, town) => (town ? `${kind} ${loc(town)}.` : `${kind} v občini.`),
     crumb: "Kolesarjenje",
     hubEyebrow: "kolesarjenje po krajih",
@@ -1107,7 +1115,15 @@ function renderPhotoHero(town, t, lang) {
   const sub = [firstSentences(written.intro || t.intro(town), 1), written.lede || t.lede(town)].filter(Boolean).join(" ");
   const [line1, line2] = t.heroCard(town);
   const toRoutes = town.routes.length || town.featured.length;
+  const home = lang === "en" ? "./index.html" : `/${lang}`;
   return `<section class="hero section town-hero" data-section="town.hero">
+  <nav class="tour-hero__crumb town-hero__crumb" aria-label="${esc(t.crumbLabel)}">
+    <a href="${home}">${esc(t.home)}</a>
+    <span class="motif" aria-hidden="true"></span>
+    <a href=".${TOWN_BASE[lang]}.html">${esc(t.crumb)}</a>
+    <span class="motif" aria-hidden="true"></span>
+    <span aria-current="page">${esc(town.name)}</span>
+  </nav>
   <div class="hero__frame">
     <div class="hero__media">
       <img src="${esc(photo.src)}" alt="${esc(photo.caption || town.name)}" fetchpriority="high" />
@@ -1122,7 +1138,7 @@ function renderPhotoHero(town, t, lang) {
       <a class="btn btn--primary" href="${toRoutes ? "#routes" : "#map"}">${esc(toRoutes ? t.seeRoutes : t.seeStays)}</a>
     </div>
     <aside class="hero__card">${thumb ? `
-      <div class="hero__card-media"><img class="hero__card-thumb" src="${esc(thumb.src)}" alt="" loading="lazy" /></div>` : ""}
+      <div class="hero__card-media"><img class="hero__card-thumb" src="${esc(thumb.src)}" alt="" sizes="(max-width: 720px) 80vw, 140px" loading="lazy" /></div>` : ""}
       <div class="hero__card-body">
         <div class="hero__card-label"><span class="motif" aria-hidden="true"></span><span>${esc(t.checkedShort(shortDate(town.checked, lang)))}</span></div>
         <div>
@@ -1288,6 +1304,7 @@ function renderBody(town, t, lang) {
     photoFigure(town, 2, t),
     renderPractical(town, t, written.practical),
     renderSights(town, t, written.sights),
+    renderNearby(town, t, lang),
   ].filter(Boolean);
 
   return `<section class="tour-body section town-body" data-section="town.body">
@@ -1319,6 +1336,36 @@ ${t
 ${blocks.join("\n")}
   </div>
 </section>`;
+}
+
+/** Straight-line km between two town centres. */
+function kmBetween(a, b) {
+  const r = Math.PI / 180;
+  const dLat = (b[1] - a[1]) * r;
+  const dLon = (b[0] - a[0]) * r;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[1] * r) * Math.cos(b[1] * r) * Math.sin(dLon / 2) ** 2;
+  return 6371 * 2 * Math.asin(Math.sqrt(h));
+}
+
+const NEARBY_TOWNS = 3;
+
+/** The closest towns that have a page in this language, nearest first. */
+function nearbyTowns(town, lang) {
+  return TOWNS.filter((other) => other.slug !== town.slug && townLangs(other).includes(lang))
+    .map((other) => ({ other, km: kmBetween(town.center, other.center) }))
+    .sort((a, b) => a.km - b.km)
+    .slice(0, NEARBY_TOWNS);
+}
+
+function renderNearby(town, t, lang) {
+  const near = nearbyTowns(town, lang);
+  if (!near.length) return "";
+  return cardSection({
+    id: "nearby",
+    title: t.nearbyTitle,
+    lead: t.nearbyLead(town),
+    cards: near.map(({ other, km: distance }) => townCard(other, lang, [t.nearbyKm(distance), ...t.hubTownMeta(other.counts).slice(0, 1)])),
+  });
 }
 
 function renderPractical(town, t, written) {
@@ -1371,25 +1418,21 @@ ${items
 </section>`;
 }
 
-/** The hub: the routes list page's hero and card grid, with one card per town. */
-function renderHub(page) {
-  const lang = page.townLang;
+/** One town as a card (the routes list's card): the hub's grid and the nearby-towns row. */
+function townCard(source, lang, metaOverride = null) {
   const t = TEXT[lang];
-  const listed = TOWNS.filter((town) => townLangs(town).includes(lang));
-  const cards = listed.map((source) => {
     const town = localTown(source, lang);
     const written = (town.text && town.text[lang]) || {};
     // A chosen town photo where there is one; otherwise the best-known sight's photo.
     const sight = town.sights.find((item) => item.image);
     const photo = (town.photos || [])[0] || (sight ? { ...sight.image, caption: `${sight.name}, ${town.name}` } : null);
-    const meta = t
-      .hubTownMeta(town.counts)
+    const meta = (metaOverride || t.hubTownMeta(town.counts))
       .map((fact, i) => `${i ? '<span class="motif" aria-hidden="true"></span>' : ""}<span>${esc(fact)}</span>`)
       .join("");
     const href = `.${townPath(town, lang)}.html`;
     return `      <article class="tour-card">
         <div class="tour-card__media">
-          ${photo ? `<img src="${esc(photo.src)}" alt="${esc(photo.caption)}" loading="lazy" decoding="async" />` : ""}
+          ${photo ? `<img src="${esc(photo.src)}" alt="${esc(photo.caption || town.name)}" sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 400px" loading="lazy" decoding="async" />` : ""}
           <div class="tour-card__loc">
             <div class="tour-card__pin"><img src="./assets/images/icons/location.svg" alt="" aria-hidden="true" width="18" height="18" /></div>
             <div class="tour-card__loc-text"><span>${esc(town.region)}</span><span>${esc(town.country)}</span></div>
@@ -1407,7 +1450,14 @@ function renderHub(page) {
           </div>
         </div>
       </article>`;
-  });
+}
+
+/** The hub: the routes list page's hero and card grid, with one card per town. */
+function renderHub(page) {
+  const lang = page.townLang;
+  const t = TEXT[lang];
+  const listed = TOWNS.filter((town) => townLangs(town).includes(lang));
+  const cards = listed.map((source) => townCard(source, lang));
   return `<section class="tours-hero section" data-section="towns.hero">
   <div class="tours-hero__glow" aria-hidden="true">
     <img src="./assets/images/home/map-contours-featured.svg" alt="" aria-hidden="true" />

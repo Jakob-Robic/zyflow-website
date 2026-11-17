@@ -834,6 +834,11 @@
 .town-hero .hero__card-date {
   opacity: 0.84;
 }
+.town-hero__crumb {
+  max-width: var(--grid-col-12);
+  margin: 0 auto var(--space-gap-4);
+  flex-wrap: wrap;
+}
 .town-hero__credit {
   max-width: var(--grid-col-12);
   margin: var(--space-gap-3) auto 0;
@@ -871,6 +876,7 @@
 }
 /* Between 1101 and 1280 px the hero frame runs edge to edge (home.css), so the credit needs its own inset. */
 @media (min-width: 1101px) and (max-width: 1280px) {
+  .town-hero__crumb,
   .town-hero__credit {
     padding-inline: var(--page-pad-sm);
   }

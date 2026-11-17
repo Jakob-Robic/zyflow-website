@@ -119,8 +119,12 @@ test("every town page builds whole (preview with drafts)", async (t) => {
       }
 
       // A town without signed routes says nothing about them.
-      if (!data.routes.length) assert.doesNotMatch(text, /signed (cycle )?routes?/i, "no route claims without routes");
-      else assert.match(html, /id="routes"/, "a routes section when the town has routes");
+      // (The nearby-towns cards describe other towns, so they are left out of this check.)
+      const own = visibleText(html.replace(/<div class="town-block" id="nearby"[\s\S]*?<\/section>/, "</section>"));
+      if (!data.routes.length) assert.doesNotMatch(own, /signed (cycle )?routes?/i, "no route claims without routes");
+      assert.match(html, /id="nearby"/, "a nearby-towns row");
+      assert.match(html, /class="tour-hero__crumb[^"]*"[\s\S]{0,400}href="\/cycling"/, "breadcrumb back to the hub");
+      if (data.routes.length) assert.match(html, /id="routes"/, "a routes section when the town has routes");
 
       // The map is on the page exactly once.
       assert.equal((html.match(/data-tour-map/g) || []).length, 1, "one map");
