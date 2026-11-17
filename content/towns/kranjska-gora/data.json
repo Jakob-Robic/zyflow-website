@@ -5,7 +5,7 @@
  "official_name": "Kranjska Gora",
  "region": "Gorenjska",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   13.84617,
   46.46055
@@ -5331,30 +5331,6 @@
  ],
  "sights": [
   {
-   "id": "1f53066b-2920-4424-b630-46f9ff9892ad",
-   "name": "Josip Vandot",
-   "local_name": "Josip Vandot",
-   "kind": "Historic site",
-   "pin": "historic",
-   "lon": 13.783754,
-   "lat": 46.4832189,
-   "about": "Slovenian writer (1884-1944)",
-   "near": {
-    "route": "STKP",
-    "m": 55
-   },
-   "wiki": "https://en.wikipedia.org/wiki/Josip_Vandot",
-   "wikidata": "Q1282852",
-   "image": {
-    "src": "./assets/images/towns/kranjska-gora/sight-1f53066b.jpg",
-    "author": "Unknown authorUnknown author",
-    "licence": "Public domain",
-    "licence_url": null,
-    "source": "https://commons.wikimedia.org/wiki/File:Josip_Vandot.jpg"
-   },
-   "image_file": "Josip Vandot.jpg"
-  },
-  {
    "id": "9d9f9bbd-3b4b-4112-9351-21f933b32d52",
    "name": "Peričnik Falls",
    "local_name": "Peričnik",
@@ -5473,6 +5449,30 @@
     "source": "https://commons.wikimedia.org/wiki/File:ZgRadovna1.JPG"
    },
    "image_file": "ZgRadovna1.JPG"
+  },
+  {
+   "id": "9d8028f4-108f-4603-b632-764d3839de2f",
+   "name": "Martuljek Falls",
+   "local_name": "Spodnji Martuljkov slap",
+   "kind": "Waterfall",
+   "pin": "waterfall",
+   "lon": 13.8286129,
+   "lat": 46.4724543,
+   "about": "waterfalls in Slovenia",
+   "near": {
+    "route": "STKP",
+    "m": 936
+   },
+   "wiki": null,
+   "wikidata": "Q20044805",
+   "image": {
+    "src": "./assets/images/towns/kranjska-gora/sight-9d8028f4.jpg",
+    "author": "Ljuba brank at Slovenian Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Martulj%C5%A1ki_slapovi_(6).JPG"
+   },
+   "image_file": "Martuljški slapovi (6).JPG"
   }
  ],
  "repair": [

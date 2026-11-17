@@ -1,0 +1,40 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Postojna's data and the places' own websites. Needs a read by someone who knows Postojna before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Postojna.",
+  "intro": "Postojna sits on the karst between Ljubljana and the coast, best known for its cave. For a rider it is a hub of marked routes: two local road routes, seven mountain-bike routes into the forests of Nanos and Javornik, and the Jakobova pot passing through. Villages such as Hruševje, Razdrto, Prestranek and Planina belong to Postojna too.",
+  "routes": {
+    "title": "Cycle routes through Postojna",
+    "body": "Ten signed routes pass through Postojna, most of them numbered local routes. On a road bike, route 2 (Jamska), 36 km, passes near the cave, and route 3 (Grajska), 54 km, runs out towards Planina. The Kolesarska Jakobova pot Slovenija Camino crosses the area on its 311 km through Slovenia, passing Predjama Castle. Seven marked mountain-bike routes cross the area, among them route 7 (Postojna), 68 km, and route 9 (Nanos), 57 km. Route 10 (Medvedova dežela) is the longest at 117 km."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "There are 19 places to stay in Postojna, from hotels in town to farms in the villages. EkoTurizem Hudičevec is 15 metres from route 7, and Lipizzaner Lodge, which rents e-bikes, is 44 metres from the same route. In town, Hotel Kras and Sweet Dreams are both close to route 7, and Hotel Jama stands by the cave, 324 metres from route 2. With a tent or camper, Camp Mirjam in Razdrto is 73 metres from the Jakobova pot and open from mid-April to early October."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Postojna has 11 places to eat, a few of them on the routes. Gostilna Hruševje is 19 metres from route 3 and cooks traditional Slovenian dishes, pizza and burgers. Riding route 9? Avio Pub in Rakitnik is 99 metres from it and is closed on Mondays. In town, Pizzerija Čuk has Neapolitan pizza, and Bistro Štorja cooks with seasonal local produce."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "You can refill a bottle at 23 public water points, and 13 of them are within 150 metres of a signed route. There are three public repair stands and one bike shop, Ceho Bike, in town. Riding an e-bike? Postojna has 9 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Postojna has 50 sights, and the best known are underground. Postojna Cave is 323 metres from route 2, and Otok Cave and Betalov spodmol, a cave where Stone Age tools were found, are along the same route. Predjama Castle, built into the mouth of a cave, is 140 metres from the Jakobova pot. Planina Cave is 265 metres from route 3, and Pivka Jama is 39 metres from route 9."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town.",
+    "a2a1b07d": "The hotel of the Postojna Cave park, next to the cave, with its own restaurant and meeting rooms.",
+    "ff59cd6e": "A modern hotel in Postojna with 24 double rooms and three suites with terraces on the top floor, plus a café and garage.",
+    "99d79550": "A campsite for tents and camper vans under old walnut trees in Razdrto, next to Guesthouse Mirjam. Open from 15 April to 5 October.",
+    "0b7b8bf1": "A farm stay with apartments, suites and rooms, home cooking and horse riding.",
+    "42383b3f": "A guest house with seven rooms near Postojna that rents e-bikes and suggests routes in the area.",
+    "be2be954": "Rooms in Postojna, 150 metres from the town centre, with private parking.",
+    "9fa80a91": "A bistro that cooks with fresh, local produce from the region, changing with the seasons.",
+    "889e31e9": "A pub and restaurant in Rakitnik near Prestranek, with pizza, meat dishes and salads. Closed on Mondays.",
+    "a463fecc": "A restaurant and pizzeria in Postojna, opened in 1991, with Neapolitan pizza and Slovenian and international dishes.",
+    "6adc33ed": "A village inn in Hruševje with traditional Slovenian dishes, pizza and burgers, and seats outside.",
+    "2775b917": "An inn among spruce trees next to a small pond, with a fireplace and home cooking."
+  }
+}

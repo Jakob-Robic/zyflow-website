@@ -5,7 +5,7 @@
  "official_name": "Ptuj",
  "region": "Podravska",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   15.8742,
   46.44188
@@ -2084,30 +2084,6 @@
  ],
  "sights": [
   {
-   "id": "46f54446-e49c-49b2-8b94-1356abdcf436",
-   "name": "Victorinus of Pettau",
-   "local_name": "Viktorin Ptujski",
-   "kind": "Historic site",
-   "pin": "historic",
-   "lon": 15.8708274,
-   "lat": 46.4200931,
-   "about": "3rd century Christian ecclesiastical writer",
-   "near": {
-    "route": "Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja",
-    "m": 28
-   },
-   "wiki": "https://en.wikipedia.org/wiki/Victorinus_of_Pettau",
-   "wikidata": "Q469199",
-   "image": {
-    "src": "./assets/images/towns/ptuj/sight-46f54446.jpg",
-    "author": "Jakob Brollo",
-    "licence": "CC BY-SA 3.0",
-    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Victorinus_(cropped).jpg"
-   },
-   "image_file": "Victorinus (cropped).jpg"
-  },
-  {
    "id": "82a1678a-c777-4da5-a5dc-c71ecb33751d",
    "name": "Ptuj Castle",
    "local_name": "Ptujski grad",
@@ -2218,6 +2194,22 @@
    },
    "wiki": null,
    "wikidata": "Q60348950"
+  },
+  {
+   "id": "2421d7bd-7d97-4cb0-b733-40f45952ffb6",
+   "name": "Grad Ristovec",
+   "local_name": "Grad Ristovec",
+   "kind": "Historic site",
+   "pin": "historic",
+   "lon": 15.897132,
+   "lat": 46.4176147,
+   "about": "building in City Municipality of Ptuj, Slovenia",
+   "near": {
+    "route": "drava bike",
+    "m": 524
+   },
+   "wiki": null,
+   "wikidata": "Q60349396"
   }
  ],
  "repair": [

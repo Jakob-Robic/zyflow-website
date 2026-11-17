@@ -40,7 +40,7 @@ const TEXT = {
       "Stays, food, water, repair",
       "Free on iOS & Android",
     ],
-    hubTownMeta: (c) => [`${c.routes} routes`, `${c.stays} stays`, `${c.food} places to eat`],
+    hubTownMeta: (c) => [...(c.routes ? [plural(c.routes, "route")] : []), `${c.stays} stays`, `${c.food} places to eat`],
     hubWater: " · water points",
     viewTown: "View town",
     home: "Home",

@@ -5,7 +5,7 @@
  "official_name": "Celje",
  "region": "Savinjska",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   15.2661,
   46.24873
@@ -2534,30 +2534,6 @@
   }
  ],
  "sights": [
-  {
-   "id": "2a2cf2d2-cc01-4561-96f2-8e236df230d0",
-   "name": "Alma Karlin",
-   "local_name": "Pečovnik - hiša Alme M. Kerlin",
-   "kind": "Museum",
-   "pin": "museum",
-   "lon": 15.2659833,
-   "lat": 46.2049601,
-   "about": "Slovenian academic and poet (1889–1950)",
-   "near": {
-    "route": "D1",
-    "m": 715
-   },
-   "wiki": "https://en.wikipedia.org/wiki/Alma_Karlin",
-   "wikidata": "Q79131",
-   "image": {
-    "src": "./assets/images/towns/celje/sight-2a2cf2d2.jpg",
-    "author": "Wikimedia Commons",
-    "licence": "Public domain",
-    "licence_url": null,
-    "source": "https://commons.wikimedia.org/wiki/File:Alma_Karlin.png"
-   },
-   "image_file": "Alma Karlin.png"
-  },
   {
    "id": "8df9b7f3-7e75-4ef3-9451-5d2991922ce7",
    "name": "Celje Castle",

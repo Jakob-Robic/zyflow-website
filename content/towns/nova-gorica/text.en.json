@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Nova Gorica's data and each place's own website. Needs a read by someone who knows Nova Gorica before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Nova Gorica.",
+  "intro": "Nova Gorica sits on the border with Italy, where the Soča leaves the hills and the Vipava valley opens to the east. Five signed routes run through it, among them the international road route Bimobis, the national route D7 and G1 (Soška kolesarska pot) along the Soča. Vipava (Učna pot ob reki Vipavi) follows the river of the same name through the valley. Solkan, Kromberk, Ozeljan, Branik and the Banjšice plateau are all part of Nova Gorica.",
+  "routes": {
+    "title": "Cycle routes through Nova Gorica",
+    "body": "Five signed routes run through Nova Gorica, two of them along the Soča and the Vipava. Bimobis is an international road route of 144 km, with 12 km inside Nova Gorica. D7 (Robič–Kobarid–Most na Soči–Nova Gorica–Komen–Divača–Ilirska Bistrica–Jelšane), a national route, has 7 km here. G1 (Soška kolesarska pot) is 15 km, with 7 km in Nova Gorica, and Vipava (Učna pot ob reki Vipavi) is a 48 km local route with 13 km here. Bataljonka TCS is a 1 km marked mountain-bike trail."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 20 places to stay in Nova Gorica, from a hotel in town to campsites in the hills. Hotel Sabotin, a former baroque manor, is 297 metres from D7. In Solkan, Restavracija Primula has rooms 210 metres from Bimobis. Want to ride the hills above the Vipava valley? Camp Park Lijak in Ozeljan has a pump track and rents bikes, 5.2 km from the Vipava route. DS Camping on the Banjšice plateau, 5.0 km from Bimobis, has glamping huts, horses and e-bikes."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "You have 37 places to eat in Nova Gorica, and most of the ones below are close to Bimobis. Gostilna pri hrastu, 829 metres from Bimobis, is open every day, with carters' dishes and daily lunches. Gostilnica pr' Mikiju in Solkan makes its own njoki, pasta and desserts. Bar Fabrika, 66 metres from Bimobis, grills burgers and dry-aged beef. Out at Park Lijak, Gostilna Termika makes Goriški njoki from Thursday to Sunday, 12:00 to 22:00."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Nova Gorica has 45 public water points; 10 are within 150 metres of a signed route. There are four public repair stations and a self-help repair point, Samopomoč. Bisport sells and services bikes, and Velocenter Solkan is a second bike shop. With an e-bike, you can charge at 13 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Nova Gorica has 115 sights, from castles to a cave. Villa Lasciac stands 408 metres from Bimobis, and Sv. Valentin is 664 metres off it. Kromberk Castle is 2.1 km from the Bataljonka TCS trail. Branik Castle, also called Rihemberk, dates from the 13th century and is 2.5 km off the Vipava route. The Great Paradana Ice Cave is a longer trip, 12.7 km from the same route."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town. Not written: 2313a461 Čajnica in kavarna Dnevna (dnevna.si now shows an unrelated online shop).",
+    "a0754b9a": "A three-star hotel and restaurant in a former baroque manor, part of the HIT group.",
+    "6d4be8f4": "A family campsite in Ozeljan, below the edge of the Trnovo plateau and among vineyards, with mobile homes, a pump track, bike rental and the Termika restaurant.",
+    "9b15dbef": "A campsite on the Banjšice plateau with room for tents and campers, glamping huts, a shared kitchen and fire pit, horse riding and e-bikes.",
+    "47400cd0": "A restaurant with three-star rooms in Solkan. Open Monday to Saturday from 12:00 to 22:30, closed on Sunday.",
+    "c2e1bb3e": "An inn with fifteen years behind it, cooking carters' dishes and seasonal food, with daily lunches.",
+    "f51a31c6": "The restaurant of the Park Lijak campsite, known for its Goriški njoki, house cheese and marinated Soča trout. Open Thursday to Sunday from 12:00 to 22:00, other days by order.",
+    "7fc2538a": "An inn on a hundred-year-old estate in Ajševica, at the edge of the Vipava valley, cooking home-style Primorska food from local produce. Open Thursday to Monday.",
+    "dacc7c01": "An inn in Solkan close to the Italian border, with homemade njoki, pasta and desserts.",
+    "4f2ee170": "A bar and kitchen for burgers, dry-aged beef, gin and tonics and wine. The kitchen is open every day."
+  }
+}

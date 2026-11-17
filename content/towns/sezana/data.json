@@ -5,7 +5,7 @@
  "official_name": "Sežana",
  "region": "Obalno-kraška",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   13.88175,
   45.73613
@@ -3697,30 +3697,6 @@
    "image_file": "Vilenica.jpg"
   },
   {
-   "id": "a3511349-1d1a-43fe-8e2f-d05b460b2bce",
-   "name": "bunja",
-   "local_name": "Kraška pastirska hiška",
-   "kind": "Historic site",
-   "pin": "historic",
-   "lon": 13.7771979,
-   "lat": 45.7820905,
-   "about": null,
-   "near": {
-    "route": "GEOMOB Sežana–Komen",
-    "m": 1166
-   },
-   "wiki": null,
-   "wikidata": "Q2348414",
-   "image": {
-    "src": "./assets/images/towns/sezana/sight-a3511349.jpg",
-    "author": "Alicia Fagerving",
-    "licence": "CC BY-SA 4.0",
-    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Park_ka%C5%BEuna_in_Vodnjan_10.jpg"
-   },
-   "image_file": "Park kažuna in Vodnjan 10.jpg"
-  },
-  {
    "id": "8f6182cd-e0e3-4947-8304-451e29e58659",
    "name": "Karst Living Museum",
    "local_name": "Živi muzej Krasa",
@@ -3735,22 +3711,6 @@
    },
    "wiki": "https://en.wikipedia.org/wiki/Karst_Living_Museum",
    "wikidata": "Q55721660"
-  },
-  {
-   "id": "bfa98ee4-0f6d-4459-b7c5-5286c02e8b89",
-   "name": "Pepin kraški vrt",
-   "local_name": "Pepin kraški vrt",
-   "kind": "Attraction",
-   "pin": "attraction",
-   "lon": 13.8319186,
-   "lat": 45.7560372,
-   "about": null,
-   "near": {
-    "route": "Kolesarska Jakobova pot Slovenija Camino",
-    "m": 74
-   },
-   "wiki": null,
-   "wikidata": "Q61358158"
   },
   {
    "id": "ec9115c9-e4bf-43bc-aace-9df8f989d6b0",
@@ -3783,6 +3743,22 @@
    },
    "wiki": null,
    "wikidata": "Q60360713"
+  },
+  {
+   "id": "b17d9389-9c04-422e-85e4-68b4a191d6ef",
+   "name": "Golokratna Cave",
+   "local_name": "Golokratna jama",
+   "kind": "Cave",
+   "pin": "cave",
+   "lon": 13.8629381,
+   "lat": 45.6805681,
+   "about": "cave in Slovenia",
+   "near": {
+    "route": "GEOMOB Sežana–Komen",
+    "m": 3425
+   },
+   "wiki": null,
+   "wikidata": "Q123987439"
   }
  ],
  "repair": [

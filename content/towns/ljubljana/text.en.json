@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Ljubljana's data and each place's own website. Needs a read by someone who knows Ljubljana before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Ljubljana.",
+  "intro": "Ljubljana is Slovenia's capital, built along the Ljubljanica below its castle hill. Twenty-one signed routes run through it, among them D2 (Rateče–Jesenice–Kranj–Ljubljana), D1 to Vrhnika and the STKP (Slovenska turnokolesarska pot). Two longer routes stay inside the city: the 33 km Pot spominov in tovarištva and the 19 km Plečnikova pot.",
+  "routes": {
+    "title": "Cycle routes through Ljubljana",
+    "body": "Twenty-one signed routes cross Ljubljana, so you can leave the city in almost any direction on a marked line. D2 runs 135 km between Rateče and Ljubljana, D1 (Ljubljana–Vrhnika) takes you 30 km south-west, and G3 heads 52 km towards Škofja Loka and Cerkno. To stay in town, ride the Pot spominov in tovarištva, 33 km and all of it inside the city, or the 19 km Plečnikova pot. Want a full day out? Ljubljančanka is 71 km with 460 m of climbing."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "Ljubljana has 102 places to stay, from city hotels to inns with rooms and a campsite. Stari Tišler, an old coaching inn near the railway station, is 466 metres from the Plečnikova pot. On the Ljubljanica south of the centre, Gostilna Livada is 26 metres from the Pot spominov in tovarištva and has parking for campervans. North of the centre, Ljubljana Resort has hotel rooms, camping pitches and mobile homes, with bikes to borrow or rent."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Ljubljana has 254 places to eat, and many sit on the routes through the centre. Le Petit Cafe on Trg francoske revolucije is 25 metres from the Plečnikova pot and opens every day at 7:30. Tokyo Piknik, 41 metres off the STKP, makes its own ramen noodles. For Slovenian food, try Gostilna pod vrbo in Trnovo, or Gostilna Livada with its terrace on the Ljubljanica."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "You can refill a bottle at 123 public water points, and 69 of them are within 150 metres of a signed route. For repairs you have 47 places: 10 public repair stands and 37 bike shops. If you ride an e-bike, Ljubljana has 7 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "The main sights sit right on the routes through the centre. Ljubljana Castle stands on its hill 86 metres from the STKP. The Triple Bridge, which the architect Jože Plečnik redesigned in the early 1930s, is 19 metres from the same route, and the Dragon Bridge is 24 metres from the Plečnikova pot. The National Gallery of Slovenia is 95 metres from the STKP, and the remains of Roman Emona are 63 metres from the Kolesarska Jakobova pot."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "3fd8bbf5": "A hotel, campsite and mobile homes on Dunajska cesta in the north of Ljubljana. Hotel rooms come with a free bike, and you can also rent one.",
+    "fc511547": "A large inn on the bank of the Ljubljanica, with a big car park that takes campervans. You can also arrive by boat from the city centre.",
+    "dbfa9d9f": "A coaching inn near the railway station, protected as part of Ljubljana's heritage. It cooks Slovenian food and has rooms.",
+    "6e1dca54": "A family inn with a guesthouse in Tomačevo, near the Sava, cooking classic and seasonal Slovenian dishes for more than 30 years. The inn is open Monday to Friday.",
+    "dafc5990": "An inn in Trnovo, a quiet part of Ljubljana ten minutes' walk from the old town. A family-run B&B is part of the same house.",
+    "faffd0a3": "A big inn on the Ljubljanica with a riverside terrace and Slovenian dishes.",
+    "bbdeb1d1": "A Japanese kitchen in the centre serving ramen with noodles made in house, plus gyoza and other Asian dishes.",
+    "1a90d755": "A French-style café with a restaurant upstairs on Trg francoske revolucije. The café opens every day at 7:30.",
+    "cd6a21df": "A café on Gruberjevo nabrežje with a view of the Ljubljanica, run by the Kaval Group."
+  }
+}

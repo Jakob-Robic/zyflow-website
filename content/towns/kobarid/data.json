@@ -5,7 +5,7 @@
  "official_name": "Kobarid",
  "region": "Goriška",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   13.55534,
   46.25153
@@ -2506,30 +2506,6 @@
  ],
  "sights": [
   {
-   "id": "89a558b2-ed5c-4387-bb0e-d1fd2c087323",
-   "name": "Simon Rutar",
-   "local_name": "Simon Rutar",
-   "kind": "Museum",
-   "pin": "museum",
-   "lon": 13.6679477,
-   "lat": 46.2342238,
-   "about": "Slovenian historian (1851–1903)",
-   "near": {
-    "route": "Bimobis",
-    "m": 2531
-   },
-   "wiki": "https://en.wikipedia.org/wiki/Simon_Rutar",
-   "wikidata": "Q4401157",
-   "image": {
-    "src": "./assets/images/towns/kobarid/sight-89a558b2.jpg",
-    "author": "Unknown authorUnknown author",
-    "licence": "Public domain",
-    "licence_url": null,
-    "source": "https://commons.wikimedia.org/wiki/File:RutarSimon.jpg"
-   },
-   "image_file": "RutarSimon.jpg"
-  },
-  {
    "id": "f7aa106a-ed40-47db-a38a-d7f6b666e11e",
    "name": "Caporetto war memorial",
    "local_name": "Italijanska kostnica",
@@ -2648,6 +2624,30 @@
     "source": "https://commons.wikimedia.org/wiki/File:Napoleon_Bridge_(Logje)_2015.jpg"
    },
    "image_file": "Napoleon Bridge (Logje) 2015.jpg"
+  },
+  {
+   "id": "1dea04ef-f3d6-4e6d-baf8-10c024ec7079",
+   "name": "Tonovec Castle",
+   "local_name": "Tonovcov grad",
+   "kind": "Historic site",
+   "pin": "historic",
+   "lon": 13.5804876,
+   "lat": 46.2575186,
+   "about": "archaeological site in Slovenia",
+   "near": {
+    "route": "Bimobis",
+    "m": 1083
+   },
+   "wiki": null,
+   "wikidata": "Q1589025",
+   "image": {
+    "src": "./assets/images/towns/kobarid/sight-1dea04ef.jpg",
+    "author": "Krzysztof Golik",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tonovcov_Grad_(9).jpg"
+   },
+   "image_file": "Tonovcov Grad (9).jpg"
   }
  ],
  "repair": [

@@ -1,0 +1,37 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Brežice's data and each place's own website. Needs a read by someone who knows Brežice before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Brežice.",
+  "intro": "Brežice sits above the meeting of the Sava and the Krka, close to the Croatian border. Nine signed routes cross it, among them D8 (Zdraviliška kolesarska pot), D2 (Savska kolesarska pot) and the Kolesarska Jakobova pot. Pišece, Bizeljsko and Mokrice belong to Brežice too, each with its own castle.",
+  "routes": {
+    "title": "Cycle routes through Brežice",
+    "body": "Nine signed routes pass through Brežice, and D8 (Zdraviliška kolesarska pot) has the most of it: 41 of its 133 km lie inside the municipality. The Kolesarska Jakobova pot Slovenija Camino adds 26 km on its 311 km way, and D2 (Savska kolesarska pot) runs 163 km in total. D10 links Dolenja Pirošica with Obrežje, 18 km. Five Croatian routes from Samobor (1a, 1b, 2, 3a and 3b) cross into Brežice for about 2 km each."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "Brežice has 9 places to stay. MC Hostel is 83 metres from D8, and Hotel Splavar, in the old town, is 445 metres from the same route. For a quiet stay in the hills, Vila Marija Silva in Pišece has apartments with a garden, 3.2 km off D8. Gostilna pension Les, 12 metres from D10, has rooms and apartments too."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "You have 10 places to eat in Brežice. Huda, 147 metres from D8, bakes Neapolitan pizza in a bread oven. The café in the water tower, 212 metres from the same route, is part of the town's visitor centre. Debeluh, the restaurant of chef Jure Tomič, opens Monday to Saturday from 12:00 to 22:00. On D10, Gostilna pension Les is 12 metres from the route, with a seasonal menu and pizza from a bread oven."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "You can refill a bottle at 9 public water points, and 8 of them are within 150 metres of a signed route. For repairs there is one bike shop, Prah bike. Riding an e-bike? Brežice has one public charger."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Brežice's sights are mostly castles, and the town castle is right on D8. Brežice Castle, from the 16th century, is 34 metres from the route. The water tower, 46 metres high, is 229 metres away. Mokrice Castle stands 213 metres from D10, Bizeljsko Castle 575 metres from D8, and Straža Mansion 27 metres from the Jakobova pot."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "2d53c38f": "A youth hostel in the town of Brežice.",
+    "c508e521": "A hotel in the old town that carries on the tradition of the inns where Sava raftsmen once stopped for the night. It has single to triple rooms, a suite and a pub.",
+    "deda697d": "Apartments in a villa with a large garden in the village of Pišece, run by the owners of Hotel Krona. Breakfast, lunch or dinner can be arranged in advance.",
+    "e3d285c5": "A small pizzeria baking Neapolitan pizza in a bread oven, with flour, tomatoes and mozzarella brought from Campania.",
+    "9c38ef03": "The visitor centre and café in Brežice's water tower, run by the Posavje Museum.",
+    "370925d8": "The restaurant of chef Jure Tomič, born in Brežice, cooking with local ingredients. Open Monday to Saturday, 12:00–22:00.",
+    "9103b52e": "A large restaurant seating 180, with a weekly lunch menu and food for groups.",
+    "10b8c5f2": "An inn and guesthouse on Rimska cesta with rooms, apartments and a country villa. It cooks a seasonal menu, bakes pizza in a bread oven and makes its own ice cream."
+  }
+}

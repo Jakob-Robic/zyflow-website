@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Cerklje na Gorenjskem's data and the places' own websites. Needs a local read by someone who knows Cerklje na Gorenjskem before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Cerklje na Gorenjskem.",
+  "intro": "Cerklje na Gorenjskem lies on the plain below Krvavec, between Kranj and Kamnik, with Ljubljana Airport at Brnik inside its borders. The plain is easy riding; the road up Krvavec is a real climb. G7 (Kranj–Cerklje na Gorenjskem–Kamnik) crosses the municipality, and LG4 (Križe–Velesovo) touches it briefly. Villages such as Vopovlje, Ambrož pod Krvavcem and Štefanja Gora belong to Cerklje too.",
+  "routes": {
+    "title": "Cycle routes through Cerklje",
+    "body": "Two signed routes pass through Cerklje. G7 is the main one: 14 km of its 32 km run through the municipality on the way from Kranj to Kamnik. LG4 (Križe–Velesovo) is a 20 km local route with 2 km here. Want a whole day out? Kamničanka is an easy 72 km ride with 254 m of climbing."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "Cerklje has 8 places to stay, and several are up on Krvavec rather than on the plain. Hotel Krvavec, Hotel Rozka and Apartma Krvavec sit by the ski slopes, more than 4 km from G7 and a long climb up. Pr Ambružarju, a tourist farm in Ambrož pod Krvavcem, is 2.3 km from the route. Staying low? Rooms and apartments Jana in Vopovlje is 2.2 km from G7 and 4 km from the airport."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Cerklje has 8 places to eat. On G7, Pizzerija Pod Jenkovo lipo is 40 metres from the route and open every day. Gostilna pod Krvavcem, a family inn since 1958, is 820 metres off G7 and cooks with the seasons. Kmečki turizem Pri Mežnarju is a farm on Štefanja Gora, 1.2 km from the route and uphill. Flying out? Lolita Sweet & Salty is in the public part of the terminal at Brnik."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Only 1 of the 12 public water points is within 150 metres of a signed route, so carry enough. There is one public repair point. For a bike shop, ride to Pro kolo in Kamnik, 9.5 km away. Cerklje has 4 public chargers if you ride an e-bike."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Three sights stand close to G7, each an easy stop between Kranj and Kamnik. Strmol Castle is 340 metres from the route. Frauenstein Castle, the former castle in Adergas, is 170 metres away. The Šmajčevo znamenje wayside shrine is 160 metres from G7."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "f822e292": "A mountain hotel right on the Krvavec ski slopes, with a self-service restaurant, a terrace bar and saunas.",
+    "7fc3d339": "A tourist farm in Ambrož pod Krvavcem with double and four-bed rooms and home cooking, from stews to štruklji.",
+    "2773a509": "A 20-room hotel in Ambrož pod Krvavcem with ski-in, ski-out access, a Finnish sauna and a terrace looking over Gorenjska.",
+    "6ee5773c": "Rooms and apartments in Vopovlje, 4 km from Ljubljana Airport, with free parking and bike rental.",
+    "fd9f8791": "An apartment on Kriška planina, part of the Krvavec ski area, with direct access to the slopes.",
+    "612d1603": "An inn and pizzeria with pizza from a bread oven, grill dishes and a weekday lunch menu, open every day of the year.",
+    "bddde5d9": "A farm on Štefanja Gora serving home cooking, with farm animals to meet.",
+    "007516f6": "A family inn since 1958, three generations on, with a seasonal menu built on local produce.",
+    "9b8f28dc": "A café for sweet and savoury snacks in the public part of the Ljubljana Airport terminal at Brnik."
+  }
+}

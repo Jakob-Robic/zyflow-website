@@ -5,7 +5,7 @@
  "official_name": "Koper / Capodistria",
  "region": "Obalno-kraška",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   13.82086,
   45.51724
@@ -14469,30 +14469,6 @@
  ],
  "sights": [
   {
-   "id": "c2aa5fcf-6e33-47ae-bf0a-f4354083f673",
-   "name": "Pier Paolo Vergerio",
-   "local_name": "Pier Paolo Vergerio",
-   "kind": "Historic site",
-   "pin": "historic",
-   "lon": 13.7297189,
-   "lat": 45.5495537,
-   "about": "Italian diplomat and theologian",
-   "near": {
-    "route": "K9",
-    "m": 1048
-   },
-   "wiki": "https://en.wikipedia.org/wiki/Pier_Paolo_Vergerio",
-   "wikidata": "Q668134",
-   "image": {
-    "src": "./assets/images/towns/koper/sight-c2aa5fcf.jpg",
-    "author": "Unknown authorUnknown author",
-    "licence": "Public domain",
-    "licence_url": null,
-    "source": "https://commons.wikimedia.org/wiki/File:Peter_Pavel_Vergerij.jpg"
-   },
-   "image_file": "Peter Pavel Vergerij.jpg"
-  },
-  {
    "id": "7f00e46d-8eb8-49ad-846c-41ada0c9a2e2",
    "name": "Praetorian Palace",
    "local_name": "Pretorska palača",
@@ -14611,6 +14587,30 @@
     "source": "https://commons.wikimedia.org/wiki/File:Koper_(30)_(3957507831).jpg"
    },
    "image_file": "Koper (30) (3957507831).jpg"
+  },
+  {
+   "id": "30cc34d9-d1ad-4146-a57b-538e409004a3",
+   "name": "Socerb Castle",
+   "local_name": "Grad Socerb",
+   "kind": "Historic site",
+   "pin": "historic",
+   "lon": 13.8607494,
+   "lat": 45.5895581,
+   "about": "medieval castle above Socerb, Slovenia",
+   "near": {
+    "route": "K9",
+    "m": 166
+   },
+   "wiki": "https://en.wikipedia.org/wiki/Socerb_Castle",
+   "wikidata": "Q3662872",
+   "image": {
+    "src": "./assets/images/towns/koper/sight-30cc34d9.jpg",
+    "author": "Yerpo",
+    "licence": "CC BY-SA 3.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grad_Socerb.jpg"
+   },
+   "image_file": "Grad Socerb.jpg"
   }
  ],
  "repair": [

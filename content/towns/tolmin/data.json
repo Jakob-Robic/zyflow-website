@@ -5,7 +5,7 @@
  "official_name": "Tolmin",
  "region": "Goriška",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   13.80883,
   46.16991
@@ -2096,28 +2096,28 @@
    "image_file": "P37.68-01 Tolmino-Slovenia, cimitero AUSTRIACO.jpg"
   },
   {
-   "id": "428d6479-b5cf-458a-ad00-1c42a7a97a17",
-   "name": "Marko Munih",
-   "local_name": "Marko Munih",
-   "kind": "Historic site",
-   "pin": "historic",
-   "lon": 13.7432729,
-   "lat": 46.1524443,
-   "about": "Slovenian musician",
+   "id": "42ac2750-498b-4dc5-83cd-643e1e935d39",
+   "name": "Driselpoh",
+   "local_name": "Soteska Driselpoh",
+   "kind": "Attraction",
+   "pin": "attraction",
+   "lon": 13.9434578,
+   "lat": 46.1998013,
+   "about": null,
    "near": {
     "route": "Bimobis",
-    "m": 95
+    "m": 14967
    },
    "wiki": null,
-   "wikidata": "Q18644523",
+   "wikidata": "Q16910212",
    "image": {
-    "src": "./assets/images/towns/tolmin/sight-428d6479.jpg",
-    "author": "Unknown authorUnknown author",
-    "licence": "Public domain",
-    "licence_url": null,
-    "source": "https://commons.wikimedia.org/wiki/File:Marko_Munih.jpg"
+    "src": "./assets/images/towns/tolmin/sight-42ac2750.jpg",
+    "author": "BojanM79",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Soteska_Driselpoh.jpg"
    },
-   "image_file": "Marko Munih.jpg"
+   "image_file": "Soteska Driselpoh.jpg"
   }
  ],
  "repair": [

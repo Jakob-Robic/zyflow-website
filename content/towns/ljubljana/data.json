@@ -5,7 +5,7 @@
  "official_name": "Ljubljana",
  "region": "Osrednjeslovenska",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   14.56295,
   46.05437
@@ -9059,30 +9059,6 @@
    "image_file": "Laibach - Jubiläumsbrücke.jpg"
   },
   {
-   "id": "dfabae6e-250d-4559-8263-58b9627510af",
-   "name": "Rihard Jakopič",
-   "local_name": "Rihard Jakopič",
-   "kind": "Historic site",
-   "pin": "historic",
-   "lon": 14.5030242,
-   "lat": 46.044947,
-   "about": "Slovenian painter (1869-1943)",
-   "near": {
-    "route": "Kolesarska Jakobova pot Slovenija Camino",
-    "m": 48
-   },
-   "wiki": "https://en.wikipedia.org/wiki/Rihard_Jakopič",
-   "wikidata": "Q2497776",
-   "image": {
-    "src": "./assets/images/towns/ljubljana/sight-dfabae6e.jpg",
-    "author": "Fran Vesel",
-    "licence": "Public domain",
-    "licence_url": null,
-    "source": "https://commons.wikimedia.org/wiki/File:Rihard_Jakopi%C4%8D_1905-10.jpg"
-   },
-   "image_file": "Rihard Jakopič 1905-10.jpg"
-  },
-  {
    "id": "7d9fdd6f-4f49-4a29-8458-d92042e74713",
    "name": "Emona",
    "local_name": "Emona",
@@ -9129,6 +9105,30 @@
     "source": "https://commons.wikimedia.org/wiki/File:Lubla%C5%88,_N%C3%A1rodn%C3%AD_galerie_1.jpg"
    },
    "image_file": "Lublaň, Národní galerie 1.jpg"
+  },
+  {
+   "id": "b25e221d-5711-4bc2-8504-27c5b2bb1059",
+   "name": "Prešeren Square",
+   "local_name": "Prešernov trg",
+   "kind": "Attraction",
+   "pin": "attraction",
+   "lon": 14.5060755266667,
+   "lat": 46.0514136633333,
+   "about": "central square in Ljubljana, Slovenia",
+   "near": {
+    "route": "STKP",
+    "m": 1
+   },
+   "wiki": "https://en.wikipedia.org/wiki/Prešeren_Square",
+   "wikidata": "Q1889515",
+   "image": {
+    "src": "./assets/images/towns/ljubljana/sight-b25e221d.jpg",
+    "author": "Petar Milošević",
+    "licence": "CC BY-SA 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tromostovje_in_Pre%C5%A1ernov_trg_(Tromostovje_and_Pre%C5%A1eren_Square).jpg"
+   },
+   "image_file": "Tromostovje in Prešernov trg (Tromostovje and Prešeren Square).jpg"
   }
  ],
  "repair": [

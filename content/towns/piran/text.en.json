@@ -1,0 +1,39 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Piran's data and the places' own websites. Needs a read by someone who knows Piran before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Piran.",
+  "intro": "Piran covers the south-western tip of the Slovenian coast: the walled old town on its point, Portorož and Lucija along the bay, Strunjan to the north and the salt pans at Sečovlje. Parenzana and EuroVelo 8 pass through, with the national routes D1 (Koper–Sečovlje) and D 6. Seven of the eight K loops of the Enjoy the Hinterland guide that pass through start in Piran's own villages: Lucija, Seča, Padna and Sveti Peter.",
+  "routes": {
+    "title": "Cycle routes through Piran",
+    "body": "Twelve signed routes cross Piran: two international routes, two national ones and eight local loops. Parenzana (119 km in total) and EuroVelo 8 follow the coast, and D1 runs 30 km between Koper and Sečovlje. On a road bike, take K13 (The challenge of Istria), an 80 km loop from Lucija, or K8 (Through the hinterland of Izola), 50 km from Izola. For a trekking bike, K12 (From Portorož for a coffee to Izola) is 27 km from Lucija, and K14 (Over the slopes of Korte) is 15 km from Seča. K10, K11 and K15 are for mountain bikes."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "Piran has 62 places to stay, from hostels in the old town to beach hotels and campsites. Barbara, a beach hotel in Fiesa, is 24 metres from K12, and Grand Hotel Portorož is 62 metres from K13 on the promenade. Want to sleep inside the walls? Hostel Piran and Miracolo di Mare are both within about 100 metres of K12. For a tent, Avtokamp Strunjan is 58 metres from K13."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Piran has 68 places to eat, many of them in the old town along K12. PiranArt on the waterfront, 133 metres from the route, makes its own pasta, bread and gelato. Porta Marciana cooks Italian food 53 metres from K12. Riding K13 inland? Gostilna Na burji is 8 metres from it. In Portorož, Pizzeria Santalucia is open every day from 11:00 to 22:00, 243 metres from K10."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Of Piran's 23 public water points, 16 are within 150 metres of a signed route. There are three public repair stands, and two bike shops: Bike Art in Portorož and Luna Šport in Piran. Piran has 6 public chargers if your e-bike needs a top-up."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Piran has 39 sights, and most of the old town is within a few minutes' walk of K12. The Sergej Mašera Maritime Museum, in the Gabrielli Palace, is 7 metres from the route. The Venetian House stands 8 metres away. Climb to the Walls of Piran, 108 metres off K12, for the view over the town. On the way, you pass old town gates such as the Dolfin Gate and the First Rašpor Gate."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town.",
+    "a8f7a4b5": "A long-standing hotel on the main promenade of Portorož, with a private beach, restaurants and thermal spa.",
+    "e29b8726": "Two hostels in the pedestrian heart of Piran's old town, about 100 metres from Tartini Square and the beach.",
+    "238e72fb": "A small boutique hotel in Piran with retro and modern rooms, some with a terrace over the garden.",
+    "bc3e3746": "A beach hotel in the bay of Fiesa, between the sea and a lake, with a restaurant, beach bar and wellness.",
+    "c469694a": "A campsite in Strunjan Bay, run by the local motoring club, close to the lagoon and its old salt pans.",
+    "e86fd8e9": "A pizzeria and spaghetteria in Portorož, known for pizza from a wood-fired oven. Open every day from 11:00 to 22:00.",
+    "8ef98a40": "An Italian restaurant in Piran, cooking since 1988, with pasta, seafood and Istrian fuži with truffles.",
+    "f2878861": "An inn serving traditional Istrian cooking in the hills above the coast.",
+    "02d78f98": "A restaurant on the Piran waterfront with home cooking, fresh pasta and bread, and gelato.",
+    "69c5f3a1": "A restaurant and beach bar by the sea in Strunjan, with Neapolitan pizza and homemade pasta, looking across to Piran."
+  }
+}

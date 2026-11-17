@@ -1,0 +1,35 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Bovec's data and each place's own website. Needs a read by someone who knows Bovec before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Bovec.",
+  "intro": "Bovec lies in the upper Soča valley, with the peaks of the Julian Alps on every side. The road climbs north from town past the Kluže fortress towards Log pod Mangartom and the Predel pass, and runs down the river towards Kobarid. The municipality also takes in Čezsoča, Žaga, the Lepena valley and Trenta, so many of the places below are a short ride out of the centre.",
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 28 places to stay in Bovec, from campsites by the river to small hotels and a hostel in town. Hostel Soča Rocks sits next to the centre, with 68 beds and a shared kitchen. For a quiet room, Hotel Dobra Vila on the edge of town has eleven. Camp Liza is 200 metres from where the Koritnica meets the Soča, with pitches, rooms and huts. Pristava Lepena, on a plateau above the valley, and Glamping Gozdna jasa give you a night among the trees and mountains."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "You have 21 places to eat in Bovec, from village inns to pizzerias. Gostilna Žvikar, about 4 km before Bovec on the road from Kobarid, is open from 12:00 to 21:00 every day except Monday. In Čezsoča, Gostilna Vančar serves lunch and dinner from 12:00 to 21:00, Tuesday to Sunday. For pizza in town, King Pizza is closed on Mondays. Pizzeria Žagca in Žaga bakes Neapolitan pizza in a wood-fired oven."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Bovec has 90 public water points across the municipality. There is no public repair stand in Bovec. For a bike shop, ride to Positive Sport in Kobarid, 12.6 km away. Riding an e-bike? Bovec has 5 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Bovec has 120 sights; these are the ones worth planning a stop for. Boka waterfall drops from a karst spring above the Soča, the first step alone 106 metres high. The Kluže fortress stands on the road to Predel, and Fort Hermann sits higher up on Rombon. At Log pod Mangartom you find what is left of a mosque built in 1916 during the First World War. Virje falls and the Juliana Alpine Botanical Garden in Trenta are shorter stops."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town. Not written: 8cc2172c Penzion Klin and 20636114 Casa Monte (their links go to a listing site and a review site, not their own websites).",
+    "686caef9": "A campsite 200 metres from where the Koritnica flows into the Soča, with pitches for tents and campers, double and triple rooms, glamping huts, an inn and a small shop.",
+    "4b040541": "A small resort built in the old Trenta style on a plateau above the Soča valley, with family houses and rooms, a spa and its own restaurant.",
+    "37dbb8f5": "A 68-bed hostel next to the centre of Bovec, with a shared kitchen, a common room and a bar. Guests get a discount on the activities it books.",
+    "45ebdc26": "Glamping in a forest clearing: round Lotus Belle tents for two or four, two forest rooms and space for your own tent, with a self-service breakfast.",
+    "ed8fc75d": "An eleven-room hotel on the edge of Bovec, in a building that once housed the telephone exchange. It has a wine cellar, a winter garden and a library.",
+    "7ac208d3": "The restaurant of the Pristava Lepena resort above the Soča valley, with a lounge bar and a wine room beside it.",
+    "08b8490b": "Neapolitan pizza from a wood-fired oven in Žaga, made by a pizzaiolo from Naples.",
+    "bc027d0d": "The home-style restaurant of Gostišče Vančar in Čezsoča, with a large covered garden and a playground. Open Tuesday to Sunday from 12:00 to 21:00.",
+    "8d8c9033": "A family restaurant on the Kobarid to Bovec road, about 4 km before Bovec. It cures its own salami and serves trout from its own pond; closed on Mondays.",
+    "1729ca32": "A pizzeria in the centre of Bovec since 2019, for eating in, taking away or delivery. Closed on Mondays."
+  }
+}

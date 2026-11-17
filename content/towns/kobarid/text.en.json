@@ -1,0 +1,37 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Kobarid's data and each place's own website. Needs a read by someone who knows Kobarid before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Kobarid.",
+  "intro": "Kobarid sits in the Soča valley between Bovec and Tolmin, a small town remembered for the battles fought here in the First World War. Five signed routes cross it: the international road route Bimobis, SI-C (SICAI Ciclo) for mountain bikes, and three short marked mountain-bike trails. To the west the municipality reaches into the Breginjski kot along the Nadiža river, where Robidišče is the westernmost village in Slovenia. Idrsko, a short ride south-east of the centre, also belongs to Kobarid.",
+  "routes": {
+    "title": "Cycle routes through Kobarid",
+    "body": "Five signed routes cross Kobarid, on road and on trail. Bimobis is the long one: an international road route of 144 km, 16 km of it inside Kobarid, passing the museum and the Napoleon bridge in town. SI-C (SICAI Ciclo) is a 62 km mountain-bike route, with 15 km in Kobarid. Logyeah, Napoleon and fit Helga are short marked mountain-bike trails of 2 km each."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 26 places to stay in Kobarid, and several sit right on Bimobis. Hostel Kobarid is 7 metres from the route, in a building from 1880 with bike storage and a shared kitchen. Apartmaji Mašera, 40 metres from Bimobis, rents out e-bikes. Gostišče Jazbec in Idrsko has a garage for bikes, a drying room and tools for small repairs. For camping, Eko Kamp Koren is 342 metres from Bimobis, and Kamp Lebanc lies by the Nadiža in the Breginjski kot."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "You have 11 places to eat in Kobarid, and the two best known are close to Bimobis. Hiša Polonka is 13 metres from Bimobis in the centre: open Monday, Thursday and Friday from 17:00 to 22:00, and at weekends from 12:00. Hiša Franko, 747 metres off the same route, is Ana Roš's restaurant with three Michelin stars, in a country house dating from 1861. For a simpler meal, Gostišče Jazbec in Idrsko cooks Primorska dishes and finishes with Kobarid štruklji."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Water is plentiful: 62 public water points, 13 of them within 150 metres of a signed route. There are two public repair stations, and Positive Sport is a bike shop in the municipality. Kobarid has 5 public chargers, so an e-bike can top up between climbs."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Of Kobarid's 69 sights, the main ones sit right beside Bimobis. The Napoleon bridge over the Soča is 3 metres from the route, and the Kobarid Museum is 16 metres away. The Caporetto war memorial, the Italian charnel house that holds the remains of 7,014 Italian soldiers from the Isonzo battles, is 143 metres off the route. Kozjak falls is 1.6 km off Bimobis. In the Breginjski kot, the Napoleon bridge over the Nadiža is 502 metres from the Napoleon trail."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town. Not written: 0c0cd235 Eco Kmetija Robidisce (its link goes to a news article on siol.net, not its own website).",
+    "877631a4": "A guesthouse in Idrsko, 2 km south-east of Kobarid, with twenty rooms and a restaurant. Riders get a garage for bikes, a drying room and tools for small repairs.",
+    "b3bae6bf": "A small family campsite by the Nadiža river past Podbela, close to the river's bathing spot and gorge, with its own pizzeria.",
+    "1cdf0e0a": "A campsite in the Soča valley run on eco principles, with pitches, wooden cabins and glamping, a bar and restaurant, and bikes to rent.",
+    "ad2d6e75": "Four chalets for two on a terrace almost 1,000 metres above sea level, looking over the Soča valley, with a wellness area of three saunas.",
+    "ddda3897": "A hostel in the centre of Kobarid, in a building from 1880, with bike storage, a shared kitchen and garden terraces.",
+    "b1fb5708": "Rooms and apartments in the centre of Kobarid, near the First World War museum. Breakfast comes mostly from the family farm, and you can rent e-bikes.",
+    "a7125d26": "Valter Kramar's place for wine, beer from the FEO brewery and food, in the centre of Kobarid.",
+    "ff369a33": "Ana Roš's restaurant with three Michelin stars, in a country house a few minutes from Kobarid. The menu follows what the valley gives: trout, game and wild plants."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Koper's data and the places' own websites. Needs a read by someone who knows Koper before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Koper.",
+  "intro": "Koper is the largest town on the Slovenian coast, with an old town on the sea and a hinterland that climbs towards the Karst Edge. Parenzana and EuroVelo 8 run along the coast here, together with the national routes D1 (Koper–Sečovlje) and D 6. Behind the town, the K loops of the Enjoy the Hinterland guide lead to villages such as Hrastovlje, Gračišče, Zazid and Osp. Four of these loops start at Koper railway station, so you can ride out without a car.",
+  "routes": {
+    "title": "Cycle routes through Koper",
+    "body": "Seventeen signed routes pass through Koper: two international routes, two national ones and 13 local loops. Parenzana (119 km in total) and EuroVelo 8 follow the coast, and D1 links Koper with Sečovlje in 30 km. On a road bike, take K1 (With a bike along the land of Refošk wine), 41 km, or K9 (On Socerb to enjoy the view), 57 km, both from Koper railway station; K13 (The challenge of Istria) is 80 km from Lucija and K8 (Through the hinterland of Izola) is 50 km from Izola. The other loops, such as K3 (Along the Istrian villages of the Karst Edge) from Hrastovlje, are for trekking or mountain bikes."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 23 places to stay in Koper, from a hostel in the old town to farms with camping in the hills. Casa Oasa is 17 metres from K13, and the campsite at Kmetija Jakomin is 40 metres from K3. Want to start from the centre? Villa Domus has beds in the old town, 517 metres from K9. For a quiet farm stay, Turistična kmetija Tonin is in the village of Puče, 811 metres from K13."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Koper has 60 places to eat, and several are right on a route. Karjola, an inn 4 metres from K13, cooks Istrian dishes and is closed on Mondays. Riding K1? Emonec is 48 metres from it, with daily lunches, grill and pizza. On the coast, Snack Bar 1964 in Žusterna is 50 metres from Parenzana, and Gostišče Turk is 192 metres from the same route."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Koper has 53 public water points, and 28 of them are within 150 metres of a signed route. There are five public repair stands, and two bike shops in town: Funsports and Velocenter Koper. E-bike riders have 17 public chargers across Koper."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Koper has 71 sights, and the old town alone is worth a stop. The Praetorian Palace, a Venetian Gothic building, and the Loggia Palace stand on the main square, about 900 metres from K9. The Regional Museum of Koper is in the Belgramoni-Tacco Palace, 938 metres from Parenzana. Riding K3? The Holy Trinity Church in Hrastovlje, known for its Dance of Death fresco, is 234 metres off the route."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town.",
+    "b8c5a8ef": "A tourist farm at the end of the village of Puče, with apartments and home cooking such as prosciutto, sausages and seasonal dishes.",
+    "82ff74a0": "A small guesthouse with four rooms just outside Koper, with its own pizzeria.",
+    "ce7350b0": "A hostel and student house in the old town of Koper, with dorm beds, studios and an apartment.",
+    "1c1ce40e": "A family farm with a camping area, home produce and an osmica, the short seasonal opening when farms sell their own food and wine.",
+    "22706188": "A bar in Žusterna that has been a meeting place for locals and visitors for over 50 years, known for rock music and concerts.",
+    "238c05a3": "The restaurant of the Grand Koper hotel, cooking local food from land and sea.",
+    "2a85e740": "A restaurant and beer hall on Vanganelska cesta with daily lunches, grill dishes, pizza and à la carte, a large terrace and free parking.",
+    "21e87165": "An inn cooking traditional Istrian dishes, many with a touch of refošk wine, with a view over Slovenian Istria.",
+    "a716ec0a": "An inn with fish and meat dishes, dishes with truffles, homemade desserts and bread from its own oven."
+  }
+}

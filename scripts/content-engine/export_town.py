@@ -325,6 +325,24 @@ def export(area_code, today=None):
         chunk = [r["wikidata"] for r in sights_raw[i : i + 40]]
         entities.update(patiently(get, "https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "ids": "|".join(chunk), "props": "labels|descriptions|claims|sitelinks", "languages": "en|sl", "format": "json"}))["entities"])
         time.sleep(WIKI_PAUSE)
+    # A map point tagged with a person's entry (a statue of Rutar, a house named after Alma Karlin),
+    # with an empty entry, or with a place whose own location is elsewhere (more than ~2 km away)
+    # is not this sight. Entries without a location of their own are kept (many waterfalls).
+    def same_place(row):
+        claims = entities.get(row["wikidata"], {}).get("claims", {})
+        kinds = {c.get("mainsnak", {}).get("datavalue", {}).get("value", {}).get("id") for c in claims.get("P31", [])}
+        if "Q5" in kinds:
+            return False
+        spots = [c.get("mainsnak", {}).get("datavalue", {}).get("value") or {} for c in claims.get("P625", [])]
+        spots = [v for v in spots if "latitude" in v]
+        if not spots:
+            return bool(kinds)
+        return any(abs(v["latitude"] - row["lat"]) < 0.018 and abs(v["longitude"] - row["lon"]) < 0.026 for v in spots)
+
+    dropped = [r["name"] for r in sights_raw if not same_place(r)]
+    sights_raw = [r for r in sights_raw if same_place(r)]
+    if dropped:
+        print(f"   sights whose encyclopedia entry is a person, an object or another place: {', '.join(dropped[:8])}")
     for row in sights_raw:
         ent = entities.get(row["wikidata"], {})
         row["fame"] = len(ent.get("sitelinks", {})) + (5 if ent.get("claims", {}).get("P18") else 0)

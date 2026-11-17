@@ -1,0 +1,41 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Bohinj's data and the places' own websites. Needs a local read by someone who knows Bohinj before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Bohinj.",
+  "intro": "Bohinj is the valley west of Bled, with Lake Bohinj at its head inside Triglav National Park. G2 (Lesce–Bled–Bohinjska Bistrica–Podbrdo–Most na Soči) comes up the valley from Bled, and LG-1 (Mojstrana–Bohinjsko Jezero–Bohinska Bistrica) links the villages with the lake. Bohinjska Bistrica is the main village. Ribčev Laz sits at the lake, and Stara Fužina, Studor and Polje are a short ride away.",
+  "routes": {
+    "title": "Cycle routes through Bohinj",
+    "body": "Three signed routes cross Bohinj, and together they cover the valley from Bohinjska Bistrica to the lake. G2 runs 53 km from Lesce through Bled and Bohinjska Bistrica, and 24 km of it are in Bohinj. LG-1 is 55 km long, also with 24 km in Bohinj, between the lake and the villages. The Kolesarska pot Bohinj is a local route of 11 km, all of it inside the valley."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 44 places to stay in Bohinj, from small hotels in Bohinjska Bistrica to rooms and apartments near the lake. Want to be on G2? Sunrose 7 is 50 metres from the route and Tripič 190 metres, both in Bohinjska Bistrica. Closer to the water, Resman and Apartma Bohinj are in Ribčev Laz. Planšar, an old village house in Stara Fužina, is 380 metres from LG-1."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Bohinj has 22 places to eat, most of them in Bohinjska Bistrica and around the lake. Gostilnica Štrud'l in the middle of Bohinjska Bistrica cooks local dishes such as žganci from Bohinj corn, and takes its name from its strudel. Pr' Pristavc in Polje, 220 metres from LG-1, bakes pizza in a bread oven. At the far end of the lake in Ukanc, Restavracija Ukanc and the restaurant at Camp Bohinj are 4.4 km and 4.0 km off LG-1, so plan them as a detour."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Bohinj has 69 public water points, and 10 of them are within 150 metres of a signed route. There is a public repair stand in Bohinjska Bistrica and a bike shop, Alpinsport, in Ribčev Laz by the lake. Bohinj has 3 public chargers for an e-bike top-up."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Several sights sit close to the signed routes. Oplen House, a house museum, is 80 metres from LG-1, and the Alpine Dairy Farming Museum is 400 metres away. The Grmečica waterfalls are 100 metres from G2. Savica Falls, a waterfall 78 metres high, is 7.2 km from LG-1, so leave time for the detour."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "843686bd": "An adults-only boutique hotel with 18 rooms in Bohinjska Bistrica, with its own restaurant, wellness and a natural pool in the garden.",
+    "63e08940": "A family hotel with 17 rooms in Bohinjska Bistrica, with a restaurant and pizzeria that go back to 1986. It also offers itself as a hotel for cyclists.",
+    "c279580c": "One 44 m² apartment for four in Ribčev Laz, a few minutes' walk from Lake Bohinj.",
+    "b42d7bc8": "Four apartments in a small apart hotel in Koprivnik, above the Bohinj valley.",
+    "ca6cb31d": "Seven rooms in Ribčev Laz, 500 metres from the lake, with a shared kitchen and locked storage for gear. Open all year.",
+    "c91703fc": "A stone and timber house from 1828 in the old centre of Stara Fužina, with rooms, an apartment and a restaurant serving Bohinj cheese and home cooking.",
+    "dcb28e45": "An inn in the middle of Bohinjska Bistrica that feels like a mountain hut, serving local dishes, beer from a local brewery and the strudel it is named after.",
+    "ce67e990": "A family restaurant in Ukanc, at the far end of the lake, cooking with local produce and game, with Slovenian wines and beer from Bohinj.",
+    "c2fcee8e": "The restaurant at Camp Danica in Bohinjska Bistrica, cooking Bohinj dishes with a modern touch from mostly local ingredients.",
+    "083867f9": "An inn and pizzeria in Polje, 2 km from the lake, with pizza from a bread oven, local dishes and rooms upstairs.",
+    "b684922e": "The restaurant at Camp Bohinj in Ukanc, on the shore of the lake. The camp closes for the winter.",
+    "bbeeb027": "A café and pub at Danica in Bohinjska Bistrica, with a pizza pop-up and concerts on the square in summer."
+  }
+}

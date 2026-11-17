@@ -5,7 +5,7 @@
  "official_name": "Nova Gorica",
  "region": "Goriška",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   13.74059,
   45.98048
@@ -2702,22 +2702,6 @@
     "source": "https://commons.wikimedia.org/wiki/File:Schloss_Kromberk.JPG"
    },
    "image_file": "Schloss Kromberk.JPG"
-  },
-  {
-   "id": "425b1a62-cf45-4469-9a40-59bc2537be8e",
-   "name": "Napis TITO Sabotin Nova Gorica",
-   "local_name": "Napis TITO Sabotin Nova Gorica",
-   "kind": "Historic site",
-   "pin": "historic",
-   "lon": 13.6429782,
-   "lat": 45.9813573,
-   "about": null,
-   "near": {
-    "route": "Bimobis",
-    "m": 597
-   },
-   "wiki": null,
-   "wikidata": "Q20523005"
   },
   {
    "id": "4d785304-220c-4c83-ae85-b78ba32b67ed",

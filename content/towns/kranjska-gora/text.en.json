@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Kranjska Gora's data and the places' own websites. Needs a local read by someone who knows Kranjska Gora before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Kranjska Gora.",
+  "intro": "Kranjska Gora sits at the top of the Upper Sava Valley, close to the borders with Austria and Italy, with the Julian Alps to the south and the Karavanke to the north. The valley floor is gentle, and the climbs rise on both sides of it. D2 (Rateče–Jesenice–Kranj–Ljubljana) starts here, and the mountain-bike routes STKP (Slovenska turnokolesarska pot) and Trans Karavanke cross the area. Rateče, Podkoren, Gozd Martuljek and Mojstrana belong to Kranjska Gora too.",
+  "routes": {
+    "title": "Cycle routes through Kranjska Gora",
+    "body": "Eight signed routes pass through Kranjska Gora, for road bikes and mountain bikes alike. D2 is 135 km long, and 27 km of it run through the valley from Rateče towards Jesenice. The Jakobova pot (Kolesarska Jakobova pot–Gorenjska veja) follows the valley for 26 km of its 150 km. For mountain bikes, STKP covers 35 km here, Trans Karavanke 42 km of its 165 km and SI-C (SICAI Ciclo) 10 km of its 92 km. Three local routes, 1 (Rateče), 2 (Jesenice) and LG-1, link the villages."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 48 places to stay in Kranjska Gora, from large hotels by the ski slope to campsites and rooms in the villages. Berghi is 20 metres from STKP, beside the cycle path to Gozd Martuljek, and has a locked bike room. Ramada Resort is 70 metres from D2, at the foot of the slope and 100 metres from the centre. Want to sleep outside? Kamp Špik in Gozd Martuljek has 200 pitches under the Špik group."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Kranjska Gora has 29 places to eat, and several are only metres from a route. Gostilna pri Martinu, in the centre 10 metres from STKP, cooks Slovenian dishes and is open every day except Tuesday from 10:00 to 22:00. Gostilna Mojmir, below the peak where Slovenia, Italy and Austria meet, is 20 metres from D2. In Gozd Martuljek, Gostilna Jožica has cooked since 1932, with a view of the Špik group. Want a reward for a climb? Mojčin dom is a wooden hut on top of Vitranc, above the town."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Of the 33 public water points, 16 are within 150 metres of a signed route. There are six repair points: four public repair stands along the valley and two bike shops in Kranjska Gora, Sport point and Športna točka. On an e-bike, you can charge at 10 public chargers in the valley."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Several sights sit right on STKP. Liznjek Farm, an ethnographic museum in Kranjska Gora, is 10 metres from the route. In Mojstrana, the Slovenian Alpine Museum is 40 metres away. Pocar Homestead, an old farmhouse, is 430 metres from the route. Peričnik Falls is 2.9 km off STKP; a path lets you walk behind the lower fall."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "fbb77319": "A four-star hotel with 118 rooms at the foot of the ski slope, 100 metres from the centre, with wellness and a glass-roofed water park.",
+    "9d2feee3": "A hotel in the centre of Kranjska Gora with rooms finished in ash and oak, breakfast included.",
+    "270c0779": "A campsite with 200 pitches in Gozd Martuljek, under the Špik group, most of them in shade. It is open part of the year, so check the dates.",
+    "e5cf7ce7": "Rooms and apartments 400 metres from the centre, beside the cycle path to Martuljek, with a locked bike room and breakfast.",
+    "62d7bc2a": "A pastry shop and café in Kranjska Gora that also lets rooms.",
+    "8ebab4eb": "A family inn in Gozd Martuljek since 1932, on the main road with a view of the Špik group, cooking over an open fire and baking pizza.",
+    "20c68c72": "A family-run inn below the three-border peak near Rateče, with rooms since 2017.",
+    "816a0454": "A Slovenian inn in the centre of Kranjska Gora, 400 metres from the ski slope, with rooms and a room for groups by the fire.",
+    "f986272c": "A wooden mountain hut on top of Vitranc above Kranjska Gora, with home cooking and a sunny terrace. You walk up or take the chairlift."
+  }
+}

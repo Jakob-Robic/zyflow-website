@@ -17,11 +17,11 @@
   },
   "practical": {
     "title": "Water, repair and charging",
-    "body": "You can refill a bottle at 28 public water points, and 22 of them are within 150 metres of a signed route. There is one public repair stand in town. For a bike shop, ride to Obris Šport in Radovljica, 6.4 km away. Riding an e-bike? Bled has no public charger, so charge before you set off. The nearest is at GALA IN in Radovljica, 6.3 km away."
+    "body": "You can refill a bottle at 28 public water points, and 21 of them are within 150 metres of a signed route. There is one public repair stand in town. For a bike shop, ride to Obris Šport in Radovljica, 6.4 km away. Riding an e-bike? Bled has no public charger, so charge before you set off. The nearest is at GALA IN in Radovljica, 6.3 km away."
   },
   "sights": {
     "title": "What to see on the way",
-    "body": "Three sights are worth getting off the bike for, and all are close to a signed route. Bled Castle stands on its cliff 80 metres from D2. Bled Island sits in the lake about 400 metres from the same route; you reach it by boat. Vintgar Gorge, a narrow canyon north-west of town, is 1.1 km off the local route LG2. Shorter stops: the Adolf Muhr monument in town and the cave under Babji zob, 1.2 km off G2."
+    "body": "Three sights are worth getting off the bike for, and all are close to a signed route. Bled Castle stands on its cliff 70 metres from D2. Bled Island sits in the lake about 400 metres from G2; you reach it by boat. Vintgar Gorge, a narrow canyon north-west of town, is 1.1 km off the local route LG2. Shorter stops: the Adolf Muhr monument in town and the cave under Babji zob, 1.2 km off G2."
   },
   "places": {
     "_note": "One line per place, keyed by the start of its id, written from the place's own website (moved here from data.json on 2026-11-16 so a data refresh keeps them). A place without a line shows its type and town.",

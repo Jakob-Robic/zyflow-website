@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Novo mesto's data and each place's own website. Needs a read by someone who knows Novo mesto before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Novo mesto.",
+  "intro": "Novo mesto lies on the Krka in south-east Slovenia. Five signed routes run through it, among them D8 (Zdraviliška kolesarska pot), G10 from Ljubljana by way of Žužemberk, and the Kolesarska Jakobova pot. Otočec, with its castle on D8, belongs to Novo mesto too.",
+  "routes": {
+    "title": "Cycle routes through Novo mesto",
+    "body": "Five signed routes pass through Novo mesto. The longest is the Kolesarska Jakobova pot Slovenija Camino, 311 km in total with 29 km inside Novo mesto. D8 (Zdraviliška kolesarska pot) runs 133 km and passes Otočec. G10 (Ljubljana–Škofljica–Žužemberk–Novo mesto) brings you in from Ljubljana along 84 km, while G12 and R16 link the town with Trebnje and Mokronog."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 17 places to stay in Novo mesto. In the centre, the Jantar apartments are 48 metres from the Jakobova pot, and Ravbar, 290 metres from the same route, has a bike hotel for cyclists. On D8, Grad Otočec is a hotel inside the castle, 132 metres from the route. For a farm stay, Tourist Farm Šeruga in Sela pri Ratežu is 1.4 km off D8."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Novo mesto has 8 places to eat, and the closest to a route are on D8 and in the centre. Gostišče Loka, on the Krka 10 metres from D8, is a restaurant, pizzeria, pastry shop and bakery in one. Bistro Marof, 76 metres from D8, serves coffee, a weekly menu, home-made desserts and gelato by day. In the centre, Oštarija Rudolfswerth is 26 metres from the Jakobova pot and bakes pizza in a bread oven. Gostilna Vovko in Ratež, a family inn since 1977, is a 1.9 km detour from D8."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "There are only 3 public water points, but all 3 are within 150 metres of a signed route. For repairs there are two bike shops, JB Center and Kolesa Smole. Novo mesto has no public charger. If you ride an e-bike, the nearest is at Ajdovo Zrno in Črnomelj, 23.2 km away."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Castles are the sights here, and several sit close to a route. Otočec Castle is 111 metres from D8 and is now a hotel. Graben Castle is 231 metres from the same route. Grm Castle is 563 metres off the Jakobova pot and Luknja Castle 764 metres. Hmeljnik Castle is a 3 km detour from G12."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "9e3cb5a3": "A hotel with a restaurant, a pizzeria with a bread oven and a four-lane bowling alley, 100 metres from the Novo mesto west motorway exit.",
+    "929f6c7a": "A hotel inside Otočec Castle, run by Terme Krka, with a restaurant, wellness and golf. It holds a Michelin Key.",
+    "522f7ec6": "Apartments and rooms 300 metres from the centre of Novo mesto, with a bike hotel for cyclists.",
+    "2cc1a666": "Renovated studios and an apartment in the centre of Novo mesto, each with a kitchen and free private parking. Open all year.",
+    "ba71df8e": "A family farm stay in Sela pri Ratežu near Otočec, with rustic rooms, a pool, saunas and food from local produce.",
+    "b583ac8b": "An inn named after Rudolf IV, who founded Novo mesto in 1365. It serves morning snacks, lunches, pizza from a bread oven and more than 40 Slovenian wines.",
+    "27d3ca88": "A restaurant, pizzeria, pastry shop and bakery on the bank of the Krka, with a terrace by the river.",
+    "d4303bd6": "A family inn in Ratež near Otočec since 1977, cooking Dolenjska food with local produce. It also has nine rooms.",
+    "00877126": "A bistro with coffee, a weekly menu, home-made desserts and gelato by day, and shared plates with wine in the evening."
+  }
+}

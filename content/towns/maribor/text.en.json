@@ -1,0 +1,39 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Maribor's data and each place's own website. Needs a read by someone who knows Maribor before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Maribor.",
+  "intro": "Maribor lies on the Drava at the foot of Pohorje, so you can ride along the river or head up into the hills. Thirteen signed routes pass through, among them EuroVelo 9 (Baltic-Adriatic), the Dravska kolesarska pot and the STKP (Slovenska turnokolesarska pot). Marked mountain-bike routes such as the Pohorje–Flow Line and Okoli pohorskih smučišč run on Pohorje itself.",
+  "routes": {
+    "title": "Cycle routes through Maribor",
+    "body": "Thirteen signed routes pass through Maribor, so you can ride the river or the hills on a marked line. The Dravska kolesarska pot runs 190 km along the Drava, 29 km of it inside Maribor, and EuroVelo 9 (Baltic-Adriatic) crosses the city on a 128 km section. The national route D1 adds 15 km, and the STKP, a 276 km mountain-bike route, 19 km. On Pohorje, the Pohorje–Flow Line (7 km) and Okoli pohorskih smučišč (23 km) are marked for mountain bikes; north of the city, the Kungoška kolesarska pot is a 52 km road route."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 37 places to stay in Maribor, from a hostel by the river to hotels up on Pohorje. Hostel Pekarna, on the right bank of the Drava near the old town, is 386 metres from the Dravska kolesarska pot and welcomes cyclists. Riding a mountain bike? Gozdna Villa Mari is 22 metres from the STKP at the foot of Pohorje, and Hotel Bellevue stands at the top of the cable car, 41 metres from a marked mountain-bike route. Mlada lipa, a B&B on Pohorje, has safe storage for bikes."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Maribor has 130 places to eat, and several are a short ride from the Drava. Fudo on Poštna ulica, 147 metres from the Dravska kolesarska pot, cooks with local, organic ingredients and is closed on Sundays. Sedem, the restaurant of the city's college for hospitality and tourism, is 61 metres from EuroVelo 9 and has a tasting menu. For Vietnamese food, Ngon is 131 metres from the Drava route. Cantante on Tabor serves Cuban dishes and cocktails."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "Maribor has 29 public water points, but only 9 of them are within 150 metres of a signed route, so fill up whenever you can. For repairs you have 16 places: one public repair stand and 15 bike shops. Riding an e-bike? Maribor has 5 public chargers."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Most of Maribor's sights line the river, a few metres from the Dravska kolesarska pot. The Water Tower, a fortified tower from 1555, is 19 metres from the route, and Stara trta, the old vine, is 20 metres away. The former synagogue, now a museum, is 29 metres off the same route, and the Plague Column 126 metres. Maribor Castle is 203 metres from EuroVelo 9."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "069cbb8f": "A sports hotel below Pohorje, a short way from the ski slopes, with a restaurant cooking home-style food and a café terrace that looks up at the mountain. It also runs sports camps.",
+    "c82f9b0f": "A four-star hotel at the top of the Pohorje cable car, among the forests above Maribor, with wellness and a fitness room.",
+    "5a98b48a": "A small garni hotel on Beograjska ulica with thirteen rooms, studios and family apartments. Bike storage can be arranged in advance.",
+    "05d7ccff": "A B&B on Pohorje for bike park riders, skiers and walkers, with safe bike storage, parking and breakfast.",
+    "8e5f1964": "A hostel on the right bank of the Drava at the edge of Magdalenski park, close to the old town. It sets out to be friendly to cyclists and hikers.",
+    "6a7925cf": "Family apartments and rooms at the foot of Pohorje, by the snow stadium and 6 km from the centre of Maribor.",
+    "6d66826e": "A long-running Cuban restaurant on Tabor, with Cuban and South American dishes and cocktails.",
+    "90364bc6": "A restaurant and wine bar on Poštna ulica cooking fusion dishes from local, organic ingredients. Closed on Sundays.",
+    "25db661d": "A Vietnamese restaurant in the centre with pho, wok dishes, rice noodles and Vietnamese coffee.",
+    "dbdafc96": "The restaurant and café of Maribor's college for hospitality and tourism, on Cafova ulica, with a tasting menu. Closed on Sundays."
+  }
+}

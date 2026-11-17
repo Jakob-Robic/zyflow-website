@@ -1,0 +1,34 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8) from Medvode's data and the places' own websites. Needs a local read by someone who knows Medvode before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Medvode.",
+  "intro": "Medvode lies where the Sora flows into the Sava, between Ljubljana and Kranj, with Zbilje Lake just upstream. It sits on the main lines out of Ljubljana, so many routes pass through: D2 (Rateče–Jesenice–Kranj–Ljubljana), G3 (Ljubljana–Škofja Loka–Cerkno–Želin), two branches of the Jakobova pot and the mountain-bike route STKP. Smlednik, Zbilje, Pirniče and Preska belong to Medvode too.",
+  "routes": {
+    "title": "Cycle routes through Medvode",
+    "body": "Eleven signed routes pass through Medvode. L-039 (Podutik–Topol–Trboje) has the most of it, 20 km of its 25 km, and passes Zbilje Lake. STKP covers 16 km here, the Jakobova pot (Kolesarska Jakobova pot–Gorenjska veja) 12 km, D2 9 km and G3 6 km. Two local routes end in Medvode: LG10 (Križ–Medvode), 26 km, and LG9 (Polhov Gradec–Medvode), 18 km. Ljubljančanka, a 71 km ride with 460 m of climbing, makes a full day from here."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "You have 8 places to stay in Medvode, and several of them are by Zbilje Lake. Hotel Kanu is next to the lake, 40 metres from L-039. The campsite FKK Smlednik sits where the Sava meets the lake, 240 metres from the same route. In Smlednik, Hotel Baron is 30 metres from LG10, with 11 rooms, 2 apartments and bikes to rent."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "Medvode has 8 places to eat. Gostilna Mihovec in Zgornje Pirniče has been an inn since 1857 and cooks Slovenian food with a modern touch, 440 metres from the Medvode–Pirniče–Vikrče route. In Zbilje, Pizza Sedmica is 370 metres from L-039 and serves a lunch menu on weekdays from 10:00 to 15:00."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "You can refill a bottle at 21 public water points, and 14 of them are within 150 metres of a signed route. There is one public repair stand and one bike shop, Servis Koles. Medvode has 4 public chargers for an e-bike."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Several sights are only metres from a route. The memorial to five fallen hostages is 10 metres from D2, and Lazarini Mansion 50 metres. Goričane Mansion is 40 metres from the Jakobova pot. Smlednik Castle stands on the hill 430 metres from the other branch of the Jakobova pot, and Jakob Aljaž's birth house is 490 metres from D2."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
+    "f2e2e5a6": "A hotel in Smlednik near Zbilje Lake with 11 rooms and 2 apartments, each with a balcony or terrace, and bikes to rent.",
+    "5dd1cac1": "A campsite on the Sava at the edge of Zbilje Lake, with its own beach and a separate naturist area.",
+    "b85a263f": "A family hotel next to Zbilje Lake in Smlednik, with a restaurant, picnic grounds and a panoramic boat.",
+    "cd06affe": "A pizzeria in Zbilje with pizza to eat in or take home, and a weekday lunch menu.",
+    "5a4cef72": "A family inn in Zgornje Pirniče since 1857, cooking Slovenian food with a modern touch and selling seasonal produce and home-made goods."
+  }
+}

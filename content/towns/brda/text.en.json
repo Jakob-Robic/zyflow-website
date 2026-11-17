@@ -1,0 +1,37 @@
+{
+  "status": "draft",
+  "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Brda's data and each place's own website. Needs a read by someone who knows Brda before publishing.",
+  "lede": "Know where to ride, stay, eat and refill in Brda.",
+  "intro": "Brda is a region of vineyard hills on the border with Italy, between Nova Gorica and Kanal ob Soči. Three signed routes cross it: the international road route Bimobis, R2 (Nova Gorica–Dobrovo–Kanal) and the local route La valle dello Judrio. Dobrovo, Medana, Šmartno and Podsabotin are among the villages you pass.",
+  "routes": {
+    "title": "Cycle routes through Brda",
+    "body": "Three signed routes pass through Brda, and Bimobis carries you through the middle. It is an international road route of 144 km, with 25 km inside Brda, passing Dobrovo and Medana. R2 (Nova Gorica–Dobrovo–Kanal), a national route, runs 5 km through Brda. La valle dello Judrio is a local route of 24 km, 4 km of it in Brda."
+  },
+  "stays": {
+    "title": "Where to stay with your bike",
+    "body": "Brda has 8 places to stay, and the four below are on wine estates, a farm and a castle. B&B Bužinel is 12 metres from Bimobis, with a restaurant and its own wine under the same name. Alma Vista, 32 metres from the route, is a villa for up to six with a private pool, part of the Edi Simčič wine estate. Hotel Gredič, 611 metres from R2, has its rooms inside the walls of a castle. Turistična kmetija Breg stands on a hill above the Idrija river, 146 metres from La valle dello Judrio."
+  },
+  "food": {
+    "title": "Where to stop and eat",
+    "body": "You have 10 places to eat in Brda, and three of them sit within 25 metres of Bimobis. In Medana, Ošterija Klinec cooks seasonal home food with organic wine from its own cellar; it opens Friday to Monday, so check the hours before you set off. Vino Modana, also in Medana, is mostly a fish kitchen, known for its mussels. Bužinel is 24 metres from the route. At the entrance to Brda in Podsabotin, Turistična kmetija Štanfel has a place to charge and store e-bikes."
+  },
+  "practical": {
+    "title": "Water, repair and charging",
+    "body": "You can refill a bottle at 11 public water points, and 6 of them are within 150 metres of a signed route. There is no public repair stand in Brda. The nearest bike shop is Cicli Buz, 8.4 km away. Riding an e-bike? Brda has one public charger, so plan your stops."
+  },
+  "sights": {
+    "title": "What to see on the way",
+    "body": "Brda has 13 sights, and Dobrovo Castle is the one right on your way. It stands 21 metres from Bimobis, in the village of the same name."
+  },
+  "places": {
+    "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town. Not written: fb5908fb San Martin (its website now shows a travel agency with e-bike rental and rooms, not a hotel, restaurant or wine bar).",
+    "96824f8c": "Rooms at the Bužinel wine estate, which also runs a restaurant and sells its own wine.",
+    "7e45d034": "A tourist farm on a hill above the Idrija river, restored in the style of an old Brda house, with rooms, a terrace over the vineyards and seasonal dishes.",
+    "9580c817": "A holiday villa for up to six guests on the Edi Simčič wine estate, with two ensuite bedrooms, a private pool and a small spa.",
+    "9a3dee8d": "A boutique hotel with rooms inside Gredič castle, a restaurant cooking Mediterranean and continental dishes, and a wine shop.",
+    "12f5bcc4": "The restaurant of the Bužinel wine estate, which also has rooms and sells its own wine.",
+    "a006fc9b": "A tourist farm in Podsabotin at the entrance to Brda, with wine and sparkling wine from its own cellar, old family recipes and rooms. Cyclists can charge and store e-bikes.",
+    "adf5ad12": "A wine bar and kitchen in Medana, mostly fish and shellfish, with prosciutto, salami and local cheese.",
+    "b1ad5a70": "A family inn in Medana since 1918, cooking seasonal local food with organic wine from its own cellar. Open Friday to Monday only."
+  }
+}

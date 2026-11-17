@@ -5,7 +5,7 @@
  "official_name": "Maribor",
  "region": "Podravska",
  "country": "Slovenia",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "center": [
   15.62731,
   46.56341
@@ -8378,28 +8378,28 @@
    "image_file": "Kužno znamenje Maribor.jpg"
   },
   {
-   "id": "a5784c9b-d037-465b-adaa-6637282204a1",
-   "name": "K67",
-   "local_name": "Kiosk K67",
-   "kind": "Museum",
-   "pin": "museum",
-   "lon": 15.6417296,
-   "lat": 46.5586558,
-   "about": "kiosk design created in 1966 by the Slovenian architect and designer Saša J. Mächtig",
+   "id": "c9c31670-6f5e-44fb-b0be-f9051ce05a97",
+   "name": "Betnava Mansion",
+   "local_name": "Dvorec Betnava",
+   "kind": "Historic site",
+   "pin": "historic",
+   "lon": 15.639859,
+   "lat": 46.5285114,
+   "about": "manor house in Slovenia",
    "near": {
-    "route": "drava bike",
-    "m": 216
+    "route": "EV9",
+    "m": 185
    },
-   "wiki": "https://en.wikipedia.org/wiki/K67_kiosk",
-   "wikidata": "Q6324648",
+   "wiki": "https://en.wikipedia.org/wiki/Betnava_Mansion",
+   "wikidata": "Q3402440",
    "image": {
-    "src": "./assets/images/towns/maribor/sight-a5784c9b.jpg",
-    "author": "Shabicht",
-    "licence": "CC0",
-    "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Kiosk_06.jpg"
+    "src": "./assets/images/towns/maribor/sight-c9c31670.jpg",
+    "author": "Sl-Ziga",
+    "licence": "Public domain",
+    "licence_url": null,
+    "source": "https://commons.wikimedia.org/wiki/File:DvorecBetnava1.JPG"
    },
-   "image_file": "Kiosk 06.jpg"
+   "image_file": "DvorecBetnava1.JPG"
   }
  ],
  "repair": [
