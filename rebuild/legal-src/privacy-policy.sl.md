@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.5 · **Datum začetka veljavnosti:** 16. 11. 2026 · Nadomešča različico 2.4 z dne 7. 11. 2026
+**Različica:** 2.6 · **Datum začetka veljavnosti:** 17. 11. 2026 · Nadomešča različico 2.5 z dne 16. 11. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -164,13 +164,15 @@ Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava j
 
 | Storitev | Kaj lahko storite | Kaj prejmemo in hranimo |
 |---|---|---|
-| **Strava** (Strava, Inc., ZDA) | Uvozite svoje vožnje in shranjene poti iz Strave | Vaš ID športnika pri Stravi; vožnje in poti, ki jih izberete za uvoz (ime, sled GPS, razdalja, višinska razlika, datum) |
+| **Strava** (Strava, Inc., ZDA) | Uvozite svoje vožnje in shranjene poti iz Strave | Vaš ID športnika pri Stravi; vožnje in poti, ki jih izberete za uvoz (ime, sled GPS, razdalja, višinska razlika, datum); največ 7 dni črta poti voženj in poti na vašem seznamu, za predoglede zemljevida |
 | **Garmin Connect** (Garmin Ltd. in povezane družbe) | Pošljete poti v napravo Garmin; uvozite opravljene vožnje | Vaš uporabniški ID pri Garminu in dovoljenja, ki ste jih podelili; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
 | **Wahoo** (Wahoo Fitness L.L.C., ZDA) | Pošljete poti v kolesarski računalnik Wahoo; uvozite opravljene vožnje | Vaš uporabniški ID pri Wahoo; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
 | **Hammerhead** (SRAM, LLC, ZDA) | Pošljete poti v Karoo; uvozite opravljene vožnje | Vaš uporabniški ID pri Hammerheadu; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
 | **Ride with GPS** (Ride with GPS, Inc., ZDA) | Uvozite svoje poti in vožnje; pošljete poti | Vaš uporabniški ID pri Ride with GPS; poti in vožnje, ki jih izberete za uvoz; poti, ki jih pošljete |
 
 **Kako deluje:** ko povežete storitev, se prijavite na strani te storitve; vašega gesla za to storitev Zyflow nikoli ne vidi. Storitev nam izda žeton za dostop, ki ga hranimo **šifriranega** in ga uporabljamo le za to, kar zahtevate: da pošljemo pot, ki ste jo izbrali, prikažemo seznam vaših voženj ali poti, da izberete, kaj uvoziti, in uvozimo izbrane elemente. Ko pošljete pot, si zapomnimo, kam je bila poslana, da lahko prikažemo »Poslano v …« in odstranimo kopijo, če pot v Zyflowu izbrišete.
+
+**Predogledi zemljevida (Strava):** da lahko za vsako vožnjo in pot na vašem seznamu iz Strave prikažemo majhen zemljevid, njeno poenostavljeno črto poti hranimo največ 7 dni, sliko pa izrišemo na lastnem strežniku (gostuje pri Contabo GmbH v Nemčiji, EU) z zemljevidnimi ploščicami MapTiler. MapTiler vidi le, katero območje zemljevida zahteva naš strežnik, ne pa, za koga. Črte in slike so vidne samo vam. Izbrišemo jih po 7 dneh, ko vožnjo ali pot uvozite, ali takoj, ko odklopite Stravo.
 
 **Vidnost:** podatki iz povezanih storitev so vidni **samo vam**. Nikoli jih ne objavimo v skupnosti, poti, uvoženih iz Strave, pa ni mogoče deliti. Teh podatkov nikoli ne prodajamo in jih ne uporabljamo za učenje modelov umetne inteligence.
 
@@ -295,6 +297,7 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Shranjene in uvožene poti, shranjeni kraji | Dokler jih ne izbrišete ali ne izbrišete računa |
 | Žetoni in uporabniški ID-ji povezanih storitev | Dokler storitve ne odklopite ali ne izbrišete računa |
 | Vožnje in poti, uvožene iz povezane storitve | Dokler jih ne izbrišete ali ne izbrišete računa; elementi, uvoženi iz Strave, se izbrišejo tudi ob odklopu Strave |
+| Črte poti in predogledi zemljevida iz Strave za vožnje in poti, ki jih niste uvozili | Največ 7 dni; prej, ko element uvozite ali odklopite Stravo |
 | Zapis o poteh, poslanih v storitev naprave | Dokler ne izbrišete poti ali računa |
 | Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Deljena pot in njene fotografije se izbrišejo, ko pot odstranite ali izbrišete račun; njene slike zemljevidov izbrišemo iz hrambe datotek na zahtevo v 30 dneh, ob izbrisu računa pa samodejno (glej točko 9) |
 | Kolesarski potni list in fotografije kolesa | Do izbrisa računa; fotografijo kolesa izbrišemo iz hrambe datotek, ko jo odstranite ali izbrišete račun (glej točko 9) |
@@ -339,7 +342,7 @@ Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) 
 - **Na spletu:** [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna).
 - **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, žigi, kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa ter fotografije in slike zemljevidov deljenih poti), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
+Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, žigi, kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa, fotografije in slike zemljevidov deljenih poti ter predoglede zemljevida voženj iz Strave), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
 ## 10. Pritožbe
 
