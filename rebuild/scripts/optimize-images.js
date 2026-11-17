@@ -287,15 +287,20 @@ function simplifyContourSvg(svgText, epsilon = CONTOUR_EPSILON) {
 
 /**
  * Encoded variants are kept between builds, keyed by the source's content hash, the
- * requested width, the format and the encoder settings. Vercel keeps node_modules
- * between builds, so the cache lives in node_modules/.cache; IMAGE_CACHE_DIR moves it,
- * IMAGE_CACHE=off turns it off. A changed photo has a new hash, so it is encoded again.
+ * requested width, the format and the encoder settings. On Vercel the cache lives in
+ * .vercel/cache at the repository root, the one folder Vercel's build cache keeps for a
+ * static site (node_modules/.cache is not kept); locally in node_modules/.cache.
+ * IMAGE_CACHE_DIR moves it, IMAGE_CACHE=off turns it off. A changed photo has a new
+ * hash, so it is encoded again.
  */
 const ENCODE_SETTINGS = `a${AVIF_QUALITY}-w${WEBP_QUALITY}-j${JPEG_QUALITY}-e4`;
 const CACHE_DIR =
   process.env.IMAGE_CACHE === "off"
     ? null
-    : process.env.IMAGE_CACHE_DIR || path.join(__dirname, "..", "..", "node_modules", ".cache", "zyflow-images");
+    : process.env.IMAGE_CACHE_DIR ||
+      (process.env.VERCEL
+        ? path.join(__dirname, "..", "..", ".vercel", "cache", "zyflow-images")
+        : path.join(__dirname, "..", "..", "node_modules", ".cache", "zyflow-images"));
 const cacheStats = { hits: 0, misses: 0 };
 
 async function encodeVariantCached(input, hash, width, format) {
