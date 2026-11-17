@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/ajdovscina/hero.jpg",
+      "author": "Doremo",
+      "licence": "CC BY 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cesta_Ajdov%C5%A1%C4%8Dina_3.jpg",
+      "caption": "Cesta village in the Vipava Valley below the Čaven ridge, Municipality of Ajdovščina."
+    }
+  ],
+  "hero": "./assets/images/towns/ajdovscina/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}

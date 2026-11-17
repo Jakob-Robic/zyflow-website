@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/koper/hero.jpg",
+      "author": "Szilas",
+      "licence": "Public domain",
+      "licence_url": "",
+      "source": "https://commons.wikimedia.org/wiki/File:View_of_Koper_from_Zusterna.JPG",
+      "caption": "Koper on the bay seen from Žusterna."
+    }
+  ],
+  "hero": "./assets/images/towns/koper/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 2."
+}

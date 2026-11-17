@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/novo-mesto/hero.jpg",
+      "author": "Bor Peče",
+      "licence": "CC BY-SA 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Novo_mesto_2.jpg",
+      "caption": "Novo mesto old town on the bend of the Krka river."
+    }
+  ],
+  "hero": "./assets/images/towns/novo-mesto/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}

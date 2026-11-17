@@ -1,0 +1,15 @@
+{
+  "_note": "The town's large photos, chosen from Wikimedia Commons, with captions and credits. The export job never writes or deletes this file.",
+  "photos": [
+    {
+      "src": "./assets/images/towns/medvode/hero.jpg",
+      "author": "Miha Peče",
+      "licence": "CC BY-SA 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dng_kamniske_DT.jpg",
+      "caption": "Valburga with the Lazarini manor and the Kamnik-Savinja Alps behind, Municipality of Medvode."
+    }
+  ],
+  "hero": "./assets/images/towns/medvode/hero.jpg",
+  "hero_note": "Hero photo picked 2026-11-17 from three Commons candidates (Jakob asked Claude to choose); candidate 1."
+}
