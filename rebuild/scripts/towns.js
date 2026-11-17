@@ -25,6 +25,8 @@ const SHOW_DRAFTS = process.env.TOWNS_DRAFTS === "true" || process.env.TOWNS_DRA
 
 const TEXT = {
   en: {
+    lang: "en",
+    placeFallback: (kind, town) => (town ? `${kind} in ${town.name}.` : `${kind} in the municipality.`),
     crumb: "Cycling",
     hubEyebrow: "cycling by town",
     hubTitle: "Slovenian towns by bike",
@@ -111,7 +113,7 @@ const TEXT = {
     routeLoop: (r) =>
       `A loop from ${r.start}${{ road: ", for road bikes", trekking: ", for trekking bikes", mtb: ", for mountain bikes" }[r.bike] || ""}.`,
     routesLead: (t) => {
-      const letters = [...new Set(t.routes.filter((r) => r.level === "Local route" && /^[A-Z]{1,2}[- ]?\d/.test(r.code || "")).map((r) => r.code[0]))];
+      const letters = [...new Set(t.routes.filter((r) => (r.levelKey || r.level) === "Local route" && /^[A-Z]{1,2}[- ]?\d/.test(r.code || "")).map((r) => r.code[0]))];
       const local = letters.length ? `; codes starting with ${listOr(letters)} are local routes around ${t.name}` : "";
       return `Each route has its own colour on the map above. A letter and a number mark Slovenia's national cycle network${local}.`;
     },
@@ -213,7 +215,225 @@ const TEXT = {
     report: "Something wrong on this page?",
     reportLink: "Tell us",
   },
+  sl: {
+    lang: "sl",
+    placeFallback: (kind, town) => (town ? `${kind} ${loc(town)}.` : `${kind} v občini.`),
+    crumb: "Kolesarjenje",
+    hubEyebrow: "kolesarjenje po krajih",
+    hubTitle: "Slovenski kraji s kolesom",
+    hubLede:
+      "Izberi kraj in pred odhodom poglej, kje kolesariti, prespati, jesti in napolniti bidon. Vsaka stran našteje označene kolesarske poti skozi kraj in postanke ob njih.",
+    hubSeoTitle: "Kolesarjenje po Sloveniji po krajih: poti in postanki | Zyflow",
+    hubSeoDescription: (n) =>
+      `Kolesarjenje po Sloveniji, kraj za krajem: označene kolesarske poti, nastanitve, kje jesti, pitna voda, servis in polnilnice za e-kolesa. ${slPl(n, ["kraj", "kraja", "kraji", "krajev"])} za zdaj.`,
+    hubQuals: (towns) => [
+      slPl(towns.length, ["kraj", "kraja", "kraji", "krajev"]),
+      slPl(new Set(towns.flatMap((town) => town.routes.map((r) => r.id || `${r.code}|${r.name}`))).size, ["označena pot", "označeni poti", "označene poti", "označenih poti"]),
+      "Nastanitve, hrana, voda, servis",
+      "Brezplačno za iOS in Android",
+    ],
+    hubTownMeta: (c) => [
+      ...(c.routes ? [slPl(c.routes, ["pot", "poti", "poti", "poti"])] : []),
+      slPl(c.stays, ["nastanitev", "nastanitvi", "nastanitve", "nastanitev"]),
+      `${c.food} lokalov`,
+    ],
+    hubWater: " · točk s pitno vodo",
+    viewTown: "Poglej kraj",
+    home: "Domov",
+    title: (t) => `${t.name} <br />s kolesom`,
+    seoTitle: (t) => `Kolesarjenje ${loc(t)}: poti, nastanitve, kje jesti | Zyflow`,
+    seoDescription: (t) => {
+      const routes = t.counts.routes ? `${slPl(t.counts.routes, ["označena kolesarska pot", "označeni kolesarski poti", "označene kolesarske poti", "označenih kolesarskih poti"])}, ` : "";
+      return `Kolesarjenje ${loc(t)}: ${routes}${slPl(t.counts.stays, ["nastanitev", "nastanitvi", "nastanitve", "nastanitev"])}, ${t.counts.food} restavracij in kavarn, pitna voda in servis. Preverjeno ${longDate(t.checked, "sl")}.`;
+    },
+    lede: (t) => `Kje kolesariti, prespati, jesti in napolniti bidon ${loc(t)}.`,
+    heroCount: (t) => (t.counts.routes ? slPl(t.counts.routes, ["pot", "poti", "poti", "poti"]) : slPl(t.counts.stays, ["nastanitev", "nastanitvi", "nastanitve", "nastanitev"])),
+    seeStays: "Poglej nastanitve",
+    heroCountUnit: "",
+    checkedLabel: "Nazadnje preverjeno",
+    checkedShort: (date) => `Preverjeno ${date}`,
+    heroEyebrow: (t) => `Kolesarjenje ${loc(t)} · ${t.region}, Slovenija`,
+    heroCard: (t) =>
+      t.counts.routes
+        ? [`${slPl(t.counts.routes, ["pot", "poti", "poti", "poti"])} · ${slPl(t.counts.stays, ["nastanitev", "nastanitvi", "nastanitve", "nastanitev"])}`, `${t.counts.food} lokalov · ${t.counts.water} voda`]
+        : [`${slPl(t.counts.stays, ["nastanitev", "nastanitvi", "nastanitve", "nastanitev"])} · ${t.counts.food} lokalov`, `${t.counts.water} točk s pitno vodo`],
+    mapTitle: (t) => `${t.name} na zemljevidu`,
+    mapLead: "Nastanitve, kje jesti, pitna voda, servis in znamenitosti v bližini.",
+    getApp: "Prenesi aplikacijo",
+    seeRoutes: "Poglej poti",
+    facts: {
+      region: (t) => `${t.region}, Slovenija`,
+      routes: "Označene kolesarske poti",
+      sights: "Znamenitosti",
+      stays: "Nastanitve",
+      food: "Kje jesti",
+    },
+    intro: (t) =>
+      [
+        t.counts.routes === 0
+          ? `${t.name} leži v regiji ${t.region}.`
+          : `${cap(loc(t))} je ${slPl(t.counts.routes, ["označena kolesarska pot", "označeni kolesarski poti", "označene kolesarske poti", "označenih kolesarskih poti"])}.`,
+        `Kraj in okoliške vasi imajo ${slPl(t.counts.stays, ["nastanitev", "nastanitvi", "nastanitve", "nastanitev"])}, ${t.counts.food} restavracij in kavarn ter ${slPl(t.counts.water, ["točko", "točki", "točke", "točk"])} s pitno vodo.`,
+      ].join(" "),
+    routesTitle: "Kolesarske poti",
+    practicalTitle: "Voda, servis, polnjenje",
+    inTotal: " · skupaj",
+    total: "skupaj",
+    inTown: (t) => ` · ${loc(t)}`,
+    mapped: (t) => ` · ${loc(t)}`,
+    routeVia: (stops) => `Mimo krajev ${listAndSl(stops)}.`,
+    routeDirect: (stops) => `Med krajema ${stops[0]} in ${stops[1]}.`,
+    routeNamed: "Daljinska pot z lastnimi oznakami.",
+    routeLocal: "Lokalna pot z lastnimi oznakami.",
+    routeLoop: (r) =>
+      `Krožna pot z izhodiščem ${r.start === "Koper railway station" ? "na železniški postaji Koper" : `v kraju ${r.start}`}${{ road: ", za cestno kolo", trekking: ", za treking kolo", mtb: ", za gorsko kolo" }[r.bike] || ""}.`,
+    routesLead: (t) => {
+      const letters = [...new Set(t.routes.filter((r) => (r.levelKey || r.level) === "Local route" && /^[A-Z]{1,2}[- ]?\d/.test(r.code || "")).map((r) => r.code[0]))];
+      const local = letters.length ? `, oznake, ki se začnejo s ${letters.join(" ali ")}, pa so lokalne poti` : "";
+      return `Vsaka pot ima na zemljevidu svojo barvo. Črka in številka označujeta državno kolesarsko mrežo${local}.`;
+    },
+    ourRouteNote: "Celodnevna tura z opisanim vzponom, postanki in podlago.",
+    routeFromTo: (stops) =>
+      stops.length > 2 ? `Od kraja ${stops[0]} do kraja ${stops[stops.length - 1]}, mimo krajev ${listAndSl(stops.slice(1, -1))}.` : `Od kraja ${stops[0]} do kraja ${stops[1]}.`,
+    fromRouteShort: (near) => [meters(near.m).replace(".", ","), near.route.length > 8 ? " · od označene poti" : ` · od poti ${near.route}`],
+    routeMeta: (r, t) => [r.level, `skupaj ${r.length_km} km`, `${r.km_inside} km ${loc(t)}`],
+    climb: "vzpona",
+    moreSightsTitle: "še več za ogled",
+    creditsTitle: "viri",
+    report: "Je na tej strani kaj narobe?",
+    reportLink: "Sporoči nam",
+    staysLead: (t) => `Izbor nastanitev ${loc(t)}, vsaka z lastno spletno stranjo.`,
+    foodLead: (t) => `Izbor restavracij in kavarn ${loc(t)}, vsaka z lastno spletno stranjo.`,
+    sightsLead: (t) => `Izbor znamenitosti z razdaljo do najbližje označene poti.`,
+    ourRoute: "Opisal Zyflow",
+    viewRoute: "Poglej pot",
+    staysTitle: "Kje prespati",
+    foodTitle: "Kje jesti in se ustaviti",
+    more: (n, what) => `Še ${n} ${what} v aplikaciji`,
+    moreStays: "nastanitev",
+    moreFood: "restavracij in kavarn",
+    fromRoute: (near) => `${meters(near.m).replace(".", ",")} od poti ${spokenName(shortRoute(near.route), " do ")}`,
+    website: "Spletna stran",
+    waterTitle: "Pitna voda",
+    water: (t) =>
+      `${cap(loc(t))} je ${slPl(t.counts.water, ["javna točka s pitno vodo", "javni točki s pitno vodo", "javne točke s pitno vodo", "javnih točk s pitno vodo"])}.${
+        t.counts.routes ? ` ${t.water_near_route} jih je do 150 m od označene kolesarske poti.` : ""
+      }`,
+    repairTitle: "Servis koles",
+    repair: (t) => {
+      const out = [t.repair.length ? `${cap(loc(t))} je ${slPl(t.repair.length, ["servisna točka", "servisni točki", "servisne točke", "servisnih točk"])}.` : `${cap(loc(t))} ni javne servisne točke.`];
+      if (t.nearest_shop) out.push(`Najbližja kolesarska trgovina je ${t.nearest_shop.name}, ${km(t.nearest_shop.km).replace(".", ",")} stran.`);
+      return out.join(" ");
+    },
+    chargeTitle: "Polnjenje e-koles",
+    charge: (t) =>
+      t.counts.chargers
+        ? `${cap(loc(t))} je ${slPl(t.counts.chargers, ["polnilnica", "polnilnici", "polnilnice", "polnilnic"])} za e-kolesa.`
+        : t.nearest_charger
+          ? `Najbližja polnilnica za e-kolesa je ${spokenName(t.nearest_charger.name)}, ${km(t.nearest_charger.km).replace(".", ",")} stran.`
+          : `${cap(loc(t))} ni javne polnilnice za e-kolesa.`,
+    sightsTitle: "Vredno postanka",
+    photo: "Foto",
+    asideTitle: (t) => `${cap(loc(t))}:`,
+    asideItems: (t) => [
+      t.counts.routes ? slPl(t.counts.routes, ["označena kolesarska pot", "označeni kolesarski poti", "označene kolesarske poti", "označenih kolesarskih poti"]) : slPl(t.counts.sights, ["znamenitost", "znamenitosti", "znamenitosti", "znamenitosti"]),
+      slPl(t.counts.stays, ["nastanitev", "nastanitvi", "nastanitve", "nastanitev"]),
+      `${t.counts.food} restavracij in kavarn`,
+      slPl(t.counts.water, ["točka s pitno vodo", "točki s pitno vodo", "točke s pitno vodo", "točk s pitno vodo"]),
+      t.counts.repair === 0 ? "Brez servisne točke" : slPl(t.counts.repair, ["servisna točka", "servisni točki", "servisne točke", "servisnih točk"]),
+      t.counts.chargers
+        ? slPl(t.counts.chargers, ["polnilnica za e-kolesa", "polnilnici za e-kolesa", "polnilnice za e-kolesa", "polnilnic za e-kolesa"])
+        : t.nearest_charger
+          ? `Polnilnica ${km(t.nearest_charger.km).replace(".", ",")} stran`
+          : "Brez polnilnice za e-kolesa",
+    ],
+    asideNote: "Celotni seznami, delovni časi in zemljevid so v aplikaciji.",
+    faqTitle: "Pogosta vprašanja",
+    faq: (t) => [
+      ...(t.counts.routes
+        ? [
+            {
+              q: `Katere kolesarske poti vodijo skozi kraj ${t.name}?`,
+              a: `${cap(slPl(t.counts.routes, ["označena pot", "označeni poti", "označene poti", "označenih poti"]))}: ${listAndSl([
+                ...t.routes.slice(0, MAX_ROUTES_SHOWN).map((r) => {
+                  const stops = r.name.split(STOPS).map((part) => part.trim());
+                  if (r.code && stops.length > 1) return `${r.code} (${stops[0]}, ${stops[stops.length - 1]})`;
+                  return r.code && r.name !== r.code && !r.name.startsWith(r.code) ? `${r.code} (${spokenName(r.name)})` : spokenName(r.name);
+                }),
+                ...(t.routes.length > MAX_ROUTES_SHOWN ? [`še ${t.routes.length - MAX_ROUTES_SHOWN}`] : []),
+              ])}.`,
+            },
+          ]
+        : []),
+      { q: `Kje lahko ${loc(t)} napolnim bidon?`, a: TEXT.sl.water(t) },
+      { q: `Ali je ${loc(t)} kolesarski servis?`, a: TEXT.sl.repair(t) },
+      { q: `Kje lahko ${loc(t)} napolnim e-kolo?`, a: TEXT.sl.charge(t) },
+    ],
+    credits: (t) => `Nazadnje preverjeno ${longDate(t.checked, "sl")}. Podatki zemljevida © sodelavci OpenStreetMap.`,
+    // Data labels (data.json is written in English).
+    labels: {
+      Hotel: "Hotel", Campsite: "Kamp", Restaurant: "Restavracija", "Café": "Kavarna", Guesthouse: "Penzion", Apartment: "Apartma", Hostel: "Hostel", Stay: "Nastanitev", Food: "Hrana",
+      "Historic site": "Zgodovinski kraj", Museum: "Muzej", Attraction: "Znamenitost", Cave: "Jama", Waterfall: "Slap", Viewpoint: "Razgledišče", Gorge: "Korita", Sight: "Znamenitost",
+      "International route": "Mednarodna pot", "National route": "Državna pot", "Regional route": "Regionalna pot", "Local route": "Lokalna pot", "Marked route": "Označena pot",
+    },
+  },
 };
+
+/** Slovenian number agreement: 1 pot, 2 poti, 3 poti, 5 poti (forms for 1, 2, 3–4, 5+). */
+function slPl(n, forms) {
+  const r = n % 100;
+  return `${n} ${r === 1 ? forms[0] : r === 2 ? forms[1] : r === 3 || r === 4 ? forms[2] : forms[3]}`;
+}
+/** "na Bledu", "v Kopru": where a town is, in Slovenian. */
+const SL_LOC = {
+  ajdovscina: "v Ajdovščini", bled: "na Bledu", bohinj: "v Bohinju", bovec: "v Bovcu", brda: "v Brdih", brezice: "v Brežicah",
+  celje: "v Celju", "cerklje-na-gorenjskem": "v Cerkljah na Gorenjskem", "ilirska-bistrica": "v Ilirski Bistrici", izola: "v Izoli",
+  kamnik: "v Kamniku", kobarid: "v Kobaridu", koper: "v Kopru", "kranjska-gora": "v Kranjski Gori", ljubljana: "v Ljubljani",
+  maribor: "v Mariboru", medvode: "v Medvodah", "nova-gorica": "v Novi Gorici", "novo-mesto": "v Novem mestu", piran: "v Piranu",
+  postojna: "v Postojni", ptuj: "na Ptuju", radovljica: "v Radovljici", sezana: "v Sežani", tolmin: "v Tolminu",
+};
+function loc(t) {
+  return SL_LOC[t.slug] || `v kraju ${t.name}`;
+}
+function listAndSl(items) {
+  return items.length > 1 ? `${items.slice(0, -1).join(", ")} in ${items[items.length - 1]}` : items[0] || "";
+}
+
+/** Route names in Slovenian where the hand list has one (the coast's K loops). */
+const SL_ROUTE_NAMES = (() => {
+  const file = path.join(REPO_ROOT, "content/signed-routes/_names.json");
+  if (!fs.existsSync(file)) return [];
+  return JSON.parse(fs.readFileSync(file, "utf8")).routes.filter((r) => r.name_sl).map((r) => [r.record, r.name_sl]);
+})();
+
+/**
+ * The town as a page in one language shows it: data.json is written in English, so for
+ * another language the labels (kinds, route levels, country), sight names and photo
+ * captions are swapped. levelKey keeps the English level for the template's own checks.
+ */
+function localTown(town, lang) {
+  const t = TEXT[lang];
+  const label = (value) => (t.labels && t.labels[value]) || value;
+  const photo = (p) => (p && lang !== "en" ? { ...p, caption: p[`caption_${lang}`] || "" } : p);
+  const out = {
+    ...town,
+    lang,
+    routes: town.routes.map((r) => {
+      const slName = lang === "sl" && (SL_ROUTE_NAMES.find(([id]) => String(r.id).startsWith(id.replace(/-$/, ""))) || [])[1];
+      return { ...r, levelKey: r.level, level: label(r.level), name: slName || r.name };
+    }),
+    stays: town.stays.map((p) => ({ ...p, kind: label(p.kind) })),
+    food: town.food.map((p) => ({ ...p, kind: label(p.kind) })),
+    sights: town.sights.map((x) => (lang === "en" ? x : { ...x, kind: label(x.kind), name: x.local_name || x.name, about: null })),
+    country: lang === "sl" ? "Slovenija" : town.country,
+    photos: (town.photos || []).map(photo),
+    heroPhoto: photo(town.heroPhoto),
+    bodyPhotos: (town.bodyPhotos || []).map(photo),
+  };
+  return out;
+}
+
+const SL_DAY = { Mon: "pon", Tue: "tor", Wed: "sre", Thu: "čet", Fri: "pet", Sat: "sob", Sun: "ned", "Public holidays": "prazniki" };
 
 function esc(value) {
   return String(value == null ? "" : value)
@@ -251,7 +471,7 @@ const MAX_ROUTES_SHOWN = 8;
  */
 function spokenName(name, joiner = ", ") {
   return String(name || "")
-    .replace(/\s+[–—]\s+/g, ": ")
+    .replace(/\s+[–—-]\s+/g, ": ")
     .replace(/\s*[–—]\s*/g, joiner);
 }
 
@@ -280,7 +500,13 @@ function shortRoute(name) {
   return name.length > 28 ? name.split("–")[0].trim() : name;
 }
 
+const SL_MONTHS = ["januarja", "februarja", "marca", "aprila", "maja", "junija", "julija", "avgusta", "septembra", "oktobra", "novembra", "decembra"];
+
 function longDate(iso, locale) {
+  if (locale === "sl") {
+    const d = new Date(`${iso}T12:00:00Z`);
+    return `${d.getUTCDate()}. ${SL_MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+  }
   return new Date(`${iso}T12:00:00Z`).toLocaleDateString(locale === "en" ? "en-GB" : locale, {
     day: "numeric",
     month: "long",
@@ -652,7 +878,7 @@ const PIN_FILES = new Set(["accommodation", "restaurant", "cafe", "food", "attra
 function placeRow(place, t) {
   return row({
     name: place.name,
-    facts: [place.kind, readableHours(place.hours), ...(place.extras || []), place.near ? t.fromRoute(place.near) : ""],
+    facts: [place.kind, readableHours(place.hours, t.lang), ...(place.extras || []), place.near ? t.fromRoute(place.near) : ""],
     link: place.site ? { href: place.site.url, label: place.site.label, external: true } : null,
     pin: PIN_FILES.has(place.pin) ? place.pin : "unknown",
     image: place.image,
@@ -724,9 +950,9 @@ const pinFor = (type) => type || "unknown";
  * without dashes: "Mon to Thu, 09:00 to 22:00 · Fri to Sat, 09:00 to 24:00". "Mo–Su" is every day.
  */
 const DAY = { Mo: "Mon", Tu: "Tue", We: "Wed", Th: "Thu", Fr: "Fri", Sa: "Sat", Su: "Sun", PH: "Public holidays" };
-function readableHours(hours) {
+function readableHours(hours, lang = "en") {
   if (!hours) return hours;
-  return String(hours)
+  const words = String(hours)
     .split(/\s*;\s*|(?<=\d|off),\s*(?=(?:Mo|Tu|We|Th|Fr|Sa|Su|PH)\b)/)
     .map((rule) => {
       const m = rule.match(/^((?:Mo|Tu|We|Th|Fr|Sa|Su|PH)[A-Za-z,–\- ]*?)\s+(\d.*|off.*)$/);
@@ -744,6 +970,15 @@ function readableHours(hours) {
       return days ? `${days}, ${times}` : times;
     })
     .join(" · ");
+  if (lang !== "sl") return words;
+  return words
+    .replace(/\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun|Public holidays)\b/g, (d) => SL_DAY[d])
+    .replace(/Every day/g, "vsak dan")
+    .replace(/ to /g, " do ")
+    .replace(/ and /g, " in ")
+    .replace(/\bclosed\b/g, "zaprto")
+    .replace(/(\d{1,2}):(\d{2})/g, "$1.$2")
+    .replace(/^./, (c) => c.toUpperCase());
 }
 
 function placeCard(place, t) {
@@ -752,8 +987,8 @@ function placeCard(place, t) {
     pin: pinFor(place.pin),
     name: place.name,
     // One fact line only: opening hours where we have them, otherwise the type.
-    facts: [readableHours(place.hours) || place.kind],
-    desc: place.about || (place.aboutShort ? `${cap(place.aboutShort)}.` : `${place.kind} in the municipality.`),
+    facts: [readableHours(place.hours, t.lang) || place.kind],
+    desc: place.about || (place.aboutShort ? `${cap(place.aboutShort)}.` : t.placeFallback(place.kind, null)),
     value,
     unit,
     link: place.site
@@ -795,7 +1030,7 @@ ${cards.join("\n")}
 }
 
 /** A place's one-line description: the written line for its id ("places" in text.<lang>.json), or its type and town. */
-function aboutPlace(place, town, written, fallback = `${place.kind} in ${town.name}.`) {
+function aboutPlace(place, town, written, fallback = TEXT[(town && town.lang) || "en"].placeFallback(place.kind, town)) {
   const lines = (written && written.places) || {};
   const key = Object.keys(lines).find((id) => id !== "_note" && String(place.id || "").startsWith(id));
   return key ? lines[key] : fallback;
@@ -859,7 +1094,7 @@ function mapJson(town) {
 
 function mapMedia(town) {
   return `<div class="tour-hero__media tour-hero__media--map">
-        <div class="tour-hero__map" id="tour-hero-map" data-tour-map data-slug="town-${esc(town.slug)}" role="region" aria-label="${esc(`Map of ${town.name} with signed cycle routes and stops`)}"></div>
+        <div class="tour-hero__map" id="tour-hero-map" data-tour-map data-slug="town-${esc(town.slug)}" role="region" aria-label="${esc(town.lang === "sl" ? `Zemljevid kraja ${town.name} z označenimi kolesarskimi potmi` : `Map of ${town.name} with signed cycle routes and stops`)}"></div>
         <script type="application/json" data-tour-route-json>${mapJson(town).replace(/</g, "\\u003c")}</script>
       </div>`;
 }
@@ -875,7 +1110,7 @@ function renderPhotoHero(town, t, lang) {
   return `<section class="hero section town-hero" data-section="town.hero">
   <div class="hero__frame">
     <div class="hero__media">
-      <img src="${esc(photo.src)}" alt="${esc(photo.caption)}" fetchpriority="high" />
+      <img src="${esc(photo.src)}" alt="${esc(photo.caption || town.name)}" fetchpriority="high" />
       <div class="hero__scrim"></div>
     </div>
     <div class="hero__content">
@@ -1007,7 +1242,7 @@ function renderBody(town, t, lang) {
             ? t.routeDirect(stops)
             : route.loop && route.start
               ? t.routeLoop(route)
-              : route.level === "Local route"
+              : (route.levelKey || route.level) === "Local route"
                 ? t.routeLocal
                 : t.routeNamed,
       value: `${route.km_inside} km`,
@@ -1141,7 +1376,8 @@ function renderHub(page) {
   const lang = page.townLang;
   const t = TEXT[lang];
   const listed = TOWNS.filter((town) => townLangs(town).includes(lang));
-  const cards = listed.map((town) => {
+  const cards = listed.map((source) => {
+    const town = localTown(source, lang);
     const written = (town.text && town.text[lang]) || {};
     // A chosen town photo where there is one; otherwise the best-known sight's photo.
     const sight = town.sights.find((item) => item.image);
@@ -1217,7 +1453,7 @@ function injectTown(html, page) {
     return html.replace("<!-- TOWNS_HUB -->", renderHub(page));
   }
   if (!page.townSlug) return html;
-  const town = townBySlug(page.townSlug);
+  const town = localTown(townBySlug(page.townSlug), page.townLang);
   const t = TEXT[page.townLang];
   for (const marker of ["TOWN_HERO", "TOWN_BODY", "TOWN_SIGHTS", "TOWN_FAQ"]) {
     if (!html.includes(`<!-- ${marker} -->`)) throw new Error(`town.html must contain ${marker}`);

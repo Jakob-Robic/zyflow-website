@@ -1,0 +1,39 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Celju.",
+  "intro": "Celje leži ob Savinji, z razvalinami gradu na gričih jugovzhodno od mesta. Skozi mesto pelje pet označenih kolesarskih poti, med njimi D1, EuroVelo 9 (od Baltika do Jadrana) in prekmursko-štajerski krak Jakobove poti. Šmartinsko jezero severovzhodno od središča leži ob Jakobovi poti.",
+  "routes": {
+    "title": "Kolesarske poti skozi Celje",
+    "body": "Skozi Celje pelje pet označenih kolesarskih poti, tri od njih so daljinske. D1 prečka mesto na svoji 183 km dolgi trasi, EuroVelo 9 (od Baltika do Jadrana) pa mimo pelje na 128 km dolgem odseku. Prekmursko-štajerski krak Jakobove poti je dolg 263 km, od tega 10 km v Celju. G13 ima tu 4 km. Lokalna Drameljska kolesarska pot je dolga 30 km, v Celju ima 2 km."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Celju imaš 12 nastanitev, od hotelov v mestu do dveh postajališč za avtodome. Hotel Evropa v starem mestnem jedru je 78 metrov od EuroVelo 9. Hotel Faraon ima sobe s pogledom na Savinjo, 408 metrov od G13. Potuješ z avtodomom? Postajališče na Ulici XIV. divizije je 13 metrov od D1 in tik ob postaji za izposojo koles, drugo postajališče pa je zgoraj pri Celjski koči."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "Celje ima 17 krajev, kjer lahko ješ. V starem mestnem jedru je LALU Bistro na Trgu celjskih knezov 164 metrov od G13 in kuha preproste jedi z lokalnim vinom in pivom. Stari pisker, 256 metrov od EuroVelo 9, je pravi naslov za zrezke in burgerje. Greš po Jakobovi poti mimo Šmartinskega jezera? Na Golfu, 90 metrov od poti, vsak dan do poldneva streže zajtrke in brunch."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Celje ima 9 javnih točk s pitno vodo, le 2 pa sta manj kot 150 metrov od označene poti, zato napolni bidon pri vsaki, mimo katere pelješ. Za popravila imaš eno javno servisno stojalo in pet kolesarskih trgovin. V Celju ni javne polnilnice za e-kolesa. Najbližja je pri Domu na Golavi v Preboldu, 12,7 km stran, zato e-kolo napolni pred odhodom."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Znamenitosti v Celju so blizu poti, do gradu pa te čaka vzpon. Celjski grad, nekoč sedež celjskih grofov, stoji na gričih 453 metrov od D1. V starem mestnem jedru je Knežji dvorec 133 metrov od G13, Marijino znamenje pa 127 metrov. Spominski park Teharje je 1,6 km od EuroVelo 9."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "43d5a74d": "Hotel z 32 sobami v mirnem delu Celja ob Savinji, nekatere z balkonom nad reko. Ima kavarno, restavracijo in igralnico.",
+    "ffb9f658": "Hotel s štirimi zvezdicami v zgodovinskem starem mestnem jedru Celja, z restavracijo ter kavarno in slaščičarno. Kavarna je odprta od ponedeljka do sobote od 8.00 do 22.00, ob nedeljah in praznikih pa od 8.00 do 21.00.",
+    "a6403659": "Postajališče za avtodome pri Celjski koči nad Celjem, ob pustolovskem parku in letnem sankališču.",
+    "90495994": "Postajališče za avtodome na Ulici XIV. divizije, 100 metrov od železniške postaje, tik ob postaji za izposojo koles KolesCE. Od tu pelje pot ob Savinji do Celjske koče.",
+    "a397a30d": "Gostilna in steakhouse z zorjenimi zrezki, burgerji, svinjskimi rebrci in svežimi dnevnimi kosili.",
+    "694f342b": "Kavarna in bistro blizu Šmartinskega jezera, z zajtrki in brunchem vsak dan do 12.00.",
+    "cd9015ff": "Gostilna na Mariborski cesti, ki na istem mestu stoji že več kot sto let. Odprta vsak dan od 11.00 do 22.00.",
+    "1eea5738": "Bistro šefa kuhinje Marka Pavčnika na Trgu celjskih knezov v središču, s preprosto domačo hrano ter lokalnim vinom in pivom.",
+    "36e9eb85": "Japonski bistro na Prešernovi ulici v središču Celja, z jedmi, ki jih poješ na mestu ali vzameš s seboj.",
+    "7fa22539": "Gostilna ob starem mestnem obzidju z lastno vinoteko in teraso za poletne večere, 260 metrov od EuroVelo 9."
+  }
+}

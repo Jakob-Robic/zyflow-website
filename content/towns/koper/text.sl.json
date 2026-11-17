@@ -1,0 +1,41 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Kopru.",
+  "intro": "Koper je največje mesto na slovenski obali, s starim mestnim jedrom ob morju in zaledjem, ki se dviga proti Kraškemu robu. Ob obali tu peljeta Parenzana in EuroVelo 8 (Sredozemska pot), skupaj z državnima kolesarskima potema D1 od Kopra do Sečovelj in D 6. Za mestom te krožne poti K iz vodnika Uživajmo podeželje pripeljejo do vasi, kot so Hrastovlje, Gračišče, Zazid in Osp. Štiri od teh poti se začnejo pri železniški postaji Koper, zato lahko na pot kreneš brez avta.",
+  "routes": {
+    "title": "Kolesarske poti skozi Koper",
+    "body": "Skozi Koper pelje 17 označenih kolesarskih poti: dve mednarodni, dve državni in 13 lokalnih krožnih poti. Parenzana (skupaj 119 km) in EuroVelo 8 sledita obali, D1 pa v 30 km poveže Koper s Sečovljami. S cestnim kolesom izberi K1 (Po deželi refoška), 41 km, ali K9 (Na Socerb po lep razgled), 57 km. Obe se začneta pri železniški postaji Koper. K13 (Čez Istro za zahtevne) meri 80 km z izhodiščem v Luciji, K8 (Čez izolsko zaledje) pa 50 km z izhodiščem v Izoli. Druge krožne poti, na primer K3 (Po poti istrskih vasic Kraškega roba) iz Hrastovelj, so za treking ali gorsko kolo."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Kopru imaš 23 nastanitev, od hostla v starem mestnem jedru do kmetij s kampom v hribih. Casa Oasa je 17 metrov od K13, Camping Kmetija Jakomin pa 40 metrov od K3. Želiš začeti v središču? Villa Domus ima postelje v starem mestnem jedru, 517 metrov od K9. Za mirno bivanje na kmetiji izberi Turistično kmetijo Tonin v vasi Puče, 811 metrov od K13."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Kopru je 60 krajev, kjer lahko ješ, in več jih je tik ob poti. Karjola, gostilna 4 metre od K13, kuha istrske jedi in je ob ponedeljkih zaprta. Greš po K1? Pivovarna restavracija Emonec je 48 metrov od nje, z dnevnimi kosili, jedmi z žara in pico. Na obali je Snack Bar 1964 v Žusterni 50 metrov od Parenzane, Gostišče Trattoria Turk pa 192 metrov od iste poti."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "V Kopru je 53 javnih točk s pitno vodo, 28 jih je manj kot 150 metrov od označene poti. Na voljo je pet javnih servisnih stojal, v mestu pa sta dve kolesarski trgovini s servisom: Funsports in Velocenter Koper. Za e-kolesa je po Kopru 17 javnih polnilnic."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "V Kopru je 71 znamenitosti, že samo staro mestno jedro je vredno postanka. Pretorska palača, beneškogotska stavba, in Loža stojita na glavnem trgu, približno 900 metrov od K9. Pokrajinski muzej Koper je v Palači Belgramoni-Tacco, 938 metrov od Parenzane. Greš po K3? Cerkev Svete Trojice v Hrastovljah, znana po freski mrtvaškega plesa, je 234 metrov od poti."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "b8c5a8ef": "Turistična kmetija na koncu vasi Puče, z apartmaji in domačo hrano, kot so pršut, klobase in sezonske jedi.",
+    "82ff74a0": "Majhen penzion s štirimi sobami tik pred Koprom, z lastno picerijo.",
+    "ce7350b0": "Hostel in študentski dom v starem mestnem jedru Kopra, s posteljami v skupnih sobah, garsonjerami in apartmajem.",
+    "1c1ce40e": "Družinska kmetija s prostorom za kampiranje, domačimi pridelki in osmico, kratkim sezonskim odprtjem, ko kmetija ponudi svojo hrano in vino.",
+    "22706188": "Bar v Žusterni, že več kot 50 let zbirališče domačinov in obiskovalcev, znan po rock glasbi in koncertih.",
+    "238c05a3": "Restavracija hotela Grand Koper z lokalno hrano s kopnega in iz morja.",
+    "2a85e740": "Restavracija in pivnica na Vanganelski cesti z dnevnimi kosili, jedmi z žara, pico in jedmi po naročilu, z veliko teraso in brezplačnim parkiriščem.",
+    "21e87165": "Gostilna s tradicionalnimi istrskimi jedmi, mnoge s kančkom refoška, in razgledom na slovensko Istro.",
+    "a716ec0a": "Gostilna z ribjimi in mesnimi jedmi, jedmi s tartufi, domačimi sladicami in kruhom iz lastne peči.",
+    "ba665274": "Hotel v sklopu igralnice v Škofijah, z lastno restavracijo.",
+    "5c9db010": "Majhen hostel v vasi Zazid pod kraškimi stenami, s skupnimi sobami za štiri do pet oseb, zasebnimi dvoposteljnimi sobami in skupno kuhinjo.",
+    "5ae8a53f": "Bosanski žar s sarajevskimi čevapčiči in drugimi bosanskimi jedmi, s poslovalnicami v Ljubljani, Kopru in Piranu."
+  }
+}

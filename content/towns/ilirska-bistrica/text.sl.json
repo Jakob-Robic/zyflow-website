@@ -1,0 +1,32 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Ilirski Bistrici.",
+  "intro": "Ilirska Bistrica leži v dolini Reke, pod snežniškimi gozdovi in griči Brkinov. Je mirno izhodišče sredi dolge občine, ki sega od Hrušice in Podgrada na jugozahodu do snežniških gozdov na severovzhodu. Prečka jo ena označena kolesarska pot: pot 10 (Medvedova dežela), označena pot za gorska kolesa skozi te gozdove.",
+  "routes": {
+    "title": "Kolesarska pot skozi Ilirsko Bistrico",
+    "body": "Ilirsko Bistrico prečka ena označena kolesarska pot: pot 10 (Medvedova dežela), označena pot za gorska kolesa, dolga 117 km, od tega 30 km v občini. Pelje skozi gozdove na severovzhodu, mimo Gostišča Mašun, ki je 78 metrov od poti. Sam kraj je od nje precej oddaljen, zato vožnjo do gozda načrtuj pred odhodom."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "Ilirska Bistrica ima 11 nastanitev, razporejenih po dolini in vaseh. Pension Patrik v Hrušici je družinski penzion s parkiriščem za avtodome in kavarno, 21,9 km od poti 10. Bližje kraju je Domačija Bubec v Brcah, 4 km od Ilirske Bistrice in 14,6 km od poti."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "Ilirska Bistrica ima 8 krajev, kjer lahko ješ. Ob poti 10 stoji Gostišče Mašun, sredi snežniškega gozda in 78 metrov od poti. Blizu kraja Domačija Bubec peče na žaru sveže postrvi iz lastne ribogojnice, odprta pa je v petek zvečer ter ves dan v soboto in nedeljo."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Javnih točk s pitno vodo je 13, a nobena ni manj kot 150 metrov od označene poti, zato vzemi s seboj dovolj vode za gozd. Javnega servisnega stojala ni, sta pa v kraju dve kolesarski trgovini: Kolesar Bf, športna trgovina in servis, ter Velocenter Ilirska Bistrica. E-kolo lahko napolniš na 5 javnih polnilnicah."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Ilirska Bistrica ima 51 znamenitosti, večina jih je stran od označene poti. Grad Prem stoji nad vasjo Prem, 14,3 km od poti 10. Slap Sušec blizu kraja je 11,2 km od poti. Vsak je dober cilj za samostojen izlet iz Ilirske Bistrice."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "2a63763d": "Družinski penzion v Hrušici, prenovljen leta 2013, s klimatiziranimi sobami, fitnesom, parkiriščem za avtodome in kavarno.",
+    "5d9c3b4c": "Domačija z ribogojnico postrvi in okrepčevalnico v Brcah, 4 km od Ilirske Bistrice. Odprta v petek od 17.00 do 22.00, v soboto in nedeljo od 12.00 do 22.00.",
+    "8a513bb5": "Gostišče s sobami na nadmorski višini 1.024 metrov v snežniških gozdovih, kjer se srečajo gozdne ceste iz več dolin."
+  }
+}

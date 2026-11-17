@@ -1,0 +1,41 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Radovljici.",
+  "intro": "Radovljica leži na terasi nad Savo nekaj kilometrov od Bleda, s srednjeveškim starim mestnim jedrom v središču. Za kolesarje je pomembno križišče poti. Skozi njo peljejo D2 od Rateč do Ljubljane, G2 proti Bledu in Bohinju ter gorenjski krak Jakobove poti. Pod Radovljico spadajo Lesce z železniško postajo Lesce-Bled, pa tudi Begunje in vasi pod Dobrčo in Begunjščico.",
+  "routes": {
+    "title": "Kolesarske poti skozi Radovljico",
+    "body": "Skozi Radovljico pelje sedem označenih kolesarskih poti. Najdaljša odseka tu imata gorenjski krak Jakobove poti s 23 km in D2 z 20 km. G2 ima tu 8 km na svoji 53 km dolgi poti od Lesc proti Bohinju. LG6 od Bleda do Podblice pelje 16 km po občini, LG3 od Slovenskega Javornika do Tržiča pa 7 km. Za gorska kolesa vodita Trans Karavanke in K32 pod Karavanke. Na voljo so štiri opisane ture, med njimi Blejčanka, 76 km s 944 m vzpona, in K42 (Rožnovenska pot), 20 km s 369 m vzpona."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Radovljici in Lescah imaš 25 nastanitev. 1A Adventure Hostel v Lescah je 80 metrov od D2 in 200 metrov od postaje Lesce-Bled. Camping Radovljica je 220 metrov od D2, ob mestnem kopališču in kratek sprehod od starega mestnega jedra. Na trgu v starem mestnem jedru ima Gostilna Lectar devet sob, 20 metrov od LG6. Camping Šobec ob reki pri Lescah ima izposojo, hrambo in popravilo koles."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Radovljici je 22 krajev, kjer lahko ješ, in večina tistih v kraju je blizu D2. Gostilna Lectar na trgu v starem mestnem jedru kuha slovensko hrano od leta 1822 in ima lectarski muzej. Odprta je vsak dan od 12.00 do 22.00. Pizzeria Matiček v središču peče v krušni peči, 80 metrov od D2. Čajna soba, 20 metrov od poti, je čajnica, kjer lahko sedeš in poskusiš čaje. V Lescah je Krčma Mexico odprta vsak dan od 12.00 do 22.00, slaščičarna Lincer pa je 10 metrov od D2."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Vodo najdeš zlahka: 21 od 29 javnih točk s pitno vodo je manj kot 150 metrov od označene poti. Edina servisna točka je kolesarska trgovina Obris Šport. Voziš e-kolo? Radovljica ima 2 javni polnilnici."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Več znamenitosti je le kratek postanek od poti. Čebelarski muzej je 30 metrov od LG6. Grad Kamen je 70 metrov od poti Trans Karavanke, Muzej talcev pa 90 metrov od LG3. Grad Podvin je 90 metrov od Jakobove poti. Želiš na kratek sprehod? Slap Peračica je 570 metrov od D2."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "488edad3": "Hostel v starem delu Lesc, 200 metrov od postaje Lesce-Bled, s sobami od enoposteljnih do dvanajstposteljnih ter kolesi in e-kolesi za najem.",
+    "3aef37e2": "Kamp ob reki pri Lescah, z zvonastimi šotori, bungalovi in parcelami, restavracijo ter izposojo, hrambo in popravilom koles.",
+    "435310b4": "Devet sob v srednjeveškem slogu nad Gostilno Lectar, na glavnem trgu starega mestnega jedra Radovljice.",
+    "63571954": "Majhen hotel v Radovljici s 14 sobami, večinoma z balkonom, poleti z zunanjim bazenom in savnami.",
+    "5ec5d6bf": "Kamp z 80 parcelami ob mestnem kopališču, kratek sprehod od starega mestnega jedra. Gostje kampa se poleti kopajo brezplačno.",
+    "968b2151": "Hotel z restavracijo v Lescah, blizu izvoza z avtoceste in približno 4 km od Bleda in od Radovljice.",
+    "f45d5ba4": "Družinska restavracija v starem mestnem jedru od leta 1822, s slovensko hrano, sobami in lectarskim muzejem v isti hiši.",
+    "faaa59cd": "Čajnica v Radovljici, kjer lahko tudi sedeš in poskusiš čaje.",
+    "13eb2931": "Picerija in gostilna v središču Radovljice, s pico iz krušne peči in jedmi po naročilu, tudi za s seboj.",
+    "7e7236cd": "Mehiška restavracija v Lescah s taquitosi, burriti in čilijem, odprta vsak dan od poldneva.",
+    "dd854d32": "Slaščičarna v Lescah, ki izdeluje ročno poslikane torte, pa tudi izdelke brez glutena, mleka in jajc.",
+    "ad8d7e42": "Picerija in špageterija z menijem za kosilo, ki se menja vsak teden."
+  }
+}

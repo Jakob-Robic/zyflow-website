@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Brežicah.",
+  "intro": "Brežice ležijo nad sotočjem Save in Krke, blizu hrvaške meje. Prečka jih devet označenih kolesarskih poti, med njimi D8 (Zdraviliška kolesarska pot), D2 (Savska kolesarska pot) in Kolesarska Jakobova pot. Tudi Pišece, Bizeljsko in Mokrice spadajo pod Brežice, vsak kraj s svojim gradom.",
+  "routes": {
+    "title": "Kolesarske poti skozi Brežice",
+    "body": "Skozi Brežice pelje devet označenih kolesarskih poti, največ kilometrov v občini pa ima D8 (Zdraviliška kolesarska pot): 41 od skupno 133 km. Kolesarska Jakobova pot Slovenija Camino ima tu 26 km od svojih 311 km, D2 (Savska kolesarska pot) pa je skupaj dolga 163 km. D10 v 18 km poveže Dolenjo Pirošico z Obrežjem. Pet hrvaških poti iz Samobora (1a, 1b, 2, 3a in 3b) seže v Brežice, vsaka s približno 2 km."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "Brežice imajo 9 nastanitev. MC hostel Brežice je 83 metrov od D8, Hotel Splavar v starem mestnem jedru pa 445 metrov od iste poti. Za miren oddih med griči ima Vila Marija Silva v Pišecah apartmaje z vrtom, 3,2 km od D8. Sobe in apartmaje ima tudi Gostilna pension Les, 12 metrov od D10."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Brežicah imaš 10 krajev, kjer lahko ješ. Huda, 147 metrov od D8, peče neapeljsko pico v krušni peči. Kavarna v vodovodnem stolpu, 212 metrov od iste poti, je del mestnega obiskovalnega centra. Debeluh, restavracija šefa kuhinje Jureta Tomiča, je odprta od ponedeljka do sobote od 12.00 do 22.00. Ob D10 je Gostilna pension Les 12 metrov od poti, s sezonskim menijem in pico iz krušne peči."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Bidon lahko napolniš na 9 javnih točkah s pitno vodo, 8 jih je manj kot 150 metrov od označene poti. Za popravila je tu ena kolesarska trgovina s servisom, Prah bike. Voziš e-kolo? Brežice imajo eno javno polnilnico za e-kolesa."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Znamenitosti v Brežicah so večinoma gradovi, mestni grad pa stoji kar ob D8. Grad Brežice iz 16. stoletja je 34 metrov od poti. Vodovodni stolp, visok 46 metrov, je 229 metrov stran. Grad Mokrice stoji 213 metrov od D10, Grad Bizeljsko 575 metrov od D8, dvorec Straža pa 27 metrov od Jakobove poti."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "2d53c38f": "Mladinski hostel v Brežicah.",
+    "c508e521": "Hotel v starem mestnem jedru, ki nadaljuje tradicijo gostiln, kjer so nekoč prenočevali savski splavarji. Ima enoposteljne do triposteljne sobe, suito in pub.",
+    "deda697d": "Apartmaji v vili z velikim vrtom v vasi Pišece. Upravljajo jih lastniki Hotela Krona. Zajtrk, kosilo ali večerjo lahko naročiš vnaprej.",
+    "e3d285c5": "Majhna picerija, ki peče neapeljsko pico v krušni peči, z moko, paradižnikom in mocarelo iz Kampanije.",
+    "9c38ef03": "Obiskovalni center in kavarna v brežiškem vodovodnem stolpu, ki ju upravlja Posavski muzej.",
+    "370925d8": "Restavracija šefa kuhinje Jureta Tomiča, rojenega v Brežicah, ki kuha z lokalnimi sestavinami. Odprta od ponedeljka do sobote od 12.00 do 22.00.",
+    "9103b52e": "Velika restavracija s 180 sedeži, s tedenskim jedilnikom kosil in hrano za skupine.",
+    "10b8c5f2": "Gostilna in penzion na Rimski cesti s sobami, apartmaji in podeželsko vilo. Ponuja sezonski meni, peče pico v krušni peči in dela lasten sladoled.",
+    "83d7ef84": "Družinska gostilna od leta 1991, ki je zrasla iz majhne picerije. Danes kuha predvsem za dostavo in prevzem, oddaja pa tudi apartmaje."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Brdih.",
+  "intro": "Brda so pokrajina vinogradniških gričev ob meji z Italijo, med Novo Gorico in Kanalom ob Soči. Prečkata jih dve označeni kolesarski poti: mednarodna cestna pot Bimobis in lokalna pot La valle dello Judrio. Med vasmi, skozi katere pelješ, so Dobrovo, Medana, Šmartno in Podsabotin.",
+  "routes": {
+    "title": "Kolesarske poti skozi Brda",
+    "body": "Skozi Brda peljeta dve označeni kolesarski poti, Bimobis te pelje čez sredino. To je mednarodna cestna pot, dolga 144 km, od tega 25 km v Brdih, mimo Dobrovega in Medane. La valle dello Judrio je lokalna pot, dolga 24 km, od tega 4 km v Brdih."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "Brda imajo 8 nastanitev. Štiri spodaj so na vinskih posestvih, na kmetiji in v gradu. B&B Bužinel je 12 metrov od poti Bimobis, pod istim imenom pa imajo tudi restavracijo in lastno vino. Alma Vista, 32 metrov od poti, je vila za največ šest oseb z zasebnim bazenom, del vinskega posestva Edi Simčič. Hotel Gredič, 780 metrov od poti Bimobis, ima sobe znotraj obzidja gradu. Turistična kmetija Breg stoji na griču nad reko Idrijo, 146 metrov od poti La valle dello Judrio."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Brdih imaš 10 krajev, kjer lahko ješ, trije med njimi so manj kot 25 metrov od poti Bimobis. V Medani Ošterija Klinec kuha sezonsko domačo hrano z ekološkim vinom iz lastne kleti. Odprta je od petka do ponedeljka, zato pred odhodom preveri odpiralni čas. Vino Modana, prav tako v Medani, je predvsem ribja kuhinja, znana po klapavicah. Bužinel je 24 metrov od poti. Na vstopu v Brda v Podsabotinu ima Turistična kmetija Štanfel prostor za polnjenje in hrambo e-koles."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Bidon lahko napolniš na 11 javnih točkah s pitno vodo, 6 jih je manj kot 150 metrov od označene poti. Javnega servisnega stojala v Brdih ni. Najbližja kolesarska trgovina je Cicli Buz, 8,4 km stran. Voziš e-kolo? Brda imajo eno javno polnilnico za e-kolesa, zato postanke načrtuj vnaprej."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Brda imajo 13 znamenitosti, Grad Dobrovo pa leži ravno na tvoji poti. Stoji 21 metrov od poti Bimobis, v istoimenski vasi."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "96824f8c": "Sobe na vinskem posestvu Bužinel, ki ima tudi restavracijo in prodaja lastno vino.",
+    "7e45d034": "Turistična kmetija na griču nad reko Idrijo, obnovljena v slogu stare briške hiše. Ima sobe, teraso nad vinogradi in sezonske jedi.",
+    "9580c817": "Počitniška vila za največ šest gostov na vinskem posestvu Edi Simčič, z dvema spalnicama z lastno kopalnico, zasebnim bazenom in majhnim spa centrom.",
+    "9a3dee8d": "Butični hotel s sobami v gradu Gredič, restavracijo s sredozemskimi in celinskimi jedmi ter vinoteko.",
+    "12f5bcc4": "Restavracija vinskega posestva Bužinel, ki ima tudi sobe in prodaja lastno vino.",
+    "a006fc9b": "Turistična kmetija v Podsabotinu na vstopu v Brda, z vinom in penino iz lastne kleti, starimi družinskimi recepti in sobami. Kolesarji lahko tu polnijo in hranijo e-kolesa.",
+    "adf5ad12": "Vinski bar s kuhinjo v Medani. Kuhajo predvsem ribe in školjke, imajo pa tudi pršut, salamo in domač sir.",
+    "b1ad5a70": "Družinska gostilna v Medani od leta 1918, ki kuha sezonsko domačo hrano z ekološkim vinom iz lastne kleti. Odprta le od petka do ponedeljka."
+  }
+}

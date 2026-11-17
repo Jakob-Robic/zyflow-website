@@ -114,6 +114,19 @@ test("every town page builds whole (preview with drafts)", async (t) => {
         assert.ok(fs.existsSync(path.join(dist, new URL(og).pathname)), `missing share image ${og}`);
       }
 
+      // A Slovenian page, where the town has a Slovenian text: whole, and no English left.
+      if (fs.existsSync(path.join(TOWNS_DIR, slug, "text.sl.json"))) {
+        const sl = read(dist, `sl/kolesarjenje/${slug}.html`);
+        const main = visibleText(sl.slice(sl.indexOf("<main"), sl.indexOf("</main>")));
+        assert.equal((sl.match(/<h1[\s>]/g) || []).length, 1, "sl: exactly one h1");
+        assert.match(sl, /<html[^>]* lang="sl"/, "sl: page language");
+        assert.doesNotMatch(main, /\bundefined\b|\bNaN\b/, "sl: no broken values");
+        for (const english of ["Places to stay", "Website", "from route", "Every day", "Common questions", "Get the app", "View route", "National route", "Local route", "in total", "Photo:"]) {
+          assert.ok(!main.includes(english), `sl: English left on the page: "${english}"`);
+        }
+        assert.match(html, /hreflang="sl"/, "en page links its Slovenian version");
+      }
+
       // The hero photo is not shown a second time further down.
       const hero = (html.match(/<section class="hero section town-hero"[\s\S]*?<\/section>/) || [])[0];
       if (hero) {

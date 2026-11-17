@@ -1,0 +1,37 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Kobaridu.",
+  "intro": "Kobarid leži v Soški dolini med Bovcem in Tolminom, majhen kraj, znan po bojih v prvi svetovni vojni. Prečkata ga dve označeni kolesarski poti: mednarodna cestna pot Bimobis in SI-C (SICAI Ciclo) za gorska kolesa. Na zahodu občina sega v Breginjski kot ob Nadiži, kjer je Robidišče najzahodnejša vas v Sloveniji. Tudi Idrsko, kratko vožnjo jugovzhodno od središča, spada pod Kobarid.",
+  "routes": {
+    "title": "Kolesarske poti skozi Kobarid",
+    "body": "Kobarid prečkata dve označeni kolesarski poti, ena cestna in ena za teren. Bimobis je daljša: mednarodna cestna pot, dolga 144 km, od tega 16 km v Kobaridu, ki v kraju pelje mimo muzeja in Napoleonovega mostu. SI-C (SICAI Ciclo) je 62 km dolga pot za gorska kolesa, s 15 km v Kobaridu."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Kobaridu imaš 26 nastanitev, več jih je kar ob poti Bimobis. Hostel Kobarid je 7 metrov od poti, v stavbi iz leta 1880, s shrambo za kolesa in skupno kuhinjo. Apartmaji Mašera, 40 metrov od poti Bimobis, imajo e-kolesa za izposojo. Gostišče Jazbec v Idrskem ima garažo za kolesa, sušilnico in orodje za manjša popravila. Za kampiranje je Eko Kamp Koren 342 metrov od poti Bimobis, Kamp Lebanc pa leži ob Nadiži v Breginjskem kotu."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Kobaridu imaš 11 krajev, kjer lahko ješ, najbolj znana dva sta blizu poti Bimobis. Hiša Polonka je v središču, 13 metrov od poti Bimobis: odprta je v ponedeljek, četrtek in petek od 17.00 do 22.00, ob koncih tedna pa od 12.00. Hiša Franko, 747 metrov od iste poti, je restavracija Ane Roš s tremi Michelinovimi zvezdicami, v podeželski hiši iz leta 1861. Za preprostejši obrok Gostišče Jazbec v Idrskem kuha primorske jedi, za konec pa postreže kobariške štruklje."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Vode je dovolj: 62 javnih točk s pitno vodo, 13 jih je manj kot 150 metrov od označene poti. Na voljo sta dve javni servisni stojali, v občini pa je tudi kolesarska trgovina Positive Sport. Kobarid ima 5 javnih polnilnic, zato lahko e-kolo napolniš med vzponi."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Od 69 znamenitosti v Kobaridu so glavne kar ob poti Bimobis. Napoleonov most čez Sočo je 3 metre od poti, Kobariški muzej pa 16 metrov. Italijanska kostnica, kjer ležijo posmrtni ostanki 7.014 italijanskih vojakov iz soških bitk, je 143 metrov od poti. Slap Kozjak je 1,6 km od poti Bimobis. V Breginjskem kotu je Napoleonov most čez Nadižo 3,9 km od poti Bimobis."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "877631a4": "Gostišče v Idrskem, 2 km jugovzhodno od Kobarida, z dvajsetimi sobami in restavracijo. Kolesarji dobijo garažo za kolesa, sušilnico in orodje za manjša popravila.",
+    "b3bae6bf": "Majhen družinski kamp ob Nadiži za Podbelo, blizu kopališča in soteske na reki, z lastno picerijo.",
+    "1cdf0e0a": "Kamp v Soški dolini, ki deluje po eko načelih, s prostori za kampiranje, lesenimi hiškami in glampingom, barom in restavracijo ter kolesi za izposojo.",
+    "ad2d6e75": "Štiri hiške za dva na terasi skoraj 1.000 metrov nad morjem, z razgledom na Soško dolino in velnesom s tremi savnami.",
+    "ddda3897": "Hostel v središču Kobarida, v stavbi iz leta 1880, s shrambo za kolesa, skupno kuhinjo in terasami na vrtu.",
+    "b1fb5708": "Sobe in apartmaji v središču Kobarida, blizu muzeja prve svetovne vojne. Zajtrk je večinoma z domače kmetije, izposodiš si lahko tudi e-kolo.",
+    "a7125d26": "Hiša Valterja Kramarja za vino, pivo pivovarne FEO in hrano, v središču Kobarida.",
+    "ff369a33": "Restavracija Ane Roš s tremi Michelinovimi zvezdicami, v podeželski hiši nekaj minut od Kobarida. Meni sledi temu, kar da dolina: postrvi, divjačina in divje rastline."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Tolminu.",
+  "intro": "Tolmin leži sredi Soške doline, kjer se Tolminka izliva v Sočo. Skozi kraj peljeta dve označeni kolesarski poti: mednarodna cestna pot Bimobis in državna kolesarska pot D7. Most na Soči, kjer se Soča razširi v jezero, spada pod Tolmin, prav tako Zatolmin in Modrejce.",
+  "routes": {
+    "title": "Kolesarske poti skozi Tolmin",
+    "body": "Skozi Tolmin peljeta dve označeni kolesarski poti, glavna med njima je Bimobis. To je mednarodna cestna pot, dolga 144 km, od tega 20 km v Tolminu, in pelje mimo muzeja in hotelov v središču. D7, državna kolesarska pot od Robiča čez Kobarid in Most na Soči do Jelšan, prečka Tolmin v dolžini 4 km. Večina spodaj naštetih nastanitev in krajev za jesti je kratko vožnjo od Bimobisa."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Tolminu je 24 nastanitev, od kampov ob reki do hotela v središču. Hotel Dvorec je 7 metrov od Bimobisa in ima shrambo za kolesa ter velneški del. V Mostu na Soči je Penzion Sterk 187 metrov od poti in ima lastno restavracijo. Šotorišče Senca, 555 metrov od Bimobisa, je majhen družinski kamp na desnem bregu Soče, kjer ta postane jezero. Penzion Kobala, 1,2 km od poti, ima balkone nad dolino in zunanji bazen."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Tolminu je 9 krajev, kjer lahko ješ, eden pa odpre zgodaj za zajtrk. Soca 202 v središču, 51 metrov od Bimobisa, vsak dan od 6.00 streže pico, jedi z žara in ribe. Kavarna in Gostilna pri Noni, 444 metrov od poti, kuha tradicionalne jedi iz lokalnih sestavin. Greš proti Tolminskim koritom? Okrepčevalnica Tolminska Korita v Zatolminu je odprta vsak dan od 9.00."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "V Tolminu je 85 javnih točk s pitno vodo, 14 jih je manj kot 150 metrov od označene poti. Na voljo sta dve javni servisni stojali. Za dele ali servis sta v kraju kolesarski trgovini VEB Company in Špica Šport Tolmin. Če e-kolesu zmanjkuje baterije, ima Tolmin 2 javni polnilnici."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "V Tolminu je 91 znamenitosti, teh pet je vredno, da stopiš s kolesa. Tolminski muzej v Coroninijevem dvorcu je 50 metrov od poti. Ruševine gradu Tolmin na Kozlovem robu so 286 metrov stran. Nemška kostnica iz prve svetovne vojne je 412 metrov od poti. Tolminska korita so 1,6 km od Bimobisa. Za cel dan v gorah je tu Črna prst, visoka 1.844 metrov, 15,3 km od poti."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "d943582e": "Družinski penzion, ki se je začel z dvema apartmajema za jadralne padalce. Vsaka soba ima balkon proti Soški dolini, na voljo so zunanji bazen, jacuzzi in veliko parkirišče.",
+    "b519684d": "Kamp ob Soči, ki ga vodi pustolovska agencija Maya team, z lastno picerijo in žarom. Agencija organizira rafting, kanjoning in kajak.",
+    "beaaef9d": "Družinski penzion ob Soči v Mostu na Soči, ki goste sprejema že tri desetletja, z lastno restavracijo.",
+    "1bd575ef": "Hotel v Tolminu s prenovljenimi sobami, kavarno, shrambo za kolesa in velneškim delom s štirimi savnami.",
+    "98149d40": "Majhen družinski kamp v Modrejcah, na desnem bregu Soče tik pred Mostom na Soči, s prostori za šotore, glampingom in apartmajem. Prireja tudi koncerte.",
+    "22367cad": "Družinska gostilna s sobami v Mostu na Soči, ki deluje že več kot 30 let. Odprta od aprila do septembra, vsak dan od 12.00 do 15.00 in od 18.00 do 21.00.",
+    "acbf29e0": "Restavracija v središču Tolmina s pico, mesom z žara, kalamari in lokalno postrvjo.",
+    "6f1a09bc": "Kavarna in gostilna v Tolminu s tradicionalnimi jedmi iz lokalnih sestavin.",
+    "8dde2a30": "Okrepčevalnica v Zatolminu blizu Tolminskih korit, s tradicionalnimi jedmi, sobami in prevozi s kombijem."
+  }
+}

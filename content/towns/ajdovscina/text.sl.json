@@ -1,0 +1,39 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Ajdovščini.",
+  "intro": "Ajdovščina leži v zgornji Vipavski dolini, na mestu rimske utrdbe. Skozi kraj pelje ena označena kolesarska pot: Vipava (Učna pot ob reki Vipavi), lokalna pot ob reki. Občina se dviga od vinogradniških vasi, kot so Brje, Budanje in Črniče, do Cola, Otlice in Hrušice na planoti.",
+  "routes": {
+    "title": "Kolesarska pot skozi Ajdovščino",
+    "body": "Skozi Ajdovščino pelje ena označena kolesarska pot, ki sledi reki. Vipava (Učna pot ob reki Vipavi) je lokalna kolesarska pot, dolga 48 km, od tega jih je 14 v Ajdovščini."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Ajdovščini imaš 12 nastanitev, od hotela v središču do kmetije na nadmorski višini 1.000 metrov. V Brjah ima Turistična kmetija Birsa sobe in apartmaje 470 metrov od poti Vipava. Hotel Gold Club je sredi mesta, 2,4 km od iste poti. Avtokamp Ajdovščina, 2,8 km od poti, je v borovem gozdu deset minut hoje od središča, tam si lahko izposodiš kolo ali e-kolo. Zgoraj na planoti je Penzion Sinji vrh, 5,1 km od poti, z razgledom na Vipavsko dolino in e-kolesi za goste."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Ajdovščini imaš 10 krajev, kjer lahko ješ, razporejenih med dolino in planoto. Picerija Anja v Budanjah, 980 metrov od poti Vipava, peče pice že več kot 30 let in streže dnevna kosila. V Kampu David v Malovšah, 2,0 km od iste poti, majhna pekarna vsako jutro speče kruh. Guerila v Planini, 1,6 km od poti, prideluje biodinamično vino in ponuja degustacije. Zgoraj na Hrušici Gostilna Stara Pošta ob rimskem najdišču Ad Pirum kuha domače jedi in divjačino."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Le 3 od 47 javnih točk s pitno vodo so manj kot 150 metrov od označene poti, zato vzemi s seboj poln bidon. V kraju so tri javna servisna stojala. Kolesarsko trgovino s servisom izbiraš med tremi: Kamplc sport, Kobra in Velocenter Ajdovščina. Za e-kolo ima Ajdovščina 4 javne polnilnice."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Ajdovščina ima 66 znamenitosti, dve od njih sta rimski. Castra, rimska utrdba, iz katere je zraslo mesto, je 2,7 km od poti Vipava. Otliško okno, naravno kamnito okno na planoti, je 5,6 km od iste poti. Grad Trilek je od nje oddaljen 4,5 km. Ad Pirum, rimska utrdba na Hrušici, zgrajena v dvajsetih letih 4. stoletja, je 11,7 km od poti Vipava."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "87a0b917": "Hotel v središču Ajdovščine z igralnico, ribjo restavracijo ter pivovarno s picerijo.",
+    "7e67b897": "Turistična kmetija na nekaj več kot 1.000 metrih v Kovku nad Vipavsko dolino, s sobami, domačo hrano in e-kolesi. Odprta vse leto po predhodni rezervaciji.",
+    "45556e90": "Majhen kamp v Malovšah pri Črničah, s prostori za šotore, prikolice in avtodome, kavarno na recepciji in lastno pekarno.",
+    "1c458403": "Kamp v borovem gozdu, deset minut hoje od središča Ajdovščine, s 50 prostori, apartmajem ter kolesi in e-kolesi za izposojo.",
+    "b5853155": "Turistična kmetija v Brjah, ki goste sprejema od leta 1988, s sobami, apartmaji, domačo hrano in lastno vinsko kletjo.",
+    "98ccb2f8": "Mladinski hotel v mladinskem in kulturnem centru Hiša mladih v Ajdovščini, kjer prirejajo tudi koncerte in delavnice.",
+    "eaddf6d3": "Gostilna s sobami in majhnim muzejem na Hrušici, ob rimskem najdišču Ad Pirum, z domačimi jedmi in divjačino.",
+    "3dd61752": "Picerija in gostilna v Budanjah, ki deluje že več kot 30 let, s pico po italijanskem receptu in dnevnimi kosili.",
+    "444ce79d": "Kavarna in pekarna na recepciji Kampa David. Vsako jutro je tu svež kruh, poleg njega pa kava, vipavska vina, prigrizki in sladoled.",
+    "c4d62cbf": "Biodinamično vinsko posestvo v Planini, ki ga vodi vinar Zmago Petrič, z degustacijami in apartmaji."
+  }
+}

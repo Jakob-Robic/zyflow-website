@@ -1,0 +1,38 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Novem mestu.",
+  "intro": "Novo mesto leži ob Krki na jugovzhodu Slovenije. Skozi mesto pelje pet označenih kolesarskih poti, med njimi D8 (Zdraviliška kolesarska pot), G10 iz Ljubljane čez Žužemberk in Kolesarska Jakobova pot. Tudi Otočec z gradom ob D8 spada pod Novo mesto.",
+  "routes": {
+    "title": "Kolesarske poti skozi Novo mesto",
+    "body": "Skozi Novo mesto pelje pet označenih kolesarskih poti. Najdaljša je Kolesarska Jakobova pot Slovenija Camino, skupaj 311 km, od tega 29 km v Novem mestu. D8 (Zdraviliška kolesarska pot) meri 133 km in pelje mimo Otočca. G10 te iz Ljubljane pripelje čez Škofljico in Žužemberk, skupaj 84 km. G12 in R16 povezujeta mesto s Trebnjem in Mokronogom."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Novem mestu imaš 17 nastanitev. V središču so apartmaji JANTAR 48 metrov od Jakobove poti, Aparthotel Ravbar, 290 metrov od iste poti, pa ima kolesarnico za goste. Ob D8 je hotel Grad Otočec, v samem gradu, 132 metrov od poti. Za bivanje na kmetiji je Turistična kmetija Šeruga v Selah pri Ratežu 1,4 km od D8."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "V Novem mestu je 8 krajev, kjer lahko ješ, najbližje potem pa so tisti ob D8 in v središču. Gostišče Loka ob Krki, 10 metrov od D8, je restavracija, picerija, slaščičarna in pekarna v enem. Bistro Marof, 76 metrov od D8, čez dan ponuja kavo, tedenski meni, domače sladice in sladoled. V središču je Oštarija Rudolfswerth 26 metrov od Jakobove poti in peče pico v krušni peči. Do Gostilne Vovko v Ratežu, družinske gostilne od leta 1977, je z D8 1,9 km odcepa."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Javne točke s pitno vodo so le 3, a vse 3 so manj kot 150 metrov od označene poti. Za popravila sta tu dve kolesarski trgovini s servisom, JB Center in Kolesa Smole. Novo mesto nima javne polnilnice za e-kolesa. Če voziš e-kolo, je najbližja pri Ajdovem Zrnu v Črnomlju, 23,2 km stran."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Znamenitosti so tu predvsem gradovi, več jih je blizu poti. Grad Otočec je 111 metrov od D8 in je danes hotel. Grad Graben je 231 metrov od iste poti. Grad Grm je 563 metrov od Jakobove poti, grad Luknja pa 764 metrov. Do gradu Hmeljnik je z G12 3 km odcepa."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "9e3cb5a3": "Hotel z restavracijo, picerijo s krušno pečjo in bowlingom s štirimi stezami, 100 metrov od izvoza z avtoceste Novo mesto zahod.",
+    "929f6c7a": "Hotel v gradu Otočec, ki ga upravljajo Terme Krka, z restavracijo, velnesom in golfom. Ima Michelinov ključ.",
+    "522f7ec6": "Apartmaji in sobe 300 metrov od središča Novega mesta, s kolesarnico za goste.",
+    "2cc1a666": "Prenovljeni studii in apartma v središču Novega mesta, vsak s kuhinjo in brezplačnim zasebnim parkiriščem. Odprto vse leto.",
+    "ba71df8e": "Družinska kmetija v Selah pri Ratežu blizu Otočca, z rustikalnimi sobami, bazenom, savnami in hrano iz lokalnih pridelkov.",
+    "b583ac8b": "Oštarija, poimenovana po Rudolfu IV., ki je Novo mesto ustanovil leta 1365. Streže malice, kosila, pico iz krušne peči in več kot 40 slovenskih vin.",
+    "27d3ca88": "Restavracija, picerija, slaščičarna in pekarna na bregu Krke, s teraso ob reki.",
+    "d4303bd6": "Družinska gostilna v Ratežu blizu Otočca od leta 1977, z dolenjsko hrano iz lokalnih pridelkov. Ima tudi devet sob.",
+    "00877126": "Bistro s kavo, tedenskim menijem, domačimi sladicami in sladoledom čez dan, zvečer pa z jedmi za deljenje in vinom."
+  }
+}

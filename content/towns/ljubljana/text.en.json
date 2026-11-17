@@ -9,7 +9,7 @@
   },
   "stays": {
     "title": "Where to stay with your bike",
-    "body": "Ljubljana has 102 places to stay, from city hotels to inns with rooms and a campsite. Stari Tišler, an old coaching inn near the railway station, is 466 metres from the Plečnikova pot. On the Ljubljanica south of the centre, Gostilna Livada is 26 metres from the Pot spominov in tovarištva and has parking for campervans. North of the centre, Ljubljana Resort has hotel rooms, camping pitches and mobile homes, with bikes to borrow or rent."
+    "body": "Ljubljana has 102 places to stay, from city hotels to inns with rooms and a campsite. Stari Tišler, an old coaching inn near the railway station, is 466 metres from the Plečnikova pot. On the Ljubljanica south of the centre, Livada is 26 metres from the Pot spominov in tovarištva and has parking for campervans. North of the centre, Ljubljana Resort has hotel rooms, camping pitches and mobile homes, with bikes to borrow or rent."
   },
   "food": {
     "title": "Where to stop and eat",
@@ -26,7 +26,7 @@
   "places": {
     "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
     "3fd8bbf5": "A hotel, campsite and mobile homes on Dunajska cesta in the north of Ljubljana. Hotel rooms come with a free bike, and you can also rent one.",
-    "fc511547": "A large inn on the bank of the Ljubljanica, with a big car park that takes campervans. You can also arrive by boat from the city centre.",
+    "fc511547": "A campsite and campervan stop beside Gostilna Livada on the Ljubljanica. You can also arrive by boat from the city centre.",
     "dbfa9d9f": "A coaching inn near the railway station, protected as part of Ljubljana's heritage. It cooks Slovenian food and has rooms.",
     "6e1dca54": "A family inn with a guesthouse in Tomačevo, near the Sava, cooking classic and seasonal Slovenian dishes for more than 30 years. The inn is open Monday to Friday.",
     "dafc5990": "An inn in Trnovo, a quiet part of Ljubljana ten minutes' walk from the old town. A family-run B&B is part of the same house.",

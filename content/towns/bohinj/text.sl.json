@@ -1,0 +1,41 @@
+{
+  "status": "draft",
+  "_note": "Drafted 2026-11-17 from text.en.json; needs a read by a native speaker before publishing.",
+  "lede": "Kje kolesariti, prespati, jesti in napolniti bidon v Bohinju.",
+  "intro": "Bohinj je dolina zahodno od Bleda, na njenem koncu pa v Triglavskem narodnem parku leži Bohinjsko jezero. G2, ki pelje iz Lesc čez Bled do Mosta na Soči, pride v dolino z Bleda. LG-1 pelje iz Mojstrane mimo Bohinjskega jezera do Bohinjske Bistrice in povezuje vasi z jezerom. Bohinjska Bistrica je glavna vas. Ribčev Laz leži ob jezeru, Stara Fužina, Studor in Polje pa so kratko vožnjo stran.",
+  "routes": {
+    "title": "Kolesarske poti skozi Bohinj",
+    "body": "Bohinj prečkajo tri označene kolesarske poti, ki skupaj pokrijejo dolino od Bohinjske Bistrice do jezera. G2 je dolga 53 km in pelje iz Lesc čez Bled in Bohinjsko Bistrico, od tega je 24 km v Bohinju. LG-1 je dolga 55 km in ima prav tako 24 km v Bohinju, med jezerom in vasmi. Kolesarska pot Bohinj je lokalna pot, dolga 11 km, vsa v dolini."
+  },
+  "stays": {
+    "title": "Kje prespati s kolesom",
+    "body": "V Bohinju imaš 44 nastanitev, od majhnih hotelov v Bohinjski Bistrici do sob in apartmajev blizu jezera. Želiš spati ob G2? Sunrose 7 je 50 metrov od poti, Tripič pa 190 metrov, oba v Bohinjski Bistrici. Bližje jezeru sta Resman in Apartma Bohinj v Ribčevem Lazu. Planšar, stara vaška hiša v Stari Fužini, je 380 metrov od LG-1."
+  },
+  "food": {
+    "title": "Kje se ustaviti in jesti",
+    "body": "Bohinj ima 22 krajev, kjer lahko ješ, večina jih je v Bohinjski Bistrici in okoli jezera. Gostilnica Štrud'l sredi Bohinjske Bistrice kuha domače jedi, kot so žganci iz bohinjske koruze, ime pa je dobila po štrudlju. Pr' Pristavc v Polju, 220 metrov od LG-1, peče pico v krušni peči. Na skrajnem koncu jezera v Ukancu sta Restavracija Ukanc in restavracija v Kampu Bohinj. Od LG-1 sta oddaljeni 4,4 km in 4,0 km, zato zanju načrtuj odcep s poti."
+  },
+  "practical": {
+    "title": "Voda, servis in polnjenje",
+    "body": "Bohinj ima 69 javnih točk s pitno vodo, 10 jih je manj kot 150 metrov od označene poti. V Bohinjski Bistrici je javno servisno stojalo, ob jezeru v Ribčevem Lazu pa kolesarska trgovina Alpinsport. Za e-kolo ima Bohinj 3 javne polnilnice."
+  },
+  "sights": {
+    "title": "Kaj videti ob poti",
+    "body": "Več znamenitosti leži blizu označenih poti. Oplenova hiša, muzejska hiša, je 80 metrov od LG-1, Planšarski muzej pa 400 metrov. Slapovi Grmečice so 100 metrov od G2. Slap Savica, visok 78 metrov, je 7,2 km od LG-1, zato si za ta odcep vzemi dovolj časa."
+  },
+  "places": {
+    "_note": "One line per place, Slovenian version of the lines in text.en.json.",
+    "843686bd": "Butični hotel z 18 sobami v Bohinjski Bistrici, samo za odrasle, z lastno restavracijo, velnesom in naravnim bazenom na vrtu.",
+    "63e08940": "Družinski hotel s 17 sobami v Bohinjski Bistrici, z restavracijo in picerijo, ki delujeta od leta 1986. Predstavlja se tudi kot hotel za kolesarje.",
+    "c279580c": "Apartma s 44 m² za štiri osebe v Ribčevem Lazu, nekaj minut hoje od Bohinjskega jezera.",
+    "b42d7bc8": "Štirje apartmaji v majhnem apart hotelu v Koprivniku nad Bohinjsko dolino.",
+    "ca6cb31d": "Sedem sob v Ribčevem Lazu, 500 metrov od jezera, s skupno kuhinjo in zaklenjeno shrambo za opremo. Odprto vse leto.",
+    "c91703fc": "Kamnita in lesena hiša iz leta 1828 v starem jedru Stare Fužine, s sobami, apartmajem in restavracijo z bohinjskim sirom in domačo hrano.",
+    "dcb28e45": "Gostilnica sredi Bohinjske Bistrice, kjer se počutiš kot v planinski koči. Streže domače jedi, pivo lokalne pivovarne in štrudelj, po katerem je dobila ime.",
+    "ce67e990": "Družinska restavracija v Ukancu na skrajnem koncu jezera, ki kuha z lokalnimi sestavinami in divjačino, s slovenskimi vini in bohinjskim pivom.",
+    "c2fcee8e": "Restavracija v Kampu Danica v Bohinjski Bistrici, ki bohinjske jedi s sodobnim pridihom kuha iz večinoma lokalnih sestavin.",
+    "083867f9": "Gostilna in picerija v Polju, 2 km od jezera, s pico iz krušne peči, domačimi jedmi in sobami v nadstropju.",
+    "b684922e": "Restavracija Kampa Bohinj v Ukancu, na obali jezera. Kamp je pozimi zaprt.",
+    "bbeeb027": "Kavarna in pub pri Danici v Bohinjski Bistrici, poleti s pop-up picerijo in koncerti na trgu."
+  }
+}
