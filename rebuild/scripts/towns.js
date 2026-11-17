@@ -1122,7 +1122,7 @@ function renderPhotoHero(town, t, lang) {
       <a class="btn btn--primary" href="${toRoutes ? "#routes" : "#map"}">${esc(toRoutes ? t.seeRoutes : t.seeStays)}</a>
     </div>
     <aside class="hero__card">${thumb ? `
-      <div class="hero__card-media"><img class="hero__card-thumb" src="${esc(thumb.src)}" alt="" loading="lazy" /></div>` : ""}
+      <div class="hero__card-media"><img class="hero__card-thumb" src="${esc(thumb.src)}" alt="" sizes="(max-width: 720px) 80vw, 140px" loading="lazy" /></div>` : ""}
       <div class="hero__card-body">
         <div class="hero__card-label"><span class="motif" aria-hidden="true"></span><span>${esc(t.checkedShort(shortDate(town.checked, lang)))}</span></div>
         <div>
@@ -1389,7 +1389,7 @@ function renderHub(page) {
     const href = `.${townPath(town, lang)}.html`;
     return `      <article class="tour-card">
         <div class="tour-card__media">
-          ${photo ? `<img src="${esc(photo.src)}" alt="${esc(photo.caption)}" loading="lazy" decoding="async" />` : ""}
+          ${photo ? `<img src="${esc(photo.src)}" alt="${esc(photo.caption || town.name)}" sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 400px" loading="lazy" decoding="async" />` : ""}
           <div class="tour-card__loc">
             <div class="tour-card__pin"><img src="./assets/images/icons/location.svg" alt="" aria-hidden="true" width="18" height="18" /></div>
             <div class="tour-card__loc-text"><span>${esc(town.region)}</span><span>${esc(town.country)}</span></div>
