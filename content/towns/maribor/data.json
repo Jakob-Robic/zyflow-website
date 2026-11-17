@@ -8198,26 +8198,6 @@
    ]
   },
   {
-   "id": "fde92e10-7765-4362-ab18-4a7da560c2e3",
-   "name": "Dobro Jutro Vietnam",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 15.6460474,
-   "lat": 46.5602933,
-   "site": {
-    "url": "https://www.facebook.com/Dobro-Jutro-Vietnam-139139806790664/",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "EV9",
-    "m": 383
-   },
-   "hours": "Mo–Fr 10:00–19:00; Sa 11:00–19:30",
-   "extras": [
-    "Vietnamese"
-   ]
-  },
-  {
    "id": "25db661d-920a-4727-bdcc-f72e4db1d3cd",
    "name": "Ngon",
    "kind": "Restaurant",
@@ -8254,6 +8234,26 @@
    },
    "hours": "Mo–We 11:00–17:00; Th–Sa 11:00–23:00",
    "extras": []
+  },
+  {
+   "id": "39c28f84-9d21-4698-a247-7c8161115c7b",
+   "name": "Drava center",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 15.5904805,
+   "lat": 46.5639883,
+   "site": {
+    "url": "https://www.dravacenter.si/",
+    "label": "dravacenter.si"
+   },
+   "near": {
+    "route": "drava bike",
+    "m": 56
+   },
+   "hours": "Tu–Fr 12:00–20:00; Sa,Su 10:00–19:45",
+   "extras": [
+    "Regional"
+   ]
   }
  ],
  "sights": [

@@ -8052,19 +8052,19 @@
    }
   },
   {
-   "id": "0971c056-3e49-43f4-bd2b-84104331612f",
-   "name": "Camp Fiesa",
-   "kind": "Campsite",
+   "id": "fba7b5a2-98e5-4026-a071-cb2ec5419a06",
+   "name": "Apartments Sončne Terase",
+   "kind": "Apartment",
    "pin": "accommodation",
-   "lon": 13.5793884,
-   "lat": 45.5236186,
+   "lon": 13.5767251,
+   "lat": 45.5242243,
    "site": {
-    "url": "https://www.avtokampi.si/campsites/camping-fiesa",
-    "label": "avtokampi.si"
+    "url": "http://soncne.weebly.com/",
+    "label": "soncne.weebly.com"
    },
    "near": {
     "route": "K12",
-    "m": 201
+    "m": 266
    }
   }
  ],
@@ -8088,24 +8088,6 @@
    "extras": [
     "Pizza, regional"
    ]
-  },
-  {
-   "id": "5f25786a-355c-4b51-ab7c-d10fbed99a1a",
-   "name": "Mestna Kavarna",
-   "kind": "Café",
-   "pin": "cafe",
-   "lon": 13.5682159,
-   "lat": 45.5290529,
-   "site": {
-    "url": "https://menu.servio.si/cappuccino-mestna-kavarna/NTXDCLCD?",
-    "label": "menu.servio.si"
-   },
-   "near": {
-    "route": "K12",
-    "m": 10
-   },
-   "hours": "08:00–23:00",
-   "extras": []
   },
   {
    "id": "8ef98a40-eaf0-4c96-b060-917db070efde",
@@ -8185,6 +8167,27 @@
    },
    "hours": "Tu–Su 12:00–20:00",
    "extras": []
+  },
+  {
+   "id": "fcb516a6-1b11-4138-9614-9409e65fb6c7",
+   "name": "Cacao",
+   "kind": "Café",
+   "pin": "cafe",
+   "lon": 13.5933471,
+   "lat": 45.513703,
+   "site": {
+    "url": "https://cacao.si/en/",
+    "label": "cacao.si"
+   },
+   "near": {
+    "route": "K13",
+    "m": 30
+   },
+   "hours": "Mo–Th 08:00–22:00, Fr–Su 08:00–24:00",
+   "extras": [
+    "Ice cream, coffee shop, coffee, cake, patisserie",
+    "Outdoor seating"
+   ]
   }
  ],
  "sights": [

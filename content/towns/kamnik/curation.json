@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "b4106453",
+    "f3dad7b5",
+    "8f4f43ae",
+    "3d0d5448",
+    "c03e2e3f"
+  ],
+  "exclude_reasons": {
+    "b4106453": "2026-11-17 website check: Facebook link dead",
+    "f3dad7b5": "2026-11-17 website check: Facebook link dead",
+    "8f4f43ae": "2026-11-17 website check: Facebook link dead",
+    "3d0d5448": "2026-11-17 website check: Facebook link dead",
+    "c03e2e3f": "2026-11-17 website check: domain for sale"
+  },
+  "_note": "Hand decisions for this town's picks. exclude: place ids (prefix) never picked; exclude_reasons: why. Dropped 2026-11-17 on Jakob's OK after the writers' website check."
+}

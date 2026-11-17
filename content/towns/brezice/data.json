@@ -6029,24 +6029,6 @@
    ]
   },
   {
-   "id": "9f89b2f3-15b7-414b-915e-a7f37a673901",
-   "name": "Gostilna Pohak",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 15.5196797,
-   "lat": 45.8835447,
-   "site": {
-    "url": "https://www.facebook.com/gostilnapohak/",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "D8",
-    "m": 15
-   },
-   "hours": null,
-   "extras": []
-  },
-  {
    "id": "10b8c5f2-a851-4567-b0d7-887b054dbc03",
    "name": "Gostilna pension Les",
    "kind": "Restaurant",
@@ -6064,6 +6046,26 @@
    "hours": null,
    "extras": [
     "Regional"
+   ]
+  },
+  {
+   "id": "83d7ef84-18c8-41b3-9d91-552d66853937",
+   "name": "Gostilna Racman",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 15.5956533,
+   "lat": 45.9274833,
+   "site": {
+    "url": "http://www.gostilna-racman.si",
+    "label": "gostilna-racman.si"
+   },
+   "near": {
+    "route": "D2",
+    "m": 2450
+   },
+   "hours": null,
+   "extras": [
+    "Outdoor seating"
    ]
   }
  ],

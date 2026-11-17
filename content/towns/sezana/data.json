@@ -3568,26 +3568,6 @@
    ]
   },
   {
-   "id": "fcbf0307-b75a-426a-9d9a-bfc1b25040f3",
-   "name": "Krog",
-   "kind": "Café",
-   "pin": "cafe",
-   "lon": 13.8563026,
-   "lat": 45.7046797,
-   "site": {
-    "url": "http://www.vulkanizacija-hrvatic.si/index.php/bar-krog",
-    "label": "vulkanizacija-hrvatic.si"
-   },
-   "near": {
-    "route": "GEOMOB Sežana–Komen",
-    "m": 1471
-   },
-   "hours": "Mo–Th 07:00–22:00; Fr 07:00–24:00; Sa 08:00–20:00",
-   "extras": [
-    "Outdoor seating"
-   ]
-  },
-  {
    "id": "aa1501b9-0633-4e5d-95b4-9174a23d2f83",
    "name": "Gostilna Ukmar",
    "kind": "Restaurant",
@@ -3605,27 +3585,6 @@
    "hours": "We–Mo 08:00–23:00; Tu off",
    "extras": [
     "Slovenian, mediterranean",
-    "Outdoor seating"
-   ]
-  },
-  {
-   "id": "2b757a22-ef05-4c8a-819d-5b92d0aab3b9",
-   "name": "Gostilna Prunk",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 13.9323568,
-   "lat": 45.6606459,
-   "site": {
-    "url": "http://www.mesarija-prunk.si/",
-    "label": "mesarija-prunk.si"
-   },
-   "near": {
-    "route": "GEOMOB Sežana–Komen",
-    "m": 7176
-   },
-   "hours": "Mo–Su 12:00–23:00",
-   "extras": [
-    "Regional",
     "Outdoor seating"
    ]
   },
@@ -3668,6 +3627,44 @@
    "extras": [
     "Regional",
     "Outdoor seating"
+   ]
+  },
+  {
+   "id": "99198a5e-5f7d-443d-8694-40503cfd138c",
+   "name": "Restavracija Grahor",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.8837496,
+   "lat": 45.7158546,
+   "site": {
+    "url": "https://www.hotelgrahor.com/",
+    "label": "hotelgrahor.com"
+   },
+   "near": {
+    "route": "GEOMOB Sežana–Komen",
+    "m": 858
+   },
+   "hours": null,
+   "extras": []
+  },
+  {
+   "id": "270c1130-b994-4d00-ab01-74eb389168ce",
+   "name": "Turistična kmetija Petelin-Durcik",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.7841874,
+   "lat": 45.7747815,
+   "site": {
+    "url": "http://www.petelin-durcik.si/",
+    "label": "petelin-durcik.si"
+   },
+   "near": {
+    "route": "GEOMOB Sežana–Komen",
+    "m": 921
+   },
+   "hours": null,
+   "extras": [
+    "Regional"
    ]
   }
  ],

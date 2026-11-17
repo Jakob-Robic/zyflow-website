@@ -2466,24 +2466,6 @@
    "extras": []
   },
   {
-   "id": "0c0cd235-eb44-496e-9bcf-c8db91022340",
-   "name": "Eco Kmetija Robidisce",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 13.4149723,
-   "lat": 46.2159616,
-   "site": {
-    "url": "https://siol.net/trendi/kulinarika/eko-kmetija-robidisce-pojedina-na-koncu-slovenije-444528",
-    "label": "siol.net"
-   },
-   "near": {
-    "route": "fit Helga",
-    "m": 543
-   },
-   "hours": "Mo–Th 10:00–22:00; Fr 09:30–22:00; Sa,Su 09:30–23:00",
-   "extras": []
-  },
-  {
    "id": "ff369a33-0e26-46a1-a128-37f40f67851d",
    "name": "Hiša Franko",
    "kind": "Restaurant",

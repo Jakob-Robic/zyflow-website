@@ -1523,24 +1523,6 @@
  ],
  "food": [
   {
-   "id": "ed8d91c6-2ed2-49e3-941f-90c660dc5b24",
-   "name": "Bistro LUFT",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 13.8920013,
-   "lat": 45.883381,
-   "site": {
-    "url": "https://www.facebook.com/bistroluft/",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "R3",
-    "m": 595
-   },
-   "hours": "Mo–Fr 10:00–14:00",
-   "extras": []
-  },
-  {
    "id": "eaddf6d3-c7d5-4a0b-a92e-106503895d33",
    "name": "Gostilna Stara Pošta",
    "kind": "Restaurant",

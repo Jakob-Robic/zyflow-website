@@ -8768,22 +8768,6 @@
  ],
  "stays": [
   {
-   "id": "cfd51fad-e55a-45df-9a24-9aea0bce9aad",
-   "name": "Ibis Styles Ljubljana Centre",
-   "kind": "Hotel",
-   "pin": "accommodation",
-   "lon": 14.5074779,
-   "lat": 46.0555367,
-   "site": {
-    "url": "http://www.centralhotelljubljana.com/",
-    "label": "centralhotelljubljana.com"
-   },
-   "near": {
-    "route": "STKP",
-    "m": 450
-   }
-  },
-  {
    "id": "c6783715-4905-4e22-9c98-4afa506db451",
    "name": "DoubleTree by Hilton Ljubljana",
    "kind": "Hotel",
@@ -8797,6 +8781,22 @@
    "near": {
     "route": "POT",
     "m": 333
+   }
+  },
+  {
+   "id": "f29b0285-b798-4034-a1c6-d381bd9359a6",
+   "name": "Holiday Inn Express Ljubljana",
+   "kind": "Hotel",
+   "pin": "accommodation",
+   "lon": 14.5037395,
+   "lat": 46.0726939,
+   "site": {
+    "url": "https://www.ihg.com/holidayinnexpress/hotels/gb/en/ljubljana/ljups/hoteldetail",
+    "label": "ihg.com"
+   },
+   "near": {
+    "route": "POT",
+    "m": 378
    }
   },
   {

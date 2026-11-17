@@ -1337,22 +1337,6 @@
     "route": "G7",
     "m": 4237
    }
-  },
-  {
-   "id": "1e1a023a-4b52-432f-8635-3a8d126997c0",
-   "name": "Apartma Zgodba",
-   "kind": "Apartment",
-   "pin": "accommodation",
-   "lon": 14.5281435,
-   "lat": 46.2673784,
-   "site": {
-    "url": "https://www.booking.com/hotel/si/apartma-zgodba.sl.html",
-    "label": "booking.com"
-   },
-   "near": {
-    "route": "G7",
-    "m": 1674
-   }
   }
  ],
  "food": [
@@ -1375,24 +1359,6 @@
    "extras": [
     "Pizza"
    ]
-  },
-  {
-   "id": "0694dd60-2652-41a7-bf7d-d41dd4dc5b1f",
-   "name": "Gostilna, picerija in apartmaji Štalca",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 14.4889679,
-   "lat": 46.2568402,
-   "site": {
-    "url": "https://gostilna-stalca.si/",
-    "label": "gostilna-stalca.si"
-   },
-   "near": {
-    "route": "G7",
-    "m": 36
-   },
-   "hours": "Mo–Tu 8–15, We 8–17, Fri–Sa 8–22, Su closed",
-   "extras": []
   },
   {
    "id": "bddde5d9-d3b4-4a93-8fc2-996123dc6c13",

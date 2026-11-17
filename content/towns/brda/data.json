@@ -2468,26 +2468,6 @@
    "extras": [
     "Regional"
    ]
-  },
-  {
-   "id": "fb5908fb-2d5a-4a8d-97df-2777240465de",
-   "name": "San Martin Hotel/Restavracija/Enoteka",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 13.5564676,
-   "lat": 46.0059365,
-   "site": {
-    "url": "https://www.sanmartin.si/",
-    "label": "sanmartin.si"
-   },
-   "near": {
-    "route": "Bimobis",
-    "m": 19
-   },
-   "hours": null,
-   "extras": [
-    "Regional"
-   ]
   }
  ],
  "sights": [

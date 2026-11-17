@@ -6602,22 +6602,6 @@
     "route": "K8",
     "m": 159
    }
-  },
-  {
-   "id": "36245309-b26b-43b2-b7a3-a6c59d72e49b",
-   "name": "Bcenter",
-   "kind": "Hostel",
-   "pin": "accommodation",
-   "lon": 13.6657817,
-   "lat": 45.5276795,
-   "site": {
-    "url": "https://www.bcenter.si/",
-    "label": "bcenter.si"
-   },
-   "near": {
-    "route": "K12",
-    "m": 231
-   }
   }
  ],
  "food": [
@@ -6720,24 +6704,22 @@
    ]
   },
   {
-   "id": "6ddd0bfd-fde4-4bde-b167-102f6826b717",
-   "name": "Parangal",
+   "id": "4e8871f3-bb83-4f58-8b72-fefc88e32db0",
+   "name": "Gostilna Korte",
    "kind": "Restaurant",
    "pin": "restaurant",
-   "lon": 13.65762,
-   "lat": 45.5375149,
+   "lon": 13.6567246,
+   "lat": 45.4884568,
    "site": {
-    "url": "https://www.parangal.si",
-    "label": "parangal.si"
+    "url": "https://gostilnakorte.si/",
+    "label": "gostilnakorte.si"
    },
    "near": {
     "route": "K8",
-    "m": 217
+    "m": 16
    },
-   "hours": "Mo–Su 00:00–01:00,09:00–24:00",
-   "extras": [
-    "Outdoor seating"
-   ]
+   "hours": "Mo–Sa 11:00–23:00; Tu off",
+   "extras": []
   }
  ],
  "sights": [

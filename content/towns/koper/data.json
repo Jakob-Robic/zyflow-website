@@ -14248,22 +14248,6 @@
  "featured": [],
  "stays": [
   {
-   "id": "3e9a5770-7cba-467c-ad63-f21a81d7809d",
-   "name": "Gostilna domačija Ražman",
-   "kind": "Hotel",
-   "pin": "accommodation",
-   "lon": 13.8737429,
-   "lat": 45.5026108,
-   "site": {
-    "url": "http://www.razman.si",
-    "label": "razman.si"
-   },
-   "near": {
-    "route": "K9",
-    "m": 24
-   }
-  },
-  {
    "id": "b8c5a8ef-b4fe-4d72-9059-4e2a64348a9b",
    "name": "Turistična kmetija Tonin",
    "kind": "Guesthouse",
@@ -14328,19 +14312,35 @@
    }
   },
   {
-   "id": "81c3857c-5f06-4fb6-aec4-408c58f4c620",
-   "name": "Kmetija Vovk",
-   "kind": "Campsite",
+   "id": "ba665274-f4c3-4049-a848-8acf66dee06a",
+   "name": "Casino & Hotel ADMIRAL Carnevale Škofije",
+   "kind": "Hotel",
    "pin": "accommodation",
-   "lon": 13.856842036,
-   "lat": 45.570434076,
+   "lon": 13.7973566,
+   "lat": 45.5795693,
    "site": {
-    "url": "http://www.kmetija-vovk-osp.si/",
-    "label": "kmetija-vovk-osp.si"
+    "url": "https://www.admiral.si/si/skofije",
+    "label": "admiral.si"
    },
    "near": {
-    "route": "K2",
-    "m": 128
+    "route": "PRZ",
+    "m": 191
+   }
+  },
+  {
+   "id": "5c9db010-0160-4183-b0e9-2ffdc7ee053f",
+   "name": "Hostel Xaxid",
+   "kind": "Hostel",
+   "pin": "accommodation",
+   "lon": 13.9325148,
+   "lat": 45.5014085,
+   "site": {
+    "url": "https://hostelxaxid.si/",
+    "label": "hostelxaxid.si"
+   },
+   "near": {
+    "route": "K4",
+    "m": 61
    }
   }
  ],
@@ -14363,27 +14363,6 @@
    "hours": "Mo–Sa 07:00–00:00; Su 08:00–00:00",
    "extras": [
     "Burger, sandwich, chicken, american, international"
-   ]
-  },
-  {
-   "id": "c760d41d-c127-409d-814a-57415e076d48",
-   "name": "Caprizza",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 13.7257411,
-   "lat": 45.5471766,
-   "site": {
-    "url": "https://m.facebook.com/caprizza.pizza/",
-    "label": "m.facebook.com"
-   },
-   "near": {
-    "route": "PRZ",
-    "m": 715
-   },
-   "hours": "Mo–Su 12:00–23:00",
-   "extras": [
-    "Pizza",
-    "Outdoor seating"
    ]
   },
   {
@@ -14464,6 +14443,27 @@
    "hours": "Mo–Su 12:00–22:00; Th off",
    "extras": [
     "Regional, fish"
+   ]
+  },
+  {
+   "id": "5ae8a53f-5d06-4efb-9ce0-8ca310d160e3",
+   "name": "Sarajevo 84",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.7354839,
+   "lat": 45.5472344,
+   "site": {
+    "url": "https://sarajevo84.net/",
+    "label": "sarajevo84.net"
+   },
+   "near": {
+    "route": "K9",
+    "m": 607
+   },
+   "hours": "Mo–Fr 10:00–22:00, Sa,Su 11:00–22:00",
+   "extras": [
+    "Balkan",
+    "Outdoor seating"
    ]
   }
  ],

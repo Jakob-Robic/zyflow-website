@@ -2256,47 +2256,6 @@
  ],
  "food": [
   {
-   "id": "b4106453-b507-45e0-a560-d9c87904ae4e",
-   "name": "Tavern Mali Grad",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 14.595787,
-   "lat": 46.1952618,
-   "site": {
-    "url": "https://m.facebook.com/tocilnica.maligrad",
-    "label": "m.facebook.com"
-   },
-   "near": {
-    "route": "G13",
-    "m": 444
-   },
-   "hours": "Tu–Su 12:00–22:00",
-   "extras": [
-    "Italian"
-   ]
-  },
-  {
-   "id": "f3dad7b5-40aa-4753-8c49-05e8acf79149",
-   "name": "Orient",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 14.6139229,
-   "lat": 46.226222,
-   "site": {
-    "url": "https://www.facebook.com/Orient-155191478004382",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja",
-    "m": 49
-   },
-   "hours": "Mo–Sa 07:00–21:00; Su 08:00–20:00",
-   "extras": [
-    "Balkan",
-    "Outdoor seating"
-   ]
-  },
-  {
    "id": "b7699d55-8da8-4b60-9189-42f67597c82e",
    "name": "Picerija Murka",
    "kind": "Restaurant",

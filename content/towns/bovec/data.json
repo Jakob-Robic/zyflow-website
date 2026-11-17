@@ -689,15 +689,15 @@
    "near": null
   },
   {
-   "id": "8cc2172c-6334-4185-8a8e-de84d5d0f605",
-   "name": "Penzion Klin",
+   "id": "f4d0c768-7acf-4987-9718-04dc0280084f",
+   "name": "Ekološka turistična kmetija Pri Plajerju",
    "kind": "Guesthouse",
    "pin": "accommodation",
-   "lon": 13.6443041,
-   "lat": 46.3299753,
+   "lon": 13.7411936,
+   "lat": 46.3727422,
    "site": {
-    "url": "https://www.sloveniaholidays.com/kamp-klin-lepena-soca.html",
-    "label": "sloveniaholidays.com"
+    "url": "https://www.eko-plajer.com",
+    "label": "eko-plajer.com"
    },
    "near": null
   }
@@ -733,21 +733,6 @@
    },
    "near": null,
    "hours": "Mo–We 12:00–21:00; Fr–Su 12:00–21:00",
-   "extras": []
-  },
-  {
-   "id": "20636114-d4a9-4a4b-9914-589c5e737244",
-   "name": "Casa Monte",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 13.5768214,
-   "lat": 46.3479003,
-   "site": {
-    "url": "https://restaurantguru.com/Casa-Monte-Bovec",
-    "label": "restaurantguru.com"
-   },
-   "near": null,
-   "hours": "Fr 17:00–22:00; Sa,Su 12:00–22:00",
    "extras": []
   },
   {
@@ -795,6 +780,24 @@
    "hours": "Su, Tu–Th 11:00–22:00; Fr–Sa 11:00–23:00",
    "extras": [
     "Pizza"
+   ]
+  },
+  {
+   "id": "1368bc7c-8353-4706-9633-4bd669caaa03",
+   "name": "Dom Dr. Klementa Juga",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.6817658,
+   "lat": 46.3036667,
+   "site": {
+    "url": "https://planinske-koce.si/dom_dr_klementa_juga_v_lepeni",
+    "label": "planinske-koce.si"
+   },
+   "near": null,
+   "hours": null,
+   "extras": [
+    "Regional",
+    "Outdoor seating"
    ]
   }
  ],

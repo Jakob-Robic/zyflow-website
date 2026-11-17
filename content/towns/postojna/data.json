@@ -11218,26 +11218,6 @@
    ]
   },
   {
-   "id": "0616bf5c-d8e6-4066-9678-1885ac246931",
-   "name": "Minutka",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 14.2153392,
-   "lat": 45.7762734,
-   "site": {
-    "url": "https://www.facebook.com/pages/Pizzeria-Minutka/202470873235463",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "7",
-    "m": 138
-   },
-   "hours": "Mo–Fr 12:00–15:00,18:00–21:00; Sa 17:00–21:00",
-   "extras": [
-    "Regional, pizza"
-   ]
-  },
-  {
    "id": "889e31e9-67f9-47e0-aa97-1b730888a8c4",
    "name": "Avio Pub",
    "kind": "Restaurant",

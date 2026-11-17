@@ -1,0 +1,13 @@
+{
+  "exclude": [
+    "3e9a5770",
+    "81c3857c",
+    "c760d41d"
+  ],
+  "exclude_reasons": {
+    "3e9a5770": "2026-11-17 website check: site under rebuild, placeholder text",
+    "81c3857c": "2026-11-17 website check: casino spam on site",
+    "c760d41d": "2026-11-17 website check: Facebook link dead"
+  },
+  "_note": "Hand decisions for this town's picks. exclude: place ids (prefix) never picked; exclude_reasons: why. Dropped 2026-11-17 on Jakob's OK after the writers' website check."
+}

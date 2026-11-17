@@ -5217,22 +5217,6 @@
    }
   },
   {
-   "id": "f8197323-b26d-4948-a0a7-84977991ec29",
-   "name": "Domačija Pr' Lenart",
-   "kind": "Guesthouse",
-   "pin": "accommodation",
-   "lon": 14.3590627,
-   "lat": 46.0789767,
-   "site": {
-    "url": "https://www.prlenart.si/domov/",
-    "label": "prlenart.si"
-   },
-   "near": {
-    "route": "LG9",
-    "m": 706
-   }
-  },
-  {
    "id": "b85a263f-d38d-491f-a6a3-d2346783154d",
    "name": "Hotel Kanu",
    "kind": "Hotel",
@@ -5250,26 +5234,6 @@
   }
  ],
  "food": [
-  {
-   "id": "97cbb665-801f-451b-9616-8426ce8861b3",
-   "name": "Okrepčevalnica Stan",
-   "kind": "Café",
-   "pin": "cafe",
-   "lon": 14.4114899,
-   "lat": 46.1491276,
-   "site": {
-    "url": "https://www.facebook.com/OkrepcevalnicaStan/?locale=sl_SI",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "L-039",
-    "m": 41
-   },
-   "hours": "Mo–Sa 07:30–22:00; Fr 07:30–23:00; Su 09:00–22:00",
-   "extras": [
-    "Outdoor seating"
-   ]
-  },
   {
    "id": "cd06affe-58e3-4985-afe8-31b69fae78fb",
    "name": "Pizza Sedmica",
@@ -5307,46 +5271,6 @@
    },
    "hours": null,
    "extras": []
-  },
-  {
-   "id": "6004bc1d-b017-4071-8e94-317e2b0c9ca1",
-   "name": "Picerija Hitri",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 14.4139903,
-   "lat": 46.1388447,
-   "site": {
-    "url": "https://www.picerija-hitri.si/",
-    "label": "picerija-hitri.si"
-   },
-   "near": {
-    "route": "L-039",
-    "m": 49
-   },
-   "hours": null,
-   "extras": [
-    "Pizza"
-   ]
-  },
-  {
-   "id": "c4d3b7b1-28f4-4cad-b400-2e19bd9f4722",
-   "name": "Slavkov dom",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 14.4176366,
-   "lat": 46.1052404,
-   "site": {
-    "url": "https://www.gostilna-belsak.si/",
-    "label": "gostilna-belsak.si"
-   },
-   "near": {
-    "route": "Kolesarska Jakobova pot–Gorenjska veja",
-    "m": 1420
-   },
-   "hours": null,
-   "extras": [
-    "Regional"
-   ]
   }
  ],
  "sights": [

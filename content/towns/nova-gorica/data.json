@@ -2530,24 +2530,6 @@
    ]
   },
   {
-   "id": "2313a461-97db-4515-80f4-19e6fe3c9d97",
-   "name": "Čajnica in kavarna Dnevna",
-   "kind": "Café",
-   "pin": "cafe",
-   "lon": 13.6462133,
-   "lat": 45.958473,
-   "site": {
-    "url": "https://dnevna.si/",
-    "label": "dnevna.si"
-   },
-   "near": {
-    "route": "Bimobis",
-    "m": 12
-   },
-   "hours": "Mo–Fr 07:00–21:00; Sa–Su 08:00–13:00",
-   "extras": []
-  },
-  {
    "id": "7fc2538a-64dc-4a58-8e08-dfdd05fd46ad",
    "name": "Gostilnica Mandrija",
    "kind": "Restaurant",
@@ -2603,6 +2585,26 @@
    "hours": null,
    "extras": [
     "Outdoor seating"
+   ]
+  },
+  {
+   "id": "2d7c22b4-6305-4e78-bd90-876eae5f5222",
+   "name": "madonca Rooms & Restaurant",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 13.6358194,
+   "lat": 45.9528986,
+   "site": {
+    "url": "https://www.madonca.si/",
+    "label": "madonca.si"
+   },
+   "near": {
+    "route": "Bimobis",
+    "m": 5
+   },
+   "hours": null,
+   "extras": [
+    "Regional"
    ]
   }
  ],

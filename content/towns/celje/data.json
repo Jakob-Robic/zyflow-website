@@ -2441,42 +2441,6 @@
    ]
   },
   {
-   "id": "4ef07aaf-7a6c-4a90-91d4-c08381038363",
-   "name": "Pušn šank",
-   "kind": "Café",
-   "pin": "cafe",
-   "lon": 15.2604692334536,
-   "lat": 46.2693757929367,
-   "site": {
-    "url": "https://www.facebook.com/pusnsank/?locale=sl_SI",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja",
-    "m": 4
-   },
-   "hours": "Mo–Su 8:00– 21:00",
-   "extras": []
-  },
-  {
-   "id": "a0d4ad9e-b3a3-40b8-a68b-3f0572ed9852",
-   "name": "Kavarna Panorama",
-   "kind": "Café",
-   "pin": "cafe",
-   "lon": 15.2696632,
-   "lat": 46.2760744,
-   "site": {
-    "url": "https://kavarnapanorama.si/",
-    "label": "kavarnapanorama.si"
-   },
-   "near": {
-    "route": "Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja",
-    "m": 14
-   },
-   "hours": "Su–Th 09:00–23:00; Fr,Sa 09:00–24:00",
-   "extras": []
-  },
-  {
    "id": "694f342b-79ca-4058-adb1-1d3e5d26bb8b",
    "name": "Na Golfu",
    "kind": "Café",
@@ -2531,6 +2495,44 @@
    "extras": [
     "Asian, french, regional"
    ]
+  },
+  {
+   "id": "36e9eb85-7e43-4f28-a2e9-ef0bca526a16",
+   "name": "OTOKI japanese restaurant",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 15.2654128,
+   "lat": 46.2285799,
+   "site": {
+    "url": "https://otoki-celje.si/",
+    "label": "otoki-celje.si"
+   },
+   "near": {
+    "route": "EV9",
+    "m": 142
+   },
+   "hours": null,
+   "extras": [
+    "Japanese"
+   ]
+  },
+  {
+   "id": "7fa22539-6417-42a7-831d-97623fdd6661",
+   "name": "Gostilna Oštirka",
+   "kind": "Restaurant",
+   "pin": "restaurant",
+   "lon": 15.2641374,
+   "lat": 46.229886,
+   "site": {
+    "url": "https://www.ostirka.com/",
+    "label": "ostirka.com"
+   },
+   "near": {
+    "route": "EV9",
+    "m": 263
+   },
+   "hours": null,
+   "extras": []
   }
  ],
  "sights": [

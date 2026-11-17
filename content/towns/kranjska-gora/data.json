@@ -5192,43 +5192,23 @@
    }
   },
   {
-   "id": "cf58527d-aba2-49ce-9eac-09db7be3caa4",
-   "name": "Apartments and Rooms Kaja",
-   "kind": "Guesthouse",
+   "id": "68b4fc47-14f6-4c45-a1d3-3cb441f2c67e",
+   "name": "Lukn'a hostel",
+   "kind": "Hostel",
    "pin": "accommodation",
-   "lon": 13.7917355,
-   "lat": 46.4867128,
+   "lon": 13.9412805,
+   "lat": 46.4615927,
    "site": {
-    "url": "https://www.booking.com/hotel/si/apartmaji-kaja.sl.html?chal_t=1776806983933&force_referer=https%3A%2F%2Fwww.google.com%2F#map_closed",
-    "label": "booking.com"
+    "url": "https://hostel-lukna.com/",
+    "label": "hostel-lukna.com"
    },
    "near": {
-    "route": "STKP",
-    "m": 166
+    "route": "D2",
+    "m": 14
    }
   }
  ],
  "food": [
-  {
-   "id": "13a81d73-deea-48b1-8887-50509420cba1",
-   "name": "Okrepčevalnica Lačni Kekec",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 13.7806521,
-   "lat": 46.4834468,
-   "site": {
-    "url": "https://www.facebook.com/OkrepcevalnicaLacniKekec/",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "STKP",
-    "m": 149
-   },
-   "hours": "Th–Tu 11:30–22:00; We off",
-   "extras": [
-    "Burger, breakfast, chicken, coffee shop, diner, grill, hot dog, local, regional, tea"
-   ]
-  },
   {
    "id": "8ebab4eb-114e-45ba-92e1-e300066ab367",
    "name": "Gostilna Jožica",
@@ -5288,26 +5268,6 @@
    "hours": null,
    "extras": [
     "Regional"
-   ]
-  },
-  {
-   "id": "f35cc63e-3134-4464-9cfe-4cd2e6fb3f80",
-   "name": "Pinoalpino",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 13.7850174,
-   "lat": 46.4840452,
-   "site": {
-    "url": "https://www.pinoalpino.com/",
-    "label": "pinoalpino.com"
-   },
-   "near": {
-    "route": "STKP",
-    "m": 23
-   },
-   "hours": null,
-   "extras": [
-    "Outdoor seating"
    ]
   },
   {

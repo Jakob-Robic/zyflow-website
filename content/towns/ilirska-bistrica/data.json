@@ -2458,24 +2458,6 @@
     "Game, dessert",
     "Outdoor seating"
    ]
-  },
-  {
-   "id": "a79ba15a-5f17-4610-a2ee-110c5b71928c",
-   "name": "Gostilna Pizzerija Škorpjon",
-   "kind": "Restaurant",
-   "pin": "restaurant",
-   "lon": 14.224666,
-   "lat": 45.5734574,
-   "site": {
-    "url": "http://www.facebook.com/pages/gostilna-pizzeria-%c5%a0korpion/173853002774226",
-    "label": "facebook.com"
-   },
-   "near": {
-    "route": "10",
-    "m": 12607
-   },
-   "hours": null,
-   "extras": []
   }
  ],
  "sights": [

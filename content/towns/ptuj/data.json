@@ -1939,22 +1939,6 @@
     "route": "Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja",
     "m": 66
    }
-  },
-  {
-   "id": "5ff49f08-43ee-40ee-bf5b-2ef6937a73cc",
-   "name": "Apartma Mario",
-   "kind": "Apartment",
-   "pin": "accommodation",
-   "lon": 15.8715942,
-   "lat": 46.4222898,
-   "site": {
-    "url": "https://mario.si/",
-    "label": "mario.si"
-   },
-   "near": {
-    "route": "Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja",
-    "m": 81
-   }
   }
  ],
  "food": [
