@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.6 · **Effective date:** 17 November 2026 · Replaces version 2.5 of 16 November 2026
+**Version:** 2.7 · **Effective date:** 17 November 2026 · Replaces version 2.6 of 17 November 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -164,19 +164,19 @@ You can connect your Zyflow account to other cycling services. Connecting is alw
 
 | Service | What you can do | What we receive and store |
 |---|---|---|
-| **Strava** (Strava, Inc., USA) | Import your rides and your saved Strava routes | Your Strava athlete ID; the rides and routes you choose to import (name, GPS track, distance, elevation, date); for up to 7 days, the route line of rides and routes shown in your list, for map previews |
+| **Strava** (Strava, Inc., USA) | Import your rides and your saved Strava routes; get stamps from your past rides (3.17) | Your Strava athlete ID; the rides and routes you choose to import (name, GPS track, distance, elevation, date); for up to 7 days, the route line of rides and routes shown in your list, for map previews; if you choose stamps from your rides, the positions and times of your past bike rides, used once to find where you stopped and not stored |
 | **Garmin Connect** (Garmin Ltd. and its affiliates) | Send routes to your Garmin device; import finished rides | Your Garmin user ID and the permissions you granted; routes you send; rides you choose to import |
 | **Wahoo** (Wahoo Fitness L.L.C., USA) | Send routes to your Wahoo bike computer; import finished rides | Your Wahoo user ID; routes you send; rides you choose to import |
 | **Hammerhead** (SRAM, LLC, USA) | Send routes to your Karoo; import finished rides | Your Hammerhead user ID; routes you send; rides you choose to import |
 | **Ride with GPS** (Ride with GPS, Inc., USA) | Import your routes and rides; send routes | Your Ride with GPS user ID; the routes and rides you choose to import; routes you send |
 
-**How it works:** when you connect a service, you sign in on that service's own page; Zyflow never sees your password there. The service gives us an access token, which we store **encrypted** and use only to do what you ask: send a route you chose, list your rides or routes so you can pick what to import, and import the items you select. When you send a route, we keep a note of where it went, so we can show "Sent to …" and remove the copy if you delete the route in Zyflow.
+**How it works:** when you connect a service, you sign in on that service's own page; Zyflow never sees your password there. The service gives us an access token, which we store **encrypted** and use only to do what you ask: send a route you chose, list your rides or routes so you can pick what to import, import the items you select, and, if you choose stamps from your rides, read your past rides to find where you stopped (3.17). When you send a route, we keep a note of where it went, so we can show "Sent to …" and remove the copy if you delete the route in Zyflow.
 
 **Map previews (Strava):** to show a small map behind each ride and route in your Strava list, we keep its simplified route line for up to 7 days and draw the picture on our own server (hosted by Contabo GmbH, Germany, EU) using MapTiler map tiles. MapTiler only sees which map area our server asks for, not who it is for. The lines and pictures are visible only to you. We delete them after 7 days, when you import the ride or route, or immediately when you disconnect Strava.
 
 **Visibility:** data from connected services is shown **only to you**. It is never published to the community, and routes imported from Strava cannot be shared. We never sell this data or use it to train artificial intelligence models.
 
-**Disconnecting:** when you disconnect a service, or delete your Zyflow account, we revoke our access at that service and delete the stored token and user ID. When you disconnect **Strava**, we also delete the rides and routes you imported from Strava. Routes imported from other services stay in your saved routes until you delete them. Copies of routes we sent to a device service remain in your account there; delete them in that service's app if you no longer want them.
+**Disconnecting:** when you disconnect a service, or delete your Zyflow account, we revoke our access at that service and delete the stored token and user ID. When you disconnect **Strava**, we also delete the rides and routes you imported from Strava. Stamps from your rides stay in your stamp book when you disconnect Strava (they contain no ride, ride ID or GPS track), and so does the record of how far your rides were read; both are deleted when you delete your account (3.17). Routes imported from other services stay in your saved routes until you delete them. Copies of routes we sent to a device service remain in your account there; delete them in that service's app if you no longer want them.
 
 **Legal basis:** performance of a contract at your request (Art. 6(1)(b) GDPR). Each service is an independent controller for the data it holds about you; its own privacy policy applies.
 
@@ -204,7 +204,7 @@ The first two groups are part of the service you use. News & offers are sent onl
 
 ### 3.17 Stamp book
 
-**What it is:** when you are at a place (within about 150 metres), you can collect a stamp for it in the app. A stamp is collected only when you stamp it yourself; nothing is stamped automatically.
+**What it is:** when you are at a place (within about 150 metres), you can collect a stamp for it in the app. You collect stamps yourself, on the spot. The only other way to get a stamp is from your past rides, and only if you connect Strava and choose it (see "Stamps from your rides" below).
 
 **Data:** when you collect a stamp, the app sends your current position, its GPS accuracy and the time of the reading to our server. The server checks that you are at the place, that the reading is recent and that you could have travelled there since your previous stamp. Your position is used only for this check and is **not stored**. We store the stamp: the place, its level (bronze or silver), the date and time of each counted visit (at most one per place per day), how far from the place you were, the GPS accuracy and your user ID. If you answer questions about the place for a silver stamp, your answers are stored as place reports (3.5).
 
@@ -212,13 +212,17 @@ The first two groups are part of the service you use. News & offers are sent onl
 
 **Without signal:** if you have no signal, the stamp, the GPS reading taken at the place and any answers wait on your phone and are sent when you are back online; the server then makes the same checks. Once sent, they are removed from your phone.
 
-**Visibility:** your stamp book is **private** and visible only to you. Other users see only counts without names, for example how many riders have a stamp at a place or have finished a collection.
+**Stamps from your rides (Strava, optional):** if you connect Strava and choose to get stamps from your past rides, we read the list of your activities on Strava and, for each bike ride with GPS, its positions and their times. From these we find the places where you stopped: you stayed within 60 metres for at least 2 minutes, not counting stops near the start or end of the ride. A stop gives a stamp only if a place in Zyflow that has a stamp is within 60 metres of it; for accommodation, the stop must have lasted at least 30 minutes. The positions and times are used once, only for this, and are **not stored**: we keep no ride, ride ID, GPS track or position of the stop. For each place found we store a bronze stamp marked "from a ride": the place, the date and time of the earliest and latest stop we found there, how far the stop was from the place, and your user ID. We also store how far reading your rides has got (number of rides, rides read, stamps added and the date of the oldest ride read), so that we can carry on later. The newest rides are read while you watch; older rides are read in the background, a few at a time about every 15 minutes, because Strava limits how many requests we may make. We read only the rides that were on Strava when you connected it for stamps; later rides are not read. Stamps from your rides are not counted in the numbers other riders see. When you later collect the same stamp on the spot, it becomes an ordinary stamp.
+
+**Before you have an account:** you can do this in the app's first steps, before you sign up. The app then makes a random code (a guest pass) that stays only on your phone; our server stores only a fingerprint of it (a hash). Your Strava connection (encrypted token and athlete ID), the stamps found and the reading progress are kept under this code, not under a name or an account. When you sign in or sign up, they move to your account. If your account already has a different Strava account connected, your account keeps its own connection, and the one made in the first steps is revoked and deleted. If you do not sign in within 14 days, we delete them and revoke our access at Strava. After the move, we keep the code's fingerprint, its reading counts and the link to your account for 30 days, then delete them.
+
+**Visibility:** your stamp book is **private** and visible only to you. Other users see only counts without names, for example how many riders have a stamp at a place or have finished a collection. Stamps from your rides are not included in these counts.
 
 **Purpose:** to let you collect stamps for the places you visit by bike, and to keep stamps fair.
 
-**Legal basis:** performance of a contract (Art. 6(1)(b) GDPR); collecting stamps is a feature you choose to use.
+**Legal basis:** performance of a contract (Art. 6(1)(b) GDPR); collecting stamps and getting stamps from your rides are features you choose to use. Before you have an account, we act on the same basis, at your request, to prepare your account.
 
-Please note that your stamps are a record of the places you have visited and when.
+Please note that your stamps are a record of the places you have visited and when, including places where you stopped on rides recorded with Strava.
 
 ### 3.18 Support and privacy requests
 
@@ -270,7 +274,7 @@ We use the following service providers. Processors act only on our instructions 
 | Public OSRM demo server (project-osrm.org, based on OpenStreetMap) – fallback only | Route calculation if our own routing server is unavailable | IP address, route coordinates | Operated by a third party, not by us; see section 6 |
 | DeepL SE | Translation of traffic-alert texts | No personal data | Germany (EU) |
 | Stay22 (independent controller after you tap a link) | Accommodation affiliate links | Coordinates and name of the place; IP address once you open the link | See section 6 |
-| Strava, Inc. (independent controller) | Importing your rides and routes, only if you connect Strava | Strava athlete ID, access token; imported rides and routes | USA; see section 6 |
+| Strava, Inc. (independent controller) | Importing your rides and routes, and stamps from your rides, only if you connect Strava | Strava athlete ID, access token; imported rides and routes; positions and times of past rides for stamps (not stored) | USA; see section 6 |
 | Garmin Ltd. and affiliates (independent controller) | Sending routes, importing rides, only if you connect Garmin | Garmin user ID, access token; routes you send | Switzerland / USA; see section 6 |
 | Wahoo Fitness L.L.C. (independent controller) | Sending routes, importing rides, only if you connect Wahoo | Wahoo user ID, access token; routes you send | USA; see section 6 |
 | SRAM, LLC (Hammerhead) (independent controller) | Sending routes to Karoo, importing rides, only if you connect Hammerhead | Hammerhead user ID, access token; routes you send | USA; see section 6 |
@@ -303,6 +307,9 @@ If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the ro
 | Bike passport and bike photos | Until you delete your account; a bike photo is deleted from file storage when you remove it or delete your account (see section 9) |
 | Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
 | Stamps and stamp visits (place, level, date and time, distance and GPS accuracy) | Until you delete your account |
+| Stamps from your rides (place, level, date and time of the stop, distance) | Until you delete your account; they stay when you disconnect Strava |
+| Progress of reading your rides for stamps (counts and a date; no rides or places) | Until you delete your account |
+| Guest pass from the app's first steps (fingerprint of the code, Strava connection, stamps found, reading progress) | Until you sign in, when the connection and stamps move to your account; if you do not sign in, deleted after 14 days and our Strava access revoked. After the move, the fingerprint, reading counts and link to your account are kept for 30 days |
 | Brevo contact (email, name, user ID) | While your account exists; deleted automatically when you delete your account (see section 9) |
 | Your marketing email choice (on or off, when and where in the app) | While your account exists, also after you turn marketing emails off, so that we can show what you agreed to; deleted when you delete your account |
 | Push token (with user ID and operating system build number) | Until you delete your account, or until Apple or Google tell us the token no longer works (for example after you uninstall the app) |
@@ -342,7 +349,7 @@ To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from
 - **On the web:** [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account).
 - **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, stamps, bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, photos and map images of shared routes, and map previews of Strava rides), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
+When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, stamps (including stamps from your rides and the progress of reading your rides), bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, photos and map images of shared routes, and map previews of Strava rides), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
 ## 10. Complaints
 

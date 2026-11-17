@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.6 · **Datum začetka veljavnosti:** 17. 11. 2026 · Nadomešča različico 2.5 z dne 16. 11. 2026
+**Različica:** 2.7 · **Datum začetka veljavnosti:** 17. 11. 2026 · Nadomešča različico 2.6 z dne 17. 11. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -164,19 +164,19 @@ Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava j
 
 | Storitev | Kaj lahko storite | Kaj prejmemo in hranimo |
 |---|---|---|
-| **Strava** (Strava, Inc., ZDA) | Uvozite svoje vožnje in shranjene poti iz Strave | Vaš ID športnika pri Stravi; vožnje in poti, ki jih izberete za uvoz (ime, sled GPS, razdalja, višinska razlika, datum); največ 7 dni črta poti voženj in poti na vašem seznamu, za predoglede zemljevida |
+| **Strava** (Strava, Inc., ZDA) | Uvozite svoje vožnje in shranjene poti iz Strave; dobite žige iz svojih preteklih voženj (točka 3.17) | Vaš ID športnika pri Stravi; vožnje in poti, ki jih izberete za uvoz (ime, sled GPS, razdalja, višinska razlika, datum); največ 7 dni črta poti voženj in poti na vašem seznamu, za predoglede zemljevida; če izberete žige iz voženj, položaji in časi vaših preteklih kolesarskih voženj, ki jih enkrat uporabimo, da najdemo, kje ste se ustavili, in jih ne shranimo |
 | **Garmin Connect** (Garmin Ltd. in povezane družbe) | Pošljete poti v napravo Garmin; uvozite opravljene vožnje | Vaš uporabniški ID pri Garminu in dovoljenja, ki ste jih podelili; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
 | **Wahoo** (Wahoo Fitness L.L.C., ZDA) | Pošljete poti v kolesarski računalnik Wahoo; uvozite opravljene vožnje | Vaš uporabniški ID pri Wahoo; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
 | **Hammerhead** (SRAM, LLC, ZDA) | Pošljete poti v Karoo; uvozite opravljene vožnje | Vaš uporabniški ID pri Hammerheadu; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
 | **Ride with GPS** (Ride with GPS, Inc., ZDA) | Uvozite svoje poti in vožnje; pošljete poti | Vaš uporabniški ID pri Ride with GPS; poti in vožnje, ki jih izberete za uvoz; poti, ki jih pošljete |
 
-**Kako deluje:** ko povežete storitev, se prijavite na strani te storitve; vašega gesla za to storitev Zyflow nikoli ne vidi. Storitev nam izda žeton za dostop, ki ga hranimo **šifriranega** in ga uporabljamo le za to, kar zahtevate: da pošljemo pot, ki ste jo izbrali, prikažemo seznam vaših voženj ali poti, da izberete, kaj uvoziti, in uvozimo izbrane elemente. Ko pošljete pot, si zapomnimo, kam je bila poslana, da lahko prikažemo »Poslano v …« in odstranimo kopijo, če pot v Zyflowu izbrišete.
+**Kako deluje:** ko povežete storitev, se prijavite na strani te storitve; vašega gesla za to storitev Zyflow nikoli ne vidi. Storitev nam izda žeton za dostop, ki ga hranimo **šifriranega** in ga uporabljamo le za to, kar zahtevate: da pošljemo pot, ki ste jo izbrali, prikažemo seznam vaših voženj ali poti, da izberete, kaj uvoziti, uvozimo izbrane elemente in, če izberete žige iz voženj, preberemo vaše pretekle vožnje, da najdemo, kje ste se ustavili (točka 3.17). Ko pošljete pot, si zapomnimo, kam je bila poslana, da lahko prikažemo »Poslano v …« in odstranimo kopijo, če pot v Zyflowu izbrišete.
 
 **Predogledi zemljevida (Strava):** da lahko za vsako vožnjo in pot na vašem seznamu iz Strave prikažemo majhen zemljevid, njeno poenostavljeno črto poti hranimo največ 7 dni, sliko pa izrišemo na lastnem strežniku (gostuje pri Contabo GmbH v Nemčiji, EU) z zemljevidnimi ploščicami MapTiler. MapTiler vidi le, katero območje zemljevida zahteva naš strežnik, ne pa, za koga. Črte in slike so vidne samo vam. Izbrišemo jih po 7 dneh, ko vožnjo ali pot uvozite, ali takoj, ko odklopite Stravo.
 
 **Vidnost:** podatki iz povezanih storitev so vidni **samo vam**. Nikoli jih ne objavimo v skupnosti, poti, uvoženih iz Strave, pa ni mogoče deliti. Teh podatkov nikoli ne prodajamo in jih ne uporabljamo za učenje modelov umetne inteligence.
 
-**Odklop:** ko storitev odklopite ali izbrišete račun Zyflow, prekličemo dostop pri tej storitvi ter izbrišemo shranjeni žeton in uporabniški ID. Ko odklopite **Stravo**, izbrišemo tudi vožnje in poti, ki ste jih uvozili iz Strave. Poti, uvožene iz drugih storitev, ostanejo med vašimi shranjenimi potmi, dokler jih ne izbrišete. Kopije poti, ki smo jih poslali v storitev naprave, ostanejo v vašem računu pri tej storitvi; če jih ne želite več, jih izbrišite v aplikaciji te storitve.
+**Odklop:** ko storitev odklopite ali izbrišete račun Zyflow, prekličemo dostop pri tej storitvi ter izbrišemo shranjeni žeton in uporabniški ID. Ko odklopite **Stravo**, izbrišemo tudi vožnje in poti, ki ste jih uvozili iz Strave. Žigi iz vaših voženj ob odklopu Strave ostanejo v knjižici žigov (ne vsebujejo vožnje, njenega ID-ja ali sledi GPS), prav tako zapis o tem, kako daleč smo prebrali vaše vožnje; oboje se izbriše, ko izbrišete račun (točka 3.17). Poti, uvožene iz drugih storitev, ostanejo med vašimi shranjenimi potmi, dokler jih ne izbrišete. Kopije poti, ki smo jih poslali v storitev naprave, ostanejo v vašem računu pri tej storitvi; če jih ne želite več, jih izbrišite v aplikaciji te storitve.
 
 **Pravna podlaga:** izvajanje pogodbe na vašo zahtevo (točka (b) prvega odstavka 6. člena Splošne uredbe). Vsaka storitev je samostojni upravljavec podatkov, ki jih hrani o vas; zanjo velja njena politika zasebnosti.
 
@@ -204,7 +204,7 @@ Prvi dve skupini sta del storitve, ki jo uporabljate. Novice in ponudbe pošilja
 
 ### 3.17 Knjižica žigov (Moji žigi)
 
-**Kaj je:** ko ste pri kraju (do približno 150 metrov), lahko zanj v aplikaciji zberete žig. Žig se zabeleži le, ko ga odtisnete sami; samodejno se ne zabeleži nič.
+**Kaj je:** ko ste pri kraju (do približno 150 metrov), lahko zanj v aplikaciji zberete žig. Žige zbirate sami, na kraju samem. Žig lahko dobite le še iz svojih preteklih voženj, in to le, če povežete Stravo in to izberete (glej »Žigi iz vaših voženj« spodaj).
 
 **Podatki:** ko zberete žig, aplikacija našemu strežniku pošlje vaš trenutni položaj, njegovo natančnost GPS in čas meritve. Strežnik preveri, ali ste pri kraju, ali je meritev sveža in ali ste lahko od prejšnjega žiga prišli tja. Vaš položaj uporabimo le za to preverjanje in ga **ne shranimo**. Shranimo žig: kraj, njegovo stopnjo (bronasti ali srebrni), datum in čas vsakega upoštevanega obiska (največ enega na kraj na dan), oddaljenost od kraja, natančnost GPS in vaš identifikator uporabnika. Če za srebrni žig odgovorite na vprašanja o kraju, se vaši odgovori shranijo kot prijave o krajih (točka 3.5).
 
@@ -212,13 +212,17 @@ Prvi dve skupini sta del storitve, ki jo uporabljate. Novice in ponudbe pošilja
 
 **Brez signala:** če nimate signala, žig, meritev GPS ob kraju in morebitni odgovori počakajo v telefonu in se pošljejo, ko ste spet povezani; strežnik takrat opravi enaka preverjanja. Ko so poslani, se iz telefona izbrišejo.
 
-**Vidnost:** vaša knjižica žigov je **zasebna** in vidna le vam. Drugi uporabniki vidijo le števila brez imen, na primer koliko kolesarjev ima žig nekega kraja ali je dokončalo zbirko.
+**Žigi iz vaših voženj (Strava, neobvezno):** če povežete Stravo in izberete žige iz svojih preteklih voženj, preberemo seznam vaših dejavnosti na Stravi in za vsako kolesarsko vožnjo z GPS njene položaje in njihove čase. Iz njih poiščemo kraje, kjer ste se ustavili: vsaj 2 minuti ste ostali znotraj 60 metrov, pri čemer postankov blizu začetka ali konca vožnje ne upoštevamo. Postanek prinese žig le, če je do 60 metrov od njega kraj v Zyflowu, ki ima žig; pri nastanitvah mora postanek trajati vsaj 30 minut. Položaje in čase uporabimo enkrat, le za to, in jih **ne shranimo**: ne hranimo vožnje, njenega ID-ja, sledi GPS ali položaja postanka. Za vsak najden kraj shranimo bronasti žig z oznako »iz vožnje«: kraj, datum in čas najzgodnejšega in najpoznejšega postanka, ki smo ga tam našli, oddaljenost postanka od kraja in vaš identifikator uporabnika. Shranimo tudi, kako daleč smo prebrali vaše vožnje (število voženj, prebrane vožnje, dodani žigi in datum najstarejše prebrane vožnje), da lahko pozneje nadaljujemo. Najnovejše vožnje preberemo, medtem ko gledate; starejše beremo v ozadju, po nekaj na približno vsakih 15 minut, ker Strava omejuje, koliko zahtev smemo poslati. Preberemo le vožnje, ki so bile na Stravi, ko ste jo povezali za žige; poznejših voženj ne beremo. Žigi iz voženj se ne štejejo v števila, ki jih vidijo drugi kolesarji. Ko isti žig pozneje zberete na kraju samem, postane običajen žig.
+
+**Preden imate račun:** to lahko storite že v prvih korakih aplikacije, preden se registrirate. Aplikacija takrat ustvari naključno kodo (gostujočo prepustnico), ki ostane le v vašem telefonu; naš strežnik shrani le njen prstni odtis (zgoščeno vrednost). Povezava s Stravo (šifrirani žeton in ID športnika), najdeni žigi in napredek branja so shranjeni pod to kodo, ne pod imenom ali računom. Ko se prijavite ali registrirate, se prenesejo v vaš račun. Če ima vaš račun že povezan drug račun Strava, vaš račun obdrži svojo povezavo, povezavo iz prvih korakov pa prekličemo in izbrišemo. Če se v 14 dneh ne prijavite, jih izbrišemo in prekličemo naš dostop pri Stravi. Po prenosu prstni odtis kode, števila branja in povezavo z vašim računom hranimo še 30 dni, nato jih izbrišemo.
+
+**Vidnost:** vaša knjižica žigov je **zasebna** in vidna le vam. Drugi uporabniki vidijo le števila brez imen, na primer koliko kolesarjev ima žig nekega kraja ali je dokončalo zbirko. Žigi iz vaših voženj se v ta števila ne štejejo.
 
 **Namen:** da lahko zbirate žige krajev, ki jih obiščete s kolesom, in da je zbiranje žigov pošteno.
 
-**Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe); zbiranje žigov je funkcija, ki jo uporabljate po lastni izbiri.
+**Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe); zbiranje žigov in žigi iz voženj sta funkciji, ki ju uporabljate po lastni izbiri. Preden imate račun, na enaki podlagi na vašo zahtevo pripravimo vaš račun.
 
-Upoštevajte, da so vaši žigi zapis krajev, ki ste jih obiskali, in časa obiska.
+Upoštevajte, da so vaši žigi zapis krajev, ki ste jih obiskali, in časa obiska, tudi krajev, kjer ste se ustavili med vožnjami, posnetimi s Stravo.
 
 ### 3.18 Podpora in zahteve v zvezi z varstvom podatkov
 
@@ -270,7 +274,7 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 | Javni predstavitveni strežnik OSRM (project-osrm.org, zasnovan na podatkih OpenStreetMap) – samo nadomestna možnost | Izračun poti, če naš lastni strežnik ni dosegljiv | Naslov IP, koordinate poti | Upravlja ga tretja oseba, ne mi; glej točko 6 |
 | DeepL SE | Prevajanje besedil prometnih obvestil | Brez osebnih podatkov | Nemčija (EU) |
 | Stay22 (samostojni upravljavec, ko se dotaknete povezave) | Provizijske povezave za nastanitve | Koordinate in ime kraja; naslov IP, ko odprete povezavo | Glej točko 6 |
-| Strava, Inc. (samostojni upravljavec) | Uvoz voženj in poti, le če povežete Stravo | ID športnika pri Stravi, žeton za dostop; uvožene vožnje in poti | ZDA; glejte 6. razdelek |
+| Strava, Inc. (samostojni upravljavec) | Uvoz voženj in poti ter žigi iz voženj, le če povežete Stravo | ID športnika pri Stravi, žeton za dostop; uvožene vožnje in poti; položaji in časi preteklih voženj za žige (ne shranimo jih) | ZDA; glejte 6. razdelek |
 | Garmin Ltd. in povezane družbe (samostojni upravljavec) | Pošiljanje poti, uvoz voženj, le če povežete Garmin | Uporabniški ID pri Garminu, žeton za dostop; poslane poti | Švica / ZDA; glejte 6. razdelek |
 | Wahoo Fitness L.L.C. (samostojni upravljavec) | Pošiljanje poti, uvoz voženj, le če povežete Wahoo | Uporabniški ID pri Wahoo, žeton za dostop; poslane poti | ZDA; glejte 6. razdelek |
 | SRAM, LLC (Hammerhead) (samostojni upravljavec) | Pošiljanje poti v Karoo, uvoz voženj, le če povežete Hammerhead | Uporabniški ID pri Hammerheadu, žeton za dostop; poslane poti | ZDA; glejte 6. razdelek |
@@ -303,6 +307,9 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Kolesarski potni list in fotografije kolesa | Do izbrisa računa; fotografijo kolesa izbrišemo iz hrambe datotek, ko jo odstranite ali izbrišete račun (glej točko 9) |
 | Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
 | Žigi in obiski za žige (kraj, stopnja, datum in čas, oddaljenost in natančnost GPS) | Do izbrisa računa |
+| Žigi iz vaših voženj (kraj, stopnja, datum in čas postanka, oddaljenost) | Do izbrisa računa; ob odklopu Strave ostanejo |
+| Napredek branja vaših voženj za žige (števila in datum; brez voženj in krajev) | Do izbrisa računa |
+| Gostujoča prepustnica iz prvih korakov aplikacije (prstni odtis kode, povezava s Stravo, najdeni žigi, napredek branja) | Dokler se ne prijavite, ko se povezava in žigi prenesejo v vaš račun; če se ne prijavite, jo po 14 dneh izbrišemo in prekličemo dostop pri Stravi. Po prenosu prstni odtis, števila branja in povezavo z vašim računom hranimo še 30 dni |
 | Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; ob izbrisu računa se samodejno izbriše (glej točko 9) |
 | Vaša izbira glede trženjske e-pošte (vklopljeno ali izklopljeno, kdaj in kje v aplikaciji) | Dokler račun obstaja, tudi potem, ko trženjsko e-pošto izklopite, da lahko izkažemo, v kaj ste privolili; izbriše se ob izbrisu računa |
 | Žeton za potisna obvestila (z identifikatorjem uporabnika in številko različice operacijskega sistema) | Dokler ne izbrišete računa ali dokler nam Apple ali Google ne sporočita, da žeton ne deluje več (na primer ko odstranite aplikacijo) |
@@ -342,7 +349,7 @@ Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) 
 - **Na spletu:** [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna).
 - **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, žigi, kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa, fotografije in slike zemljevidov deljenih poti ter predoglede zemljevida voženj iz Strave), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
+Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, žigi (tudi žigi iz voženj in napredek branja vaših voženj), kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa, fotografije in slike zemljevidov deljenih poti ter predoglede zemljevida voženj iz Strave), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
 ## 10. Pritožbe
 
