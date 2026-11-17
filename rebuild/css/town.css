@@ -805,3 +805,73 @@
 .page-towns .tour-card__name a {
   color: inherit;
 }
+
+/* —— Photo hero (the home page's hero, filled with the town; decided 2026-11-17) —— */
+/* The brand's hero scrim (black 0 → 38% → 70%) behind the words, so white type reads on any photo. */
+.town-hero .hero__frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.38) 38%, rgba(0, 0, 0, 0) 70%);
+}
+.town-hero .hero__content,
+.town-hero .hero__card {
+  z-index: 2;
+}
+.town-hero .hero__sub {
+  max-width: 44ch;
+}
+/* The numbers card sits on dark glass: white type, as on the scrim. */
+.town-hero .hero__card,
+.town-hero .hero__card-title,
+.town-hero .hero__card-date {
+  color: #fff;
+}
+.town-hero .hero__card-label {
+  color: rgba(255, 255, 255, 0.84);
+}
+.town-hero .hero__card-date {
+  opacity: 0.84;
+}
+.town-hero__credit {
+  max-width: var(--grid-col-12);
+  margin: var(--space-gap-3) auto 0;
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+.town-hero__credit a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 720px) {
+  .town-hero .hero__frame::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.38) 45%, rgba(0, 0, 0, 0) 80%);
+  }
+  .town-hero__credit {
+    padding-inline: var(--page-pad-sm);
+  }
+}
+
+/* The map inside the routes section (or its own block), under the heading and paragraph. */
+.town-map {
+  margin: var(--space-gap-6) 0 var(--space-gap-7);
+}
+.town-map .tour-hero__media {
+  height: 460px;
+  margin: 0;
+}
+.town-map .tour-hero__map {
+  height: 100%;
+}
+@media (max-width: 720px) {
+  .town-map .tour-hero__media {
+    height: 340px;
+  }
+}
+/* Between 1101 and 1280 px the hero frame runs edge to edge (home.css), so the credit needs its own inset. */
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .town-hero__credit {
+    padding-inline: var(--page-pad-sm);
+  }
+}

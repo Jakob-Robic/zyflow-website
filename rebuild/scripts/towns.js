@@ -59,6 +59,15 @@ const TEXT = {
     seeStays: "See where to stay",
     heroCountUnit: "",
     checkedLabel: "Last checked",
+    checkedShort: (date) => `Checked ${date}`,
+    heroEyebrow: (t) => `Cycling in ${t.name} · ${t.region}, ${t.country}`,
+    // The numbers card on the photo hero: two short lines.
+    heroCard: (t) =>
+      t.counts.routes
+        ? [`${plural(t.counts.routes, "route")} · ${t.counts.stays} stays`, `${t.counts.food} to eat · ${t.counts.water} water`]
+        : [`${t.counts.stays} stays · ${t.counts.food} to eat`, `${t.counts.water} water points`],
+    mapTitle: (t) => `${t.name} on the map`,
+    mapLead: "Places to stay and eat, water, repair and the sights nearby.",
     getApp: "Get the app",
     seeRoutes: "See the routes",
     facts: {
@@ -297,6 +306,10 @@ function loadTowns(dir = TOWNS_DIR) {
       const photosFile = path.join(path.dirname(file), "photos.json");
       const chosen = fs.existsSync(photosFile) ? JSON.parse(fs.readFileSync(photosFile, "utf8")) : {};
       town.photos = chosen.photos || [];
+      // The photo hero (the home page's hero) uses the town's chosen hero photo; a town
+      // without one keeps the map hero. The hero photo is not repeated further down.
+      town.heroPhoto = chosen.hero ? town.photos.find((p) => p.src === chosen.hero) || null : town.photos[0] || null;
+      town.bodyPhotos = town.photos.filter((p) => p !== town.heroPhoto);
       for (const sight of town.sights) {
         const key = Object.keys(chosen.sights || {}).find((id) => String(sight.id || "").startsWith(id));
         if (!sight.image && key) sight.image = chosen.sights[key];
@@ -706,7 +719,7 @@ function placeCard(place, t) {
  * with arrows at every width; otherwise they are a grid on desktop and a
  * swipe row on phones. Every card stays in the page either way.
  */
-function cardSection({ id, title, lead, cards, after = "", rail = false, written }) {
+function cardSection({ id, title, lead, cards, after = "", rail = false, written, before = "" }) {
   if (written) {
     title = written.title || title;
     lead = written.body || lead;
@@ -717,7 +730,7 @@ function cardSection({ id, title, lead, cards, after = "", rail = false, written
           </div>`;
   return `      <div class="town-block" id="${id}" data-section="town.${id}" data-rail>
         <h2 class="town-block__title" id="${id}-title">${esc(title)}</h2>
-        ${lead ? `<p class="town-lead${written ? " town-answer" : ""}">${esc(lead)}</p>` : ""}
+        ${lead ? `<p class="town-lead${written ? " town-answer" : ""}">${esc(lead)}</p>` : ""}${before}
         <div class="adventures__grid town-block__grid ${rail ? "town-rail" : "town-rail--phone"}" id="${id}-row" data-rail-track tabindex="0" role="group" aria-labelledby="${id}-title">
 ${cards.join("\n")}
         </div>
@@ -791,7 +804,52 @@ function mapJson(town) {
   return JSON.stringify({ town: true, routes, pins, bounds: town.bounds });
 }
 
+function mapMedia(town) {
+  return `<div class="tour-hero__media tour-hero__media--map">
+        <div class="tour-hero__map" id="tour-hero-map" data-tour-map data-slug="town-${esc(town.slug)}" role="region" aria-label="${esc(`Map of ${town.name} with signed cycle routes and stops`)}"></div>
+        <script type="application/json" data-tour-route-json>${mapJson(town).replace(/</g, "\\u003c")}</script>
+      </div>`;
+}
+
+/** The home page's hero (sections/home/hero.html, styles in home.css) filled with the town. */
+function renderPhotoHero(town, t, lang) {
+  const written = (town.text && town.text[lang]) || {};
+  const photo = town.heroPhoto;
+  const thumb = (town.bodyPhotos || [])[0];
+  const sub = [firstSentences(written.intro || t.intro(town), 1), written.lede || t.lede(town)].filter(Boolean).join(" ");
+  const [line1, line2] = t.heroCard(town);
+  const toRoutes = town.routes.length || town.featured.length;
+  return `<section class="hero section town-hero" data-section="town.hero">
+  <div class="hero__frame">
+    <div class="hero__media">
+      <img src="${esc(photo.src)}" alt="${esc(photo.caption)}" fetchpriority="high" />
+      <div class="hero__scrim"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__head">
+        <h1 class="hero__h1">${esc(t.heroEyebrow(town))}</h1>
+        <p class="hero__title">${t.title({ ...town, name: esc(town.name) })}</p>
+      </div>
+      <p class="hero__sub">${esc(sub)}</p>
+      <a class="btn btn--primary" href="${toRoutes ? "#routes" : "#map"}">${esc(toRoutes ? t.seeRoutes : t.seeStays)}</a>
+    </div>
+    <aside class="hero__card">${thumb ? `
+      <div class="hero__card-media"><img class="hero__card-thumb" src="${esc(thumb.src)}" alt="" loading="lazy" /></div>` : ""}
+      <div class="hero__card-body">
+        <div class="hero__card-label"><span class="motif" aria-hidden="true"></span><span>${esc(t.checkedShort(shortDate(town.checked, lang)))}</span></div>
+        <div>
+          <p class="hero__card-title">${esc(line1)}</p>
+          <p class="hero__card-date">${esc(line2)}</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <p class="town-hero__credit">${esc(photo.caption)} ${photoCredit(photo, t)}</p>
+</section>`;
+}
+
 function renderHero(town, t, lang) {
+  if (town.heroPhoto) return renderPhotoHero(town, t, lang);
   const written = (town.text && town.text[lang]) || {};
   return `<section class="tour-hero section" data-section="town.hero">
   <div class="container">
@@ -820,10 +878,7 @@ function renderHero(town, t, lang) {
           </div>
         </div>
       </div>
-      <div class="tour-hero__media tour-hero__media--map">
-        <div class="tour-hero__map" id="tour-hero-map" data-tour-map data-slug="town-${esc(town.slug)}" role="region" aria-label="${esc(`Map of ${town.name} with signed cycle routes and stops`)}"></div>
-        <script type="application/json" data-tour-route-json>${mapJson(town).replace(/</g, "\\u003c")}</script>
-      </div>
+      ${mapMedia(town)}
     </div>
 
     <div class="tour-meta">
@@ -857,7 +912,7 @@ function signedRouteLink(route, t, lang) {
 
 /** A town photo between sections, with its caption and credit (the route page's figure). */
 function photoFigure(town, index, t) {
-  const photo = (town.photos || [])[index];
+  const photo = (town.bodyPhotos || town.photos || [])[index];
   if (!photo) return "";
   return `      <figure class="tour-article__figure town-figure">
         <img src="${esc(photo.src)}" alt="${esc(photo.caption)}" loading="lazy" decoding="async" />
@@ -918,13 +973,24 @@ function renderBody(town, t, lang) {
         cards: [...featured, ...signed],
         rail: true,
         written: written.routes,
+        before: town.heroPhoto ? `\n        <div class="town-map">${mapMedia(town)}</div>` : "",
         after: hiddenRoutes
           ? `\n        <p class="town-more--cards"><a class="link link--arrow" href="{{appStoreUrl}}" data-app-modal-open>${esc(t.more(hiddenRoutes, "signed routes"))}</a></p>`
           : "",
       })
     : "";
 
+  // A photo-hero town with no route section still needs its map: a block of its own.
+  const mapBlock =
+    town.heroPhoto && !routes
+      ? `      <div class="town-block" id="map" data-section="town.map">
+        <h2 class="town-block__title">${esc(t.mapTitle(town))}</h2>
+        <p class="town-lead">${esc(t.mapLead)}</p>
+        <div class="town-map">${mapMedia(town)}</div>
+      </div>`
+      : "";
   const blocks = [
+    mapBlock,
     routes,
     photoFigure(town, 1, t),
     renderPlaces(town, t, "stays", t.staysTitle, t.staysLead(town), town.counts.stays, t.moreStays, written.stays, written),
