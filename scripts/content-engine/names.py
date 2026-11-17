@@ -20,9 +20,14 @@ CODE_LIKE = re.compile(r"^[A-Za-z]{1,4}[ -]?\d{1,3}[A-Za-z]?$")
 
 
 def hand_names():
+    """Records keyed by id; an entry may give only the start of the id (ending in '-')."""
     if not os.path.exists(NAMES_FILE):
         return {}
     return {r["record"]: r for r in json.load(open(NAMES_FILE))["routes"]}
+
+
+def find(hand, record_id):
+    return hand.get(record_id) or next((v for k, v in hand.items() if k.endswith("-") and record_id.startswith(k)), None)
 
 
 def label(row):
@@ -38,10 +43,10 @@ def name_routes(rows):
     """Name rows from the hand list, then nameless ones from their label. Rows need `id` and `member_names`."""
     hand = hand_names()
     for row in rows:
-        known = hand.get(row["id"])
+        known = find(hand, row["id"])
         if known:
             hidden = known.get("hide")
-            row["code"] = None if hidden else known.get("code") or row.get("code")
+            row["code"] = None if hidden else (known["code"] or None) if "code" in known else row.get("code")
             row["display_name"] = None if hidden else known.get("name") or row.get("display_name")
             row["website"] = row.get("website") or known.get("website")
             row["hand"] = {k: known[k] for k in ("loop", "start", "bike") if k in known}

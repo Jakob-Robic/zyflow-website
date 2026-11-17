@@ -144,7 +144,9 @@ const TEXT = {
     website: "Website",
     waterTitle: "Water points",
     water: (t) =>
-      `${t.name} has ${t.counts.water} public water points. ${t.water_near_route} of them are within 150 m of a signed cycle route.`,
+      `${t.name} has ${t.counts.water} public water points.${
+        t.counts.routes ? ` ${cap(String(t.water_near_route))} of them ${t.water_near_route === 1 ? "is" : "are"} within 150 m of a signed cycle route.` : ""
+      }`,
     repairTitle: "Bike repair",
     repair: (t) => {
       const out = [];
@@ -389,6 +391,8 @@ function townPages() {
         seo: {
           title: TEXT[lang].seoTitle(town),
           description: TEXT[lang].seoDescription(town),
+          // A 1200×630 crop of the hero photo (or the first sight photo), written by the build.
+          ...(townOgSource(town) ? { ogImage: `/assets/images/og/towns/${town.slug}.jpg` } : {}),
         },
       });
     }
@@ -408,6 +412,17 @@ function assertTownsBuildable({ townsPublic, siteIndex }) {
 }
 
 /** The day the town's data was last checked: its sitemap lastmod. */
+/** The picture a shared link shows: the hero photo, else the first sight photo. A path under rebuild/. */
+function townOgSource(town) {
+  const src = (town.heroPhoto && town.heroPhoto.src) || ((town.sights.find((x) => x.image) || {}).image || {}).src;
+  return src ? src.replace(/^\.\//, "") : null;
+}
+
+/** Share-image crops for every town page: [{ slug, file }] with file relative to rebuild/. */
+function townOgSources() {
+  return TOWNS.filter((town) => townLangs(town).length && townOgSource(town)).map((town) => ({ slug: town.slug, file: townOgSource(town) }));
+}
+
 function townSitemapDate(page) {
   return page.townSlug || page.townHub ? page.dateUpdated || "" : null;
 }
@@ -663,7 +678,7 @@ function infoCard({ pin, color, name, facts = [], desc, value = "", unit = "", l
               ${meta ? `<div class="tour-card__meta town-place__meta">${meta}</div>` : ""}
             </div>
           </div>
-          <p class="tour-card__desc town-place__desc">${esc(desc || "")}</p>
+          ${desc ? `<p class="tour-card__desc town-place__desc">${esc(desc)}</p>` : ""}
           ${value || cta ? `<div class="tour-card__foot"><p class="tour-card__price">${esc(value)}<span>${esc(unit)}</span></p>${cta}</div>` : ""}
         </div>
       </article>`;
@@ -1037,9 +1052,10 @@ function renderPractical(town, t, written) {
     title: t.practicalTitle,
     written,
     cards: [
-      infoCard({ pin: "water_point", name: t.waterTitle, desc: t.water(town), value: String(town.counts.water), unit: t.mapped(town) }),
-      infoCard({ pin: "bicycle_repair", name: t.repairTitle, desc: t.repair(town), value: String(town.counts.repair), unit: t.mapped(town) }),
-      infoCard({ pin: "charging_station", name: t.chargeTitle, desc: t.charge(town), value: String(town.counts.chargers), unit: t.mapped(town) }),
+      // With a written paragraph above, the cards keep only their figure: the sentence would repeat it.
+      infoCard({ pin: "water_point", name: t.waterTitle, desc: written ? "" : t.water(town), value: String(town.counts.water), unit: t.mapped(town) }),
+      infoCard({ pin: "bicycle_repair", name: t.repairTitle, desc: written ? "" : t.repair(town), value: String(town.counts.repair), unit: t.mapped(town) }),
+      infoCard({ pin: "charging_station", name: t.chargeTitle, desc: written ? "" : t.charge(town), value: String(town.counts.chargers), unit: t.mapped(town) }),
     ],
   });
 }
@@ -1174,6 +1190,7 @@ function injectTown(html, page) {
 }
 
 module.exports = {
+  townOgSources,
   // Shared with signed-routes.js, which builds route pages from the same parts.
   parts: { esc, cap, listAnd, numberWord, longDate, shortDate, infoCard, cardSection, sightCard, photoCredit, iconFor, TEXT, TOWN_LANGS },
   showDrafts: () => SHOW_DRAFTS,

@@ -58,6 +58,7 @@ const {
   townSitemapDate,
   townStructuredNodes,
   townLlmsLines,
+  townOgSources,
 } = require("./towns");
 const {
   injectSignedRoute,
@@ -1908,6 +1909,18 @@ async function writeBlogOgImages() {
   }
 }
 
+async function writeTownOgImages() {
+  if (!TOWNS_ARE_PUBLIC) return;
+  const sharp = require("sharp");
+  for (const source of townOgSources()) {
+    const file = path.join(ROOT, source.file);
+    if (!fs.existsSync(file)) throw new Error(`Missing image for town OG crop ${source.slug}: ${source.file}`);
+    const dest = path.join(DIST, "assets/images/og/towns", `${source.slug}.jpg`);
+    ensureDir(path.dirname(dest));
+    await sharp(file).resize(TOUR_OG_WIDTH, TOUR_OG_HEIGHT, { fit: "cover", position: "centre" }).jpeg({ quality: 82 }).toFile(dest);
+  }
+}
+
 async function build() {
   const messagesByLocale = {};
   for (const locale of LOCALES) {
@@ -1965,6 +1978,7 @@ async function build() {
   // One stylesheet instead of the @import chain (render-blocking).
   bundleCss(DIST);
   await writeBlogOgImages();
+  await writeTownOgImages();
   // AVIF/WebP srcsets + simplified contour SVGs. Runs before versioning so
   // the JS/CSS ?v= pass still sees the final HTML.
   await optimizeImages(DIST);

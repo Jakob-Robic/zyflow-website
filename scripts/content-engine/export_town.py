@@ -66,6 +66,7 @@ PICKS = 6
 SAME_KIND_MAX = 2  # stays: no more than two picks of one kind
 WATER_NEAR_ROUTE_M = 150
 ROUTE_MIN_KM = 1.0
+ROUTE_MIN_LENGTH_KM = 5.0
 LEVEL_ORDER = {"international": 0, "national": 1, "regional": 2, "local": 3}
 NEAR_TIE_M = 15  # routes this close to each other count as the same road for "nearest route"
 MAP_CLIP_DEG = 0.025  # route lines are drawn within this distance of the town's border (about 2 km)
@@ -274,6 +275,10 @@ def export(area_code, today=None):
     name_routes(routes)
     unnamed = [r for r in routes if not (r["code"] or r["display_name"])]
     routes = [r for r in routes if r["code"] or r["display_name"]]
+    # Pieces under 5 km in total (node-network links such as "6-35", stubs of trails) are not
+    # routes a rider follows; leave them off the page and out of the count (2026-11-17).
+    short = [r for r in routes if float(r["length_km"]) < ROUTE_MIN_LENGTH_KM]
+    routes = [r for r in routes if float(r["length_km"]) >= ROUTE_MIN_LENGTH_KM]
     # Known long routes first (international, national, regional), then local ones; within a
     # level, the route with more kilometres in town. A page shows the first eight (Jakob, 2026-11-16).
     routes.sort(key=lambda r: (LEVEL_ORDER.get(r["network_level"], 3), -float(r["km_inside"]), r["id"]))

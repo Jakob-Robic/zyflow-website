@@ -482,7 +482,7 @@
   ]
  },
  "counts": {
-  "routes": 11,
+  "routes": 10,
   "stays": 8,
   "food": 8,
   "water": 21,
@@ -4240,108 +4240,8 @@
    }
   },
   {
-   "id": "57434cd8-3843-4e2c-8f3f-ecaff16257d0",
-   "color": "#2563EB",
-   "code": null,
-   "name": "Kolesarska pot Medvode–Pirniče–Vikrče",
-   "level": "Regional route",
-   "kind": "road",
-   "length_km": 3,
-   "km_inside": 3,
-   "website": null,
-   "line": {
-    "type": "MultiLineString",
-    "coordinates": [
-     [
-      [
-       14.41372,
-       46.1399
-      ],
-      [
-       14.41485,
-       46.14004
-      ]
-     ],
-     [
-      [
-       14.43628,
-       46.13172
-      ],
-      [
-       14.43566,
-       46.13033
-      ],
-      [
-       14.43224,
-       46.13169
-      ],
-      [
-       14.43128,
-       46.13253
-      ],
-      [
-       14.43138,
-       46.13316
-      ],
-      [
-       14.4299,
-       46.13387
-      ],
-      [
-       14.42835,
-       46.1343
-      ],
-      [
-       14.4257,
-       46.13451
-      ],
-      [
-       14.42096,
-       46.13543
-      ],
-      [
-       14.42084,
-       46.13559
-      ],
-      [
-       14.42277,
-       46.14015
-      ],
-      [
-       14.41802,
-       46.14109
-      ],
-      [
-       14.418,
-       46.14133
-      ],
-      [
-       14.41715,
-       46.14124
-      ],
-      [
-       14.41693,
-       46.1395
-      ],
-      [
-       14.41642,
-       46.13961
-      ],
-      [
-       14.41614,
-       46.14031
-      ],
-      [
-       14.41489,
-       46.14005
-      ]
-     ]
-    ]
-   }
-  },
-  {
    "id": "d381e21b-e44e-4246-b55d-253740375709",
-   "color": "#E8590C",
+   "color": "#2563EB",
    "code": "LG10",
    "name": "Križ–Medvode",
    "level": "Local route",
@@ -4755,7 +4655,7 @@
   },
   {
    "id": "7048e21b-2ca7-492b-a207-708b7c36bedf",
-   "color": "#7C3AED",
+   "color": "#E8590C",
    "code": "LG9",
    "name": "Polhov Gradec–Medvode",
    "level": "Local route",
@@ -5266,8 +5166,8 @@
     "label": "gostilnamihovec.si"
    },
    "near": {
-    "route": "Kolesarska pot Medvode–Pirniče–Vikrče",
-    "m": 444
+    "route": "D2",
+    "m": 1013
    },
    "hours": null,
    "extras": []

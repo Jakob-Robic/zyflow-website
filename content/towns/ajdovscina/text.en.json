@@ -2,14 +2,14 @@
   "status": "draft",
   "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Ajdovščina's data and each place's own website. Needs a read by someone who knows Ajdovščina before publishing.",
   "lede": "Know where to ride, stay, eat and refill in Ajdovščina.",
-  "intro": "Ajdovščina sits in the upper Vipava valley, on the site of a Roman fort. Two signed routes run through it: the regional route R3 (Ajdovščina–Čepovan–Most na Soči) and Vipava (Učna pot ob reki Vipavi), a local route along the river. The municipality climbs from vineyard villages such as Brje, Budanje and Črniče up to Col, Otlica and Hrušica on the plateau.",
+  "intro": "Ajdovščina sits in the upper Vipava valley, on the site of a Roman fort. One signed route runs through it: Vipava (Učna pot ob reki Vipavi), a local route along the river. The municipality climbs from vineyard villages such as Brje, Budanje and Črniče up to Col, Otlica and Hrušica on the plateau.",
   "routes": {
-    "title": "Cycle routes through Ajdovščina",
-    "body": "Two signed routes pass through Ajdovščina, and the longer one follows the river. Vipava (Učna pot ob reki Vipavi) is a local route of 48 km, 14 km of it inside Ajdovščina. R3 (Ajdovščina–Čepovan–Most na Soči), a regional route, runs 3 km through Ajdovščina."
+    "title": "The cycle route through Ajdovščina",
+    "body": "One signed route passes through Ajdovščina, and it follows the river. Vipava (Učna pot ob reki Vipavi) is a local route of 48 km, 14 km of it inside Ajdovščina."
   },
   "stays": {
     "title": "Where to stay with your bike",
-    "body": "Ajdovščina has 12 places to stay, from a hotel in the centre to a farm at 1,000 metres. Hotel Gold Club is 128 metres from R3, in the middle of town. Avtokamp Ajdovščina, 326 metres from R3, is a ten-minute walk from the centre in a pine wood and rents bikes and e-bikes. In Brje, Turistična kmetija Birsa has rooms and apartments 470 metres from the Vipava route. Up on the plateau, Penzion Sinji vrh looks out over the Vipava valley and has e-bikes, 3.4 km from R3."
+    "body": "Ajdovščina has 12 places to stay, from a hotel in the centre to a farm at 1,000 metres. In Brje, Turistična kmetija Birsa has rooms and apartments 470 metres from the Vipava route. Hotel Gold Club is in the middle of town, 2.4 km from the same route. Avtokamp Ajdovščina, 2.8 km from the route, is a ten-minute walk from the centre in a pine wood and rents bikes and e-bikes. Up on the plateau, Penzion Sinji vrh looks out over the Vipava valley and has e-bikes, 5.1 km from the route."
   },
   "food": {
     "title": "Where to stop and eat",
@@ -17,18 +17,18 @@
   },
   "practical": {
     "title": "Water, repair and charging",
-    "body": "Only 5 of the 47 public water points are within 150 metres of a signed route, so carry a full bottle. There are three public repair stations. For a bike shop, you can choose between Kamplc sport, Kobra and Velocenter Ajdovščina. For an e-bike, Ajdovščina has 4 public chargers."
+    "body": "Only 3 of the 47 public water points are within 150 metres of a signed route, so carry a full bottle. There are three public repair stations. For a bike shop, you can choose between Kamplc sport, Kobra and Velocenter Ajdovščina. For an e-bike, Ajdovščina has 4 public chargers."
   },
   "sights": {
     "title": "What to see on the way",
-    "body": "Ajdovščina has 66 sights, and two of them are Roman. Castra, the Roman fortress the town grew from, is 261 metres from R3. Otliško okno, a natural stone window on the plateau, is 3.0 km from the same route. Trilek Castle is 4.5 km from the Vipava route. Ad Pirum, a Roman fortress built in the 320s on the Hrušica plateau, is 11.7 km from the Vipava route."
+    "body": "Ajdovščina has 66 sights, and two of them are Roman. Castra, the Roman fortress the town grew from, is 2.7 km from the Vipava route. Otliško okno, a natural stone window on the plateau, is 5.6 km from the same route. Trilek Castle is 4.5 km from it. Ad Pirum, a Roman fortress built in the 320s on the Hrušica plateau, is 11.7 km from the Vipava route."
   },
   "places": {
     "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town. Not written: ed8d91c6 Bistro LUFT (its link is a Facebook page, which did not load).",
     "87a0b917": "A hotel in the centre of Ajdovščina with a casino, a fish restaurant, and a brewery with a pizzeria.",
     "7e67b897": "A tourist farm at just over 1,000 metres in Kovk above the Vipava valley, with rooms, home cooking and e-bikes. Open all year by reservation.",
     "45556e90": "A small campsite in Malovše near Črniče, with pitches for tents, caravans and campers, a reception café and its own bakery.",
-    "1fb5e03d": "A campsite in a pine wood, a ten-minute walk from the centre of Ajdovščina, with 50 pitches, an apartment, and bikes and e-bikes to rent.",
+    "1c458403": "A campsite in a pine wood, a ten-minute walk from the centre of Ajdovščina, with 50 pitches, an apartment, and bikes and e-bikes to rent.",
     "b5853155": "A tourist farm in Brje, receiving guests since 1988, with rooms, apartments, home cooking and its own wine cellar.",
     "98ccb2f8": "A youth hostel in the Hiša mladih youth and culture centre in Ajdovščina, which also puts on concerts and workshops.",
     "eaddf6d3": "An inn with rooms and a small museum in Hrušica, at the Roman site Ad Pirum, cooking home-style dishes and game.",

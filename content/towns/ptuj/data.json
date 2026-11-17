@@ -454,7 +454,7 @@
   ]
  },
  "counts": {
-  "routes": 4,
+  "routes": 3,
   "stays": 14,
   "food": 23,
   "water": 10,
@@ -468,8 +468,8 @@
   {
    "id": "278b2d05-2c86-420f-9717-84d0ea177653",
    "color": "#2563EB",
-   "code": "drava bike",
-   "name": "Dravska kolesarska pot",
+   "code": null,
+   "name": "Drava Cycle Route",
    "level": "National route",
    "kind": "road",
    "length_km": 190,
@@ -1808,70 +1808,6 @@
      ]
     ]
    }
-  },
-  {
-   "id": "59f39a3f-cc4b-48e9-b5f2-49e0e7f45720",
-   "color": "#0F9D58",
-   "code": "LAS-3",
-   "name": "LAS-3",
-   "level": "Local route",
-   "kind": "road",
-   "length_km": 1,
-   "km_inside": 1,
-   "website": null,
-   "line": {
-    "type": "MultiLineString",
-    "coordinates": [
-     [
-      [
-       15.84757,
-       46.46551
-      ],
-      [
-       15.84973,
-       46.4665
-      ],
-      [
-       15.85108,
-       46.46675
-      ],
-      [
-       15.85242,
-       46.4652
-      ],
-      [
-       15.85645,
-       46.46377
-      ]
-     ],
-     [
-      [
-       15.89477,
-       46.43007
-      ],
-      [
-       15.89463,
-       46.42942
-      ],
-      [
-       15.89513,
-       46.42913
-      ],
-      [
-       15.89594,
-       46.42737
-      ],
-      [
-       15.89588,
-       46.4265
-      ],
-      [
-       15.89539,
-       46.42521
-      ]
-     ]
-    ]
-   }
   }
  ],
  "featured": [],
@@ -2016,7 +1952,7 @@
     "label": "pizzerija-sloncek.si"
    },
    "near": {
-    "route": "drava bike",
+    "route": "Drava Cycle Route",
     "m": 11
    },
    "hours": "Mo–Fr 09:00–22:00; Sa 10:00–22:00; Su 12:00–22:00",
@@ -2077,7 +2013,7 @@
    "lat": 46.4209848,
    "about": "Castle in Ptuj, Slovenia",
    "near": {
-    "route": "drava bike",
+    "route": "Drava Cycle Route",
     "m": 113
    },
    "wiki": "https://en.wikipedia.org/wiki/Ptuj_Castle",
@@ -2101,7 +2037,7 @@
    "lat": 46.4205768,
    "about": null,
    "near": {
-    "route": "drava bike",
+    "route": "Drava Cycle Route",
     "m": 15
    },
    "wiki": null,
@@ -2125,7 +2061,7 @@
    "lat": 46.3985883,
    "about": null,
    "near": {
-    "route": "drava bike",
+    "route": "Drava Cycle Route",
     "m": 1987
    },
    "wiki": null,
@@ -2149,7 +2085,7 @@
    "lat": 46.4176359,
    "about": "building in City Municipality of Ptuj, Slovenia",
    "near": {
-    "route": "drava bike",
+    "route": "Drava Cycle Route",
     "m": 14
    },
    "wiki": null,
@@ -2173,7 +2109,7 @@
    "lat": 46.4233876,
    "about": "archaeological site in City Municipality of Ptuj, Slovenia",
    "near": {
-    "route": "drava bike",
+    "route": "Drava Cycle Route",
     "m": 79
    },
    "wiki": null,
@@ -2189,7 +2125,7 @@
    "lat": 46.4176147,
    "about": "building in City Municipality of Ptuj, Slovenia",
    "near": {
-    "route": "drava bike",
+    "route": "Drava Cycle Route",
     "m": 524
    },
    "wiki": null,

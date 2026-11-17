@@ -2,10 +2,10 @@
   "status": "draft",
   "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Ptuj's data and each place's own website. Needs a read by someone who knows Ptuj before publishing.",
   "lede": "Know where to ride, stay, eat and refill in Ptuj.",
-  "intro": "Ptuj, often called the oldest town in Slovenia, sits on the Drava below its castle. Four signed routes run through it: the Dravska kolesarska pot along the river, the Kolesarska Jakobova pot through the centre, and the short local routes LAS-8 and LAS-3.",
+  "intro": "Ptuj, often called the oldest town in Slovenia, sits on the Drava below its castle. Three signed routes run through it: the Drava Cycle Route (Dravska kolesarska pot) along the river, the Kolesarska Jakobova pot through the centre, and the local route LAS-8.",
   "routes": {
     "title": "Cycle routes through Ptuj",
-    "body": "Four signed routes cross Ptuj, and two of them are long. The Dravska kolesarska pot follows the river for 190 km, 17 km of it in Ptuj. The Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja runs 263 km and passes through the centre. Two short local routes complete the list: LAS-8 (16 km) and LAS-3 (1 km)."
+    "body": "Three signed routes cross Ptuj, and two of them are long. The Drava Cycle Route follows the river for 190 km, 17 km of it in Ptuj. The Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja runs 263 km and passes through the centre. A local route completes the list: LAS-8, 16 km."
   },
   "stays": {
     "title": "Where to stay with your bike",
@@ -13,7 +13,7 @@
   },
   "food": {
     "title": "Where to stop and eat",
-    "body": "Ptuj has 23 places to eat, and pizza is easy to find on the routes. Pivnica Zlatorog sits right on the Jakobova pot and is open every day. Pizzeria Slonček, below the castle, is 11 metres from the Dravska kolesarska pot. For ice cream and desserts made in house, Pomaranča by the Drava is 45 metres from the Jakobova pot. Gostilna pri ovinku, on the edge of town, cooks Slovenian food and opens every day."
+    "body": "Ptuj has 23 places to eat, and pizza is easy to find on the routes. Pivnica Zlatorog sits right on the Jakobova pot and is open every day. Pizzeria Slonček, below the castle, is 11 metres from the Drava Cycle Route. For ice cream and desserts made in house, Pomaranča by the Drava is 45 metres from the Jakobova pot. Gostilna pri ovinku, on the edge of town, cooks Slovenian food and opens every day."
   },
   "practical": {
     "title": "Water, repair and charging",
@@ -21,7 +21,7 @@
   },
   "sights": {
     "title": "What to see on the way",
-    "body": "You can see most of Ptuj without leaving the Drava route. Ptuj Castle stands on its hill above the river, 113 metres from the Dravska kolesarska pot. The Dominican Monastery is 15 metres from the route and the water tower 14 metres. The Panorama archaeological site is 79 metres away, and Turnišče Castle is a detour of just under 2 km."
+    "body": "You can see most of Ptuj without leaving the Drava route. Ptuj Castle stands on its hill above the river, 113 metres from the Drava Cycle Route. The Dominican Monastery is 15 metres from the route and the water tower 14 metres. The Panorama archaeological site is 79 metres away, and Turnišče Castle is a detour of just under 2 km."
   },
   "places": {
     "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",

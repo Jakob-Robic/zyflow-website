@@ -250,6 +250,36 @@
       "source": "https://map.portoroz.si/si/tour/K11",
       "checked": "2026-11-16",
       "note": "Already named in our data in Slovenian; listed here for its English name."
+    },
+    {
+      "record": "9efa939a-",
+      "hide": true,
+      "osm_relation": 17478600,
+      "checked": "2026-11-17",
+      "note": "Maribor: only ref '8' on the map; the mapper's own note says it is unknown where it goes. Hidden until named."
+    },
+    {
+      "record": "dad18acb-",
+      "hide": true,
+      "osm_relation": 23793,
+      "checked": "2026-11-17",
+      "note": "Maribor: only ref '0:1', a mountain-bike trail with no name. Hidden until named."
+    },
+    {
+      "record": "d72bc3d9-",
+      "hide": true,
+      "osm_relation": 23792,
+      "checked": "2026-11-17",
+      "note": "Maribor: only ref 'PT', a mountain-bike trail with no name. Hidden until named."
+    },
+    {
+      "record": "278b2d05-",
+      "code": "",
+      "name": "Drava Cycle Route",
+      "osm_relation": 29249,
+      "website": "https://dravabike.si/",
+      "checked": "2026-11-17",
+      "note": "The map carries 'drava bike' as its code; the route has no code of its own (old code D-3). English name as the operator Drava Bike uses it."
     }
   ]
 }

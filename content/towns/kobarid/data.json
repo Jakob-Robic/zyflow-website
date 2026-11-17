@@ -566,7 +566,7 @@
   ]
  },
  "counts": {
-  "routes": 5,
+  "routes": 2,
   "stays": 26,
   "food": 11,
   "water": 62,
@@ -2041,310 +2041,6 @@
      ]
     ]
    }
-  },
-  {
-   "id": "0835e91a-ed3d-48d9-9feb-7dc5adca473a",
-   "color": "#7C3AED",
-   "code": null,
-   "name": "Logyeah",
-   "level": "Marked route",
-   "kind": "mtb",
-   "length_km": 2,
-   "km_inside": 2,
-   "website": null,
-   "line": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      13.42021,
-      46.21953
-     ],
-     [
-      13.41998,
-      46.21964
-     ],
-     [
-      13.42017,
-      46.21983
-     ],
-     [
-      13.4198,
-      46.21975
-     ],
-     [
-      13.42035,
-      46.22045
-     ],
-     [
-      13.41969,
-      46.22036
-     ],
-     [
-      13.42077,
-      46.22104
-     ],
-     [
-      13.4198,
-      46.22104
-     ],
-     [
-      13.42087,
-      46.22155
-     ],
-     [
-      13.42261,
-      46.22284
-     ],
-     [
-      13.41999,
-      46.2234
-     ],
-     [
-      13.42226,
-      46.22423
-     ],
-     [
-      13.42234,
-      46.22547
-     ],
-     [
-      13.42147,
-      46.22718
-     ],
-     [
-      13.42166,
-      46.2278
-     ]
-    ]
-   }
-  },
-  {
-   "id": "df89756b-5991-4e44-abc6-f4d838df4476",
-   "color": "#0F9D58",
-   "code": null,
-   "name": "Napoleon",
-   "level": "Marked route",
-   "kind": "mtb",
-   "length_km": 2,
-   "km_inside": 2,
-   "website": null,
-   "line": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      13.4238,
-      46.22013
-     ],
-     [
-      13.42364,
-      46.22041
-     ],
-     [
-      13.4242,
-      46.22094
-     ],
-     [
-      13.42407,
-      46.22115
-     ],
-     [
-      13.42434,
-      46.22171
-     ],
-     [
-      13.427,
-      46.22294
-     ],
-     [
-      13.42688,
-      46.22313
-     ],
-     [
-      13.42768,
-      46.22385
-     ],
-     [
-      13.42724,
-      46.22409
-     ],
-     [
-      13.42754,
-      46.2243
-     ],
-     [
-      13.42802,
-      46.22425
-     ],
-     [
-      13.4279,
-      46.22438
-     ],
-     [
-      13.42809,
-      46.22453
-     ],
-     [
-      13.42966,
-      46.22496
-     ],
-     [
-      13.43086,
-      46.22493
-     ],
-     [
-      13.43143,
-      46.22449
-     ],
-     [
-      13.4322,
-      46.22453
-     ],
-     [
-      13.43324,
-      46.22505
-     ],
-     [
-      13.43301,
-      46.22542
-     ],
-     [
-      13.43327,
-      46.22555
-     ],
-     [
-      13.43254,
-      46.22629
-     ],
-     [
-      13.43281,
-      46.22646
-     ],
-     [
-      13.43248,
-      46.22663
-     ],
-     [
-      13.43318,
-      46.22689
-     ],
-     [
-      13.43194,
-      46.22748
-     ]
-    ]
-   }
-  },
-  {
-   "id": "b0830eea-d20a-48d2-a32f-2d1a2f7f8ec4",
-   "color": "#D6336C",
-   "code": null,
-   "name": "fit Helga",
-   "level": "Marked route",
-   "kind": "mtb",
-   "length_km": 2,
-   "km_inside": 2,
-   "website": null,
-   "line": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      13.42021,
-      46.21953
-     ],
-     [
-      13.41878,
-      46.22007
-     ],
-     [
-      13.41951,
-      46.22046
-     ],
-     [
-      13.41982,
-      46.22086
-     ],
-     [
-      13.41948,
-      46.22097
-     ],
-     [
-      13.42034,
-      46.22145
-     ],
-     [
-      13.42139,
-      46.22247
-     ],
-     [
-      13.42099,
-      46.22299
-     ],
-     [
-      13.42008,
-      46.22309
-     ],
-     [
-      13.41982,
-      46.22358
-     ],
-     [
-      13.41902,
-      46.22379
-     ],
-     [
-      13.41974,
-      46.22384
-     ],
-     [
-      13.41936,
-      46.22399
-     ],
-     [
-      13.42016,
-      46.22413
-     ],
-     [
-      13.41987,
-      46.22433
-     ],
-     [
-      13.41989,
-      46.22476
-     ],
-     [
-      13.42045,
-      46.22493
-     ],
-     [
-      13.4207,
-      46.22478
-     ],
-     [
-      13.42055,
-      46.22525
-     ],
-     [
-      13.42116,
-      46.22533
-     ],
-     [
-      13.42162,
-      46.22582
-     ],
-     [
-      13.42272,
-      46.22599
-     ],
-     [
-      13.42312,
-      46.22573
-     ],
-     [
-      13.42387,
-      46.22608
-     ]
-    ]
-   }
   }
  ],
  "featured": [],
@@ -2377,8 +2073,8 @@
     "label": "kamplebanc.com"
    },
    "near": {
-    "route": "Napoleon",
-    "m": 1757
+    "route": "Bimobis",
+    "m": 4224
    }
   },
   {
@@ -2584,30 +2280,6 @@
    "image_file": "Caporetto-Kobarid (22408536367).jpg"
   },
   {
-   "id": "0e2fd937-b25e-4231-bbd1-1cc3ca6a9498",
-   "name": "Napoleon Bridge on Nadiža",
-   "local_name": "Napoleonov Most",
-   "kind": "Attraction",
-   "pin": "attraction",
-   "lon": 13.4389819,
-   "lat": 46.2289309,
-   "about": "bridge in Slovenia",
-   "near": {
-    "route": "Napoleon",
-    "m": 502
-   },
-   "wiki": null,
-   "wikidata": "Q12797292",
-   "image": {
-    "src": "./assets/images/towns/kobarid/sight-0e2fd937.jpg",
-    "author": "Niksy",
-    "licence": "CC0",
-    "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Napoleon_Bridge_(Logje)_2015.jpg"
-   },
-   "image_file": "Napoleon Bridge (Logje) 2015.jpg"
-  },
-  {
    "id": "1dea04ef-f3d6-4e6d-baf8-10c024ec7079",
    "name": "Tonovec Castle",
    "local_name": "Tonovcov grad",
@@ -2630,6 +2302,30 @@
     "source": "https://commons.wikimedia.org/wiki/File:Tonovcov_Grad_(9).jpg"
    },
    "image_file": "Tonovcov Grad (9).jpg"
+  },
+  {
+   "id": "0e2fd937-b25e-4231-bbd1-1cc3ca6a9498",
+   "name": "Napoleon Bridge on Nadiža",
+   "local_name": "Napoleonov Most",
+   "kind": "Attraction",
+   "pin": "attraction",
+   "lon": 13.4389819,
+   "lat": 46.2289309,
+   "about": "bridge in Slovenia",
+   "near": {
+    "route": "Bimobis",
+    "m": 3909
+   },
+   "wiki": null,
+   "wikidata": "Q12797292",
+   "image": {
+    "src": "./assets/images/towns/kobarid/sight-0e2fd937.jpg",
+    "author": "Niksy",
+    "licence": "CC0",
+    "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Napoleon_Bridge_(Logje)_2015.jpg"
+   },
+   "image_file": "Napoleon Bridge (Logje) 2015.jpg"
   }
  ],
  "repair": [

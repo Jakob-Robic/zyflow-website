@@ -766,7 +766,7 @@
   ]
  },
  "counts": {
-  "routes": 5,
+  "routes": 4,
   "stays": 20,
   "food": 37,
   "water": 45,
@@ -2359,66 +2359,6 @@
      ]
     ]
    }
-  },
-  {
-   "id": "8feba483-f3b2-418c-876e-b8aeace7ec47",
-   "color": "#D6336C",
-   "code": null,
-   "name": "Bataljonka TCS",
-   "level": "Marked route",
-   "kind": "mtb",
-   "length_km": 1,
-   "km_inside": 1,
-   "website": null,
-   "line": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      13.67282,
-      45.97815
-     ],
-     [
-      13.67285,
-      45.97875
-     ],
-     [
-      13.67196,
-      45.97869
-     ],
-     [
-      13.67026,
-      45.97978
-     ],
-     [
-      13.67001,
-      45.98051
-     ],
-     [
-      13.66873,
-      45.98052
-     ],
-     [
-      13.66702,
-      45.98173
-     ],
-     [
-      13.66541,
-      45.98175
-     ],
-     [
-      13.66364,
-      45.9825
-     ],
-     [
-      13.66308,
-      45.983
-     ],
-     [
-      13.66184,
-      45.98332
-     ]
-    ]
-   }
   }
  ],
  "featured": [],
@@ -2691,8 +2631,8 @@
    "lat": 45.9615687,
    "about": null,
    "near": {
-    "route": "Bataljonka TCS",
-    "m": 2103
+    "route": "Bimobis",
+    "m": 2895
    },
    "wiki": null,
    "wikidata": "Q60361221",

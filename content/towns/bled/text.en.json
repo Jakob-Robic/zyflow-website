@@ -5,7 +5,7 @@
   "intro": "Bled sits where the Julian Alps begin, around a lake with an island in the middle and a castle on the cliff above. Two national cycle routes meet here. Follow G2 and you reach Bohinj and the pass above Sorica; follow D2 and you ride between Rateče and Ljubljana. The villages of Ribno, Zasip and Bohinjska Bela are part of Bled too, each a short ride from the lake.",
   "routes": {
     "title": "Cycle routes through Bled",
-    "body": "Six signed routes pass through Bled, so you can follow the signs out of town instead of planning your own line. G2 takes you from Radovljica through Bled and Bohinjska Bistrica up to Sorica, 53 km with one long climb at the end. D2 is the long one: 135 km between Rateče and Ljubljana, passing the lake in the centre of town. The Jakobova pot crosses Bled on its 150 km way through Gorenjska, and three short local routes link the villages around the lake. Want a full day with the ride written up? Blejčanka is a 76 km loop from Kranj to the lake and back, with 944 m of climbing."
+    "body": "Six signed routes pass through Bled, so you can follow the signs out of town instead of planning your own line. G2 takes you from Radovljica through Bled and Bohinjska Bistrica up to Sorica, 53 km with one long climb at the end. D2 is the long one: 135 km between Rateče and Ljubljana, passing the lake in the centre of town. The Jakobova pot crosses Bled on its 150 km way through Gorenjska, and three local routes link the villages around the lake. Want a full day with the ride written up? Blejčanka is a 76 km loop from Kranj to the lake and back, with 944 m of climbing."
   },
   "stays": {
     "title": "Where to stay with your bike",
@@ -21,7 +21,7 @@
   },
   "sights": {
     "title": "What to see on the way",
-    "body": "Three sights are worth getting off the bike for, and all are close to a signed route. Bled Castle stands on its cliff 70 metres from D2. Bled Island sits in the lake about 400 metres from G2; you reach it by boat. Vintgar Gorge, a narrow canyon north-west of town, is 1.1 km off the local route LG2. Shorter stops: the Adolf Muhr monument in town and the cave under Babji zob, 1.2 km off G2."
+    "body": "Three sights are worth getting off the bike for, and all are close to a signed route. Bled Castle stands on its cliff 70 metres from D2. Bled Island sits in the lake 420 metres from G2; you reach it by boat. Vintgar Gorge, a narrow canyon north-west of town, is 1.1 km off the local route LG2. Shorter stops: the Adolf Muhr monument in town and the cave under Babji zob, 1.2 km off G2."
   },
   "places": {
     "_note": "One line per place, keyed by the start of its id, written from the place's own website (moved here from data.json on 2026-11-16 so a data refresh keeps them). A place without a line shows its type and town.",

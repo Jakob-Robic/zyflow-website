@@ -626,7 +626,7 @@
   ]
  },
  "counts": {
-  "routes": 2,
+  "routes": 1,
   "stays": 12,
   "food": 10,
   "water": 47,
@@ -635,75 +635,11 @@
   "sights": 66
  },
  "unnamed_routes": [],
- "water_near_route": 5,
+ "water_near_route": 3,
  "routes": [
   {
-   "id": "9e5f307c-be31-481b-a933-febbc3ad846e",
-   "color": "#2563EB",
-   "code": "R3",
-   "name": "Ajdovščina–Čepovan–Most na Soči",
-   "level": "Regional route",
-   "kind": "road",
-   "length_km": 3,
-   "km_inside": 3,
-   "website": null,
-   "line": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      13.90399,
-      45.88707
-     ],
-     [
-      13.89899,
-      45.88692
-     ],
-     [
-      13.89752,
-      45.88711
-     ],
-     [
-      13.89715,
-      45.88924
-     ],
-     [
-      13.89674,
-      45.88983
-     ],
-     [
-      13.89293,
-      45.89156
-     ],
-     [
-      13.89092,
-      45.8934
-     ],
-     [
-      13.88678,
-      45.89558
-     ],
-     [
-      13.88483,
-      45.89708
-     ],
-     [
-      13.88385,
-      45.89816
-     ],
-     [
-      13.88397,
-      45.89827
-     ],
-     [
-      13.88091,
-      45.9011
-     ]
-    ]
-   }
-  },
-  {
    "id": "a4f286ec-bb02-496f-acb9-099171420764",
-   "color": "#E8590C",
+   "color": "#2563EB",
    "code": "Vipava",
    "name": "Učna pot ob reki Vipavi",
    "level": "Local route",
@@ -1436,8 +1372,8 @@
     "label": "hotelgoldclub.eu"
    },
    "near": {
-    "route": "R3",
-    "m": 128
+    "route": "Vipava",
+    "m": 2354
    }
   },
   {
@@ -1452,8 +1388,8 @@
     "label": "sinji-vrh.si"
    },
    "near": {
-    "route": "R3",
-    "m": 3388
+    "route": "Vipava",
+    "m": 5061
    }
   },
   {
@@ -1473,19 +1409,19 @@
    }
   },
   {
-   "id": "1fb5e03d-b73b-488c-93d5-d3946a252069",
+   "id": "1c458403-3535-4355-9d1e-44037fa03be7",
    "name": "Avtokamp Ajdovščina",
    "kind": "Campsite",
    "pin": "accommodation",
-   "lon": 13.8994555,
-   "lat": 45.8920696,
+   "lon": 13.9013699,
+   "lat": 45.8913286,
    "site": {
-    "url": "https://www.zs-ajdovscina.si/camp/about_camp/",
+    "url": "https://www.zs-ajdovscina.si/",
     "label": "zs-ajdovscina.si"
    },
    "near": {
-    "route": "R3",
-    "m": 326
+    "route": "Vipava",
+    "m": 2834
    }
   },
   {
@@ -1516,8 +1452,8 @@
     "label": "mc-hisamladih.si"
    },
    "near": {
-    "route": "R3",
-    "m": 1023
+    "route": "Vipava",
+    "m": 3438
    }
   }
  ],
@@ -1610,8 +1546,8 @@
    "lat": 45.8892603,
    "about": "Roman fortress in Eastern Europe",
    "near": {
-    "route": "R3",
-    "m": 261
+    "route": "Vipava",
+    "m": 2670
    },
    "wiki": "https://en.wikipedia.org/wiki/Castra_ad_Fluvium_Frigidum",
    "wikidata": "Q28969759",
@@ -1682,8 +1618,8 @@
    "lat": 45.9163309,
    "about": null,
    "near": {
-    "route": "R3",
-    "m": 2983
+    "route": "Vipava",
+    "m": 5643
    },
    "wiki": null,
    "wikidata": "Q12798137",

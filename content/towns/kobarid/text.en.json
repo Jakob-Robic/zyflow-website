@@ -2,10 +2,10 @@
   "status": "draft",
   "_note": "Draft written 2026-11-17 in the brand voice (design-system/docs/brand-guidelines.md §8: plain, second person, sentence case, headlines of 7 words or fewer). Facts come from Kobarid's data and each place's own website. Needs a read by someone who knows Kobarid before publishing.",
   "lede": "Know where to ride, stay, eat and refill in Kobarid.",
-  "intro": "Kobarid sits in the Soča valley between Bovec and Tolmin, a small town remembered for the battles fought here in the First World War. Five signed routes cross it: the international road route Bimobis, SI-C (SICAI Ciclo) for mountain bikes, and three short marked mountain-bike trails. To the west the municipality reaches into the Breginjski kot along the Nadiža river, where Robidišče is the westernmost village in Slovenia. Idrsko, a short ride south-east of the centre, also belongs to Kobarid.",
+  "intro": "Kobarid sits in the Soča valley between Bovec and Tolmin, a small town remembered for the battles fought here in the First World War. Two signed routes cross it: the international road route Bimobis and SI-C (SICAI Ciclo) for mountain bikes. To the west the municipality reaches into the Breginjski kot along the Nadiža river, where Robidišče is the westernmost village in Slovenia. Idrsko, a short ride south-east of the centre, also belongs to Kobarid.",
   "routes": {
     "title": "Cycle routes through Kobarid",
-    "body": "Five signed routes cross Kobarid, on road and on trail. Bimobis is the long one: an international road route of 144 km, 16 km of it inside Kobarid, passing the museum and the Napoleon bridge in town. SI-C (SICAI Ciclo) is a 62 km mountain-bike route, with 15 km in Kobarid. Logyeah, Napoleon and fit Helga are short marked mountain-bike trails of 2 km each."
+    "body": "Two signed routes cross Kobarid, one on road and one on trail. Bimobis is the long one: an international road route of 144 km, 16 km of it inside Kobarid, passing the museum and the Napoleon bridge in town. SI-C (SICAI Ciclo) is a 62 km mountain-bike route, with 15 km in Kobarid."
   },
   "stays": {
     "title": "Where to stay with your bike",
@@ -21,7 +21,7 @@
   },
   "sights": {
     "title": "What to see on the way",
-    "body": "Of Kobarid's 69 sights, the main ones sit right beside Bimobis. The Napoleon bridge over the Soča is 3 metres from the route, and the Kobarid Museum is 16 metres away. The Caporetto war memorial, the Italian charnel house that holds the remains of 7,014 Italian soldiers from the Isonzo battles, is 143 metres off the route. Kozjak falls is 1.6 km off Bimobis. In the Breginjski kot, the Napoleon bridge over the Nadiža is 502 metres from the Napoleon trail."
+    "body": "Of Kobarid's 69 sights, the main ones sit right beside Bimobis. The Napoleon bridge over the Soča is 3 metres from the route, and the Kobarid Museum is 16 metres away. The Caporetto war memorial, the Italian charnel house that holds the remains of 7,014 Italian soldiers from the Isonzo battles, is 143 metres off the route. Kozjak falls is 1.6 km off Bimobis. In the Breginjski kot, the Napoleon bridge over the Nadiža is 3.9 km from Bimobis."
   },
   "places": {
     "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town. Not written: 0c0cd235 Eco Kmetija Robidisce (its link goes to a news article on siol.net, not its own website).",
