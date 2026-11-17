@@ -5,7 +5,7 @@
   "intro": "Celje lies on the Savinja river, with the ruins of its castle on the hills south-east of town. Five signed routes run through it, among them D1, EuroVelo 9 (Baltic-Adriatic) and the Kolesarska Jakobova pot. Šmartinsko jezero, a lake north-east of the centre, is on the Jakobova pot.",
   "routes": {
     "title": "Cycle routes through Celje",
-    "body": "Five signed routes pass through Celje, and three of them are long-distance routes. D1 crosses the town on a 183 km line, and EuroVelo 9 (Baltic-Adriatic) passes on a 128 km section. The Kolesarska Jakobova pot Slovenija Camino–Prekmur–Štajerska Veja runs 263 km, 10 km of it in Celje, and G13 has 4 km here. The Drameljska kolesarska pot, a local route of 30 km, has 2 km in Celje."
+    "body": "Five signed routes pass through Celje, and three of them are long-distance routes. D1 crosses the town on a 183 km line, and EuroVelo 9 (Baltic-Adriatic) passes on a 128 km section. The Prekmurje and Štajerska branch of the Jakobova pot runs 263 km, 10 km of it in Celje. G13 has 4 km here. The Drameljska kolesarska pot, a local route of 30 km, has 2 km in Celje."
   },
   "stays": {
     "title": "Where to stay with your bike",
@@ -26,7 +26,7 @@
   "places": {
     "_note": "One line per place, keyed by the start of its id, written from the place's own website. A place without a line shows its type and town.",
     "43d5a74d": "A hotel with 32 rooms in a quiet part of Celje on the Savinja, some with a balcony over the river. It has a café, a restaurant and a casino.",
-    "ffb9f658": "A four-star hotel in Celje's historic old town, with a restaurant and a café and pastry shop. The café is open Monday to Saturday 8:00–22:00 and on Sundays and holidays 8:00–21:00.",
+    "ffb9f658": "A four-star hotel in Celje's historic old town, with a restaurant and a café and pastry shop. The café is open Monday to Saturday from 8:00 to 22:00, and on Sundays and holidays from 8:00 to 21:00.",
     "a6403659": "A campervan stop at Celjska koča above Celje, next to an adventure park and a summer bobsled track.",
     "90495994": "A campervan stop on Ulica XIV. divizije, 100 metres from the railway station, with a KolesCE bike-share station next to it. A path runs from here along the Savinja to Celjska koča.",
     "a397a30d": "An inn and steakhouse with aged steaks, burgers, pork ribs and fresh daily lunches.",

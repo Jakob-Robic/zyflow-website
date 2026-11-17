@@ -81,7 +81,7 @@ const TEXT = {
       const named = t.routes
         .filter((r) => r.code)
         .slice(0, 2)
-        .map((r) => `${r.level.toLowerCase()} ${r.code}${r.name && r.name !== r.code ? ` (${r.name})` : ""}`);
+        .map((r) => `${r.level.toLowerCase()} ${r.code}${r.name && r.name !== r.code ? ` (${spokenName(r.name)})` : ""}`);
       const parts = [
         // With no signed route in the data, say nothing about routes (a gap in the map, not a fact).
         t.counts.routes === 0
@@ -140,7 +140,7 @@ const TEXT = {
     more: (n, what) => `${n} more ${what} in the app`,
     moreStays: "places to stay",
     moreFood: "places to eat",
-    fromRoute: (near) => `${meters(near.m)} from route ${shortRoute(near.route)}`,
+    fromRoute: (near) => `${meters(near.m)} from route ${spokenName(shortRoute(near.route), " to ")}`,
     website: "Website",
     waterTitle: "Water points",
     water: (t) =>
@@ -169,7 +169,7 @@ const TEXT = {
       t.counts.chargers
         ? `${t.name} has ${t.counts.chargers} e-bike chargers.`
         : t.nearest_charger
-          ? `The nearest e-bike charger is at ${t.nearest_charger.name} in ${t.nearest_charger.municipality}, ${km(t.nearest_charger.km)} from ${t.name}.`
+          ? `The nearest e-bike charger is at ${spokenName(t.nearest_charger.name)} in ${t.nearest_charger.municipality}, ${km(t.nearest_charger.km)} from ${t.name}.`
           : `${t.name} has no public e-bike charger.`,
     sightsTitle: "Worth a stop",
     moreSightsTitle: "more to see",
@@ -196,7 +196,7 @@ const TEXT = {
                 ...t.routes.slice(0, MAX_ROUTES_SHOWN).map((r) => {
                   const stops = r.name.split(STOPS).map((part) => part.trim());
                   if (r.code && stops.length > 1) return `${r.code} from ${stops[0]} to ${stops[stops.length - 1]}`;
-                  return r.code && r.name !== r.code && !r.name.startsWith(r.code) ? `${r.code} (${r.name})` : r.name;
+                  return r.code && r.name !== r.code && !r.name.startsWith(r.code) ? `${r.code} (${spokenName(r.name)})` : spokenName(r.name);
                 }),
                 ...(t.routes.length > MAX_ROUTES_SHOWN ? [`${t.routes.length - MAX_ROUTES_SHOWN} more`] : []),
               ])}.`,
@@ -243,6 +243,17 @@ function listOr(items) {
  * on the map keeps a colour of its own. The rest are counted and left to the app.
  */
 const MAX_ROUTES_SHOWN = 8;
+
+/**
+ * A route name without dashes for reading: "EuroVelo 8 – Mediterranean Route" becomes
+ * "EuroVelo 8: Mediterranean Route", "Kolesarska Jakobova pot–Gorenjska veja" becomes
+ * "Kolesarska Jakobova pot, Gorenjska veja". Structured data keeps the official name.
+ */
+function spokenName(name, joiner = ", ") {
+  return String(name || "")
+    .replace(/\s+[–—]\s+/g, ": ")
+    .replace(/\s*[–—]\s*/g, joiner);
+}
 
 /** "Koper–Sečovlje" lists stops; "EuroVelo 8 – Mediterranean Route" (spaced dash) is a title, not stops. */
 const STOPS = /(?<! )–(?! )/;
@@ -641,7 +652,7 @@ const PIN_FILES = new Set(["accommodation", "restaurant", "cafe", "food", "attra
 function placeRow(place, t) {
   return row({
     name: place.name,
-    facts: [place.kind, place.hours, ...(place.extras || []), place.near ? t.fromRoute(place.near) : ""],
+    facts: [place.kind, readableHours(place.hours), ...(place.extras || []), place.near ? t.fromRoute(place.near) : ""],
     link: place.site ? { href: place.site.url, label: place.site.label, external: true } : null,
     pin: PIN_FILES.has(place.pin) ? place.pin : "unknown",
     image: place.image,
@@ -708,13 +719,40 @@ const TYPE_ICONS = {
 const iconFor = (type) => TYPE_ICONS[type] || "marker-pin";
 const pinFor = (type) => type || "unknown";
 
+/**
+ * Opening hours as the map data writes them ("Mo–Th 09:00–22:00; Fr–Sa 09:00–24:00") in words,
+ * without dashes: "Mon to Thu, 09:00 to 22:00 · Fri to Sat, 09:00 to 24:00". "Mo–Su" is every day.
+ */
+const DAY = { Mo: "Mon", Tu: "Tue", We: "Wed", Th: "Thu", Fr: "Fri", Sa: "Sat", Su: "Sun", PH: "Public holidays" };
+function readableHours(hours) {
+  if (!hours) return hours;
+  return String(hours)
+    .split(/\s*;\s*|(?<=\d|off),\s*(?=(?:Mo|Tu|We|Th|Fr|Sa|Su|PH)\b)/)
+    .map((rule) => {
+      const m = rule.match(/^((?:Mo|Tu|We|Th|Fr|Sa|Su|PH)[A-Za-z,–\- ]*?)\s+(\d.*|off.*)$/);
+      let days = m && /^(Mo|Tu|We|Th|Fr|Sa|Su|PH)/.test(m[1]) ? m[1].trim() : "";
+      let times = days ? m[2] : rule;
+      days = days
+        .replace(/^Mo\s*[–-]\s*Su$/, "Every day")
+        .replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su|PH)\b/g, (d) => DAY[d])
+        .replace(/\s*[–-]\s*/g, " to ")
+        .replace(/,\s*/g, " and ");
+      times = times
+        .replace(/\boff\b/, "closed")
+        .replace(/(\d{1,2}(?::\d{2})?)\s*[–-]\s*(\d{1,2}(?::\d{2})?)/g, "$1 to $2")
+        .replace(/,\s*/g, " and ");
+      return days ? `${days}, ${times}` : times;
+    })
+    .join(" · ");
+}
+
 function placeCard(place, t) {
   const [value, unit] = place.near ? t.fromRouteShort(place.near) : ["", ""];
   return infoCard({
     pin: pinFor(place.pin),
     name: place.name,
     // One fact line only: opening hours where we have them, otherwise the type.
-    facts: [place.hours || place.kind],
+    facts: [readableHours(place.hours) || place.kind],
     desc: place.about || (place.aboutShort ? `${cap(place.aboutShort)}.` : `${place.kind} in the municipality.`),
     value,
     unit,
@@ -940,7 +978,7 @@ function renderBody(town, t, lang) {
   const featured = town.featured.map((route) =>
     infoCard({
       pin: "route",
-      name: route.name,
+      name: spokenName(route.name),
       facts: [t.ourRoute],
       desc: t.ourRouteNote,
       value: `${route.km} km`,
@@ -956,8 +994,10 @@ function renderBody(town, t, lang) {
       // A route with a code and a one-part name (K13, "Dragonja valley") shows both.
       name: coded
         ? `${route.code} · ${stops[0]} to ${stops[stops.length - 1]}`
+        : !route.code
+          ? spokenName(route.name)
         : route.code && route.name !== route.code && !route.name.startsWith(route.code)
-          ? `${route.code} · ${route.name}`
+          ? `${route.code} · ${spokenName(route.name)}`
           : route.name,
       facts: [`${route.level}, ${route.length_km} km`],
       desc:
@@ -1192,7 +1232,7 @@ function injectTown(html, page) {
 module.exports = {
   townOgSources,
   // Shared with signed-routes.js, which builds route pages from the same parts.
-  parts: { esc, cap, listAnd, numberWord, longDate, shortDate, infoCard, cardSection, sightCard, photoCredit, iconFor, TEXT, TOWN_LANGS },
+  parts: { esc, readableHours, spokenName, cap, listAnd, numberWord, longDate, shortDate, infoCard, cardSection, sightCard, photoCredit, iconFor, TEXT, TOWN_LANGS },
   showDrafts: () => SHOW_DRAFTS,
   townPath,
   townLangs,

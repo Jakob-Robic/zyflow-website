@@ -58,7 +58,7 @@ const TEXT = {
     foodTitle: "Where to stop and eat",
     practicalTitle: "Water, repair and charging",
     sightsTitle: "What to see on the way",
-    placeFacts: (p) => [p.town ? `${p.town}, kilometre ${p.km}` : `Kilometre ${p.km}`, p.hours],
+    placeFacts: (p) => [p.town ? `${p.town}, kilometre ${p.km}` : `Kilometre ${p.km}`, towns.parts.readableHours(p.hours)],
     fromRoute: " · from the route",
     website: "Website",
     more: (n, what) => `${n} more ${what} in the app`,

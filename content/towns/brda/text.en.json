@@ -13,7 +13,7 @@
   },
   "food": {
     "title": "Where to stop and eat",
-    "body": "You have 10 places to eat in Brda, and three of them sit within 25 metres of Bimobis. In Medana, Ošterija Klinec cooks seasonal home food with organic wine from its own cellar; it opens Friday to Monday, so check the hours before you set off. Vino Modana, also in Medana, is mostly a fish kitchen, known for its mussels. Bužinel is 24 metres from the route. At the entrance to Brda in Podsabotin, Turistična kmetija Štanfel has a place to charge and store e-bikes."
+    "body": "You have 10 places to eat in Brda, and three of them sit within 25 metres of Bimobis. In Medana, Ošterija Klinec cooks seasonal home food with organic wine from its own cellar. It opens Friday to Monday, so check the hours before you set off. Vino Modana, also in Medana, is mostly a fish kitchen, known for its mussels. Bužinel is 24 metres from the route. At the entrance to Brda in Podsabotin, Turistična kmetija Štanfel has a place to charge and store e-bikes."
   },
   "practical": {
     "title": "Water, repair and charging",
@@ -26,7 +26,7 @@
   "places": {
     "_note": "One line per place, keyed by the start of its id, written from the place's own website on 2026-11-17. A place without a line shows its type and town. Not written: fb5908fb San Martin (its website now shows a travel agency with e-bike rental and rooms, not a hotel, restaurant or wine bar).",
     "96824f8c": "Rooms at the Bužinel wine estate, which also runs a restaurant and sells its own wine.",
-    "7e45d034": "A tourist farm on a hill above the Idrija river, restored in the style of an old Brda house, with rooms, a terrace over the vineyards and seasonal dishes.",
+    "7e45d034": "A tourist farm on a hill above the Idrija river, restored in the style of an old Brda house. It has rooms, a terrace over the vineyards and seasonal dishes.",
     "9580c817": "A holiday villa for up to six guests on the Edi Simčič wine estate, with two ensuite bedrooms, a private pool and a small spa.",
     "9a3dee8d": "A boutique hotel with rooms inside Gredič castle, a restaurant cooking Mediterranean and continental dishes, and a wine shop.",
     "12f5bcc4": "The restaurant of the Bužinel wine estate, which also has rooms and sells its own wine.",
