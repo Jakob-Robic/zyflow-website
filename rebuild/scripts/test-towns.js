@@ -20,7 +20,7 @@ function tempDir(prefix) {
 function buildDist(env) {
   const dist = tempDir("zyflow-towns-dist-");
   execFileSync(process.execPath, [BUILD], {
-    env: { ...process.env, REBUILD_DIST: dist, MAPTILER_KEY: "", TOWNS_PUBLIC: "", TOWNS_DRAFTS: "", SITE_INDEX: "", ...env },
+    env: { ...process.env, REBUILD_DIST: dist, MAPTILER_KEY: "", TOWNS_PUBLIC: "false", TOWNS_DRAFTS: "", SITE_INDEX: "", ...env },
     stdio: "pipe",
   });
   return dist;
@@ -29,7 +29,7 @@ function buildDist(env) {
 function buildFails(env) {
   const dist = tempDir("zyflow-towns-fail-");
   const result = spawnSync(process.execPath, [BUILD], {
-    env: { ...process.env, REBUILD_DIST: dist, MAPTILER_KEY: "", TOWNS_PUBLIC: "", TOWNS_DRAFTS: "", SITE_INDEX: "", ...env },
+    env: { ...process.env, REBUILD_DIST: dist, MAPTILER_KEY: "", TOWNS_PUBLIC: "false", TOWNS_DRAFTS: "", SITE_INDEX: "", ...env },
     encoding: "utf8",
   });
   assert.notEqual(result.status, 0, "build was expected to fail");
@@ -70,6 +70,23 @@ test("switch on without drafts fails while no town is published", () => {
   });
   if (published) return; // once a town is published this case no longer applies
   buildFails({ TOWNS_PUBLIC: "true" });
+});
+
+test("production build: published towns indexed, in the sitemap, hub linked", () => {
+  const dist = buildDist({ TOWNS_PUBLIC: "true", SITE_INDEX: "true" });
+  const published = towns.filter(({ slug }) => {
+    const file = path.join(TOWNS_DIR, slug, "text.en.json");
+    return fs.existsSync(file) && JSON.parse(fs.readFileSync(file, "utf8")).status === "published";
+  });
+  for (const { slug } of published) {
+    const html = read(dist, `cycling/${slug}.html`);
+    assert.match(html, /<meta name="robots" content="index, follow"/, `${slug} indexable`);
+    assert.match(read(dist, "sitemap.xml"), new RegExp(`/cycling/${slug}<`), `${slug} in sitemap`);
+  }
+  if (published.length) {
+    assert.doesNotMatch(read(dist, "robots.txt"), /Disallow: \/cycling/);
+    assert.match(read(dist, "index.html"), /href="[^"]*\/cycling"/, "footer links the hub");
+  }
 });
 
 test("drafts are never indexed", () => {

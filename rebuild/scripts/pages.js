@@ -56,12 +56,13 @@ function guidesArePublic() {
 const GUIDES_ARE_PUBLIC = guidesArePublic();
 
 /**
- * Town pages (/cycling/<town>) stay off the live site until batch 1 is
- * reviewed. While this is false no town page is built or listed anywhere.
+ * Town pages (/cycling/<town>, /sl/kolesarjenje/<town>): switched on for batch 1
+ * on 2026-11-17 (Jakob: "deploy all of the pages"). While this is false no town
+ * page is built or listed anywhere.
  * A process env TOWNS_PUBLIC=true|false overrides this line for one build
  * (local preview). The line itself stays the switch for a real launch.
  */
-const TOWNS_PUBLIC = false;
+const TOWNS_PUBLIC = true;
 
 function townsArePublic() {
   const override = process.env.TOWNS_PUBLIC;
