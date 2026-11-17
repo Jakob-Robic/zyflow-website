@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.5 · **Effective date:** 16 November 2026 · Replaces version 2.4 of 7 November 2026
+**Version:** 2.6 · **Effective date:** 17 November 2026 · Replaces version 2.5 of 16 November 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -164,13 +164,15 @@ You can connect your Zyflow account to other cycling services. Connecting is alw
 
 | Service | What you can do | What we receive and store |
 |---|---|---|
-| **Strava** (Strava, Inc., USA) | Import your rides and your saved Strava routes | Your Strava athlete ID; the rides and routes you choose to import (name, GPS track, distance, elevation, date) |
+| **Strava** (Strava, Inc., USA) | Import your rides and your saved Strava routes | Your Strava athlete ID; the rides and routes you choose to import (name, GPS track, distance, elevation, date); for up to 7 days, the route line of rides and routes shown in your list, for map previews |
 | **Garmin Connect** (Garmin Ltd. and its affiliates) | Send routes to your Garmin device; import finished rides | Your Garmin user ID and the permissions you granted; routes you send; rides you choose to import |
 | **Wahoo** (Wahoo Fitness L.L.C., USA) | Send routes to your Wahoo bike computer; import finished rides | Your Wahoo user ID; routes you send; rides you choose to import |
 | **Hammerhead** (SRAM, LLC, USA) | Send routes to your Karoo; import finished rides | Your Hammerhead user ID; routes you send; rides you choose to import |
 | **Ride with GPS** (Ride with GPS, Inc., USA) | Import your routes and rides; send routes | Your Ride with GPS user ID; the routes and rides you choose to import; routes you send |
 
 **How it works:** when you connect a service, you sign in on that service's own page; Zyflow never sees your password there. The service gives us an access token, which we store **encrypted** and use only to do what you ask: send a route you chose, list your rides or routes so you can pick what to import, and import the items you select. When you send a route, we keep a note of where it went, so we can show "Sent to …" and remove the copy if you delete the route in Zyflow.
+
+**Map previews (Strava):** to show a small map behind each ride and route in your Strava list, we keep its simplified route line for up to 7 days and draw the picture on our own server (hosted by Contabo GmbH, Germany, EU) using MapTiler map tiles. MapTiler only sees which map area our server asks for, not who it is for. The lines and pictures are visible only to you. We delete them after 7 days, when you import the ride or route, or immediately when you disconnect Strava.
 
 **Visibility:** data from connected services is shown **only to you**. It is never published to the community, and routes imported from Strava cannot be shared. We never sell this data or use it to train artificial intelligence models.
 
@@ -295,6 +297,7 @@ If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the ro
 | Saved and imported routes, saved places | Until you delete them or your account |
 | Connected-service tokens and user IDs | Until you disconnect the service or delete your account |
 | Rides and routes imported from a connected service | Until you delete them or your account; items imported from Strava are also deleted when you disconnect Strava |
+| Strava route lines and map previews of rides and routes you have not imported | Up to 7 days; deleted sooner when you import the item or disconnect Strava |
 | Record of routes sent to a device service | Until you delete the route or your account |
 | Shared community routes, their photos and map images | The shared route and its photos are deleted when you remove the route or delete your account; its map images are removed from file storage on request within 30 days, and automatically when you delete your account (see section 9) |
 | Bike passport and bike photos | Until you delete your account; a bike photo is deleted from file storage when you remove it or delete your account (see section 9) |
@@ -339,7 +342,7 @@ To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from
 - **On the web:** [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account).
 - **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, stamps, bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, and photos and map images of shared routes), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
+When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, stamps, bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, photos and map images of shared routes, and map previews of Strava rides), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
 ## 10. Complaints
 
