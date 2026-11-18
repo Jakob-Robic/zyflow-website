@@ -556,8 +556,11 @@ test("built tour pages ship their own description, alt text, and 1200×630 image
   assert.doesNotMatch(sitemap, /<lastmod><\/lastmod>/);
   if (repositoryIsShallow()) {
     const boundary = execFileSync("git", ["log", "-1", "--format=%cs"], { encoding: "utf8" }).trim();
-    assert.doesNotMatch(sitemap, /<lastmod>/);
-    assert.doesNotMatch(sitemap, new RegExp(`<lastmod>${boundary}</lastmod>`));
+    // Town pages date themselves from their data's "checked" day, not from git, so a shallow
+    // clone still gives them a lastmod; every other page must have none here.
+    const fromGit = sitemap.replace(/<url>\s*<loc>[^<]*\/(?:cycling|sl\/kolesarjenje)(?:\/[^<]*)?<\/loc>[\s\S]*?<\/url>/g, "");
+    assert.doesNotMatch(fromGit, /<lastmod>/);
+    assert.doesNotMatch(fromGit, new RegExp(`<lastmod>${boundary}</lastmod>`));
   } else {
     const jezerskiPage = PAGES.find((page) => page.routeSlug === "jezerski-vrh");
     const expectedMod = execFileSync(
