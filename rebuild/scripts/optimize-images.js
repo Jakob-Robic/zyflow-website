@@ -287,9 +287,10 @@ function simplifyContourSvg(svgText, epsilon = CONTOUR_EPSILON) {
 
 /**
  * Encoded variants are kept between builds, keyed by the source's content hash, the
- * requested width, the format and the encoder settings. On Vercel the cache lives in
- * .vercel/cache at the repository root, the one folder Vercel's build cache keeps for a
- * static site (node_modules/.cache is not kept); locally in node_modules/.cache.
+ * requested width, the format and the encoder settings. The cache lives in .vercel/cache
+ * at the repository root, the one folder Vercel's build cache keeps for a static site
+ * (node_modules/.cache is not kept). It is used everywhere, not only when VERCEL is set:
+ * the project does not expose that variable to builds. .vercel is git-ignored.
  * IMAGE_CACHE_DIR moves it, IMAGE_CACHE=off turns it off. A changed photo has a new
  * hash, so it is encoded again.
  */
@@ -297,10 +298,7 @@ const ENCODE_SETTINGS = `a${AVIF_QUALITY}-w${WEBP_QUALITY}-j${JPEG_QUALITY}-e4`;
 const CACHE_DIR =
   process.env.IMAGE_CACHE === "off"
     ? null
-    : process.env.IMAGE_CACHE_DIR ||
-      (process.env.VERCEL
-        ? path.join(__dirname, "..", "..", ".vercel", "cache", "zyflow-images")
-        : path.join(__dirname, "..", "..", "node_modules", ".cache", "zyflow-images"));
+    : process.env.IMAGE_CACHE_DIR || path.join(__dirname, "..", "..", ".vercel", "cache", "zyflow-images");
 const cacheStats = { hits: 0, misses: 0 };
 
 async function encodeVariantCached(input, hash, width, format) {
@@ -532,6 +530,15 @@ function rewriteHtml(html, rasters, contours) {
 }
 
 async function optimizeImages(dist) {
+  if (CACHE_DIR) {
+    let found = 0;
+    try {
+      found = fs.readdirSync(CACHE_DIR).filter((name) => !name.endsWith(".json")).length;
+    } catch {
+      /* no cache yet */
+    }
+    console.log(`image cache: ${CACHE_DIR} holds ${found} encoded sizes at start`);
+  }
   const htmlFiles = walk(dist).filter((file) => file.endsWith(".html"));
   const htmlByFile = new Map(htmlFiles.map((file) => [file, fs.readFileSync(file, "utf8")]));
   const rasterSrcs = new Set();
