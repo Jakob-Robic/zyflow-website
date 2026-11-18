@@ -26,6 +26,7 @@ const SHOW_DRAFTS = process.env.TOWNS_DRAFTS === "true" || process.env.TOWNS_DRA
 const TEXT = {
   en: {
     lang: "en",
+    cardEnds: (code, a, b) => `${code} · ${a} to ${b}`,
     nearbyTitle: "Towns nearby",
     crumbLabel: "Breadcrumb",
     nearbyLead: (t) => `The closest towns to ${t.name} with their own page: routes, places to stay and eat, water and repair.`,
@@ -221,6 +222,7 @@ const TEXT = {
   },
   sl: {
     lang: "sl",
+    cardEnds: (code, a, b) => `${code} · ${a}, ${b}`,
     nearbyTitle: "Kraji v bližini",
     crumbLabel: "Drobtinice",
     nearbyLead: (t) => `Najbližji kraji z lastno stranjo: poti, nastanitve, kje jesti, pitna voda in servis.`,
@@ -1244,7 +1246,7 @@ function renderBody(town, t, lang) {
       color: route.color,
       // A route with a code and a one-part name (K13, "Dragonja valley") shows both.
       name: coded
-        ? `${route.code} · ${stops[0]} to ${stops[stops.length - 1]}`
+        ? t.cardEnds(route.code, stops[0], stops[stops.length - 1])
         : !route.code
           ? spokenName(route.name)
         : route.code && route.name !== route.code && !route.name.startsWith(route.code)

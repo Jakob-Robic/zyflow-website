@@ -914,7 +914,11 @@
     el.classList.remove("is-loading", "is-ready");
     el.classList.add("is-error");
     el.innerHTML =
-      '<p class="tour-hero__map-fallback">Map unavailable. Open the route in Zyflow to explore.</p>';
+      `<p class="tour-hero__map-fallback">${
+        (document.documentElement.lang || "").startsWith("sl")
+          ? "Zemljevid ni na voljo. Pot odpri v aplikaciji Zyflow."
+          : "Map unavailable. Open the route in Zyflow to explore."
+      }</p>`;
   }
 
   function boot() {
