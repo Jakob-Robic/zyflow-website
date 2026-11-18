@@ -32,10 +32,6 @@ const LAYOUT = {
     sizes: "(min-width: 1320px) 1280px, 100vw",
     priority: "high",
   },
-  "hero-thumb.jpg": {
-    maxCss: 280,
-    sizes: "(max-width: 720px) 46vw, 280px",
-  },
   "app-map.jpg": { maxCss: 280, sizes: "(max-width: 900px) 70vw, 240px" },
   "app-place.jpg": { maxCss: 240, sizes: "240px" },
   "app-route.jpg": { maxCss: 200, sizes: "200px" },
@@ -91,6 +87,11 @@ const LAYOUT = {
   "tour-4wd.jpg": { maxCss: 480, sizes: "(max-width: 720px) 100vw, 400px" },
   "tour-hike.jpg": { maxCss: 480, sizes: "(max-width: 720px) 100vw, 400px" },
   "tour-kayak.jpg": { maxCss: 480, sizes: "(max-width: 720px) 100vw, 400px" },
+  // E+ project page photo spans the full 1280px page width (not the 640px legal column).
+  "krvavec-kolesarjenje-jost-gantar.jpg": {
+    maxCss: 1280,
+    sizes: "(max-width: 720px) 100vw, (max-width: 1340px) 92vw, 1280px",
+  },
 };
 
 function layoutFor(sitePath) {

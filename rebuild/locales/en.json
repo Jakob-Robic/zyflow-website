@@ -4,13 +4,13 @@
     "locale": "en",
     "source": "zyflow",
     "pages": {
-      "open": {
-        "title": "Zyflow: Open in the app",
-        "description": "Open this place or ride in the Zyflow app, or get the app free on iOS and Android."
-      },
       "404": {
         "title": "Zyflow: Page not found",
         "description": "This page does not exist. Head home or explore routes in Zyflow."
+      },
+      "open": {
+        "title": "Zyflow: Open in the app",
+        "description": "Open this place or ride in the Zyflow app, or get the app free on iOS and Android."
       },
       "home": {
         "title": "Zyflow: Bike-Friendly Places for Cyclists & E-Bike Riders",
@@ -290,9 +290,14 @@
       "subtitle": "Explore bike-friendly places. Ride there feeling safe. Stays, coffee stops, restaurants and chargers, all on one map.",
       "cta": "Get the app",
       "nextDepartureLabel": "Featured route",
-      "nextDepartureTitle": "Ljubljana to Trieste",
-      "nextDepartureDate": "134 km · +1,766 m",
-      "brandHtml": "explore<br />further."
+      "brandHtml": "explore<br />further.",
+      "slidesLabel": "Featured routes",
+      "slidesNav": "Choose a route",
+      "slides": {
+        "blejcanka": "79 km · +944 m",
+        "locanka": "64 km · +930 m",
+        "ravenska-kocna": "16.6 km · +408 m"
+      }
     },
     "appBanner": {
       "eyebrow": "The Zyflow app",
