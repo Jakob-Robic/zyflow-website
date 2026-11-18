@@ -4,13 +4,13 @@
     "locale": "sl",
     "source": "zyflow",
     "pages": {
-      "open": {
-        "title": "Zyflow: Odpri v aplikaciji",
-        "description": "Odprite ta kraj ali turo v aplikaciji Zyflow ali si brezplačno prenesite aplikacijo za iOS in Android."
-      },
       "404": {
         "title": "Zyflow: Stran ne obstaja",
         "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
+      },
+      "open": {
+        "title": "Zyflow: Odpri v aplikaciji",
+        "description": "Odprite ta kraj ali turo v aplikaciji Zyflow ali si brezplačno prenesite aplikacijo za iOS in Android."
       },
       "home": {
         "title": "Zyflow: kraji, prijazni kolesarjem in e-kolesarjem",
@@ -290,9 +290,14 @@
       "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
       "cta": "Prenesi aplikacijo",
       "nextDepartureLabel": "Izpostavljena pot",
-      "nextDepartureTitle": "Ljubljana–Trst",
-      "nextDepartureDate": "134 km · +1.766 m",
-      "brandHtml": "raziskuj<br>dlje."
+      "brandHtml": "raziskuj<br>dlje.",
+      "slidesLabel": "Izpostavljene poti",
+      "slidesNav": "Izberi pot",
+      "slides": {
+        "blejcanka": "79 km · +944 m",
+        "locanka": "64 km · +930 m",
+        "ravenska-kocna": "16,6 km · +408 m"
+      }
     },
     "appBanner": {
       "eyebrow": "Aplikacija Zyflow",

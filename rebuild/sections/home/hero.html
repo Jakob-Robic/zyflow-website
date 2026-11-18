@@ -1,7 +1,7 @@
 <section class="hero section" data-section="home.hero">
   <div class="hero__frame">
     <div class="hero__media" aria-hidden="true">
-      <img src="./assets/images/home/hero.jpg" alt="Cyclist riding a scenic road" />
+      <img src="./assets/images/home/hero.jpg" alt="Three road cyclists riding a cycle path into the sunset" />
       <div class="hero__scrim"></div>
     </div>
     <div class="hero__content">
@@ -12,16 +12,51 @@
       <p class="hero__sub" data-i18n="home.hero.subtitle">Smart navigation for cyclists and e-bike riders. Battery, elevation, and weather before you leave.</p>
       <a class="btn btn--primary" href="{{appStoreUrl}}" data-app-modal-open data-i18n="home.hero.cta">Plan your first route</a>
     </div>
-    <aside class="hero__card">
-      <div class="hero__card-media">
-        <img class="hero__card-thumb" src="./assets/images/home/hero-thumb.jpg" alt="Ljubljana to Trieste route" />
+    <!-- Featured routes: three linked slides, slow crossfade (js/home.js initHeroCarousel).
+         Pick routes NOT shown in the "adventures" section below. -->
+    <aside class="hero__card" data-hero-carousel aria-roledescription="carousel" data-i18n-aria-label="home.hero.slidesLabel" aria-label="Featured routes">
+      <div class="hero__slides">
+        <a class="hero__slide is-active" href="./tours/blejcanka.html" aria-roledescription="slide">
+          <span class="hero__card-media">
+            <img class="hero__card-thumb" src="./assets/images/tours/blejcanka/cover.webp" alt="" />
+          </span>
+          <span class="hero__card-body">
+            <span class="hero__card-label"><span class="motif" aria-hidden="true"></span><span data-i18n="home.hero.nextDepartureLabel">Featured route</span></span>
+            <span>
+              <span class="hero__card-title" data-i18n-html="routes.blejcanka.titleHtml">Blejčanka</span>
+              <span class="hero__card-date" data-i18n="home.hero.slides.blejcanka">79 km · +944 m</span>
+            </span>
+          </span>
+        </a>
+        <a class="hero__slide" href="./tours/locanka.html" aria-roledescription="slide" aria-hidden="true" tabindex="-1">
+          <span class="hero__card-media">
+            <img class="hero__card-thumb" src="./assets/images/tours/locanka/cover.webp" alt="" loading="lazy" />
+          </span>
+          <span class="hero__card-body">
+            <span class="hero__card-label"><span class="motif" aria-hidden="true"></span><span data-i18n="home.hero.nextDepartureLabel">Featured route</span></span>
+            <span>
+              <span class="hero__card-title" data-i18n-html="routes.locanka.titleHtml">Ločanka</span>
+              <span class="hero__card-date" data-i18n="home.hero.slides.locanka">64 km · +930 m</span>
+            </span>
+          </span>
+        </a>
+        <a class="hero__slide" href="./tours/ravenska-kocna.html" aria-roledescription="slide" aria-hidden="true" tabindex="-1">
+          <span class="hero__card-media">
+            <img class="hero__card-thumb" src="./assets/images/tours/ravenska-kocna/cover.jpg" alt="" loading="lazy" />
+          </span>
+          <span class="hero__card-body">
+            <span class="hero__card-label"><span class="motif" aria-hidden="true"></span><span data-i18n="home.hero.nextDepartureLabel">Featured route</span></span>
+            <span>
+              <span class="hero__card-title" data-i18n-html="routes.ravenska-kocna.titleHtml">Ravenska Kočna</span>
+              <span class="hero__card-date" data-i18n="home.hero.slides.ravenska-kocna">16.6 km · +408 m</span>
+            </span>
+          </span>
+        </a>
       </div>
-      <div class="hero__card-body">
-        <div class="hero__card-label"><span class="motif" aria-hidden="true"></span><span data-i18n="home.hero.nextDepartureLabel">Featured Route</span></div>
-        <div>
-          <p class="hero__card-title" data-i18n="home.hero.nextDepartureTitle">Ljubljana to Trieste</p>
-          <p class="hero__card-date" data-i18n="home.hero.nextDepartureDate">134 km · +1,766 m</p>
-        </div>
+      <div class="hero__dots" role="group" data-i18n-aria-label="home.hero.slidesNav" aria-label="Choose a route">
+        <button type="button" class="hero__dot is-active" aria-current="true" data-slide="0"><span class="visually-hidden">1</span></button>
+        <button type="button" class="hero__dot" data-slide="1"><span class="visually-hidden">2</span></button>
+        <button type="button" class="hero__dot" data-slide="2"><span class="visually-hidden">3</span></button>
       </div>
     </aside>
   </div>

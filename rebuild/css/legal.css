@@ -300,9 +300,24 @@
  * (it fills 86.2% of the "Sofinancira Evropska unija" image); every other logo
  * is capped from it. Keep --eu-flag-h at 1cm or more. */
 .page-legal-doc[data-legal="e-plus"] .legal-switch,
+.page-legal-doc[data-legal="e-plus"] .legal-doc__lang,
 .page-legal-doc[data-legal="e-plus"] .legal-doc__toc,
 .page-legal-doc[data-legal="e-plus"] .legal-doc__tag {
   display: none;
+}
+
+/* A project page, not a legal text: use the site's normal page width so it
+ * lines up with the nav like Press/About. Running text keeps a readable measure. */
+.page-legal-doc[data-legal="e-plus"] .legal-doc__inner {
+  width: 100%;
+  max-width: var(--grid-col-12);
+}
+
+.page-legal-doc[data-legal="e-plus"] .legal-doc__body p,
+.page-legal-doc[data-legal="e-plus"] .legal-doc__body ul,
+.page-legal-doc[data-legal="e-plus"] .legal-doc__body ol,
+.page-legal-doc[data-legal="e-plus"] .legal-doc__lede {
+  max-width: 72ch;
 }
 
 .eu-logos {

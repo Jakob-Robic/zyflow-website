@@ -803,3 +803,97 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
 
   apply();
 })();
+
+/**
+ * Home hero — featured-route carousel. Three linked slides that crossfade
+ * slowly (one soft gesture, per the motion rules). Auto-advances every 7 s,
+ * pauses on hover, keyboard focus and hidden tabs, and never auto-advances
+ * for reduced-motion users. Dots switch slides directly.
+ */
+(function initHeroCarousel() {
+  const root = document.querySelector("[data-hero-carousel]");
+  if (!root) return;
+  const slides = Array.from(root.querySelectorAll(".hero__slide"));
+  const dots = Array.from(root.querySelectorAll(".hero__dot"));
+  if (slides.length < 2) return;
+
+  const INTERVAL = 7000;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let index = 0;
+  let timer = null;
+  let hovering = false;
+  let focused = false;
+
+  function show(next) {
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      const on = i === index;
+      slide.classList.toggle("is-active", on);
+      if (on) {
+        slide.removeAttribute("aria-hidden");
+        slide.removeAttribute("tabindex");
+        // Lazy thumbs: make sure the visible one is requested now.
+        const img = slide.querySelector("img[loading='lazy']");
+        if (img) img.loading = "eager";
+      } else {
+        slide.setAttribute("aria-hidden", "true");
+        slide.setAttribute("tabindex", "-1");
+      }
+    });
+    dots.forEach((dot, i) => {
+      const on = i === index;
+      dot.classList.toggle("is-active", on);
+      if (on) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
+    });
+  }
+
+  function stop() {
+    if (timer) window.clearInterval(timer);
+    timer = null;
+  }
+
+  function start() {
+    stop();
+    if (reducedMotion || hovering || focused || document.hidden) return;
+    timer = window.setInterval(() => show(index + 1), INTERVAL);
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      show(i);
+      start();
+    });
+  });
+
+  root.addEventListener("mouseenter", () => {
+    hovering = true;
+    stop();
+  });
+  root.addEventListener("mouseleave", () => {
+    hovering = false;
+    start();
+  });
+  root.addEventListener("focusin", () => {
+    focused = true;
+    stop();
+  });
+  root.addEventListener("focusout", (event) => {
+    if (root.contains(event.relatedTarget)) return;
+    focused = false;
+    start();
+  });
+  document.addEventListener("visibilitychange", start);
+
+  // Preload the other thumbs once the page is idle so the crossfade never shows a blank.
+  const warm = () =>
+    slides.forEach((slide) => {
+      const img = slide.querySelector("img[loading='lazy']");
+      if (img) img.loading = "eager";
+    });
+  if ("requestIdleCallback" in window) window.requestIdleCallback(warm, { timeout: 4000 });
+  else window.setTimeout(warm, 2500);
+
+  show(0);
+  start();
+})();

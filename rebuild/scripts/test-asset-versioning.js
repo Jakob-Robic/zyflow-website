@@ -65,7 +65,9 @@ test("built HTML references /js and /css with a content version", () => {
     assert.match(home, /fetchpriority="high"/);
     assert.doesNotMatch(home, /map-contours-featured\.svg/);
     assert.match(home, /\/assets\/images\/opt\/[0-9a-f]{12}\/map-contours\.svg/);
-    const heroImg = home.match(/<img\b[^>]*Cyclist riding a scenic road[^>]*>/);
+    // The hero photo is the first <img> inside .hero__media (alt text changes with the photo).
+    const heroMedia = home.slice(home.indexOf('class="hero__media"'));
+    const heroImg = heroMedia.match(/<img\b[^>]*>/);
     assert.ok(heroImg, "hero image should remain");
     assert.doesNotMatch(heroImg[0], /loading="lazy"/);
     assert.match(heroImg[0], /fetchpriority="high"/);
