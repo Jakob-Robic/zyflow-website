@@ -222,8 +222,14 @@
         "cookies": "Cookies",
         "impressum": "Impressum",
         "guides": "Guides",
-        "towns": "Cycling by town"
+        "towns": "Cycling by town",
+        "planner": "Route planner",
+        "listPlace": "List your place",
+        "publishRoutes": "Publish your routes",
+        "partnerSignIn": "Partner sign in"
       },
+      "explore": "Explore",
+      "companyLabel": "Company",
       "cats": {
         "kayak": "Tour",
         "bike": "Commute",
@@ -231,7 +237,7 @@
         "fourwd": "Gravel"
       },
       "newsletter": {
-        "title": "newsletter",
+        "title": "Newsletter",
         "body": "New bike-friendly places, routes and app updates. Once a month, no spam.",
         "note": "We never share your details.",
         "subscribe": "Subscribe",
@@ -244,9 +250,10 @@
         "errorRateLimit": "Too many attempts. Please wait a few minutes.",
         "errorVerify": "Please complete the verification and try again."
       },
-      "company": "Zyflow is made by HERKO d.o.o., Slovenia",
+      "disclaimer": "Zyflow is made by HERKO d.o.o., Slovenia. Write to us at <a href=\"mailto:support@zyflow.eu\">support@zyflow.eu</a>.",
       "copyright": "© 2026 Zyflow. All rights reserved.",
-      "cookiePreferences": "Cookie preferences"
+      "cookiePreferences": "Cookie preferences",
+      "language": "Language"
     },
     "notFound": {
       "title": "Page not found",

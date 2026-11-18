@@ -1045,6 +1045,31 @@ function injectLangSwitcher(html, page, locale) {
   );
 }
 
+const LANG_NATIVE_NAMES = { en: "English", sl: "Slovenščina", de: "Deutsch" };
+
+/** Footer language select: globe + current language + chevron, opening the same page in the other languages. */
+function injectFooterLang(html, page, locale, messages) {
+  if (!html.includes("<!-- footer-lang -->")) return html;
+  const nameFor = (lang) => LANG_NATIVE_NAMES[lang] || lang.toUpperCase();
+  const label = getByPath(messages, "chrome.footer.language");
+  const labelText = typeof label === "string" ? label : "Language";
+  const items = Object.entries(pageLangHrefs(page)).map(([lang, href]) => {
+    const active = locale === lang;
+    return `<li><a class="footer__lang-option${active ? " is-active" : ""}" href="${href}" hreflang="${lang}" lang="${lang}" data-lang="${lang}"${active ? ' aria-current="true"' : ""}>${nameFor(lang)}</a></li>`;
+  });
+  const select = `<details class="footer__lang">
+        <summary class="footer__lang-summary">
+          <img class="footer__lang-globe" src="/assets/images/icons/globe.svg" width="18" height="18" alt="" aria-hidden="true" />
+          <span class="footer__lang-current"><span class="visually-hidden">${escapeHtml(labelText)}: </span><span lang="${locale}">${nameFor(locale)}</span></span>
+          <img class="footer__lang-chevron" src="/assets/images/icons/chevron-down.svg" width="24" height="24" alt="" aria-hidden="true" />
+        </summary>
+        <ul class="footer__lang-list" aria-label="${escapeHtml(labelText)}">
+          ${items.join("\n          ")}
+        </ul>
+      </details>`;
+  return html.replaceAll("<!-- footer-lang -->", select);
+}
+
 function plainPlace(place) {
   return String(place || "")
     .replace(/[→·]/g, ",")
@@ -1739,6 +1764,7 @@ function buildPage(page, locale, messages) {
   html = rewriteAssetPaths(html);
   html = rewriteInternalLinks(html, locale);
   html = injectLangSwitcher(html, page, locale);
+  html = injectFooterLang(html, page, locale, messages);
   html = injectDocumentHead(html, page, locale, messages);
   html = injectAnalyticsBoot(html);
   html = injectAppStoreUrl(html, locale);
