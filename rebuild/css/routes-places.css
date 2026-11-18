@@ -1,0 +1,361 @@
+/**
+ * Routes ↔ Places (2026-11-18): breadcrumbs, /tours filter rows and paging,
+ * "Towns on this route" on route pages. Built from the existing tokens and patterns
+ * (blog filter rows, tour cards, tours chips); nothing here is a new visual language.
+ */
+
+/* —— Breadcrumb (route, signed route and town pages) ——
+   Sits above the hero panel, on the container's left edge, small and quiet. */
+.crumbs {
+  margin: 0 0 var(--space-gap-5);
+  font-size: var(--type-small);
+  line-height: 1.4;
+  color: var(--color-text-body-muted); /* #71717A on the page surface: 4.6:1 */
+}
+
+.crumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-gap-2) var(--space-gap-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.crumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-3);
+  min-width: 0;
+}
+
+.crumbs__item .motif {
+  width: 6px;
+  height: 6px;
+}
+
+.crumbs a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.crumbs a:hover,
+.crumbs a:focus-visible {
+  color: var(--color-text-heading);
+  text-decoration-color: currentColor;
+}
+
+.crumbs [aria-current="page"] {
+  color: var(--color-text-body);
+}
+
+/* On the photo hero the crumb lines up with the photo frame, not a container. */
+.crumbs--photo {
+  max-width: var(--grid-col-12);
+  margin: 0 auto var(--space-gap-5);
+}
+
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .crumbs--photo {
+    padding-inline: var(--page-pad-sm);
+  }
+}
+
+/* With the crumb out of the panel the title starts at the top of the copy column,
+   the lede follows it, and the price + buttons keep to the bottom. */
+.crumbs--hero + .tour-hero__panel .tour-hero__copy {
+  justify-content: flex-start;
+}
+
+.crumbs--hero + .tour-hero__panel .tour-hero__foot {
+  margin-top: auto;
+}
+
+/* —— /tours: extra filter rows under the style buttons (the Journal's filter rows) —— */
+/* —— /tours filter bar: type and the other rows as the Journal's filter chips (.blog-filters) ——
+   One row per group, label above its chips, groups side by side while they fit. */
+.blog-filters.tours-filterbar {
+  align-items: flex-start;
+  gap: var(--space-gap-5) var(--space-gap-8);
+  margin: 0;
+}
+
+.tours-filterbar > [hidden] {
+  display: none;
+}
+
+.tours-filterbar .blog-filters__label {
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+.tours-filters__group {
+  min-width: 0;
+}
+
+.tours-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-2);
+  min-height: 40px;
+  white-space: nowrap;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.tours-chip:hover {
+  border-color: var(--color-text-heading);
+}
+
+.tours-chip:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+}
+
+.tours-chip img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* The icons are white line art (as on the old type buttons): dark on a light chip, white on
+   the dark active chip; in dark mode the active chip is light, so its icon goes dark. */
+html[data-theme="light"] .tours-chip img {
+  filter: invert(1) brightness(0.12);
+}
+
+html[data-theme="light"] .tours-chip.is-active img {
+  filter: none;
+}
+
+html[data-theme="dark"] .tours-chip.is-active img {
+  filter: invert(1) brightness(0.12);
+}
+
+/* The hero is shorter now that the filters are chips. */
+.page-tours .tours-hero__top {
+  margin-bottom: var(--space-gap-8);
+}
+
+.page-tours .tours-hero {
+  padding-bottom: var(--space-gap-7);
+}
+
+/* Phone: every row is one line of chips that scrolls sideways (snap, a fade on the edge),
+   never a stack of tall buttons; the page itself never scrolls sideways. */
+@media (max-width: 720px) {
+  .blog-filters.tours-filterbar {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: var(--space-gap-4);
+  }
+
+  .tours-filters__group {
+    width: 100%;
+  }
+
+  .tours-filterbar .blog-filters__label {
+    margin-bottom: var(--space-gap-2);
+  }
+
+  .blog-filters__links.tours-filters__links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 0;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    padding: 2px 32px 2px 2px; /* room for the focus ring and the fade */
+    margin: -2px;
+  }
+
+  .tours-filters__links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tours-chip {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  .page-tours .tours-hero {
+    padding-block: var(--space-gap-5) var(--space-gap-5);
+  }
+
+  .page-tours .tours-hero__title {
+    margin-bottom: var(--space-gap-4);
+  }
+
+  /* Compact highlight pills (they wrap, nothing hides behind a scroll), so the first route
+     shows on the first screen. */
+  .page-tours .tours-hero__quals {
+    gap: var(--space-gap-2);
+  }
+
+  .page-tours .tours-qual {
+    gap: var(--space-gap-2);
+    padding: var(--space-gap-1) var(--space-gap-3) var(--space-gap-1) var(--space-gap-2);
+    font-size: var(--type-small);
+    white-space: nowrap;
+  }
+
+  .page-tours .tours-qual img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .page-tours .tours-hero__lede {
+    font-size: var(--type-body);
+  }
+
+  .page-tours .tours-hero__top {
+    gap: var(--space-gap-5);
+    margin-bottom: var(--space-gap-6);
+  }
+}
+
+.tours-filters {
+  align-items: center;
+}
+
+.tours-filters__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-3);
+}
+
+.tours-filters__clear {
+  background: none;
+  border: 0;
+  padding: var(--space-gap-2) 0;
+  font: inherit;
+  font-size: var(--type-small);
+  color: var(--color-text-heading);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* Cards after the first page wait for "Show more" (the noscript style in grid.html shows them all). */
+.tours-grid__list .tour-card.is-paged-out {
+  display: none;
+}
+
+.tours-grid__more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-gap-8);
+}
+
+.tours-grid__more [hidden],
+.tours-grid__empty [hidden] {
+  display: none;
+}
+
+.tours-grid__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-gap-5);
+}
+
+.tours-grid__empty p {
+  margin: 0;
+}
+
+/* A signed route has no photo of its own yet: a plain panel under the location pill. */
+.tour-card__media--plain {
+  height: 140px;
+  background: var(--color-surface-3);
+}
+
+/* —— "Towns on this route" on a route page —— */
+.route-towns {
+  padding-block: var(--section-pad-md) 0;
+}
+
+.route-towns__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  line-height: 1.05;
+  margin: 0 0 var(--space-gap-4);
+  overflow-wrap: anywhere;
+}
+
+.route-towns__lead {
+  margin: 0 0 var(--space-gap-6);
+  max-width: 40rem;
+  color: var(--color-text-body-muted);
+}
+
+.route-towns__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.route-towns__link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-gap-1);
+  min-width: 11rem;
+  padding: var(--space-gap-4) var(--space-gap-5);
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-heading);
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.route-towns__link:hover,
+.route-towns__link:focus-visible {
+  background: var(--color-surface-2);
+  border-color: var(--color-surface-2);
+}
+
+.route-towns__name {
+  font-family: var(--font-heading);
+  font-size: var(--type-h5);
+  line-height: 1.1;
+}
+
+.route-towns__role {
+  font-size: var(--type-small);
+  color: var(--color-text-body-muted);
+}
+
+@media (max-width: 720px) {
+  .route-towns__item {
+    flex: 1 1 100%;
+  }
+
+  .route-towns__link {
+    display: flex;
+    width: 100%;
+  }
+}
+
+/* —— "Routes from here" on a town page: route cards in the town rail, which is narrower
+   than the /tours grid on a phone; keep figures and the button on one line each. —— */
+#routes-here .tour-card__meta {
+  flex-wrap: wrap;
+  row-gap: var(--space-gap-1);
+}
+
+#routes-here .tour-card__meta span,
+#routes-here .tour-card__cta {
+  white-space: nowrap;
+}
+
+#routes-here .tour-card__foot {
+  flex-wrap: wrap;
+  gap: var(--space-gap-3);
+}

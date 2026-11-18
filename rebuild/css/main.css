@@ -18,6 +18,7 @@
 @import url("./tours.css");
 @import url("./tour.css");
 @import url("./town.css");
+@import url("./routes-places.css"); /* breadcrumbs, /tours filters + paging, towns on a route */
 @import url("./blog.css");
 @import url("./article.css");
 @import url("./guides.css");

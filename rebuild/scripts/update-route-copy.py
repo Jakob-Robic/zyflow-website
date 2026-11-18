@@ -59,13 +59,15 @@ def R(
 ):
     th = title_html or title.lower()
     unit = f" · {elev} m" if elev else ""
-    price = f"{km} km" if km else (f"{elev} m" if elev else "")
-    meta0 = f"{km} km" if km else (cat_en if elev else "")
-    meta1 = f"{elev} m" if elev else cat_en
-    meta2 = cat_en if elev and km else ""
-    meta0_sl = f"{km} km" if km else (cat_sl if elev else "")
-    meta1_sl = f"{elev} m" if elev else cat_sl
-    meta2_sl = cat_sl if elev and km else ""
+    price = f"{km} km" if km else ""
+    # Card meta line is always distance · climb · type; a missing figure is left empty
+    # (the card drops the empty slot) rather than repeating the type (2026-11-18).
+    meta0 = f"{km} km" if km else ""
+    meta1 = f"{elev} m" if elev else ""
+    meta2 = cat_en
+    meta0_sl = f"{km} km" if km else ""
+    meta1_sl = f"{elev} m" if elev else ""
+    meta2_sl = cat_sl
 
     def route(lang):
         if lang == "en":
@@ -475,7 +477,7 @@ CONTENT = {
         km="",
         elev="",
         cat_en="Gravel",
-        cat_sl="Gravel",
+        cat_sl="Makadamska",
         card_en="Foothill gravel around Udin boršt — forest tracks, gentle rollers and enough variety to feel adventurous without a high pass.",
         card_sl="Predalpski gravel okoli Udin boršta — gozdne sledi, blagi valovi in dovolj raznolikosti brez visokega prelaza.",
         lede_en="Ride the edge of Udin boršt: gravel under the canopy, foothill air, turn back when you like.",
@@ -543,7 +545,7 @@ CONTENT = {
         km="",
         elev="",
         cat_en="Gravel",
-        cat_sl="Gravel",
+        cat_sl="Makadamska",
         card_en="Into the Udin boršt nature reserve toward the crooked fir — shaded tracks and a landmark finish in the forest.",
         card_sl="V naravni rezervat Udin boršt do Krive jelke — senčne sledi in znamenit zaključek v gozdu.",
         lede_en="A nature-reserve gravel ride to Kriva jelka — quiet, green and close to Tržič.",
@@ -577,7 +579,7 @@ CONTENT = {
         km="",
         elev="",
         cat_en="Gravel",
-        cat_sl="Gravel",
+        cat_sl="Makadamska",
         card_en="A varied foothill loop linking Gozd with Udin boršt — more climbing than the family routes, still short of alpine grades.",
         card_sl="Raznolika predalpska zanka med Gozdom in Udin borštom — več vzpona kot družinske, še vedno pod alpskimi nakloni.",
         lede_en="Foothill variety day: forest, village connectors and enough elevation to feel like training.",

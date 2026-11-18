@@ -198,6 +198,7 @@
       "links": {
         "home": "Home",
         "tours": "Routes",
+        "places": "Places",
         "about": "About",
         "journal": "Journal",
         "contact": "Contact",
@@ -231,7 +232,7 @@
       "explore": "Explore",
       "companyLabel": "Company",
       "cats": {
-        "kayak": "Tour",
+        "kayak": "Touring",
         "bike": "Commute",
         "hike": "Alpine",
         "fourwd": "Gravel"
@@ -515,12 +516,33 @@
       "eyebrow": "our routes"
     },
     "filter": {
-      "label": "browse:",
-      "all": "all",
-      "tour": "tour",
-      "alpine": "alpine",
-      "commute": "commute",
-      "gravel": "gravel"
+      "label": "Type",
+      "all": "All",
+      "tour": "Touring",
+      "alpine": "Alpine",
+      "commute": "Commute",
+      "gravel": "Gravel"
+    },
+    "filters": {
+      "country": "Country",
+      "region": "Region",
+      "kind": "Route",
+      "length": "Length",
+      "kindOptions": {
+        "signed": "Signed routes",
+        "loop": "Local loops"
+      },
+      "lengthOptions": {
+        "under-30": "Under 30 km",
+        "30-60": "30–60 km",
+        "60-100": "60–100 km",
+        "100-plus": "100 km and more"
+      },
+      "clear": "Clear filters",
+      "remove": "Remove filter",
+      "more": "Show more routes",
+      "countOne": "route",
+      "countOther": "routes"
     },
     "viewCta": "View route",
     "empty": "No routes here yet. New rides are added as we map more bike-friendly places.",
@@ -572,7 +594,7 @@
         "meta1": "1740 m",
         "meta2": "Alpine",
         "body": "Tržič’s alpine flagship: forest roads and pasture shelves under the long white wall of Košuta, big climbing, bigger views.",
-        "price": "1740 m",
+        "price": "39.7 km",
         "unit": " · 1740 m"
       },
       {
@@ -580,22 +602,22 @@
         "region": "Gorenjska, Slovenia",
         "title": "Tržič – Jezersko",
         "meta0": "28.1 km",
-        "meta1": "Alpine",
+        "meta1": "1299 m",
         "meta2": "Alpine",
         "body": "A linking ride between two alpine valleys, from Tržič’s Karawanks flank across to the glacier bowl of Jezersko.",
         "price": "28.1 km",
-        "unit": ""
+        "unit": " · 1299 m"
       },
       {
         "place": "Tržič → Storžič",
         "region": "Gorenjska, Slovenia",
         "title": "Dom pod Storžičem",
         "meta0": "18.1 km",
-        "meta1": "Alpine",
+        "meta1": "280 m",
         "meta2": "Alpine",
         "body": "A hut-day climb toward Storžič, forest gradients, mountain air and a clear turnaround at Dom pod Storžičem.",
         "price": "18.1 km",
-        "unit": ""
+        "unit": " · 280 m"
       },
       {
         "place": "Tržič → Ljubelj",
@@ -613,66 +635,66 @@
         "region": "Gorenjska, Slovenia",
         "title": "Rožnovenska pot",
         "meta0": "20.1 km",
-        "meta1": "Touring",
+        "meta1": "369 m",
         "meta2": "Touring",
         "body": "A culture-forward loop from Tržič through Brezje pri Tržiču, churches, valley towns and riding that stays scenic without going fully alpine.",
         "price": "20.1 km",
-        "unit": ""
+        "unit": " · 369 m"
       },
       {
         "place": "Tržič → Dobrča",
         "region": "Gorenjska, Slovenia",
         "title": "Dobrča",
         "meta0": "26.9 km",
-        "meta1": "Alpine",
+        "meta1": "2067 m",
         "meta2": "Alpine",
         "body": "A full alpine day toward Dobrča, long climbs, ridge air and the feeling of riding the Karawanks rather than around them.",
         "price": "26.9 km",
-        "unit": ""
+        "unit": " · 2067 m"
       },
       {
         "place": "Tržič · Udin boršt",
         "region": "Gorenjska, Slovenia",
         "title": "Udin boršt",
         "meta0": "25.3 km",
-        "meta1": "Gravel",
+        "meta1": "286 m",
         "meta2": "Gravel",
         "body": "Foothill gravel around Udin boršt, forest tracks, gentle rollers and enough variety to feel adventurous without a high pass.",
         "price": "25.3 km",
-        "unit": ""
+        "unit": " · 286 m"
       },
       {
         "place": "Tržič · Three Bells",
         "region": "Gorenjska, Slovenia",
         "title": "Pot treh zvonov",
         "meta0": "10 km",
-        "meta1": "Touring",
+        "meta1": "144 m",
         "meta2": "Touring",
         "body": "The easy family loop of the Tržič set, gentle terrain, village bells and a rhythm that works for mixed abilities.",
         "price": "10 km",
-        "unit": ""
+        "unit": " · 144 m"
       },
       {
         "place": "Tržič · Kriva jelka",
         "region": "Gorenjska, Slovenia",
         "title": "Kriva jelka",
         "meta0": "24 km",
-        "meta1": "Gravel",
+        "meta1": "386 m",
         "meta2": "Gravel",
         "body": "Into the Udin boršt nature reserve toward the crooked fir, shaded tracks and a landmark finish in the forest.",
         "price": "24 km",
-        "unit": ""
+        "unit": " · 386 m"
       },
       {
         "place": "Tržič · Gozd",
         "region": "Gorenjska, Slovenia",
         "title": "Gozd – Udin boršt",
         "meta0": "26.9 km",
-        "meta1": "Gravel",
+        "meta1": "763 m",
         "meta2": "Gravel",
         "body": "A varied foothill loop linking Gozd with Udin boršt, more climbing than the family routes, still short of alpine grades.",
         "price": "26.9 km",
-        "unit": ""
+        "unit": " · 763 m"
       },
       {
         "place": "Kranj → Kamnik",
@@ -690,22 +712,22 @@
         "region": "Gorenjska, Slovenia",
         "title": "Ljubljančanka",
         "meta0": "70 km",
-        "meta1": "Touring",
+        "meta1": "460 m",
         "meta2": "Touring",
         "body": "South from Kranj to the capital, Smlednik Castle, Tivoli and Ljubljana Castle on a day that mixes countryside with city arrival.",
         "price": "70 km",
-        "unit": ""
+        "unit": " · 460 m"
       },
       {
         "place": "Kranj → Škofja Loka",
         "region": "Gorenjska, Slovenia",
         "title": "Ločanka",
         "meta0": "64 km",
-        "meta1": "Touring",
+        "meta1": "930 m",
         "meta2": "Touring",
         "body": "Into Škofja Loka’s medieval core, Capuchin bridges, the castle hill and Crngrob church on one of the flower’s prettiest days.",
         "price": "64 km",
-        "unit": ""
+        "unit": " · 930 m"
       },
       {
         "place": "Jezersko · Mali vrh",
@@ -713,7 +735,7 @@
         "title": "Mali vrh",
         "meta0": "17.3 km",
         "meta1": "596 m",
-        "meta2": "Alpine",
+        "meta2": "Touring",
         "body": "Quiet forest road to the Mali vrh lookout, Virnikov Grintovec, Košuta and Storžič in one calm Jezersko half-day.",
         "price": "17.3 km",
         "unit": " · 596 m"
@@ -745,7 +767,7 @@
         "region": "Gorenjska, Slovenia",
         "title": "Tržičanka",
         "meta0": "68 km",
-        "meta1": "Touring",
+        "meta1": "",
         "meta2": "Touring",
         "body": "North to Tržič’s old town and the Karawanks gateway, Kamen Castle ruins, valley roads and a taste of the alpine network beyond.",
         "price": "68 km",
@@ -1917,7 +1939,7 @@
       ]
     },
     "mali-vrh": {
-      "crumbType": "Alpine",
+      "crumbType": "Touring",
       "titleHtml": "mali vrh",
       "lede": "A calm Jezersko half-day on forest road to the Mali vrh lookout, Virnikov Grintovec, Košuta and Storžič in one panoramic out-and-back.",
       "place": "jezersko",

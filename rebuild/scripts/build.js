@@ -67,6 +67,18 @@ const {
   signedRouteLlmsLines,
 } = require("./signed-routes");
 const { renderLegalMarkdown } = require("./legal-markdown");
+// Routes ↔ Places (2026-11-18): /tours list + filters, breadcrumbs, route ↔ town links, slug checks.
+const {
+  assertPlaceSlugs,
+  crumbsLd,
+  entryBySlug,
+  injectToursList,
+  renderCrumbs,
+  renderRouteCard,
+  renderTownsOnRoute,
+  routeCrumbs,
+  routeEntriesFor,
+} = require("./routes-places");
 const { routeBySlug, ROUTES } = require("./routes");
 const { versionAssets } = require("./version-assets");
 const { appStoreUrlForLocale, assertAppStoreLinks } = require("./store-links");
@@ -455,9 +467,9 @@ function collectCardCategories(html) {
   return categories;
 }
 
-/** Categories that have a tour card in the grid after stamping from ROUTES. */
+/** Categories that have a tour card in the /tours grid (rendered from the route data) after stamping from ROUTES. */
 function publishedCardCategories() {
-  const grid = read(path.join(ROOT, "sections/tours/grid.html"));
+  const grid = routeEntriesFor("en").map((entry) => renderRouteCard(entry, "en")).join("\n");
   return collectCardCategories(stampCardCategories(grid));
 }
 
@@ -759,30 +771,10 @@ function rewriteInternalLinks(html, pageLocale) {
   return html;
 }
 
+/** A route card for "more routes" and the Journal: the same card as /tours (routes-places.js), without the filter data. */
 function renderTourCard(slug) {
-  const rel = routeBySlug(slug);
-  const idx = ROUTES.findIndex((r) => r.slug === slug);
-  const href = `./tours/${rel.slug}.html`;
-  return `      <article class="tour-card">
-        <div class="tour-card__media">
-          <img src="${rel.cover}" alt="" />
-          <div class="tour-card__loc">
-            <div class="tour-card__pin"><img src="./assets/images/icons/location.svg" alt="" /></div>
-            <div class="tour-card__loc-text"><span data-i18n="tours.cards.${idx}.place"></span><span data-i18n="tours.cards.${idx}.region"></span></div>
-          </div>
-        </div>
-        <div class="tour-card__body">
-          <div>
-            <h3 class="tour-card__name" data-i18n="tours.cards.${idx}.title"></h3>
-            <div class="tour-card__meta"><span data-i18n="tours.cards.${idx}.meta0"></span><span class="motif" aria-hidden="true"></span><span data-i18n="tours.cards.${idx}.meta1"></span><span class="motif" aria-hidden="true"></span><span data-i18n="tours.cards.${idx}.meta2"></span></div>
-          </div>
-          <p class="tour-card__desc" data-i18n="tours.cards.${idx}.body"></p>
-          <div class="tour-card__foot">
-            <p class="tour-card__price"><span data-i18n="tours.cards.${idx}.price"></span><span data-i18n="tours.cards.${idx}.unit"></span></p>
-            <a class="tour-card__cta" href="${href}"><span data-i18n="tours.viewCta">View route</span> <img src="./assets/images/icons/arrow-right-sm.svg" alt="" /></a>
-          </div>
-        </div>
-      </article>`;
+  routeBySlug(slug); // throws on an unknown slug, as before
+  return renderRouteCard(entryBySlug(slug), DEFAULT_LOCALE, { attrs: false });
 }
 
 function injectBlog(html, page, locale, messages) {
@@ -961,7 +953,7 @@ function getRouteGeometry(route) {
   return geom;
 }
 
-function injectTourContent(html, routeSlug) {
+function injectTourContent(html, routeSlug, locale = DEFAULT_LOCALE, messages = {}) {
   const route = routeBySlug(routeSlug);
   let hero = read(path.join(ROOT, "sections/tour/hero.html"));
   let body = read(path.join(ROOT, "sections/tour/body.html"));
@@ -986,7 +978,11 @@ function injectTourContent(html, routeSlug) {
 
   hero = replaceTokens(hero);
   body = replaceTokens(body);
-  const more = renderTourMore(routeSlug);
+  // Breadcrumb above the hero panel and the towns the route starts in or rides through (routes-places.js).
+  const entry = entryBySlug(routeSlug);
+  const title = messages?.tours?.cards?.[ROUTES.findIndex((r) => r.slug === routeSlug)]?.title || routeSlug;
+  hero = hero.replace("__CRUMBS__", entry ? renderCrumbs(routeCrumbs(entry, locale, title), locale, "crumbs--hero") : "");
+  const more = (entry ? renderTownsOnRoute(entry, locale) : "") + renderTourMore(routeSlug);
 
   if (
     !html.includes("<!-- TOUR_HERO -->") ||
@@ -1167,31 +1163,9 @@ function structuredData(page, locale, messages) {
   const description = getByPath(messages, `meta.pages.${page.id}.description`) || "";
   const canonical = absoluteUrl(page.path, locale);
   const name = card.title || page.routeSlug;
-  const homeName = getByPath(messages, "chrome.nav.links.home") || "Home";
-  const toursName = getByPath(messages, "chrome.nav.links.tours") || "Routes";
-  graph.push({
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: homeName,
-        item: absoluteUrl("/", locale),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: toursName,
-        item: absoluteUrl("/tours", locale),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name,
-        item: canonical,
-      },
-    ],
-  });
+  // Same levels as the visible breadcrumb; levels without a public page (country, region) are left out.
+  const crumbEntry = entryBySlug(page.routeSlug);
+  if (crumbEntry) graph.push(crumbsLd(routeCrumbs(crumbEntry, locale, name), SITE_ORIGIN));
   const trip = {
     "@type": "TouristTrip",
     name,
@@ -1484,6 +1458,10 @@ function pageContentPaths(page) {
 }
 
 function writeSeoFiles() {
+  // TODO(routes-places, 2026-11-18): one sitemap.xml for now. When a second country goes
+  // public, split per country (sitemap-slovenia.xml, …) behind a sitemap index: town pages
+  // know their country (townPlace in routes-places.js) and routes carry entry.country.
+  // Keep every <loc> URL as it is; only the file they are listed in changes.
   const indexable = PAGES.filter((p) => p.indexable);
   const today = new Date().toISOString().slice(0, 10);
   const shallow = repositoryIsShallow();
@@ -1747,11 +1725,12 @@ function buildPage(page, locale, messages) {
   applyToggleBlocks(html, "journal", JOURNAL_IS_PUBLIC, pageRel);
   applyToggleBlocks(html, "guides", GUIDES_ARE_PUBLIC, pageRel);
   if (page.routeSlug) {
-    html = injectTourContent(html, page.routeSlug);
+    html = injectTourContent(html, page.routeSlug, locale, messages);
   }
   html = injectTown(html, page);
   html = injectSignedRoute(html, page);
   html = resolveIncludes(html);
+  html = injectToursList(html, locale);
   html = applyPublicationFlags(html, pageRel);
   // <!-- sl-only:public --> blocks stay on Slovenian pages only (EU project notice).
   html = applyToggleBlocks(html, "sl-only", locale === "sl", pageRel);
@@ -1966,6 +1945,8 @@ async function build() {
   }
   assertGuidesBuildable({ guidesPublic: GUIDES_ARE_PUBLIC, siteIndex: SITE_INDEX });
   assertTownsBuildable({ townsPublic: TOWNS_ARE_PUBLIC, siteIndex: SITE_INDEX });
+  // Slug rules for new countries: no duplicate town or route slug, per language (routes-places.js).
+  assertPlaceSlugs();
 
   // Guides index meta is checked even while guides are hidden.
   const metaPages = GUIDES_ARE_PUBLIC ? PAGES : [...PAGES, ...GUIDE_INDEX_PAGES];
