@@ -44,8 +44,14 @@
         "cookies": "Cookies",
         "impressum": "Impressum",
         "guides": "Ratgeber",
-        "towns": "Radfahren nach Orten"
+        "towns": "Radfahren nach Orten",
+        "planner": "Routenplaner",
+        "listPlace": "Ort eintragen",
+        "publishRoutes": "Routen veröffentlichen",
+        "partnerSignIn": "Partner-Login"
       },
+      "explore": "Entdecken",
+      "companyLabel": "Unternehmen",
       "cats": {
         "kayak": "Tour",
         "bike": "Pendeln",
@@ -53,7 +59,7 @@
         "fourwd": "Gravel"
       },
       "newsletter": {
-        "title": "newsletter",
+        "title": "Newsletter",
         "body": "Neue fahrradfreundliche Orte, Routen und App-Updates. Einmal im Monat, kein Spam.",
         "note": "Wir geben deine Daten nie weiter.",
         "subscribe": "Abonnieren",
@@ -66,9 +72,10 @@
         "errorRateLimit": "Zu viele Versuche. Bitte warte ein paar Minuten.",
         "errorVerify": "Bitte schließ die Überprüfung ab und versuch es noch einmal."
       },
-      "company": "Zyflow ist ein Produkt der HERKO d.o.o., Slowenien",
+      "disclaimer": "Zyflow ist ein Produkt der HERKO d.o.o., Slowenien. Schreib uns an <a href=\"mailto:support@zyflow.eu\">support@zyflow.eu</a>.",
       "copyright": "© 2026 Zyflow. Alle Rechte vorbehalten.",
-      "cookiePreferences": "Cookie-Einstellungen"
+      "cookiePreferences": "Cookie-Einstellungen",
+      "language": "Sprache"
     },
     "appModal": {
       "title": "Hol dir die Zyflow-App",

@@ -222,8 +222,14 @@
         "cookies": "Piškotki",
         "impressum": "Impressum",
         "guides": "Vodniki",
-        "towns": "Kolesarjenje po krajih"
+        "towns": "Kolesarjenje po krajih",
+        "planner": "Načrtovalnik poti",
+        "listPlace": "Dodaj svoj kraj",
+        "publishRoutes": "Objavi svoje poti",
+        "partnerSignIn": "Prijava za partnerje"
       },
+      "explore": "Raziskuj",
+      "companyLabel": "Podjetje",
       "cats": {
         "kayak": "Tura",
         "bike": "Vsakodnevno",
@@ -231,10 +237,10 @@
         "fourwd": "Makadam"
       },
       "newsletter": {
-        "title": "novice",
+        "title": "Novice",
         "body": "Novi kolesarjem prijazni kraji, poti in novosti v aplikaciji. Enkrat na mesec, brez spama.",
         "note": "Tvojih podatkov ne delimo z nikomer.",
-        "subscribe": "Naroči se",
+        "subscribe": "Prijavi se",
         "email": "E-pošta",
         "emailPlaceholder": "E-poštni naslov",
         "honeypot": "Spletna stran podjetja",
@@ -244,9 +250,10 @@
         "errorRateLimit": "Preveč poskusov. Počakaj nekaj minut.",
         "errorVerify": "Dokončaj preverjanje in poskusi znova."
       },
-      "company": "Zyflow ustvarja HERKO d.o.o., Slovenija",
+      "disclaimer": "Zyflow ustvarja HERKO d.o.o., Slovenija. Piši nam na <a href=\"mailto:support@zyflow.eu\">support@zyflow.eu</a>.",
       "copyright": "© 2026 Zyflow. Vse pravice pridržane.",
-      "cookiePreferences": "Nastavitve piškotkov"
+      "cookiePreferences": "Nastavitve piškotkov",
+      "language": "Jezik"
     },
     "notFound": {
       "title": "Strani ni mogoče najti",

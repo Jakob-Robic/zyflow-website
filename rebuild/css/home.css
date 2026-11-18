@@ -347,22 +347,25 @@ html[data-theme="light"] .nav__logo--light {
 
 /* White-fill icons → soft dark on cream */
 html[data-theme="light"] .theme-toggle__btn img,
-html[data-theme="light"] .footer__social img,
-html[data-theme="light"] .footer__cat img,
+html[data-theme="light"] .footer__lang-summary img,
 html[data-theme="light"] .tours-qual img,
 html[data-theme="light"] .tours-filter__btn img,
 html[data-theme="light"] .contact-social img,
 html[data-theme="light"] .link--arrow img,
-html[data-theme="light"] .footer__email button img,
+html[data-theme="light"] .footer__social img,
 html[data-theme="light"] .why__item img {
   filter: invert(1) brightness(0.12);
 }
 
-/* —— Footer —— */
+/* —— Footer ——
+ * Layout, spacing and type scale follow the Yonder "Footer Styles" reference
+ * (Figma 65:4827): 528px lead column + 24px gutter + 628px menu block, 96px
+ * between rows. Colours and fonts are Zyflow's own tokens.
+ */
 .footer {
   background: var(--color-surface-2);
   padding-top: var(--section-pad-md);
-  padding-bottom: 0;
+  padding-bottom: var(--section-pad-md);
   position: relative;
   overflow: visible;
   /*
@@ -371,10 +374,15 @@ html[data-theme="light"] .why__item img {
    * opacity 0.7, which dropped it to 2.26:1. Mix body ink into the footer
    * surface so light and dark both clear WCAG AA (4.5:1) without editing
    * the design system: 70% is 5.54:1 on #e0d9cc / 6.57:1 on #373B2A, 66%
-   * (the quieter note) is 4.90:1 / 6.03:1.
+   * (the quieter labels) is 4.90:1 / 6.03:1.
    */
   --footer-text-secondary: color-mix(in srgb, var(--color-text-body) 70%, var(--color-surface-2));
   --footer-text-quiet: color-mix(in srgb, var(--color-text-body) 66%, var(--color-surface-2));
+  /* Reference gaps that sit between our 4px-grid tokens. */
+  --footer-gap-xs: 3px;
+  --footer-gap-sm: 6px;
+  --footer-gap-md: 9px;
+  --footer-menu-row-gap: 60px;
 }
 
 /* Torn edge pulls up over the last section so any page surface blends in */
@@ -394,7 +402,8 @@ main > section:last-child {
 }
 
 .footer__inner {
-  max-width: var(--grid-col-12);
+  /* 1280px of content, like the nav and the reference container. */
+  max-width: calc(var(--grid-col-12) + 2 * var(--space-gap-6));
   margin: 0 auto;
   padding-inline: var(--space-gap-6);
   display: flex;
@@ -402,87 +411,92 @@ main > section:last-child {
   gap: var(--space-gap-11);
   position: relative;
   z-index: 1;
+  font-size: var(--type-small);
+  line-height: 1.5;
 }
 
-.footer__columns {
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__top {
   display: grid;
-  grid-template-columns: minmax(12rem, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
-  align-items: start;
-  gap: var(--space-gap-8);
+  grid-template-columns: minmax(0, 528px) minmax(0, 628px);
+  gap: var(--grid-gutter);
+  align-items: stretch;
 }
 
-.footer__menu {
+/* Lead column: big links on top, newsletter pinned to the bottom. */
+.footer__lead {
   display: flex;
   flex-direction: column;
-  gap: var(--space-gap-2);
+  justify-content: space-between;
+  gap: var(--footer-menu-row-gap);
   min-width: 0;
-  width: 100%;
 }
 
-.footer__menu a {
-  font-family: var(--font-heading);
-  font-size: clamp(1.125rem, 0.95rem + 0.7vw, 1.5rem);
-  line-height: 1.2;
-  color: var(--color-text-heading);
-  text-transform: lowercase;
-  white-space: nowrap;
+.footer__label {
+  margin: 0;
+  font-size: var(--type-small);
+  line-height: 1.5;
+  color: var(--footer-text-quiet);
 }
 
-.footer__cats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-gap-2);
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  justify-self: center;
-}
-
-/* Three live categories (no commute yet): one row, no empty cell. */
-.footer__cats:has(> .footer__cat:nth-child(3):last-child) {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.footer__cat {
+.footer__explore {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-gap-4);
-  padding: var(--space-gap-5);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-sm);
-  text-align: center;
-  aspect-ratio: 1 / 1;
-  min-height: 0;
+  gap: var(--footer-gap-md);
 }
 
-.footer__cat img {
-  width: 48px;
-  height: 48px;
+.footer__big-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--footer-gap-sm);
 }
 
-.footer__cat span {
-  font-weight: 600;
-  font-size: var(--type-body);
+.footer__big-links a {
+  font-family: var(--font-heading);
+  font-size: var(--type-h4);
+  line-height: 1.1;
+  color: var(--color-text-heading);
 }
 
 .footer__subscribe {
   width: 100%;
+  max-width: 411px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-gap-6);
-  justify-self: end;
+  gap: var(--grid-gutter);
+}
+
+.footer__subscribe-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--footer-gap-md);
 }
 
 .footer__subscribe h2 {
+  margin: 0;
   font-family: var(--font-heading);
   font-size: var(--type-h5);
-  text-transform: lowercase;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-text-heading);
 }
 
 .footer__subscribe p {
+  margin: 0;
+  font-size: var(--type-small);
+  line-height: 1.5;
   color: var(--footer-text-secondary);
+}
+
+.footer__subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-5);
 }
 
 .footer__email {
@@ -495,90 +509,299 @@ main > section:last-child {
 .footer__email-row {
   display: flex;
   align-items: center;
+  gap: var(--space-gap-3);
   height: var(--form-input-height);
-  padding-inline: var(--form-input-padding);
+  padding-inline: var(--form-input-padding) 5px;
   border: 1px solid var(--form-input-border-color);
   border-radius: var(--form-input-radius);
   background: transparent;
 }
 
+/* The light hairline (#DDD8CC) disappears on the sand footer fill. */
+html[data-theme="light"] .footer__email-row,
+html[data-theme="light"] .footer__lang-list {
+  border-color: color-mix(in srgb, var(--color-text-body) 22%, var(--color-surface-2));
+}
+
+html .footer__email-row:focus-within {
+  border-color: var(--color-text-body);
+}
+
 .footer__email input {
   flex: 1;
-  border: 0;
-  background: transparent;
-  color: var(--color-text-body);
-  outline: none;
-}
-
-.footer__email input::placeholder {
-  color: var(--color-text-body-muted);
-  opacity: 0.5;
-}
-
-.footer__email button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
   border: 0;
   background: transparent;
   color: var(--color-text-body);
   font-family: var(--font-body);
-  font-size: var(--type-small);
-  font-weight: 600;
+  font-size: var(--type-body);
+  line-height: 1.5;
+  outline: none;
+}
+
+.footer__email input::placeholder {
+  color: var(--color-text-body);
+  opacity: 0.5;
+}
+
+/* Submit: small primary button inside the input row (label + arrow). */
+.footer__submit {
+  flex-shrink: 0;
   cursor: pointer;
-  padding-inline: var(--space-gap-2);
+}
+
+.footer__submit-icon {
+  display: block;
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+  background-color: currentColor;
+  -webkit-mask: url("/assets/images/icons/arrow-right-md.svg") center / contain no-repeat;
+  mask: url("/assets/images/icons/arrow-right-md.svg") center / contain no-repeat;
+}
+
+.footer__submit:focus-visible {
+  outline: 2px solid var(--color-text-body);
+  outline-offset: 3px;
+}
+
+.footer__submit:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 .footer__subscribe p.footer__note {
-  font-size: var(--type-small);
-  color: var(--footer-text-quiet);
-  opacity: 1;
+  color: var(--footer-text-secondary);
 }
 
+/* Four small menus, two per row. */
+.footer__menus {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 302px));
+  gap: var(--footer-menu-row-gap) var(--grid-gutter);
+  align-content: start;
+  min-width: 0;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--footer-gap-md);
+  min-width: 0;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--footer-gap-md);
+}
+
+.footer__links a,
+.footer__cookie-btn {
+  font-size: var(--type-small);
+  line-height: 1.5;
+  color: var(--color-text-heading);
+}
+
+.footer__cookie-btn {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer__big-links a:hover,
+.footer__big-links a:focus-visible,
+.footer__links a:hover,
+.footer__links a:focus-visible,
+.footer__cookie-btn:hover,
+.footer__cookie-btn:focus-visible,
+.footer__disclaimer a:hover,
+.footer__disclaimer a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Language select + copyright row */
+.footer__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-gap-5) var(--grid-gutter);
+}
+
+.footer__lang {
+  position: relative;
+}
+
+.footer__lang-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--footer-gap-md);
+  list-style: none;
+  cursor: pointer;
+  color: var(--color-text-heading);
+  border-radius: var(--radius-sm, 4px);
+}
+
+.footer__lang-summary::-webkit-details-marker {
+  display: none;
+}
+
+.footer__lang-summary:focus-visible {
+  outline: 2px solid var(--color-text-body);
+  outline-offset: 4px;
+}
+
+.footer__lang-current {
+  display: inline-flex;
+  align-items: center;
+  /* Gap to the chevron (the reference nests text + chevron with a 3px gap). */
+  margin-right: calc(var(--footer-gap-xs) - var(--footer-gap-md));
+}
+
+.footer__lang-globe {
+  display: block;
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
+.footer__lang-chevron {
+  display: block;
+  width: var(--icon-md);
+  height: var(--icon-md);
+  transition: transform 0.2s ease;
+}
+
+.footer__lang[open] .footer__lang-chevron {
+  transform: rotate(180deg);
+}
+
+.footer__lang-list {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + var(--space-gap-3));
+  z-index: 5;
+  min-width: 11rem;
+  margin: 0;
+  padding: var(--footer-gap-sm);
+  list-style: none;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--form-input-radius);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
+}
+
+.footer__lang-option {
+  display: block;
+  padding: var(--space-gap-2) var(--space-gap-4);
+  border-radius: var(--radius-sm, 4px);
+  color: var(--color-text-heading);
+  white-space: nowrap;
+}
+
+.footer__lang-option:hover,
+.footer__lang-option:focus-visible {
+  background: color-mix(in srgb, var(--color-text-body) 8%, transparent);
+}
+
+.footer__lang-option.is-active {
+  font-weight: 600;
+}
+
+.footer__bar-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-gap-4) var(--grid-gutter);
+}
+
+.footer__copy {
+  margin: 0;
+  color: var(--footer-text-secondary);
+}
+
+.footer__launch-badge img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+/* Disclaimer, store badges and the Slovenian EU notice */
+.footer__legal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--grid-gutter);
+}
+
+.footer__disclaimer {
+  max-width: 1080px;
+  margin: 0;
+  color: var(--footer-text-secondary);
+}
+
+.footer__disclaimer a {
+  color: var(--color-text-heading);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.footer__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--grid-gutter) 36px;
+}
+
+/* Social links: 18px icon + 16px semibold label, 36px apart (reference 64:1726). */
 .footer__social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-gap-2);
+  align-items: center;
+  gap: var(--space-gap-4) 36px;
 }
 
 .footer__social a {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-gap-3);
-  background: var(--color-surface-3);
-  border-radius: var(--radius-sm);
-  padding: var(--space-gap-2) var(--space-gap-5);
-  font-weight: 600;
+  gap: var(--footer-gap-md);
   font-size: var(--type-body);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text-heading);
+}
+
+.footer__social a:hover,
+.footer__social a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .footer__social img {
-  width: 18px;
-  height: 18px;
+  display: block;
+  width: var(--icon-sm);
+  height: var(--icon-sm);
 }
 
-.footer__company {
+.footer__stores {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-gap-4);
-  text-align: center;
+  flex-wrap: wrap;
+  gap: var(--space-gap-3);
 }
 
-.footer__company-text {
-  font-size: var(--type-small);
-  color: var(--footer-text-secondary);
-  margin: 0;
-}
-
-.footer__company-mail {
-  font-size: var(--type-small);
-  font-weight: 600;
-  color: var(--color-text-heading);
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
+.footer__stores .store-badge img {
+  display: block;
+  width: 120px;
+  height: auto;
 }
 
 /* EU project notice (Slovenian pages). The flag fills 86.2% of the image
@@ -586,17 +809,16 @@ main > section:last-child {
 .footer__eu {
   --eu-flag-h: max(1cm, 40px);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: var(--space-gap-3);
-  max-width: 28rem;
-  font-size: var(--type-small);
+  gap: var(--space-gap-4);
+  max-width: 36rem;
   color: var(--footer-text-secondary);
   text-decoration: none;
 }
 
 .footer__eu img {
   display: block;
+  flex-shrink: 0;
   height: calc(var(--eu-flag-h) / 0.862);
   width: auto;
   padding: 6px 10px;
@@ -609,56 +831,6 @@ main > section:last-child {
 .footer__eu:focus-visible span {
   text-decoration: underline;
   text-underline-offset: 0.15em;
-}
-
-.footer__stores {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-gap-3);
-}
-
-.footer__stores .store-badge img {
-  display: block;
-  width: 120px;
-  height: auto;
-}
-
-.footer__copy {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem 1rem;
-  text-align: center;
-  font-size: var(--type-small);
-  opacity: 0.7;
-}
-
-.footer__cookie-btn {
-  appearance: none;
-  border: 0;
-  background: none;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.footer__cookie-btn:hover,
-.footer__cookie-btn:focus-visible {
-  opacity: 1;
-  color: var(--color-fg, inherit);
-}
-
-.footer__launch-badge img {
-  display: block;
-  width: 120px;
-  height: auto;
 }
 
 .js-turnstile {
@@ -682,27 +854,52 @@ main > section:last-child {
   color: var(--color-danger, #8b2e2e);
 }
 
+/* Giant faint wordmark spanning the content width (reference 65:2316). One
+ * element: the wordmark is a mask filled with the theme's heading ink, so
+ * exactly one mark ever shows and it follows light/dark/auto by itself. It
+ * sits right above the disclaimer, like the reference. */
 .footer__brand {
-  display: flex;
-  justify-content: center;
-  padding-bottom: var(--space-gap-8);
+  width: 100%;
+  aspect-ratio: 184 / 57;
+  margin-bottom: calc(var(--space-gap-6) - var(--space-gap-11));
+  background-color: var(--color-text-heading);
+  opacity: 0.07;
+  -webkit-mask: url("/assets/design-system/logos/zyflow-wordmark.svg") left top / 100% 100% no-repeat;
+  mask: url("/assets/design-system/logos/zyflow-wordmark.svg") left top / 100% 100% no-repeat;
+  pointer-events: none;
 }
 
-.footer__brand img {
-  width: min(100%, 280px);
-  height: auto;
+html[data-theme="light"] .footer__brand {
+  opacity: 0.09;
 }
 
-.footer__brand-logo--light {
+@media (prefers-color-scheme: light) {
+  html[data-theme="auto"] .footer__brand {
+    opacity: 0.09;
+  }
+}
+
+/* Theme-specific Fazier badge: white on olive, neutral grey on sand. */
+.footer__launch-badge .footer__launch-badge-img--light {
   display: none;
 }
 
-html[data-theme="light"] .footer__brand-logo--dark {
+html[data-theme="light"] .footer__launch-badge .footer__launch-badge-img--dark {
   display: none;
 }
 
-html[data-theme="light"] .footer__brand-logo--light {
+html[data-theme="light"] .footer__launch-badge .footer__launch-badge-img--light {
   display: block;
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme="auto"] .footer__launch-badge .footer__launch-badge-img--dark {
+    display: none;
+  }
+
+  html[data-theme="auto"] .footer__launch-badge .footer__launch-badge-img--light {
+    display: block;
+  }
 }
 
 /* —— Shared helpers —— */
@@ -2390,30 +2587,6 @@ html[data-theme="light"] .testimonial__bg img {
     font-size: var(--type-small);
   }
 
-  .footer__columns {
-    grid-template-columns: 1fr;
-    align-items: stretch;
-  }
-
-  .footer__menu {
-    width: 100%;
-  }
-
-  .footer__menu a {
-    white-space: normal;
-  }
-
-  .footer__cats {
-    width: 100%;
-    max-width: 22rem;
-    justify-self: start;
-  }
-
-  .footer__subscribe {
-    width: 100%;
-    justify-self: stretch;
-  }
-
   .adventures__grid,
   .features__grid,
   .social__videos {
@@ -2511,23 +2684,54 @@ html[data-theme="light"] .testimonial__bg img {
   }
 }
 
-@media (max-width: 768px) {
-  .footer__cats {
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    max-width: none;
+/* Footer: stack the lead column above the menus. */
+@media (max-width: 1024px) {
+  .footer__top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--footer-menu-row-gap);
   }
 
-  .footer__cat {
-    aspect-ratio: 1 / 1;
-    min-height: 0;
-    padding: var(--space-gap-4);
-    gap: var(--space-gap-3);
+  .footer__menus {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .footer__inner {
+    padding-inline: var(--space-gap-5);
+    gap: var(--space-gap-9);
   }
 
-  .footer__cat img {
-    width: 36px;
-    height: 36px;
+  .footer__menus {
+    gap: var(--space-gap-8) var(--space-gap-5);
+  }
+
+  .footer__brand {
+    margin-bottom: calc(var(--space-gap-5) - var(--space-gap-9));
+  }
+
+  .footer__badges {
+    gap: var(--space-gap-6);
+  }
+
+  .footer__bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__bar-end {
+    justify-content: flex-start;
+  }
+
+  .footer__eu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer__menus {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -2571,9 +2775,6 @@ html[data-theme="light"] .testimonial__bg img {
   }
   .journal__story-body {
     gap: var(--space-gap-4);
-  }
-  .footer__menu a {
-    font-size: var(--type-h4);
   }
   .nav__inner {
     padding-inline: var(--page-pad-sm);
