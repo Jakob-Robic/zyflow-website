@@ -35,23 +35,20 @@
       </div>
     </div>
 
-    <div class="tours-filter" role="tablist" aria-label="Browse routes by type">
-      <p class="tours-filter__label" data-i18n="tours.filter.label">browse:</p>
-      <div class="tours-filter__links">
-        <button type="button" class="tours-filter__btn is-active" data-filter="all" role="tab" aria-selected="true" data-i18n="tours.filter.all">all</button>
-        <button type="button" class="tours-filter__btn" data-filter="tour" role="tab" aria-selected="false">
-          <img src="./assets/images/icons/bicycle.svg" alt="" width="48" height="48" aria-hidden="true" /><span data-i18n="tours.filter.tour">tour</span>
-        </button>
-        <button type="button" class="tours-filter__btn" data-filter="commute" data-requires-category="commute" role="tab" aria-selected="false">
-          <img src="./assets/images/icons/buildings.svg" alt="" width="48" height="48" aria-hidden="true" /><span data-i18n="tours.filter.commute">commute</span>
-        </button>
-        <button type="button" class="tours-filter__btn" data-filter="alpine" role="tab" aria-selected="false">
-          <img src="./assets/images/icons/mountains.svg" alt="" width="48" height="48" aria-hidden="true" /><span data-i18n="tours.filter.alpine">alpine</span>
-        </button>
-        <button type="button" class="tours-filter__btn" data-filter="gravel" role="tab" aria-selected="false">
-          <img src="./assets/images/icons/path.svg" alt="" width="48" height="48" aria-hidden="true" /><span data-i18n="tours.filter.gravel">gravel</span>
-        </button>
+    <!-- One filter bar: type (with its icons) and the rows from TOURS_FILTER_GROUPS share the
+         Journal's filter chips (.blog-filters); on a phone each row scrolls sideways. -->
+    <div class="blog-filters tours-filterbar" data-tours-filterbar>
+      <div class="blog-filters__group tours-filters__group" role="group" aria-labelledby="tours-filter-type" data-tours-type>
+        <p class="blog-filters__label" id="tours-filter-type" data-i18n="tours.filter.label">Type</p>
+        <div class="blog-filters__links tours-filters__links">
+          <button type="button" class="blog-filters__btn tours-chip is-active" data-filter="all" aria-pressed="true"><span data-i18n="tours.filter.all">All</span></button>
+          <button type="button" class="blog-filters__btn tours-chip" data-filter="tour" aria-pressed="false"><img src="./assets/images/icons/bicycle.svg" alt="" width="20" height="20" aria-hidden="true" /><span data-i18n="tours.filter.tour">Touring</span></button>
+          <button type="button" class="blog-filters__btn tours-chip" data-filter="commute" data-requires-category="commute" aria-pressed="false"><img src="./assets/images/icons/buildings.svg" alt="" width="20" height="20" aria-hidden="true" /><span data-i18n="tours.filter.commute">Commute</span></button>
+          <button type="button" class="blog-filters__btn tours-chip" data-filter="alpine" aria-pressed="false"><img src="./assets/images/icons/mountains.svg" alt="" width="20" height="20" aria-hidden="true" /><span data-i18n="tours.filter.alpine">Alpine</span></button>
+          <button type="button" class="blog-filters__btn tours-chip" data-filter="gravel" aria-pressed="false"><img src="./assets/images/icons/path.svg" alt="" width="20" height="20" aria-hidden="true" /><span data-i18n="tours.filter.gravel">Gravel</span></button>
+        </div>
       </div>
+      <!-- TOURS_FILTER_GROUPS -->
     </div>
   </div>
 </section>

@@ -198,6 +198,7 @@
       "links": {
         "home": "Domov",
         "tours": "Poti",
+        "places": "Kraji",
         "about": "O nas",
         "journal": "Dnevnik",
         "contact": "Kontakt",
@@ -231,10 +232,10 @@
       "explore": "Raziskuj",
       "companyLabel": "Podjetje",
       "cats": {
-        "kayak": "Tura",
-        "bike": "Vsakodnevno",
-        "hike": "Alpsko",
-        "fourwd": "Makadam"
+        "kayak": "Turistična",
+        "bike": "Vsakodnevna",
+        "hike": "Alpska",
+        "fourwd": "Makadamska"
       },
       "newsletter": {
         "title": "Novice",
@@ -515,12 +516,33 @@
       "eyebrow": "naše poti"
     },
     "filter": {
-      "label": "pregled:",
-      "all": "vse",
-      "tour": "potovanje",
-      "alpine": "alpsko",
-      "commute": "vsakdan",
-      "gravel": "gravel"
+      "label": "Tip",
+      "all": "Vse",
+      "tour": "Turistična",
+      "alpine": "Alpska",
+      "commute": "Vsakodnevna",
+      "gravel": "Makadamska"
+    },
+    "filters": {
+      "country": "Država",
+      "region": "Regija",
+      "kind": "Pot",
+      "length": "Dolžina",
+      "kindOptions": {
+        "signed": "Označene poti",
+        "loop": "Krožne poti"
+      },
+      "lengthOptions": {
+        "under-30": "Do 30 km",
+        "30-60": "30–60 km",
+        "60-100": "60–100 km",
+        "100-plus": "100 km in več"
+      },
+      "clear": "Počisti filtre",
+      "remove": "Odstrani filter",
+      "more": "Pokaži več poti",
+      "countOne": "pot",
+      "countOther": "poti"
     },
     "viewCta": "Poglej pot",
     "empty": "Tukaj še ni poti. Nove dodajamo, ko na zemljevid dodamo več kolesarjem prijaznih krajev.",
@@ -572,7 +594,7 @@
         "meta1": "1740 m",
         "meta2": "Alpska",
         "body": "Alpska zastavonoša Tržiča: gozdne ceste in police planin pod belo steno Košute, veliko vzpona, še več razgleda.",
-        "price": "1740 m",
+        "price": "39,7 km",
         "unit": " · 1740 m"
       },
       {
@@ -580,22 +602,22 @@
         "region": "Gorenjska, Slovenija",
         "title": "Tržič – Jezersko",
         "meta0": "28,1 km",
-        "meta1": "Alpska",
+        "meta1": "1299 m",
         "meta2": "Alpska",
         "body": "Povezovalna tura med dvema alpskima dolinama, s tržiške strani Karavank v ledeniško skledo Jezerskega.",
         "price": "28,1 km",
-        "unit": ""
+        "unit": " · 1299 m"
       },
       {
         "place": "Tržič → Storžič",
         "region": "Gorenjska, Slovenija",
         "title": "Dom pod Storžičem",
         "meta0": "18,1 km",
-        "meta1": "Alpska",
+        "meta1": "280 m",
         "meta2": "Alpska",
         "body": "Koča pod Storžičem: gozdni vzponi, gorski zrak in jasen obrat pri Domu pod Storžičem.",
         "price": "18,1 km",
-        "unit": ""
+        "unit": " · 280 m"
       },
       {
         "place": "Tržič → Ljubelj",
@@ -613,66 +635,66 @@
         "region": "Gorenjska, Slovenija",
         "title": "Rožnovenska pot",
         "meta0": "20,1 km",
-        "meta1": "Turistična",
+        "meta1": "369 m",
         "meta2": "Turistična",
         "body": "Kulturna tura iz Tržiča skozi Brezje pri Tržiču, cerkve, doline in razgledna vožnja brez polne alpske zahtevnosti.",
         "price": "20,1 km",
-        "unit": ""
+        "unit": " · 369 m"
       },
       {
         "place": "Tržič → Dobrča",
         "region": "Gorenjska, Slovenija",
         "title": "Dobrča",
         "meta0": "26,9 km",
-        "meta1": "Alpska",
+        "meta1": "2067 m",
         "meta2": "Alpska",
         "body": "Alpska tura proti Dobrči, dolgi vzponi, grebenski zrak in občutek, da kolesariš Karavanke, ne mimo njih.",
         "price": "26,9 km",
-        "unit": ""
+        "unit": " · 2067 m"
       },
       {
         "place": "Tržič · Udin boršt",
         "region": "Gorenjska, Slovenija",
         "title": "Udin boršt",
         "meta0": "25,3 km",
-        "meta1": "Gravel",
-        "meta2": "Gravel",
+        "meta1": "286 m",
+        "meta2": "Makadamska",
         "body": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in dovolj raznolikosti brez visokega prelaza.",
         "price": "25,3 km",
-        "unit": ""
+        "unit": " · 286 m"
       },
       {
         "place": "Tržič · Trije zvonovi",
         "region": "Gorenjska, Slovenija",
         "title": "Pot treh zvonov",
         "meta0": "10 km",
-        "meta1": "Turistična",
+        "meta1": "144 m",
         "meta2": "Turistična",
         "body": "Lahka družinska zanka tržiškega nabora, blag teren, vaški zvonovi in ritem za različne zmožnosti.",
         "price": "10 km",
-        "unit": ""
+        "unit": " · 144 m"
       },
       {
         "place": "Tržič · Kriva jelka",
         "region": "Gorenjska, Slovenija",
         "title": "Kriva jelka",
         "meta0": "24 km",
-        "meta1": "Gravel",
-        "meta2": "Gravel",
+        "meta1": "386 m",
+        "meta2": "Makadamska",
         "body": "V naravni rezervat Udin boršt do Krive jelke, senčne sledi in znamenit zaključek v gozdu.",
         "price": "24 km",
-        "unit": ""
+        "unit": " · 386 m"
       },
       {
         "place": "Tržič · Gozd",
         "region": "Gorenjska, Slovenija",
         "title": "Gozd – Udin boršt",
         "meta0": "26,9 km",
-        "meta1": "Gravel",
-        "meta2": "Gravel",
+        "meta1": "763 m",
+        "meta2": "Makadamska",
         "body": "Raznolika predalpska zanka med Gozdom in Udin borštom, več vzpona kot družinske, še vedno pod alpskimi nakloni.",
         "price": "26,9 km",
-        "unit": ""
+        "unit": " · 763 m"
       },
       {
         "place": "Kranj → Kamnik",
@@ -690,22 +712,22 @@
         "region": "Gorenjska, Slovenija",
         "title": "Ljubljančanka",
         "meta0": "70 km",
-        "meta1": "Turistična",
+        "meta1": "460 m",
         "meta2": "Turistična",
         "body": "Iz Kranja proti prestolnici, grad Smlednik, Tivoli in Ljubljanski grad na dnevu, ki zmeša podeželje z mestnim prihodom.",
         "price": "70 km",
-        "unit": ""
+        "unit": " · 460 m"
       },
       {
         "place": "Kranj → Škofja Loka",
         "region": "Gorenjska, Slovenija",
         "title": "Ločanka",
         "meta0": "64 km",
-        "meta1": "Turistična",
+        "meta1": "930 m",
         "meta2": "Turistična",
         "body": "V srednjeveško jedro Škofje Loke, kapucinska mostova, grajski hrib in Crngrob na enem najlepših dni Kranjske rože.",
         "price": "64 km",
-        "unit": ""
+        "unit": " · 930 m"
       },
       {
         "place": "Jezersko · Mali vrh",
@@ -713,7 +735,7 @@
         "title": "Mali vrh",
         "meta0": "17.3 km",
         "meta1": "596 m",
-        "meta2": "Alpska",
+        "meta2": "Turistična",
         "body": "Mirna gozdna cesta do razgledišča Mali vrh, Virnikov Grintovec, Košuta in Storžič v enem mirnem jezerskem poldnevu.",
         "price": "17.3 km",
         "unit": " · 596 m"
@@ -745,7 +767,7 @@
         "region": "Gorenjska, Slovenija",
         "title": "Tržičanka",
         "meta0": "68 km",
-        "meta1": "Turistična",
+        "meta1": "",
         "meta2": "Turistična",
         "body": "Proti severu v staro jedro Tržiča in predprostor Karavank, razvaline gradu Kamen, doline in predokus alpske mreže naprej.",
         "price": "68 km",
@@ -756,7 +778,7 @@
   "tour": {
     "hero": {
       "crumbParent": "Poti",
-      "crumbType": "Potovanje",
+      "crumbType": "Turistična",
       "titleHtml": "ljubljana<br />– trst",
       "lede": "134 km od Ljubljane do Jadrana, mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami in kolesarskimi storitvami ob poti.",
       "price": "134 km",
@@ -1616,7 +1638,7 @@
       ]
     },
     "k51-udin-borst": {
-      "crumbType": "Gravel",
+      "crumbType": "Makadamska",
       "titleHtml": "udin boršt",
       "lede": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in pustolovščina brez visokega prelaza.",
       "place": "tržič",
@@ -1626,7 +1648,7 @@
       "elevationHtml": ", ",
       "difficulty": "Srednje",
       "intro": "K51 je samozavestni gravel dan tržiškega nabora: več makedama kot asfalta, še vedno dovolj blizu mesta, da je kavarniški zaključek lahek.",
-      "asideNote": "Gravel · Visit Tržič · K51",
+      "asideNote": "Makadamska · Visit Tržič · K51",
       "cta": "Odpri v Zyflow",
       "ctaSecondary": "Prenesi aplikacijo",
       "gpxLabel": "Prenesi GPX",
@@ -1702,7 +1724,7 @@
       ]
     },
     "k53-kriva-jelka": {
-      "crumbType": "Gravel",
+      "crumbType": "Makadamska",
       "titleHtml": "kriva jelka",
       "lede": "V naravni rezervat Udin boršt do Krive jelke, senčne sledi in znamenit zaključek v gozdu.",
       "place": "tržič",
@@ -1712,7 +1734,7 @@
       "elevationHtml": ", ",
       "difficulty": "Lahko–srednje",
       "intro": "K53 cilja na eno najbolj znanih gozdnih znamenitosti. Po dežju mehka tla in mirnejša alternativa visokim alpskim dnem nad Tržičem.",
-      "asideNote": "Gravel · Visit Tržič · K53",
+      "asideNote": "Makadamska · Visit Tržič · K53",
       "cta": "Odpri v Zyflow",
       "ctaSecondary": "Prenesi aplikacijo",
       "gpxLabel": "Prenesi GPX",
@@ -1745,7 +1767,7 @@
       ]
     },
     "k55-gozd-udin-borst": {
-      "crumbType": "Gravel",
+      "crumbType": "Makadamska",
       "titleHtml": "gozd – udin boršt",
       "lede": "Raznolika predalpska zanka med Gozdom in Udin borštom, več vzpona kot družinske, še vedno pod alpskimi nakloni.",
       "place": "tržič",
@@ -1755,7 +1777,7 @@
       "elevationHtml": ", ",
       "difficulty": "Srednje",
       "intro": "K55 je med lahkimi zvonovi in težkimi prelazi, ko hočete znoj, a ne Ljubelja ali Košute.",
-      "asideNote": "Gravel · Visit Tržič · K55",
+      "asideNote": "Makadamska · Visit Tržič · K55",
       "cta": "Odpri v Zyflow",
       "ctaSecondary": "Prenesi aplikacijo",
       "gpxLabel": "Prenesi GPX",
@@ -1917,7 +1939,7 @@
       ]
     },
     "mali-vrh": {
-      "crumbType": "Alpska",
+      "crumbType": "Turistična",
       "titleHtml": "mali vrh",
       "lede": "Miren jezerski poldan po gozdni cesti do razgledišča Mali vrh, Virnikov Grintovec, Košuta in Storžič v eni panoramski vožnji tja in nazaj.",
       "place": "jezersko",

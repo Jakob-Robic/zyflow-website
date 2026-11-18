@@ -234,18 +234,24 @@ function mapJson(route) {
   });
 }
 
+/** Breadcrumb shared with the described routes and towns (routes-places.js; loaded on use, it requires this file). */
+function crumbItems(route, lang) {
+  const places = require("./routes-places");
+  const entry = places.routeEntries({ townsPublic: true }).find((e) => e.source === "signed" && e.slug === route.slug);
+  return entry ? places.routeCrumbs(entry, lang, route.code || route.official_name) : [];
+}
+
+function crumbsHtml(route, lang) {
+  const items = crumbItems(route, lang);
+  return items.length ? require("./routes-places").renderCrumbs(items, lang, "crumbs--hero") : "";
+}
+
 function renderHero(route, t, lang, written) {
   return `<section class="tour-hero section" data-section="signed-route.hero">
   <div class="container">
+    ${crumbsHtml(route, lang)}
     <div class="tour-hero__panel">
       <div class="tour-hero__copy">
-        <nav class="tour-hero__crumb" aria-label="Breadcrumb">
-          <a href="./index.html">${esc(t.home)}</a>
-          <span class="motif" aria-hidden="true"></span>
-          <a href="${t.crumbHref}">${esc(t.crumb)}</a>
-          <span class="motif" aria-hidden="true"></span>
-          <span aria-current="page">${esc(route.code || route.official_name)}</span>
-        </nav>
         <h1 class="tour-hero__title">${written.title ? esc(written.title).replace(": ", ": <br />") : t.title({ ...route, code: esc(route.code || ""), from: esc(route.from), to: esc(route.to) })}</h1>
         <p class="tour-hero__lede">${esc(written.lede || t.lede(route))}</p>
         <div class="tour-hero__foot">
@@ -389,6 +395,8 @@ function injectSignedRoute(html, page) {
   const t = TEXT[lang];
   const written = route.text[lang] || {};
   return html
+    // town.html is the Places template; a signed route page belongs to Routes in the nav.
+    .replace('data-nav="places"', 'data-nav="routes"')
     .replace("<!-- TOWN_HERO -->", renderHero(route, t, lang, written))
     .replace("<!-- TOWN_BODY -->", renderBody(route, t, lang, written))
     .replace("<!-- TOWN_SIGHTS -->", "")
@@ -435,15 +443,7 @@ function signedRouteStructuredNodes(page, origin) {
       about: { "@id": `${url}#route` },
       breadcrumb: { "@id": `${url}#breadcrumb` },
     },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${url}#breadcrumb`,
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: t.home, item: `${origin}/` },
-        { "@type": "ListItem", position: 2, name: t.crumb, item: `${origin}${ROUTE_BASE[lang]}` },
-        { "@type": "ListItem", position: 3, name: route.code || route.official_name, item: url },
-      ],
-    },
+    require("./routes-places").crumbsLd(crumbItems(route, lang), origin, `${url}#breadcrumb`),
     {
       "@type": "TouristTrip",
       "@id": `${url}#route`,
@@ -498,4 +498,7 @@ module.exports = {
   signedRouteStructuredNodes,
   signedRouteHref,
   signedRouteLlmsLines,
+  // Shared with routes-places.js (the /tours list and the route ↔ town links).
+  routeLangs,
+  routePath,
 };

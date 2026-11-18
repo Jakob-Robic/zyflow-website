@@ -761,15 +761,7 @@ function townStructuredNodes(page, origin) {
       breadcrumb: { "@id": `${url}#breadcrumb` },
       ...(photo ? { primaryImageOfPage: { "@id": `${url}#photo-1` } } : {}),
     },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${url}#breadcrumb`,
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: t.home, item: `${origin}/` },
-        { "@type": "ListItem", position: 2, name: t.crumb, item: `${origin}${TOWN_BASE[lang]}` },
-        { "@type": "ListItem", position: 3, name: town.name, item: url },
-      ],
-    },
+    places().crumbsLd(places().townCrumbs(town, lang), origin, `${url}#breadcrumb`),
     {
       "@type": "TouristDestination",
       "@id": `${url}#place`,
@@ -778,10 +770,11 @@ function townStructuredNodes(page, origin) {
       url,
       touristType: "Cyclists",
       geo: { "@type": "GeoCoordinates", latitude: town.center[1], longitude: town.center[0] },
+      // Region level = the tourist region from the taxonomy (routes-places.js); the statistical region where none resolves.
       containedInPlace: {
         "@type": "AdministrativeArea",
-        name: town.region,
-        containedInPlace: { "@type": "Country", name: town.country },
+        name: places().townPlace(town).region ? places().placeLabel("region", places().townPlace(town).region, lang) : town.region,
+        containedInPlace: { "@type": "Country", name: places().placeLabel("country", places().townPlace(town).country, lang) },
       },
       ...(photo ? { image: { "@id": `${url}#photo-1` } } : {}),
     },
@@ -790,12 +783,15 @@ function townStructuredNodes(page, origin) {
 
   nodes.push(
     list("routes", title("routes", t.routesTitle), [
-      ...town.featured.map((route) => ({
-        "@type": "TouristTrip",
-        name: route.name,
-        description: `${route.km} km, ${route.climb_m} m ${t.climb}`,
-        url: `${origin}/tours/${route.slug}`,
-      })),
+      ...ourRoutes(town, lang).map(({ entry }) => {
+        const route = town.featured.find((r) => r.slug === entry.slug);
+        return {
+          "@type": "TouristTrip",
+          name: route ? route.name : entry.code ? `${entry.code} ${entry.name}` : entry.name || entry.slug,
+          description: route ? `${route.km} km, ${route.climb_m} m ${t.climb}` : `${entry.km} km`,
+          url: `${origin}${entry.path(lang)}`,
+        };
+      }),
       ...town.routes.map((route) => ({
         "@type": "TouristTrip",
         name: route.code && route.name !== route.code ? `${route.code} ${route.name}` : route.name,
@@ -1116,16 +1112,9 @@ function renderPhotoHero(town, t, lang) {
   const thumb = (town.bodyPhotos || [])[0];
   const sub = [firstSentences(written.intro || t.intro(town), 1), written.lede || t.lede(town)].filter(Boolean).join(" ");
   const [line1, line2] = t.heroCard(town);
-  const toRoutes = town.routes.length || town.featured.length;
-  const home = lang === "en" ? "./index.html" : `/${lang}`;
+  const anchor = routesAnchor(town, lang);
   return `<section class="hero section town-hero" data-section="town.hero">
-  <nav class="tour-hero__crumb town-hero__crumb" aria-label="${esc(t.crumbLabel)}">
-    <a href="${home}">${esc(t.home)}</a>
-    <span class="motif" aria-hidden="true"></span>
-    <a href=".${TOWN_BASE[lang]}.html">${esc(t.crumb)}</a>
-    <span class="motif" aria-hidden="true"></span>
-    <span aria-current="page">${esc(town.name)}</span>
-  </nav>
+  ${places().renderCrumbs(places().townCrumbs(town, lang), lang, "crumbs--photo")}
   <div class="hero__frame">
     <div class="hero__media">
       <img src="${esc(photo.src)}" alt="${esc(photo.caption || town.name)}" fetchpriority="high" />
@@ -1137,7 +1126,7 @@ function renderPhotoHero(town, t, lang) {
         <p class="hero__title">${t.title({ ...town, name: esc(town.name) })}</p>
       </div>
       <p class="hero__sub">${esc(sub)}</p>
-      <a class="btn btn--primary" href="${toRoutes ? "#routes" : "#map"}">${esc(toRoutes ? t.seeRoutes : t.seeStays)}</a>
+      <a class="btn btn--primary" href="${anchor || "#map"}">${esc(anchor ? t.seeRoutes : t.seeStays)}</a>
     </div>
     <aside class="hero__card">${thumb ? `
       <div class="hero__card-media"><img class="hero__card-thumb" src="${esc(thumb.src)}" alt="" sizes="(max-width: 720px) 80vw, 140px" loading="lazy" /></div>` : ""}
@@ -1157,19 +1146,12 @@ function renderPhotoHero(town, t, lang) {
 function renderHero(town, t, lang) {
   if (town.heroPhoto) return renderPhotoHero(town, t, lang);
   const written = (town.text && town.text[lang]) || {};
+  const anchor = routesAnchor(town, lang);
   return `<section class="tour-hero section" data-section="town.hero">
   <div class="container">
+    ${places().renderCrumbs(places().townCrumbs(town, lang), lang, "crumbs--hero")}
     <div class="tour-hero__panel">
       <div class="tour-hero__copy">
-        <nav class="tour-hero__crumb" aria-label="Breadcrumb">
-          <a href="./index.html">${esc(t.home)}</a>
-          <span class="motif" aria-hidden="true"></span>
-          <a href=".${TOWN_BASE[lang]}.html">${esc(t.crumb)}</a>
-          <span class="motif" aria-hidden="true"></span>
-          <span>${esc(town.country)}</span>
-          <span class="motif" aria-hidden="true"></span>
-          <span aria-current="page">${esc(town.name)}</span>
-        </nav>
         <h1 class="tour-hero__title">${t.title({ ...town, name: esc(town.name) })}</h1>
         <p class="tour-hero__lede">${esc(written.lede || t.lede(town))}</p>
         <div class="tour-hero__foot">
@@ -1180,7 +1162,7 @@ function renderHero(town, t, lang) {
               <strong>${esc(shortDate(town.checked, lang))}</strong>
             </div>
             <a class="btn btn--primary" href="{{appStoreUrl}}" data-app-modal-open>${esc(t.getApp)}</a>
-            <a class="btn btn--secondary" href="${town.routes.length || town.featured.length ? "#routes" : "#stays"}">${esc(town.routes.length || town.featured.length ? t.seeRoutes : t.seeStays)}</a>
+            <a class="btn btn--secondary" href="${anchor || "#stays"}">${esc(anchor ? t.seeRoutes : t.seeStays)}</a>
           </div>
         </div>
       </div>
@@ -1210,6 +1192,20 @@ function renderHero(town, t, lang) {
 }
 
 /** "View route" for a signed route that has its own page (required lazily: that module builds on this one). */
+/** Routes ↔ Places helpers (routes-places.js requires this file, so load it on use). */
+const places = () => require("./routes-places");
+
+/** Our described routes (and published signed routes) that start in or ride through the town. */
+function ourRoutes(town, lang) {
+  return places().routesForTown(town.slug, lang);
+}
+
+/** Where the hero's routes button goes: the signed routes, else our routes, else the fallback. */
+function routesAnchor(town, lang) {
+  if (ourRoutes(town, lang).length) return "#routes-here";
+  return town.routes.length ? "#routes" : "";
+}
+
 function signedRouteLink(route, t, lang) {
   if (!route.code) return null;
   const href = require("./signed-routes").signedRouteHref(route.code, lang, route.name);
@@ -1228,18 +1224,12 @@ function photoFigure(town, index, t) {
 
 function renderBody(town, t, lang) {
   const written = (town.text && town.text[lang]) || {};
-  const featured = town.featured.map((route) =>
-    infoCard({
-      pin: "route",
-      name: spokenName(route.name),
-      facts: [t.ourRoute],
-      desc: t.ourRouteNote,
-      value: `${route.km} km`,
-      unit: t.inTotal,
-      link: { href: `./tours/${route.slug}.html`, label: t.viewRoute },
-    })
-  );
-  const signed = town.routes.slice(0, MAX_ROUTES_SHOWN).map((route) => {
+  // "Routes from here": our routes that start in or ride through the town, as route cards
+  // linking /tours/<route> (routes-places.js). They used to be cards in the signed-routes rail.
+  const routesHere = places().renderRoutesFromHere(town, lang, cardSection, lang === "sl" ? loc(town) : "");
+  // A signed route with its own published page is a card in "Routes from here" already.
+  const railRoutes = town.routes.filter((route) => !signedRouteLink(route, t, lang));
+  const signed = railRoutes.slice(0, MAX_ROUTES_SHOWN).map((route) => {
     const stops = route.name.split(STOPS).map((part) => part.trim());
     const coded = route.code && stops.length > 1;
     return infoCard({
@@ -1271,14 +1261,14 @@ function renderBody(town, t, lang) {
           : null),
     });
   });
-  const hiddenRoutes = town.routes.length - Math.min(town.routes.length, MAX_ROUTES_SHOWN);
+  const hiddenRoutes = railRoutes.length - Math.min(railRoutes.length, MAX_ROUTES_SHOWN);
   // No routes section at all for a town with neither a signed nor a described route.
-  const routes = featured.length + signed.length
+  const routes = signed.length
     ? cardSection({
         id: "routes",
         title: t.routesTitle,
         lead: t.routesLead(town),
-        cards: [...featured, ...signed],
+        cards: signed,
         rail: true,
         written: written.routes,
         before: town.heroPhoto ? `\n        <div class="town-map">${mapMedia(town)}</div>` : "",
@@ -1299,6 +1289,7 @@ function renderBody(town, t, lang) {
       : "";
   const blocks = [
     mapBlock,
+    routesHere,
     routes,
     photoFigure(town, 1, t),
     renderPlaces(town, t, "stays", t.staysTitle, t.staysLead(town), town.counts.stays, t.moreStays, written.stays, written),
