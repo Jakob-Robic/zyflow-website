@@ -202,6 +202,13 @@
   mix-blend-mode: normal;
 }
 
+/* OpenStreetMap's standard tiles are busy and colourful. A grey filter on the tile layer
+   only (chosen by Jakob 2026-11-18, "A, light grey") keeps the base calm; route lines and
+   pins sit in other panes and keep their colour. Free: no styled tile service needed. */
+.tour-hero__map.leaflet-container .leaflet-tile-pane {
+  filter: grayscale(1) contrast(0.85) brightness(1.08);
+}
+
 .tour-hero__map.leaflet-container .leaflet-control-attribution {
   font-size: 10px;
   line-height: 1.5;
