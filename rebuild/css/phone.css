@@ -450,3 +450,312 @@
     line-height: var(--leading-h1);
   }
 }
+
+/* ==========================================================================
+ * P3 — shorter, tighter phone pages
+ * ========================================================================== */
+
+/*
+ * One vertical rhythm on phones: 48 px between sections. Every section pads
+ * 24 px above and below, so two neighbours always add up to 48. The three
+ * section tokens were 32, 50 and 78 px at 375 and stacked to 100 to 190 px.
+ */
+@media (max-width: 599.98px) {
+  :root {
+    --section-pad-sm: 24px;
+    --section-pad-md: 24px;
+    --section-pad-lg: 24px;
+    --phone-band-pad: 32px; /* inside the sand bands, between the torn edges */
+  }
+
+  /* Sections that had no padding on one side get their half of the gap. */
+  .tour-body,
+  .town-wide,
+  .faq--town,
+  .town-places,
+  .town-sights {
+    padding-top: var(--section-pad-md);
+  }
+
+  .route-towns {
+    padding-bottom: var(--section-pad-md);
+  }
+
+  .tour-hero {
+    padding-block: var(--space-gap-5) var(--section-pad-md);
+  }
+
+  .town-body {
+    padding-bottom: var(--section-pad-md);
+  }
+
+  /* Blocks inside the long town section are sections of their own. */
+  .town-wide .town-block,
+  .town-wide .town-figure,
+  .town-block {
+    margin-bottom: var(--space-gap-8);
+  }
+
+  .town-wide .container > :last-child,
+  .town-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .town-intro__text {
+    margin-bottom: var(--space-gap-6);
+  }
+
+  /* Sand bands: a little more air inside than the half gap. */
+  .why {
+    padding-top: var(--phone-band-pad);
+  }
+
+  .why .container {
+    padding-bottom: var(--phone-band-pad);
+  }
+
+  .tour-quote__inner {
+    padding-block: var(--phone-band-pad);
+  }
+
+  .about-values {
+    padding-top: var(--phone-band-pad);
+  }
+
+  .about-values__grid {
+    margin-bottom: var(--phone-band-pad);
+  }
+
+  .footer {
+    padding-block: var(--space-gap-8);
+  }
+
+  /* The band above "Is your place bike-friendly?" was the panel's own 80 px. */
+  .testimonial__panel {
+    padding-block: 0;
+  }
+
+  /* The hidden social section is the last child on home and /tours, so the
+     section before the footer missed the room for the footer's torn edge. */
+  main > section:has(+ section[hidden]:last-child) {
+    padding-bottom: calc(var(--section-pad-md) + 72px);
+  }
+
+  /* Heading to content: 24 px (was 64 to 80). */
+  .features__title,
+  .faq__title,
+  .adventures__head,
+  .tour-more__head {
+    margin-bottom: var(--space-gap-6);
+  }
+
+  .contact-form__wrap {
+    gap: var(--space-gap-7);
+  }
+
+  /* —— Cards: lower photo, tighter body (route, place and business cards) ——
+   * Same card, about 400 px tall instead of 520 to 600. */
+  .tour-card__media {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .tour-card__media--plain {
+    aspect-ratio: auto;
+    height: 96px;
+  }
+
+  .tour-card__body,
+  .town-place .tour-card__body {
+    gap: var(--space-gap-4);
+  }
+
+  .tour-card__foot {
+    padding-top: var(--space-gap-1);
+  }
+
+  .adventures__grid,
+  .tours-grid__list,
+  .town-block__grid:not(.town-rail) {
+    gap: var(--space-gap-5);
+  }
+
+  /* —— Fact tiles: 2 × 2 instead of four full-width boxes —— */
+  .tour-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-gap-2);
+  }
+
+  .tour-meta__box {
+    min-height: 84px;
+    padding: var(--space-gap-4);
+    gap: var(--space-gap-3);
+  }
+
+  .tour-meta__value {
+    font-size: var(--type-h4);
+    line-height: var(--leading-h4);
+  }
+
+  .tour-meta__label {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: var(--space-gap-2);
+    line-height: 1.4;
+  }
+
+  .tour-meta__label .motif {
+    margin-top: 0.4em;
+  }
+
+  .tour-meta__label img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* —— Route, business and press hero: one 16 to 24 px rhythm ——
+   * The column had a 48 px gap plus each element's own margin (60 to 70 px). */
+  .tour-hero__panel {
+    gap: var(--space-gap-6);
+    margin-bottom: var(--space-gap-5);
+  }
+
+  .tour-hero__copy {
+    gap: var(--space-gap-5);
+  }
+
+  .tour-hero__h1,
+  .tour-hero__title,
+  .tour-hero__eyebrow {
+    margin-bottom: 0;
+  }
+
+  .crumbs--hero + .tour-hero__panel .tour-hero__foot {
+    margin-top: var(--space-gap-2);
+  }
+
+  .tour-hero__foot {
+    gap: var(--space-gap-5);
+  }
+
+  .crumbs {
+    margin-bottom: var(--space-gap-4);
+  }
+
+  /* —— About hero: the polaroids are hidden on phones, their space stays ——
+   * 720 px stage, 64 px above and below the title block, 120 px under it. */
+  .about-hero__stage {
+    min-height: 0;
+  }
+
+  .about-hero__title {
+    margin-bottom: var(--space-gap-8);
+    padding-block: var(--space-gap-6) 0;
+  }
+
+  /* —— Chip rows ——
+   * Fact chips: one row that scrolls sideways (they took four rows).
+   * Filter chips: same row. Both run to the screen edge, where the last chip
+   * fades out, so a cut chip reads as "more this way". */
+  .page-tours .tours-hero__quals,
+  .page-towns .tours-hero__quals,
+  .blog-filters__links.tours-filters__links {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    margin: -2px calc(-1 * var(--page-pad-sm)) -2px -2px;
+    padding: 2px calc(var(--page-pad-sm) + var(--space-gap-5)) 2px 2px;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+  }
+
+  .page-tours .tours-hero__quals::-webkit-scrollbar,
+  .page-towns .tours-hero__quals::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tours-hero__quals .tours-qual {
+    flex: none;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* —— Card fact line ("79 km ▸ 944 m ▸ Touring") ——
+   * Each fact stays whole. The separator is drawn in the gap before a fact,
+   * and the row clips at its left edge, so a wrapped line never starts or
+   * ends with a separator. */
+  .tour-card__meta:not(.town-place__meta) {
+    flex-wrap: wrap;
+    gap: 0 var(--space-gap-6);
+    overflow: hidden;
+  }
+
+  .tour-card__meta > .motif {
+    display: none;
+  }
+
+  .tour-card__meta > span:not(.motif) {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .tour-card__meta > .motif + span::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--space-gap-5));
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    background: var(--color-brand-primary);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* —— Remaining large steps inside sections (were 64 to 96 px) —— */
+  .about-values__title,
+  .about-team__title {
+    margin-bottom: var(--space-gap-7);
+  }
+
+  .about-values__grid {
+    gap: var(--zy-space-10);
+  }
+
+  .about-member {
+    gap: var(--space-gap-6);
+    margin-bottom: var(--space-gap-8);
+  }
+
+  .about-member:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Home feature cards: tighter inside a card, a clear step between cards,
+     so each photo reads with the text under it. */
+  .features__grid {
+    gap: var(--zy-space-10);
+  }
+
+  .feature-card {
+    gap: var(--space-gap-5);
+  }
+
+  /* Town sections: heading, text, then the cards or map after 24 px. */
+  .town-block .town-lead,
+  .town-block .town-answer {
+    margin-bottom: var(--space-gap-6);
+  }
+
+  .town-map {
+    margin: 0 0 var(--space-gap-6);
+  }
+
+  .town-more--cards {
+    margin-top: var(--space-gap-6);
+  }
+}
