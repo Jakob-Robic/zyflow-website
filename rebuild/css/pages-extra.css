@@ -47,7 +47,7 @@ html[data-theme="light"] .tour-aside__list li {
   border-bottom-color: var(--color-border-default);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .two-col {
     grid-template-columns: 1fr;
   }

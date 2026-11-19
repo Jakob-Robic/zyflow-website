@@ -133,7 +133,7 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   const panel = document.querySelector("[data-nav-panel]");
   if (!nav || !toggle || !panel) return;
 
-  const mq = window.matchMedia("(max-width: 1100px)");
+  const mq = window.matchMedia("(max-width: 1220px)");
   let lastFocus = null;
 
   function focusableIn(root) {
@@ -527,7 +527,7 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
  * Horizontal snap slider for why / app-flow steps on tablet & phone.
  */
 (function initSnapSliders() {
-  const mq = window.matchMedia("(max-width: 1100px)");
+  const mq = window.matchMedia("(max-width: 720px)");
   const isSl = document.documentElement.lang === "sl";
 
   const configs = [

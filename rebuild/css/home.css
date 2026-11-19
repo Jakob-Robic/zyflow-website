@@ -2652,7 +2652,9 @@ html[data-theme="light"] .testimonial__bg img {
 }
 
 /* —— Responsive —— */
-@media (max-width: 1100px) {
+/* The menu button replaces the links until six links, the centred logo and
+   the right-hand tools fit side by side (EN needs about 1220 px). */
+@media (max-width: 1220px) {
   .nav {
     height: auto;
     min-height: var(--navbar-height);
@@ -2663,12 +2665,6 @@ html[data-theme="light"] .testimonial__bg img {
     height: var(--navbar-height);
     padding-inline: var(--page-pad-sm);
     column-gap: var(--space-gap-3);
-  }
-
-  .announcement__inner,
-  .page-home .container,
-  .hero {
-    padding-inline: var(--page-pad-sm);
   }
 
   .nav__brand {
@@ -2721,7 +2717,18 @@ html[data-theme="light"] .testimonial__bg img {
     padding-inline: var(--button-padding-sm);
     font-size: var(--type-small);
   }
+}
 
+@media (max-width: 1100px) {
+  .announcement__inner,
+  .page-home .container,
+  .hero {
+    padding-inline: var(--page-pad-sm);
+  }
+}
+
+/* Stacked (tablet) layout below 1000 px; 1001 px and up keep the desktop layout. */
+@media (max-width: 1000px) {
   .adventures__grid,
   .features__grid,
   .social__videos {
@@ -2750,6 +2757,32 @@ html[data-theme="light"] .testimonial__bg img {
   .why__polaroid {
     display: none;
   }
+  .hero__card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: auto;
+    margin: var(--space-gap-6);
+    border-radius: var(--radius-md);
+  }
+  .hero__slide {
+    align-items: center;
+  }
+  .hero__card-media {
+    width: 96px;
+    height: 96px;
+  }
+  .hero__frame {
+    height: auto;
+    min-height: 560px;
+  }
+  .featured-tour__polaroid {
+    display: none;
+  }
+}
+
+/* Phones: the three "why" items become a swipe row with dots (home.js). */
+@media (max-width: 720px) {
   .why__list {
     flex-direction: row;
     align-items: stretch;
@@ -2796,28 +2829,6 @@ html[data-theme="light"] .testimonial__bg img {
   }
   .why__dots:not([hidden]) {
     display: flex;
-  }
-  .hero__card {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    width: auto;
-    margin: var(--space-gap-6);
-    border-radius: var(--radius-md);
-  }
-  .hero__slide {
-    align-items: center;
-  }
-  .hero__card-media {
-    width: 96px;
-    height: 96px;
-  }
-  .hero__frame {
-    height: auto;
-    min-height: 560px;
-  }
-  .featured-tour__polaroid {
-    display: none;
   }
 }
 

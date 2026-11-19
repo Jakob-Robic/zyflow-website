@@ -424,7 +424,7 @@
   background: linear-gradient(180deg, #2a2e1e, #373b2a 70%);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .app-banner__panel {
     min-height: 0;
     padding: var(--space-gap-9) var(--space-gap-6) var(--space-gap-11);
