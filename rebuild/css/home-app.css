@@ -70,6 +70,8 @@
 
 .app-banner__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: 1;
   margin: 0 0 var(--space-gap-5);
@@ -236,6 +238,8 @@
 
 .app-stage__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: 1;
   margin: 0 0 var(--space-gap-5);
@@ -348,6 +352,8 @@
 
 .phone-ui__hero {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: 1;
   margin: 0;

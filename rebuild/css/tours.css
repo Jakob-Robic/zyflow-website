@@ -57,6 +57,8 @@
 
 .tours-hero__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: var(--leading-display);
   margin: 0 0 var(--space-gap-6);
@@ -106,6 +108,8 @@
 
 .tours-filter__label {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: 0;
@@ -132,6 +136,8 @@
   border-radius: var(--radius-sm);
   color: var(--color-text-heading);
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   cursor: pointer;

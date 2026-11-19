@@ -58,6 +58,8 @@
 
 .article__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   margin: 0;
@@ -84,6 +86,8 @@
 
 .article__body h2 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: var(--space-gap-6) 0 var(--space-gap-5);
@@ -170,6 +174,8 @@
 
 .article-more__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: 1;
   margin: 0;

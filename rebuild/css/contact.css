@@ -48,6 +48,8 @@
 .contact-hero__title {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: 1;
 }
@@ -136,6 +138,8 @@
 .contact-form__title {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
 }

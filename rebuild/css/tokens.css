@@ -143,6 +143,12 @@ html[data-theme="light"] {
 
   --contour-opacity: 0.35;
   --contour-blend: multiply;
+
+  /* Contrast tile (the "selected" pair): ink with white text here, sand with
+     ink text in the dark theme. White icon art stays white on ink. */
+  --color-surface-contrast: var(--zy-action-selected);
+  --color-text-on-contrast: var(--zy-text-inverse);
+  --icon-filter-on-contrast: none;
 }
 
 /* —— Olive dark theme ——
@@ -186,6 +192,10 @@ html[data-theme="dark"] {
 
   --contour-opacity: 0.85;
   --contour-blend: overlay;
+
+  --color-surface-contrast: var(--zy-action-selected);
+  --color-text-on-contrast: var(--zy-text-inverse);
+  --icon-filter-on-contrast: brightness(0); /* white icon art → ink on the sand tile */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -217,5 +227,8 @@ html[data-theme="dark"] {
     --form-input-border-color: var(--zy-border-hairline);
     --contour-opacity: 0.85;
     --contour-blend: overlay;
+    --color-surface-contrast: var(--zy-action-selected);
+    --color-text-on-contrast: var(--zy-text-inverse);
+    --icon-filter-on-contrast: brightness(0);
   }
 }

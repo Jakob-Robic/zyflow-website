@@ -58,6 +58,8 @@
 
 .tour-hero__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: var(--leading-h1);
   margin: 0 0 var(--space-gap-6);
@@ -85,6 +87,8 @@
 
 .tour-hero__price {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h3);
   line-height: var(--leading-h3);
   margin: 0;
@@ -257,14 +261,41 @@
   border: 1px solid var(--color-surface-4);
 }
 
-/* The highlighted fact box is ink, not orange: orange is never a fill (brand book §3). */
+/* The highlighted fact box is ink, not orange: orange is never a fill (brand book §3).
+   It is the theme's contrast pair, so it stays readable in the dark theme too
+   (sand tile, ink text) instead of turning white with white text. */
 .tour-meta__box--accent {
-  background: var(--zy-text-primary);
-  border-color: var(--zy-text-primary);
+  background: var(--color-surface-contrast);
+  border-color: var(--color-surface-contrast);
+}
+
+.tour-meta__box--accent .tour-meta__label img {
+  filter: var(--icon-filter-on-contrast);
+}
+
+.tour-meta__box--accent .motif {
+  background: currentColor;
+}
+
+/* Step cards ("How it works"): label, title and text stack from the top, so the
+   titles share one line across the row whatever the length of the text below.
+   (Spread over the card height, a three-line text pushed its title 11px up.) */
+.tour-meta--steps .tour-meta__box {
+  justify-content: flex-start;
+}
+
+.tour-meta--steps .tour-meta__value {
+  margin-top: var(--space-gap-6);
+}
+
+.tour-meta--steps .tour-meta__label {
+  margin-top: var(--space-gap-4);
 }
 
 .tour-meta__value {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h3);
   line-height: var(--leading-h3);
   margin: 0;
@@ -328,6 +359,8 @@
 
 .tour-article__h {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: 0 0 var(--space-gap-5);
@@ -401,6 +434,8 @@
 
 .tour-aside__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
   line-height: var(--leading-h5);
   text-align: center;
@@ -423,6 +458,8 @@
   padding-block: var(--space-gap-4);
   border-bottom: 1px dashed rgba(255, 255, 255, 0.18);
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
   line-height: var(--leading-h5);
 }
@@ -473,6 +510,8 @@
 
 .tour-quote__quote {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   color: var(--color-brand-primary);
@@ -524,6 +563,8 @@
 
 .tour-more__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: 1;
   margin: 0;

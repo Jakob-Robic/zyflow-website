@@ -65,6 +65,8 @@
 
 .about-hero__heading {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: var(--leading-display);
   margin: var(--space-gap-5) 0;
@@ -160,6 +162,8 @@
 .about-hero__sign {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
   opacity: 0.85;
 }
@@ -176,6 +180,8 @@
 
 .about-values__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: 1;
   text-align: center;
@@ -199,6 +205,8 @@
 
 .about-value__num {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: 1;
   opacity: 0.5;
@@ -208,6 +216,8 @@
 
 .about-value h3 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   margin: 0;
@@ -258,6 +268,8 @@
 
 .about-team__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: 1;
   text-align: center;
@@ -302,6 +314,8 @@
 
 .about-member__body h3 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   margin: 0;

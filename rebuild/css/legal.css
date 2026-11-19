@@ -42,6 +42,8 @@
 .legal-doc__title {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: 1;
   text-wrap: balance;
@@ -84,6 +86,8 @@
 .legal-hub__card h2 {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
 }
@@ -127,7 +131,7 @@
 
 .legal-switch__link.is-active {
   background: var(--color-brand-primary);
-  color: var(--color-text-on-accent);
+  color: var(--button-text-primary);
 }
 
 .legal-doc__header .legal-doc__lang {
@@ -186,6 +190,8 @@
 
 .legal-doc__body h2 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: var(--space-gap-8) 0 var(--space-gap-5);
@@ -194,6 +200,8 @@
 
 .legal-doc__body h3 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5, 22px);
   line-height: 1.2;
   margin: var(--space-gap-6) 0 var(--space-gap-4);

@@ -40,7 +40,7 @@
 .tour-meta__box--accent .tour-meta__value,
 .tour-meta__box--accent .tour-meta__label,
 .tour-meta__box--accent .step-label {
-  color: var(--color-text-on-accent);
+  color: var(--color-text-on-contrast);
 }
 
 html[data-theme="light"] .tour-aside__title {

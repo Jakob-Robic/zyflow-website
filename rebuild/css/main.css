@@ -12,6 +12,7 @@
 @import url("./components/forms.css");
 @import url("./components/divider.css");
 @import url("./components/app-modal.css");
+@import url("./components/cookie-consent.css"); /* brand look for the cookie banner (#cc-main) */
 @import url("./chrome.css");
 @import url("./home.css?v=3");
 @import url("./home-app.css"); /* REVERT: remove this line to drop app section styles */

@@ -281,6 +281,8 @@ html[data-theme="dark"] .tours-chip.is-active img {
 
 .route-towns__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: 1.05;
   margin: 0 0 var(--space-gap-4);
@@ -323,6 +325,8 @@ html[data-theme="dark"] .tours-chip.is-active img {
 
 .route-towns__name {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
   line-height: 1.1;
 }

@@ -50,6 +50,8 @@
 
 .blog-hero__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: var(--leading-display);
   margin: 0 0 var(--space-gap-6);
@@ -113,6 +115,8 @@
 
 .blog-feature__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   margin: 0;
@@ -168,6 +172,8 @@
 
 .blog-story__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: 0;

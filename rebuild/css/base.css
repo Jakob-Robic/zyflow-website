@@ -32,6 +32,15 @@ picture > source {
   display: none;
 }
 
+/*
+ * Tanker ships in one weight (400). Headings are bold by default in every
+ * browser, and a bold request against a one-weight face makes the browser
+ * smear a fake bold, so half the headlines looked heavier than the rest.
+ * Rule for this site: every rule that sets `font-family: var(--font-heading)`
+ * also sets `font-weight: 400` and `font-synthesis: none`. Headings in
+ * DM Sans or Courier Prime are untouched.
+ */
+
 /* —— Containers —— */
 
 .container {
@@ -97,6 +106,7 @@ picture > source {
 
 .type-display {
   font-family: var(--font-heading);
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: var(--leading-display);
   font-weight: 400;
@@ -106,6 +116,7 @@ picture > source {
 
 .type-h1 {
   font-family: var(--font-heading);
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: var(--leading-h1);
   font-weight: 400;
@@ -114,6 +125,7 @@ picture > source {
 
 .type-h2 {
   font-family: var(--font-heading);
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   font-weight: 400;
@@ -122,6 +134,7 @@ picture > source {
 
 .type-h3 {
   font-family: var(--font-heading);
+  font-synthesis: none;
   font-size: var(--type-h3);
   line-height: var(--leading-h3);
   font-weight: 400;
@@ -130,6 +143,7 @@ picture > source {
 
 .type-h4 {
   font-family: var(--font-heading);
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   font-weight: 400;
@@ -138,6 +152,7 @@ picture > source {
 
 .type-h5 {
   font-family: var(--font-heading);
+  font-synthesis: none;
   font-size: var(--type-h5);
   line-height: var(--leading-h5);
   font-weight: 400;
