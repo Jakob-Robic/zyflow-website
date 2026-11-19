@@ -18,6 +18,8 @@
  * - worker-src: PostHog may use blob workers.
  * - maps: MapLibre (self-hosted /assets/vendor) + OpenFreeMap tiles on tour
  *   detail heroes; Overpass enriches stop pins in the background (cached).
+ *   When WebGL is off, Leaflet draws the same maps on tile.openstreetmap.org
+ *   tiles (img-src).
  *   Do not add unpkg.com — MapLibre is not loaded from a CDN.
  *
  * upgrade-insecure-requests is omitted: it is not meaningful on a report-only policy.
@@ -31,7 +33,7 @@ const CSP_REPORT_ONLY =
   "form-action 'self'; " +
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://connect.facebook.net https://bzrcdn.openai.com https://eu-assets.i.posthog.com https://challenges.cloudflare.com; " +
   "style-src 'self' 'unsafe-inline'; " +
-  "img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://*.google.com https://*.g.doubleclick.net https://www.facebook.com https://*.facebook.com https://*.openfreemap.org https://tiles.openfreemap.org https://api.maptiler.com https://fazier.com; " +
+  "img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://*.google.com https://*.g.doubleclick.net https://www.facebook.com https://*.facebook.com https://*.openfreemap.org https://tiles.openfreemap.org https://api.maptiler.com https://tile.openstreetmap.org https://fazier.com; " +
   "font-src 'self' data:; " +
   "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://*.googleadservices.com https://*.doubleclick.net https://eu.i.posthog.com https://eu.posthog.com https://eu-assets.i.posthog.com https://www.facebook.com https://connect.facebook.net https://graph.facebook.com https://bzrcdn.openai.com https://bzr.openai.com https://challenges.cloudflare.com https://tiles.openfreemap.org https://*.openfreemap.org https://api.maptiler.com https://overpass-api.de https://overpass.kumi.systems; " +
   "frame-src https://www.googletagmanager.com https://www.facebook.com https://td.doubleclick.net https://challenges.cloudflare.com; " +
