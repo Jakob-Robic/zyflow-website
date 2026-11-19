@@ -535,8 +535,8 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* Smaller desktop: stack hero/map before columns get cramped */
-@media (max-width: 1240px) {
+/* Tablet: stack hero/map below 1000 px */
+@media (max-width: 1000px) {
   .tour-hero__panel {
     grid-template-columns: minmax(0, 1fr);
   }

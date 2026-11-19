@@ -648,7 +648,7 @@
   height: 480px;
 }
 
-@media (min-width: 1101px) {
+@media (min-width: 1001px) {
   .town-wide .town-block__grid:not(.town-rail) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
