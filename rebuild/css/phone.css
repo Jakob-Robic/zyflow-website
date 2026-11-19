@@ -206,6 +206,7 @@
     margin-bottom: 2px;
     font-family: var(--font-badge);
     font-size: var(--type-small);
+    font-weight: 400;
     line-height: 1.4;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -840,5 +841,18 @@
     min-width: 44px;
     padding-block: 9px;
     margin-block: -9px;
+
+@media (max-width: 599.98px) {
+  /* "How it works" uses the fact tiles for four steps with a sentence each.
+     Half-width tiles broke the sentences into two or three words a line, so
+     the steps stay one per row, at the compact tile padding. */
+  [data-section="business.how"] .tour-meta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  [data-section="business.how"] .tour-meta__box {
+    justify-content: flex-start;
+    min-height: 0;
+    gap: var(--space-gap-2);
   }
 }
