@@ -6,7 +6,7 @@ region: gorenjska
 country: slovenia
 category: tour
 distance_km: 68
-elevation_m: 
+elevation_m: 850
 duration: 1 day
 difficulty: intermediate
 best_season: Apr – Oct
