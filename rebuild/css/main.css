@@ -27,3 +27,4 @@
 @import url("./legal.css");
 @import url("./pages-extra.css");
 @import url("./styleguide.css");
+@import url("./phone.css"); /* below 600 px; keep last so it wins over the page stylesheets */

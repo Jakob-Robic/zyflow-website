@@ -3,7 +3,43 @@
  * Strips HTML comments and drops the unpublished account-deletion section.
  */
 
-const { marked } = require("marked");
+const { Marked } = require("marked");
+
+/**
+ * Tables: every body cell carries its column heading as data-label, and the
+ * table parts state their roles. Below 600 px the stylesheet stacks each row
+ * as label/value blocks (css/phone.css); the roles keep it a table for screen
+ * readers when the cells stop being laid out as one.
+ */
+function plainText(html) {
+  return String(html)
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+const legalMarked = new Marked({ gfm: true, breaks: false });
+legalMarked.use({
+  renderer: {
+    table(token) {
+      const cell = (tag, role, item, label) => {
+        const align = item.align ? ` align="${item.align}"` : "";
+        const data = label ? ` data-label="${label.replace(/"/g, "&quot;")}"` : "";
+        return `<${tag} role="${role}"${align}${data}>${this.parser.parseInline(item.tokens)}</${tag}>\n`;
+      };
+      const labels = token.header.map((item) => plainText(this.parser.parseInline(item.tokens)));
+      const head = token.header.map((item) => cell("th", "columnheader", item)).join("");
+      const rows = token.rows
+        .map(
+          (row) =>
+            `<tr role="row">\n${row.map((item, i) => cell("td", "cell", item, labels[i])).join("")}</tr>\n`
+        )
+        .join("");
+      const body = rows ? `<tbody role="rowgroup">${rows}</tbody>` : "";
+      return `<table role="table">\n<thead role="rowgroup">\n<tr role="row">\n${head}</tr>\n</thead>\n${body}</table>\n`;
+    },
+  },
+});
 
 const HTML_COMMENT_RE = /<!--[\s\S]*?-->/g;
 const UNPUBLISHED_DELETION_RE =
@@ -114,8 +150,7 @@ function prepareMarkdown(raw, { dropUnpublishedDeletion = false } = {}) {
 
 function renderLegalMarkdown(raw, { locale = "en", dropUnpublishedDeletion = false } = {}) {
   const { meta, markdown } = prepareMarkdown(raw, { dropUnpublishedDeletion });
-  marked.setOptions({ gfm: true, breaks: false });
-  let html = marked.parse(markdown);
+  let html = legalMarked.parse(markdown);
   html = ensureHeadingIds(html);
   const headings = collectHeadings(html);
   const toc = renderToc(headings, locale);

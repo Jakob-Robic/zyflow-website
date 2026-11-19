@@ -1,0 +1,220 @@
+/**
+ * Phone layout: everything below 600 px (reference 375, checked 320 to 599).
+ *
+ * This file is imported last in main.css so its rules win over the page
+ * stylesheets without touching them. Tablet widths (600 to 1100 px) are not
+ * changed here. Keep new phone rules in this file.
+ */
+
+/* ==========================================================================
+ * P1 — broken on a phone
+ * ========================================================================== */
+
+/*
+ * Primary button on the always-olive panels (app banner, Ljubljana to Trieste).
+ * Brand green on olive is 1.9:1, so the button had no edge in the light theme.
+ * Use the dark theme's action colours there (brand guidelines §3: lighter
+ * action green #9BC48A with an olive label, 7.1:1). The dark theme already
+ * resolves to these values, so nothing changes there. All widths.
+ */
+.app-banner__panel .btn--primary,
+.featured-tour__panel .btn--primary {
+  background-color: var(--zy-color-green-300);
+  border-color: var(--zy-color-green-300);
+  color: var(--zy-color-olive-900);
+}
+
+@media (max-width: 599.98px) {
+  /* —— Header ——
+   * Logo, Download and the menu button stay in the bar. The theme switch moves
+   * into the menu, beside the language switch, so the wordmark keeps its
+   * natural 90 px width (brand minimum 72 px). */
+  .nav__tools--bar {
+    display: none;
+  }
+
+  .nav__tools--panel {
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-gap-4);
+  }
+
+  .nav__tools--panel .theme-toggle {
+    display: inline-flex;
+  }
+
+  .nav__brand {
+    flex: none;
+  }
+
+  .nav__logo {
+    height: 28px;
+    width: auto;
+    min-width: 72px;
+    max-width: none;
+  }
+
+  /* —— Download window ——
+   * Compact: no phone picture, no QR code and no "scan the QR code" line.
+   * Title, one paragraph and the two store buttons, all on the first screen. */
+  .app-modal {
+    max-width: calc(100vw - 2 * var(--space-gap-4));
+  }
+
+  .app-modal__panel {
+    position: relative;
+  }
+
+  .app-modal__hero {
+    position: static;
+    height: auto;
+    padding: 0;
+    background: none;
+    overflow: visible;
+  }
+
+  .app-modal__bg,
+  .app-modal .phone--modal,
+  .app-modal__qr,
+  .app-modal__download p {
+    display: none;
+  }
+
+  /* The close button now sits on the sand panel, not on olive. */
+  .app-modal__close {
+    top: var(--space-gap-3);
+    right: var(--space-gap-3);
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    color: var(--color-text-heading);
+  }
+
+  .app-modal__close:hover,
+  .app-modal__close:focus-visible {
+    background: color-mix(in srgb, var(--color-text-heading) 10%, transparent);
+  }
+
+  .app-modal__close:focus-visible {
+    outline-color: var(--zy-focus-ring);
+  }
+
+  .app-modal__body {
+    padding: var(--space-gap-9) var(--space-gap-5) var(--space-gap-5);
+  }
+
+  .app-modal__title {
+    padding-inline: var(--space-gap-6);
+  }
+
+  .app-modal__lede {
+    margin-bottom: var(--space-gap-5);
+  }
+
+  .app-modal__badge {
+    margin-bottom: var(--space-gap-5);
+  }
+
+  .app-modal__card {
+    display: block;
+    padding: var(--space-gap-5) var(--space-gap-4);
+    text-align: center;
+  }
+
+  .app-modal__download h3 {
+    margin-bottom: var(--space-gap-4);
+  }
+
+  .app-modal__stores {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: var(--space-gap-3);
+  }
+
+  .app-modal__stores .store-badge {
+    flex: 0 1 148px;
+    min-width: 0;
+  }
+
+  .app-modal__stores .store-badge img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* —— Card foot ——
+   * "Free · during launch" beside "List your place" wrapped to three lines.
+   * The price stays on one line; when the button does not fit beside it, the
+   * button moves to its own line (same as "Routes from here" on town pages). */
+  .tour-card__foot {
+    flex-wrap: wrap;
+    row-gap: var(--space-gap-3);
+  }
+
+  .page-business .tour-card__price {
+    white-space: nowrap;
+  }
+
+  /* —— Legal tables: one block per row, each value under its column label ——
+   * The markup carries the column label on every cell (data-label, set in
+   * scripts/legal-markdown.js). Nothing scrolls sideways. */
+  .legal-doc__body table,
+  .legal-doc__body thead,
+  .legal-doc__body tbody,
+  .legal-doc__body tr,
+  .legal-doc__body th,
+  .legal-doc__body td {
+    display: block;
+  }
+
+  .legal-doc__body table {
+    min-width: 0;
+    width: 100%;
+    margin: 0 0 var(--space-gap-6);
+    border-top: 1px solid var(--color-border-default);
+  }
+
+  /* Column headers are repeated on every cell, so the header row is hidden
+     from view only (screen readers still get it). */
+  .legal-doc__body thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .legal-doc__body tbody tr {
+    padding-block: var(--space-gap-4);
+    border-bottom: 1px solid var(--color-border-default);
+  }
+
+  .legal-doc__body td {
+    padding: 0;
+    border: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .legal-doc__body td + td {
+    margin-top: var(--space-gap-3);
+  }
+
+  .legal-doc__body td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    font-family: var(--font-badge);
+    font-size: var(--type-small);
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-body-muted);
+  }
+
+  /* The first cell names the row. */
+  .legal-doc__body td:first-child {
+    font-weight: 600;
+    color: var(--color-text-heading);
+  }
+}
