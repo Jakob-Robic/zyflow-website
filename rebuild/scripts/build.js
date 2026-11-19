@@ -1654,6 +1654,38 @@ function injectMapTilerKey() {
   console.log("injected MAPTILER_KEY into js/tour-map.js");
 }
 
+/**
+ * The web planner that "Open in Zyflow" (js/open-app.js) forwards computers to.
+ * PLANNER_ORIGIN overrides https://navigate.zyflow.eu, e.g. a local planner for testing.
+ */
+function injectPlannerOrigin() {
+  const origin = (process.env.PLANNER_ORIGIN || "").trim().replace(/\/+$/, "");
+  if (!origin) return;
+  let parsed;
+  try {
+    parsed = new URL(origin);
+  } catch (_e) {
+    parsed = null;
+  }
+  if (!parsed || !/^https?:$/.test(parsed.protocol) || parsed.origin !== origin) {
+    console.warn("PLANNER_ORIGIN ignored — expected an origin like https://navigate.zyflow.eu");
+    return;
+  }
+  const file = path.join(DIST, "js", "open-app.js");
+  if (!fs.existsSync(file)) return;
+  const src = read(file);
+  const next = src.replace(
+    /var PLANNER_ORIGIN = "https:\/\/navigate\.zyflow\.eu";/,
+    `var PLANNER_ORIGIN = ${JSON.stringify(origin)};`
+  );
+  if (next === src) {
+    console.warn("PLANNER_ORIGIN set but open-app.js was not updated");
+    return;
+  }
+  fs.writeFileSync(file, next, "utf8");
+  console.log(`injected PLANNER_ORIGIN=${origin} into js/open-app.js`);
+}
+
 function copyCookieConsentAssets() {
   const pkgDist = path.join(
     ROOT,
@@ -1972,6 +2004,7 @@ async function build() {
   copyCookieConsentAssets();
   injectTurnstileSiteKey();
   injectMapTilerKey();
+  injectPlannerOrigin();
 
   for (const locale of [...LOCALES, ...PARTIAL_LOCALES]) {
     const messages = messagesByLocale[locale];
