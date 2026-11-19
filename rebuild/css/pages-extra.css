@@ -43,10 +43,6 @@
   color: var(--color-text-on-contrast);
 }
 
-html[data-theme="light"] .tour-aside__title {
-  color: var(--color-text-body-muted);
-}
-
 html[data-theme="light"] .tour-aside__list li {
   border-bottom-color: var(--color-border-default);
 }

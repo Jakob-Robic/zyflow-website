@@ -99,7 +99,7 @@
   /* —— Forms —— */
   --form-input-padding: 12px;
   --form-input-height: 48px;
-  --form-input-radius: 6px;
+  --form-input-radius: var(--radius-md); /* fields: 12px (brand book §5) */
 
   /* —— Effects —— */
   --blur-frosted: 52px;
@@ -113,14 +113,23 @@ html[data-theme="light"] {
   --color-brand-primary: var(--zy-action-primary);
   --color-brand-accent-1: var(--zy-accent);
 
-  /* Page = light sand (brand book §3); offset bands = recessed sand */
+  /*
+   * Sands (brand book §3). Three steps, all design-system values:
+   *   1 page sand #F9F8F4 · 2 recessed sand #EAE6DC (cards, fields, switch
+   *   tracks, the announcement bar) · 3 sand-200 #DDD8CC (a pill or tab on a
+   *   card, the active half of a switch, the footer).
+   * 4 is only the hover / pressed state of 3 (sand-200 with 8% ink); nothing
+   * rests on it. The site's old tans (#e0d9cc, #d4cdc0, #c8bfb0) are retired.
+   */
   --color-surface-1: var(--zy-surface-page);
-  --color-surface-2: #e0d9cc;
-  --color-surface-3: #d4cdc0;
-  --color-surface-4: #c8bfb0;
+  --color-surface-2: var(--zy-surface-recessed);
+  --color-surface-3: var(--zy-color-sand-200);
+  --color-surface-4: color-mix(in srgb, var(--zy-text-primary) 8%, var(--zy-color-sand-200));
   --color-surface-offset: var(--zy-surface-recessed);
+  /* One step below the recessed bands, so the footer still parts from a band above it */
+  --color-surface-footer: var(--zy-color-sand-200);
   --color-surface-1-transparent: #f9f8f400;
-  --color-surface-2-transparent: #e0d9cc00;
+  --color-surface-2-transparent: #eae6dc00;
   /* Keep map-contour cards olive on cream pages */
   --color-surface-map: #373b2a;
   --color-text-on-map: #ffffff;
@@ -128,6 +137,9 @@ html[data-theme="light"] {
   --color-text-heading: var(--zy-text-primary);
   --color-text-body: var(--zy-text-primary);
   --color-text-body-muted: var(--zy-text-muted);
+  /* Muted grey (#71717A) is 3.9:1 on recessed sand; quiet text that sits on a
+     sand surface mixes ink into it instead (5.6:1 on #EAE6DC). */
+  --color-text-muted-on-sand: color-mix(in srgb, var(--zy-text-primary) 70%, var(--zy-surface-recessed));
   --color-text-on-accent: #ffffff;
   --color-text-on-surface-offset: var(--zy-text-primary);
 
@@ -139,10 +151,13 @@ html[data-theme="light"] {
 
   --button-text-primary: var(--zy-action-on-primary);
   --icon-color-default: var(--zy-text-primary);
-  --form-input-border-color: var(--zy-border-hairline);
+  --form-input-border-color: var(--zy-border-control);
 
-  --contour-opacity: 0.35;
+  /* Contour lines behind page heroes: white line art, turned to ink here.
+     Kept faint (about 1.3:1 against the page) in both themes. */
+  --contour-opacity: 0.3;
   --contour-blend: multiply;
+  --contour-filter: invert(1);
 
   /* Contrast tile (the "selected" pair): ink with white text here, sand with
      ink text in the dark theme. White icon art stays white on ink. */
@@ -166,6 +181,7 @@ html[data-theme="dark"] {
   --color-surface-3: var(--zy-color-olive-700);
   --color-surface-4: var(--zy-color-olive-600);
   --color-surface-offset: var(--zy-color-olive-800);
+  --color-surface-footer: var(--zy-color-olive-800);
   --color-surface-1-transparent: #2a2e1e00;
   --color-surface-2-transparent: #373b2a00;
   /* Map-contour panels (Figma 4004:18427) — always olive */
@@ -176,6 +192,7 @@ html[data-theme="dark"] {
   --color-text-heading: var(--zy-text-primary);
   --color-text-body: var(--zy-text-primary);
   --color-text-body-muted: var(--zy-text-muted);
+  --color-text-muted-on-sand: var(--zy-text-muted);
   --color-text-on-accent: #ffffff;
   --color-text-on-surface-offset: var(--zy-text-primary);
 
@@ -188,10 +205,11 @@ html[data-theme="dark"] {
 
   --button-text-primary: var(--zy-action-on-primary);
   --icon-color-default: var(--zy-text-primary);
-  --form-input-border-color: var(--zy-border-hairline);
+  --form-input-border-color: var(--zy-border-control);
 
-  --contour-opacity: 0.85;
+  --contour-opacity: 0.3;
   --contour-blend: overlay;
+  --contour-filter: none;
 
   --color-surface-contrast: var(--zy-action-selected);
   --color-text-on-contrast: var(--zy-text-inverse);
@@ -208,6 +226,7 @@ html[data-theme="dark"] {
     --color-surface-3: var(--zy-color-olive-700);
     --color-surface-4: var(--zy-color-olive-600);
     --color-surface-offset: var(--zy-color-olive-800);
+    --color-surface-footer: var(--zy-color-olive-800);
     --color-surface-1-transparent: #2a2e1e00;
     --color-surface-2-transparent: #373b2a00;
     --color-surface-map: #373b2a;
@@ -215,6 +234,7 @@ html[data-theme="dark"] {
     --color-text-heading: var(--zy-text-primary);
     --color-text-body: var(--zy-text-primary);
     --color-text-body-muted: var(--zy-text-muted);
+    --color-text-muted-on-sand: var(--zy-text-muted);
     --color-text-on-accent: #ffffff;
     --color-text-on-surface-offset: var(--zy-text-primary);
     --color-neutral-0: #ffffff;
@@ -224,9 +244,10 @@ html[data-theme="dark"] {
     --color-motif-glass-dark: #13151524;
     --button-text-primary: var(--zy-action-on-primary);
     --icon-color-default: var(--zy-text-primary);
-    --form-input-border-color: var(--zy-border-hairline);
-    --contour-opacity: 0.85;
+    --form-input-border-color: var(--zy-border-control);
+    --contour-opacity: 0.3;
     --contour-blend: overlay;
+    --contour-filter: none;
     --color-surface-contrast: var(--zy-action-selected);
     --color-text-on-contrast: var(--zy-text-inverse);
     --icon-filter-on-contrast: brightness(0);

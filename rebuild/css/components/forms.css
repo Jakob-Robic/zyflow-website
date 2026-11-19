@@ -47,7 +47,7 @@
 .input:hover,
 .textarea:hover,
 .select:hover {
-  border-color: var(--color-surface-4);
+  border-color: var(--color-text-body-muted);
 }
 
 .input:focus,

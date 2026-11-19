@@ -19,7 +19,8 @@
   flex-direction: column;
   justify-content: space-between;
   gap: var(--space-gap-8);
-  padding: var(--space-gap-6);
+  /* No left padding: the title starts on the page inset, under the breadcrumb */
+  padding: var(--space-gap-6) var(--space-gap-6) var(--space-gap-6) 0;
   min-width: 0;
   max-width: 100%;
   min-height: 483px;
@@ -38,22 +39,11 @@
   opacity: 1;
 }
 
-.tour-hero__eyebrow {
-  margin: 0 0 var(--space-gap-3);
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
-  letter-spacing: 0.02em;
-  opacity: 0.7;
-}
-
+/* Eyebrow above the page title (type in base.css). On the business page it
+   is the h1: a plain fact, the display line below it is the claim. */
+.tour-hero__eyebrow,
 .tour-hero__h1 {
-  margin: 0 0 var(--space-gap-4);
-  font-family: var(--font-body);
-  font-size: var(--type-lead);
-  font-weight: 600;
-  line-height: var(--leading-h5);
-  text-wrap: balance;
-  max-width: 36rem;
+  margin: 0 0 var(--space-gap-3);
 }
 
 .tour-hero__title {
@@ -258,7 +248,7 @@
   padding: var(--space-gap-5);
   border-radius: var(--radius-md);
   background: var(--color-surface-1);
-  border: 1px solid var(--color-surface-4);
+  border: 1px solid var(--zy-border-control);
 }
 
 /* The highlighted fact box is ink, not orange: orange is never a fill (brand book §3).
@@ -439,7 +429,7 @@
   font-size: var(--type-h5);
   line-height: var(--leading-h5);
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted-on-sand);
   margin: 0;
 }
 
@@ -483,7 +473,7 @@
   margin: 0;
   text-align: center;
   font-size: var(--type-small);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-muted-on-sand);
 }
 
 .tour-article__p:empty,
@@ -565,8 +555,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   margin: 0;
   min-width: 0;
   overflow-wrap: anywhere;
@@ -585,6 +575,11 @@
   .tour-hero__copy,
   .tour-hero__media {
     min-height: 0;
+  }
+
+  /* One column: the copy runs the full width between the page gutters */
+  .tour-hero__copy {
+    padding-inline: 0;
   }
 
   .tour-hero__media:not(.tour-hero__media--map) {

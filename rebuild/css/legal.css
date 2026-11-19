@@ -21,21 +21,25 @@
   margin-bottom: var(--space-gap-7);
 }
 
+/* Eyebrow line (type in base.css): tag, date, and the language switch on a doc. */
 .legal-hub__meta,
 .legal-doc__meta {
   display: flex;
   align-items: center;
-  gap: var(--space-gap-5);
+  gap: var(--space-gap-3);
   margin: 0;
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
+  white-space: nowrap;
 }
 
 .legal-hub__tag,
 .legal-doc__tag {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-gap-3);
+  margin: 0;
+}
+
+/* One eyebrow style: no triangle in front of this one. */
+.legal-hub__tag .motif,
+.legal-doc__tag .motif {
+  display: none;
 }
 
 .legal-hub__title,
@@ -96,7 +100,7 @@
   margin: 0;
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-muted-on-sand);
 }
 
 .legal-hub__date {

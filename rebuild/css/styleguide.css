@@ -18,11 +18,7 @@
 }
 
 .sg__eyebrow {
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
   color: var(--color-brand-primary);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .sg__section {

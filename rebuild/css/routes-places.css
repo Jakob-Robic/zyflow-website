@@ -312,7 +312,7 @@ html[data-theme="dark"] .tours-chip.is-active img {
   padding: var(--space-gap-4) var(--space-gap-5);
   background: var(--color-surface-1);
   border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   color: var(--color-text-heading);
   transition: background-color 180ms ease, border-color 180ms ease;
 }

@@ -153,6 +153,7 @@
   object-fit: cover;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .article-more__inner {
@@ -176,8 +177,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-display);
-  line-height: 1;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   margin: 0;
 }
 
@@ -212,10 +213,6 @@
 @media (max-width: 720px) {
   .article__title {
     font-size: var(--type-h3);
-  }
-
-  .article-more__title {
-    font-size: var(--type-h1);
   }
 }
 

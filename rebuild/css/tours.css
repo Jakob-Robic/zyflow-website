@@ -33,6 +33,7 @@
   left: -40%;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .tours-hero .container {
@@ -50,17 +51,14 @@
 
 .tours-hero__eyebrow {
   margin: 0 0 var(--space-gap-3);
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
-  letter-spacing: 0.02em;
 }
 
 .tours-hero__title {
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-display);
-  line-height: var(--leading-display);
+  font-size: var(--type-h1);
+  line-height: var(--leading-h1);
   margin: 0 0 var(--space-gap-6);
   text-wrap: balance;
   overflow-wrap: anywhere;
@@ -90,7 +88,7 @@
   border-radius: var(--radius-sm);
   padding: var(--space-gap-2) var(--space-gap-4) var(--space-gap-2) var(--space-gap-3);
   font-size: var(--type-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-muted-on-sand);
   white-space: nowrap;
 }
 

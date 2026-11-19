@@ -17,11 +17,11 @@
   justify-content: space-between;
   gap: var(--space-gap-5);
   padding-block: var(--space-gap-5);
-  border-bottom: 1px dashed var(--color-surface-4);
+  border-bottom: 1px dashed var(--zy-border-control);
 }
 
 .town-row:first-child {
-  border-top: 1px dashed var(--color-surface-4);
+  border-top: 1px dashed var(--zy-border-control);
 }
 
 .town-row--lead .town-row__text {
@@ -144,7 +144,7 @@
 .town-sight__credit {
   margin: 0;
   font-size: var(--type-small);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-muted-on-sand);
 }
 
 .town-sight__credit a {
@@ -682,12 +682,12 @@
 
 /*
  * —— Breathing room ——
- * Same rhythm as the route pages: a full section gap between blocks, and
- * clear steps from heading to text to cards. The counter and arrows sit
- * directly under the row they move.
+ * Same rhythm as the route pages: one section gap (--section-pad-md) between
+ * blocks, and clear steps from heading to text to cards. The counter and
+ * arrows sit directly under the row they move.
  */
 .town-body {
-  padding-bottom: var(--section-pad-lg);
+  padding-bottom: var(--section-pad-md);
 }
 
 .town-intro__text {
@@ -695,12 +695,12 @@
 }
 
 .town-wide {
-  padding-bottom: var(--section-pad-lg);
+  padding-bottom: var(--section-pad-md);
 }
 
 .town-wide .town-block,
 .town-wide .town-figure {
-  margin-bottom: var(--section-pad-lg);
+  margin-bottom: var(--section-pad-md);
 }
 
 .town-wide .container > :last-child {
@@ -747,7 +747,7 @@
  * reading measure) instead of the centred home-page block.
  */
 .faq--town {
-  padding-block: 0 var(--section-pad-lg);
+  padding-block: 0 var(--section-pad-md);
 }
 
 .faq--town .faq__inner {
@@ -775,7 +775,7 @@
 }
 
 .faq--town .faq__item {
-  border-bottom: 1px dashed var(--color-surface-4);
+  border-bottom: 1px dashed var(--zy-border-control);
 }
 
 .faq--town .faq__foot {

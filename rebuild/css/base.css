@@ -211,6 +211,76 @@ picture > source {
   color: var(--color-text-body-muted);
 }
 
+/* —— Contour clearing ——
+ * The contour-line art behind a page hero never runs through text: a text
+ * block that sits over it carries a page-coloured clearing with a soft edge,
+ * so the lines fade out before they reach the words. Both themes.
+ */
+.tours-hero__quals,
+.about-hero__title,
+.contact-hero__copy,
+.blog-hero__intro {
+  position: relative;
+  isolation: isolate;
+}
+
+.tours-hero__quals::before,
+.about-hero__title::before,
+.contact-hero__copy::before,
+.blog-hero__intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: var(--zy-radius-xl);
+  background: var(--color-surface-1);
+  box-shadow: 0 0 32px 32px var(--color-surface-1);
+  pointer-events: none;
+}
+
+/* —— Eyebrow ——
+ * The small line above a title. One style everywhere (brand book §4): Courier
+ * Prime, capitals, +4% tracking, on one line. On a narrow screen it shrinks a
+ * little, then truncates; it never wraps. Page rules add only margin and colour.
+ */
+.eyebrow,
+.hero__h1,
+.app-banner__eyebrow,
+.app-stage__eyebrow,
+.featured-tour__eyebrow,
+.tours-hero__eyebrow,
+.tour-hero__eyebrow,
+.tour-hero__h1,
+.about-hero__eyebrow,
+.legal-hub__meta,
+.legal-doc__meta,
+.sg__eyebrow {
+  font-family: var(--font-badge);
+  font-size: clamp(0.625rem, 3vw, var(--type-small));
+  font-weight: 400;
+  line-height: var(--leading-body);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.eyebrow,
+.hero__h1,
+.app-banner__eyebrow,
+.app-stage__eyebrow,
+.featured-tour__eyebrow,
+.tours-hero__eyebrow,
+.tour-hero__eyebrow,
+.tour-hero__h1,
+.about-hero__eyebrow,
+.legal-hub__tag,
+.legal-doc__tag,
+.sg__eyebrow {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* —— Stack helpers —— */
 
 .stack {

@@ -26,6 +26,7 @@
   max-width: none;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .contact-hero__grid {
@@ -50,8 +51,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-display);
-  line-height: 1;
+  font-size: var(--type-h1);
+  line-height: var(--leading-h1);
 }
 
 .contact-hero__line {

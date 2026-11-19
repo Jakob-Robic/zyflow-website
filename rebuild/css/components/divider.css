@@ -75,7 +75,7 @@
 /* Page → footer: mountains match footer fill, sit on the seam */
 .section-divider--into-footer {
   background: transparent;
-  color: var(--color-surface-2);
+  color: var(--color-surface-footer);
 }
 
 .section-divider--flip {

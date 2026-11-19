@@ -29,6 +29,7 @@
   left: -40%;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .about-hero__stage {
@@ -46,7 +47,10 @@
   padding-block: var(--space-gap-9);
 }
 
-.about-hero__eyebrow,
+.about-hero__eyebrow {
+  margin: 0;
+}
+
 .about-hero__place {
   margin: 0;
   font-family: var(--font-badge);
@@ -182,8 +186,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   text-align: center;
   margin: 0 0 var(--space-gap-11);
 }
@@ -218,8 +222,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-h2);
-  line-height: var(--leading-h2);
+  font-size: var(--type-h3);
+  line-height: var(--leading-h3);
   margin: 0;
 }
 
@@ -259,6 +263,7 @@
   max-width: none;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .about-team .container {
@@ -270,8 +275,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   text-align: center;
   margin: 0 0 var(--space-gap-11);
 }
@@ -316,8 +321,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-h2);
-  line-height: var(--leading-h2);
+  font-size: var(--type-h3);
+  line-height: var(--leading-h3);
   margin: 0;
 }
 

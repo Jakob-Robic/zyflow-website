@@ -62,8 +62,6 @@
 }
 
 .app-banner__eyebrow {
-  font-family: var(--font-badge);
-  font-size: var(--type-body);
   margin: 0 0 var(--space-gap-4);
   opacity: 0.85;
 }
@@ -72,8 +70,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   margin: 0 0 var(--space-gap-5);
 }
 
@@ -230,8 +228,6 @@
 }
 
 .app-stage__eyebrow {
-  font-family: var(--font-badge);
-  font-size: var(--type-body);
   margin: 0 0 var(--space-gap-4);
   opacity: 0.85;
 }
@@ -240,8 +236,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-synthesis: none;
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   margin: 0 0 var(--space-gap-5);
 }
 
