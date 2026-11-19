@@ -187,6 +187,7 @@
     }
   },
   "chrome": {
+    "crumbLabel": "Drobtinice",
     "announcement": {
       "label": "Novost",
       "text": "Zyflow je na voljo za iOS in Android, v 8 državah.",
@@ -646,11 +647,11 @@
         "region": "Gorenjska, Slovenija",
         "title": "Dobrča",
         "meta0": "26,9 km",
-        "meta1": "2067 m",
+        "meta1": "1070 m",
         "meta2": "Alpska",
         "body": "Alpska tura proti Dobrči, dolgi vzponi, grebenski zrak in občutek, da kolesariš Karavanke, ne mimo njih.",
         "price": "26,9 km",
-        "unit": " · 2067 m"
+        "unit": " · 1070 m"
       },
       {
         "place": "Tržič · Udin boršt",
@@ -1611,14 +1612,14 @@
       "gpxLabel": "Prenesi GPX",
       "metaTitle": "K43 Dobrča | Zyflow",
       "metaDescription": "Alpska tura iz Tržiča do koče na Dobrči. Odpri pot v aplikaciji Zyflow.",
-      "climb": "2067 m",
+      "climb": "1070 m",
       "climbLabel": "Višinci",
       "durationLabel": "Trajanje",
       "difficultyLabel": "Zahtevnost",
       "nextLabel": "Sezona",
       "nextValue": "apr. – okt.",
       "price": "26,9 km",
-      "unit": " · 2067 m",
+      "unit": " · 1070 m",
       "sections": [
         {
           "title": "Proti grebenu",

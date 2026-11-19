@@ -187,6 +187,7 @@
     }
   },
   "chrome": {
+    "crumbLabel": "Breadcrumb",
     "announcement": {
       "label": "App update",
       "text": "Zyflow is live on iOS and Android, in 8 countries.",
@@ -646,11 +647,11 @@
         "region": "Gorenjska, Slovenia",
         "title": "Dobrča",
         "meta0": "26.9 km",
-        "meta1": "2067 m",
+        "meta1": "1070 m",
         "meta2": "Alpine",
         "body": "A full alpine day toward Dobrča, long climbs, ridge air and the feeling of riding the Karawanks rather than around them.",
         "price": "26.9 km",
-        "unit": " · 2067 m"
+        "unit": " · 1070 m"
       },
       {
         "place": "Tržič · Udin boršt",
@@ -1611,14 +1612,14 @@
       "gpxLabel": "Download GPX",
       "metaTitle": "K43 Dobrča | Zyflow",
       "metaDescription": "From Tržič along the Gorenjska “balcony” and up to the hut on Dobrča, a popular alpine day ride with big views.",
-      "climb": "2067 m",
+      "climb": "1070 m",
       "climbLabel": "Elevation",
       "durationLabel": "Duration",
       "difficultyLabel": "Difficulty",
       "nextLabel": "Best season",
       "nextValue": "Apr – Oct",
       "price": "26.9 km",
-      "unit": " · 2067 m",
+      "unit": " · 1070 m",
       "sections": [
         {
           "title": "Toward the ridge",

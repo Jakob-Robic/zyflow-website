@@ -624,3 +624,8 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Business hero photo: keep the rider and the espresso in the portrait crop. */
+.tour-hero__media img.business-hero__photo {
+  object-position: 41% 50%;
+}

@@ -202,7 +202,7 @@ const ROUTES = [
       "k53-kriva-jelka"
     ],
     "distanceKm": "26.9",
-    "elevationM": "2067"
+    "elevationM": "1070"
   },
   {
     "id": "tour-k51-udin-borst",
