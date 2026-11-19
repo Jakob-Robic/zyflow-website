@@ -118,3 +118,52 @@ html #cc-main input:focus-visible ~ .toggle__icon {
   outline: 2px solid var(--zy-focus-ring);
   outline-offset: 2px;
 }
+
+/* —— Phones: a short banner. Accept and Reject share a row, so the banner
+   leaves the hero and its button in view (2026-11-19 phone audit).
+   The library sets its own phone paddings and margins with high specificity,
+   hence the !important flags. —— */
+@media (max-width: 600px) {
+  html #cc-main .cm__texts {
+    padding: 14px 0 10px !important;
+  }
+
+  html #cc-main .cm__title {
+    font-size: var(--type-body);
+    margin-bottom: 0 !important;
+  }
+
+  html #cc-main .cm__desc {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 6px !important;
+  }
+
+  html #cc-main .cm__btns {
+    padding-block: 10px 12px !important;
+    gap: 8px;
+  }
+
+  html #cc-main .cm__btn-group {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    min-width: 100%;
+  }
+
+  html #cc-main .cm__btn-group + .cm__btn-group {
+    grid-template-columns: 1fr;
+    margin-top: 0 !important;
+  }
+
+  html #cc-main .cm__btn,
+  html #cc-main .cm__btn + .cm__btn {
+    margin: 0 !important;
+    min-height: 44px;
+    padding-inline: 12px !important;
+  }
+
+  html #cc-main .cm__footer {
+    padding-block: 6px !important;
+  }
+}

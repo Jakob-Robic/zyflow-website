@@ -759,3 +759,86 @@
     margin-top: var(--space-gap-6);
   }
 }
+
+/* ======================================================================
+ * Joining the tablet and phone passes (720 px and below).
+ * The tablet stylesheet gives 44 px hit areas and the brand focus ring from
+ * 721 px up; phones need the same.
+ * ====================================================================== */
+@media (max-width: 720px) {
+  /* —— Open menu: same left edge as the logo, brand focus ring. —— */
+  .nav__panel {
+    padding-inline: var(--page-pad-sm);
+  }
+
+  .nav__panel .nav__link:focus-visible,
+  .nav__panel .lang-switch__btn:focus-visible,
+  .nav__menu-btn:focus-visible,
+  .theme-toggle__btn:focus-visible {
+    outline: 2px solid var(--zy-focus-ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  .theme-toggle__btn:focus-visible,
+  .nav__panel .lang-switch__btn:focus-visible {
+    border-radius: 100px;
+  }
+
+  /* —— 44 px hit areas; pills and dots keep their look. —— */
+  .tour-card__cta,
+  .hero__dot,
+  .why__dot,
+  .nav__download,
+  .theme-toggle__btn {
+    position: relative;
+  }
+
+  .tour-card__cta::after,
+  .nav__download::after {
+    content: "";
+    position: absolute;
+    inset: -5px 0;
+  }
+
+  .theme-toggle__btn::after {
+    content: "";
+    position: absolute;
+    inset: -7px 0;
+  }
+
+  .hero__dot::after {
+    content: "";
+    position: absolute;
+    inset: -18px -8px;
+  }
+
+  .why__dot::after {
+    content: "";
+    position: absolute;
+    inset: -10px -4px;
+  }
+
+  .nav__brand {
+    padding-block: 8px;
+    margin-block: -8px;
+  }
+
+  .faq__q {
+    padding-block: 10px;
+    margin-block: -10px;
+  }
+
+  .footer__links a,
+  .footer__cookie-btn {
+    min-width: 44px;
+    padding-block: 12px;
+    margin-block: -12px;
+  }
+
+  .footer__big-links a {
+    min-width: 44px;
+    padding-block: 9px;
+    margin-block: -9px;
+  }
+}
