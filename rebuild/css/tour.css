@@ -111,7 +111,6 @@
 }
 
 .tour-hero__next span {
-  opacity: 0.6;
   color: var(--color-text-body-muted);
 }
 
@@ -280,6 +279,15 @@
 
 .tour-meta--steps .tour-meta__label {
   margin-top: var(--space-gap-4);
+}
+
+/* A caption that is a sentence is set in DM Sans, at the card-description size;
+   mono stays for short data labels ("Duration", "46.24° N") (brand book §4). */
+.tour-meta--prose .tour-meta__label,
+.tour-meta--steps .tour-meta__label {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  line-height: var(--leading-body);
 }
 
 .tour-meta__value {

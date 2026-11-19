@@ -1,5 +1,6 @@
 /**
- * Form controls — Figma Forms tokens.
+ * Form controls (brand book §5): 12px corners, recessed sand, the control
+ * border, and a 2px green ring on focus.
  */
 
 .field {
@@ -53,15 +54,9 @@
 .input:focus,
 .textarea:focus,
 .select:focus {
-  outline: none;
-  border-color: var(--color-brand-primary);
-}
-
-.input:focus-visible,
-.textarea:focus-visible,
-.select:focus-visible {
-  outline: 2px solid var(--color-brand-primary);
-  outline-offset: 2px;
+  outline: 2px solid var(--zy-focus-ring);
+  outline-offset: 1px;
+  border-color: var(--zy-focus-ring);
 }
 
 .form-row {

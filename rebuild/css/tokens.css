@@ -101,6 +101,10 @@
   --form-input-height: 48px;
   --form-input-radius: var(--radius-md); /* fields: 12px (brand book §5) */
 
+  /* —— Reading measure ——
+     About 70 characters of DM Sans a line at any size (brand: 60–75). */
+  --measure-reading: 33em;
+
   /* —— Effects —— */
   --blur-frosted: 52px;
 }

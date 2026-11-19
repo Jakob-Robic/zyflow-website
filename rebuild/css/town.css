@@ -110,19 +110,13 @@
   max-width: 45%;
   height: var(--button-height-sm);
   padding-inline: var(--button-padding-sm);
-  background: var(--color-surface-3);
+  /* Colours: the secondary button (components/button.css) */
   border-radius: var(--button-radius-md);
   font-size: var(--type-small);
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: background-color 200ms ease;
-}
-
-.town-row__link:hover,
-.town-row__link:focus-visible {
-  background: var(--color-surface-4);
 }
 
 .town-row__link img {
@@ -159,6 +153,7 @@
 
 .town-intro__text {
   margin: 0;
+  max-width: var(--measure-reading);
   font-size: var(--type-lead);
   line-height: 1.5;
 }
@@ -210,9 +205,9 @@
   margin-top: var(--space-gap-2);
 }
 
+/* Same size as the description on a route card (.tour-card__desc) */
 .town-place__desc {
   flex: 1;
-  font-size: var(--type-body);
   line-height: var(--leading-body);
 }
 
@@ -668,9 +663,10 @@
   }
 }
 
-/* The written answer that opens a section: reading text at a readable measure. */
+/* The written answer that opens a section: reading text at a readable measure
+   (about 70 characters a line; it was 860px, about 95). */
 .town-answer {
-  max-width: 860px;
+  max-width: var(--measure-reading);
   font-size: var(--type-lead);
   line-height: 1.5;
   margin-bottom: var(--space-gap-7);
@@ -772,6 +768,10 @@
 .faq--town .faq__list,
 .faq--town .faq__foot {
   max-width: 860px;
+}
+
+.faq--town .faq__a {
+  max-width: var(--measure-reading);
 }
 
 .faq--town .faq__item {

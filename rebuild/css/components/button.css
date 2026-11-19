@@ -22,7 +22,7 @@
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--color-neutral-0);
+  outline: 2px solid var(--zy-focus-ring);
   outline-offset: 3px;
 }
 
@@ -40,14 +40,36 @@
   opacity: 0.85;
 }
 
-.btn--secondary {
-  background-color: transparent;
+/*
+ * Secondary: the one look for every second-level button. A pill in the page
+ * colour with the control border, so it has an edge on the page, on a sand
+ * card and on a photo, in both themes. (The outline used to be white, which
+ * left no edge on sand.) The small pills on cards and rows share it:
+ * "View route", "Website", the contact page's social links.
+ */
+.btn--secondary,
+.tour-card__cta,
+.town-row__link,
+.contact-social {
+  background-color: var(--color-surface-1);
   color: var(--color-text-body);
-  border: 1.5px solid var(--color-neutral-0);
+  border: 1px solid var(--zy-border-control);
+  transition: border-color 160ms ease, opacity 160ms ease;
 }
 
-.btn--secondary:hover {
-  background-color: var(--color-motif-glass-dark);
+.btn--secondary:hover,
+.btn--secondary:focus-visible,
+.tour-card__cta:hover,
+.tour-card__cta:focus-visible,
+.town-row__link:hover,
+.town-row__link:focus-visible,
+.contact-social:hover,
+.contact-social:focus-visible {
+  border-color: var(--color-text-body);
+}
+
+.btn--secondary:active {
+  opacity: 0.85;
 }
 
 .btn--sm {

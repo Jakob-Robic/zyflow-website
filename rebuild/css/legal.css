@@ -59,7 +59,7 @@
   margin: 0;
   font-size: var(--type-lead);
   line-height: var(--leading-lead);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .legal-hub__list {
@@ -100,7 +100,7 @@
   margin: 0;
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-muted-on-sand);
+  color: var(--color-text-body);
 }
 
 .legal-hub__date {
@@ -117,25 +117,34 @@
   margin-bottom: var(--space-gap-10);
 }
 
+/* The site's chip (see blog.css): outlined pill, ink when selected. */
 .legal-switch__link {
   display: inline-flex;
   align-items: center;
-  padding: var(--space-gap-2) var(--space-gap-5);
-  border-radius: var(--radius-sm);
-  background: var(--color-surface-3);
+  min-height: 40px;
+  padding: var(--space-gap-2) var(--space-gap-4);
+  border: 1px solid var(--zy-border-control);
+  border-radius: var(--zy-radius-pill);
+  background: transparent;
   color: var(--color-text-heading);
   font-size: var(--type-small);
-  font-weight: 600;
   text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .legal-switch__link:hover {
-  background: var(--color-surface-4);
+  border-color: var(--color-text-heading);
+}
+
+.legal-switch__link:focus-visible {
+  outline: 2px solid var(--zy-focus-ring);
+  outline-offset: 2px;
 }
 
 .legal-switch__link.is-active {
-  background: var(--color-brand-primary);
-  color: var(--button-text-primary);
+  background: var(--color-surface-contrast);
+  border-color: var(--color-surface-contrast);
+  color: var(--color-text-on-contrast);
 }
 
 .legal-doc__header .legal-doc__lang {

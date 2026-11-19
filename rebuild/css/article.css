@@ -69,7 +69,7 @@
   margin: 0;
   font-size: var(--type-lead);
   line-height: var(--leading-lead);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .article__rule {

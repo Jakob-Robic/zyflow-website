@@ -67,7 +67,7 @@
   font-size: var(--type-lead);
   line-height: var(--leading-lead);
   margin: 0;
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .blog-feature {
@@ -127,7 +127,7 @@
   margin: 0;
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .blog-grid {
@@ -184,7 +184,7 @@
   margin: 0;
   font-size: var(--type-small);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -249,20 +249,26 @@
   gap: var(--space-gap-2);
 }
 
+/*
+ * Chips. One shape: a pill. A chip you can press (filters here, the legal
+ * tabs in legal.css) is outlined and turns ink when selected, never green.
+ * A chip that only states a fact (.tours-qual) is recessed sand with ink text.
+ */
 .blog-filters__btn {
   font: inherit;
   font-size: var(--type-small);
   background: transparent;
   color: inherit;
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--zy-border-control);
+  border-radius: var(--zy-radius-pill);
   padding: var(--space-gap-2) var(--space-gap-4);
   cursor: pointer;
 }
 
 .blog-filters__btn.is-active {
-  background: var(--color-text-heading);
-  color: var(--color-surface-1);
+  background: var(--color-surface-contrast);
+  border-color: var(--color-surface-contrast);
+  color: var(--color-text-on-contrast);
 }
 
 .blog-story[hidden],

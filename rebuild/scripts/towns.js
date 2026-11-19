@@ -1404,7 +1404,7 @@ ${items
     </div>
     <p class="faq__foot">
       <span data-i18n="home.faq.footnote">If you have any further questions, reach out to our team.</span>
-      <a class="link" href="./contact.html#message" data-i18n="home.faq.contactLink">Contact us</a>
+      <a class="link link--arrow" href="./contact.html#message" data-i18n="home.faq.contactLink">Contact us</a>
     </p>
     <p class="town-credits">${esc(t.credits(town))}</p>
   </div>

@@ -1,5 +1,10 @@
 /**
  * Text links + arrow links — Figma Links/*.
+ *
+ * One text-link style: DM Sans semibold in the text colour, sentence case.
+ * A link that stands on its own and takes you somewhere ends in the arrow
+ * (.link--arrow); a link inside a sentence, or an action that stays on the
+ * page ("Clear filters"), does not.
  */
 
 .link {
@@ -21,7 +26,7 @@
 }
 
 .link:focus-visible {
-  outline: 2px solid var(--color-neutral-0);
+  outline: 2px solid var(--zy-focus-ring);
   outline-offset: 3px;
   border-radius: var(--radius-xs);
 }

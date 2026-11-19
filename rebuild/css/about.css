@@ -160,7 +160,7 @@
   margin: 0 0 var(--space-gap-7);
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .about-hero__sign {
@@ -232,7 +232,6 @@
   padding-left: var(--space-gap-10);
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  opacity: 0.8;
 }
 
 .about-values .section-divider {
@@ -339,7 +338,7 @@
   margin: 0;
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .about-member__quals {

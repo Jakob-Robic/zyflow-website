@@ -111,7 +111,7 @@
 }
 
 .tours-chip:focus-visible {
-  outline: 2px solid var(--color-brand-primary);
+  outline: 2px solid var(--zy-focus-ring);
   outline-offset: 2px;
 }
 
@@ -292,7 +292,7 @@ html[data-theme="dark"] .tours-chip.is-active img {
 .route-towns__lead {
   margin: 0 0 var(--space-gap-6);
   max-width: 40rem;
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .route-towns__list {

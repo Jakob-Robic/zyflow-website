@@ -352,6 +352,8 @@ html[data-theme="light"] .tours-qual img,
 html[data-theme="light"] .tours-filter__btn img,
 html[data-theme="light"] .contact-social img,
 html[data-theme="light"] .link--arrow img,
+html[data-theme="light"] .tour-card__cta img,
+html[data-theme="light"] .town-row__link img,
 html[data-theme="light"] .footer__social img,
 html[data-theme="light"] .why__item img {
   filter: invert(1) brightness(0.12);
@@ -530,8 +532,11 @@ html[data-theme="light"] .footer__lang-list {
   border-color: color-mix(in srgb, var(--color-text-body) 22%, var(--color-surface-footer));
 }
 
+/* Focus is the green ring, never ink (brand book §3) */
 html .footer__email-row:focus-within {
-  border-color: var(--color-text-body);
+  border-color: var(--zy-focus-ring);
+  outline: 2px solid var(--zy-focus-ring);
+  outline-offset: 1px;
 }
 
 .footer__email input {
@@ -1626,16 +1631,10 @@ html[data-theme="light"] .trust__item img {
   gap: var(--space-gap-2);
   height: var(--button-height-sm);
   padding-inline: var(--button-padding-sm);
-  background: var(--color-surface-3);
+  /* Colours: the secondary button (components/button.css) */
   border-radius: var(--button-radius-md);
   font-size: var(--type-small);
   font-weight: 600;
-  transition: background-color 200ms ease;
-}
-
-.tour-card__cta:hover,
-.tour-card__cta:focus-visible {
-  background: var(--color-surface-4);
 }
 
 .tour-card__cta img {
@@ -1929,7 +1928,10 @@ html[data-theme="light"] .trust__item img {
   text-shadow: 0 1px 18px color-mix(in srgb, var(--color-scrim) 45%, transparent);
 }
 
+/* "See routes" / "Places live, routes in progress": words, so DM Sans (the
+   markup's .type-badge would set them in mono). */
 .cat-card__cta {
+  font-family: var(--font-body);
   color: #fff;
   text-shadow: 0 1px 12px color-mix(in srgb, var(--color-scrim) 40%, transparent);
   opacity: 0.9;
@@ -2347,7 +2349,7 @@ html[data-theme="light"] .testimonial__bg img {
 }
 
 .feature-card p {
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 /* —— Journal —— */
@@ -2422,7 +2424,7 @@ html[data-theme="light"] .testimonial__bg img {
 
 .journal__story-body p {
   font-size: var(--type-small);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .journal__divider {
@@ -2519,7 +2521,7 @@ html[data-theme="light"] .testimonial__bg img {
 .faq__a {
   margin-top: 0;
   padding-top: 0;
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
   opacity: 0;
   transform: translateY(-6px);
   overflow-wrap: anywhere;
@@ -3150,7 +3152,7 @@ html[data-theme="light"] .testimonial__bg img {
   margin: 0;
   font-size: var(--type-lead);
   line-height: var(--leading-lead);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .not-found__actions {

@@ -144,7 +144,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .guides-list__link:hover .guides-list__q,

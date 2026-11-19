@@ -140,7 +140,7 @@
   max-width: 34ch;
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .app-modal__badge {
@@ -149,9 +149,10 @@
   gap: var(--space-gap-2);
   margin: 0 0 var(--space-gap-6);
   padding: var(--space-gap-2) var(--space-gap-4);
-  border-radius: var(--radius-sm);
+  border-radius: var(--zy-radius-pill);
   background: var(--color-surface-2);
-  font-family: var(--font-badge);
+  /* A sentence, so DM Sans, not mono (brand book §4) */
+  font-family: var(--font-body);
   font-size: var(--type-small);
 }
 
@@ -180,7 +181,7 @@
   margin: 0 0 var(--space-gap-5);
   font-size: var(--type-small);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-muted-on-sand);
 }
 
 .app-modal__stores {
