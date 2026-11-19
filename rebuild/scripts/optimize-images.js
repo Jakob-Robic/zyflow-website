@@ -80,7 +80,7 @@ const LAYOUT = {
   "team-jakob.jpg": { maxCss: 480, sizes: "(max-width: 720px) 100vw, 420px" },
   "team-tanja.jpg": { maxCss: 480, sizes: "(max-width: 720px) 100vw, 420px" },
   "gravel-cyclist.jpg": { maxCss: 640, sizes: "(max-width: 720px) 100vw, 560px" },
-  "cafe-break.jpg": { maxCss: 640, sizes: "(max-width: 900px) 100vw, 560px" },
+  "cyclist-cafe-stop.jpg": { maxCss: 1000, sizes: "(max-width: 900px) 100vw, 560px" }, // Pixabay, free licence (Jakob, 2026-11-19)
   "cafe-bar-cyclists.jpg": { maxCss: 480, sizes: "(max-width: 720px) 100vw, 400px" },
   "alpine-ebike-overlook.jpg": { maxCss: 480, sizes: "(max-width: 720px) 100vw, 400px" },
   "bike-workshop.jpg": { maxCss: 480, sizes: "(max-width: 720px) 100vw, 400px" },

@@ -1412,6 +1412,8 @@ html[data-theme="light"] .trust__item img {
 .tour-card {
   display: flex;
   flex-direction: column;
+  /* Body fills the card so every footer sits on the card's bottom edge,
+     whatever the title and text lengths in the row. */
   border-radius: var(--radius-md) var(--radius-md) var(--radius-sm) var(--radius-sm);
   overflow: hidden;
   background: var(--color-surface-2);
@@ -1422,8 +1424,10 @@ html[data-theme="light"] .trust__item img {
   height: 279px;
   overflow: hidden;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
-  /* Keep radius clip while the img scales (transform stacking) */
-  transform: translateZ(0);
+  /* Keep the radius clip while the img scales. isolation (not a
+     translateZ layer) so the glass label's backdrop blur isn't re-sampled
+     from a separately composited layer on every scroll frame (flicker). */
+  isolation: isolate;
 }
 
 .tour-card__media img {
@@ -1477,9 +1481,11 @@ html[data-theme="light"] .trust__item img {
 }
 
 .tour-card__loc-text {
+  -webkit-backdrop-filter: blur(26px);
   backdrop-filter: blur(26px);
   background: var(--color-motif-glass-dark);
-  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  /* Floats free of the card edge, so all four corners match the pin tile. */
+  border-radius: var(--radius-sm);
   padding: var(--space-gap-3) var(--space-gap-5);
   display: flex;
   flex-direction: column;
@@ -1494,6 +1500,7 @@ html[data-theme="light"] .trust__item img {
 }
 
 .tour-card__body {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-gap-6);
@@ -1522,10 +1529,13 @@ html[data-theme="light"] .trust__item img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-gap-4);
+  margin-top: auto;
   padding-top: var(--space-gap-6);
 }
 
 .tour-card__price {
+  min-width: 0;
   font-family: var(--font-heading);
   font-size: var(--type-h5);
 }
@@ -1586,6 +1596,8 @@ html[data-theme="light"] .trust__item img {
 
 .tour-card__cta {
   display: inline-flex;
+  flex-shrink: 0;
+  white-space: nowrap;
   align-items: center;
   gap: var(--space-gap-2);
   height: var(--button-height-sm);
