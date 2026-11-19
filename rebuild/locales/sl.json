@@ -468,7 +468,7 @@
         },
         {
           "q": "Katera kolesa Zyflow podpira?",
-          "a": "Vsa: cestna, gravel, potovalna, gorska in e-kolesa. Z e-kolesom dobiš še načrt baterije in polnilnice ob poti."
+          "a": "Vsa: cestna, makadamska, potovalna, gorska in e-kolesa. Z e-kolesom dobiš še načrt baterije in polnilnice ob poti."
         },
         {
           "q": "Kako vem, da je kraj prijazen kolesarjem?",
@@ -495,7 +495,7 @@
           "coords": "46.3792° N, 13.8363° E"
         },
         {
-          "title": "Obalni gravel",
+          "title": "Obalni makadam",
           "place": "Istra, Hrvaška",
           "coords": "45.2396° N, 13.9367° E"
         }
@@ -505,7 +505,7 @@
   "tours": {
     "hero": {
       "title": "kolesarske poti po gorenjski",
-      "lede": "Dvajset tur iz Kranja, Tržiča in Jezerskega, jezerske zanke, alpski prelazi in miren gravel. Izberi pot in jo odpri v Zyflow.",
+      "lede": "Dvajset tur iz Kranja, Tržiča in Jezerskega, jezerske zanke, alpski prelazi in miren makadam. Izberi pot in jo odpri v Zyflow.",
       "quals": [
         "20 poti po Gorenjski",
         "GPX in opisi pripravljeni",
@@ -659,7 +659,7 @@
         "meta0": "25,3 km",
         "meta1": "286 m",
         "meta2": "Makadamska",
-        "body": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in dovolj raznolikosti brez visokega prelaza.",
+        "body": "Predalpski makadam okoli Udin boršta, gozdne sledi, blagi valovi in dovolj raznolikosti brez visokega prelaza.",
         "price": "25,3 km",
         "unit": " · 286 m"
       },
@@ -1640,14 +1640,14 @@
     "k51-udin-borst": {
       "crumbType": "Makadamska",
       "titleHtml": "udin boršt",
-      "lede": "Predalpski gravel okoli Udin boršta, gozdne sledi, blagi valovi in pustolovščina brez visokega prelaza.",
+      "lede": "Predalpski makadam okoli Udin boršta, gozdne sledi, blagi valovi in pustolovščina brez visokega prelaza.",
       "place": "tržič",
       "coords": "46,36° S, 14,31° V",
       "durationHtml": "1 <span>dan</span>",
       "distanceHtml": "25,3 <span>km</span>",
       "elevationHtml": ", ",
       "difficulty": "Srednje",
-      "intro": "K51 je samozavestni gravel dan tržiškega nabora: več makedama kot asfalta, še vedno dovolj blizu mesta, da je kavarniški zaključek lahek.",
+      "intro": "K51 je samozavestni makadamski dan tržiškega nabora: več makadama kot asfalta, še vedno dovolj blizu mesta, da je kavarniški zaključek lahek.",
       "asideNote": "Makadamska · Visit Tržič · K51",
       "cta": "Odpri v Zyflow",
       "ctaSecondary": "Prenesi aplikacijo",
@@ -1676,7 +1676,7 @@
         {
           "title": "Kako z Zyflow",
           "body": "Označite kavarniški povratek v Tržič in izhod na asfalt, če se gozd zablati.",
-          "body2": "K51 odprite v Zyflow, da vidite gravel koridor poleg lažje zanke K52."
+          "body2": "K51 odprite v Zyflow, da vidite makadamski koridor poleg lažje zanke K52."
         }
       ]
     },
@@ -1709,7 +1709,7 @@
         {
           "title": "Zvonovi in vasi",
           "body": "Mirne ceste in kratke povezave mimo cerkva in zaselkov. »Trije zvonovi« so kulturna nit, ustavite se, poslušajte, peljite naprej.",
-          "body2": "Podlage ostanejo prijazne. To je kvečjemu lahek gravel, ne blatna pustolovščina."
+          "body2": "Podlage ostanejo prijazne. To je kvečjemu lahek makadam, ne blatna pustolovščina."
         },
         {
           "title": "Prvi lokalni dan",
@@ -1761,7 +1761,7 @@
         },
         {
           "title": "Kako z Zyflow",
-          "body": "Označite izhod na asfalt in mestno kavarno. Povežite s K51 ali K52 za gravel vikend brez alpskega vremenskega tveganja.",
+          "body": "Označite izhod na asfalt in mestno kavarno. Povežite s K51 ali K52 za makadamski vikend brez alpskega vremenskega tveganja.",
           "body2": "K53 odprite v Zyflow, da ostane linija rezervata jasna med podobnimi gozdnimi sledmi."
         }
       ]
@@ -2075,7 +2075,7 @@
       "coords": "46,24° S, 14,35° V",
       "durationHtml": "1 <span>dan</span>",
       "distanceHtml": "68 <span>km</span>",
-      "elevationHtml": ", ",
+      "elevationHtml": "850 <span>m</span>",
       "difficulty": "Srednje",
       "intro": "Tržičanka poveže kranjsko rožo s tržiškim alpskim katalogom. Kot ciljni dan v zgodovinsko kotlino pod Karavankami ali kot pristop pred težjim prelazom naslednje jutro.",
       "asideNote": "Turistična · Kranjska roža · Visit Kranj",
@@ -2084,14 +2084,14 @@
       "gpxLabel": "Prenesi GPX",
       "metaTitle": "Tržičanka (68 km do Tržiča) | Zyflow",
       "metaDescription": "Tržičanka iz Kranja do Tržiča skozi kanjon Kokre in mimo gradu Kamen: 68 km. Odpri pot v aplikaciji Zyflow.",
-      "climb": ", ",
+      "climb": "850 m",
       "climbLabel": "Višinci",
       "durationLabel": "Trajanje",
       "difficultyLabel": "Zahtevnost",
       "nextLabel": "Sezona",
       "nextValue": "apr. – okt.",
       "price": "68 km",
-      "unit": "",
+      "unit": " · 850 m",
       "sections": [
         {
           "title": "Proti severu v kotlino",
@@ -2100,7 +2100,7 @@
         },
         {
           "title": "Tržič kot vozlišče",
-          "body": "V mestu stojite na začetku K35 Ljubelj, planin pod Košuto in mehkejših gravel dni po Udin borštu. S Tržičanko pridete dovolj sveži, da raziščete središče.",
+          "body": "V mestu stojite na začetku K35 Ljubelj, planin pod Košuto in mehkejših makadamskih dni po Udin borštu. S Tržičanko pridete dovolj sveži, da raziščete središče.",
           "body2": "Kavarn in oskrbe je tu več kot na visokih poteh. Zaloge napolnite, preden se zavežete čemur koli strmejšemu."
         },
         {

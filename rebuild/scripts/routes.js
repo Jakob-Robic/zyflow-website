@@ -161,8 +161,8 @@ const ROUTES = [
       "k43-dobrca",
       "k51-udin-borst"
     ],
-    "distanceKm": "",
-    "elevationM": "803"
+    "distanceKm": "26",
+    "elevationM": "900"
   },
   {
     "id": "tour-k42-roznovenska",
@@ -446,7 +446,7 @@ const ROUTES = [
       "kamnicanka"
     ],
     "distanceKm": "68",
-    "elevationM": ""
+    "elevationM": "850"
   }
 ];
 

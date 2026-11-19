@@ -5,8 +5,8 @@ municipality: trzic
 region: gorenjska
 country: slovenia
 category: alpine
-distance_km: 
-elevation_m: 
+distance_km: 26
+elevation_m: 900
 duration: 
 difficulty: intermediate
 best_season: Apr – Oct
