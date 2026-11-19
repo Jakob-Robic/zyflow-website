@@ -321,7 +321,7 @@
       "four": "Open data on places and mobility"
     },
     "adventures": {
-      "titleHtml": "featured<br />routes",
+      "titleHtml": "featured <br />routes",
       "allLink": "Explore Routes",
       "viewCta": "View route",
       "cards": [

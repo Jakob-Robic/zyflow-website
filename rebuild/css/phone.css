@@ -218,3 +218,235 @@
     color: var(--color-text-heading);
   }
 }
+
+/* ==========================================================================
+ * P2 — text alignment and margins
+ * ========================================================================== */
+
+/*
+ * One page inset on phones: 20 px, 16 px on the narrowest screens.
+ * --page-pad-sm is what .container, the nav, the announcement, the hero and
+ * the app banner already use below 1280 px (it was 40 px at every width).
+ * --phone-card-pad is the inner padding of cards, tiles and panels.
+ */
+@media (max-width: 599.98px) {
+  :root {
+    --page-pad-sm: 20px;
+    --phone-card-pad: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --page-pad-sm: 16px;
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* —— One left edge for everything that stands free on the page —— */
+  .faq__inner,
+  .footer__inner,
+  .contact-form__wrap {
+    padding-inline: var(--page-pad-sm);
+  }
+
+  /* Route, business and press heroes: the copy had its own 24 px inset under
+     a breadcrumb on the page edge. */
+  .tour-hero__copy {
+    padding: 0;
+  }
+
+  /* The hero already has the page inset; the credit added it a second time. */
+  .town-hero__credit {
+    padding-inline: 0;
+  }
+
+  .about-hero__h1 {
+    padding-inline: 0;
+  }
+
+  /* —— One inner padding for cards, tiles and panels —— */
+  .tour-card__body,
+  .town-place .tour-card__body {
+    padding: var(--phone-card-pad);
+  }
+
+  .tour-aside__card,
+  .legal-hub__card,
+  .legal-doc__toc,
+  .legal-doc__body blockquote {
+    padding-inline: var(--phone-card-pad);
+  }
+
+  .why__item {
+    padding: var(--space-gap-5) var(--phone-card-pad);
+  }
+
+  .app-banner__panel,
+  .featured-tour__panel {
+    padding-inline: var(--phone-card-pad);
+  }
+
+  /* —— Hero and app banner: left-aligned, as on desktop —— */
+  .hero__content {
+    align-items: flex-start;
+    text-align: left;
+    padding: var(--space-gap-6) var(--phone-card-pad) var(--phone-card-pad);
+  }
+
+  .hero__h1,
+  .hero__sub {
+    max-width: none;
+  }
+
+  .hero__card {
+    margin: 0 var(--phone-card-pad) var(--phone-card-pad);
+  }
+
+  .hero__card-body {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero__card-label {
+    justify-content: flex-start;
+  }
+
+  .app-banner__panel {
+    text-align: left;
+  }
+
+  .app-banner__body {
+    margin-inline: 0;
+  }
+
+  .app-banner__ctas {
+    justify-content: flex-start;
+  }
+
+  /* —— "Is your place bike-friendly?" and the other centred bands ——
+   * The panel's own 48 px side padding left the paragraph a 215 px column. */
+  .testimonial__panel {
+    padding-inline: 0;
+  }
+
+  /* —— Page titles are the largest text on their page ——
+   * Route, business and press titles were 28 px under 36 px section titles.
+   * Display size (40 px at 375) is what the home hero and the list pages use. */
+  .tour-hero__title {
+    font-size: var(--type-display);
+    line-height: var(--leading-display);
+  }
+
+  /* —— Mono lines that wrapped badly —— */
+
+  /* Ljubljana to Trieste strip: the three figures on one line, the sentence
+     on the next. No separator is left at the end or start of a line. */
+  .featured-tour__meta > :nth-child(5) {
+    order: 2;
+    flex: 0 0 100%;
+  }
+
+  .featured-tour__meta > :nth-child(6) {
+    display: none;
+  }
+
+  /* Breadcrumb: always one line. Region levels that have no page of their own
+     are left out, and a long last item ends in an ellipsis. */
+  .crumbs__list {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .crumbs__item {
+    flex: none;
+  }
+
+  .crumbs__item:has(> span:not(.motif):not([aria-current])) {
+    display: none;
+  }
+
+  .crumbs__item:last-child {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .crumbs__item:last-child [aria-current] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Card location label: smaller pin tile and padding leave the label room
+     for one line of place and one of region. */
+  .tour-card__pin {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tour-card__loc-text {
+    padding: var(--space-gap-2) var(--space-gap-4);
+    min-width: 0;
+  }
+
+  /* —— Town page ——
+   * The hero sentence is the opening of the first paragraph right below, so
+   * the hero keeps eyebrow, title, button and numbers and the paragraph says
+   * it once. */
+  .town-hero .hero__sub {
+    display: none;
+  }
+
+  .town-hero__credit {
+    margin-top: var(--space-gap-2);
+  }
+
+  /* —— Display headings never leave a short word alone on a line —— */
+  .adventures__title,
+  .why__title,
+  .features__title,
+  .tour-more__title,
+  .route-towns__title,
+  .town-block__title,
+  .faq__title,
+  .testimonial__quote,
+  .tour-quote__quote,
+  .featured-tour__title,
+  .app-banner__title,
+  .contact-form__title,
+  .contact-hero__title {
+    text-wrap: balance;
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* Town hero numbers card: same inner padding as the home hero's card, so
+     the left-aligned lines do not touch the card edge. */
+  .town-hero .hero__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-gap-4);
+    padding: var(--space-gap-4);
+  }
+
+  .town-hero .hero__frame {
+    min-height: 0;
+  }
+
+  /* "Featured routes" / "Izpostavljene poti": one line when it fits, so the
+     Slovenian title no longer leaves "poti" alone on a second line. The link
+     keeps its place on the right and drops below only when there is no room. */
+  .adventures__head {
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-gap-2) var(--space-gap-5);
+  }
+
+  .adventures__title br {
+    display: none;
+  }
+
+  /* Wrapped display lines keep display leading (these inherited 1.5). */
+  .testimonial__quote {
+    line-height: var(--leading-h1);
+  }
+}
