@@ -1,0 +1,761 @@
+/**
+ * Phone layout: everything below 600 px (reference 375, checked 320 to 599).
+ *
+ * This file is imported last in main.css so its rules win over the page
+ * stylesheets without touching them. Tablet widths (600 to 1100 px) are not
+ * changed here. Keep new phone rules in this file.
+ */
+
+/* ==========================================================================
+ * P1 — broken on a phone
+ * ========================================================================== */
+
+/*
+ * Primary button on the always-olive panels (app banner, Ljubljana to Trieste).
+ * Brand green on olive is 1.9:1, so the button had no edge in the light theme.
+ * Use the dark theme's action colours there (brand guidelines §3: lighter
+ * action green #9BC48A with an olive label, 7.1:1). The dark theme already
+ * resolves to these values, so nothing changes there. All widths.
+ */
+.app-banner__panel .btn--primary,
+.featured-tour__panel .btn--primary {
+  background-color: var(--zy-color-green-300);
+  border-color: var(--zy-color-green-300);
+  color: var(--zy-color-olive-900);
+}
+
+@media (max-width: 599.98px) {
+  /* —— Header ——
+   * Logo, Download and the menu button stay in the bar. The theme switch moves
+   * into the menu, beside the language switch, so the wordmark keeps its
+   * natural 90 px width (brand minimum 72 px). */
+  .nav__tools--bar {
+    display: none;
+  }
+
+  .nav__tools--panel {
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-gap-4);
+  }
+
+  .nav__tools--panel .theme-toggle {
+    display: inline-flex;
+  }
+
+  .nav__brand {
+    flex: none;
+  }
+
+  .nav__logo {
+    height: 28px;
+    width: auto;
+    min-width: 72px;
+    max-width: none;
+  }
+
+  /* —— Download window ——
+   * Compact: no phone picture, no QR code and no "scan the QR code" line.
+   * Title, one paragraph and the two store buttons, all on the first screen. */
+  .app-modal {
+    max-width: calc(100vw - 2 * var(--space-gap-4));
+  }
+
+  .app-modal__panel {
+    position: relative;
+  }
+
+  .app-modal__hero {
+    position: static;
+    height: auto;
+    padding: 0;
+    background: none;
+    overflow: visible;
+  }
+
+  .app-modal__bg,
+  .app-modal .phone--modal,
+  .app-modal__qr,
+  .app-modal__download p {
+    display: none;
+  }
+
+  /* The close button now sits on the sand panel, not on olive. */
+  .app-modal__close {
+    top: var(--space-gap-3);
+    right: var(--space-gap-3);
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    color: var(--color-text-heading);
+  }
+
+  .app-modal__close:hover,
+  .app-modal__close:focus-visible {
+    background: color-mix(in srgb, var(--color-text-heading) 10%, transparent);
+  }
+
+  .app-modal__close:focus-visible {
+    outline-color: var(--zy-focus-ring);
+  }
+
+  .app-modal__body {
+    padding: var(--space-gap-9) var(--space-gap-5) var(--space-gap-5);
+  }
+
+  .app-modal__title {
+    padding-inline: var(--space-gap-6);
+  }
+
+  .app-modal__lede {
+    margin-bottom: var(--space-gap-5);
+  }
+
+  .app-modal__badge {
+    margin-bottom: var(--space-gap-5);
+  }
+
+  .app-modal__card {
+    display: block;
+    padding: var(--space-gap-5) var(--space-gap-4);
+    text-align: center;
+  }
+
+  .app-modal__download h3 {
+    margin-bottom: var(--space-gap-4);
+  }
+
+  .app-modal__stores {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: var(--space-gap-3);
+  }
+
+  .app-modal__stores .store-badge {
+    flex: 0 1 148px;
+    min-width: 0;
+  }
+
+  .app-modal__stores .store-badge img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* —— Card foot ——
+   * "Free · during launch" beside "List your place" wrapped to three lines.
+   * The price stays on one line; when the button does not fit beside it, the
+   * button moves to its own line (same as "Routes from here" on town pages). */
+  .tour-card__foot {
+    flex-wrap: wrap;
+    row-gap: var(--space-gap-3);
+  }
+
+  .page-business .tour-card__price {
+    white-space: nowrap;
+  }
+
+  /* —— Legal tables: one block per row, each value under its column label ——
+   * The markup carries the column label on every cell (data-label, set in
+   * scripts/legal-markdown.js). Nothing scrolls sideways. */
+  .legal-doc__body table,
+  .legal-doc__body thead,
+  .legal-doc__body tbody,
+  .legal-doc__body tr,
+  .legal-doc__body th,
+  .legal-doc__body td {
+    display: block;
+  }
+
+  .legal-doc__body table {
+    min-width: 0;
+    width: 100%;
+    margin: 0 0 var(--space-gap-6);
+    border-top: 1px solid var(--color-border-default);
+  }
+
+  /* Column headers are repeated on every cell, so the header row is hidden
+     from view only (screen readers still get it). */
+  .legal-doc__body thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .legal-doc__body tbody tr {
+    padding-block: var(--space-gap-4);
+    border-bottom: 1px solid var(--color-border-default);
+  }
+
+  .legal-doc__body td {
+    padding: 0;
+    border: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .legal-doc__body td + td {
+    margin-top: var(--space-gap-3);
+  }
+
+  .legal-doc__body td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    font-family: var(--font-badge);
+    font-size: var(--type-small);
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-body-muted);
+  }
+
+  /* The first cell names the row. */
+  .legal-doc__body td:first-child {
+    font-weight: 600;
+    color: var(--color-text-heading);
+  }
+}
+
+/* ==========================================================================
+ * P2 — text alignment and margins
+ * ========================================================================== */
+
+/*
+ * One page inset on phones: 20 px, 16 px on the narrowest screens.
+ * --page-pad-sm is what .container, the nav, the announcement, the hero and
+ * the app banner already use below 1280 px (it was 40 px at every width).
+ * --phone-card-pad is the inner padding of cards, tiles and panels.
+ */
+@media (max-width: 599.98px) {
+  :root {
+    --page-pad-sm: 20px;
+    --phone-card-pad: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --page-pad-sm: 16px;
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* —— One left edge for everything that stands free on the page —— */
+  .faq__inner,
+  .footer__inner,
+  .contact-form__wrap {
+    padding-inline: var(--page-pad-sm);
+  }
+
+  /* Route, business and press heroes: the copy had its own 24 px inset under
+     a breadcrumb on the page edge. */
+  .tour-hero__copy {
+    padding: 0;
+  }
+
+  /* The hero already has the page inset; the credit added it a second time. */
+  .town-hero__credit {
+    padding-inline: 0;
+  }
+
+  .about-hero__h1 {
+    padding-inline: 0;
+  }
+
+  /* —— One inner padding for cards, tiles and panels —— */
+  .tour-card__body,
+  .town-place .tour-card__body {
+    padding: var(--phone-card-pad);
+  }
+
+  .tour-aside__card,
+  .legal-hub__card,
+  .legal-doc__toc,
+  .legal-doc__body blockquote {
+    padding-inline: var(--phone-card-pad);
+  }
+
+  .why__item {
+    padding: var(--space-gap-5) var(--phone-card-pad);
+  }
+
+  .app-banner__panel,
+  .featured-tour__panel {
+    padding-inline: var(--phone-card-pad);
+  }
+
+  /* —— Hero and app banner: left-aligned, as on desktop —— */
+  .hero__content {
+    align-items: flex-start;
+    text-align: left;
+    padding: var(--space-gap-6) var(--phone-card-pad) var(--phone-card-pad);
+  }
+
+  .hero__h1,
+  .hero__sub {
+    max-width: none;
+  }
+
+  .hero__card {
+    margin: 0 var(--phone-card-pad) var(--phone-card-pad);
+  }
+
+  .hero__card-body {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero__card-label {
+    justify-content: flex-start;
+  }
+
+  .app-banner__panel {
+    text-align: left;
+  }
+
+  .app-banner__body {
+    margin-inline: 0;
+  }
+
+  .app-banner__ctas {
+    justify-content: flex-start;
+  }
+
+  /* —— "Is your place bike-friendly?" and the other centred bands ——
+   * The panel's own 48 px side padding left the paragraph a 215 px column. */
+  .testimonial__panel {
+    padding-inline: 0;
+  }
+
+  /* —— Page titles are the largest text on their page ——
+   * Route, business and press titles were 28 px under 36 px section titles.
+   * Display size (40 px at 375) is what the home hero and the list pages use. */
+  .tour-hero__title {
+    font-size: var(--type-display);
+    line-height: var(--leading-display);
+  }
+
+  /* —— Mono lines that wrapped badly —— */
+
+  /* Ljubljana to Trieste strip: the three figures on one line, the sentence
+     on the next. No separator is left at the end or start of a line. */
+  .featured-tour__meta > :nth-child(5) {
+    order: 2;
+    flex: 0 0 100%;
+  }
+
+  .featured-tour__meta > :nth-child(6) {
+    display: none;
+  }
+
+  /* Breadcrumb: always one line. Region levels that have no page of their own
+     are left out, and a long last item ends in an ellipsis. */
+  .crumbs__list {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .crumbs__item {
+    flex: none;
+  }
+
+  .crumbs__item:has(> span:not(.motif):not([aria-current])) {
+    display: none;
+  }
+
+  .crumbs__item:last-child {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .crumbs__item:last-child [aria-current] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Card location label: smaller pin tile and padding leave the label room
+     for one line of place and one of region. */
+  .tour-card__pin {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tour-card__loc-text {
+    padding: var(--space-gap-2) var(--space-gap-4);
+    min-width: 0;
+  }
+
+  /* —— Town page ——
+   * The hero sentence is the opening of the first paragraph right below, so
+   * the hero keeps eyebrow, title, button and numbers and the paragraph says
+   * it once. */
+  .town-hero .hero__sub {
+    display: none;
+  }
+
+  .town-hero__credit {
+    margin-top: var(--space-gap-2);
+  }
+
+  /* —— Display headings never leave a short word alone on a line —— */
+  .adventures__title,
+  .why__title,
+  .features__title,
+  .tour-more__title,
+  .route-towns__title,
+  .town-block__title,
+  .faq__title,
+  .testimonial__quote,
+  .tour-quote__quote,
+  .featured-tour__title,
+  .app-banner__title,
+  .contact-form__title,
+  .contact-hero__title {
+    text-wrap: balance;
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* Town hero numbers card: same inner padding as the home hero's card, so
+     the left-aligned lines do not touch the card edge. */
+  .town-hero .hero__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-gap-4);
+    padding: var(--space-gap-4);
+  }
+
+  .town-hero .hero__frame {
+    min-height: 0;
+  }
+
+  /* "Featured routes" / "Izpostavljene poti": one line when it fits, so the
+     Slovenian title no longer leaves "poti" alone on a second line. The link
+     keeps its place on the right and drops below only when there is no room. */
+  .adventures__head {
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-gap-2) var(--space-gap-5);
+  }
+
+  .adventures__title br {
+    display: none;
+  }
+
+  /* Wrapped display lines keep display leading (these inherited 1.5). */
+  .testimonial__quote {
+    line-height: var(--leading-h1);
+  }
+}
+
+/* ==========================================================================
+ * P3 — shorter, tighter phone pages
+ * ========================================================================== */
+
+/*
+ * One vertical rhythm on phones: 48 px between sections. Every section pads
+ * 24 px above and below, so two neighbours always add up to 48. The three
+ * section tokens were 32, 50 and 78 px at 375 and stacked to 100 to 190 px.
+ */
+@media (max-width: 599.98px) {
+  :root {
+    --section-pad-sm: 24px;
+    --section-pad-md: 24px;
+    --section-pad-lg: 24px;
+    --phone-band-pad: 32px; /* inside the sand bands, between the torn edges */
+  }
+
+  /* Sections that had no padding on one side get their half of the gap. */
+  .tour-body,
+  .town-wide,
+  .faq--town,
+  .town-places,
+  .town-sights {
+    padding-top: var(--section-pad-md);
+  }
+
+  .route-towns {
+    padding-bottom: var(--section-pad-md);
+  }
+
+  .tour-hero {
+    padding-block: var(--space-gap-5) var(--section-pad-md);
+  }
+
+  .town-body {
+    padding-bottom: var(--section-pad-md);
+  }
+
+  /* Blocks inside the long town section are sections of their own. */
+  .town-wide .town-block,
+  .town-wide .town-figure,
+  .town-block {
+    margin-bottom: var(--space-gap-8);
+  }
+
+  .town-wide .container > :last-child,
+  .town-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .town-intro__text {
+    margin-bottom: var(--space-gap-6);
+  }
+
+  /* Sand bands: a little more air inside than the half gap. */
+  .why {
+    padding-top: var(--phone-band-pad);
+  }
+
+  .why .container {
+    padding-bottom: var(--phone-band-pad);
+  }
+
+  .tour-quote__inner {
+    padding-block: var(--phone-band-pad);
+  }
+
+  .about-values {
+    padding-top: var(--phone-band-pad);
+  }
+
+  .about-values__grid {
+    margin-bottom: var(--phone-band-pad);
+  }
+
+  .footer {
+    padding-block: var(--space-gap-8);
+  }
+
+  /* The band above "Is your place bike-friendly?" was the panel's own 80 px. */
+  .testimonial__panel {
+    padding-block: 0;
+  }
+
+  /* The hidden social section is the last child on home and /tours, so the
+     section before the footer missed the room for the footer's torn edge. */
+  main > section:has(+ section[hidden]:last-child) {
+    padding-bottom: calc(var(--section-pad-md) + 72px);
+  }
+
+  /* Heading to content: 24 px (was 64 to 80). */
+  .features__title,
+  .faq__title,
+  .adventures__head,
+  .tour-more__head {
+    margin-bottom: var(--space-gap-6);
+  }
+
+  .contact-form__wrap {
+    gap: var(--space-gap-7);
+  }
+
+  /* —— Cards: lower photo, tighter body (route, place and business cards) ——
+   * Same card, about 400 px tall instead of 520 to 600. */
+  .tour-card__media {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .tour-card__media--plain {
+    aspect-ratio: auto;
+    height: 96px;
+  }
+
+  .tour-card__body,
+  .town-place .tour-card__body {
+    gap: var(--space-gap-4);
+  }
+
+  .tour-card__foot {
+    padding-top: var(--space-gap-1);
+  }
+
+  .adventures__grid,
+  .tours-grid__list,
+  .town-block__grid:not(.town-rail) {
+    gap: var(--space-gap-5);
+  }
+
+  /* —— Fact tiles: 2 × 2 instead of four full-width boxes —— */
+  .tour-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-gap-2);
+  }
+
+  .tour-meta__box {
+    min-height: 84px;
+    padding: var(--space-gap-4);
+    gap: var(--space-gap-3);
+  }
+
+  .tour-meta__value {
+    font-size: var(--type-h4);
+    line-height: var(--leading-h4);
+  }
+
+  .tour-meta__label {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: var(--space-gap-2);
+    line-height: 1.4;
+  }
+
+  .tour-meta__label .motif {
+    margin-top: 0.4em;
+  }
+
+  .tour-meta__label img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* —— Route, business and press hero: one 16 to 24 px rhythm ——
+   * The column had a 48 px gap plus each element's own margin (60 to 70 px). */
+  .tour-hero__panel {
+    gap: var(--space-gap-6);
+    margin-bottom: var(--space-gap-5);
+  }
+
+  .tour-hero__copy {
+    gap: var(--space-gap-5);
+  }
+
+  .tour-hero__h1,
+  .tour-hero__title,
+  .tour-hero__eyebrow {
+    margin-bottom: 0;
+  }
+
+  .crumbs--hero + .tour-hero__panel .tour-hero__foot {
+    margin-top: var(--space-gap-2);
+  }
+
+  .tour-hero__foot {
+    gap: var(--space-gap-5);
+  }
+
+  .crumbs {
+    margin-bottom: var(--space-gap-4);
+  }
+
+  /* —— About hero: the polaroids are hidden on phones, their space stays ——
+   * 720 px stage, 64 px above and below the title block, 120 px under it. */
+  .about-hero__stage {
+    min-height: 0;
+  }
+
+  .about-hero__title {
+    margin-bottom: var(--space-gap-8);
+    padding-block: var(--space-gap-6) 0;
+  }
+
+  /* —— Chip rows ——
+   * Fact chips: one row that scrolls sideways (they took four rows).
+   * Filter chips: same row. Both run to the screen edge, where the last chip
+   * fades out, so a cut chip reads as "more this way". */
+  .page-tours .tours-hero__quals,
+  .page-towns .tours-hero__quals,
+  .blog-filters__links.tours-filters__links {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    margin: -2px calc(-1 * var(--page-pad-sm)) -2px -2px;
+    padding: 2px calc(var(--page-pad-sm) + var(--space-gap-5)) 2px 2px;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+  }
+
+  .page-tours .tours-hero__quals::-webkit-scrollbar,
+  .page-towns .tours-hero__quals::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tours-hero__quals .tours-qual {
+    flex: none;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* —— Card fact line ("79 km ▸ 944 m ▸ Touring") ——
+   * Each fact stays whole. The separator is drawn in the gap before a fact,
+   * and the row clips at its left edge, so a wrapped line never starts or
+   * ends with a separator. */
+  .tour-card__meta:not(.town-place__meta) {
+    flex-wrap: wrap;
+    gap: 0 var(--space-gap-6);
+    overflow: hidden;
+  }
+
+  .tour-card__meta > .motif {
+    display: none;
+  }
+
+  .tour-card__meta > span:not(.motif) {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .tour-card__meta > .motif + span::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--space-gap-5));
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    background: var(--color-brand-primary);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* —— Remaining large steps inside sections (were 64 to 96 px) —— */
+  .about-values__title,
+  .about-team__title {
+    margin-bottom: var(--space-gap-7);
+  }
+
+  .about-values__grid {
+    gap: var(--zy-space-10);
+  }
+
+  .about-member {
+    gap: var(--space-gap-6);
+    margin-bottom: var(--space-gap-8);
+  }
+
+  .about-member:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Home feature cards: tighter inside a card, a clear step between cards,
+     so each photo reads with the text under it. */
+  .features__grid {
+    gap: var(--zy-space-10);
+  }
+
+  .feature-card {
+    gap: var(--space-gap-5);
+  }
+
+  /* Town sections: heading, text, then the cards or map after 24 px. */
+  .town-block .town-lead,
+  .town-block .town-answer {
+    margin-bottom: var(--space-gap-6);
+  }
+
+  .town-map {
+    margin: 0 0 var(--space-gap-6);
+  }
+
+  .town-more--cards {
+    margin-top: var(--space-gap-6);
+  }
+}
