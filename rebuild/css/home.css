@@ -245,7 +245,7 @@
   min-height: 30px;
   font-family: var(--font-badge);
   font-size: var(--type-small);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-muted-on-sand);
   text-decoration: none;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
@@ -256,7 +256,7 @@
 }
 
 .lang-switch__btn.is-active {
-  background: var(--color-surface-4);
+  background: var(--color-surface-3);
   color: var(--color-text-body);
 }
 
@@ -284,7 +284,7 @@
 }
 
 .theme-toggle__btn.is-active {
-  background: var(--color-surface-4);
+  background: var(--color-surface-3);
 }
 
 .theme-toggle__btn img {
@@ -352,6 +352,8 @@ html[data-theme="light"] .tours-qual img,
 html[data-theme="light"] .tours-filter__btn img,
 html[data-theme="light"] .contact-social img,
 html[data-theme="light"] .link--arrow img,
+html[data-theme="light"] .tour-card__cta img,
+html[data-theme="light"] .town-row__link img,
 html[data-theme="light"] .footer__social img,
 html[data-theme="light"] .why__item img {
   filter: invert(1) brightness(0.12);
@@ -363,21 +365,21 @@ html[data-theme="light"] .why__item img {
  * between rows. Colours and fonts are Zyflow's own tokens.
  */
 .footer {
-  background: var(--color-surface-2);
+  background: var(--color-surface-footer);
   padding-top: var(--section-pad-md);
   padding-bottom: var(--section-pad-md);
   position: relative;
   overflow: visible;
   /*
    * Secondary footer ink. The vendored muted token (--zy-text-muted, #71717A)
-   * is 3.44:1 on this site's footer fill (#e0d9cc) and the note also applied
+   * is 3.3:1 on this site's footer fill (sand-200, #DDD8CC) and the note also applied
    * opacity 0.7, which dropped it to 2.26:1. Mix body ink into the footer
    * surface so light and dark both clear WCAG AA (4.5:1) without editing
-   * the design system: 70% is 5.54:1 on #e0d9cc / 6.57:1 on #373B2A, 66%
-   * (the quieter labels) is 4.90:1 / 6.03:1.
+   * the design system: 70% is 5.4:1 on #DDD8CC / 6.57:1 on #373B2A, 66%
+   * (the quieter labels) is 4.8:1 / 6.03:1.
    */
-  --footer-text-secondary: color-mix(in srgb, var(--color-text-body) 70%, var(--color-surface-2));
-  --footer-text-quiet: color-mix(in srgb, var(--color-text-body) 66%, var(--color-surface-2));
+  --footer-text-secondary: color-mix(in srgb, var(--color-text-body) 70%, var(--color-surface-footer));
+  --footer-text-quiet: color-mix(in srgb, var(--color-text-body) 66%, var(--color-surface-footer));
   /* Reference gaps that sit between our 4px-grid tokens. */
   --footer-gap-xs: 3px;
   --footer-gap-sm: 6px;
@@ -396,8 +398,12 @@ html[data-theme="light"] .why__item img {
   pointer-events: none;
 }
 
-/* Keep last-section content (e.g. About trust logos) above the 72px pull-up */
-main > section:last-child {
+/* Keep last-section content (e.g. About trust logos) above the 72px pull-up:
+   one section gap (--section-pad-md) stays visible above the torn edge. Home and
+   the routes list end with a hidden section, so the rule also takes the section
+   just before it; their last block used to sit 12px above the edge. */
+main > section:last-child,
+main > section:has(+ section[hidden]:last-child) {
   padding-bottom: calc(var(--section-pad-md) + 72px);
 }
 
@@ -458,6 +464,8 @@ main > section:last-child {
 
 .footer__big-links a {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: 1.1;
   color: var(--color-text-heading);
@@ -480,6 +488,7 @@ main > section:last-child {
 .footer__subscribe h2 {
   margin: 0;
   font-family: var(--font-heading);
+  font-synthesis: none;
   font-size: var(--type-h5);
   font-weight: 400;
   line-height: 1.1;
@@ -520,11 +529,14 @@ main > section:last-child {
 /* The light hairline (#DDD8CC) disappears on the sand footer fill. */
 html[data-theme="light"] .footer__email-row,
 html[data-theme="light"] .footer__lang-list {
-  border-color: color-mix(in srgb, var(--color-text-body) 22%, var(--color-surface-2));
+  border-color: color-mix(in srgb, var(--color-text-body) 22%, var(--color-surface-footer));
 }
 
+/* Focus is the green ring, never ink (brand book §3) */
 html .footer__email-row:focus-within {
-  border-color: var(--color-text-body);
+  border-color: var(--zy-focus-ring);
+  outline: 2px solid var(--zy-focus-ring);
+  outline-offset: 1px;
 }
 
 .footer__email input {
@@ -902,11 +914,13 @@ html[data-theme="light"] .footer__launch-badge .footer__launch-badge-img--light 
   }
 }
 
-/* —— Shared helpers —— */
+/* —— Shared helpers ——
+ * Home uses the site container as it is (base.css): 1280px of content, an
+ * 80px inset at 1440. It used to add 24px of its own, which put every home
+ * section at 104px while the other pages start at 80. */
 .page-home .container {
   max-width: var(--grid-col-12);
   margin-inline: auto;
-  padding-inline: var(--space-gap-6);
 }
 
 .motif {
@@ -928,7 +942,7 @@ html[data-theme="light"] .footer__launch-badge .footer__launch-badge-img--light 
   width: 207px;
   height: 207px;
   object-fit: cover;
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-md);
   display: block;
 }
 
@@ -998,19 +1012,22 @@ html[data-theme="light"] .footer__launch-badge .footer__launch-badge-img--light 
 /* The h1 is the mono eyebrow: a plain fact, not a repeat of the display line. */
 .hero__h1 {
   margin: 0;
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
-  font-weight: 400;
-  line-height: var(--leading-body);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.84);
-  text-wrap: balance;
+  /* One line across the photo, not only the copy column: the limit is the
+     hero's width (page gutter plus a 4px margin on each side on a phone, the
+     hero's own padding on a desktop). The English line fits a 360px phone;
+     a longer one truncates there, never on a desktop. */
+  max-width: min(
+    100vw - 2 * var(--page-pad-sm) - 2 * var(--space-gap-1),
+    var(--grid-col-12) - 2 * var(--space-gap-7)
+  );
 }
 
 .hero__title {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: 1;
   color: #fff;
@@ -1105,7 +1122,7 @@ html[data-theme="light"] .footer__launch-badge .footer__launch-badge-img--light 
   display: block;
   width: 140px;
   height: 140px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -1158,6 +1175,8 @@ html[data-theme="light"] .footer__launch-badge .footer__launch-badge-img--light 
 
 .hero__card-title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
 }
@@ -1165,6 +1184,8 @@ html[data-theme="light"] .footer__launch-badge .footer__launch-badge-img--light 
 .hero__card-date {
   opacity: 0.75;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
 }
@@ -1399,8 +1420,10 @@ html[data-theme="light"] .trust__item img {
 
 .adventures__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
 }
 
 .adventures__grid {
@@ -1414,7 +1437,7 @@ html[data-theme="light"] .trust__item img {
   flex-direction: column;
   /* Body fills the card so every footer sits on the card's bottom edge,
      whatever the title and text lengths in the row. */
-  border-radius: var(--radius-md) var(--radius-md) var(--radius-sm) var(--radius-sm);
+  border-radius: var(--radius-md); /* all four corners (brand book §5, §12) */
   overflow: hidden;
   background: var(--color-surface-2);
 }
@@ -1467,7 +1490,9 @@ html[data-theme="light"] .trust__item img {
 .tour-card__pin {
   width: 60px;
   height: 60px;
-  background: var(--zy-text-primary);
+  /* Sits on the photo next to the dark glass label, so it is ink in both
+     themes (the theme's text colour turned it white, with a white pin, in dark). */
+  background: var(--zy-color-neutral-900);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -1509,6 +1534,8 @@ html[data-theme="light"] .trust__item img {
 
 .tour-card__name {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h3);
   line-height: var(--leading-h3);
 }
@@ -1537,6 +1564,8 @@ html[data-theme="light"] .trust__item img {
 .tour-card__price {
   min-width: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
 }
 
@@ -1602,16 +1631,10 @@ html[data-theme="light"] .trust__item img {
   gap: var(--space-gap-2);
   height: var(--button-height-sm);
   padding-inline: var(--button-padding-sm);
-  background: var(--color-surface-3);
+  /* Colours: the secondary button (components/button.css) */
   border-radius: var(--button-radius-md);
   font-size: var(--type-small);
   font-weight: 600;
-  transition: background-color 200ms ease;
-}
-
-.tour-card__cta:hover,
-.tour-card__cta:focus-visible {
-  background: var(--color-surface-4);
 }
 
 .tour-card__cta img {
@@ -1667,7 +1690,10 @@ html[data-theme="light"] .trust__item img {
 
 .intro__copy h2 {
   font-family: var(--font-heading);
-  font-size: var(--type-h3);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
 }
 
 /* —— Featured tour —— */
@@ -1723,14 +1749,15 @@ html[data-theme="light"] .trust__item img {
 
 .featured-tour__eyebrow {
   position: relative;
-  font-size: var(--type-lead);
 }
 
 .featured-tour__title {
   position: relative;
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   max-width: 100%;
   overflow-wrap: anywhere;
   hyphens: auto;
@@ -1892,14 +1919,19 @@ html[data-theme="light"] .trust__item img {
 
 .cat-card__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h2);
-  line-height: var(--leading-h2);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h3);
+  line-height: var(--leading-h3);
   text-transform: lowercase;
   color: #fff;
   text-shadow: 0 1px 18px color-mix(in srgb, var(--color-scrim) 45%, transparent);
 }
 
+/* "See routes" / "Places live, routes in progress": words, so DM Sans (the
+   markup's .type-badge would set them in mono). */
 .cat-card__cta {
+  font-family: var(--font-body);
   color: #fff;
   text-shadow: 0 1px 12px color-mix(in srgb, var(--color-scrim) 40%, transparent);
   opacity: 0.9;
@@ -2071,7 +2103,9 @@ html[data-theme="light"] .testimonial__bg img {
 .testimonial__quote {
   position: relative;
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
   color: var(--color-brand-primary);
   margin-bottom: var(--space-gap-6);
 }
@@ -2129,8 +2163,10 @@ html[data-theme="light"] .testimonial__bg img {
 
 .why__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
 }
 
 .why__polaroid {
@@ -2159,6 +2195,8 @@ html[data-theme="light"] .testimonial__bg img {
 
 .why__item h3 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h3);
   margin-bottom: var(--space-gap-4);
   text-transform: lowercase;
@@ -2225,7 +2263,7 @@ html[data-theme="light"] .testimonial__bg img {
 
 /* —— Features —— */
 .features {
-  padding: var(--section-pad-lg) 0 0;
+  padding: var(--section-pad-md) 0 0;
   position: relative;
 }
 
@@ -2235,8 +2273,10 @@ html[data-theme="light"] .testimonial__bg img {
 
 .features__title {
   font-family: var(--font-heading);
-  font-size: var(--type-display);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   text-align: center;
   margin-bottom: var(--space-gap-10);
   position: relative;
@@ -2302,12 +2342,14 @@ html[data-theme="light"] .testimonial__bg img {
 
 .feature-card h3 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h3);
   text-transform: lowercase;
 }
 
 .feature-card p {
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 /* —— Journal —— */
@@ -2332,8 +2374,10 @@ html[data-theme="light"] .testimonial__bg img {
 
 .journal__cta-col h2 {
   font-family: var(--font-heading);
-  font-size: var(--type-display);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
 }
 
 .journal__list {
@@ -2372,13 +2416,15 @@ html[data-theme="light"] .testimonial__bg img {
 
 .journal__story-body h3 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
 }
 
 .journal__story-body p {
   font-size: var(--type-small);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .journal__divider {
@@ -2404,7 +2450,10 @@ html[data-theme="light"] .testimonial__bg img {
 
 .faq__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   margin-bottom: var(--space-gap-10);
   text-align: center;
   text-transform: lowercase;
@@ -2472,7 +2521,7 @@ html[data-theme="light"] .testimonial__bg img {
 .faq__a {
   margin-top: 0;
   padding-top: 0;
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
   opacity: 0;
   transform: translateY(-6px);
   overflow-wrap: anywhere;
@@ -2535,7 +2584,7 @@ html[data-theme="light"] .testimonial__bg img {
 .social-video {
   position: relative;
   aspect-ratio: 297 / 528;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -2592,6 +2641,8 @@ html[data-theme="light"] .testimonial__bg img {
 
 .social__cta h2 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
 }
 
@@ -2601,7 +2652,9 @@ html[data-theme="light"] .testimonial__bg img {
 }
 
 /* —— Responsive —— */
-@media (max-width: 1100px) {
+/* The menu button replaces the links until six links, the centred logo and
+   the right-hand tools fit side by side (EN needs about 1220 px). */
+@media (max-width: 1220px) {
   .nav {
     height: auto;
     min-height: var(--navbar-height);
@@ -2612,12 +2665,6 @@ html[data-theme="light"] .testimonial__bg img {
     height: var(--navbar-height);
     padding-inline: var(--page-pad-sm);
     column-gap: var(--space-gap-3);
-  }
-
-  .announcement__inner,
-  .page-home .container,
-  .hero {
-    padding-inline: var(--page-pad-sm);
   }
 
   .nav__brand {
@@ -2670,7 +2717,18 @@ html[data-theme="light"] .testimonial__bg img {
     padding-inline: var(--button-padding-sm);
     font-size: var(--type-small);
   }
+}
 
+@media (max-width: 1100px) {
+  .announcement__inner,
+  .page-home .container,
+  .hero {
+    padding-inline: var(--page-pad-sm);
+  }
+}
+
+/* Stacked (tablet) layout below 1000 px; 1001 px and up keep the desktop layout. */
+@media (max-width: 1000px) {
   .adventures__grid,
   .features__grid,
   .social__videos {
@@ -2699,6 +2757,32 @@ html[data-theme="light"] .testimonial__bg img {
   .why__polaroid {
     display: none;
   }
+  .hero__card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: auto;
+    margin: var(--space-gap-6);
+    border-radius: var(--radius-md);
+  }
+  .hero__slide {
+    align-items: center;
+  }
+  .hero__card-media {
+    width: 96px;
+    height: 96px;
+  }
+  .hero__frame {
+    height: auto;
+    min-height: 560px;
+  }
+  .featured-tour__polaroid {
+    display: none;
+  }
+}
+
+/* Phones: the three "why" items become a swipe row with dots (home.js). */
+@media (max-width: 720px) {
   .why__list {
     flex-direction: row;
     align-items: stretch;
@@ -2745,28 +2829,6 @@ html[data-theme="light"] .testimonial__bg img {
   }
   .why__dots:not([hidden]) {
     display: flex;
-  }
-  .hero__card {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    width: auto;
-    margin: var(--space-gap-6);
-    border-radius: var(--radius-md);
-  }
-  .hero__slide {
-    align-items: center;
-  }
-  .hero__card-media {
-    width: 96px;
-    height: 96px;
-  }
-  .hero__frame {
-    height: auto;
-    min-height: 560px;
-  }
-  .featured-tour__polaroid {
-    display: none;
   }
 }
 
@@ -2922,9 +2984,6 @@ html[data-theme="light"] .testimonial__bg img {
     max-width: none;
     padding: var(--space-gap-7) var(--space-gap-5) var(--space-gap-5);
   }
-  .hero__h1 {
-    max-width: 34ch;
-  }
   .hero__title {
     font-size: var(--type-display);
   }
@@ -2976,9 +3035,6 @@ html[data-theme="light"] .testimonial__bg img {
     padding: var(--space-gap-7) var(--space-gap-5);
     gap: var(--space-gap-5);
     overflow: hidden;
-  }
-  .featured-tour__eyebrow {
-    max-width: 28ch;
   }
   .featured-tour__title {
     font-size: var(--type-h2);
@@ -3071,7 +3127,8 @@ html[data-theme="light"] .testimonial__bg img {
 
 /* —— 404 —— */
 .not-found {
-  padding-block: var(--section-pad-lg);
+  /* Bottom: one section gap stays visible above the footer's 72px torn edge */
+  padding-block: var(--section-pad-md) calc(var(--section-pad-md) + 72px);
   min-height: 50vh;
 }
 
@@ -3086,6 +3143,8 @@ html[data-theme="light"] .testimonial__bg img {
 .not-found__code {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: clamp(4rem, 12vw, 7.5rem);
   line-height: 0.9;
   color: var(--color-brand-primary);
@@ -3094,6 +3153,8 @@ html[data-theme="light"] .testimonial__bg img {
 .not-found__title {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: 1;
 }
@@ -3102,7 +3163,7 @@ html[data-theme="light"] .testimonial__bg img {
   margin: 0;
   font-size: var(--type-lead);
   line-height: var(--leading-lead);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .not-found__actions {

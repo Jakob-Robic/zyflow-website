@@ -261,7 +261,7 @@
       "title": "Page not found",
       "body": "This page took a wrong turn. Head home or explore routes instead.",
       "home": "Back home",
-      "tours": "Explore Routes"
+      "tours": "Explore routes"
     },
     "openApp": {
       "title": "Open this in Zyflow",
@@ -321,8 +321,8 @@
       "four": "Open data on places and mobility"
     },
     "adventures": {
-      "titleHtml": "featured<br />routes",
-      "allLink": "Explore Routes",
+      "titleHtml": "featured <br />routes",
+      "allLink": "Explore routes",
       "viewCta": "View route",
       "cards": [
         {
@@ -441,7 +441,7 @@
         {
           "title": "ride feeling safe",
           "body": "See road closures and roadworks before you leave, check bike theft by area, and plan your battery with chargers along the way.",
-          "link": "Explore Routes"
+          "link": "Explore routes"
         },
         {
           "title": "growing across Europe",
@@ -849,7 +849,7 @@
       "titleHtml": "the<br />zyflow<br /><span class=\"is-accent\">journal</span>",
       "lede": "Guides to bike-friendly places, safer rides and what’s new in Zyflow."
     },
-    "readStory": "Read Story",
+    "readStory": "Read story",
     "readingTime": "{n} min read",
     "updated": "Updated",
     "journalName": "Journal",

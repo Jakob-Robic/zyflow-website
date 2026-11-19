@@ -61,6 +61,11 @@
     bicycle: "bicycle_shop",
   };
 
+  /** Below this width the map sits under the first screen (css/phone.css). */
+  const PHONE_QUERY = "(max-width: 599.98px)";
+  /** Start loading the map this far before it scrolls into view. */
+  const LAZY_MARGIN = "400px 0px";
+
   let maplibrePromise = null;
   let leafletPromise = null;
   let kitPromise = null;
@@ -454,6 +459,21 @@
     );
   }
 
+  /**
+   * Phones: the attribution starts as the small "i" button instead of the
+   * open panel, which covered the bottom of the map. MapLibre opens the panel
+   * the first time the control turns compact; marking it compact up front
+   * skips that. Tapping the button still shows the full licence text.
+   */
+  function collapseAttributionOnPhones(el) {
+    if (!window.matchMedia || !window.matchMedia(PHONE_QUERY).matches) return;
+    const attrib = el.querySelector(".maplibregl-ctrl-attrib");
+    if (!attrib) return;
+    attrib.classList.add("maplibregl-compact");
+    attrib.classList.remove("maplibregl-compact-show");
+    attrib.removeAttribute("open");
+  }
+
   function mountMap(zyMap, baseStyle, el, coords, stops) {
     const map = new maplibregl.Map({
       container: el,
@@ -463,6 +483,7 @@
       cooperativeGestures: true,
       fadeDuration: 0,
     });
+    collapseAttributionOnPhones(el);
 
     map.addControl(
       new maplibregl.NavigationControl({ showCompass: false }),
@@ -546,6 +567,7 @@
       cooperativeGestures: true,
       fadeDuration: 0,
     });
+    collapseAttributionOnPhones(el);
     map.addControl(
       new maplibregl.NavigationControl({ showCompass: false }),
       "top-right"
@@ -921,16 +943,49 @@
       }</p>`;
   }
 
+  /**
+   * Phones: the map library (about 800 kB) is not needed for the first screen,
+   * so each map starts when it comes within LAZY_MARGIN of the viewport.
+   * Wider screens, and browsers without IntersectionObserver, start at once
+   * as before. initOne is unchanged either way, so the WebGL check and the
+   * Leaflet fallback behave the same.
+   */
+  function lazyOnThisScreen() {
+    return (
+      "IntersectionObserver" in window &&
+      !!window.matchMedia &&
+      window.matchMedia(PHONE_QUERY).matches
+    );
+  }
+
   function boot() {
-    if (!useRaster()) ensureMapLibre();
-    ensureMapKit();
-    document.querySelectorAll("[data-tour-map]").forEach((el) => {
-      void initOne(el);
+    const maps = document.querySelectorAll("[data-tour-map]");
+    if (!lazyOnThisScreen()) {
+      if (!useRaster()) ensureMapLibre();
+      ensureMapKit();
+      maps.forEach((el) => {
+        void initOne(el);
+      });
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          observer.unobserve(entry.target);
+          void initOne(entry.target);
+        });
+      },
+      { rootMargin: LAZY_MARGIN }
+    );
+    maps.forEach((el) => {
+      el.classList.add("is-loading");
+      observer.observe(el);
     });
   }
 
   if (document.readyState === "loading") {
-    if (!useRaster()) ensureMapLibre();
+    if (!lazyOnThisScreen() && !useRaster()) ensureMapLibre();
     document.addEventListener("DOMContentLoaded", boot);
   } else {
     boot();

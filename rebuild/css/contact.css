@@ -26,6 +26,7 @@
   max-width: none;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .contact-hero__grid {
@@ -48,8 +49,10 @@
 .contact-hero__title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--type-display);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h1);
+  line-height: var(--leading-h1);
 }
 
 .contact-hero__line {
@@ -75,18 +78,14 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-gap-3);
-  padding: var(--space-gap-2) var(--space-gap-5);
-  border-radius: var(--radius-sm);
-  background: var(--color-surface-3);
-  color: var(--color-text-heading);
-  font-size: var(--type-body);
+  height: var(--button-height-sm);
+  padding-inline: var(--button-padding-sm);
+  /* Colours: the secondary button (components/button.css) */
+  border-radius: var(--button-radius-md);
+  font-size: var(--type-small);
   font-weight: 600;
   line-height: var(--leading-body);
   text-decoration: none;
-}
-
-.contact-social:hover {
-  background: var(--color-surface-4);
 }
 
 .contact-social img {
@@ -136,6 +135,8 @@
 .contact-form__title {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
 }
@@ -144,7 +145,7 @@
   margin: 0;
   font-size: var(--type-lead);
   line-height: 1.4;
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .contact-form__form {
@@ -157,7 +158,7 @@
 
 .contact-form .field__label {
   font-weight: 400;
-  opacity: 0.5;
+  color: var(--color-text-body-muted); /* 4.6:1 on the page; ink at 50% was 3.6:1 */
 }
 
 .contact-form .form-row {

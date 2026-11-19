@@ -1352,7 +1352,7 @@ function renderBlogHub(locale, messages, options = {}) {
     ? `<p class="blog-empty" data-blog-empty hidden>${esc(t(messages, "blog.empty"))}</p>`
     : `<p class="blog-empty">${esc(t(messages, "blog.comingSoon"))}${
         locale === "sl"
-          ? ` <a class="link" href="/blog">${esc(t(messages, "blog.comingSoonLink"))}</a>`
+          ? ` <a class="link link--arrow" href="/blog">${esc(t(messages, "blog.comingSoonLink"))}</a>`
           : ""
       }</p>`;
   const rss =
@@ -1497,7 +1497,7 @@ function renderHomeJournal(locale, messages) {
           <div class="journal__tag"><span class="motif" aria-hidden="true"></span><span>${esc(typeLabel)}</span></div>
           <h3>${esc(post.title)}</h3>
           <p>${esc(post.description)}</p>
-          <a class="link link--small" href="./blog/${esc(post.slug)}.html">${esc(t(messages, "blog.readStory"))}</a>
+          <a class="link link--arrow link--small" href="./blog/${esc(post.slug)}.html">${esc(t(messages, "blog.readStory"))}</a>
         </div>
       </article>`;
     })

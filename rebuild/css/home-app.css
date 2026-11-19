@@ -62,16 +62,16 @@
 }
 
 .app-banner__eyebrow {
-  font-family: var(--font-badge);
-  font-size: var(--type-body);
   margin: 0 0 var(--space-gap-4);
   opacity: 0.85;
 }
 
 .app-banner__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   margin: 0 0 var(--space-gap-5);
 }
 
@@ -228,16 +228,16 @@
 }
 
 .app-stage__eyebrow {
-  font-family: var(--font-badge);
-  font-size: var(--type-body);
   margin: 0 0 var(--space-gap-4);
   opacity: 0.85;
 }
 
 .app-stage__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   margin: 0 0 var(--space-gap-5);
 }
 
@@ -348,6 +348,8 @@
 
 .phone-ui__hero {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: 1;
   margin: 0;
@@ -422,7 +424,7 @@
   background: linear-gradient(180deg, #2a2e1e, #373b2a 70%);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .app-banner__panel {
     min-height: 0;
     padding: var(--space-gap-9) var(--space-gap-6) var(--space-gap-11);

@@ -100,8 +100,8 @@ CookieConsent.run({
 
   guiOptions: {
     consentModal: {
-      layout: "box wide",
-      position: "bottom center",
+      layout: "bar inline",
+      position: "bottom",
       equalWeightButtons: true,
       flipButtons: false,
     },

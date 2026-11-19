@@ -33,6 +33,7 @@
   left: -50%;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .blog-hero .container {
@@ -50,8 +51,10 @@
 
 .blog-hero__title {
   font-family: var(--font-heading);
-  font-size: var(--type-display);
-  line-height: var(--leading-display);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h1);
+  line-height: var(--leading-h1);
   margin: 0 0 var(--space-gap-6);
 }
 
@@ -64,7 +67,7 @@
   font-size: var(--type-lead);
   line-height: var(--leading-lead);
   margin: 0;
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .blog-feature {
@@ -113,6 +116,8 @@
 
 .blog-feature__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   margin: 0;
@@ -122,7 +127,7 @@
   margin: 0;
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .blog-grid {
@@ -168,6 +173,8 @@
 
 .blog-story__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: 0;
@@ -177,7 +184,7 @@
   margin: 0;
   font-size: var(--type-small);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -192,7 +199,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .blog-hero__top {
     grid-template-columns: 1fr;
     gap: var(--space-gap-8);
@@ -242,20 +249,26 @@
   gap: var(--space-gap-2);
 }
 
+/*
+ * Chips. One shape: a pill. A chip you can press (filters here, the legal
+ * tabs in legal.css) is outlined and turns ink when selected, never green.
+ * A chip that only states a fact (.tours-qual) is recessed sand with ink text.
+ */
 .blog-filters__btn {
   font: inherit;
   font-size: var(--type-small);
   background: transparent;
   color: inherit;
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--zy-border-control);
+  border-radius: var(--zy-radius-pill);
   padding: var(--space-gap-2) var(--space-gap-4);
   cursor: pointer;
 }
 
 .blog-filters__btn.is-active {
-  background: var(--color-text-heading);
-  color: var(--color-surface-1);
+  background: var(--color-surface-contrast);
+  border-color: var(--color-surface-contrast);
+  color: var(--color-text-on-contrast);
 }
 
 .blog-story[hidden],

@@ -33,6 +33,7 @@
   left: -40%;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .tours-hero .container {
@@ -50,15 +51,14 @@
 
 .tours-hero__eyebrow {
   margin: 0 0 var(--space-gap-3);
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
-  letter-spacing: 0.02em;
 }
 
 .tours-hero__title {
   font-family: var(--font-heading);
-  font-size: var(--type-display);
-  line-height: var(--leading-display);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h1);
+  line-height: var(--leading-h1);
   margin: 0 0 var(--space-gap-6);
   text-wrap: balance;
   overflow-wrap: anywhere;
@@ -68,7 +68,7 @@
   max-width: 36rem;
   font-size: var(--type-lead);
   line-height: var(--leading-lead);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
   margin: 0;
 }
 
@@ -80,15 +80,18 @@
   align-content: center;
 }
 
+/* A fact, not a control: recessed sand pill with ink text (grey text on a tan
+   rectangle read as a disabled button). */
 .tours-qual {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-gap-3);
+  gap: var(--space-gap-2);
   background: var(--color-surface-2);
-  border-radius: var(--radius-sm);
+  border-radius: var(--zy-radius-pill);
   padding: var(--space-gap-2) var(--space-gap-4) var(--space-gap-2) var(--space-gap-3);
-  font-size: var(--type-body);
-  color: var(--color-text-body-muted);
+  font-size: var(--type-small);
+  line-height: var(--leading-body);
+  color: var(--color-text-body);
   white-space: nowrap;
 }
 
@@ -106,6 +109,8 @@
 
 .tours-filter__label {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: 0;
@@ -132,6 +137,8 @@
   border-radius: var(--radius-sm);
   color: var(--color-text-heading);
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   cursor: pointer;
@@ -204,7 +211,7 @@
   margin: 0;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .tours-hero__top {
     grid-template-columns: 1fr;
     gap: var(--space-gap-7);

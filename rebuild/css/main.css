@@ -12,6 +12,7 @@
 @import url("./components/forms.css");
 @import url("./components/divider.css");
 @import url("./components/app-modal.css");
+@import url("./components/cookie-consent.css"); /* brand look for the cookie banner (#cc-main) */
 @import url("./chrome.css");
 @import url("./home.css?v=3");
 @import url("./home-app.css"); /* REVERT: remove this line to drop app section styles */
@@ -27,3 +28,5 @@
 @import url("./legal.css");
 @import url("./pages-extra.css");
 @import url("./styleguide.css");
+@import url("./tablet.css"); /* tablet widths (721–1100 px), 2026-11-19 audit */
+@import url("./phone.css"); /* below 600 px; keep last so it wins over the page stylesheets */

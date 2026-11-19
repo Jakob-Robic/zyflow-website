@@ -21,27 +21,33 @@
   margin-bottom: var(--space-gap-7);
 }
 
+/* Eyebrow line (type in base.css): tag, date, and the language switch on a doc. */
 .legal-hub__meta,
 .legal-doc__meta {
   display: flex;
   align-items: center;
-  gap: var(--space-gap-5);
+  gap: var(--space-gap-3);
   margin: 0;
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
+  white-space: nowrap;
 }
 
 .legal-hub__tag,
 .legal-doc__tag {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-gap-3);
+  margin: 0;
+}
+
+/* One eyebrow style: no triangle in front of this one. */
+.legal-hub__tag .motif,
+.legal-doc__tag .motif {
+  display: none;
 }
 
 .legal-hub__title,
 .legal-doc__title {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: 1;
   text-wrap: balance;
@@ -53,7 +59,7 @@
   margin: 0;
   font-size: var(--type-lead);
   line-height: var(--leading-lead);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .legal-hub__list {
@@ -84,6 +90,8 @@
 .legal-hub__card h2 {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
 }
@@ -92,7 +100,7 @@
   margin: 0;
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .legal-hub__date {
@@ -109,25 +117,34 @@
   margin-bottom: var(--space-gap-10);
 }
 
+/* The site's chip (see blog.css): outlined pill, ink when selected. */
 .legal-switch__link {
   display: inline-flex;
   align-items: center;
-  padding: var(--space-gap-2) var(--space-gap-5);
-  border-radius: var(--radius-sm);
-  background: var(--color-surface-3);
+  min-height: 40px;
+  padding: var(--space-gap-2) var(--space-gap-4);
+  border: 1px solid var(--zy-border-control);
+  border-radius: var(--zy-radius-pill);
+  background: transparent;
   color: var(--color-text-heading);
   font-size: var(--type-small);
-  font-weight: 600;
   text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .legal-switch__link:hover {
-  background: var(--color-surface-4);
+  border-color: var(--color-text-heading);
+}
+
+.legal-switch__link:focus-visible {
+  outline: 2px solid var(--zy-focus-ring);
+  outline-offset: 2px;
 }
 
 .legal-switch__link.is-active {
-  background: var(--color-brand-primary);
-  color: var(--color-text-on-accent);
+  background: var(--color-surface-contrast);
+  border-color: var(--color-surface-contrast);
+  color: var(--color-text-on-contrast);
 }
 
 .legal-doc__header .legal-doc__lang {
@@ -186,6 +203,8 @@
 
 .legal-doc__body h2 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: var(--space-gap-8) 0 var(--space-gap-5);
@@ -194,6 +213,8 @@
 
 .legal-doc__body h3 {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5, 22px);
   line-height: 1.2;
   margin: var(--space-gap-6) 0 var(--space-gap-4);

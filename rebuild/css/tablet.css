@@ -1,0 +1,383 @@
+/**
+ * Tablet widths (721–1100 px): fixes from the 2026-11-19 tablet audit.
+ * Phones (720 px and below) are left alone: they are audited separately.
+ *
+ * Kept in one file, loaded last, so the desktop rules elsewhere stay untouched.
+ * Every rule here sits inside a width query; nothing changes at 1101 px and up
+ * except the menu-button nav (721–1220 px, see home.css) and the separator
+ * colour on the olive "featured route" panel, which was unreadable at every width.
+ */
+
+/* —— Ljubljana to Trieste: the green ▸ separators read on olive in both themes (7.1:1). —— */
+.featured-tour__meta .motif {
+  background: var(--zy-color-green-300);
+}
+
+@media (min-width: 721px) and (max-width: 1100px) {
+  /* —— Home hero: keep the sentence on the shaded side of the photo. ——
+     The radial shade only covered the top left; at tablet width the text runs
+     into the bright middle. A left-to-right brand scrim (70% → 38% → 0) and a
+     narrower text column keep it on dark ground. */
+  .hero__scrim {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: none;
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-scrim) 70%, transparent) 0%,
+      color-mix(in srgb, var(--color-scrim) 38%, transparent) 45%,
+      transparent 75%
+    );
+  }
+
+  .hero__content {
+    max-width: 440px;
+  }
+
+  /* —— Ljubljana to Trieste: the polaroids would cover the title below desktop
+     width, so they stay hidden (as before) and the panel loses the extra height. —— */
+  .featured-tour__polaroid {
+    display: none;
+  }
+
+  .featured-tour__panel {
+    min-height: 0;
+    padding-block: var(--space-gap-10);
+  }
+
+  /* —— Business "Who it's for": price and button share a line when they fit,
+     otherwise the button drops under the price instead of the price breaking. —— */
+  .tour-card__foot {
+    flex-wrap: wrap;
+    row-gap: var(--space-gap-4);
+  }
+
+  .tour-card__price {
+    white-space: nowrap;
+  }
+
+  /* —— About hero: four polaroids, smaller, fully inside the page and clear of the text. —— */
+  .about-hero__polaroid {
+    width: 150px;
+  }
+
+  .about-hero__polaroid img {
+    height: 128px;
+  }
+
+  .about-hero__polaroid--3,
+  .about-hero__polaroid--4 {
+    display: none;
+  }
+
+  .about-hero__polaroid--1 {
+    left: calc(var(--page-pad-sm) - 8px);
+    top: 16px;
+  }
+
+  .about-hero__polaroid--2 {
+    left: calc(var(--page-pad-sm) + 24px);
+    top: 210px;
+    width: 140px;
+  }
+
+  .about-hero__polaroid--5 {
+    right: calc(var(--page-pad-sm) - 8px);
+    top: 16px;
+  }
+
+  .about-hero__polaroid--6 {
+    right: calc(var(--page-pad-sm) + 24px);
+    top: 210px;
+    width: 140px;
+  }
+
+  /* —— Touch targets: 44 px hit areas. ——
+     Pills and dots keep their look; an invisible ::after widens the hit area.
+     Text links grow by padding that a matching negative margin cancels, so the
+     layout does not move. */
+  .tour-card__cta,
+  .hero__dot {
+    position: relative;
+  }
+
+  .tour-card__cta::after {
+    content: "";
+    position: absolute;
+    inset: -5px 0;
+  }
+
+  .hero__dots {
+    gap: 36px;
+  }
+
+  .hero__dot::after {
+    content: "";
+    position: absolute;
+    inset: -18px;
+  }
+
+  .faq__q {
+    padding-block: 9px;
+    margin-block: -9px;
+  }
+
+  .footer__links a,
+  .footer__cookie-btn {
+    min-width: 44px;
+    padding-block: 12px;
+    margin-block: -12px;
+  }
+
+  .footer__big-links a {
+    min-width: 44px;
+    padding-block: 9px;
+    margin-block: -9px;
+  }
+}
+
+/* —— Nav in its menu-button form (721–1220 px). —— */
+@media (min-width: 721px) and (max-width: 1220px) {
+  /* —— Open menu: same left edge as the logo, brand focus ring. —— */
+  .nav__panel {
+    padding-inline: var(--page-pad-sm);
+  }
+
+  .nav__panel .nav__link:focus-visible,
+  .nav__panel .lang-switch__btn:focus-visible,
+  .nav__menu-btn:focus-visible,
+  .theme-toggle__btn:focus-visible {
+    outline: 2px solid var(--zy-focus-ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  .theme-toggle__btn:focus-visible,
+  .nav__panel .lang-switch__btn:focus-visible {
+    border-radius: 100px;
+  }
+
+  /* 44 px hit areas for the small Download pill, the theme switch and the logo. */
+  .nav__download,
+  .theme-toggle__btn {
+    position: relative;
+  }
+
+  .nav__download::after {
+    content: "";
+    position: absolute;
+    inset: -5px 0;
+  }
+
+  .theme-toggle__btn::after {
+    content: "";
+    position: absolute;
+    inset: -7px 0;
+  }
+
+  /* The outer half of each toggle reaches 8 px past the pill: 44 px wide each. */
+  .theme-toggle__btn:first-child::after {
+    left: -8px;
+  }
+
+  .theme-toggle__btn:last-child::after {
+    right: -8px;
+  }
+
+  .nav__brand {
+    padding-block: 8px;
+    margin-block: -8px;
+  }
+}
+
+/* —— Home country cards: two by two until four fit with the "coming soon" badge whole. —— */
+@media (min-width: 721px) and (max-width: 1000px) {
+  .categories__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cat-card {
+    height: 280px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1100px) {
+  .cat-card__soon {
+    letter-spacing: 0.04em;
+  }
+
+  .cat-card__cta {
+    max-width: 90%;
+    text-wrap: balance;
+  }
+
+  /* —— "Every stop. One map." banner: phone and photos inside the panel. —— */
+  .app-banner__panel {
+    min-height: 460px;
+    padding-right: 280px;
+  }
+
+  .app-banner__phone {
+    right: calc(var(--page-pad-sm) + var(--space-gap-8));
+  }
+
+  .phone--banner {
+    width: 172px;
+  }
+
+  .app-banner__polaroid--1 {
+    right: calc(100% - 36px);
+    top: auto;
+    bottom: 20px;
+  }
+
+  .app-banner__polaroid--2 {
+    right: -24px;
+    top: 28px;
+  }
+
+  .app-banner__polaroid--1 img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .app-banner__polaroid--2 img {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+/* ======================================================================
+ * Layout between 721 and 1100 px (audit T2/T3).
+ * 1001–1100 px now keeps the desktop layout (breakpoints moved from 1100 to
+ * 1000 px in the page stylesheets; the nav keeps its menu button up to
+ * 1220 px because the six links and the centred logo do not fit below that).
+ * ====================================================================== */
+
+@media (min-width: 721px) and (max-width: 1100px) {
+  /* —— One page inset: free-standing content starts 40 px from the edge. —— */
+  .footer__inner {
+    padding-inline: var(--page-pad-sm);
+  }
+
+  .faq__inner {
+    max-width: min(100%, calc(var(--grid-col-7) + 2 * var(--page-pad-sm)));
+    padding-inline: var(--page-pad-sm);
+  }
+
+  .tour-hero__copy {
+    padding-inline: 0;
+  }
+
+  /* —— "Every stop. One map.": left-aligned, as on desktop. —— */
+  .app-banner__panel {
+    text-align: left;
+  }
+
+  .app-banner__body {
+    margin-inline: 0;
+  }
+
+  .app-banner__ctas {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1000px) {
+  /* —— Home feature cards: three compact columns instead of two plus one. —— */
+  .features__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-gap-6);
+  }
+
+  .feature-card {
+    max-width: none;
+    gap: var(--space-gap-5);
+  }
+
+  .feature-card__media {
+    aspect-ratio: 4 / 5;
+  }
+
+  .feature-card h3 {
+    font-size: var(--type-h4);
+  }
+
+  /* —— Rows of route / business / town cards: a lone last card takes the whole
+     row, photo on the left (one column wide), text on the right; a card
+     without a photo simply spans the row. On the filtered /tours and /cycling
+     lists only visible cards count. —— */
+  .adventures__grid:not(.town-rail) > .tour-card:last-child:nth-child(odd),
+  .tours-grid__list > .tour-card:nth-last-child(1 of :not(.is-filtered-out, .is-paged-out)):nth-child(odd of :not(.is-filtered-out, .is-paged-out)) {
+    grid-column: 1 / -1;
+  }
+
+  .adventures__grid:not(.town-rail) > .tour-card:last-child:nth-child(odd):has(> .tour-card__media),
+  .tours-grid__list > .tour-card:nth-last-child(1 of :not(.is-filtered-out, .is-paged-out)):nth-child(odd of :not(.is-filtered-out, .is-paged-out)):has(> .tour-card__media) {
+    display: grid;
+    grid-template-columns: calc(50% - var(--space-gap-6) / 2) minmax(0, 1fr);
+  }
+
+  .adventures__grid:not(.town-rail) > .tour-card:last-child:nth-child(odd) > .tour-card__media,
+  .tours-grid__list > .tour-card:nth-last-child(1 of :not(.is-filtered-out, .is-paged-out)):nth-child(odd of :not(.is-filtered-out, .is-paged-out)) > .tour-card__media {
+    height: auto;
+    min-height: 279px;
+    border-radius: 0;
+  }
+
+  .adventures__grid:not(.town-rail) > .tour-card:last-child:nth-child(odd) > .tour-card__media > img,
+  .adventures__grid:not(.town-rail) > .tour-card:last-child:nth-child(odd) > .tour-card__media > picture > img,
+  .tours-grid__list > .tour-card:nth-last-child(1 of :not(.is-filtered-out, .is-paged-out)):nth-child(odd of :not(.is-filtered-out, .is-paged-out)) > .tour-card__media > img,
+  .tours-grid__list > .tour-card:nth-last-child(1 of :not(.is-filtered-out, .is-paged-out)):nth-child(odd of :not(.is-filtered-out, .is-paged-out)) > .tour-card__media > picture > img {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* —— "From map to ride" / "Why Zyflow?": the desktop icon list under the title,
+     all three items visible (the swipe row stays on phones). —— */
+  .why__inner {
+    gap: var(--space-gap-9);
+  }
+
+  .why__list {
+    gap: var(--space-gap-7);
+    max-width: 40rem;
+  }
+
+  .why__item {
+    gap: var(--space-gap-6);
+  }
+
+  /* —— Fact tiles (route, business, press): compact 2 × 2. —— */
+  .tour-meta__box {
+    min-height: 0;
+    gap: var(--space-gap-6);
+  }
+
+  /* —— Route article: same left edge as the page; photos take the full
+     content width, text keeps its reading measure. —— */
+  .tour-article {
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .tour-article__intro,
+  .tour-article__p,
+  .tour-article__h,
+  .tour-article__list {
+    max-width: 628px;
+  }
+}
+
+/* —— Contact: the hero photo fills the content width like other photos. —— */
+@media (min-width: 721px) and (max-width: 900px) {
+  .contact-hero__media img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: 50% 75%;
+  }
+}

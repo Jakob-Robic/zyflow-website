@@ -29,6 +29,7 @@
   left: -40%;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .about-hero__stage {
@@ -46,7 +47,10 @@
   padding-block: var(--space-gap-9);
 }
 
-.about-hero__eyebrow,
+.about-hero__eyebrow {
+  margin: 0;
+}
+
 .about-hero__place {
   margin: 0;
   font-family: var(--font-badge);
@@ -65,6 +69,8 @@
 
 .about-hero__heading {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: var(--leading-display);
   margin: var(--space-gap-5) 0;
@@ -154,12 +160,14 @@
   margin: 0 0 var(--space-gap-7);
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .about-hero__sign {
   margin: 0;
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
   opacity: 0.85;
 }
@@ -176,8 +184,10 @@
 
 .about-values__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   text-align: center;
   margin: 0 0 var(--space-gap-11);
 }
@@ -199,6 +209,8 @@
 
 .about-value__num {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-display);
   line-height: 1;
   opacity: 0.5;
@@ -208,8 +220,10 @@
 
 .about-value h3 {
   font-family: var(--font-heading);
-  font-size: var(--type-h2);
-  line-height: var(--leading-h2);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h3);
+  line-height: var(--leading-h3);
   margin: 0;
 }
 
@@ -218,7 +232,6 @@
   padding-left: var(--space-gap-10);
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  opacity: 0.8;
 }
 
 .about-values .section-divider {
@@ -249,6 +262,7 @@
   max-width: none;
   mix-blend-mode: var(--contour-blend);
   opacity: var(--contour-opacity);
+  filter: var(--contour-filter);
 }
 
 .about-team .container {
@@ -258,8 +272,10 @@
 
 .about-team__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   text-align: center;
   margin: 0 0 var(--space-gap-11);
 }
@@ -302,8 +318,10 @@
 
 .about-member__body h3 {
   font-family: var(--font-heading);
-  font-size: var(--type-h2);
-  line-height: var(--leading-h2);
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h3);
+  line-height: var(--leading-h3);
   margin: 0;
 }
 
@@ -320,7 +338,7 @@
   margin: 0;
   font-size: var(--type-body);
   line-height: var(--leading-body);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-body);
 }
 
 .about-member__quals {
@@ -329,7 +347,7 @@
   gap: var(--space-gap-2);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .about-hero__polaroid {
     width: 160px;
   }

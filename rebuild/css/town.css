@@ -17,11 +17,11 @@
   justify-content: space-between;
   gap: var(--space-gap-5);
   padding-block: var(--space-gap-5);
-  border-bottom: 1px dashed var(--color-surface-4);
+  border-bottom: 1px dashed var(--zy-border-control);
 }
 
 .town-row:first-child {
-  border-top: 1px dashed var(--color-surface-4);
+  border-top: 1px dashed var(--zy-border-control);
 }
 
 .town-row--lead .town-row__text {
@@ -68,6 +68,8 @@
 
 .town-row__name {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
   line-height: var(--leading-h5);
   margin: 0 0 var(--space-gap-2);
@@ -108,19 +110,13 @@
   max-width: 45%;
   height: var(--button-height-sm);
   padding-inline: var(--button-padding-sm);
-  background: var(--color-surface-3);
+  /* Colours: the secondary button (components/button.css) */
   border-radius: var(--button-radius-md);
   font-size: var(--type-small);
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: background-color 200ms ease;
-}
-
-.town-row__link:hover,
-.town-row__link:focus-visible {
-  background: var(--color-surface-4);
 }
 
 .town-row__link img {
@@ -142,7 +138,7 @@
 .town-sight__credit {
   margin: 0;
   font-size: var(--type-small);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-muted-on-sand);
 }
 
 .town-sight__credit a {
@@ -157,6 +153,7 @@
 
 .town-intro__text {
   margin: 0;
+  max-width: var(--measure-reading);
   font-size: var(--type-lead);
   line-height: 1.5;
 }
@@ -208,9 +205,9 @@
   margin-top: var(--space-gap-2);
 }
 
+/* Same size as the description on a route card (.tour-card__desc) */
 .town-place__desc {
   flex: 1;
-  font-size: var(--type-body);
   line-height: var(--leading-body);
 }
 
@@ -261,6 +258,8 @@
 
 .town-block__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: 1;
   margin: 0 0 var(--space-gap-5);
@@ -648,7 +647,7 @@
   height: 480px;
 }
 
-@media (min-width: 1101px) {
+@media (min-width: 1001px) {
   .town-wide .town-block__grid:not(.town-rail) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -664,9 +663,10 @@
   }
 }
 
-/* The written answer that opens a section: reading text at a readable measure. */
+/* The written answer that opens a section: reading text at a readable measure
+   (about 70 characters a line; it was 860px, about 95). */
 .town-answer {
-  max-width: 860px;
+  max-width: var(--measure-reading);
   font-size: var(--type-lead);
   line-height: 1.5;
   margin-bottom: var(--space-gap-7);
@@ -678,12 +678,12 @@
 
 /*
  * —— Breathing room ——
- * Same rhythm as the route pages: a full section gap between blocks, and
- * clear steps from heading to text to cards. The counter and arrows sit
- * directly under the row they move.
+ * Same rhythm as the route pages: one section gap (--section-pad-md) between
+ * blocks, and clear steps from heading to text to cards. The counter and
+ * arrows sit directly under the row they move.
  */
 .town-body {
-  padding-bottom: var(--section-pad-lg);
+  padding-bottom: var(--section-pad-md);
 }
 
 .town-intro__text {
@@ -691,12 +691,12 @@
 }
 
 .town-wide {
-  padding-bottom: var(--section-pad-lg);
+  padding-bottom: var(--section-pad-md);
 }
 
 .town-wide .town-block,
 .town-wide .town-figure {
-  margin-bottom: var(--section-pad-lg);
+  margin-bottom: var(--section-pad-md);
 }
 
 .town-wide .container > :last-child {
@@ -743,7 +743,7 @@
  * reading measure) instead of the centred home-page block.
  */
 .faq--town {
-  padding-block: 0 var(--section-pad-lg);
+  padding-block: 0 var(--section-pad-md);
 }
 
 .faq--town .faq__inner {
@@ -770,8 +770,12 @@
   max-width: 860px;
 }
 
+.faq--town .faq__a {
+  max-width: var(--measure-reading);
+}
+
 .faq--town .faq__item {
-  border-bottom: 1px dashed var(--color-surface-4);
+  border-bottom: 1px dashed var(--zy-border-control);
 }
 
 .faq--town .faq__foot {

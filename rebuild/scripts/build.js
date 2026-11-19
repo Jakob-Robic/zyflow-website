@@ -1271,14 +1271,16 @@ function buildHead(page, locale, messages) {
     preloads.push(
       `<link rel="preconnect" href="${tileOrigin}" crossorigin />`,
       `<link rel="dns-prefetch" href="${tileOrigin}" />`,
-      `<link rel="preload" href="/assets/vendor/maplibre-gl/maplibre-gl.js" as="script" />`,
-      `<link rel="preload" href="/assets/vendor/maplibre-gl/maplibre-gl.css" as="style" />`,
+      // Phones load the map when it nears the viewport (js/tour-map.js), so the
+      // library is preloaded only where the map is on the first screen.
+      `<link rel="preload" href="/assets/vendor/maplibre-gl/maplibre-gl.js" as="script" media="(min-width: 600px)" />`,
+      `<link rel="preload" href="/assets/vendor/maplibre-gl/maplibre-gl.css" as="style" media="(min-width: 600px)" />`,
       `<link rel="modulepreload" href="/assets/design-system/map/map-kit.js" />`,
       `<link rel="preload" href="/assets/design-system/map/map-kit.css" as="style" />`
     );
     if (!MAPTILER_KEY) {
       preloads.push(
-        `<link rel="preload" href="https://tiles.openfreemap.org/styles/liberty" as="fetch" crossorigin />`
+        `<link rel="preload" href="https://tiles.openfreemap.org/styles/liberty" as="fetch" crossorigin media="(min-width: 600px)" />`
       );
     }
   }

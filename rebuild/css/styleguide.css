@@ -18,11 +18,7 @@
 }
 
 .sg__eyebrow {
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
   color: var(--color-brand-primary);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .sg__section {
@@ -31,6 +27,8 @@
 
 .sg__section-title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h3);
   line-height: var(--leading-h3);
   margin-bottom: var(--space-gap-6);

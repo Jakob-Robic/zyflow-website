@@ -19,7 +19,8 @@
   flex-direction: column;
   justify-content: space-between;
   gap: var(--space-gap-8);
-  padding: var(--space-gap-6);
+  /* No left padding: the title starts on the page inset, under the breadcrumb */
+  padding: var(--space-gap-6) var(--space-gap-6) var(--space-gap-6) 0;
   min-width: 0;
   max-width: 100%;
   min-height: 483px;
@@ -38,26 +39,17 @@
   opacity: 1;
 }
 
-.tour-hero__eyebrow {
-  margin: 0 0 var(--space-gap-3);
-  font-family: var(--font-badge);
-  font-size: var(--type-small);
-  letter-spacing: 0.02em;
-  opacity: 0.7;
-}
-
+/* Eyebrow above the page title (type in base.css). On the business page it
+   is the h1: a plain fact, the display line below it is the claim. */
+.tour-hero__eyebrow,
 .tour-hero__h1 {
-  margin: 0 0 var(--space-gap-4);
-  font-family: var(--font-body);
-  font-size: var(--type-lead);
-  font-weight: 600;
-  line-height: var(--leading-h5);
-  text-wrap: balance;
-  max-width: 36rem;
+  margin: 0 0 var(--space-gap-3);
 }
 
 .tour-hero__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h1);
   line-height: var(--leading-h1);
   margin: 0 0 var(--space-gap-6);
@@ -85,6 +77,8 @@
 
 .tour-hero__price {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h3);
   line-height: var(--leading-h3);
   margin: 0;
@@ -117,7 +111,6 @@
 }
 
 .tour-hero__next span {
-  opacity: 0.6;
   color: var(--color-text-body-muted);
 }
 
@@ -254,17 +247,53 @@
   padding: var(--space-gap-5);
   border-radius: var(--radius-md);
   background: var(--color-surface-1);
-  border: 1px solid var(--color-surface-4);
+  border: 1px solid var(--zy-border-control);
 }
 
-/* The highlighted fact box is ink, not orange: orange is never a fill (brand book §3). */
+/* The highlighted fact box is ink, not orange: orange is never a fill (brand book §3).
+   It is the theme's contrast pair, so it stays readable in the dark theme too
+   (sand tile, ink text) instead of turning white with white text. */
 .tour-meta__box--accent {
-  background: var(--zy-text-primary);
-  border-color: var(--zy-text-primary);
+  background: var(--color-surface-contrast);
+  border-color: var(--color-surface-contrast);
+}
+
+.tour-meta__box--accent .tour-meta__label img {
+  filter: var(--icon-filter-on-contrast);
+}
+
+.tour-meta__box--accent .motif {
+  background: currentColor;
+}
+
+/* Step cards ("How it works"): label, title and text stack from the top, so the
+   titles share one line across the row whatever the length of the text below.
+   (Spread over the card height, a three-line text pushed its title 11px up.) */
+.tour-meta--steps .tour-meta__box {
+  justify-content: flex-start;
+}
+
+.tour-meta--steps .tour-meta__value {
+  margin-top: var(--space-gap-6);
+}
+
+.tour-meta--steps .tour-meta__label {
+  margin-top: var(--space-gap-4);
+}
+
+/* A caption that is a sentence is set in DM Sans, at the card-description size;
+   mono stays for short data labels ("Duration", "46.24° N") (brand book §4). */
+.tour-meta--prose .tour-meta__label,
+.tour-meta--steps .tour-meta__label {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  line-height: var(--leading-body);
 }
 
 .tour-meta__value {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h3);
   line-height: var(--leading-h3);
   margin: 0;
@@ -328,6 +357,8 @@
 
 .tour-article__h {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h4);
   line-height: var(--leading-h4);
   margin: 0 0 var(--space-gap-5);
@@ -401,10 +432,12 @@
 
 .tour-aside__title {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
   line-height: var(--leading-h5);
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted-on-sand);
   margin: 0;
 }
 
@@ -423,6 +456,8 @@
   padding-block: var(--space-gap-4);
   border-bottom: 1px dashed rgba(255, 255, 255, 0.18);
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h5);
   line-height: var(--leading-h5);
 }
@@ -446,7 +481,7 @@
   margin: 0;
   text-align: center;
   font-size: var(--type-small);
-  color: var(--color-text-body-muted);
+  color: var(--color-text-muted-on-sand);
 }
 
 .tour-article__p:empty,
@@ -473,6 +508,8 @@
 
 .tour-quote__quote {
   font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis: none;
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   color: var(--color-brand-primary);
@@ -524,8 +561,10 @@
 
 .tour-more__title {
   font-family: var(--font-heading);
-  font-size: var(--type-h1);
-  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
   margin: 0;
   min-width: 0;
   overflow-wrap: anywhere;
@@ -535,8 +574,8 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* Smaller desktop: stack hero/map before columns get cramped */
-@media (max-width: 1240px) {
+/* Tablet: stack hero/map below 1000 px */
+@media (max-width: 1000px) {
   .tour-hero__panel {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -544,6 +583,11 @@
   .tour-hero__copy,
   .tour-hero__media {
     min-height: 0;
+  }
+
+  /* One column: the copy runs the full width between the page gutters */
+  .tour-hero__copy {
+    padding-inline: 0;
   }
 
   .tour-hero__media:not(.tour-hero__media--map) {
