@@ -1,0 +1,226 @@
+/**
+ * Tablet widths (601–1100 px): fixes from the 2026-11-19 tablet audit.
+ *
+ * Kept in one file, loaded last, so the desktop rules elsewhere stay untouched.
+ * Every rule here sits inside a width query; nothing changes at 1101 px and up
+ * except the nav breakpoint (see home.css) and the separator colour on the
+ * olive "featured route" panel, which was unreadable at every width.
+ */
+
+/* —— Ljubljana to Trieste: the green ▸ separators read on olive in both themes (7.1:1). —— */
+.featured-tour__meta .motif {
+  background: var(--zy-color-green-300);
+}
+
+@media (max-width: 1100px) {
+  /* —— Home hero: keep the sentence on the shaded side of the photo. ——
+     The radial shade only covered the top left; at tablet width the text runs
+     into the bright middle. A left-to-right brand scrim (70% → 38% → 0) and a
+     narrower text column keep it on dark ground. */
+  .hero__scrim {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: none;
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-scrim) 70%, transparent) 0%,
+      color-mix(in srgb, var(--color-scrim) 38%, transparent) 45%,
+      transparent 75%
+    );
+  }
+
+  .hero__content {
+    max-width: 440px;
+  }
+
+  /* —— Ljubljana to Trieste: without its polaroids the panel needs no extra height. —— */
+  .featured-tour__panel {
+    min-height: 0;
+    padding-block: var(--space-gap-10);
+  }
+
+  /* —— Business "Who it's for": price and button share a line when they fit,
+     otherwise the button drops under the price instead of the price breaking. —— */
+  .tour-card__foot {
+    flex-wrap: wrap;
+    row-gap: var(--space-gap-4);
+  }
+
+  .tour-card__price {
+    white-space: nowrap;
+  }
+
+  /* —— Open menu: same left edge as the logo, brand focus ring. —— */
+  .nav__panel {
+    padding-inline: var(--page-pad-sm);
+  }
+
+  .nav__panel .nav__link:focus-visible,
+  .nav__panel .lang-switch__btn:focus-visible,
+  .nav__menu-btn:focus-visible,
+  .theme-toggle__btn:focus-visible {
+    outline: 2px solid var(--zy-focus-ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  .theme-toggle__btn:focus-visible,
+  .nav__panel .lang-switch__btn:focus-visible {
+    border-radius: 100px;
+  }
+
+  /* —— About hero: four polaroids, smaller, fully inside the page and clear of the text. —— */
+  .about-hero__polaroid {
+    width: 150px;
+  }
+
+  .about-hero__polaroid img {
+    height: 128px;
+  }
+
+  .about-hero__polaroid--3,
+  .about-hero__polaroid--4 {
+    display: none;
+  }
+
+  .about-hero__polaroid--1 {
+    left: calc(var(--page-pad-sm) - 8px);
+    top: 16px;
+  }
+
+  .about-hero__polaroid--2 {
+    left: calc(var(--page-pad-sm) + 24px);
+    top: 210px;
+    width: 140px;
+  }
+
+  .about-hero__polaroid--5 {
+    right: calc(var(--page-pad-sm) - 8px);
+    top: 16px;
+  }
+
+  .about-hero__polaroid--6 {
+    right: calc(var(--page-pad-sm) + 24px);
+    top: 210px;
+    width: 140px;
+  }
+
+  /* —— Touch targets: 44 px hit areas. ——
+     Pills and dots keep their look; an invisible ::after widens the hit area.
+     Text links grow by padding that a matching negative margin cancels, so the
+     layout does not move. */
+  .tour-card__cta,
+  .nav__download,
+  .theme-toggle__btn,
+  .hero__dot {
+    position: relative;
+  }
+
+  .tour-card__cta::after,
+  .nav__download::after {
+    content: "";
+    position: absolute;
+    inset: -5px 0;
+  }
+
+  .theme-toggle__btn::after {
+    content: "";
+    position: absolute;
+    inset: -7px 0;
+  }
+
+  /* Outer half of each toggle reaches 4 px past the pill, so each half is 44 wide. */
+  .theme-toggle__btn:first-child::after {
+    left: -8px;
+  }
+
+  .theme-toggle__btn:last-child::after {
+    right: -8px;
+  }
+
+  .hero__dots {
+    gap: 36px;
+  }
+
+  .hero__dot::after {
+    content: "";
+    position: absolute;
+    inset: -18px;
+  }
+
+  .faq__q {
+    padding-block: 9px;
+    margin-block: -9px;
+  }
+
+  .footer__links a,
+  .footer__cookie-btn {
+    padding-block: 12px;
+    margin-block: -12px;
+  }
+
+  .nav__brand {
+    padding-block: 8px;
+    margin-block: -8px;
+  }
+}
+
+/* —— Home country cards: two by two until four fit with the "coming soon" badge whole. —— */
+@media (min-width: 721px) and (max-width: 1000px) {
+  .categories__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cat-card {
+    height: 280px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1100px) {
+  .cat-card__soon {
+    letter-spacing: 0.04em;
+  }
+
+  .cat-card__cta {
+    max-width: 90%;
+    text-wrap: balance;
+  }
+
+  /* —— "Every stop. One map." banner: phone and photos inside the panel. —— */
+  .app-banner__panel {
+    min-height: 460px;
+    padding-right: 280px;
+  }
+
+  .app-banner__phone {
+    right: calc(var(--page-pad-sm) + var(--space-gap-8));
+  }
+
+  .phone--banner {
+    width: 172px;
+  }
+
+  .app-banner__polaroid--1 {
+    right: calc(100% - 36px);
+    top: auto;
+    bottom: 20px;
+  }
+
+  .app-banner__polaroid--2 {
+    right: -24px;
+    top: 28px;
+  }
+
+  .app-banner__polaroid--1 img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .app-banner__polaroid--2 img {
+    width: 84px;
+    height: 84px;
+  }
+}
