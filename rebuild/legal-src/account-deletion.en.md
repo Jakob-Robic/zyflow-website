@@ -17,6 +17,23 @@ Your account and profile data are deleted immediately and you are signed out.
 
 Write to [legal@zyflow.eu](mailto:legal@zyflow.eu) with the subject "Delete my account", from the email address linked to your Zyflow account. To protect your account, we only delete it after we have verified that the request comes from the account holder: if you write from that address, we will ask you to confirm by replying; if you cannot write from that address (for example you used Sign in with Apple with a hidden email), we will send a confirmation to the email address linked to the account and delete it once you confirm. We will never ask for your password. We confirm the deletion by email.
 
+## Delete some of your data and keep your account
+
+You don't have to delete your account to remove part of your data.
+
+**In the app:**
+
+- **Routes:** open a saved or imported route and tap **Delete route**. A community route you saved from someone else is removed with **Remove from My routes**.
+- **Routes you shared with the community:** open the route and tap **Delete route**. Copies that other riders saved before you deleted it stay in their accounts.
+- **Saved places:** tap the saved icon on a place, or **Remove saved place**.
+- **Photos:** remove your profile photo with **Remove photo** in your profile; delete a bike photo by tapping it.
+- **Bike passport:** clear or change any field (for example weight, frame number, value or notes) and save.
+- **Strava and other connected services:** tap **Disconnect**. Disconnecting Strava also deletes the rides and routes imported from Strava. Stamps you already earned stay in your stamp book; ask us by email if you want them removed.
+- **Recent searches:** remove them from the search list on your phone.
+- **Emails from Zyflow:** use the unsubscribe link in any newsletter email and we stop sending them.
+
+**By email:** for anything you cannot delete in the app (for example stamps, place reports, analytics records or error reports), write to [legal@zyflow.eu](mailto:legal@zyflow.eu) with the subject "Delete some of my data" and tell us what you want removed. Write from the email address linked to your account; we verify the request the same way as for account deletion. We delete the data **within 30 days** and confirm by email. We may keep data we must keep by law, or data without which your account cannot work (your email address and user ID).
+
 ## What we delete
 
 Deleting your account removes your profile (name, email address, phone number, user ID, sign-in details) and the data stored with your account in our database: saved and imported routes, saved places, routes you shared with the community, your bike passport, and your place reports and submissions.
