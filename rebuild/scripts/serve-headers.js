@@ -68,6 +68,24 @@ function headersFor(pathname) {
   return out;
 }
 
+/**
+ * vercel.json rewrites with a plain `/a/:b` source and a same-site destination
+ * (e.g. /o/:kind/:id -> /open), so links like /o/route/<id> work locally too.
+ */
+function rewritePath(pathname) {
+  for (const rule of VERCEL.rewrites || []) {
+    const { source, destination } = rule;
+    if (typeof source !== 'string' || typeof destination !== 'string') continue;
+    if (!destination.startsWith('/') || /[()*+?]/.test(source)) continue;
+    const pattern = source
+      .split('/')
+      .map((part) => (part.startsWith(':') ? '[^/]+' : part.replace(/[.\\^$|{}[\]]/g, '\\$&')))
+      .join('/');
+    if (new RegExp(`^${pattern}$`).test(pathname) && !/:\w/.test(destination)) return destination;
+  }
+  return pathname;
+}
+
 function resolveFile(urlPath) {
   let clean = decodeURIComponent(urlPath.split('?')[0]);
   if (clean.length > 1 && clean.endsWith('/')) clean = clean.slice(0, -1);
@@ -168,7 +186,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  const file = resolveFile(pathname);
+  const file = resolveFile(rewritePath(pathname));
   if (!file) {
     res.statusCode = 404;
     res.end('Not found');
@@ -187,4 +205,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { headersFor, matchesSource, server };
+module.exports = { headersFor, matchesSource, rewritePath, server };

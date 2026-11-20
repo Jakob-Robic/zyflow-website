@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <!-- rebuild-head -->
+    <!-- Not deferred: on a computer it forwards to the web planner before the page paints. -->
+    <script src="./js/open-app.js"></script>
   </head>
   <body class="page-open" data-nav="">
     <!-- include:components/nav.html -->
@@ -36,6 +38,5 @@
       </div>
     </main>
     <!-- include:components/footer.html -->
-    <script src="./js/open-app.js" defer></script>
   </body>
 </html>
