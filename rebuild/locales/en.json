@@ -267,7 +267,11 @@
       "title": "Open this in Zyflow",
       "body": "A place or ride was shared with you from a Zyflow bike map. See it in the Zyflow app, free on iOS and Android.",
       "open": "Open the app",
-      "get": "No app yet? Get it here, then tap the link again."
+      "get": "No app yet? Get it here, then tap the link again.",
+      "openingTitle": "Opening Zyflow …",
+      "openingRoute": "The ride is opening in the Zyflow app. If it does not open by itself, tap the button.",
+      "openingPlace": "The place is opening in the Zyflow app. If it does not open by itself, tap the button.",
+      "getPlay": "No app yet? Get it on Google Play, then tap the link again."
     },
     "lang": {
       "label": "Language",

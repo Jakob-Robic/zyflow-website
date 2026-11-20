@@ -3173,3 +3173,24 @@ html[data-theme="light"] .testimonial__bg img {
   gap: var(--space-gap-5);
   margin-top: var(--space-gap-4);
 }
+
+/* "Open in Zyflow" (js/open-app.js): the title and first line cross-fade softly
+ * between "Opening Zyflow …" and the normal text; nothing else moves. */
+.page-open [data-open-text] {
+  transition: opacity 320ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-open [data-open-text].is-swapping {
+  opacity: 0;
+}
+
+/* Android without the app shows Google Play only. */
+.page-open .store-badge[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-open [data-open-text] {
+    transition: none;
+  }
+}

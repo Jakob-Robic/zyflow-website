@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <!-- rebuild-head -->
+    <!-- iPhone: Safari's Smart App Banner. js/open-app.js adds app-argument (this link) while the head is parsed. -->
+    <meta name="apple-itunes-app" content="app-id=6763228086" />
     <!-- Not deferred: on a computer it forwards to the web planner before the page paints. -->
     <script src="./js/open-app.js"></script>
   </head>
@@ -9,14 +11,35 @@
     <!-- include:components/nav.html -->
     <main class="not-found section">
       <div class="container not-found__inner">
-        <h1 class="not-found__title" data-i18n="chrome.openApp.title">Open this in Zyflow</h1>
-        <p class="not-found__body" data-i18n="chrome.openApp.body">
+        <h1
+          class="not-found__title"
+          data-open-title
+          data-open-text
+          data-opening="Opening Zyflow …"
+          data-i18n-attr="data-opening:chrome.openApp.openingTitle"
+          data-i18n="chrome.openApp.title"
+        >Open this in Zyflow</h1>
+        <p
+          class="not-found__body"
+          data-open-body
+          data-open-text
+          data-opening-route="The ride is opening in the Zyflow app. If it does not open by itself, tap the button."
+          data-opening-place="The place is opening in the Zyflow app. If it does not open by itself, tap the button."
+          data-i18n-attr="data-opening-route:chrome.openApp.openingRoute;data-opening-place:chrome.openApp.openingPlace"
+          data-i18n="chrome.openApp.body"
+        >
           A place or ride was shared with you from a Zyflow bike map. See it in the Zyflow app, free on iOS and Android.
         </p>
         <div class="not-found__actions">
           <a class="btn btn--primary" href="zyflow://" data-open-app data-i18n="chrome.openApp.open">Open the app</a>
         </div>
-        <p class="not-found__body" data-i18n="chrome.openApp.get">No app yet? Get it here, then tap the link again.</p>
+        <p
+          class="not-found__body"
+          data-open-get
+          data-play="No app yet? Get it on Google Play, then tap the link again."
+          data-i18n-attr="data-play:chrome.openApp.getPlay"
+          data-i18n="chrome.openApp.get"
+        >No app yet? Get it here, then tap the link again.</p>
         <div class="app-modal__stores">
           <a
             class="store-badge"
