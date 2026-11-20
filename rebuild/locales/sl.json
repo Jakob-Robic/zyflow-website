@@ -267,7 +267,11 @@
       "title": "Odprite v aplikaciji Zyflow",
       "body": "Nekdo vam je s kolesarskega zemljevida Zyflow poslal kraj ali turo. Oglejte si jo v aplikaciji Zyflow, brezplačno za iOS in Android.",
       "open": "Odpri aplikacijo",
-      "get": "Še nimate aplikacije? Prenesite jo tukaj in nato znova tapnite povezavo."
+      "get": "Še nimate aplikacije? Prenesite jo tukaj in nato znova tapnite povezavo.",
+      "openingTitle": "Odpiramo Zyflow …",
+      "openingRoute": "Tura se odpira v aplikaciji Zyflow. Če se ne odpre sama, tapnite gumb.",
+      "openingPlace": "Kraj se odpira v aplikaciji Zyflow. Če se ne odpre sam, tapnite gumb.",
+      "getPlay": "Aplikacije še nimate? Prenesite jo v trgovini Google Play in nato znova tapnite povezavo."
     },
     "lang": {
       "label": "Jezik",
