@@ -1632,6 +1632,33 @@ function injectTurnstileSiteKey() {
   console.log("injected TURNSTILE_SITE_KEY into analytics-config.js");
 }
 
+function injectSentryConfig() {
+  const dsn = (process.env.SENTRY_DSN || "").trim();
+  if (!dsn) {
+    console.warn("SENTRY_DSN not set — the site reports no errors to Sentry");
+    return;
+  }
+  if (!/^https:\/\/[a-f0-9]{32}@o\d+\.ingest\.(de\.)?sentry\.io\/\d+$/.test(dsn)) {
+    console.warn("SENTRY_DSN ignored — unexpected format");
+    return;
+  }
+  const environment = /^[a-z]{1,20}$/.test(process.env.VERCEL_ENV || "") ? process.env.VERCEL_ENV : "development";
+  const release = /^[a-f0-9]{7,40}$/.test(process.env.VERCEL_GIT_COMMIT_SHA || "") ? process.env.VERCEL_GIT_COMMIT_SHA : "";
+  const file = path.join(DIST, "js", "analytics-config.js");
+  if (!fs.existsSync(file)) return;
+  const src = read(file);
+  const next = src
+    .replace(/sentryDsn:\s*""/, `sentryDsn: ${JSON.stringify(dsn)}`)
+    .replace(/sentryEnvironment:\s*""/, `sentryEnvironment: ${JSON.stringify(environment)}`)
+    .replace(/sentryRelease:\s*""/, `sentryRelease: ${JSON.stringify(release)}`);
+  if (next === src) {
+    console.warn("SENTRY_DSN set but analytics-config.js was not updated");
+    return;
+  }
+  fs.writeFileSync(file, next, "utf8");
+  console.log(`injected Sentry config (${environment}) into analytics-config.js`);
+}
+
 function injectMapTilerKey() {
   const file = path.join(DIST, "js", "tour-map.js");
   if (!fs.existsSync(file)) return;
@@ -2003,6 +2030,7 @@ async function build() {
   copyDir(path.join(ROOT, "root-files"), DIST);
   copyCookieConsentAssets();
   injectTurnstileSiteKey();
+  injectSentryConfig();
   injectMapTilerKey();
   injectPlannerOrigin();
 

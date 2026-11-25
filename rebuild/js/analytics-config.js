@@ -22,4 +22,11 @@ window.ZYFLOW_ANALYTICS = {
    * and send the token. Production requires the matching server secret.
    */
   turnstileSiteKey: "",
+  /**
+   * Sentry error monitoring (EU). Injected at build time from SENTRY_DSN,
+   * VERCEL_ENV and VERCEL_GIT_COMMIT_SHA. Empty DSN → sentry-boot.js loads nothing.
+   */
+  sentryDsn: "",
+  sentryEnvironment: "",
+  sentryRelease: "",
 };
