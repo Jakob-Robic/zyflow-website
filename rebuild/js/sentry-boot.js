@@ -21,7 +21,8 @@
       dsn: cfg.sentryDsn,
       environment: cfg.sentryEnvironment || "production",
       release: cfg.sentryRelease || undefined,
-      sendDefaultPii: false,
+      // SDK v11 collects user info, cookies, headers and query strings by default: all off.
+      dataCollection: { userInfo: false, cookies: false, httpHeaders: false, urlQueryParams: false, httpBodies: [] },
       tracesSampleRate: 0,
       allowUrls: [/^https:\/\/(www\.)?zyflow\.eu\//, /^https:\/\/[a-z0-9-]+\.vercel\.app\//],
       ignoreErrors: [/^ResizeObserver loop/, "AbortError"],
