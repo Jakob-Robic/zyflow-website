@@ -366,7 +366,7 @@
     },
     "intro": {
       "greeting": "Hey there.",
-      "body": "We’re Jakob and Tanja, the small team behind Zyflow in Slovenia. We’re building Zyflow so every ride comes with good places to stop, a charger when you need one, and a welcome for your bike. Questions or ideas? We read every message.",
+      "body": "We’re the Zyflow team, based in Slovenia. We’re building Zyflow so every ride comes with good places to stop, a charger when you need one, and a welcome for your bike. Questions or ideas? We read every message.",
       "link": "About Zyflow"
     },
     "featuredTour": {
@@ -906,8 +906,8 @@
       "titleHtml": "The team behind bike-friendly places",
       "place": "Slovenia · live in 8 countries",
       "storyTitle": "Great places to stop are everywhere. Most maps just don’t show them.",
-      "storyBody": "We’re Jakob and Tanja, the team behind Zyflow, made by HERKO d.o.o. in Slovenia. Zyflow helps cyclists and e-bike riders find bike-friendly stays, coffee stops, restaurants and chargers, and ride between them feeling safe. Today it is live on iOS and Android in 8 countries, with 7,400+ chargers mapped and data from partners like Open Data Hub. Next: more countries, more places, and more ways to keep riders safe.",
-      "sign": "Jakob & Tanja",
+      "storyBody": "We’re the team behind Zyflow, made by HERKO d.o.o. in Slovenia. Zyflow helps cyclists and e-bike riders find bike-friendly stays, coffee stops, restaurants and chargers, and ride between them feeling safe. Today it is live on iOS and Android in 8 countries, with 7,400+ chargers mapped and data from partners like Open Data Hub. Next: more countries, more places, and more ways to keep riders safe.",
+      "sign": "The Zyflow team",
       "brandHtml": "explore<br />without<br /><span class=\"is-accent\">worry.</span>"
     },
     "values": {
