@@ -34,7 +34,8 @@ This text is provided for your convenience and is not legal advice. Your website
 
 - **Vercel, Inc.** delivers the widget (embed.zyflow.eu). Like any web host, it processes IP addresses and request data to serve pages and keep them secure; server logs are kept for up to 30 days.
 - **Supabase, Inc.** stores the anonymous events and your map content in the EU (Ireland).
-- Map tiles, your logo and photos are served from Zyflow's own domains. The map tiles come from our server at **Contabo GmbH** in Germany (tiles.zyflow.eu), which receives the IP address to deliver them; its web server logs are kept for up to 14 days.
+- Map tiles, your logo and photos are served from Zyflow's own domains. The map tiles come from our server at **Contabo GmbH** in Germany (tiles.zyflow.eu, or its standby copy tiles2.zyflow.eu when the main server is unavailable), which receives the IP address to deliver them; its web server logs are kept for up to 14 days.
+- Once a week an encrypted copy of our database, including your account and place data, is stored on a second Zyflow server at **Contabo GmbH** in Germany. We keep the last 4 copies, so at most 4 weeks.
 
 Transfers outside the EU and retention are described in the [Zyflow Privacy Policy](https://www.zyflow.eu/legal-pages/privacy-policy) (sections 5 to 7).
 

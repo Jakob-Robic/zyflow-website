@@ -2,7 +2,7 @@
 
 <!-- OSNUTEK za Jakobovo odobritev. Pred podpisom naj besedilo pregleda pravnik. Seznam podobdelovalcev mora biti usklajen s politiko zasebnosti (točka 5) in angleško različico. -->
 
-**Različica:** 1.0 · **Zadnja sprememba:** 26. 10. 2026
+**Različica:** 1.1 · **Zadnja sprememba:** 26. 11. 2026
 
 Ta stran pojasnjuje, kdaj Zyflow za vas kot poslovno stranko storitve Zyflow for Businesses obdeluje osebne podatke, in vsebuje našo standardno pogodbo o obdelavi osebnih podatkov po 28. členu GDPR.
 
@@ -106,6 +106,6 @@ Izpolni se v podpisanem izvodu za konkretno obdelavo (vrste osebnih podatkov, ka
 | Vercel, Inc. | Gostovanje partnerskega portala, gradnika in spletnih mest | Globalno omrežje, vključno z ZDA |
 | Brevo (Sendinblue SAS) | Pošiljanje e-pošte | Francija (EU) |
 | Sentry (Functional Software, Inc.) | Spremljanje napak | Podatkovna regija EU; družba v ZDA |
-| Contabo GmbH | Gostovanje strežnikov za naše storitve zemljevidov in načrtovanja poti | Nemčija (EU) |
+| Contabo GmbH | Gostovanje strežnikov za naše storitve zemljevidov in načrtovanja poti ter šifrirane varnostne kopije podatkovne baze | Nemčija (EU) |
 
 Plačila obdeluje Stripe kot samostojni upravljavec po lastnih pogojih; Stripe ni naš podobdelovalec za vaše podatke.

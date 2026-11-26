@@ -34,7 +34,8 @@ Besedilo je namenjeno vaši priročnosti in ni pravni nasvet. Za svoje spletno m
 
 - **Vercel, Inc.** zagotavlja gradnik (embed.zyflow.eu). Kot vsak ponudnik gostovanja obdeluje naslove IP in podatke o zahtevah, da prikaže strani in jih zavaruje; strežniški dnevniki se hranijo do 30 dni.
 - **Supabase, Inc.** hrani anonimne dogodke in vsebino vašega zemljevida v EU (Irska).
-- Kartografske podlage, vaš logotip in fotografije se nalagajo z domen Zyflow. Kartografske podlage prihajajo z našega strežnika pri ponudniku **Contabo GmbH** v Nemčiji (tiles.zyflow.eu), ki za njihovo dostavo prejme naslov IP; dnevniki spletnega strežnika se hranijo do 14 dni.
+- Kartografske podlage, vaš logotip in fotografije se nalagajo z domen Zyflow. Kartografske podlage prihajajo z našega strežnika pri ponudniku **Contabo GmbH** v Nemčiji (tiles.zyflow.eu ali, kadar glavni strežnik ni dosegljiv, z njegove rezervne kopije tiles2.zyflow.eu), ki za njihovo dostavo prejme naslov IP; dnevniki spletnega strežnika se hranijo do 14 dni.
+- Enkrat na teden se šifrirana kopija naše podatkovne baze, vključno s podatki o vašem računu in kraju, shrani na drugi strežnik Zyflow pri ponudniku **Contabo GmbH** v Nemčiji. Hranimo zadnje 4 kopije, torej največ 4 tedne.
 
 Prenosi zunaj EU in roki hrambe so opisani v [politiki zasebnosti Zyflow](https://www.zyflow.eu/sl/legal-pages/privacy-policy) (točke od 5 do 7).
 
