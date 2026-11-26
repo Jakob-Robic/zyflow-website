@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.8 · **Effective date:** 26 November 2026 · Replaces version 2.7 of 17 November 2026
+**Version:** 2.9 · **Effective date:** 26 November 2026 · Replaces version 2.8 of 26 November 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -170,8 +170,9 @@ You can connect your Zyflow account to other cycling services. Connecting is alw
 | **Wahoo** (Wahoo Fitness L.L.C., USA) | Send routes to your Wahoo bike computer; import finished rides | Your Wahoo user ID; routes you send; rides you choose to import |
 | **Hammerhead** (SRAM, LLC, USA) | Send routes to your Karoo; import finished rides | Your Hammerhead user ID; routes you send; rides you choose to import |
 | **Ride with GPS** (Ride with GPS, Inc., USA) | Import your routes and rides; send routes | Your Ride with GPS user ID; the routes and rides you choose to import; routes you send |
+| **Suunto** (Suunto Oy, Finland) | Send routes to your Suunto watch (through the Suunto app) | Your Suunto username; routes you send |
 
-**How it works:** when you connect a service, you sign in on that service's own page; Zyflow never sees your password there. The service gives us an access token, which we store **encrypted** and use only to do what you ask: send a route you chose, list your rides or routes so you can pick what to import, import the items you select, and, if you choose stamps from your rides, read your past rides to find where you stopped (3.17). When you send a route, we keep a note of where it went, so we can show "Sent to …" and remove the copy if you delete the route in Zyflow.
+**How it works:** when you connect a service, you sign in on that service's own page; Zyflow never sees your password there. The service gives us an access token, which we store **encrypted** and use only to do what you ask: send a route you chose, list your rides or routes so you can pick what to import, import the items you select, and, if you choose stamps from your rides, read your past rides to find where you stopped (3.17). When you send a route, we keep a note of where it went, so we can show "Sent to …" and remove the copy if you delete the route in Zyflow. Suunto does not let us delete routes, so a route sent to Suunto stays in the Suunto app until you delete it there. When you record a workout or create a route in the Suunto app, Suunto tells us (time, distance, start point and sport); we do not store this.
 
 **Map previews (Strava):** to show a small map behind each ride and route in your Strava list, we keep its simplified route line for up to 7 days and draw the picture on our own server (hosted by Contabo GmbH, Germany, EU) using MapTiler map tiles. MapTiler only sees which map area our server asks for, not who it is for. The lines and pictures are visible only to you. We delete them after 7 days, when you import the ride or route, or immediately when you disconnect Strava.
 
@@ -243,7 +244,7 @@ If you contact us, we process your email address, the content of your message an
 |---|---|
 | Account, routes, location features, stamp book, bike passport, community sharing, maps/search/routing/weather, service emails | Contract, Art. 6(1)(b) |
 | Notifications about your rides, places and contributions (push and inbox) | Contract, Art. 6(1)(b) |
-| Connected services (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), only if you connect them | Contract, Art. 6(1)(b) |
+| Connected services (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS, Suunto), only if you connect them | Contract, Art. 6(1)(b) |
 | Place reports and submissions, crash monitoring, security and rate limiting, Stay22 links, support | Legitimate interest, Art. 6(1)(f) |
 | Anonymous usage statistics (PostHog without identifier, daily counts) | Legitimate interest, Art. 6(1)(f) |
 | Product analytics (PostHog) | Consent, Art. 6(1)(a) |
@@ -282,6 +283,7 @@ We use the following service providers. Processors act only on our instructions 
 | Wahoo Fitness L.L.C. (independent controller) | Sending routes, importing rides, only if you connect Wahoo | Wahoo user ID, access token; routes you send | USA; see section 6 |
 | SRAM, LLC (Hammerhead) (independent controller) | Sending routes to Karoo, importing rides, only if you connect Hammerhead | Hammerhead user ID, access token; routes you send | USA; see section 6 |
 | Ride with GPS, Inc. (independent controller) | Importing and sending routes and rides, only if you connect Ride with GPS | Ride with GPS user ID, access token; routes you send or import | USA; see section 6 |
+| Suunto Oy and its group companies (independent controller) | Sending routes to your Suunto watch, only if you connect Suunto | Suunto username, access token; routes you send | Finland (EU); Suunto's group companies include entities in China: see section 6 |
 
 **Other users:** see community sharing (3.4), place reports (3.5) and the stamp book (3.17).
 
@@ -293,7 +295,7 @@ We use the following service providers. Processors act only on our instructions 
 
 Your app data is stored in the EU (Ireland). Some recipients are based in, or may access data from, countries outside the EU/EEA, in particular the USA (for example Apple, Google, Vercel, Expo and the US parent companies of Supabase and Sentry). We transfer data only where an adequate level of protection is ensured. Depending on the provider, we rely on an adequacy decision of the European Commission (including the EU-US Data Privacy Framework for certified US companies) or on the European Commission's Standard Contractual Clauses (Art. 46 GDPR). Details on the safeguards used for a specific provider are available on request at [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the routes you send go to that service, which may process them in the USA or Switzerland under its own privacy policy and transfer safeguards.
+If you connect Strava, Garmin, Wahoo, Hammerhead, Ride with GPS or Suunto (3.15), the routes you send go to that service, which may process them in the USA, Switzerland or, for Suunto, China under its own privacy policy and transfer safeguards.
 
 ## 7. How long we keep data
 
