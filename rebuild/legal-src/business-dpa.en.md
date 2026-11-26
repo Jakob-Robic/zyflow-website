@@ -3,7 +3,7 @@
 <!-- DRAFT for Jakob's approval. Have a lawyer review the agreement text before it is signed with anyone. -->
 <!-- Sub-processor list mirrors the Privacy Policy (section 5) as of 2026-10-26. Keep both in sync. If map tiles move to self-hosted servers (embed M4), add that host here. -->
 
-**Version:** 1.0 · **Last updated:** 26 October 2026
+**Version:** 1.1 · **Last updated:** 26 November 2026
 
 This page explains when Zyflow processes personal data for you as a business customer of Zyflow for Businesses, and contains our standard data processing agreement under Article 28 of the GDPR.
 
@@ -108,6 +108,6 @@ To be completed in the signed copy for the specific processing (types of persona
 | Vercel, Inc. | Hosting of the partner portal, widget and websites | Global network incl. USA |
 | Brevo (Sendinblue SAS) | Email delivery | France (EU) |
 | Sentry (Functional Software, Inc.) | Error monitoring | EU data region; US company |
-| Contabo GmbH | Server hosting for our own map and routing services | Germany (EU) |
+| Contabo GmbH | Server hosting for our own map and routing services, and encrypted database backups | Germany (EU) |
 
 Payments are processed by Stripe as an independent controller under its own terms; Stripe is not our sub-processor for your data.

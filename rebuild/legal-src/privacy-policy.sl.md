@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.7 · **Datum začetka veljavnosti:** 17. 11. 2026 · Nadomešča različico 2.6 z dne 17. 11. 2026
+**Različica:** 2.8 · **Datum začetka veljavnosti:** 26. 11. 2026 · Nadomešča različico 2.7 z dne 17. 11. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -130,10 +130,11 @@ Za odkrivanje in odpravljanje napak uporabljamo Sentry (hramba podatkov v EU). P
 
 Za izvedbo vaših zahtev se nekateri podatki pošljejo naslednjim storitvam. Vsaka od njih v okviru običajnega internetnega prometa vidi tudi naslov IP.
 
+- **Zemljevidne ploščice (naš lastni strežnik zemljevidov):** osnovni zemljevid prihaja z našega strežnika na tiles.zyflow.eu (gostuje pri Contabo GmbH, Nemčija, EU), ki vidi vaš naslov IP in območje zemljevida, ki si ga ogledujete. Če ta strežnik ni dosegljiv, aplikacija uporabi našo rezervno kopijo na tiles2.zyflow.eu (prav tako pri ponudniku Contabo v Nemčiji).
 - **Zemljevidne ploščice (MapTiler):** naprava ploščice zahteva neposredno, zato MapTiler vidi vaš naslov IP in območje zemljevida, ki si ga ogledujete.
 - **Iskanje krajev (Photon, komoot):** iskalni niz se pošlje prek našega strežnika, zato Photon vašega naslova IP ne vidi.
 - **Obratno geokodiranje (Nominatim, OpenStreetMap Foundation):** naprava neposredno pošlje koordinate, da jih pretvori v naslov, zato Nominatim vidi vaš naslov IP in te koordinate.
-- **Izračun poti (naš lastni strežnik OSRM na [osrm.zyflow.eu](http://osrm.zyflow.eu) in GraphHopper):** koordinate poti se pošljejo našemu strežniku za izračun poti (gostuje na strežnikih ponudnika Contabo v Nemčiji, EU) in prek našega zaledja storitvi GraphHopper.
+- **Izračun poti (naš lastni strežnik OSRM na [osrm.zyflow.eu](http://osrm.zyflow.eu) in GraphHopper):** koordinate poti se pošljejo našemu strežniku za izračun poti (gostuje na strežnikih ponudnika Contabo v Nemčiji, EU; če ni dosegljiv, našemu rezervnemu strežniku na routing2.zyflow.eu, prav tako pri ponudniku Contabo v Nemčiji) in prek našega zaledja storitvi GraphHopper.
 - **Nadomestni izračun poti (javni predstavitveni strežnik OSRM):** če naš lastni strežnik za izračun poti ni dosegljiv, lahko aplikacija za izračun vaše poti uporabi javni predstavitveni strežnik OSRM (router.project-osrm.org, ki ga zagotavlja projekt OSRM, project-osrm.org, zasnovan na podatkih OpenStreetMap). V tem primeru naprava koordinate poti pošlje neposredno temu strežniku, ki zato vidi tudi vaš naslov IP. Tega strežnika ne nadzorujemo.
 - **Vreme (Open-Meteo):** približna lokacija se pošlje prek našega zaledja.
 - **Prevajanje (DeepL):** prevajamo javna besedila prometnih obvestil. Osebni podatki o vas se ne pošiljajo.
@@ -270,7 +271,9 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 | OpenStreetMap Foundation (Nominatim) | Obratno geokodiranje | Naslov IP, koordinate | Ustanova s sedežem v Združenem kraljestvu; glej točko 6 |
 | GraphHopper GmbH | Izračun poti (prek našega zaledja) | Koordinate poti | Družba s sedežem v Nemčiji (EU) |
 | Open-Meteo | Vreme (prek našega zaledja) | Približne koordinate | Glej točko 6 |
-| Lastni strežnik OSRM ([osrm.zyflow.eu](http://osrm.zyflow.eu)) | Izračun poti | Naslov IP, koordinate poti | Upravljamo ga sami; gostuje pri Contabo GmbH (obdelovalec), Nemčija (EU) |
+| Lastni strežnik OSRM ([osrm.zyflow.eu](http://osrm.zyflow.eu)) in rezervni strežnik za izračun poti (routing2.zyflow.eu) | Izračun poti | Naslov IP, koordinate poti | Upravljamo ga sami; gostuje pri Contabo GmbH (obdelovalec), Nemčija (EU) |
+| Lastni strežnik zemljevidov (tiles.zyflow.eu) in njegova rezervna kopija (tiles2.zyflow.eu) | Zemljevidne ploščice | Naslov IP, območje zemljevida | Upravljamo ga sami; gostuje pri Contabo GmbH (obdelovalec), Nemčija (EU) |
+| Lastni strežnik za varnostne kopije | Šifrirana tedenska kopija naše podatkovne baze | Vsi podatki aplikacije v naši podatkovni bazi, šifrirani (Contabo jih ne more prebrati) | Upravljamo ga sami; gostuje pri Contabo GmbH (obdelovalec), Nemčija (EU) |
 | Javni predstavitveni strežnik OSRM (project-osrm.org, zasnovan na podatkih OpenStreetMap) – samo nadomestna možnost | Izračun poti, če naš lastni strežnik ni dosegljiv | Naslov IP, koordinate poti | Upravlja ga tretja oseba, ne mi; glej točko 6 |
 | DeepL SE | Prevajanje besedil prometnih obvestil | Brez osebnih podatkov | Nemčija (EU) |
 | Stay22 (samostojni upravljavec, ko se dotaknete povezave) | Provizijske povezave za nastanitve | Koordinate in ime kraja; naslov IP, ko odprete povezavo | Glej točko 6 |
@@ -322,7 +325,7 @@ Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v
 | Podatki za omejevanje iskalnih zahtev (naslov IP in števci) | Le toliko časa, kolikor je potrebno za preprečevanje zlorab; redno se brišejo |
 | Predpomnilnik iskanja (iskalni niz brez povezave z vami) | 24 ur |
 | Dnevniki strežnikov in gostovanja (Supabase, Vercel) | Do 30 dni |
-| Varnostne kopije podatkovne baze | Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo |
+| Varnostne kopije podatkovne baze | Šifrirane tedenske kopije naše podatkovne baze na našem strežniku za varnostne kopije (Contabo, Nemčija): hranimo zadnje 4, torej največ 4 tedne. Samodejne dnevne varnostne kopije pri ponudniku Supabase: 7 dni. Podatki izbrisanega računa so v 4 tednih odstranjeni iz vseh varnostnih kopij |
 | Korespondenca s podporo in v zvezi z zahtevami za uveljavljanje pravic | Toliko časa, kolikor je potrebno za obravnavo vaše zahteve, nato omejen čas za dokumentiranje in uveljavljanje oziroma obrambo pravnih zahtevkov |
 | Podatki na vaši napravi (seja, zadnja lokacija, nedavna iskanja, datum zadnje ponudbe obvestil, kraji, na katere vas je aplikacija danes opomnila) | Dokler ne odstranite aplikacije ali ne izbrišete njenih podatkov |
 | Žigi, ki v telefonu čakajo na pošiljanje (z meritvijo GPS in odgovori) | Dokler niso poslani ali dokler ne odstranite aplikacije ali ne izbrišete njenih podatkov |
@@ -349,7 +352,7 @@ Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) 
 - **Na spletu:** [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna).
 - **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, žigi (tudi žigi iz voženj in napredek branja vaših voženj), kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa, fotografije in slike zemljevidov deljenih poti ter predoglede zemljevida voženj iz Strave), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Ločenih varnostnih kopij podatkovne baze trenutno ne hranimo, zato izbrisani podatki v varnostnih kopijah ne ostanejo. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
+Ko račun izbrišete v aplikaciji, se vaši podatki o računu in profilu (ime, e-naslov, telefonska številka, identifikator uporabnika in podatki za prijavo) ter podatki, shranjeni z vašim računom v naši podatkovni bazi (shranjene in uvožene poti, shranjeni kraji, poti, deljene s skupnostjo, žigi (tudi žigi iz voženj in napredek branja vaših voženj), kolesarski potni list, prijave in predlogi krajev, žetoni za potisna obvestila, nastavitve obvestil, obvestila in vaša izbira glede trženjske e-pošte), izbrišejo takoj. Hkrati samodejno izbrišemo vaše datoteke v naši hrambi datotek (profilno fotografijo, fotografije kolesa, fotografije in slike zemljevidov deljenih poti ter predoglede zemljevida voženj iz Strave), vaš kontakt pri ponudniku e-pošte Brevo in vaše analitične zapise pri storitvi PostHog. Poročila o napakah pri storitvi Sentry, povezana z vašim identifikatorjem uporabnika, se samodejno izbrišejo najpozneje v 90 dneh, na zahtevo pa prej: pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Naša podatkovna baza se hrani tudi v šifriranih varnostnih kopijah (dnevno pri ponudniku Supabase 7 dni in tedensko na našem strežniku za varnostne kopije pri ponudniku Contabo v Nemčiji največ 4 tedne). Izbrisanega računa iz njih nikoli ne obnovimo, izbrisani podatki pa so v 4 tednih odstranjeni iz vseh varnostnih kopij. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
 ## 10. Pritožbe
 

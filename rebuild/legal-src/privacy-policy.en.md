@@ -1,6 +1,6 @@
 # Zyflow Privacy Policy
 
-**Version:** 2.7 · **Effective date:** 17 November 2026 · Replaces version 2.6 of 17 November 2026
+**Version:** 2.8 · **Effective date:** 26 November 2026 · Replaces version 2.7 of 17 November 2026
 
 This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
@@ -130,10 +130,11 @@ We use Sentry (EU data region) to detect and fix errors. Error and performance r
 
 To answer your requests, some data is sent to the following services. Each of them also sees an IP address as part of normal internet traffic.
 
+- **Map tiles (our own map server):** the standard map comes from our own server at tiles.zyflow.eu (hosted by Contabo GmbH, Germany, EU), which sees your IP address and the map area you view. If that server is unavailable, the app uses our standby copy at tiles2.zyflow.eu (also hosted by Contabo in Germany).
 - **Map tiles (MapTiler):** your device requests map tiles directly, so MapTiler sees your IP address and the map area you view.
 - **Place search (Photon by komoot):** your search text is sent through our own server, so Photon does not see your IP address.
 - **Reverse geocoding (Nominatim, OpenStreetMap Foundation):** your device sends coordinates directly to turn them into an address, so Nominatim sees your IP address and those coordinates.
-- **Routing (our own OSRM server at [osrm.zyflow.eu](http://osrm.zyflow.eu) and GraphHopper):** route coordinates are sent to our self-hosted routing server (hosted on Contabo servers in Germany, EU) and, through our backend, to GraphHopper.
+- **Routing (our own OSRM server at [osrm.zyflow.eu](http://osrm.zyflow.eu) and GraphHopper):** route coordinates are sent to our self-hosted routing server (hosted on Contabo servers in Germany, EU; if it is unavailable, to our standby routing server at routing2.zyflow.eu, also hosted by Contabo in Germany) and, through our backend, to GraphHopper.
 - **Fallback routing (public OSRM demo server):** if our own routing server is unavailable, the app may use the public OSRM demo server (router.project-osrm.org, provided by the OSRM project, project-osrm.org, which is based on OpenStreetMap) to calculate your route. In that case your device sends the route coordinates directly to that server, which therefore also sees your IP address. We do not control this server.
 - **Weather (Open-Meteo):** an approximate location is sent through our backend.
 - **Translation (DeepL):** we translate public traffic-alert texts. No personal data about you is sent.
@@ -270,7 +271,9 @@ We use the following service providers. Processors act only on our instructions 
 | OpenStreetMap Foundation (Nominatim) | Reverse geocoding | IP address, coordinates | Foundation based in the United Kingdom; see section 6 |
 | GraphHopper GmbH | Route calculation (via our backend) | Route coordinates | Company based in Germany (EU) |
 | Open-Meteo | Weather (via our backend) | Approximate coordinates | See section 6 |
-| Own OSRM server ([osrm.zyflow.eu](http://osrm.zyflow.eu)) | Route calculation | IP address, route coordinates | Operated by us; hosted by Contabo GmbH (processor), Germany (EU) |
+| Own OSRM server ([osrm.zyflow.eu](http://osrm.zyflow.eu)) and standby routing server (routing2.zyflow.eu) | Route calculation | IP address, route coordinates | Operated by us; hosted by Contabo GmbH (processor), Germany (EU) |
+| Own map server (tiles.zyflow.eu) and its standby copy (tiles2.zyflow.eu) | Map tiles | IP address, map area | Operated by us; hosted by Contabo GmbH (processor), Germany (EU) |
+| Own backup server | Encrypted weekly copy of our database | All app data in our database, encrypted (Contabo cannot read it) | Operated by us; hosted by Contabo GmbH (processor), Germany (EU) |
 | Public OSRM demo server (project-osrm.org, based on OpenStreetMap) – fallback only | Route calculation if our own routing server is unavailable | IP address, route coordinates | Operated by a third party, not by us; see section 6 |
 | DeepL SE | Translation of traffic-alert texts | No personal data | Germany (EU) |
 | Stay22 (independent controller after you tap a link) | Accommodation affiliate links | Coordinates and name of the place; IP address once you open the link | See section 6 |
@@ -322,7 +325,7 @@ If you connect Strava, Garmin, Wahoo, Hammerhead or Ride with GPS (3.15), the ro
 | Search rate-limit data (IP address and counters) | Only as long as needed to prevent abuse; regularly deleted |
 | Search cache (search text, no link to you) | 24 hours |
 | Server and hosting logs (Supabase, Vercel) | Up to 30 days |
-| Database backups | We currently keep no separate database backups |
+| Database backups | Encrypted weekly copies of our database on our own backup server (Contabo, Germany): we keep the last 4, so at most 4 weeks. Automatic daily backups at Supabase: 7 days. Data from a deleted account is gone from all backups within 4 weeks |
 | Support and privacy-request correspondence | As long as needed to handle your request and, afterwards, for a limited period to document it and to defend legal claims |
 | Data on your device (session, last location, recent searches, date of the last notification offer, places reminded about today) | Until you uninstall the app or clear its data |
 | Stamps waiting on your phone to be sent (with the GPS reading and answers) | Until they are sent, or until you uninstall the app or clear its data |
@@ -349,7 +352,7 @@ To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from
 - **On the web:** [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account).
 - **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, stamps (including stamps from your rides and the progress of reading your rides), bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, photos and map images of shared routes, and map previews of Strava rides), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We currently keep no separate database backups, so deleted data does not remain in backups. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
+When you delete your account in the app, your account and profile data (name, email address, phone number, user ID and sign-in details) and the data stored with your account in our database (saved and imported routes, saved places, shared community routes, stamps (including stamps from your rides and the progress of reading your rides), bike passport, place reports and submissions, push tokens, notification settings, notifications and your marketing email choice) are deleted immediately. At the same time we automatically delete your files in our file storage (profile photo, bike photos, photos and map images of shared routes, and map previews of Strava rides), your contact at our email provider Brevo and your analytics records at PostHog. Error reports at Sentry linked to your user ID are deleted automatically within 90 days at the latest, or sooner on request: write to [legal@zyflow.eu](mailto:legal@zyflow.eu). Our database is also kept in encrypted backups (daily at Supabase for 7 days, and weekly on our own backup server at Contabo in Germany for at most 4 weeks). We never restore a deleted account from them, and deleted data is gone from all backups within 4 weeks. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
 ## 10. Complaints
 
