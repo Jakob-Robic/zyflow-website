@@ -1,6 +1,6 @@
 # Politika zasebnosti Zyflow
 
-**Različica:** 2.8 · **Datum začetka veljavnosti:** 26. 11. 2026 · Nadomešča različico 2.7 z dne 17. 11. 2026
+**Različica:** 2.9 · **Datum začetka veljavnosti:** 26. 11. 2026 · Nadomešča različico 2.8 z dne 26. 11. 2026
 
 Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
@@ -170,8 +170,9 @@ Svoj račun Zyflow lahko povežete z drugimi kolesarskimi storitvami. Povezava j
 | **Wahoo** (Wahoo Fitness L.L.C., ZDA) | Pošljete poti v kolesarski računalnik Wahoo; uvozite opravljene vožnje | Vaš uporabniški ID pri Wahoo; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
 | **Hammerhead** (SRAM, LLC, ZDA) | Pošljete poti v Karoo; uvozite opravljene vožnje | Vaš uporabniški ID pri Hammerheadu; poti, ki jih pošljete; vožnje, ki jih izberete za uvoz |
 | **Ride with GPS** (Ride with GPS, Inc., ZDA) | Uvozite svoje poti in vožnje; pošljete poti | Vaš uporabniški ID pri Ride with GPS; poti in vožnje, ki jih izberete za uvoz; poti, ki jih pošljete |
+| **Suunto** (Suunto Oy, Finska) | Pošljete poti v uro Suunto (prek aplikacije Suunto) | Vaše uporabniško ime pri Suunto; poti, ki jih pošljete |
 
-**Kako deluje:** ko povežete storitev, se prijavite na strani te storitve; vašega gesla za to storitev Zyflow nikoli ne vidi. Storitev nam izda žeton za dostop, ki ga hranimo **šifriranega** in ga uporabljamo le za to, kar zahtevate: da pošljemo pot, ki ste jo izbrali, prikažemo seznam vaših voženj ali poti, da izberete, kaj uvoziti, uvozimo izbrane elemente in, če izberete žige iz voženj, preberemo vaše pretekle vožnje, da najdemo, kje ste se ustavili (točka 3.17). Ko pošljete pot, si zapomnimo, kam je bila poslana, da lahko prikažemo »Poslano v …« in odstranimo kopijo, če pot v Zyflowu izbrišete.
+**Kako deluje:** ko povežete storitev, se prijavite na strani te storitve; vašega gesla za to storitev Zyflow nikoli ne vidi. Storitev nam izda žeton za dostop, ki ga hranimo **šifriranega** in ga uporabljamo le za to, kar zahtevate: da pošljemo pot, ki ste jo izbrali, prikažemo seznam vaših voženj ali poti, da izberete, kaj uvoziti, uvozimo izbrane elemente in, če izberete žige iz voženj, preberemo vaše pretekle vožnje, da najdemo, kje ste se ustavili (točka 3.17). Ko pošljete pot, si zapomnimo, kam je bila poslana, da lahko prikažemo »Poslano v …« in odstranimo kopijo, če pot v Zyflowu izbrišete. Suunto nam ne omogoča brisanja poti, zato poslana pot ostane v aplikaciji Suunto, dokler je tam ne izbrišete. Ko v aplikaciji Suunto zabeležite vadbo ali ustvarite pot, nam Suunto to sporoči (čas, razdalja, začetna točka in šport); teh podatkov ne hranimo.
 
 **Predogledi zemljevida (Strava):** da lahko za vsako vožnjo in pot na vašem seznamu iz Strave prikažemo majhen zemljevid, njeno poenostavljeno črto poti hranimo največ 7 dni, sliko pa izrišemo na lastnem strežniku (gostuje pri Contabo GmbH v Nemčiji, EU) z zemljevidnimi ploščicami MapTiler. MapTiler vidi le, katero območje zemljevida zahteva naš strežnik, ne pa, za koga. Črte in slike so vidne samo vam. Izbrišemo jih po 7 dneh, ko vožnjo ali pot uvozite, ali takoj, ko odklopite Stravo.
 
@@ -243,7 +244,7 @@ Upoštevajte, da so vaši žigi zapis krajev, ki ste jih obiskali, in časa obis
 |---|---|
 | Uporabniški račun, poti, lokacijske funkcije, knjižica žigov, kolesarski potni list, deljenje s skupnostjo, zemljevidi/iskanje/izračun poti/vreme, obvestila v zvezi s storitvijo | Pogodba, točka (b) 6(1) |
 | Obvestila o vaših vožnjah, krajih in prispevkih (potisna in v nabiralniku) | Pogodba, točka (b) 6(1) |
-| Povezane storitve (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS), le če jih povežete | Pogodba, točka (b) prvega odstavka 6. člena |
+| Povezane storitve (Strava, Garmin, Wahoo, Hammerhead, Ride with GPS, Suunto), le če jih povežete | Pogodba, točka (b) prvega odstavka 6. člena |
 | Prijave in predlogi krajev, spremljanje napak, varnost in omejevanje zahtev, povezave Stay22, podpora | Zakoniti interes, točka (f) 6(1) |
 | Anonimna statistika uporabe (PostHog brez identifikatorja, dnevni seštevki) | Zakoniti interes, točka (f) 6(1) |
 | Analitika uporabe (PostHog) | Privolitev, točka (a) 6(1) |
@@ -282,6 +283,7 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 | Wahoo Fitness L.L.C. (samostojni upravljavec) | Pošiljanje poti, uvoz voženj, le če povežete Wahoo | Uporabniški ID pri Wahoo, žeton za dostop; poslane poti | ZDA; glejte 6. razdelek |
 | SRAM, LLC (Hammerhead) (samostojni upravljavec) | Pošiljanje poti v Karoo, uvoz voženj, le če povežete Hammerhead | Uporabniški ID pri Hammerheadu, žeton za dostop; poslane poti | ZDA; glejte 6. razdelek |
 | Ride with GPS, Inc. (samostojni upravljavec) | Uvoz in pošiljanje poti in voženj, le če povežete Ride with GPS | Uporabniški ID pri Ride with GPS, žeton za dostop; poslane ali uvožene poti | ZDA; glejte 6. razdelek |
+| Suunto Oy in povezane družbe (samostojni upravljavec) | Pošiljanje poti v uro Suunto, le če povežete Suunto | Uporabniško ime pri Suunto, žeton za dostop; poslane poti | Finska (EU); med povezanimi družbami Suunto so tudi družbe na Kitajskem: glejte 6. razdelek |
 
 **Drugi uporabniki:** glej deljenje poti s skupnostjo (točka 3.4), prijave krajev (točka 3.5) in knjižico žigov (točka 3.17).
 
@@ -293,7 +295,7 @@ Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po
 
 Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v tretjih državah zunaj EU/EGP ali lahko do podatkov dostopajo iz njih, zlasti iz ZDA (na primer Apple, Google, Vercel, Expo ter matični družbi Supabase in Sentry v ZDA). Podatke prenašamo le, če je zagotovljena ustrezna raven varstva. Glede na ponudnika se opiramo na sklep Evropske komisije o ustreznosti (vključno z okvirom EU-ZDA za zasebnost podatkov za družbe iz ZDA, ki so vanj vključene) ali na standardne pogodbene klavzule Evropske komisije (46. člen Splošne uredbe). Podrobnosti o zaščitnih ukrepih pri posameznem ponudniku so na voljo na zahtevo na [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-Če povežete Stravo, Garmin, Wahoo, Hammerhead ali Ride with GPS (3.15), poti, ki jih pošljete, prejme ta storitev, ki jih lahko obdeluje v ZDA ali Švici v skladu s svojo politiko zasebnosti in zaščitnimi ukrepi za prenos.
+Če povežete Stravo, Garmin, Wahoo, Hammerhead, Ride with GPS ali Suunto (3.15), poti, ki jih pošljete, prejme ta storitev, ki jih lahko obdeluje v ZDA, Švici ali, pri Suuntu, na Kitajskem v skladu s svojo politiko zasebnosti in zaščitnimi ukrepi za prenos.
 
 ## 7. Rok hrambe
 
