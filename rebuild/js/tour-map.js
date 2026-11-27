@@ -431,7 +431,6 @@
           basePath: MAP_PINS_PATH,
           title: stopLabel(stop),
         });
-        el.alt = stopLabel(stop);
       } else {
         n += 1;
         el = zyMap.stopMarker(n, { title: stopLabel(stop) });
@@ -785,7 +784,6 @@
             basePath: MAP_PINS_PATH,
             title: stopLabel(stop),
           });
-          node.alt = stopLabel(stop);
         } else {
           n += 1;
           node = zyMap.stopMarker(n, { title: stopLabel(stop) });
