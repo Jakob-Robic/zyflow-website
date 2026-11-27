@@ -1,4 +1,9 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "dependabot/**": false
+    }
+  },
   "buildCommand": "npm run build:rebuild:prod",
   "outputDirectory": "rebuild/dist",
   "proxy": {
